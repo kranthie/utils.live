@@ -21,12 +21,12 @@ describe("UUID v7 Generator", () => {
         (result.data as Record<string, unknown>).output
       ).split("\n");
       expect(uuids).toHaveLength(3);
-      // All generated in same ms share same timestamp prefix (first 12 hex chars)
-      const prefix0 = uuids[0]!.replace(/-/g, "").substring(0, 12);
-      const prefix1 = uuids[1]!.replace(/-/g, "").substring(0, 12);
-      const prefix2 = uuids[2]!.replace(/-/g, "").substring(0, 12);
-      expect(prefix0).toBe(prefix1);
-      expect(prefix1).toBe(prefix2);
+      // Timestamp prefixes (first 12 hex chars = 48-bit ms) should be non-decreasing
+      const ts0 = parseInt(uuids[0]!.replace(/-/g, "").substring(0, 12), 16);
+      const ts1 = parseInt(uuids[1]!.replace(/-/g, "").substring(0, 12), 16);
+      const ts2 = parseInt(uuids[2]!.replace(/-/g, "").substring(0, 12), 16);
+      expect(ts1).toBeGreaterThanOrEqual(ts0);
+      expect(ts2).toBeGreaterThanOrEqual(ts1);
     }
   });
 
