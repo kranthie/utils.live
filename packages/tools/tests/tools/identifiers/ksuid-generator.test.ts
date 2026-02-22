@@ -35,8 +35,10 @@ describe("KSUID Generator", () => {
       const ids = String((result.data as Record<string, unknown>).output).split(
         "\n"
       );
-      // KSUIDs generated at the same time should have similar prefixes
-      expect(ids[0]!.substring(0, 4)).toBe(ids[1]!.substring(0, 4));
+      // KSUIDs generated close together share the same timestamp prefix
+      // The first ~6 base62 chars encode the 4-byte second-resolution timestamp
+      // They should be equal or differ by at most 1 second
+      expect(ids[0]!.substring(0, 5)).toBe(ids[1]!.substring(0, 5));
     }
   });
 });
