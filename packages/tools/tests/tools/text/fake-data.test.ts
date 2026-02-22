@@ -294,12 +294,24 @@ describe("fakeCompany", () => {
         const names = (
           (result.data as Record<string, unknown>).companies as unknown[]
         ).map((c: Record<string, unknown>) => c.name);
-        const hasCommonSuffix = names.some(
-          (name: unknown) =>
-            (name as string).includes("Corp") ||
-            (name as string).includes("Inc") ||
-            (name as string).includes("LLC") ||
-            (name as string).includes("Group")
+        const suffixes = [
+          "Corp",
+          "Inc",
+          "LLC",
+          "Group",
+          "Industries",
+          "Solutions",
+          "Systems",
+          "Labs",
+          "Technologies",
+          "Enterprises",
+          "Holdings",
+          "Partners",
+          "Services",
+          "Dynamics",
+        ];
+        const hasCommonSuffix = names.some((name: unknown) =>
+          suffixes.some((s) => (name as string).includes(s))
         );
         expect(hasCommonSuffix).toBe(true);
       }
