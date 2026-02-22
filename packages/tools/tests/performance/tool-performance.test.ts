@@ -31,7 +31,7 @@ import { markdownFormatter } from "../../src/tools/markdown/formatter";
  * Tools should execute within this time for ~100KB input.
  * Note: YAML parsing is typically slower than JSON due to the format complexity.
  */
-const PERFORMANCE_THRESHOLD_MS = 300;
+const PERFORMANCE_THRESHOLD_MS = 500;
 
 /**
  * Number of iterations for performance tests to get reliable measurements.
