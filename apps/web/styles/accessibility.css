@@ -1,0 +1,302 @@
+/* Accessibility utilities and styles */
+
+/*
+ * Focus styles - ensure visible focus indicators for keyboard navigation
+ * Uses both outline and box-shadow for color-blind friendly double-ring focus
+ * (single definition below in "Color blind friendly focus styles" section)
+ */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: 0 0% 20%;
+  }
+
+  .dark {
+    --border: 0 0% 80%;
+  }
+
+  /* Increase border widths */
+  .border {
+    border-width: 2px;
+  }
+
+  /* Ensure text has sufficient contrast */
+  .text-muted-foreground {
+    opacity: 0.8;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Disable specific animations */
+  .animate-spin,
+  .animate-pulse,
+  .animate-bounce,
+  .animate-ping {
+    animation: none !important;
+  }
+
+  /* Keep essential state changes instant */
+  [data-state="open"],
+  [data-state="closed"] {
+    transition: none !important;
+  }
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Make sr-only content visible on focus for skip links */
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Skip link styling */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-radius: var(--radius);
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Ensure interactive elements have sufficient size on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  button:not([class*="h-"]),
+  [role="button"]:not([class*="h-"]),
+  input:not([type="checkbox"]):not([type="radio"]):not([class*="h-"]),
+  select:not([class*="h-"]),
+  textarea:not([class*="h-"]) {
+    min-height: 44px;
+  }
+}
+
+/* Exception for inline links and small utility elements */
+p a,
+li a,
+.inline-link,
+[class*="badge"],
+span a {
+  min-height: auto;
+  min-width: auto;
+}
+
+/* Ensure form controls are accessible */
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  font-size: 16px; /* Prevents iOS zoom on focus */
+}
+
+/* Loading states should be announced */
+[aria-busy="true"] {
+  cursor: wait;
+}
+
+/* Disabled states */
+[aria-disabled="true"],
+[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Error states */
+[aria-invalid="true"] {
+  border-color: hsl(var(--destructive)) !important;
+}
+
+/* Required field indicator */
+.required::after {
+  content: " *";
+  color: hsl(var(--destructive));
+}
+
+/* Live region styling (for screen reader announcements) */
+[aria-live] {
+  position: relative;
+}
+
+/* Ensure sufficient line height for readability */
+body {
+  line-height: 1.5;
+}
+
+/* Ensure sufficient paragraph spacing */
+p + p {
+  margin-top: 1em;
+}
+
+/* Don't use all caps - harder to read for dyslexic users */
+.no-uppercase {
+  text-transform: none !important;
+}
+
+/* Ensure inline text links are distinguishable from surrounding text.
+   Only target links inside prose/text content, not structural/card links. */
+p a:not(.no-underline),
+li a:not(.no-underline),
+td a:not(.no-underline),
+dd a:not(.no-underline),
+figcaption a:not(.no-underline) {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+p a:hover:not(.no-underline),
+li a:hover:not(.no-underline),
+td a:hover:not(.no-underline) {
+  text-decoration-thickness: 2px;
+}
+
+/* Visible labels for native form controls (not shadcn/ui Label component) */
+label:not([class]) {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+/* Group related form elements */
+fieldset {
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 600;
+}
+
+/* Ensure tables are accessible */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+th {
+  font-weight: 600;
+  background: hsl(var(--muted));
+}
+
+/* Row hover for better tracking */
+tr:hover {
+  background: hsl(var(--muted) / 0.5);
+}
+
+/* Caption for tables */
+caption {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  caption-side: top;
+}
+
+/* Figure and figcaption for images */
+figure {
+  margin: 1rem 0;
+}
+
+figcaption {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: 0.5rem;
+}
+
+/* Ensure images have alt text reminder (dev only) */
+img:not([alt]) {
+  outline: 3px solid red;
+}
+
+/* Color contrast helpers */
+.high-contrast-text {
+  color: hsl(var(--foreground));
+}
+
+.high-contrast-bg {
+  background: hsl(var(--background));
+}
+
+/* ARIA expanded states visual feedback */
+[aria-expanded="false"] .expand-icon {
+  transform: rotate(0deg);
+}
+
+[aria-expanded="true"] .expand-icon {
+  transform: rotate(180deg);
+}
+
+/* Current page indicator */
+[aria-current="page"] {
+  font-weight: 600;
+  color: hsl(var(--primary));
+}
+
+/* Landmark regions styling */
+main {
+  flex: 1;
+}
+
+aside {
+  background: hsl(var(--muted) / 0.3);
+}
+
+/* Print accessibility */
+@media print {
+  /* Ensure links show their URLs */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  /* Don't show decorative images */
+  [role="presentation"],
+  [aria-hidden="true"] {
+    display: none !important;
+  }
+}

@@ -1,0 +1,105 @@
+@reference "../app/globals.css";
+
+/* Editor Styles */
+
+/* Monaco Editor Container - let Monaco handle its own background */
+.monaco-editor-container {
+  @apply h-full w-full min-h-[200px];
+}
+
+/* Editor wrapper - uses card background to match Monaco */
+.editor-wrapper {
+  @apply relative flex flex-col h-full rounded-lg border border-border bg-card overflow-hidden;
+}
+
+/* Editor header - slightly lighter than editor content */
+.editor-header {
+  @apply flex items-center justify-between px-4 border-b border-border bg-muted h-11;
+}
+
+.editor-header-title {
+  @apply text-sm font-semibold text-foreground;
+}
+
+.editor-header-actions {
+  @apply flex items-center gap-1;
+}
+
+/* Editor content area - transparent to let Monaco show through */
+.editor-content {
+  @apply flex-1 min-h-0 overflow-hidden;
+}
+
+/* Panel resize handle */
+.panel-resize-handle {
+  @apply relative flex items-center justify-center;
+  @apply bg-transparent hover:bg-accent transition-colors;
+}
+
+.panel-resize-handle[data-orientation='horizontal'] {
+  @apply w-1 cursor-col-resize;
+}
+
+.panel-resize-handle[data-orientation='vertical'] {
+  @apply h-1 cursor-row-resize;
+}
+
+.panel-resize-handle::after {
+  content: '';
+  @apply absolute bg-border rounded-full opacity-0;
+  transition: opacity 0.2s;
+}
+
+.panel-resize-handle[data-orientation='horizontal']::after {
+  @apply w-0.5 h-8;
+}
+
+.panel-resize-handle[data-orientation='vertical']::after {
+  @apply w-8 h-0.5;
+}
+
+.panel-resize-handle:hover::after,
+.panel-resize-handle:focus::after {
+  @apply opacity-100;
+}
+
+/* Textarea fallback styling */
+.editor-textarea {
+  @apply w-full h-full min-h-[200px] p-4 font-mono text-sm;
+  @apply bg-background text-foreground border-0 resize-none;
+  @apply focus:outline-hidden focus:ring-0;
+}
+
+.editor-textarea::placeholder {
+  @apply text-muted-foreground;
+}
+
+/* Output panel status indicators */
+.output-status {
+  @apply flex items-center gap-2 text-xs text-muted-foreground;
+}
+
+.output-status-success {
+  @apply text-green-500;
+}
+
+.output-status-error {
+  @apply text-destructive;
+}
+
+.output-status-loading {
+  @apply text-muted-foreground animate-pulse;
+}
+
+/* Empty state in panels */
+.panel-empty-state {
+  @apply flex flex-col items-center justify-center h-full text-center p-8;
+}
+
+.panel-empty-state-icon {
+  @apply h-12 w-12 text-muted-foreground/30 mb-4;
+}
+
+.panel-empty-state-text {
+  @apply text-sm text-muted-foreground;
+}

@@ -1,0 +1,6 @@
+/pricing      /       301
+/login        /       301
+/signup       /       301
+/dashboard    /       301
+/dashboard/*  /       301
+/api/*        /       301

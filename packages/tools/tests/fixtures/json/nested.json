@@ -1,0 +1,8 @@
+{
+  "user": {
+    "name": "John",
+    "address": { "city": "NYC", "zip": "10001" },
+    "tags": ["admin", "user"]
+  },
+  "count": 42
+}

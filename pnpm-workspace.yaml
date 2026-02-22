@@ -1,0 +1,22 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+catalog:
+  # Core framework
+  react: "^19.2.0"
+  react-dom: "^19.2.0"
+  "@types/react": "^19.2.0"
+  "@types/react-dom": "^19.2.0"
+
+  # Build & language
+  typescript: "^5.9.0"
+  "@types/node": "^22.0.0"
+  tsup: "^8.5.0"
+
+  # Testing
+  vitest: "^4.0.0"
+  "@vitest/coverage-v8": "^4.0.0"
+
+  # Validation
+  zod: "^4.3.0"

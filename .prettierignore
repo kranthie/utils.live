@@ -1,0 +1,20 @@
+# Test fixtures with intentionally invalid syntax
+packages/tools/tests/fixtures/json/invalid.json
+packages/tools/tests/fixtures/yaml/invalid.yaml
+packages/tools/tests/fixtures/xml/invalid.xml
+packages/tools/tests/fixtures/csv/invalid.csv
+
+# Build outputs
+dist/
+.next/
+node_modules/
+
+# Work directory
+.work/
+
+# Generated files
+**/prisma/generated/
+
+# Non-source directories
+.claude/
+.specify/

@@ -1,0 +1,7 @@
+{
+  "name": "@utils-live/config",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Shared configuration for utils.live monorepo"
+}

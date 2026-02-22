@@ -1,0 +1,155 @@
+import { z } from "zod";
+import { defineTool } from "../../core/define-tool";
+import { ToolTier } from "../../types";
+
+const inputSchema = z.object({
+  input: z.string().describe("SVG source code to view"),
+});
+
+const outputSchema = z.object({
+  output: z.string().describe("SVG rendered in HTML wrapper"),
+});
+
+type Input = z.infer<typeof inputSchema>;
+type Output = z.infer<typeof outputSchema>;
+
+// Dangerous SVG elements that can execute code
+const DANGEROUS_ELEMENTS = [
+  "script",
+  "foreignobject",
+  "iframe",
+  "object",
+  "embed",
+  "applet",
+  "form",
+  "input",
+  "textarea",
+  "select",
+  "button",
+];
+
+// Event handler attributes (on*)
+const EVENT_HANDLER_RE = /\s+on\w+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]*)/gi;
+
+// Dangerous attribute values (javascript:, data:, vbscript:)
+const DANGEROUS_ATTR_RE =
+  /\s+(href|xlink:href|src|action|formaction)\s*=\s*(?:"(?:javascript|data|vbscript):[^"]*"|'(?:javascript|data|vbscript):[^']*')/gi;
+
+// <use> with external references
+const DANGEROUS_USE_RE =
+  /\s+(href|xlink:href)\s*=\s*(?:"(?:https?:|\/\/)[^"]*"|'(?:https?:|\/\/)[^']*')/gi;
+
+// set/animate with dangerous attributes
+const DANGEROUS_ANIMATE_ATTR_RE = /attributeName\s*=\s*(?:"on\w+"|'on\w+')/gi;
+
+function sanitizeSvg(svg: string): string {
+  let sanitized = svg;
+
+  // Remove dangerous elements and their contents
+  for (const tag of DANGEROUS_ELEMENTS) {
+    const tagRegex = new RegExp(
+      `<${tag}[\\s>][\\s\\S]*?<\\/${tag}\\s*>|<${tag}[^>]*\\/?>`,
+      "gi"
+    );
+    sanitized = sanitized.replace(tagRegex, "");
+  }
+
+  // Remove all event handler attributes (onclick, onload, onerror, etc.)
+  sanitized = sanitized.replace(EVENT_HANDLER_RE, "");
+
+  // Remove dangerous URI schemes in href/src/action attributes
+  sanitized = sanitized.replace(DANGEROUS_ATTR_RE, "");
+
+  // Remove external references in <use> elements
+  sanitized = sanitized.replace(DANGEROUS_USE_RE, "");
+
+  // Remove animate/set elements targeting event handler attributes
+  sanitized = sanitized.replace(DANGEROUS_ANIMATE_ATTR_RE, "");
+
+  return sanitized;
+}
+
+function execute(input: Input): Output {
+  const svg = input.input.trim();
+  if (!svg) throw new Error("SVG input cannot be empty");
+  if (!svg.includes("<svg"))
+    throw new Error("Input does not appear to be valid SVG");
+
+  // Sanitize SVG to prevent XSS
+  const sanitizedSvg = sanitizeSvg(svg);
+
+  // Extract dimensions
+  const widthMatch = sanitizedSvg.match(/width="([^"]+)"/);
+  const heightMatch = sanitizedSvg.match(/height="([^"]+)"/);
+  const viewBoxMatch = sanitizedSvg.match(/viewBox="([^"]+)"/);
+
+  const info: string[] = [];
+  if (widthMatch) info.push(`Width: ${widthMatch[1]}`);
+  if (heightMatch) info.push(`Height: ${heightMatch[1]}`);
+  if (viewBoxMatch) info.push(`ViewBox: ${viewBoxMatch[1]}`);
+
+  // Count elements
+  const elementCounts: Record<string, number> = {};
+  const elementRegex = /<(\w+)[\s>]/g;
+  let match: RegExpExecArray | null;
+  while ((match = elementRegex.exec(sanitizedSvg)) !== null) {
+    const tag = match[1]!;
+    if (tag !== "svg" && tag !== "xml") {
+      elementCounts[tag] = (elementCounts[tag] || 0) + 1;
+    }
+  }
+
+  const html = `<div style="background:#f5f5f5;padding:20px;text-align:center;">
+  <div style="display:inline-block;background:white;padding:10px;border:1px solid #ddd;box-shadow:0 2px 4px rgba(0,0,0,0.1);">
+    ${sanitizedSvg}
+  </div>
+  <div style="margin-top:10px;font-family:monospace;font-size:12px;color:#666;text-align:left;max-width:400px;margin-left:auto;margin-right:auto;">
+    ${info.map((i) => `<div>${i}</div>`).join("")}
+    <div>Elements: ${
+      Object.entries(elementCounts)
+        .map(([k, v]) => `${k}(${v})`)
+        .join(", ") || "none"
+    }</div>
+  </div>
+</div>`;
+
+  return { output: html };
+}
+
+export const svgViewer = defineTool({
+  meta: {
+    id: "svg/svg-viewer",
+    name: "SVG Viewer",
+    description:
+      "Free online SVG viewer — preview and inspect SVG graphics with dimension info and element counts instantly in your browser. No data is stored. Shows width, height, viewBox, and a breakdown of SVG elements.",
+    category: "svg",
+    subgroup: "SVG Operations",
+    tier: ToolTier.CLIENT,
+    keywords: [
+      "svg",
+      "view",
+      "preview",
+      "inspect",
+      "render",
+      "display",
+      "dimensions",
+    ],
+    examples: [
+      {
+        title: "Preview circle SVG with element info",
+        description: "Preview a simple SVG circle with element info",
+        input:
+          '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#3498DB"/></svg>',
+        output:
+          '<div style="background:#f5f5f5;padding:20px;text-align:center;">\n  <div style="display:inline-block;background:white;padding:10px;border:1px solid #ddd;box-shadow:0 2px 4px rgba(0,0,0,0.1);">\n    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#3498DB"/></svg>\n  </div>\n  <div style="margin-top:10px;font-family:monospace;font-size:12px;color:#666;text-align:left;max-width:400px;margin-left:auto;margin-right:auto;">\n    <div>Width: 100</div><div>Height: 100</div><div>ViewBox: 0 0 100 100</div>\n    <div>Elements: circle(1)</div>\n  </div>\n</div>',
+      },
+    ],
+    ui: {
+      inputLanguage: "xml",
+      outputRenderer: "html",
+    },
+  },
+  inputSchema,
+  outputSchema,
+  execute,
+});

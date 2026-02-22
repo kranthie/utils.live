@@ -1,0 +1,11 @@
+export { htmlFormatter } from "./formatter";
+export { htmlMinify } from "./minify";
+export { htmlValidator } from "./validator";
+export { htmlToText } from "./to-text";
+export { htmlEntityEncoder } from "./entity-encoder";
+export { htmlEntityDecoder } from "./entity-decoder";
+export { htmlAttributeRemover } from "./attribute-remover";
+export { htmlPlayground } from "./playground";
+export { htmlTableGenerator } from "./table-generator";
+export { htmlListGenerator } from "./list-generator";
+export { faviconGenerator } from "./favicon-generator";

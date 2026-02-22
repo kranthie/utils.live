@@ -1,0 +1,201 @@
+/* Touch-friendly styles for mobile interactions */
+
+/* Touch manipulation for better touch response */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Minimum tap target size (44x44px per Apple HIG, 48x48px per Material Design) */
+.tap-target {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.tap-target-lg {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* Safe area insets for iOS devices with notches */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-area-left {
+  padding-left: env(safe-area-inset-left, 0px);
+}
+
+.safe-area-right {
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+.safe-area-x {
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+.safe-area-y {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-area-all {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+}
+
+/* Prevent text selection on touch hold for interactive elements */
+.no-select {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Smooth scrolling for touch devices */
+.touch-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Prevent overscroll/bounce on iOS */
+.no-overscroll {
+  overscroll-behavior: none;
+}
+
+/* Pull-to-refresh prevention */
+.no-pull-refresh {
+  overscroll-behavior-y: contain;
+}
+
+/* Touch-friendly button states */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover states on touch devices - they can cause sticky hover */
+  .touch-no-hover:hover {
+    background-color: inherit;
+    color: inherit;
+  }
+
+  /* Larger touch targets on mobile */
+  .btn,
+  button,
+  [role="button"],
+  a {
+    min-height: 44px;
+  }
+
+  /* Input fields should be at least 44px for touch */
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+    font-size: 16px; /* Prevents zoom on iOS when focusing inputs */
+  }
+
+  /* Increase spacing between clickable items */
+  .touch-spacing > * + * {
+    margin-top: 12px;
+  }
+}
+
+/* Active state for touch feedback */
+@media (hover: none) {
+  .touch-active:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* Swipe gesture hints */
+.swipe-hint {
+  position: relative;
+}
+
+.swipe-hint::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background-color: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 2px;
+}
+
+/* Drag handle indicator */
+.drag-handle {
+  cursor: grab;
+  touch-action: none;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+/* Momentum scrolling for lists */
+.momentum-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: y proximity;
+}
+
+.momentum-scroll > * {
+  scroll-snap-align: start;
+}
+
+/* Hide scrollbars on touch but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Bottom sheet styles */
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 90vh;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  touch-action: none;
+}
+
+.bottom-sheet-handle {
+  width: 40px;
+  height: 4px;
+  background-color: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 2px;
+  margin: 12px auto;
+}
+
+/* Floating action button position */
+.fab {
+  position: fixed;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 40;
+}
+
+/* Fixed bottom bar with safe area */
+.fixed-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  z-index: 40;
+}
