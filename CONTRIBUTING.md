@@ -87,6 +87,16 @@ packages/tools/     # Core tool engine (pure functions + tests)
 packages/config/    # Shared ESLint/Prettier config
 ```
 
+## Dependency Version Policy
+
+All dependencies in this repo use **exact (fixed) version pinning** — no `^` or `~` range specifiers.
+
+- `.npmrc` sets `save-exact=true` so `pnpm add <pkg>` automatically records the exact installed version.
+- Catalog entries in `pnpm-workspace.yaml` are also pinned exactly.
+- When upgrading a dependency, update the version number explicitly in `package.json` (and in the catalog if it's a catalog entry). Do not restore range specifiers.
+
+This policy prevents unexpected behavior from patch/minor bumps on reinstall and ensures every contributor and CI run uses identical dependency versions.
+
 ## Code Style
 
 - **Formatting**: Prettier runs automatically on commit via Husky + lint-staged
