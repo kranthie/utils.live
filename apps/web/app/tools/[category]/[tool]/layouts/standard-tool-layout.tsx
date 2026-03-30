@@ -2,13 +2,10 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import type { ToolMeta, ToolUIConfig } from "@utils-live/tools/constants";
-import { ToolTier } from "@utils-live/tools/constants";
 import { ToolLayout } from "@/components/tools/tool-layout";
 import { InputPanel } from "@/components/editor/input-panel";
 import { OutputPanel } from "@/components/editor/output-panel";
-import { AIOutputPanel } from "@/components/tools/ai-output-panel";
 import { useToolExecution } from "@/hooks/use-tool-execution";
-import { useAIStreaming } from "@/hooks/use-ai-streaming";
 import { useDebounce } from "@/hooks/use-debounce";
 import { useIsMobile } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
@@ -45,7 +42,6 @@ export function StandardToolLayout({
   onCopy,
   onExecuteReady,
 }: StandardToolLayoutProps): React.ReactElement {
-  const isAI = tool.tier === ToolTier.AI;
   const isMobile = useIsMobile();
   const [input, setInput] = useState("");
 
@@ -60,41 +56,9 @@ export function StandardToolLayout({
 
   const debouncedInput = useDebounce(input, 300);
 
-  // --- AI streaming hook (only active for AI-tier tools) ---
-  const aiStreaming = useAIStreaming();
-
-  // --- Regular tool execution (non-AI tools) ---
-  const executeRegularTool = useCallback(
+  // All tools run client-side in the browser
+  const executeClientTool = useCallback(
     async (inputText: string, opts?: Record<string, unknown>) => {
-      // Server-tier tools must be executed on the server via the API route
-      if (
-        tool.tier === ("server-light" as ToolTier) ||
-        tool.tier === ("server-heavy" as ToolTier)
-      ) {
-        const response = await fetch(`/api/tools/${tool.id}`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ input: { input: inputText }, options: opts }),
-        });
-
-        const result = (await response.json()) as {
-          success: boolean;
-          data?: Record<string, unknown>;
-          error?: { code: string; message: string };
-        };
-
-        if (!result.success) {
-          throw new Error(result.error?.message ?? "Tool execution failed");
-        }
-
-        const data = result.data as Record<string, unknown>;
-        if (typeof data.output === "string") return data.output;
-        if (data.output !== undefined) return JSON.stringify(data.output);
-        if (typeof data.markdown === "string") return data.markdown;
-        return JSON.stringify(data, null, 2);
-      }
-
-      // Client-tier tools run directly in the browser
       const { getToolById, executeTool } = await import("@utils-live/tools");
 
       const toolInstance = getToolById(tool.id);
@@ -119,75 +83,55 @@ export function StandardToolLayout({
       if (typeof data.markdown === "string") return data.markdown;
       return JSON.stringify(data, null, 2);
     },
-    [tool.id, tool.tier]
+    [tool.id]
   );
 
   const { result, isExecuting, execute, reset } = useToolExecution(
     tool.id,
-    executeRegularTool
+    executeClientTool
   );
 
   // Track debounce state
-  const isDebouncing =
-    tool.tier === ToolTier.CLIENT &&
-    input.trim() !== "" &&
-    input !== debouncedInput;
+  const isDebouncing = input.trim() !== "" && input !== debouncedInput;
 
-  // Auto-execute on input change for client-tier tools
+  // Auto-execute on input change
   useEffect(() => {
-    if (tool.tier === ToolTier.CLIENT && debouncedInput.trim()) {
+    if (debouncedInput.trim()) {
       void execute(debouncedInput, options);
     }
-  }, [debouncedInput, options, tool.tier, execute]);
+  }, [debouncedInput, options, execute]);
 
   // Store latest values in refs to avoid re-render loop
   const inputRef = useRef(input);
   const optionsRef = useRef(options);
   const executeRef = useRef(execute);
   const resetRef = useRef(reset);
-  const aiStreamingRef = useRef(aiStreaming);
   inputRef.current = input;
   optionsRef.current = options;
   executeRef.current = execute;
   resetRef.current = reset;
-  aiStreamingRef.current = aiStreaming;
 
   const stableExecute = useCallback(() => {
     if (!inputRef.current.trim()) return;
-
-    if (isAI) {
-      aiStreamingRef.current.startStream(
-        tool.id,
-        { input: inputRef.current },
-        optionsRef.current
-      );
-    } else {
-      void executeRef.current(inputRef.current, optionsRef.current);
-    }
-  }, [isAI, tool.id]);
+    void executeRef.current(inputRef.current, optionsRef.current);
+  }, []);
 
   const stableReset = useCallback(() => {
     setInput("");
-    if (isAI) {
-      aiStreamingRef.current.reset();
-    } else {
-      resetRef.current();
-    }
-  }, [isAI]);
+    resetRef.current();
+  }, []);
 
   // Report execution state to parent
-  const isProcessing = isAI ? aiStreaming.isStreaming : isExecuting;
-
   useEffect(() => {
     onExecuteReady({
       execute: stableExecute,
       reset: stableReset,
-      isExecuting: isProcessing,
+      isExecuting,
       isDebouncing,
       hasInput: input.trim() !== "",
     });
   }, [
-    isProcessing,
+    isExecuting,
     isDebouncing,
     input,
     onExecuteReady,
@@ -199,14 +143,10 @@ export function StandardToolLayout({
     (value: string) => {
       setInput(value);
       if (!value.trim()) {
-        if (isAI) {
-          aiStreaming.reset();
-        } else {
-          reset();
-        }
+        reset();
       }
     },
-    [isAI, aiStreaming, reset]
+    [reset]
   );
 
   return (
@@ -239,26 +179,15 @@ export function StandardToolLayout({
             sampleDataProp ?? getSampleData(ui.inputLanguage, tool.category)
           }
         />
-        {isAI ? (
-          <AIOutputPanel
-            content={aiStreaming.content}
-            isStreaming={aiStreaming.isStreaming}
-            isComplete={aiStreaming.isComplete}
-            error={aiStreaming.error}
-            elapsed={aiStreaming.elapsed}
-            onAbort={aiStreaming.abort}
-          />
-        ) : (
-          <OutputPanel
-            result={result}
-            rendererType={ui.outputRenderer}
-            language={ui.outputLanguage ?? ui.inputLanguage}
-            isLoading={isExecuting}
-            isAutoMode={tool.tier === ToolTier.CLIENT}
-            downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
-            onCopy={onCopy}
-          />
-        )}
+        <OutputPanel
+          result={result}
+          rendererType={ui.outputRenderer}
+          language={ui.outputLanguage ?? ui.inputLanguage}
+          isLoading={isExecuting}
+          isAutoMode
+          downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output-${Date.now()}${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
+          onCopy={onCopy}
+        />
       </ToolLayout>
     </div>
   );

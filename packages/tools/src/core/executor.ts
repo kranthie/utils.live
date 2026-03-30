@@ -9,9 +9,6 @@ import { EXEC_FAILED, EXEC_TIMEOUT } from "./error-codes";
  */
 const TIER_TIMEOUTS: Record<ToolTier, number> = {
   client: 5000, // 5 seconds
-  "server-light": 10000, // 10 seconds
-  "server-heavy": 30000, // 30 seconds
-  ai: 60000, // 60 seconds
 };
 
 /**

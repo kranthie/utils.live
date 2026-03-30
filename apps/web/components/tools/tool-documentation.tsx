@@ -254,9 +254,15 @@ export const ToolDocumentation = memo(function ToolDocumentation({
                             <label className="text-muted-foreground text-xs font-medium">
                               Options
                             </label>
-                            <pre className="bg-muted overflow-auto rounded-md p-3 text-sm">
-                              {JSON.stringify(example.options, null, 2)}
-                            </pre>
+                            <div className="h-24 overflow-hidden rounded-md border">
+                              <CodeEditor
+                                value={JSON.stringify(example.options, null, 2)}
+                                language="json"
+                                readOnly
+                                lineNumbers={false}
+                                minimap={false}
+                              />
+                            </div>
                           </div>
                         )}
                       <Button

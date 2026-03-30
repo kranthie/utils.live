@@ -1,13 +1,20 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import { Play, ChevronDown, ChevronUp, RotateCcw } from "lucide-react";
+import {
+  Play,
+  ChevronDown,
+  ChevronUp,
+  RotateCcw,
+  Keyboard,
+} from "lucide-react";
 import type {
   ToolMeta,
   ToolUIConfig,
   ToolExample,
 } from "@utils-live/tools/constants";
-import { DIFF_TOOL_PATTERNS, ToolTier } from "@utils-live/tools/constants";
+import { DIFF_TOOL_PATTERNS } from "@utils-live/tools/constants";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ToolOptions } from "@/components/tools/tool-options";
@@ -18,6 +25,17 @@ import {
 } from "@/components/ui/collapsible";
 import { ToolDocumentation } from "@/components/tools/tool-documentation";
 import { RelatedTools } from "@/components/tools/related-tools";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { useKeyboardShortcut } from "@/hooks/use-keyboard-shortcut";
 import { useAnalytics } from "@/hooks/use-analytics";
 import type { ToolCardData } from "@/lib/tools/get-tool";
@@ -128,6 +146,7 @@ export function ToolPageClient({
           // localStorage unavailable - ignore
         }
         setPendingGeneratorExample((prev) => ({ values, seq: prev.seq + 1 }));
+        toast.success("Example loaded");
         return;
       }
 
@@ -150,6 +169,7 @@ export function ToolPageClient({
         inputStr = JSON.stringify(example.input, null, 2);
       }
       setExampleInput((prev) => ({ value: inputStr, seq: prev.seq + 1 }));
+      toast.success("Example loaded");
     },
     [optionsStorageKey, inputStorageKey, variant, inputSchema]
   );
@@ -278,15 +298,33 @@ export function ToolPageClient({
     [inputStorageKey]
   );
 
-  // Reset options to defaults
+  // Reset options to defaults with undo support
   const handleResetOptions = useCallback(() => {
+    const previousOptions = options;
     setOptions({});
     try {
       localStorage.removeItem(optionsStorageKey);
     } catch {
       // localStorage unavailable - ignore
     }
-  }, [optionsStorageKey]);
+    toast("Options reset to defaults", {
+      action: {
+        label: "Undo",
+        onClick: () => {
+          setOptions(previousOptions);
+          try {
+            localStorage.setItem(
+              optionsStorageKey,
+              JSON.stringify(previousOptions)
+            );
+          } catch {
+            // localStorage unavailable - ignore
+          }
+        },
+      },
+      duration: 5000,
+    });
+  }, [options, optionsStorageKey]);
 
   // Analytics tracking
   const { trackExecute, trackCopy } = useAnalytics(tool.id, tool.category);
@@ -396,95 +434,7 @@ export function ToolPageClient({
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Action buttons */}
-      <div className="flex items-center justify-end gap-2">
-        {/* Auto-execute indicator for client-tier non-form-based tools */}
-        {tool.tier === ToolTier.CLIENT && variant !== "generator" && (
-          <div className="flex items-center gap-2">
-            <Badge
-              variant="secondary"
-              className="flex items-center gap-1.5 text-xs"
-              title="This tool executes automatically as you type"
-            >
-              <span
-                className={cn(
-                  "inline-block h-1.5 w-1.5 rounded-full",
-                  isDebouncing
-                    ? "animate-pulse bg-yellow-500"
-                    : isExecuting
-                      ? "animate-pulse bg-blue-500"
-                      : "bg-green-500"
-                )}
-                aria-hidden="true"
-              />
-              Auto
-              <span className="sr-only">
-                {isDebouncing
-                  ? " - waiting for input"
-                  : isExecuting
-                    ? " - executing"
-                    : " - ready"}
-              </span>
-            </Badge>
-          </div>
-        )}
-        {tool.tier !== ToolTier.CLIENT && variant !== "generator" && (
-          <Button
-            onClick={handleExecute}
-            disabled={isExecuting || !hasInput}
-            title={`Execute (${modKey}+Enter)`}
-          >
-            <Play className="mr-2 h-4 w-4" />
-            {isExecuting ? "Executing..." : "Execute"}
-            <span className="text-muted-foreground ml-1 text-xs opacity-70">
-              {modKey}+Enter
-            </span>
-          </Button>
-        )}
-      </div>
-
-      {/* Main tool layout - variant-specific */}
-      {variant === "diff" && (
-        <DiffToolLayout
-          tool={tool}
-          ui={ui}
-          options={options}
-          exampleInput={exampleInput.value}
-          exampleInputSeq={exampleInput.seq}
-          onCopy={trackCopy}
-          onExecuteReady={handleExecuteReady}
-        />
-      )}
-      {variant === "generator" && (
-        <GeneratorToolLayout
-          tool={tool}
-          ui={ui}
-          inputSchema={inputSchema}
-          optionsSchema={optionsSchema}
-          options={options}
-          onOptionsChange={handleOptionsChange}
-          generatorInputValues={generatorInputValues}
-          onGeneratorInputChange={handleGeneratorInputChange}
-          onCopy={trackCopy}
-          onExecuteReady={handleExecuteReady}
-        />
-      )}
-      {variant === "standard" && (
-        <StandardToolLayout
-          tool={tool}
-          ui={ui}
-          options={options}
-          inputLabel={inputLabel}
-          outputLabel={outputLabel}
-          exampleInput={exampleInput.value}
-          exampleInputSeq={exampleInput.seq}
-          sampleData={sampleInput}
-          onCopy={trackCopy}
-          onExecuteReady={handleExecuteReady}
-        />
-      )}
-
-      {/* Options section - only show for non-generator tools */}
+      {/* Options panel — collapsible, above the editor (non-generator only) */}
       {hasOptions && variant !== "generator" && (
         <Collapsible open={optionsOpen} onOpenChange={setOptionsOpen}>
           <div className="rounded-lg border">
@@ -532,6 +482,126 @@ export function ToolPageClient({
             </CollapsibleContent>
           </div>
         </Collapsible>
+      )}
+
+      {/* Action buttons */}
+      <div className="flex items-center justify-end gap-2">
+        {/* Auto-execute indicator for non-generator tools (UTI-68: tooltip for mobile) */}
+        {variant !== "generator" && (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Badge
+                  variant="secondary"
+                  className="flex cursor-default items-center gap-1.5 text-xs"
+                >
+                  <span
+                    className={cn(
+                      "inline-block h-1.5 w-1.5 rounded-full",
+                      isDebouncing
+                        ? "animate-pulse bg-yellow-500"
+                        : isExecuting
+                          ? "animate-pulse bg-blue-500"
+                          : "bg-green-500"
+                    )}
+                    aria-hidden="true"
+                  />
+                  Auto
+                  <span className="sr-only">
+                    {isDebouncing
+                      ? " - waiting for input"
+                      : isExecuting
+                        ? " - executing"
+                        : " - ready"}
+                  </span>
+                </Badge>
+              </TooltipTrigger>
+              <TooltipContent>
+                This tool executes automatically as you type.
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        )}
+        {variant === "generator" && (
+          <Button onClick={handleExecute} disabled={isExecuting || !hasInput}>
+            <Play className="mr-2 h-4 w-4" />
+            {isExecuting ? "Generating..." : "Generate"}
+            <span className="text-muted-foreground ml-1 text-xs opacity-70">
+              {modKey}+Enter
+            </span>
+          </Button>
+        )}
+        {/* Keyboard shortcuts popover (UTI-64) */}
+        <Popover>
+          <PopoverTrigger asChild>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-muted-foreground h-7 w-7 p-0"
+              aria-label="Keyboard shortcuts"
+            >
+              <Keyboard className="h-4 w-4" />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-56" align="end">
+            <p className="mb-2 text-sm font-medium">Keyboard shortcuts</p>
+            <ul className="space-y-1.5 text-sm">
+              <li className="flex items-center justify-between">
+                <span className="text-muted-foreground">Execute</span>
+                <kbd className="bg-muted rounded px-1.5 py-0.5 font-mono text-xs">
+                  {modKey}+Enter
+                </kbd>
+              </li>
+              <li className="flex items-center justify-between">
+                <span className="text-muted-foreground">Clear / Reset</span>
+                <kbd className="bg-muted rounded px-1.5 py-0.5 font-mono text-xs">
+                  Esc
+                </kbd>
+              </li>
+            </ul>
+          </PopoverContent>
+        </Popover>
+      </div>
+
+      {/* Main tool layout - variant-specific */}
+      {variant === "diff" && (
+        <DiffToolLayout
+          tool={tool}
+          ui={ui}
+          options={options}
+          exampleInput={exampleInput.value}
+          exampleInputSeq={exampleInput.seq}
+          onCopy={trackCopy}
+          onExecuteReady={handleExecuteReady}
+        />
+      )}
+      {variant === "generator" && (
+        <GeneratorToolLayout
+          tool={tool}
+          ui={ui}
+          inputSchema={inputSchema}
+          optionsSchema={optionsSchema}
+          options={options}
+          onOptionsChange={handleOptionsChange}
+          generatorInputValues={generatorInputValues}
+          onGeneratorInputChange={handleGeneratorInputChange}
+          onCopy={trackCopy}
+          onExecuteReady={handleExecuteReady}
+        />
+      )}
+      {variant === "standard" && (
+        <StandardToolLayout
+          tool={tool}
+          ui={ui}
+          options={options}
+          inputLabel={inputLabel}
+          outputLabel={outputLabel}
+          exampleInput={exampleInput.value}
+          exampleInputSeq={exampleInput.seq}
+          sampleData={sampleInput}
+          onCopy={trackCopy}
+          onExecuteReady={handleExecuteReady}
+        />
       )}
 
       {/* Documentation section */}

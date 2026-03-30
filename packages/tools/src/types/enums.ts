@@ -1,15 +1,9 @@
 /**
- * Tool execution tier determines where the tool runs and its credit cost.
+ * Tool execution tier. All tools run entirely in the browser — no server runtime needed.
  */
 export enum ToolTier {
-  /** Runs in browser, free within limits */
+  /** Runs in browser, no server required */
   CLIENT = "client",
-  /** Simple server operations, 1 credit */
-  SERVER_LIGHT = "server-light",
-  /** CPU/memory intensive, 2-5 credits */
-  SERVER_HEAVY = "server-heavy",
-  /** AI/LLM powered, 1-10 credits */
-  AI = "ai",
 }
 
 /**

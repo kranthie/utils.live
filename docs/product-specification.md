@@ -15,32 +15,32 @@
 ### Business Model
 
 - **Freemium**: Most tools free with limits
-- **Credit-based**: Pay-per-use for AI/server tools
+- **Free**: All tools run in the browser, no server required
 - **No subscription**: One-time credit purchases
 
 ---
 
 ## 2. Technical Decisions Summary
 
-| Aspect | Decision |
-|--------|----------|
-| **Framework** | Next.js 14+ (App Router) |
-| **Language** | TypeScript (strict mode) |
-| **Hosting** | Google Cloud Run |
-| **Database** | Cloud SQL PostgreSQL + Prisma |
-| **Auth** | NextAuth.js (Google + GitHub OAuth) |
-| **Payments** | Stripe (one-time credit purchases) |
-| **Caching** | Upstash Redis |
-| **Rate Limiting** | Upstash Ratelimit |
-| **UI Components** | shadcn/ui + Tailwind CSS |
-| **Theme** | Dark mode + system toggle |
-| **API Style** | REST + OpenAPI spec |
-| **API Auth** | API Keys + JWT |
-| **Monitoring** | Sentry + GCP Cloud Logging |
-| **Analytics** | GA4 + PostHog |
-| **Testing** | Vitest + Playwright |
+| Aspect            | Decision                             |
+| ----------------- | ------------------------------------ |
+| **Framework**     | Next.js 14+ (App Router)             |
+| **Language**      | TypeScript (strict mode)             |
+| **Hosting**       | Google Cloud Run                     |
+| **Database**      | Cloud SQL PostgreSQL + Prisma        |
+| **Auth**          | NextAuth.js (Google + GitHub OAuth)  |
+| **Payments**      | Stripe (one-time credit purchases)   |
+| **Caching**       | Upstash Redis                        |
+| **Rate Limiting** | Upstash Ratelimit                    |
+| **UI Components** | shadcn/ui + Tailwind CSS             |
+| **Theme**         | Dark mode + system toggle            |
+| **API Style**     | REST + OpenAPI spec                  |
+| **API Auth**      | API Keys + JWT                       |
+| **Monitoring**    | Sentry + GCP Cloud Logging           |
+| **Analytics**     | GA4 + PostHog                        |
+| **Testing**       | Vitest + Playwright                  |
 | **File Handling** | Client-side only (no server uploads) |
-| **i18n** | English only (initially) |
+| **i18n**          | English only (initially)             |
 
 ---
 
@@ -53,8 +53,6 @@
 ├── Limit: 50 operations/day
 ├── Max Input: 100KB per operation
 ├── Batch: Not available
-├── AI Tools: Not available
-├── Server Tools: Not available
 ├── API Access: Not available
 └── Ads: Displayed
 ```
@@ -66,8 +64,6 @@
 ├── Limit: 200 operations/day
 ├── Max Input: 500KB per operation
 ├── Batch: Up to 5 items
-├── AI Tools: Requires credits
-├── Server Tools: Requires credits
 ├── API Access: Not available
 ├── Ads: Displayed
 └── Features: Usage history saved, favorites sync
@@ -87,27 +83,19 @@
 
 ### 3.4 Credit Costs
 
-| Tool Type | Icon | Credits |
-|-----------|------|---------|
-| Client-side (within limits) | 🟢 | 0 |
-| Client-side (>500KB input) | 🟢 | 1-3 |
-| Client-side (batch >5 items) | 🟢 | 1-5 |
-| Server Light | 🟡 | 1 |
-| Server Heavy | 🟠 | 2-5 |
-| AI Simple (~750 words) | 🔴 | 1 |
-| AI Medium (~3K words) | 🔴 | 2 |
-| AI Complex (~7.5K words) | 🔴 | 5 |
-| AI Large (~37K words) | 🔴 | 10 |
+| Tool Type                 | Icon | Credits |
+| ------------------------- | ---- | ------- |
+| All tools (browser-based) | 🟢   | 0       |
 
 ### 3.5 Credit Packages
 
-| Package | Credits | Price | Per Credit |
-|---------|---------|-------|------------|
-| Starter | 100 | $1 | $0.010 |
-| Basic | 500 | $5 | $0.010 |
-| Standard | 1,200 | $10 | $0.0083 |
-| Pro | 3,500 | $25 | $0.0071 |
-| Power | 8,000 | $50 | $0.0063 |
+| Package  | Credits | Price | Per Credit |
+| -------- | ------- | ----- | ---------- |
+| Starter  | 100     | $1    | $0.010     |
+| Basic    | 500     | $5    | $0.010     |
+| Standard | 1,200   | $10   | $0.0083    |
+| Pro      | 3,500   | $25   | $0.0071    |
+| Power    | 8,000   | $50   | $0.0063    |
 
 ---
 
@@ -116,6 +104,7 @@
 ### 4.1 Core Features
 
 #### Tool Execution
+
 - [x] 815 tools across 24 categories
 - [x] Dual-pane layout (input/output)
 - [x] Side-by-side on desktop, stacked on mobile
@@ -125,6 +114,7 @@
 - [x] Shareable URLs with encoded input
 
 #### Navigation & Discovery
+
 - [x] Global search (Cmd+K)
 - [x] Category browsing
 - [x] Tool favorites (starred)
@@ -133,6 +123,7 @@
 - [x] Keyboard shortcuts (global + per-tool)
 
 #### User Features
+
 - [x] Google OAuth login
 - [x] GitHub OAuth login
 - [x] Usage history (logged-in users)
@@ -202,6 +193,7 @@
 ### 4.4 API Requirements
 
 #### Endpoints Structure
+
 ```
 /api/v1/
 ├── /tools/
@@ -224,6 +216,7 @@
 ```
 
 #### API Response Format
+
 ```typescript
 // Success
 {
@@ -248,6 +241,7 @@
 ```
 
 #### API Authentication
+
 ```
 # API Key in header
 Authorization: Bearer utl_sk_xxxxxxxxxxxx
@@ -418,12 +412,12 @@ CREATE INDEX idx_rate_limits_identifier ON rate_limits(identifier, window_start)
 
 ### 7.2 Rate Limiting
 
-| User Type | Limit |
-|-----------|-------|
-| Anonymous | 50 ops/day, 10 ops/minute |
+| User Type        | Limit                      |
+| ---------------- | -------------------------- |
+| Anonymous        | 50 ops/day, 10 ops/minute  |
 | Logged-in (free) | 200 ops/day, 30 ops/minute |
-| Credit user | 1000 ops/minute |
-| API (with key) | 100 ops/minute per key |
+| Credit user      | 1000 ops/minute            |
+| API (with key)   | 100 ops/minute per key     |
 
 ### 7.3 Input Validation
 
@@ -464,10 +458,19 @@ CREATE INDEX idx_rate_limits_identifier ON rate_limits(identifier, window_start)
 ```html
 <!-- Tool Page Example -->
 <title>JSON Formatter - Pretty Print JSON Online | utils.live</title>
-<meta name="description" content="Free online JSON formatter and beautifier. Pretty print JSON with syntax highlighting, collapsible tree view, and validation." />
+<meta
+  name="description"
+  content="Free online JSON formatter and beautifier. Pretty print JSON with syntax highlighting, collapsible tree view, and validation."
+/>
 <meta property="og:title" content="JSON Formatter | utils.live" />
-<meta property="og:description" content="Pretty print JSON with syntax highlighting" />
-<meta property="og:image" content="https://utils.live/og/tools/json/formatter.png" />
+<meta
+  property="og:description"
+  content="Pretty print JSON with syntax highlighting"
+/>
+<meta
+  property="og:image"
+  content="https://utils.live/og/tools/json/formatter.png"
+/>
 <link rel="canonical" href="https://utils.live/tools/json/formatter" />
 ```
 
@@ -507,14 +510,14 @@ CREATE INDEX idx_rate_limits_identifier ON rate_limits(identifier, window_start)
 
 ### 9.2 Keyboard Shortcuts
 
-| Shortcut | Action |
-|----------|--------|
-| `Cmd/Ctrl + K` | Open search |
-| `Cmd/Ctrl + Enter` | Execute tool |
-| `Cmd/Ctrl + Shift + C` | Copy output |
-| `Escape` | Close modals/dialogs |
-| `Tab` | Navigate elements |
-| `/` | Focus search (on landing) |
+| Shortcut               | Action                    |
+| ---------------------- | ------------------------- |
+| `Cmd/Ctrl + K`         | Open search               |
+| `Cmd/Ctrl + Enter`     | Execute tool              |
+| `Cmd/Ctrl + Shift + C` | Copy output               |
+| `Escape`               | Close modals/dialogs      |
+| `Tab`                  | Navigate elements         |
+| `/`                    | Focus search (on landing) |
 
 ---
 
@@ -522,13 +525,13 @@ CREATE INDEX idx_rate_limits_identifier ON rate_limits(identifier, window_start)
 
 ### 10.1 Targets
 
-| Metric | Target |
-|--------|--------|
-| First Contentful Paint | < 1.5s |
-| Largest Contentful Paint | < 2.5s |
-| Time to Interactive | < 3.5s |
-| Cumulative Layout Shift | < 0.1 |
-| First Input Delay | < 100ms |
+| Metric                   | Target  |
+| ------------------------ | ------- |
+| First Contentful Paint   | < 1.5s  |
+| Largest Contentful Paint | < 2.5s  |
+| Time to Interactive      | < 3.5s  |
+| Cumulative Layout Shift  | < 0.1   |
+| First Input Delay        | < 100ms |
 
 ### 10.2 Optimization Strategies
 
@@ -646,17 +649,17 @@ jobs:
 
 ## 13. Third-Party Integrations
 
-| Service | Purpose | Tier |
-|---------|---------|------|
-| **Google Cloud Run** | Hosting | Pay-per-use |
-| **Cloud SQL PostgreSQL** | Database | ~$7-10/mo |
-| **Upstash Redis** | Caching + Rate Limiting | Free tier |
-| **Stripe** | Payments | 2.9% + $0.30 |
-| **NextAuth.js** | Authentication | Free (OSS) |
-| **OpenRouter** | AI (Gemini 2.5 Flash) | Pay-per-use |
-| **Sentry** | Error Monitoring | Free tier |
-| **PostHog** | Product Analytics | Free tier |
-| **Google Analytics** | Traffic Analytics | Free |
+| Service                  | Purpose                 | Tier         |
+| ------------------------ | ----------------------- | ------------ |
+| **Google Cloud Run**     | Hosting                 | Pay-per-use  |
+| **Cloud SQL PostgreSQL** | Database                | ~$7-10/mo    |
+| **Upstash Redis**        | Caching + Rate Limiting | Free tier    |
+| **Stripe**               | Payments                | 2.9% + $0.30 |
+| **NextAuth.js**          | Authentication          | Free (OSS)   |
+| **OpenRouter**           | AI (Gemini 2.5 Flash)   | Pay-per-use  |
+| **Sentry**               | Error Monitoring        | Free tier    |
+| **PostHog**              | Product Analytics       | Free tier    |
+| **Google Analytics**     | Traffic Analytics       | Free         |
 
 ---
 
@@ -686,11 +689,11 @@ jobs:
 
 ### 14.4 Coverage Targets
 
-| Type | Target |
-|------|--------|
-| Unit | 80% |
-| Integration | 70% |
-| E2E | Critical paths |
+| Type        | Target         |
+| ----------- | -------------- |
+| Unit        | 80%            |
+| Integration | 70%            |
+| E2E         | Critical paths |
 
 ---
 
@@ -733,4 +736,4 @@ jobs:
 
 ---
 
-*This specification is the source of truth for the utils.live project.*
+_This specification is the source of truth for the utils.live project._

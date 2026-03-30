@@ -23,30 +23,18 @@ describe("createExecutionMeta", () => {
     expect(meta.timestamp).toBeDefined();
   });
 
-  it("should create execution meta for SERVER_LIGHT tier with default 1 credit", () => {
+  it("should always return 0 credits for CLIENT tier even with baseCredits set", () => {
     const meta = createExecutionMeta({
       startTime: 0,
       endTime: 100,
       inputSizeBytes: 50,
       outputSizeBytes: 150,
-      tier: ToolTier.SERVER_LIGHT,
-    });
-
-    expect(meta.creditsUsed).toBe(1);
-    expect(meta.tier).toBe(ToolTier.SERVER_LIGHT);
-  });
-
-  it("should use custom base credits for non-client tiers", () => {
-    const meta = createExecutionMeta({
-      startTime: 0,
-      endTime: 100,
-      inputSizeBytes: 50,
-      outputSizeBytes: 150,
-      tier: ToolTier.AI,
+      tier: ToolTier.CLIENT,
       baseCredits: 5,
     });
 
-    expect(meta.creditsUsed).toBe(5);
+    expect(meta.creditsUsed).toBe(0);
+    expect(meta.tier).toBe(ToolTier.CLIENT);
   });
 
   it("should round execution time to 2 decimal places", () => {

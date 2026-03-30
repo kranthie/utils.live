@@ -25,7 +25,7 @@ const testTool2 = defineTool({
     name: "Test Tool Two",
     description: "Second test tool",
     category: "text",
-    tier: ToolTier.SERVER_LIGHT,
+    tier: ToolTier.CLIENT,
     keywords: ["test", "second", "sample"],
   },
   inputSchema: z.object({ input: z.string() }),

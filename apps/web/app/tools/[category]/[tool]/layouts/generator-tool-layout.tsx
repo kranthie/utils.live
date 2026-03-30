@@ -2,13 +2,10 @@
 
 import { useEffect, useCallback, useRef } from "react";
 import type { ToolMeta, ToolUIConfig } from "@utils-live/tools/constants";
-import { ToolTier } from "@utils-live/tools/constants";
 import { ToolLayout } from "@/components/tools/tool-layout";
 import { OutputPanel } from "@/components/editor/output-panel";
-import { AIOutputPanel } from "@/components/tools/ai-output-panel";
 import { GeneratorOptionsPanel } from "@/components/tools/generator-options-panel";
 import { useToolExecution } from "@/hooks/use-tool-execution";
-import { useAIStreaming } from "@/hooks/use-ai-streaming";
 import { useIsMobile } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { getFileExtension } from "./utils";
@@ -45,11 +42,7 @@ export function GeneratorToolLayout({
   onCopy,
   onExecuteReady,
 }: GeneratorToolLayoutProps): React.ReactElement {
-  const isAI = tool.tier === ToolTier.AI;
   const isMobile = useIsMobile();
-
-  // --- AI streaming hook (only active for AI-tier tools) ---
-  const aiStreaming = useAIStreaming();
 
   const executeFormBasedTool = useCallback(
     async (inputText: string, opts?: Record<string, unknown>) => {
@@ -60,35 +53,7 @@ export function GeneratorToolLayout({
         structuredInput = {};
       }
 
-      // Server-tier tools must be executed on the server via the API route
-      if (
-        tool.tier === ("server-light" as ToolTier) ||
-        tool.tier === ("server-heavy" as ToolTier)
-      ) {
-        const response = await fetch(`/api/tools/${tool.id}`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ input: structuredInput, options: opts }),
-        });
-
-        const result = (await response.json()) as {
-          success: boolean;
-          data?: Record<string, unknown>;
-          error?: { code: string; message: string };
-        };
-
-        if (!result.success) {
-          throw new Error(result.error?.message ?? "Tool execution failed");
-        }
-
-        const data = result.data as Record<string, unknown>;
-        if (typeof data.output === "string") return data.output;
-        if (data.output !== undefined) return JSON.stringify(data.output);
-        if (typeof data.markdown === "string") return data.markdown;
-        return JSON.stringify(data, null, 2);
-      }
-
-      // Client-tier tools run directly in the browser
+      // All tools run client-side in the browser
       const { getToolById, executeTool } = await import("@utils-live/tools");
       const toolInstance = getToolById(tool.id);
 
@@ -108,7 +73,7 @@ export function GeneratorToolLayout({
       if (typeof data.markdown === "string") return data.markdown;
       return JSON.stringify(data, null, 2);
     },
-    [tool.id, tool.tier]
+    [tool.id]
   );
 
   const { result, isExecuting, execute, reset } = useToolExecution(
@@ -136,56 +101,34 @@ export function GeneratorToolLayout({
 
   // Build and execute with structured input
   const handleFormBasedExecute = useCallback(() => {
-    if (isAI) {
-      const structuredInput = buildStructuredInput();
-      // For AI streaming, serialize input as a single string for the stream endpoint
-      const inputStr =
-        typeof structuredInput.input === "string"
-          ? structuredInput.input
-          : JSON.stringify(structuredInput);
-      aiStreaming.startStream(tool.id, { input: inputStr }, options);
-    } else {
-      const structuredInput = buildStructuredInput();
-      const inputJson = JSON.stringify(structuredInput);
-      void execute(inputJson, options);
-    }
-  }, [isAI, buildStructuredInput, options, execute, aiStreaming, tool.id]);
+    const structuredInput = buildStructuredInput();
+    const inputJson = JSON.stringify(structuredInput);
+    void execute(inputJson, options);
+  }, [buildStructuredInput, options, execute]);
 
   // Store latest values in refs to avoid re-render loop
   const handleFormBasedExecuteRef = useRef(handleFormBasedExecute);
   const resetRef = useRef(reset);
-  const aiStreamingRef = useRef(aiStreaming);
   handleFormBasedExecuteRef.current = handleFormBasedExecute;
   resetRef.current = reset;
-  aiStreamingRef.current = aiStreaming;
-
-  // Generator tools use the "Generate" button instead of auto-execute.
-  // This avoids focus loss from iframe re-renders while the user is typing.
 
   const stableExecute = useCallback(() => {
     handleFormBasedExecuteRef.current();
   }, []);
 
   const stableReset = useCallback(() => {
-    if (isAI) {
-      aiStreamingRef.current.reset();
-    } else {
-      resetRef.current();
-    }
-  }, [isAI]);
-
-  // Report execution state to parent
-  const isProcessing = isAI ? aiStreaming.isStreaming : isExecuting;
+    resetRef.current();
+  }, []);
 
   useEffect(() => {
     onExecuteReady({
       execute: stableExecute,
       reset: stableReset,
-      isExecuting: isProcessing,
+      isExecuting,
       isDebouncing: false,
       hasInput: true,
     });
-  }, [isProcessing, onExecuteReady, stableExecute, stableReset]);
+  }, [isExecuting, onExecuteReady, stableExecute, stableReset]);
 
   const inputSchemaFormatted = inputSchema as unknown as FormattedSchema;
   const optionsSchemaFormatted = optionsSchema as unknown as FormattedSchema;
@@ -216,29 +159,18 @@ export function GeneratorToolLayout({
           onInputChange={onGeneratorInputChange}
           onOptionChange={onOptionsChange}
           onExecute={handleFormBasedExecute}
-          isExecuting={isProcessing}
+          isExecuting={isExecuting}
           toolName={tool.name}
         />
-        {isAI ? (
-          <AIOutputPanel
-            content={aiStreaming.content}
-            isStreaming={aiStreaming.isStreaming}
-            isComplete={aiStreaming.isComplete}
-            error={aiStreaming.error}
-            elapsed={aiStreaming.elapsed}
-            onAbort={aiStreaming.abort}
-          />
-        ) : (
-          <OutputPanel
-            result={result}
-            rendererType={ui.outputRenderer}
-            language={ui.outputLanguage ?? ui.inputLanguage}
-            isLoading={isExecuting}
-            isAutoMode={tool.tier === ToolTier.CLIENT}
-            downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
-            onCopy={onCopy}
-          />
-        )}
+        <OutputPanel
+          result={result}
+          rendererType={ui.outputRenderer}
+          language={ui.outputLanguage ?? ui.inputLanguage}
+          isLoading={isExecuting}
+          isAutoMode={false}
+          downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output-${Date.now()}${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
+          onCopy={onCopy}
+        />
       </ToolLayout>
     </div>
   );

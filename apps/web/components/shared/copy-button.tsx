@@ -49,27 +49,33 @@ export function CopyButton({
   const iconSize = size === "sm" ? 14 : size === "lg" ? 20 : 16;
 
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Button
-            variant="outline"
-            size={size === "default" ? "icon" : size}
-            onClick={(): void => void handleCopy()}
-            className={cn("transition-colors", className)}
-            aria-label={copied ? "Copied" : "Copy to clipboard"}
-          >
-            {copied ? (
-              <Check className="text-green-500" size={iconSize} />
-            ) : (
-              <Copy size={iconSize} />
-            )}
-          </Button>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>{copied ? "Copied!" : "Copy to clipboard"}</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              variant="outline"
+              size={size === "default" ? "icon" : size}
+              onClick={(): void => void handleCopy()}
+              className={cn("transition-colors", className)}
+              aria-label={copied ? "Copied" : "Copy to clipboard"}
+            >
+              {copied ? (
+                <Check className="text-green-500" size={iconSize} />
+              ) : (
+                <Copy size={iconSize} />
+              )}
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>{copied ? "Copied!" : "Copy to clipboard"}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+      {/* ARIA live region for screen reader announcement */}
+      <span aria-live="polite" aria-atomic="true" className="sr-only">
+        {copied ? "Copied to clipboard" : ""}
+      </span>
+    </>
   );
 }

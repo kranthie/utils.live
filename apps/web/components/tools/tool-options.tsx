@@ -2,29 +2,13 @@
 
 import { useCallback, useMemo } from "react";
 import { Settings2 } from "lucide-react";
-import { Switch } from "@/components/ui/switch";
-import { Slider } from "@/components/ui/slider";
-import { TextInput } from "@/components/forms/text-input";
-import { NumberInput } from "@/components/forms/number-input";
-import { SearchableSelect } from "@/components/forms/searchable-select";
+import type { SchemaField } from "./schema-field-renderer";
+import { SchemaFieldRenderer } from "./schema-field-renderer";
 import { cn } from "@/lib/utils";
-
-interface ToolOptionField {
-  type: "string" | "number" | "integer" | "boolean" | "array";
-  title?: string;
-  description?: string;
-  default?: unknown;
-  enum?: unknown[];
-  enumNames?: string[];
-  minimum?: number;
-  maximum?: number;
-  minLength?: number;
-  maxLength?: number;
-}
 
 interface ToolOptionsSchema {
   type: "object";
-  properties: Record<string, ToolOptionField>;
+  properties: Record<string, SchemaField>;
   required?: string[];
 }
 
@@ -85,149 +69,12 @@ export function ToolOptions<
     }));
   }, [schema, values]);
 
-  const renderField = useCallback(
-    (
-      key: string,
-      field: ToolOptionField,
-      isRequired: boolean,
-      value: unknown
-    ) => {
-      const label = field.title ?? key;
-      const description = field.description;
-
-      // Boolean field - render as switch
-      if (field.type === "boolean") {
-        return (
-          <div key={key} className="flex items-center justify-between py-2">
-            <div className="space-y-0.5">
-              <label
-                htmlFor={key}
-                className="cursor-pointer text-sm font-medium"
-              >
-                {label}
-                {isRequired && <span className="text-destructive ml-1">*</span>}
-              </label>
-              {description && (
-                <p className="text-muted-foreground text-xs">{description}</p>
-              )}
-            </div>
-            <Switch
-              id={key}
-              checked={Boolean(value)}
-              onCheckedChange={(checked) => updateValue(key, checked)}
-              disabled={disabled}
-            />
-          </div>
-        );
-      }
-
-      // Enum field - render as select
-      if (field.enum && field.enum.length > 0) {
-        const options = field.enum.map((enumValue, index) => ({
-          value: enumValue as string,
-          label: field.enumNames?.[index] ?? String(enumValue),
-        }));
-
-        return (
-          <SearchableSelect
-            key={key}
-            name={key}
-            label={label}
-            description={description}
-            required={isRequired}
-            disabled={disabled}
-            options={options}
-            value={(value as string) ?? null}
-            onChange={(newValue) => updateValue(key, newValue)}
-            searchable={options.length > 5}
-          />
-        );
-      }
-
-      // Number field with range - render as slider
-      if (
-        (field.type === "number" || field.type === "integer") &&
-        field.minimum !== undefined &&
-        field.maximum !== undefined
-      ) {
-        return (
-          <div key={key} className="space-y-2">
-            <div className="flex items-center justify-between">
-              <label htmlFor={`slider-${key}`} className="text-sm font-medium">
-                {label}
-                {isRequired && <span className="text-destructive ml-1">*</span>}
-              </label>
-              <span
-                className="text-muted-foreground text-sm tabular-nums"
-                aria-live="polite"
-              >
-                {value as number}
-              </span>
-            </div>
-            {description && (
-              <p
-                id={`slider-${key}-desc`}
-                className="text-muted-foreground text-xs"
-              >
-                {description}
-              </p>
-            )}
-            <Slider
-              id={`slider-${key}`}
-              value={[Number(value) || field.minimum]}
-              min={field.minimum}
-              max={field.maximum}
-              step={1}
-              onValueChange={([newValue]) => updateValue(key, newValue)}
-              disabled={disabled}
-              aria-describedby={description ? `slider-${key}-desc` : undefined}
-            />
-          </div>
-        );
-      }
-
-      // Number field - render as number input
-      if (field.type === "number" || field.type === "integer") {
-        return (
-          <NumberInput
-            key={key}
-            name={key}
-            label={label}
-            description={description}
-            required={isRequired}
-            disabled={disabled}
-            value={Number(value) || 0}
-            onChange={(newValue) => updateValue(key, newValue)}
-            min={field.minimum}
-            max={field.maximum}
-          />
-        );
-      }
-
-      // String field - render as text input
-      return (
-        <TextInput
-          key={key}
-          name={key}
-          label={label}
-          description={description}
-          required={isRequired}
-          disabled={disabled}
-          value={
-            typeof value === "object"
-              ? JSON.stringify(value)
-              : String((value as string | number) ?? "")
-          }
-          onChange={(newValue) => updateValue(key, newValue)}
-          maxLength={field.maxLength}
-        />
-      );
-    },
-    [updateValue, disabled]
-  );
-
   if (fields.length === 0) {
-    return <></>;
+    return (
+      <p className="text-muted-foreground text-sm">
+        No configurable options for this tool.
+      </p>
+    );
   }
 
   return (
@@ -239,9 +86,17 @@ export function ToolOptions<
         </div>
       )}
       <div className="space-y-4">
-        {fields.map(({ key, field, isRequired, value }) =>
-          renderField(key, field, isRequired, value)
-        )}
+        {fields.map(({ key, field, isRequired, value }) => (
+          <SchemaFieldRenderer
+            key={key}
+            fieldKey={key}
+            field={field}
+            isRequired={isRequired}
+            value={value}
+            disabled={disabled}
+            onChange={updateValue}
+          />
+        ))}
       </div>
     </div>
   );

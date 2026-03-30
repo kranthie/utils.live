@@ -244,7 +244,7 @@ export function DiffToolLayout({
           language={ui.outputLanguage ?? ui.inputLanguage}
           isLoading={isExecuting}
           isAutoMode={tool.tier === ToolTier.CLIENT}
-          downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
+          downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output-${Date.now()}${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
           onCopy={onCopy}
         />
       </div>

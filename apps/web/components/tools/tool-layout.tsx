@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, type ReactNode } from "react";
+import { useState, useEffect, useCallback, type ReactNode } from "react";
 import { GripVertical, GripHorizontal } from "lucide-react";
 import type { ToolTierValue } from "@utils-live/tools/constants";
 import { useIsMobile } from "@/hooks/use-media-query";
@@ -56,7 +56,7 @@ interface ToolLayoutProps {
 }
 
 export function ToolLayout({
-  tool: _tool,
+  tool,
   children,
   orientation: orientationProp,
   defaultSplitRatio = 0.5,
@@ -68,11 +68,34 @@ export function ToolLayout({
   const isMobile = useIsMobile();
   const orientation = orientationProp ?? (isMobile ? "vertical" : "horizontal");
 
-  const [splitRatio, setSplitRatio] = useState(defaultSplitRatio);
+  const splitStorageKey = `utils.live:panel-split:${tool.id}:${orientation}`;
+
+  const [splitRatio, setSplitRatio] = useState(() => {
+    try {
+      const saved = localStorage.getItem(splitStorageKey);
+      if (saved) {
+        const parsed = parseFloat(saved);
+        if (!isNaN(parsed) && parsed >= 0.2 && parsed <= 0.8) return parsed;
+      }
+    } catch {
+      // localStorage unavailable
+    }
+    return defaultSplitRatio;
+  });
   const [isResizing, setIsResizing] = useState(false);
   const [mobileActivePanel, setMobileActivePanel] = useState<
     "input" | "output"
   >("input");
+
+  // Persist split ratio to localStorage when it changes
+  useEffect(() => {
+    if (!resizable) return;
+    try {
+      localStorage.setItem(splitStorageKey, String(splitRatio));
+    } catch {
+      // localStorage unavailable
+    }
+  }, [splitRatio, splitStorageKey, resizable]);
 
   const handleMouseDown = useCallback(
     (e: React.MouseEvent) => {
@@ -175,6 +198,7 @@ export function ToolLayout({
             id="tab-input"
             aria-selected={mobileActivePanel === "input"}
             aria-controls="panel-input"
+            tabIndex={mobileActivePanel === "input" ? 0 : -1}
             className={cn(
               "flex-1 touch-manipulation px-4 py-3 text-sm font-medium transition-colors",
               mobileActivePanel === "input"
@@ -182,6 +206,13 @@ export function ToolLayout({
                 : "text-muted-foreground hover:text-foreground"
             )}
             onClick={() => setMobileActivePanel("input")}
+            onKeyDown={(e: React.KeyboardEvent) => {
+              if (e.key === "ArrowRight") {
+                e.preventDefault();
+                setMobileActivePanel("output");
+                document.getElementById("tab-output")?.focus();
+              }
+            }}
           >
             {inputLabel}
           </button>
@@ -191,6 +222,7 @@ export function ToolLayout({
             id="tab-output"
             aria-selected={mobileActivePanel === "output"}
             aria-controls="panel-output"
+            tabIndex={mobileActivePanel === "output" ? 0 : -1}
             className={cn(
               "flex-1 touch-manipulation px-4 py-3 text-sm font-medium transition-colors",
               mobileActivePanel === "output"
@@ -198,6 +230,13 @@ export function ToolLayout({
                 : "text-muted-foreground hover:text-foreground"
             )}
             onClick={() => setMobileActivePanel("output")}
+            onKeyDown={(e: React.KeyboardEvent) => {
+              if (e.key === "ArrowLeft") {
+                e.preventDefault();
+                setMobileActivePanel("input");
+                document.getElementById("tab-input")?.focus();
+              }
+            }}
           >
             {outputLabel}
           </button>
@@ -251,7 +290,7 @@ export function ToolLayout({
       {resizable && (
         <div
           className={cn(
-            "panel-resize-handle flex-shrink-0",
+            "panel-resize-handle bg-border/30 hover:bg-border flex-shrink-0 transition-colors",
             orientation === "horizontal"
               ? "w-1 cursor-col-resize"
               : "h-1 cursor-row-resize",

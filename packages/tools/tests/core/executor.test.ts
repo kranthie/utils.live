@@ -131,15 +131,16 @@ describe("executeTool", () => {
     }
   });
 
-  it("should use credits from tool config for non-client tier", async () => {
-    const serverTool = defineTool({
+  it("should return 0 credits for client tier tool even with credits config", async () => {
+    const clientTool = defineTool({
       meta: {
-        id: "test/server",
-        name: "Server Tool",
-        description: "A server tool with credits",
+        id: "test/client-credits",
+        name: "Client Tool",
+        description:
+          "A client tool with a credits config that should be ignored",
         category: "test",
-        tier: ToolTier.SERVER_LIGHT,
-        keywords: ["server"],
+        tier: ToolTier.CLIENT,
+        keywords: ["client"],
         credits: { base: 5 },
       },
       inputSchema: z.object({ data: z.string() }),
@@ -147,22 +148,22 @@ describe("executeTool", () => {
       execute: (input) => ({ result: input.data }),
     });
 
-    const result = await executeTool(serverTool, { data: "test" });
+    const result = await executeTool(clientTool, { data: "test" });
     expect(result.success).toBe(true);
     if (result.success) {
-      expect(result.meta.creditsUsed).toBe(5);
+      expect(result.meta.creditsUsed).toBe(0);
     }
   });
 
-  it("should use credits from tool config when validation fails", async () => {
-    const serverTool = defineTool({
+  it("should return 0 credits when validation fails on client tier tool", async () => {
+    const clientTool = defineTool({
       meta: {
-        id: "test/server2",
-        name: "Server Tool 2",
-        description: "A server tool with credits",
+        id: "test/client-validation-fail",
+        name: "Client Tool Validation Fail",
+        description: "A client tool where validation fails",
         category: "test",
-        tier: ToolTier.AI,
-        keywords: ["ai"],
+        tier: ToolTier.CLIENT,
+        keywords: ["client"],
         credits: { base: 10 },
       },
       inputSchema: z.object({ data: z.string() }),
@@ -170,8 +171,7 @@ describe("executeTool", () => {
       execute: (input) => ({ result: input.data }),
     });
 
-    // Invalid input should still track credits
-    const result = await executeTool(serverTool, { data: 123 });
+    const result = await executeTool(clientTool, { data: 123 });
     expect(result.success).toBe(false);
   });
 
@@ -204,14 +204,14 @@ describe("executeTool", () => {
     }
   });
 
-  it("should handle tool with credits throwing ToolError", async () => {
+  it("should handle tool throwing ToolError — credits always 0 for CLIENT tier", async () => {
     const toolWithCreditsError = defineTool({
       meta: {
         id: "test/credits-tool-error",
         name: "Credits ToolError Thrower",
         description: "Throws a ToolError with credits config",
         category: "test",
-        tier: ToolTier.AI,
+        tier: ToolTier.CLIENT,
         keywords: ["error", "credits"],
         credits: { base: 10 },
       },
@@ -219,8 +219,8 @@ describe("executeTool", () => {
       outputSchema: z.object({ output: z.string() }),
       execute: () => {
         throw new ToolExecutionError({
-          code: "AI_ERROR",
-          message: "AI processing failed",
+          code: "CUSTOM_TOOL_ERROR",
+          message: "Tool execution failed",
         });
       },
     });
@@ -228,19 +228,19 @@ describe("executeTool", () => {
     const result = await executeTool(toolWithCreditsError, { input: "test" });
     expect(result.success).toBe(false);
     if (!result.success) {
-      expect(result.error.code).toBe("AI_ERROR");
-      expect(result.meta.creditsUsed).toBe(10);
+      expect(result.error.code).toBe("CUSTOM_TOOL_ERROR");
+      expect(result.meta.creditsUsed).toBe(0);
     }
   });
 
-  it("should handle tool with credits throwing regular Error", async () => {
+  it("should handle tool throwing regular Error — credits always 0 for CLIENT tier", async () => {
     const toolWithCreditsRegularError = defineTool({
       meta: {
         id: "test/credits-regular-error",
         name: "Credits Regular Error",
         description: "Throws a regular Error with credits config",
         category: "test",
-        tier: ToolTier.SERVER_HEAVY,
+        tier: ToolTier.CLIENT,
         keywords: ["error", "credits"],
         credits: { base: 3 },
       },
@@ -258,7 +258,6 @@ describe("executeTool", () => {
     if (!result.success) {
       expect(result.error.code).toBe("EXEC_FAILED");
       expect(result.error.message).toContain("Regular error with credits");
-      // details (stack trace) removed in production for security
     }
   });
 
@@ -296,9 +295,8 @@ describe("executeTool", () => {
         name: "Tool With Options",
         description: "Has options schema",
         category: "test",
-        tier: ToolTier.SERVER_HEAVY,
+        tier: ToolTier.CLIENT,
         keywords: ["options"],
-        credits: { base: 3 },
       },
       inputSchema: z.object({ input: z.string() }),
       outputSchema: z.object({ output: z.string() }),

@@ -3,29 +3,9 @@
 import { useCallback, useMemo } from "react";
 import { Play, Settings2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { Slider } from "@/components/ui/slider";
-import { TextInput } from "@/components/forms/text-input";
-import { NumberInput } from "@/components/forms/number-input";
-import { SearchableSelect } from "@/components/forms/searchable-select";
+import type { SchemaField } from "./schema-field-renderer";
+import { SchemaFieldRenderer } from "./schema-field-renderer";
 import { cn } from "@/lib/utils";
-
-/**
- * JSON Schema field definition extracted from Zod schemas.
- */
-interface SchemaField {
-  type: "string" | "number" | "integer" | "boolean" | "array";
-  title?: string;
-  description?: string;
-  default?: unknown;
-  enum?: unknown[];
-  enumNames?: string[];
-  minimum?: number;
-  maximum?: number;
-  minLength?: number;
-  maxLength?: number;
-  items?: SchemaField;
-}
 
 /**
  * JSON Schema object definition with properties.
@@ -103,7 +83,7 @@ export function GeneratorOptionsPanel({
   onExecute,
   isExecuting = false,
   disabled = false,
-  toolName,
+  toolName: _toolName,
   className,
 }: GeneratorOptionsPanelProps): React.ReactElement {
   const updateInputValue = useCallback(
@@ -140,155 +120,9 @@ export function GeneratorOptionsPanel({
     }));
   }, [optionsSchema, optionValues]);
 
-  const renderField = useCallback(
-    (
-      key: string,
-      field: SchemaField,
-      isRequired: boolean,
-      value: unknown,
-      updateFn: (key: string, value: unknown) => void
-    ) => {
-      const label = field.title ?? key;
-      const description = field.description;
-
-      // Boolean field - render as switch
-      if (field.type === "boolean") {
-        return (
-          <div key={key} className="flex items-center justify-between py-2">
-            <div className="space-y-0.5">
-              <label
-                htmlFor={`gen-${key}`}
-                className="cursor-pointer text-sm font-medium"
-              >
-                {label}
-                {isRequired && <span className="text-destructive ml-1">*</span>}
-              </label>
-              {description && (
-                <p className="text-muted-foreground text-xs">{description}</p>
-              )}
-            </div>
-            <Switch
-              id={`gen-${key}`}
-              checked={Boolean(value)}
-              onCheckedChange={(checked) => updateFn(key, checked)}
-              disabled={disabled || isExecuting}
-            />
-          </div>
-        );
-      }
-
-      // Enum field - render as select
-      if (field.enum && field.enum.length > 0) {
-        const options = field.enum.map((enumValue, index) => ({
-          value: enumValue as string,
-          label: field.enumNames?.[index] ?? String(enumValue),
-        }));
-
-        return (
-          <SearchableSelect
-            key={key}
-            name={`gen-${key}`}
-            label={label}
-            description={description}
-            required={isRequired}
-            disabled={disabled || isExecuting}
-            options={options}
-            value={(value as string) ?? null}
-            onChange={(newValue) => updateFn(key, newValue)}
-            searchable={options.length > 5}
-          />
-        );
-      }
-
-      // Number field with range - render as slider
-      if (
-        (field.type === "number" || field.type === "integer") &&
-        field.minimum !== undefined &&
-        field.maximum !== undefined
-      ) {
-        return (
-          <div key={key} className="space-y-2">
-            <div className="flex items-center justify-between">
-              <label
-                htmlFor={`gen-slider-${key}`}
-                className="text-sm font-medium"
-              >
-                {label}
-                {isRequired && <span className="text-destructive ml-1">*</span>}
-              </label>
-              <span
-                className="text-muted-foreground text-sm tabular-nums"
-                aria-live="polite"
-              >
-                {value as number}
-              </span>
-            </div>
-            {description && (
-              <p
-                id={`gen-slider-${key}-desc`}
-                className="text-muted-foreground text-xs"
-              >
-                {description}
-              </p>
-            )}
-            <Slider
-              id={`gen-slider-${key}`}
-              value={[Number(value) || field.minimum]}
-              min={field.minimum}
-              max={field.maximum}
-              step={1}
-              onValueChange={([newValue]) => updateFn(key, newValue)}
-              disabled={disabled || isExecuting}
-              aria-describedby={
-                description ? `gen-slider-${key}-desc` : undefined
-              }
-            />
-          </div>
-        );
-      }
-
-      // Number field - render as number input
-      if (field.type === "number" || field.type === "integer") {
-        return (
-          <NumberInput
-            key={key}
-            name={`gen-${key}`}
-            label={label}
-            description={description}
-            required={isRequired}
-            disabled={disabled || isExecuting}
-            value={Number(value) || 0}
-            onChange={(newValue) => updateFn(key, newValue)}
-            min={field.minimum}
-            max={field.maximum}
-          />
-        );
-      }
-
-      // String field - render as text input
-      return (
-        <TextInput
-          key={key}
-          name={`gen-${key}`}
-          label={label}
-          description={description}
-          required={isRequired}
-          disabled={disabled || isExecuting}
-          value={
-            typeof value === "object"
-              ? JSON.stringify(value)
-              : String((value as string | number) ?? "")
-          }
-          onChange={(newValue) => updateFn(key, newValue)}
-          maxLength={field.maxLength}
-        />
-      );
-    },
-    [disabled, isExecuting]
-  );
-
   const hasInputFields = inputFields.length > 0;
   const hasOptionFields = optionFields.length > 0;
+  const isDisabled = disabled || isExecuting;
 
   return (
     <div className={cn("editor-wrapper flex flex-col", className)}>
@@ -300,7 +134,7 @@ export function GeneratorOptionsPanel({
         <div className="editor-header-actions">
           <Button
             onClick={onExecute}
-            disabled={disabled || isExecuting}
+            disabled={isDisabled}
             size="sm"
             className="h-7"
           >
@@ -316,14 +150,25 @@ export function GeneratorOptionsPanel({
           {/* Input fields */}
           {hasInputFields && (
             <div className="space-y-4">
-              <div className="text-muted-foreground flex items-center gap-2 text-sm font-medium">
-                <Settings2 className="h-4 w-4" />
-                <span>{toolName} Settings</span>
-              </div>
+              {hasOptionFields && (
+                <p className="text-muted-foreground flex items-center gap-2 text-sm font-medium">
+                  <Settings2 className="h-4 w-4" />
+                  Parameters
+                </p>
+              )}
               <div className="space-y-4">
-                {inputFields.map(({ key, field, isRequired, value }) =>
-                  renderField(key, field, isRequired, value, updateInputValue)
-                )}
+                {inputFields.map(({ key, field, isRequired, value }) => (
+                  <SchemaFieldRenderer
+                    key={key}
+                    fieldKey={key}
+                    field={field}
+                    isRequired={isRequired}
+                    value={value}
+                    disabled={isDisabled}
+                    idPrefix="gen-"
+                    onChange={updateInputValue}
+                  />
+                ))}
               </div>
             </div>
           )}
@@ -332,37 +177,27 @@ export function GeneratorOptionsPanel({
           {hasOptionFields && (
             <div className="space-y-4">
               {hasInputFields && (
-                <div className="text-muted-foreground flex items-center gap-2 text-sm font-medium">
+                <p className="text-muted-foreground flex items-center gap-2 text-sm font-medium">
                   <Settings2 className="h-4 w-4" />
-                  <span>Options</span>
-                </div>
-              )}
-              {!hasInputFields && (
-                <div className="text-muted-foreground flex items-center gap-2 text-sm font-medium">
-                  <Settings2 className="h-4 w-4" />
-                  <span>{toolName} Settings</span>
-                </div>
+                  Options
+                </p>
               )}
               <div className="space-y-4">
-                {optionFields.map(({ key, field, isRequired, value }) =>
-                  renderField(key, field, isRequired, value, updateOptionValue)
-                )}
+                {optionFields.map(({ key, field, isRequired, value }) => (
+                  <SchemaFieldRenderer
+                    key={key}
+                    fieldKey={key}
+                    field={field}
+                    isRequired={isRequired}
+                    value={value}
+                    disabled={isDisabled}
+                    idPrefix="gen-"
+                    onChange={updateOptionValue}
+                  />
+                ))}
               </div>
             </div>
           )}
-
-          {/* Generate button (prominent, centered) */}
-          <div className="pt-2">
-            <Button
-              onClick={onExecute}
-              disabled={disabled || isExecuting}
-              size="lg"
-              className="w-full"
-            >
-              <Play className="mr-2 h-4 w-4" />
-              {isExecuting ? "Generating..." : "Generate"}
-            </Button>
-          </div>
         </div>
       </div>
     </div>

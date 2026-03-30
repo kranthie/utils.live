@@ -127,14 +127,14 @@ describe("API Schemas", () => {
       expect(result.success).toBe(true);
     });
 
-    it("should accept detail with credits", () => {
+    it("should accept detail with credits config", () => {
       const result = toolDetailSchema.safeParse({
-        id: "text/ai-summarize",
-        name: "AI Summarize",
-        description: "Summarize text using AI",
+        id: "text/word-counter",
+        name: "Word Counter",
+        description: "Count words in text",
         category: "text",
-        tier: "ai",
-        keywords: ["ai", "summarize"],
+        tier: "client",
+        keywords: ["text", "words"],
         inputSchema: { type: "object" },
         outputSchema: { type: "object" },
         credits: { base: 5, perKb: 0.1, max: 20 },

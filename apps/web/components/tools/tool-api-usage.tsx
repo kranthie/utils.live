@@ -1,8 +1,19 @@
 "use client";
 
 import { memo, useState, useMemo } from "react";
+import dynamic from "next/dynamic";
 import { ChevronDown, ChevronUp, Terminal } from "lucide-react";
-import type { ToolTierValue } from "@utils-live/tools/constants";
+import { EditorFallback } from "@/components/editor/editor-fallback";
+
+const CodeEditor = dynamic(
+  () => import("@/components/editor/code-editor").then((mod) => mod.CodeEditor),
+  {
+    loading: () => (
+      <EditorFallback value="" placeholder="Loading..." readOnly />
+    ),
+    ssr: false,
+  }
+);
 import {
   Collapsible,
   CollapsibleContent,
@@ -33,10 +44,6 @@ interface ToolApiUsageProps {
    */
   toolId: string;
   /**
-   * Tool tier
-   */
-  tier: ToolTierValue;
-  /**
    * Tool options schema
    */
   options?: OptionSchema[];
@@ -63,7 +70,6 @@ type LanguageKey = "javascript" | "typescript";
 
 export const ToolApiUsage = memo(function ToolApiUsage({
   toolId,
-  tier,
   options = [],
   exampleInput = "Your input here",
   exampleOptions = {},
@@ -109,14 +115,7 @@ if (result.success) {
     };
   }, [toolId, exampleInput, exampleOptions, hasOptions]);
 
-  const tierLabel =
-    tier === "client"
-      ? "Runs entirely in the browser"
-      : tier === "server-light"
-        ? "Lightweight server processing"
-        : tier === "server-heavy"
-          ? "Heavy server processing"
-          : "AI-powered processing";
+  const tierLabel = "Runs entirely in the browser";
 
   return (
     <div className={cn("rounded-lg border", className)}>
@@ -155,14 +154,20 @@ if (result.success) {
             {/* Tier info */}
             <div className="bg-muted/50 rounded-md p-3 text-sm">
               <p className="text-muted-foreground">
-                <strong>Execution tier:</strong> {tierLabel}.{" "}
-                {tier === "client"
-                  ? "This tool runs synchronously with no network calls."
-                  : "This tool requires a server environment to execute."}
+                <strong>Execution:</strong> {tierLabel}. This tool runs
+                synchronously with no network calls.
               </p>
             </div>
 
             {/* Options reference */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium">Options</label>
+              {options.length === 0 && (
+                <p className="text-muted-foreground text-sm">
+                  This tool has no configuration options.
+                </p>
+              )}
+            </div>
             {options.length > 0 && (
               <div className="space-y-2">
                 <label className="text-sm font-medium">Options</label>
@@ -235,9 +240,15 @@ if (result.success) {
                 </Select>
               </div>
               <div className="relative">
-                <pre className="bg-muted max-h-80 overflow-auto rounded-md p-4 font-mono text-sm">
-                  {codeSnippets[language]}
-                </pre>
+                <div className="max-h-80 overflow-hidden rounded-md border">
+                  <CodeEditor
+                    value={codeSnippets[language]}
+                    language={language}
+                    readOnly
+                    lineNumbers={false}
+                    minimap={false}
+                  />
+                </div>
                 <div className="absolute top-2 right-2">
                   <CopyButton value={codeSnippets[language]} size="sm" />
                 </div>
