@@ -102,18 +102,18 @@ function execute(input: Input, options?: Options): Output {
     const key = keyIndices.map((i) => row[i] ?? "").join("\0");
 
     if (!seen.has(key)) {
+      // First encounter: always record the index
       seen.set(key, index);
-      if (keepFirst) {
-        uniqueIndices.push(index);
-      }
+      uniqueIndices.push(index);
     } else if (!keepFirst) {
-      // Update to latest occurrence
+      // Duplicate with keep-last strategy: replace previous index with this one
       const prevIdx = uniqueIndices.indexOf(seen.get(key)!);
       if (prevIdx !== -1) {
         uniqueIndices[prevIdx] = index;
       }
       seen.set(key, index);
     }
+    // keepFirst=true and key already seen: skip (original index stays)
   });
 
   if (!keepFirst) {

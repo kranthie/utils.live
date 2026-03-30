@@ -107,12 +107,18 @@ John,second`;
 
       expect(result.success).toBe(true);
       if (result.success) {
-        // The keepFirst: false logic may have edge cases in implementation
-        // Just verify the operation completes successfully
-        expect((result.data as Record<string, unknown>).originalCount).toBe(3);
-        expect(
-          (result.data as Record<string, unknown>).duplicatesRemoved
-        ).toBeGreaterThanOrEqual(0);
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
+        // uniqueCount should be 2 (John and Jane)
+        expect((result.data as Record<string, unknown>).uniqueCount).toBe(2);
+        expect((result.data as Record<string, unknown>).duplicatesRemoved).toBe(
+          1
+        );
+        // Should keep the LAST occurrence of John → "John,second"
+        expect(output).toContain("John,second");
+        expect(output).not.toContain("John,first");
+        // Jane (no duplicate) should be in output
+        expect(output).toContain("Jane,only");
       }
     });
 
