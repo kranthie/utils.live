@@ -23,6 +23,7 @@ interface GeneratorToolLayoutProps {
   onOptionsChange: (options: Record<string, unknown>) => void;
   generatorInputValues: Record<string, unknown>;
   onGeneratorInputChange: (values: Record<string, unknown>) => void;
+  onCopy?: () => void;
   onExecuteReady: (fns: {
     execute: () => void;
     reset: () => void;
@@ -41,6 +42,7 @@ export function GeneratorToolLayout({
   onOptionsChange,
   generatorInputValues,
   onGeneratorInputChange,
+  onCopy,
   onExecuteReady,
 }: GeneratorToolLayoutProps): React.ReactElement {
   const isAI = tool.tier === ToolTier.AI;
@@ -234,6 +236,7 @@ export function GeneratorToolLayout({
             isLoading={isExecuting}
             isAutoMode={tool.tier === ToolTier.CLIENT}
             downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
+            onCopy={onCopy}
           />
         )}
       </ToolLayout>

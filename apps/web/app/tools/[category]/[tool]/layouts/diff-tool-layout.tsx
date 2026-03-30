@@ -17,6 +17,7 @@ interface DiffToolLayoutProps {
   options: Record<string, unknown>;
   exampleInput?: string;
   exampleInputSeq?: number;
+  onCopy?: () => void;
   onExecuteReady: (fns: {
     execute: () => void;
     reset: () => void;
@@ -32,6 +33,7 @@ export function DiffToolLayout({
   options,
   exampleInput,
   exampleInputSeq,
+  onCopy,
   onExecuteReady,
 }: DiffToolLayoutProps): React.ReactElement {
   const isMobile = useIsMobile();
@@ -243,6 +245,7 @@ export function DiffToolLayout({
           isLoading={isExecuting}
           isAutoMode={tool.tier === ToolTier.CLIENT}
           downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
+          onCopy={onCopy}
         />
       </div>
     </div>

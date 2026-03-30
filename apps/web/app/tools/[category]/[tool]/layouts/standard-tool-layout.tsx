@@ -23,6 +23,7 @@ interface StandardToolLayoutProps {
   exampleInput?: string;
   exampleInputSeq?: number;
   sampleData?: string;
+  onCopy?: () => void;
   onExecuteReady: (fns: {
     execute: () => void;
     reset: () => void;
@@ -41,6 +42,7 @@ export function StandardToolLayout({
   exampleInput,
   exampleInputSeq,
   sampleData: sampleDataProp,
+  onCopy,
   onExecuteReady,
 }: StandardToolLayoutProps): React.ReactElement {
   const isAI = tool.tier === ToolTier.AI;
@@ -254,6 +256,7 @@ export function StandardToolLayout({
             isLoading={isExecuting}
             isAutoMode={tool.tier === ToolTier.CLIENT}
             downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
+            onCopy={onCopy}
           />
         )}
       </ToolLayout>

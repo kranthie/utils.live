@@ -19,6 +19,7 @@ import {
 import { ToolDocumentation } from "@/components/tools/tool-documentation";
 import { RelatedTools } from "@/components/tools/related-tools";
 import { useKeyboardShortcut } from "@/hooks/use-keyboard-shortcut";
+import { useAnalytics } from "@/hooks/use-analytics";
 import type { ToolCardData } from "@/lib/tools/get-tool";
 import { cn } from "@/lib/utils";
 import {
@@ -287,10 +288,14 @@ export function ToolPageClient({
     }
   }, [optionsStorageKey]);
 
+  // Analytics tracking
+  const { trackExecute, trackCopy } = useAnalytics(tool.id, tool.category);
+
   // Manual execute handler
   const handleExecute = useCallback(() => {
     executeFnRef.current();
-  }, []);
+    trackExecute();
+  }, [trackExecute]);
 
   // Keyboard shortcut: Ctrl+Enter to execute
   useKeyboardShortcut(
@@ -446,6 +451,7 @@ export function ToolPageClient({
           options={options}
           exampleInput={exampleInput.value}
           exampleInputSeq={exampleInput.seq}
+          onCopy={trackCopy}
           onExecuteReady={handleExecuteReady}
         />
       )}
@@ -459,6 +465,7 @@ export function ToolPageClient({
           onOptionsChange={handleOptionsChange}
           generatorInputValues={generatorInputValues}
           onGeneratorInputChange={handleGeneratorInputChange}
+          onCopy={trackCopy}
           onExecuteReady={handleExecuteReady}
         />
       )}
@@ -472,6 +479,7 @@ export function ToolPageClient({
           exampleInput={exampleInput.value}
           exampleInputSeq={exampleInput.seq}
           sampleData={sampleInput}
+          onCopy={trackCopy}
           onExecuteReady={handleExecuteReady}
         />
       )}
