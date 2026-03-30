@@ -36,6 +36,7 @@ pnpm generate:tool -- --name my-tool --category json --keywords "foo,bar"
 ```
 
 This creates two files:
+
 - `packages/tools/src/tools/{category}/{tool-name}.ts` -- implementation
 - `packages/tools/tests/tools/{category}/{tool-name}.test.ts` -- tests
 
@@ -103,6 +104,17 @@ packages/config/    # Shared ESLint/Prettier config
 ## Categories
 
 There are 34 categories defined in `packages/tools/src/categories/categories.ts`. If your tool doesn't fit an existing category, open an issue to discuss adding a new one.
+
+## Deployment
+
+utils.live is hosted on **Cloudflare Pages**. Deployment is fully automatic — there is **no deploy CI step needed**.
+
+- **Every commit to `main`** is automatically built and deployed by Cloudflare Pages.
+- Cloudflare Pages detects the push via its GitHub integration and runs `pnpm turbo build`, serving the output from `apps/web/out/`.
+- Preview deployments are created automatically for every pull request.
+- Do **not** add a GitHub Actions deploy workflow — it is unnecessary and will cause double-builds.
+
+To check deployment status, visit the [Cloudflare Pages dashboard](https://dash.cloudflare.com/) for the `utils-live` project.
 
 ## Questions?
 
