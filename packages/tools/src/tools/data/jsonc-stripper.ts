@@ -38,11 +38,19 @@ function execute(input: Input): Output {
       const char = result[i];
       const nextChar = result[i + 1];
 
-      // Handle string boundaries
-      if (
-        (char === '"' || char === "'") &&
-        (i === 0 || result[i - 1] !== "\\")
-      ) {
+      // Handle string boundaries.
+      // Count consecutive backslashes before this position to determine if
+      // the quote is escaped. An odd count means escaped; even means not escaped.
+      const isEscaped = (() => {
+        let backslashCount = 0;
+        let j = i - 1;
+        while (j >= 0 && result[j] === "\\") {
+          backslashCount++;
+          j--;
+        }
+        return backslashCount % 2 !== 0;
+      })();
+      if ((char === '"' || char === "'") && !isEscaped) {
         if (!inString) {
           inString = true;
           stringChar = char;

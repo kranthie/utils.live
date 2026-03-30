@@ -342,6 +342,34 @@ badline`;
     });
   });
 
+  describe("dot-notation section key counting", () => {
+    it("should count leaf keys correctly in dot-notation sections with multiple keys", async () => {
+      // [server.production] with 2 keys → ini.parse gives { server: { production: { host: ..., port: ... } } }
+      // keyCount must be 2 (host and port), not 1 (production sub-object)
+      const input = "[server.production]\nhost=prod.example.com\nport=443";
+      const result = await executeTool(iniValidator, { input });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const data = result.data as Record<string, unknown>;
+        expect(data.valid).toBe(true);
+        expect(data.keyCount).toBe(2);
+      }
+    });
+
+    it("should count leaf keys correctly for deeply nested dot-notation sections", async () => {
+      const input = "[a.b.c]\nkey1=val1\nkey2=val2\nkey3=val3";
+      const result = await executeTool(iniValidator, { input });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const data = result.data as Record<string, unknown>;
+        expect(data.valid).toBe(true);
+        expect(data.keyCount).toBe(3);
+      }
+    });
+  });
+
   describe("execution metadata", () => {
     it("should include execution metadata", async () => {
       const result = await executeTool(iniValidator, { input: "name=test" });

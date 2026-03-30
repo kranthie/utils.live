@@ -263,6 +263,73 @@ describe("jsonToNdjson", () => {
     });
   });
 
+  describe("compact: false correctness", () => {
+    it("should not corrupt URL values containing colons when compact is false", async () => {
+      const input = '[{"url": "http://example.com"}]';
+      const result = await executeTool(
+        jsonToNdjson,
+        { input },
+        { compact: false }
+      );
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const data = result.data as { output: string };
+        const parsed = JSON.parse(data.output) as Record<string, unknown>;
+        expect(parsed.url).toBe("http://example.com");
+      }
+    });
+
+    it("should not corrupt time values containing colons when compact is false", async () => {
+      const input = '[{"time": "12:30:00"}]';
+      const result = await executeTool(
+        jsonToNdjson,
+        { input },
+        { compact: false }
+      );
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const data = result.data as { output: string };
+        const parsed = JSON.parse(data.output) as Record<string, unknown>;
+        expect(parsed.time).toBe("12:30:00");
+      }
+    });
+
+    it("should not corrupt ISO timestamp values when compact is false", async () => {
+      const input = '[{"ts": "2024-01-01T00:00:00Z"}]';
+      const result = await executeTool(
+        jsonToNdjson,
+        { input },
+        { compact: false }
+      );
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const data = result.data as { output: string };
+        const parsed = JSON.parse(data.output) as Record<string, unknown>;
+        expect(parsed.ts).toBe("2024-01-01T00:00:00Z");
+      }
+    });
+
+    it("should produce valid parseable JSON with spaces after structural tokens when compact is false", async () => {
+      const input = '[{"a": 1, "b": 2}]';
+      const result = await executeTool(
+        jsonToNdjson,
+        { input },
+        { compact: false }
+      );
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const data = result.data as { output: string };
+        const parsed = JSON.parse(data.output) as Record<string, unknown>;
+        expect(parsed.a).toBe(1);
+        expect(parsed.b).toBe(2);
+      }
+    });
+  });
+
   describe("roundtrip", () => {
     it("should roundtrip correctly with ndjson-parser", async () => {
       const original = [

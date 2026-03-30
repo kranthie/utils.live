@@ -253,6 +253,37 @@ describe("jsoncStripper", () => {
     });
   });
 
+  describe("escape detection edge cases", () => {
+    it("should handle string ending with escaped backslash before comment", async () => {
+      // "test\\" in JSON means the value is: test\
+      // The closing quote after \\ is NOT escaped (even backslash count = not escaped)
+      const input = '{"a": "test\\\\"} // comment';
+      const result = await executeTool(jsoncStripper, { input });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const data = result.data as JsoncStripperOutput;
+        expect(data.commentsRemoved).toBe(1);
+        const parsed = JSON.parse(data.output) as Record<string, unknown>;
+        expect(parsed.a).toBe("test\\");
+      }
+    });
+
+    it("should handle string ending with four backslashes (two escaped backslashes) before comment", async () => {
+      // "\\\\" in JSON means value is: \\  (two backslashes)
+      const input = '{"a": "\\\\\\\\"} // comment';
+      const result = await executeTool(jsoncStripper, { input });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const data = result.data as JsoncStripperOutput;
+        expect(data.commentsRemoved).toBe(1);
+        const parsed = JSON.parse(data.output) as Record<string, unknown>;
+        expect(parsed.a).toBe("\\\\");
+      }
+    });
+  });
+
   describe("execute function directly", () => {
     it("should strip comments when called directly", () => {
       const result = jsoncStripper.execute({

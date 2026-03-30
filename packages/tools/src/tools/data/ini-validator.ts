@@ -98,6 +98,22 @@ function strictValidate(input: string): string[] {
 }
 
 /**
+ * Recursively counts leaf (non-object) values in a parsed INI section.
+ * Handles dot-notation sections which ini.parse represents as nested objects.
+ */
+function countLeafKeys(obj: object): number {
+  let count = 0;
+  for (const value of Object.values(obj)) {
+    if (typeof value === "object" && value !== null) {
+      count += countLeafKeys(value as object);
+    } else {
+      count++;
+    }
+  }
+  return count;
+}
+
+/**
  * Validates an INI string.
  */
 function execute(input: Input): Output {
@@ -110,7 +126,7 @@ function execute(input: Input): Output {
     for (const value of Object.values(parsed)) {
       if (typeof value === "object" && value !== null) {
         sectionCount++;
-        keyCount += Object.keys(value as object).length;
+        keyCount += countLeafKeys(value as object);
       } else {
         keyCount++;
       }

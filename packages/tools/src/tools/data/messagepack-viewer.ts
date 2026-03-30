@@ -255,6 +255,50 @@ function decodeMessagePack(
     return { value: view.getUint32(0, false), bytesRead: 5 };
   }
 
+  // Uint64: 0xcf — decoded as number (safe) or string (if > Number.MAX_SAFE_INTEGER)
+  if (firstByte === 0xcf) {
+    const view = new DataView(buffer.buffer, buffer.byteOffset + offset + 1, 8);
+    const big = view.getBigUint64(0, false);
+    const value =
+      big <= BigInt(Number.MAX_SAFE_INTEGER) ? Number(big) : big.toString();
+    return { value, bytesRead: 9 };
+  }
+
+  // Bin8: 0xc4 — binary data returned as hex string
+  if (firstByte === 0xc4) {
+    const size = buffer[offset + 1];
+    if (size === undefined) {
+      throw new Error("Unexpected end of data for Bin8 length");
+    }
+    const bytes = buffer.slice(offset + 2, offset + 2 + size);
+    const value = Array.from(bytes)
+      .map((b) => b.toString(16).padStart(2, "0"))
+      .join("");
+    return { value, bytesRead: 2 + size };
+  }
+
+  // Bin16: 0xc5 — binary data returned as hex string
+  if (firstByte === 0xc5) {
+    const view = new DataView(buffer.buffer, buffer.byteOffset + offset + 1, 2);
+    const size = view.getUint16(0, false);
+    const bytes = buffer.slice(offset + 3, offset + 3 + size);
+    const value = Array.from(bytes)
+      .map((b) => b.toString(16).padStart(2, "0"))
+      .join("");
+    return { value, bytesRead: 3 + size };
+  }
+
+  // Bin32: 0xc6 — binary data returned as hex string
+  if (firstByte === 0xc6) {
+    const view = new DataView(buffer.buffer, buffer.byteOffset + offset + 1, 4);
+    const size = view.getUint32(0, false);
+    const bytes = buffer.slice(offset + 5, offset + 5 + size);
+    const value = Array.from(bytes)
+      .map((b) => b.toString(16).padStart(2, "0"))
+      .join("");
+    return { value, bytesRead: 5 + size };
+  }
+
   // Int8: 0xd0
   if (firstByte === 0xd0) {
     const val = buffer[offset + 1];
@@ -274,6 +318,18 @@ function decodeMessagePack(
   if (firstByte === 0xd2) {
     const view = new DataView(buffer.buffer, buffer.byteOffset + offset + 1, 4);
     return { value: view.getInt32(0, false), bytesRead: 5 };
+  }
+
+  // Int64: 0xd3 — decoded as number (safe) or string (if outside safe range)
+  if (firstByte === 0xd3) {
+    const view = new DataView(buffer.buffer, buffer.byteOffset + offset + 1, 8);
+    const big = view.getBigInt64(0, false);
+    const value =
+      big >= BigInt(Number.MIN_SAFE_INTEGER) &&
+      big <= BigInt(Number.MAX_SAFE_INTEGER)
+        ? Number(big)
+        : big.toString();
+    return { value, bytesRead: 9 };
   }
 
   // Str8: 0xd9
@@ -296,6 +352,15 @@ function decodeMessagePack(
     return { value, bytesRead: 3 + size };
   }
 
+  // Str32: 0xdb
+  if (firstByte === 0xdb) {
+    const view = new DataView(buffer.buffer, buffer.byteOffset + offset + 1, 4);
+    const size = view.getUint32(0, false);
+    const strBytes = buffer.slice(offset + 5, offset + 5 + size);
+    const value = new TextDecoder().decode(strBytes);
+    return { value, bytesRead: 5 + size };
+  }
+
   // Array16: 0xdc
   if (firstByte === 0xdc) {
     const view = new DataView(buffer.buffer, buffer.byteOffset + offset + 1, 2);
@@ -310,12 +375,42 @@ function decodeMessagePack(
     return { value: result, bytesRead };
   }
 
+  // Array32: 0xdd
+  if (firstByte === 0xdd) {
+    const view = new DataView(buffer.buffer, buffer.byteOffset + offset + 1, 4);
+    const size = view.getUint32(0, false);
+    const result: unknown[] = [];
+    let bytesRead = 5;
+    for (let i = 0; i < size; i++) {
+      const item = decodeMessagePack(buffer, offset + bytesRead);
+      bytesRead += item.bytesRead;
+      result.push(item.value);
+    }
+    return { value: result, bytesRead };
+  }
+
   // Map16: 0xde
   if (firstByte === 0xde) {
     const view = new DataView(buffer.buffer, buffer.byteOffset + offset + 1, 2);
     const size = view.getUint16(0, false);
     const result: Record<string, unknown> = {};
     let bytesRead = 3;
+    for (let i = 0; i < size; i++) {
+      const key = decodeMessagePack(buffer, offset + bytesRead);
+      bytesRead += key.bytesRead;
+      const val = decodeMessagePack(buffer, offset + bytesRead);
+      bytesRead += val.bytesRead;
+      result[String(key.value)] = val.value;
+    }
+    return { value: result, bytesRead };
+  }
+
+  // Map32: 0xdf
+  if (firstByte === 0xdf) {
+    const view = new DataView(buffer.buffer, buffer.byteOffset + offset + 1, 4);
+    const size = view.getUint32(0, false);
+    const result: Record<string, unknown> = {};
+    let bytesRead = 5;
     for (let i = 0; i < size; i++) {
       const key = decodeMessagePack(buffer, offset + bytesRead);
       bytesRead += key.bytesRead;

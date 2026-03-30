@@ -51,9 +51,34 @@ function execute(input: Input, options?: Options): Output {
     if (compact) {
       return JSON.stringify(item);
     }
-    // Non-compact: add spaces after colons and commas for readability
-    // while keeping each item on a single line (required for NDJSON format)
-    return JSON.stringify(item).replace(/,/g, ", ").replace(/:/g, ": ");
+    // Non-compact: add spaces after structural colons and commas only,
+    // not within string values. Walk character-by-character tracking string state.
+    const raw = JSON.stringify(item);
+    let result = "";
+    let inString = false;
+    for (let i = 0; i < raw.length; i++) {
+      const ch = raw[i]!;
+      if (inString) {
+        result += ch;
+        if (ch === "\\") {
+          // skip the escaped character so it doesn't affect string state
+          i++;
+          if (i < raw.length) result += raw[i]!;
+        } else if (ch === '"') {
+          inString = false;
+        }
+      } else {
+        if (ch === '"') {
+          inString = true;
+          result += ch;
+        } else if (ch === "," || ch === ":") {
+          result += ch + " ";
+        } else {
+          result += ch;
+        }
+      }
+    }
+    return result;
   });
 
   const output = lines.join("\n");
