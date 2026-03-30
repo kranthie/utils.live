@@ -38,7 +38,7 @@ export const colorDistance = defineTool({
     id: "color/color-distance",
     name: "Color Distance",
     description:
-      "Free online color distance calculator — compute the Euclidean distance (Delta E) between two colors in RGB space instantly in your browser. No data is stored. Measures perceptual difference between colors.",
+      "Free online color distance calculator — compute the perceptual distance (Delta E / CIE76) between two colors in CIE Lab color space instantly in your browser. No data is stored. Measures how different two colors appear to the human eye.",
     category: "color",
     subgroup: "Analysis",
     tier: ToolTier.CLIENT,

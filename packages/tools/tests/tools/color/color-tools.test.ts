@@ -512,16 +512,43 @@ describe("Palette Generator", () => {
     }
   });
 
-  it("should generate complementary palette", async () => {
+  it("should generate complementary palette with 2 opposite colors", async () => {
     const result = await executeTool(paletteGenerator, {
+      count: 2,
+      hue: 0,
+      saturation: 100,
+      lightness: 50,
       harmony: "complementary",
     });
     expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as Record<string, unknown>).output as string;
+      const colors = output.split("\n").filter(Boolean);
+      expect(colors.length).toBe(2);
+      // First color at hue 0 → red, last at hue 180 → cyan
+      expect(colors[0]!.toLowerCase()).toBe("#ff0000");
+      expect(colors[1]!.toLowerCase()).toBe("#00ffff");
+    }
   });
 
-  it("should generate triadic palette", async () => {
-    const result = await executeTool(paletteGenerator, { harmony: "triadic" });
+  it("should generate triadic palette with 3 evenly spaced hues", async () => {
+    const result = await executeTool(paletteGenerator, {
+      count: 3,
+      hue: 0,
+      saturation: 100,
+      lightness: 50,
+      harmony: "triadic",
+    });
     expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as Record<string, unknown>).output as string;
+      const colors = output.split("\n").filter(Boolean);
+      expect(colors.length).toBe(3);
+      // Hues 0°, 120°, 240° = red, green, blue
+      expect(colors[0]!.toLowerCase()).toBe("#ff0000");
+      expect(colors[1]!.toLowerCase()).toBe("#00ff00");
+      expect(colors[2]!.toLowerCase()).toBe("#0000ff");
+    }
   });
 });
 
@@ -878,7 +905,7 @@ describe("Color Mixer", () => {
     expect(colorMixer.meta.category).toBe("color");
   });
 
-  it("should mix two colors at 50%", async () => {
+  it("should mix red and blue at 50% to produce purple", async () => {
     const result = await executeTool(colorMixer, {
       input1: "#FF0000",
       input2: "#0000FF",
@@ -888,6 +915,10 @@ describe("Color Mixer", () => {
       expect((result.data as Record<string, unknown>).modified).toContain(
         "Mixed (50%):"
       );
+      // r=round(255*0.5)=128, g=0, b=round(255*0.5)=128 → #800080
+      expect(
+        String((result.data as Record<string, unknown>).modified).toLowerCase()
+      ).toContain("#800080");
     }
   });
 
