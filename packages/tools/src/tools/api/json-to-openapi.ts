@@ -88,12 +88,14 @@ function toYaml(obj: unknown, indent: number = 0): string {
     const lines: string[] = [];
     for (const [key, val] of entries) {
       if (typeof val === "object" && val !== null) {
-        lines.push(`${prefix}${key}:`);
         const nested = toYaml(val, indent + 1);
-        if (nested.includes("\n")) {
-          lines.push(nested);
+        if (nested === "{}" || nested === "[]") {
+          // Empty collections can be inlined
+          lines.push(`${prefix}${key}: ${nested}`);
         } else {
-          lines[lines.length - 1] = `${prefix}${key}: ${nested.trim()}`;
+          // Non-empty objects/arrays always go on a new line (block style)
+          lines.push(`${prefix}${key}:`);
+          lines.push(nested);
         }
       } else {
         lines.push(`${prefix}${key}: ${toYaml(val, indent + 1)}`);
@@ -148,7 +150,7 @@ export const jsonToOpenapi = defineTool({
         input:
           '{"openapi":"3.0.3","info":{"title":"Users API","version":"1.0.0"},"paths":{"/users":{"get":{"summary":"List users","responses":{"200":{"description":"OK"}}}}}}',
         output:
-          "openapi: 3.0.3\ninfo:\n  title: Users API\n  version: 1.0.0\npaths:\n  /users:\n    get:\n      summary: List users\n      responses: 200: description: OK",
+          'openapi: 3.0.3\ninfo:\n  title: Users API\n  version: 1.0.0\npaths:\n  /users:\n    get:\n      summary: List users\n      responses:\n        "200":\n          description: OK',
       },
     ],
   },
