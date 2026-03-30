@@ -72,6 +72,7 @@ export const ipv4Validator = defineTool({
       else if (o0 === 172 && o1 >= 16 && o1 <= 31) type = "Private (Class B)";
       else if (o0 === 192 && o1 === 168) type = "Private (Class C)";
       else if (o0 === 127) type = "Loopback";
+      else if (o0 >= 224 && o0 <= 239) type = "Multicast";
       else if (o0 === 0) type = "Current network";
       return { output: `Valid IPv4: ${ip}\nType: ${type}`, isValid: true };
     }

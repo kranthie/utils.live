@@ -904,4 +904,73 @@ describe("Cron Validator", () => {
       expect((result.data as Record<string, unknown>).isValid).toBe(false);
     }
   });
+
+  it("should reject descending range (30-5 in minute field)", async () => {
+    const result = await executeTool(cronValidatorTool, {
+      input: "30-5 * * * *",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect((result.data as Record<string, unknown>).isValid).toBe(false);
+    }
+  });
+
+  it("should reject out-of-range start for step syntax (100/5 in minute field)", async () => {
+    const result = await executeTool(cronValidatorTool, {
+      input: "100/5 * * * *",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect((result.data as Record<string, unknown>).isValid).toBe(false);
+    }
+  });
+
+  it("should accept range+step syntax (1-5/2 in minute field)", async () => {
+    const result = await executeTool(cronValidatorTool, {
+      input: "1-5/2 * * * *",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect((result.data as Record<string, unknown>).isValid).toBe(true);
+    }
+  });
+});
+
+describe("JSON Validator — null handling", () => {
+  it("should report null JSON literal as type 'null' not 'object'", async () => {
+    const result = await executeTool(jsonValidator, { input: "null" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect((result.data as Record<string, unknown>).isValid).toBe(true);
+      expect((result.data as Record<string, unknown>).output).toContain("null");
+      expect((result.data as Record<string, unknown>).output).not.toContain(
+        "object"
+      );
+    }
+  });
+});
+
+describe("IPv4 Validator — multicast detection", () => {
+  it("should detect multicast address range (224.x.x.x)", async () => {
+    const result = await executeTool(ipv4Validator, { input: "224.0.0.1" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect((result.data as Record<string, unknown>).isValid).toBe(true);
+      expect(
+        String((result.data as Record<string, unknown>).output).toLowerCase()
+      ).toContain("multicast");
+    }
+  });
+
+  it("should detect upper multicast boundary (239.255.255.255)", async () => {
+    const result = await executeTool(ipv4Validator, {
+      input: "239.255.255.255",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(
+        String((result.data as Record<string, unknown>).output).toLowerCase()
+      ).toContain("multicast");
+    }
+  });
 });

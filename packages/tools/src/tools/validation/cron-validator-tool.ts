@@ -42,7 +42,35 @@ function validateField(
   }
   const parts = field.split(",");
   for (const part of parts) {
-    if (part.includes("-")) {
+    if (part.includes("/")) {
+      // Handle STEP syntax: START/STEP or START-END/STEP
+      const slashParts = part.split("/");
+      const startPart = slashParts[0]!;
+      const stepStr = slashParts[1];
+      if (!stepStr || isNaN(parseInt(stepStr, 10)))
+        return `${name}: invalid step`;
+      const step = parseInt(stepStr, 10);
+      if (step < 1) return `${name}: invalid step value`;
+      // Validate the start/range portion
+      if (startPart !== "*") {
+        if (startPart.includes("-")) {
+          // START-END/STEP
+          const rangeParts = startPart.split("-").map(Number);
+          const a = rangeParts[0];
+          const b = rangeParts[1];
+          if (a === undefined || b === undefined || isNaN(a) || isNaN(b))
+            return `${name}: invalid range`;
+          if (a < min || b > max)
+            return `${name}: value out of range (${min}-${max})`;
+          if (a > b) return `${name}: range start must not exceed range end`;
+        } else {
+          // Numeric start: START/STEP
+          const start = parseInt(startPart, 10);
+          if (isNaN(start) || start < min || start > max)
+            return `${name}: value out of range (${min}-${max})`;
+        }
+      }
+    } else if (part.includes("-")) {
       const rangeParts = part.split("-").map(Number);
       const a = rangeParts[0];
       const b = rangeParts[1];
@@ -50,11 +78,7 @@ function validateField(
         return `${name}: invalid range`;
       if (a < min || b > max)
         return `${name}: value out of range (${min}-${max})`;
-    } else if (part.includes("/")) {
-      const slashParts = part.split("/");
-      const stepStr = slashParts[1];
-      if (!stepStr || isNaN(parseInt(stepStr, 10)))
-        return `${name}: invalid step`;
+      if (a > b) return `${name}: range start must not exceed range end`;
     } else {
       const n = parseInt(part, 10);
       if (isNaN(n) || n < min || n > max)

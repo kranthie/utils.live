@@ -16,7 +16,7 @@ export const hexColorValidator = defineTool({
     id: "validation/hex-color-validator",
     name: "Hex Color Validator",
     description:
-      "Free online hex color validator — check if a hex color code is valid instantly in your browser. No data is stored. Supports 3-digit, 6-digit, and 8-digit hex formats with or without the # prefix.",
+      "Free online hex color validator — check if a hex color code is valid instantly in your browser. No data is stored. Supports 3-digit, 4-digit (with alpha), 6-digit, and 8-digit (with alpha) hex formats — the # prefix is required.",
     category: "validation",
     subgroup: "Format Validators",
     tier: ToolTier.CLIENT,

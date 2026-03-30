@@ -51,7 +51,12 @@ export const jsonValidator = defineTool({
   execute: (input) => {
     try {
       const parsed = JSON.parse(input.input) as Record<string, unknown>;
-      const type = Array.isArray(parsed) ? "array" : typeof parsed;
+      const type =
+        parsed === null
+          ? "null"
+          : Array.isArray(parsed)
+            ? "array"
+            : typeof parsed;
       return { output: `Valid JSON (${type})`, isValid: true };
     } catch (e) {
       const msg = e instanceof Error ? e.message : "Unknown parse error";
