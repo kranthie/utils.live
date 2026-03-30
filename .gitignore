@@ -7,7 +7,6 @@ dist/
 build/
 .next/
 out/
-apps/web/public/og/
 
 # Cache
 .turbo/
