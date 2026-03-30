@@ -33,14 +33,16 @@ function execute(input: Input): Output {
 
   if (birth > ref) throw new Error("Birthdate cannot be in the future");
 
-  let years = ref.getFullYear() - birth.getFullYear();
-  let months = ref.getMonth() - birth.getMonth();
-  let days = ref.getDate() - birth.getDate();
+  let years = ref.getUTCFullYear() - birth.getUTCFullYear();
+  let months = ref.getUTCMonth() - birth.getUTCMonth();
+  let days = ref.getUTCDate() - birth.getUTCDate();
 
   if (days < 0) {
     months--;
-    const prevMonth = new Date(ref.getFullYear(), ref.getMonth(), 0);
-    days += prevMonth.getDate();
+    const prevMonth = new Date(
+      Date.UTC(ref.getUTCFullYear(), ref.getUTCMonth(), 0)
+    );
+    days += prevMonth.getUTCDate();
   }
   if (months < 0) {
     years--;
@@ -60,12 +62,10 @@ function execute(input: Input): Output {
 
   // Next birthday
   const nextBday = new Date(
-    ref.getFullYear(),
-    birth.getMonth(),
-    birth.getDate()
+    Date.UTC(ref.getUTCFullYear(), birth.getUTCMonth(), birth.getUTCDate())
   );
   if (nextBday <= ref) {
-    nextBday.setFullYear(nextBday.getFullYear() + 1);
+    nextBday.setUTCFullYear(nextBday.getUTCFullYear() + 1);
   }
   const daysToNext = Math.ceil((nextBday.getTime() - ref.getTime()) / 86400000);
   lines.push(
@@ -92,7 +92,7 @@ export const ageCalculator = defineTool({
           "Calculate age from a specific birthdate to a reference date",
         input: { birthdate: "1990-06-15", referenceDate: "2025-03-20" },
         output:
-          "Age: 34 years, 9 months, 5 days\nTotal days: 12,697\nTotal weeks: 1,813\nTotal hours: 304,728\n\nBorn: 1990-06-15\nAs of: 2025-03-20\n\nNext birthday in 87 days (2025-06-14)",
+          "Age: 34 years, 9 months, 5 days\nTotal days: 12,697\nTotal weeks: 1,813\nTotal hours: 304,728\n\nBorn: 1990-06-15\nAs of: 2025-03-20\n\nNext birthday in 87 days (2025-06-15)",
       },
     ],
   },

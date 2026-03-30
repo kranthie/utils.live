@@ -87,6 +87,21 @@ describe("Age Calculator", () => {
     }
   });
 
+  it("next birthday date should be timezone-invariant (UTC-based)", async () => {
+    // Birth on June 15 must show next birthday as June 15, not June 14.
+    // Regression test: local-time methods on UTC-midnight dates caused off-by-one
+    // in non-UTC timezones (e.g. PDT).
+    const result = await executeTool(ageCalculator, {
+      birthdate: "1990-06-15",
+      referenceDate: "2025-03-20",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.output as string).toContain("2025-06-15");
+    }
+  });
+
   it("example output matches execute()", async () => {
     const example = ageCalculator.meta.examples![0]!;
     const input = example.input as { birthdate: string; referenceDate: string };
