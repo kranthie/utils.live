@@ -71,9 +71,13 @@ function execute(input: Input, options?: Options): Output {
   const letters = cleaned.split("");
   const totalPossible = factorial(letters.length);
 
-  // Generate unique anagrams
+  // Generate unique anagrams.
+  // Do NOT cap attempts to totalPossible — for inputs with repeated letters,
+  // factorial(n) underestimates the number of shuffles needed to hit all
+  // distinct permutations (e.g. "aab" has factorial(3)=6 orderings but only
+  // 3 distinct strings, so capping at 6 attempts is not enough).
   const anagrams = new Set<string>();
-  const maxAttempts = Math.min(totalPossible, limit * 10);
+  const maxAttempts = limit * 100;
 
   for (let i = 0; i < maxAttempts && anagrams.size < limit; i++) {
     const shuffled = shuffle(letters).join("");
