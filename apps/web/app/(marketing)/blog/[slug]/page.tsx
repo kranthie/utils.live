@@ -97,7 +97,7 @@ export default async function BlogPostPage({
         <hr className="border-border mb-10" />
 
         {/* Markdown content */}
-        <div className="prose prose-neutral dark:prose-invert max-w-none">
+        <div className="prose max-w-none">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeHighlight]}
