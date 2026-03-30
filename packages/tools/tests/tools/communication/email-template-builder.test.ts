@@ -96,4 +96,21 @@ describe("email-template-builder", () => {
     ).output;
     expect(html).toContain("© 2025");
   });
+
+  it("example output matches actual execute() output", () => {
+    const exampleInput = emailTemplateBuilder.meta.examples![0]!.input as {
+      subject: string;
+      heading: string;
+      body: string;
+      ctaText: string;
+      ctaUrl: string;
+      footerText: string;
+      primaryColor: string;
+    };
+    const actual = (
+      emailTemplateBuilder.execute(exampleInput) as { output: string }
+    ).output;
+    const exampleOutput = emailTemplateBuilder.meta.examples![0]!.output;
+    expect(actual).toBe(exampleOutput);
+  });
 });

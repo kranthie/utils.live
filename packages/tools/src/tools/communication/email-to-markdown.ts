@@ -70,10 +70,13 @@ function execute(input: Input): Output {
       (url) => `[${url}](${url})`
     );
 
-    // Convert email addresses to mailto links
+    // Convert email addresses to mailto links, preserving (email) in parentheses
     mdLine = mdLine.replace(
-      /(?<!\()([\w.+-]+@[\w-]+\.[\w.-]+)(?!\))/g,
-      (email) => `[${email}](mailto:${email})`
+      /\(([\w.+-]+@[\w-]+\.[\w.-]+)\)|([\w.+-]+@[\w-]+\.[\w.-]+)/g,
+      (match, inParens: string | undefined, standalone: string | undefined) => {
+        if (inParens !== undefined) return match; // keep (email) unchanged
+        return `[${standalone!}](mailto:${standalone!})`;
+      }
     );
 
     lines.push(mdLine);

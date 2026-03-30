@@ -37,6 +37,16 @@ describe("email-to-markdown", () => {
     expect(md).toContain("[support@example.com](mailto:support@example.com)");
   });
 
+  it("does not convert email addresses inside parentheses", () => {
+    const md = execute(
+      "From: a@example.com\n\nContact (support@example.com) for help"
+    );
+    // Should keep the parenthesized email untouched
+    expect(md).toContain("(support@example.com)");
+    // Should NOT partially convert to [upport@example.co](mailto:upport@example.co)m
+    expect(md).not.toContain("mailto:upport@example.co");
+  });
+
   it("converts indented text to blockquotes", () => {
     const md = execute("From: a@example.com\n\n    This is a quoted line");
     expect(md).toContain("> This is a quoted line");
