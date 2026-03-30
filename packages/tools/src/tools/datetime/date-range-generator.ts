@@ -50,9 +50,9 @@ const DAYS_LONG = [
 function formatDateValue(date: Date, format: string): string {
   switch (format) {
     case "short":
-      return `${MONTHS_SHORT[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+      return `${MONTHS_SHORT[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
     case "long":
-      return `${DAYS_LONG[date.getDay()]}, ${MONTHS_SHORT[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+      return `${DAYS_LONG[date.getUTCDay()]}, ${MONTHS_SHORT[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
     default:
       return date.toISOString().split("T")[0]!;
   }
