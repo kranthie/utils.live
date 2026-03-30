@@ -172,6 +172,7 @@ export function ContactForm({
       <Button
         type="submit"
         className="w-full sm:w-auto"
+        aria-busy={status === "submitting"}
         disabled={
           status === "submitting" ||
           !formData.name ||

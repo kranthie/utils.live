@@ -77,20 +77,35 @@ export function ThemeToggle({
         align="end"
         onCloseAutoFocus={(e) => e.preventDefault()}
       >
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem
+          onClick={() => setTheme("light")}
+          aria-current={theme === "light" ? "true" : undefined}
+        >
           <Sun className="mr-2 h-4 w-4" />
           <span className="flex-1">Light</span>
-          {theme === "light" && <Check className="ml-2 h-4 w-4" />}
+          {theme === "light" && (
+            <Check className="ml-2 h-4 w-4" aria-hidden="true" />
+          )}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem
+          onClick={() => setTheme("dark")}
+          aria-current={theme === "dark" ? "true" : undefined}
+        >
           <Moon className="mr-2 h-4 w-4" />
           <span className="flex-1">Dark</span>
-          {theme === "dark" && <Check className="ml-2 h-4 w-4" />}
+          {theme === "dark" && (
+            <Check className="ml-2 h-4 w-4" aria-hidden="true" />
+          )}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem
+          onClick={() => setTheme("system")}
+          aria-current={theme === "system" ? "true" : undefined}
+        >
           <Monitor className="mr-2 h-4 w-4" />
           <span className="flex-1">System</span>
-          {theme === "system" && <Check className="ml-2 h-4 w-4" />}
+          {theme === "system" && (
+            <Check className="ml-2 h-4 w-4" aria-hidden="true" />
+          )}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

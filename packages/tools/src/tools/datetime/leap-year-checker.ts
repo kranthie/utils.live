@@ -33,7 +33,7 @@ function execute(input: Input): Output {
     const date = new Date(str);
     if (isNaN(date.getTime()))
       throw new Error("Unable to parse input as year or date");
-    year = date.getFullYear();
+    year = date.getUTCFullYear();
   }
 
   const leap = isLeapYear(year);

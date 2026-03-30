@@ -167,6 +167,13 @@ export function SearchCommand({
         value={query}
         onValueChange={setQuery}
       />
+      <span className="sr-only" aria-live="polite" aria-atomic="true">
+        {debouncedQuery && searchResults.length === 0
+          ? "No tools found"
+          : debouncedQuery && searchResults.length > 0
+            ? `${searchResults.length} result${searchResults.length === 1 ? "" : "s"} found`
+            : ""}
+      </span>
       <CommandList>
         <CommandEmpty>No tools found.</CommandEmpty>
 

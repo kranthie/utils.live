@@ -200,7 +200,7 @@ export function FileUpload({
         .filter((f) => f.status === "pending")
         .forEach((f) => readFile(f));
     },
-    [multiple, onFilesSelected, readFile]
+    [multiple, onFilesSelected, readFile, validateFile]
   );
 
   const handleDragOver = (e: React.DragEvent): void => {

@@ -1,4 +1,5 @@
 #!/usr/bin/env npx ts-node
+/* eslint-disable no-console */
 /**
  * Tool Generator Script
  *

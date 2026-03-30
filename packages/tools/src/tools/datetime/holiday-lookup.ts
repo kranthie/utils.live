@@ -36,16 +36,16 @@ function getNthWeekday(
   weekday: number,
   n: number
 ): Date {
-  const first = new Date(year, month, 1);
-  let day = 1 + ((weekday - first.getDay() + 7) % 7);
+  const first = new Date(Date.UTC(year, month, 1));
+  let day = 1 + ((weekday - first.getUTCDay() + 7) % 7);
   day += (n - 1) * 7;
-  return new Date(year, month, day);
+  return new Date(Date.UTC(year, month, day));
 }
 
 function getLastWeekday(year: number, month: number, weekday: number): Date {
-  const last = new Date(year, month + 1, 0);
-  const diff = (last.getDay() - weekday + 7) % 7;
-  return new Date(year, month, last.getDate() - diff);
+  const last = new Date(Date.UTC(year, month + 1, 0));
+  const diff = (last.getUTCDay() - weekday + 7) % 7;
+  return new Date(Date.UTC(year, month, last.getUTCDate() - diff));
 }
 
 function getUSHolidays(year: number): Array<{ name: string; date: string }> {

@@ -5,10 +5,5 @@
     "baseUrl": "."
   },
   "include": [],
-  "references": [
-    { "path": "./apps/web" },
-    { "path": "./packages/tools" },
-    { "path": "./packages/mcp" },
-    { "path": "./packages/ui" }
-  ]
+  "references": [{ "path": "./apps/web" }, { "path": "./packages/tools" }]
 }
