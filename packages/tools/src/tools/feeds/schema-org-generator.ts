@@ -183,7 +183,7 @@ export const schemaOrgGenerator = defineTool({
           "Generate Article structured data with author, publisher, and dates",
         input: {
           type: "Article" as const,
-          title: "Understanding TypeScript Generics",
+          name: "Understanding TypeScript Generics",
           description:
             "A deep dive into TypeScript generics with practical examples",
           url: "https://blog.example.com/typescript-generics",

@@ -125,7 +125,7 @@ function execute(
         line: lineNum,
         severity: "warning",
         message: "WORKDIR should use absolute paths",
-        rule: "DL3000",
+        rule: "DL3006",
       });
     }
 
@@ -212,7 +212,7 @@ export const dockerfileLinter = defineTool({
         input:
           "FROM node:latest\nRUN sudo apt-get update\nRUN apt-get install -y curl\nADD . /app\nWORKDIR app",
         output:
-          "# Dockerfile Lint Results\n\nErrors: 0 | Warnings: 6 | Info: 1\n\n[WARNING] Line 1 (DL3007): Avoid using 'latest' tag; pin to a specific version\n[WARNING] Line 2 (DL3009): Combine apt-get update with install in a single RUN to avoid cache issues\n[WARNING] Line 2 (DL3004): Avoid using sudo in Dockerfiles; use USER instead\n[WARNING] Line 3 (DL3015): Use --no-install-recommends with apt-get install\n[INFO] Line 3 (DL3059): Consider combining consecutive RUN commands with &&\n[WARNING] Line 4 (DL3020): Use COPY instead of ADD for simple file copying\n[WARNING] Line 5 (DL3000): WORKDIR should use absolute paths",
+          "# Dockerfile Lint Results\n\nErrors: 0 | Warnings: 6 | Info: 1\n\n[WARNING] Line 1 (DL3007): Avoid using 'latest' tag; pin to a specific version\n[WARNING] Line 2 (DL3009): Combine apt-get update with install in a single RUN to avoid cache issues\n[WARNING] Line 2 (DL3004): Avoid using sudo in Dockerfiles; use USER instead\n[WARNING] Line 3 (DL3015): Use --no-install-recommends with apt-get install\n[INFO] Line 3 (DL3059): Consider combining consecutive RUN commands with &&\n[WARNING] Line 4 (DL3020): Use COPY instead of ADD for simple file copying\n[WARNING] Line 5 (DL3006): WORKDIR should use absolute paths",
       },
     ],
   },

@@ -64,7 +64,13 @@ function execute(
           lines.push("RUN npm ci");
         }
         lines.push("COPY . .");
-        lines.push("RUN npm run build");
+        const buildCmd =
+          input.packageManager === "pnpm"
+            ? "pnpm build"
+            : input.packageManager === "yarn"
+              ? "yarn build"
+              : "npm run build";
+        lines.push(`RUN ${buildCmd}`);
         lines.push("");
         lines.push(`FROM node:${input.version}${suffix} AS runner`);
         lines.push("WORKDIR /app");
@@ -180,7 +186,7 @@ export const dockerfileGenerator = defineTool({
           packageManager: "pnpm",
         },
         output:
-          'FROM node:20-alpine AS builder\nWORKDIR /app\nRUN corepack enable\nCOPY package.json pnpm-lock.yaml ./\nRUN pnpm install --frozen-lockfile\nCOPY . .\nRUN npm run build\n\nFROM node:20-alpine AS runner\nWORKDIR /app\nENV NODE_ENV=production\nRUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 appuser\nCOPY --from=builder --chown=appuser:nodejs /app/dist ./dist\nCOPY --from=builder --chown=appuser:nodejs /app/node_modules ./node_modules\nCOPY --from=builder --chown=appuser:nodejs /app/package.json ./\nUSER appuser\nEXPOSE 3000\nCMD ["node", "dist/index.js"]',
+          'FROM node:20-alpine AS builder\nWORKDIR /app\nRUN corepack enable\nCOPY package.json pnpm-lock.yaml ./\nRUN pnpm install --frozen-lockfile\nCOPY . .\nRUN pnpm build\n\nFROM node:20-alpine AS runner\nWORKDIR /app\nENV NODE_ENV=production\nRUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 appuser\nCOPY --from=builder --chown=appuser:nodejs /app/dist ./dist\nCOPY --from=builder --chown=appuser:nodejs /app/node_modules ./node_modules\nCOPY --from=builder --chown=appuser:nodejs /app/package.json ./\nUSER appuser\nEXPOSE 3000\nCMD ["node", "dist/index.js"]',
       },
     ],
     ui: { outputLanguage: "dockerfile" },

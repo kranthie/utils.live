@@ -100,7 +100,7 @@ export const productSchemaGenerator = defineTool({
         description:
           "Generate Product JSON-LD for wireless headphones with brand and pricing",
         input: {
-          title: "Wireless Headphones",
+          name: "Wireless Headphones",
           description: "Noise-canceling Bluetooth headphones",
           brand: "AudioTech",
           price: "79.99",

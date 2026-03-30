@@ -325,6 +325,34 @@ describe("CSS to SCSS", () => {
     const result = await executeTool(cssToScss, { input: "" });
     expect(result.success).toBe(false);
   });
+
+  it("should handle child combinator (>) without creating invalid nesting", async () => {
+    const result = await executeTool(cssToScss, {
+      input: ".parent > .child { color: blue; }",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as Record<string, unknown>).output as string;
+      // Should nest ">.child" under .parent, not create a node named ">"
+      expect(output).toContain(".parent {");
+      expect(output).toContain("> .child {");
+      // The combinator ">" must not appear as a standalone selector
+      expect(output).not.toMatch(/^\s*>\s*\{/m);
+    }
+  });
+
+  it("should handle adjacent sibling combinator (+)", async () => {
+    const result = await executeTool(cssToScss, {
+      input: "h1 + p { margin-top: 0; }",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as Record<string, unknown>).output as string;
+      expect(output).toContain("h1 {");
+      expect(output).toContain("+ p {");
+      expect(output).not.toMatch(/^\s*\+\s*\{/m);
+    }
+  });
 });
 
 // ─── CSS Specificity ───────────────────────────────────────────────────────────

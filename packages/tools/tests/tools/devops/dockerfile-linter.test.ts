@@ -17,7 +17,8 @@ describe("dockerfileLinter", () => {
       });
       expect(result.success).toBe(true);
       if (result.success) {
-        const output = (result.data as Record<string, unknown>).output as string;
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
         expect(output).toContain("Errors: 0");
       }
     });
@@ -28,7 +29,8 @@ describe("dockerfileLinter", () => {
       });
       expect(result.success).toBe(true);
       if (result.success) {
-        const output = (result.data as Record<string, unknown>).output as string;
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
         expect(output).toContain("Avoid using 'latest'");
       }
     });
@@ -39,7 +41,8 @@ describe("dockerfileLinter", () => {
       });
       expect(result.success).toBe(true);
       if (result.success) {
-        const output = (result.data as Record<string, unknown>).output as string;
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
         expect(output).toContain("--no-install-recommends");
       }
     });
@@ -50,7 +53,8 @@ describe("dockerfileLinter", () => {
       });
       expect(result.success).toBe(true);
       if (result.success) {
-        const output = (result.data as Record<string, unknown>).output as string;
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
         expect(output).toContain("Avoid using sudo");
       }
     });
@@ -61,19 +65,38 @@ describe("dockerfileLinter", () => {
       });
       expect(result.success).toBe(true);
       if (result.success) {
-        const output = (result.data as Record<string, unknown>).output as string;
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
         expect(output).toContain("Use COPY instead of ADD");
       }
     });
 
-    it("should warn about relative WORKDIR", async () => {
+    it("should warn about relative WORKDIR with rule DL3006", async () => {
       const result = await executeTool(dockerfileLinter, {
         input: "FROM node:20\nWORKDIR app",
       });
       expect(result.success).toBe(true);
       if (result.success) {
-        const output = (result.data as Record<string, unknown>).output as string;
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
         expect(output).toContain("absolute paths");
+        // Rule code must be DL3006 (not DL3000 which is for missing FROM)
+        expect(output).toContain("DL3006");
+      }
+    });
+
+    it("should use distinct rule codes for FROM and WORKDIR checks", async () => {
+      const result = await executeTool(dockerfileLinter, {
+        // No FROM + relative WORKDIR — triggers both rules
+        input: "WORKDIR app\nRUN echo hi",
+      });
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
+        // FROM missing → DL3000, WORKDIR relative → DL3006 (not duplicate)
+        expect(output).toContain("DL3000");
+        expect(output).toContain("DL3006");
       }
     });
 
@@ -83,7 +106,8 @@ describe("dockerfileLinter", () => {
       });
       expect(result.success).toBe(true);
       if (result.success) {
-        const output = (result.data as Record<string, unknown>).output as string;
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
         expect(output).toContain("combining consecutive RUN");
       }
     });

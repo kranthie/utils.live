@@ -57,7 +57,17 @@ function execute(input: Input): Output {
   const root = new Map<string, ScssNode>();
 
   for (const rule of rules) {
-    const parts = rule.selector.split(/\s+/).filter(Boolean);
+    // Split by whitespace, then merge combinators (>, +, ~) with the following selector
+    const rawParts = rule.selector.split(/\s+/).filter(Boolean);
+    const parts: string[] = [];
+    for (let i = 0; i < rawParts.length; i++) {
+      const p = rawParts[i]!;
+      if ((p === ">" || p === "+" || p === "~") && i + 1 < rawParts.length) {
+        parts.push(`${p} ${rawParts[++i]!}`);
+      } else {
+        parts.push(p);
+      }
+    }
     const firstPart = parts[0] ?? "";
 
     if (parts.length === 1) {
