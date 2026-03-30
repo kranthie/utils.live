@@ -85,4 +85,20 @@ describe("Quarter Calculator", () => {
       expect(data.quarter).toBe(1);
     }
   });
+
+  it("quarter should be timezone-invariant: 2025-01-01 must be Q1 2025", async () => {
+    // Regression: getMonth()/getFullYear() used local time. In PDT (UTC-7),
+    // "2025-01-01" (UTC midnight) is Dec 31, 2024 locally → returns Q4 2024.
+    const result = await executeTool(quarterCalculator, {
+      input: "2025-01-01",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.quarter).toBe(1);
+      expect(data.year).toBe(2025);
+      expect(data.quarterStart).toBe("2025-01-01");
+      expect(data.quarterEnd).toBe("2025-03-31");
+    }
+  });
 });

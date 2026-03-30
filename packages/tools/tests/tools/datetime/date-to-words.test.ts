@@ -15,8 +15,8 @@ describe("Date to Words", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("January");
-      expect((data.output as string)).toContain("fifteenth");
+      expect(data.output as string).toContain("January");
+      expect(data.output as string).toContain("fifteenth");
     }
   });
 
@@ -27,8 +27,8 @@ describe("Date to Words", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("second");
-      expect((data.output as string)).toContain("March");
+      expect(data.output as string).toContain("second");
+      expect(data.output as string).toContain("March");
     }
   });
 
@@ -39,7 +39,7 @@ describe("Date to Words", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("third");
+      expect(data.output as string).toContain("third");
     }
   });
 
@@ -50,7 +50,7 @@ describe("Date to Words", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("fifth");
+      expect(data.output as string).toContain("fifth");
     }
   });
 
@@ -61,7 +61,7 @@ describe("Date to Words", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("eighth");
+      expect(data.output as string).toContain("eighth");
     }
   });
 
@@ -72,7 +72,7 @@ describe("Date to Words", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("ninth");
+      expect(data.output as string).toContain("ninth");
     }
   });
 
@@ -83,7 +83,7 @@ describe("Date to Words", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("twelfth");
+      expect(data.output as string).toContain("twelfth");
     }
   });
 
@@ -94,7 +94,7 @@ describe("Date to Words", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("twentieth");
+      expect(data.output as string).toContain("twentieth");
     }
   });
 
@@ -111,5 +111,20 @@ describe("Date to Words", () => {
   it("should handle unix timestamp", async () => {
     const result = await executeTool(dateToWords, { input: "1704067200" });
     expect(result.success).toBe(true);
+  });
+
+  it("date-to-words should be timezone-invariant: 2025-07-04 must be Friday the fourth", async () => {
+    // Regression: getDay()/getDate()/getMonth()/getFullYear() used local time.
+    // "2025-07-04" is UTC midnight; in PDT (UTC-7) it is Jul 3 (Thursday)
+    // giving the wrong output "Thursday, the third of July".
+    // July 4, 2025 UTC is a Friday.
+    const result = await executeTool(dateToWords, { input: "2025-07-04" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.output as string).toContain("Friday");
+      expect(data.output as string).toContain("fourth");
+      expect(data.output as string).toContain("July");
+    }
   });
 });

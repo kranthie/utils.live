@@ -122,10 +122,10 @@ function execute(input: Input): Output {
     throw new Error("Unable to parse input as a date");
   }
 
-  const dayName = DAYS[date.getDay()]!;
-  const monthName = MONTHS[date.getMonth()]!;
-  const dayOrdinal = ordinal(date.getDate());
-  const year = numberToWords(date.getFullYear());
+  const dayName = DAYS[date.getUTCDay()]!;
+  const monthName = MONTHS[date.getUTCMonth()]!;
+  const dayOrdinal = ordinal(date.getUTCDate());
+  const year = numberToWords(date.getUTCFullYear());
 
   const lines: string[] = [];
   lines.push(`${dayName}, the ${dayOrdinal} of ${monthName}, ${year}`);
@@ -150,7 +150,7 @@ export const dateToWords = defineTool({
         description: "Convert an ISO date to written English",
         input: "2025-07-04",
         output:
-          "Thursday, the third of July, two thousand twenty-five\nJuly third, two thousand twenty-five",
+          "Friday, the fourth of July, two thousand twenty-five\nJuly fourth, two thousand twenty-five",
       },
     ],
   },

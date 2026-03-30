@@ -31,13 +31,13 @@ function execute(input: Input): Output {
 
   if (isNaN(date.getTime())) throw new Error("Unable to parse date");
 
-  const month = date.getMonth();
+  const month = date.getUTCMonth();
   const quarter = Math.floor(month / 3) + 1;
-  const year = date.getFullYear();
+  const year = date.getUTCFullYear();
 
   const startMonth = (quarter - 1) * 3;
-  const quarterStart = new Date(year, startMonth, 1);
-  const quarterEnd = new Date(year, startMonth + 3, 0);
+  const quarterStart = new Date(Date.UTC(year, startMonth, 1));
+  const quarterEnd = new Date(Date.UTC(year, startMonth + 3, 0));
 
   const lines: string[] = [];
   lines.push(`Date: ${date.toISOString().split("T")[0]}`);
