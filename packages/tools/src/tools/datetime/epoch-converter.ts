@@ -47,7 +47,9 @@ function execute(input: Input): Output {
   const nanoseconds = String(BigInt(ms) * 1000000n);
 
   // Excel serial date: days since 1900-01-01 (with Excel's leap year bug)
-  const excelEpoch = new Date(1899, 11, 30).getTime();
+  // Use Date.UTC to keep the epoch in UTC and avoid a fractional-day shift
+  // in non-UTC timezones (e.g. PDT would shift by 7/24 ≈ 0.292 days).
+  const excelEpoch = Date.UTC(1899, 11, 30);
   const excelSerial = (ms - excelEpoch) / 86400000;
 
   // Julian Day Number
@@ -103,7 +105,7 @@ export const epochConverter = defineTool({
         description: "Convert an ISO date to various epoch formats",
         input: "2025-01-01T00:00:00Z",
         output:
-          "Epoch Conversions for: 2025-01-01T00:00:00.000Z\n\nSeconds:      1735689600\nMilliseconds: 1735689600000\nMicroseconds: 1735689600000000\nNanoseconds:  1735689600000000000\nExcel Serial: 45657.666667\nJulian Day:   2460676.500000",
+          "Epoch Conversions for: 2025-01-01T00:00:00.000Z\n\nSeconds:      1735689600\nMilliseconds: 1735689600000\nMicroseconds: 1735689600000000\nNanoseconds:  1735689600000000000\nExcel Serial: 45658.000000\nJulian Day:   2460676.500000",
       },
     ],
   },

@@ -15,8 +15,9 @@ const outputSchema = z.object({
 type Input = z.infer<typeof inputSchema>;
 type Output = z.infer<typeof outputSchema>;
 
-// Excel epoch: December 30, 1899 (accounting for Excel's leap year bug)
-const EXCEL_EPOCH = new Date(1899, 11, 30).getTime();
+// Excel epoch: December 30, 1899 UTC (accounting for Excel's leap year bug).
+// Must use Date.UTC to avoid a fractional-day offset in non-UTC timezones.
+const EXCEL_EPOCH = Date.UTC(1899, 11, 30);
 const MS_PER_DAY = 86400000;
 
 function execute(input: Input): Output {

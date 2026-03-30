@@ -47,4 +47,29 @@ describe("Excel Date Converter", () => {
       expect(data.excelSerial).toBe(1);
     }
   });
+
+  it("excel serial should be timezone-invariant: UTC date string → whole-number serial", async () => {
+    // Regression: EXCEL_EPOCH used new Date(1899, 11, 30) (local time).
+    // In PDT (UTC-7) the epoch is 7h ahead of UTC, so the serial for
+    // 2025-01-01T00:00:00Z comes out as 45657.666… instead of 45658.
+    const result = await executeTool(excelDateConverter, {
+      input: "2025-01-01T00:00:00Z",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.excelSerial).toBe(45658);
+    }
+  });
+
+  it("excel serial→date should be timezone-invariant: serial 45658 → 2025-01-01", async () => {
+    // Regression: same EXCEL_EPOCH bug. Serial 45658 must resolve to 2025-01-01
+    // regardless of local timezone.
+    const result = await executeTool(excelDateConverter, { input: "45658" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect((data.iso as string).startsWith("2025-01-01")).toBe(true);
+    }
+  });
 });
