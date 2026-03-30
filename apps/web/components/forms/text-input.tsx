@@ -126,9 +126,11 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                   : undefined
             }
             className={cn(
-              startAddon && "pl-10",
-              endAddon && "pr-10",
-              error && "border-destructive focus-visible:ring-destructive"
+              startAddon ? "pl-10" : undefined,
+              endAddon ? "pr-10" : undefined,
+              error
+                ? "border-destructive focus-visible:ring-destructive"
+                : undefined
             )}
           />
           {endAddon && (
