@@ -46,7 +46,7 @@
     "fast-xml-parser": "^5.5.0",
     "hjson": "^3.2.2",
     "ini": "^4.1.0",
-    "isomorphic-dompurify": "^2.35.0",
+    "isomorphic-dompurify": "^3.0.0",
     "jmespath": "^0.16.0",
     "js-yaml": "^4.1.0",
     "json5": "^2.2.3",
