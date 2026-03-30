@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import DOMPurify from "dompurify";
 import { ZoomIn, ZoomOut, RotateCcw, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LoadingSpinner } from "@/components/display/loading-spinner";
@@ -77,7 +78,10 @@ export function MermaidRenderer({
         const { svg: renderedSvg } = await mermaid.render(id, content);
 
         if (mounted) {
-          setSvg(renderedSvg);
+          const sanitizedSvg = DOMPurify.sanitize(renderedSvg, {
+            USE_PROFILES: { svg: true, svgFilters: true },
+          });
+          setSvg(sanitizedSvg);
           setError(null);
         }
       } catch (err) {

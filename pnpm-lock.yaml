@@ -169,6 +169,9 @@ importers:
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
+      dompurify:
+        specifier: ^3.0.0
+        version: 3.3.3
       framer-motion:
         specifier: ^12.33.0
         version: 12.33.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -179,8 +182,8 @@ importers:
         specifier: ^3.12.3
         version: 3.12.3
       lucide-react:
-        specifier: ^0.563.0
-        version: 0.563.0(react@19.2.4)
+        specifier: ^1.0.0
+        version: 1.7.0(react@19.2.4)
       mermaid:
         specifier: ^11.12.0
         version: 11.12.2
@@ -4839,12 +4842,6 @@ packages:
         integrity: sha512-WhL/YuveyGXJaerVlMYGWhvQswa7myDG17P7Vu65EWC05o8vfeNbvNf4d/BOvH99+ZW+LlQsc1GDKMa1vNK6dw==,
       }
 
-  dompurify@3.3.1:
-    resolution:
-      {
-        integrity: sha512-qkdCKzLNtrgPFP1Vo+98FRzJnBRGe4ffyCea9IwHB1fyxPOeNTHpLKYGd4Uk9xvNoH0ZoOjwZxNptyMwqrId1Q==,
-      }
-
   dompurify@3.3.3:
     resolution:
       {
@@ -6431,10 +6428,10 @@ packages:
         integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==,
       }
 
-  lucide-react@0.563.0:
+  lucide-react@1.7.0:
     resolution:
       {
-        integrity: sha512-8dXPB2GI4dI8jV4MgUDGBeLdGk8ekfqVZ0BdLcrRzocGgG75ltNEmWS+gE7uokKF/0oSUuczNDT+g9hFJ23FkA==,
+        integrity: sha512-yI7BeItCLZJTXikmK4KNUGCKoGzSvbKlfCvw44bU4fXAL6v3gYS4uHD1jzsLkfwODYwI6Drw5Tu9Z5ulDe0TSg==,
       }
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -10587,7 +10584,7 @@ snapshots:
 
   "@types/dompurify@3.2.0":
     dependencies:
-      dompurify: 3.3.1
+      dompurify: 3.3.3
 
   "@types/estree-jsx@1.0.5":
     dependencies:
@@ -11535,10 +11532,6 @@ snapshots:
   dom-accessibility-api@0.6.3: {}
 
   dompurify@3.2.7:
-    optionalDependencies:
-      "@types/trusted-types": 2.0.7
-
-  dompurify@3.3.1:
     optionalDependencies:
       "@types/trusted-types": 2.0.7
 
@@ -12648,7 +12641,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@0.563.0(react@19.2.4):
+  lucide-react@1.7.0(react@19.2.4):
     dependencies:
       react: 19.2.4
 
@@ -12852,7 +12845,7 @@ snapshots:
       d3-sankey: 0.12.3
       dagre-d3-es: 7.0.13
       dayjs: 1.11.19
-      dompurify: 3.3.1
+      dompurify: 3.3.3
       katex: 0.16.27
       khroma: 2.1.0
       lodash-es: 4.17.22
