@@ -129,6 +129,16 @@ describe("Pig Latin", () => {
       );
     }
   });
+
+  it("should preserve all-caps words as all-caps", async () => {
+    const result = await executeTool(pigLatin, { input: "HELLO WORLD" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect((result.data as Record<string, unknown>).output).toBe(
+        "ELLOHAY ORLDWAY"
+      );
+    }
+  });
 });
 
 // =====================================================

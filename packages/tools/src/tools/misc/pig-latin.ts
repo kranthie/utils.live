@@ -24,6 +24,10 @@ function toPigLatin(word: string): string {
     if (i === word.length - 1) rest = "";
   }
   const result = rest + consonantCluster + "ay";
+  const isAllCaps = word === word.toUpperCase() && /[A-Z]/.test(word);
+  if (isAllCaps) {
+    return result.toUpperCase();
+  }
   if (word[0]! === word[0]!.toUpperCase()) {
     return result.charAt(0).toUpperCase() + result.slice(1).toLowerCase();
   }

@@ -62,17 +62,21 @@ function createSeparator(
   width: number,
   padding: number
 ): string {
-  const dashCount = Math.max(3, width);
-  const dashes = "-".repeat(dashCount);
   const pad = " ".repeat(padding);
 
   switch (alignment) {
-    case "left":
+    case "left": {
+      const dashes = "-".repeat(Math.max(2, width - 1));
       return `${pad}:${dashes}${pad}`;
-    case "center":
+    }
+    case "center": {
+      const dashes = "-".repeat(Math.max(1, width - 2));
       return `${pad}:${dashes}:${pad}`;
-    case "right":
+    }
+    case "right": {
+      const dashes = "-".repeat(Math.max(2, width - 1));
       return `${pad}${dashes}:${pad}`;
+    }
   }
 }
 

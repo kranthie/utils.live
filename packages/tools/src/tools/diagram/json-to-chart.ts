@@ -168,7 +168,7 @@ export const jsonToChart = defineTool({
       },
       {
         title: "Key-Value Object",
-        description: "Convert a JSON object to a pie chart",
+        description: "Convert a JSON object to a bar chart",
         input: '{"Chrome": 65, "Firefox": 15, "Safari": 12, "Edge": 8}',
         output:
           'xychart-beta\n    title "JSON Data Chart"\n    x-axis ["Chrome", "Firefox", "Safari", "Edge"]\n    y-axis "Value"\n    bar [65, 15, 12, 8]',

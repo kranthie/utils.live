@@ -254,6 +254,22 @@ describe("markdownTableFormatter", () => {
       }
     });
 
+    it("should align separator row to same width as data rows", async () => {
+      // Each column's separator should match the data cell width exactly
+      const result = await executeTool(markdownTableFormatter, {
+        input: "|Name|Age|\n|---|---|\n|John|25|\n|Elizabeth|30|",
+      });
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const output = String((result.data as Record<string, unknown>).output);
+        const lines = output.split("\n");
+        // Header line (0), separator line (1), and data lines should all have same length
+        const headerLen = lines[0]!.length;
+        const separatorLen = lines[1]!.length;
+        expect(separatorLen).toBe(headerLen);
+      }
+    });
+
     it("should handle complex table", async () => {
       const table = `| Feature | Support | Notes |
 |---------|---------|-------|
