@@ -85,7 +85,7 @@ export default async function BlogPostPage({
               {post.readingTimeMinutes} min read
             </span>
           </div>
-          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+          <h1 className="mb-4 text-3xl leading-tight font-bold sm:text-4xl">
             {post.title}
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed">

@@ -68,7 +68,7 @@ export default function BlogPage(): React.ReactElement {
                   </span>
                 </div>
                 {/* Title */}
-                <h2 className="group-hover:text-primary mb-3 text-2xl font-bold leading-snug transition-colors sm:text-3xl">
+                <h2 className="group-hover:text-primary mb-3 text-2xl leading-snug font-bold transition-colors sm:text-3xl">
                   {featured.title}
                 </h2>
                 <p className="text-muted-foreground mb-6 max-w-2xl text-base leading-relaxed">

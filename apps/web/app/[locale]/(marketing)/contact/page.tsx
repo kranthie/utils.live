@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Clock, MapPin } from "lucide-react";
 import { ContactForm } from "@/components/forms/contact-form";
 
@@ -70,9 +71,9 @@ export default function ContactPage(): React.ReactElement {
               <h3 className="mb-2 font-medium">Looking for a tool?</h3>
               <p className="text-muted-foreground text-sm">
                 Browse our{" "}
-                <a href="/tools" className="text-primary hover:underline">
+                <Link href="/tools" className="text-primary hover:underline">
                   full collection of tools
-                </a>
+                </Link>
                 .
               </p>
             </div>

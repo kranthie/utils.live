@@ -1,4 +1,5 @@
 import { getRequestConfig } from "next-intl/server";
+import type { AbstractIntlMessages } from "next-intl";
 import { routing } from "./routing";
 
 export default getRequestConfig(async ({ requestLocale }) => {
@@ -8,12 +9,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ? requested
       : routing.defaultLocale;
 
-  return {
-    locale,
+  const messages: AbstractIntlMessages =
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    messages: (await import(`../messages/${locale}.json`)).default as Record<
-      string,
-      unknown
-    >,
-  };
+    (await import(`../messages/${locale}.json`))
+      .default as AbstractIntlMessages;
+
+  return { locale, messages };
 });

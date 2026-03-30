@@ -1,5 +1,5 @@
 const createNextIntlPlugin = require("next-intl/plugin");
-const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -14,6 +14,15 @@ const nextConfig = {
       process.env.NODE_ENV === "production"
         ? { exclude: ["error", "warn"] }
         : false,
+  },
+  // next-intl requires this alias so Turbopack can resolve the config file.
+  // Next.js 16 uses `turbopack` (top-level) rather than `experimental.turbo`.
+  // The next-intl plugin detects Turbopack via TURBOPACK env var which is not
+  // set by Next.js 16 by default, so we wire the alias manually.
+  turbopack: {
+    resolveAlias: {
+      "next-intl/config": "./i18n/request.ts",
+    },
   },
   experimental: {
     optimizePackageImports: [
