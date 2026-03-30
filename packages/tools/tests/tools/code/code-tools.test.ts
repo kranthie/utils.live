@@ -257,15 +257,80 @@ describe("TypeScript Minifier", () => {
     expect(tsMinify.meta.category).toBe("code");
   });
 
-  it("should minify TypeScript", async () => {
+  it("should remove basic type annotations from function params", async () => {
     const result = await executeTool(tsMinify, {
-      input: "interface User {\n  name: string;\n  age: number;\n}",
+      input: "function add(a: number, b: number): number { return a + b; }",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as Record<string, unknown>).output as string;
+      expect(output).not.toContain(": number");
+      expect(output).toContain("return a+b");
+    }
+  });
+
+  it("should remove interface declarations", async () => {
+    const result = await executeTool(tsMinify, {
+      input:
+        "interface User {\n  name: string;\n  age: number;\n}\nconst x = 1;",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as Record<string, unknown>).output as string;
+      expect(output).not.toContain("interface");
+      expect(output).toContain("const x");
+    }
+  });
+
+  it("should remove generic type params with custom types", async () => {
+    const result = await executeTool(tsMinify, {
+      input: "function wrap<User>(arg: User): User { return arg; }",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as Record<string, unknown>).output as string;
+      // <User> generic declaration should be removed
+      expect(output).not.toContain("<User>");
+    }
+  });
+
+  it("should remove Array<T> generics", async () => {
+    const result = await executeTool(tsMinify, {
+      input: "const items: Array<string> = [];",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as Record<string, unknown>).output as string;
+      expect(output).not.toContain("Array<string>");
+    }
+  });
+
+  it("should remove as-casts", async () => {
+    const result = await executeTool(tsMinify, {
+      input: "const x = getValue() as string;",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as Record<string, unknown>).output as string;
+      expect(output).not.toContain(" as string");
+    }
+  });
+
+  it("should report size reduction", async () => {
+    const result = await executeTool(tsMinify, {
+      input:
+        "interface Config {\n  host: string;\n  port: number;\n}\nfunction connect(config: Config): void {\n  console.log(config);\n}",
     });
     expect(result.success).toBe(true);
     if (result.success) {
       expect(
+        (result.data as Record<string, unknown>).originalSize
+      ).toBeGreaterThan(
+        (result.data as Record<string, unknown>).minifiedSize as number
+      );
+      expect(
         (result.data as Record<string, unknown>).reduction
-      ).toBeGreaterThanOrEqual(0);
+      ).toBeGreaterThan(0);
     }
   });
 

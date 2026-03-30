@@ -30,9 +30,10 @@ function execute(
     /(?:export\s+)?(?:interface|type)\s+\w+\s*(?:<[^>]*>)?\s*(?:extends\s+\w+\s*)?{[^}]*}/g,
     ""
   );
-  // Remove generic type params
+  // Remove generic type params after identifiers (e.g. Array<T>, function foo<T>)
+  // Lookbehind ensures we only match generics following a word char, not comparison operators
   result = result.replace(
-    /<\s*(?:string|number|boolean|any|unknown|T|K|V)(?:\s*,\s*(?:string|number|boolean|any|unknown|T|K|V))*\s*>/g,
+    /(?<=[a-zA-Z_$\d])<\s*\w+(?:\[\])*(?:\s*[|&]\s*\w+(?:\[\])*)*(?:\s*,\s*\w+(?:\[\])*(?:\s*[|&]\s*\w+(?:\[\])*)*)*\s*>/g,
     ""
   );
   // Remove `as Type` casts

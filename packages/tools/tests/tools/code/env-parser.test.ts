@@ -86,6 +86,54 @@ describe("envParser", () => {
       }
     });
 
+    it("should not strip # inside double-quoted values", async () => {
+      const result = await executeTool(envParser, {
+        input: 'API_KEY="secret#token"\nDB_URL="postgres://user:p#ss@host/db"',
+      });
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
+        const parsed = JSON.parse(output) as Record<string, unknown>;
+        expect((parsed.variables as Record<string, unknown>).API_KEY).toBe(
+          "secret#token"
+        );
+        expect((parsed.variables as Record<string, unknown>).DB_URL).toBe(
+          "postgres://user:p#ss@host/db"
+        );
+      }
+    });
+
+    it("should not strip # inside single-quoted values", async () => {
+      const result = await executeTool(envParser, {
+        input: "GREETING='hello # world'",
+      });
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
+        const parsed = JSON.parse(output) as Record<string, unknown>;
+        expect((parsed.variables as Record<string, unknown>).GREETING).toBe(
+          "hello # world"
+        );
+      }
+    });
+
+    it("should still strip inline comment after unquoted value", async () => {
+      const result = await executeTool(envParser, {
+        input: "HOST=localhost #production server",
+      });
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
+        const parsed = JSON.parse(output) as Record<string, unknown>;
+        expect((parsed.variables as Record<string, unknown>).HOST).toBe(
+          "localhost"
+        );
+      }
+    });
+
     it("should reject empty input", async () => {
       const result = await executeTool(envParser, { input: "" });
       expect(result.success).toBe(false);

@@ -34,17 +34,19 @@ function execute(
     let value = trimmed.substring(eqIndex + 1).trim();
 
     // Remove surrounding quotes
-    if (
+    const wasQuoted =
       (value.startsWith('"') && value.endsWith('"')) ||
-      (value.startsWith("'") && value.endsWith("'"))
-    ) {
+      (value.startsWith("'") && value.endsWith("'"));
+    if (wasQuoted) {
       value = value.slice(1, -1);
     }
 
-    // Remove inline comments (not in quotes)
-    const commentIdx = value.indexOf(" #");
-    if (commentIdx > 0 && !value.includes('"') && !value.includes("'")) {
-      value = value.substring(0, commentIdx).trim();
+    // Remove inline comments — only for unquoted values
+    if (!wasQuoted) {
+      const commentIdx = value.indexOf(" #");
+      if (commentIdx > 0) {
+        value = value.substring(0, commentIdx).trim();
+      }
     }
 
     vars[key] = value;
