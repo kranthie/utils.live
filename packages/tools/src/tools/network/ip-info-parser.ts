@@ -77,7 +77,7 @@ function execute(
       hex: "0x" + num.toString(16).padStart(8, "0").toUpperCase(),
       binary,
       octets,
-      reversePtr: octets.reverse().join(".") + ".in-addr.arpa",
+      reversePtr: [...octets].reverse().join(".") + ".in-addr.arpa",
     };
     return { output: JSON.stringify(result, null, 2) };
   }
@@ -168,7 +168,7 @@ export const ipInfoParser = defineTool({
           "Get type, class, decimal, binary, and reverse PTR for a private IPv4 address",
         input: "192.168.1.1",
         output:
-          '{"output":"{\\n  \\"ip\\": \\"192.168.1.1\\",\\n  \\"version\\": \\"IPv4\\",\\n  \\"type\\": \\"Private (RFC 1918)\\",\\n  \\"class\\": \\"C\\",\\n  \\"isPrivate\\": true,\\n  \\"isLoopback\\": false,\\n  \\"isLinkLocal\\": false,\\n  \\"isMulticast\\": false,\\n  \\"isBroadcast\\": false,\\n  \\"isUnspecified\\": false,\\n  \\"decimal\\": 3232235777,\\n  \\"hex\\": \\"0xC0A80101\\",\\n  \\"binary\\": \\"11000000.10101000.00000001.00000001\\",\\n  \\"octets\\": [\\n    1,\\n    1,\\n    168,\\n    192\\n  ],\\n  \\"reversePtr\\": \\"1.1.168.192.in-addr.arpa\\"\\n}"}',
+          '{"output":"{\\n  \\"ip\\": \\"192.168.1.1\\",\\n  \\"version\\": \\"IPv4\\",\\n  \\"type\\": \\"Private (RFC 1918)\\",\\n  \\"class\\": \\"C\\",\\n  \\"isPrivate\\": true,\\n  \\"isLoopback\\": false,\\n  \\"isLinkLocal\\": false,\\n  \\"isMulticast\\": false,\\n  \\"isBroadcast\\": false,\\n  \\"isUnspecified\\": false,\\n  \\"decimal\\": 3232235777,\\n  \\"hex\\": \\"0xC0A80101\\",\\n  \\"binary\\": \\"11000000.10101000.00000001.00000001\\",\\n  \\"octets\\": [\\n    192,\\n    168,\\n    1,\\n    1\\n  ],\\n  \\"reversePtr\\": \\"1.1.168.192.in-addr.arpa\\"\\n}"}',
       },
     ],
   },

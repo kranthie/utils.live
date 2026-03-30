@@ -115,4 +115,33 @@ describe("ipRangeCalculator", () => {
       expect(result.success).toBe(false);
     });
   });
+
+  describe("ranges starting at 0.0.0.0", () => {
+    it("should produce correct CIDR blocks for range starting at 0.0.0.0", async () => {
+      // 0.0.0.0 - 0.0.0.5 should be ["0.0.0.0/30", "0.0.0.4/31"], not ["0.0.0.0/0"]
+      const result = await executeTool(ipRangeCalculator, {
+        input: "0.0.0.0 - 0.0.0.5",
+      });
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const cidrs = (result.data as Record<string, unknown>)
+          .cidrs as string[];
+        expect(cidrs).not.toContain("0.0.0.0/0");
+        expect(cidrs).toContain("0.0.0.0/30");
+        expect(cidrs).toContain("0.0.0.4/31");
+      }
+    });
+
+    it("should produce /32 for single address 0.0.0.0", async () => {
+      const result = await executeTool(ipRangeCalculator, {
+        input: "0.0.0.0 - 0.0.0.0",
+      });
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const cidrs = (result.data as Record<string, unknown>)
+          .cidrs as string[];
+        expect(cidrs).toEqual(["0.0.0.0/32"]);
+      }
+    });
+  });
 });

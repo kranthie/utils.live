@@ -114,4 +114,37 @@ describe("ipInfoParser", () => {
     const result = await executeTool(ipInfoParser, { input: "not.an.ip" });
     expect(result.success).toBe(false);
   });
+
+  it("should return octets in original order (not reversed)", async () => {
+    const result = await executeTool(ipInfoParser, { input: "192.168.1.1" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = JSON.parse(
+        (result.data as { output: string }).output
+      ) as Record<string, unknown>;
+      expect(data.octets).toEqual([192, 168, 1, 1]);
+    }
+  });
+
+  it("should return correct reversePtr for 192.168.1.1", async () => {
+    const result = await executeTool(ipInfoParser, { input: "192.168.1.1" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = JSON.parse(
+        (result.data as { output: string }).output
+      ) as Record<string, unknown>;
+      expect(data.reversePtr).toBe("1.1.168.192.in-addr.arpa");
+    }
+  });
+
+  it("should return octets in original order for 10.0.0.1", async () => {
+    const result = await executeTool(ipInfoParser, { input: "10.0.0.1" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = JSON.parse(
+        (result.data as { output: string }).output
+      ) as Record<string, unknown>;
+      expect(data.octets).toEqual([10, 0, 0, 1]);
+    }
+  });
 });

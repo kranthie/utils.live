@@ -49,7 +49,7 @@ function rangeToCidrs(start: number, end: number): string[] {
       maxBits = 0;
     }
 
-    while (maxBits > 0) {
+    while (maxBits <= 32) {
       const mask = maxBits === 0 ? 0 : (~0 << (32 - maxBits)) >>> 0;
       const blockEnd = (current | (~mask >>> 0)) >>> 0;
       if (blockEnd <= end) break;

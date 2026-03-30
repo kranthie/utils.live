@@ -82,7 +82,7 @@ function rangeToCidrs(start: number, end: number): string[] {
     }
 
     // Find the largest prefix that fits within the remaining range
-    while (maxBits > 0) {
+    while (maxBits <= 32) {
       const mask = cidrToMask(maxBits);
       const blockEnd = (current | (~mask >>> 0)) >>> 0;
       if (blockEnd <= end) break;

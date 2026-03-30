@@ -95,4 +95,33 @@ describe("rangeToCidr", () => {
     const result = await executeTool(rangeToCidr, { input: "192.168.1.0" });
     expect(result.success).toBe(false);
   });
+
+  describe("ranges starting at 0.0.0.0", () => {
+    it("should produce correct CIDR blocks for 0.0.0.0 - 0.0.0.5", async () => {
+      // Should be ["0.0.0.0/30", "0.0.0.4/31"], not ["0.0.0.0/0"]
+      const result = await executeTool(rangeToCidr, {
+        input: "0.0.0.0 - 0.0.0.5",
+      });
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const cidrs = String((result.data as Record<string, unknown>).output);
+        expect(cidrs).not.toContain("0.0.0.0/0");
+        expect(cidrs).toContain("0.0.0.0/30");
+        expect(cidrs).toContain("0.0.0.4/31");
+      }
+    });
+
+    it("should produce /32 for single address 0.0.0.0 range", async () => {
+      const result = await executeTool(rangeToCidr, {
+        input: "0.0.0.0 - 0.0.0.0",
+      });
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const data = JSON.parse(
+          String((result.data as Record<string, unknown>).output)
+        ) as Record<string, unknown>;
+        expect(data.cidrBlocks).toEqual(["0.0.0.0/32"]);
+      }
+    });
+  });
 });
