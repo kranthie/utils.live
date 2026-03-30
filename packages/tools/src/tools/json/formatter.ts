@@ -99,6 +99,10 @@ export const jsonFormatter = defineTool({
       "beautify",
       "indent",
       "pretty print",
+      "json formatter online",
+      "json beautifier",
+      "pretty print json",
+      "json validator",
     ],
     examples: [
       {

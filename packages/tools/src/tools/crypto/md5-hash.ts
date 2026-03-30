@@ -128,7 +128,17 @@ export const md5Hash = defineTool({
     category: "crypto",
     subgroup: "Hash Generators",
     tier: ToolTier.CLIENT,
-    keywords: ["md5", "hash", "digest", "checksum", "crypto"],
+    keywords: [
+      "md5",
+      "hash",
+      "digest",
+      "checksum",
+      "crypto",
+      "md5 hash generator",
+      "md5 online",
+      "md5 checksum generator",
+      "md5 calculator",
+    ],
     icon: "Hash",
     examples: [
       {

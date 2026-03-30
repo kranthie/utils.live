@@ -73,7 +73,7 @@ export async function generateMetadata({
       url: `https://utils.live/tools/${category}/${toolSlug}`,
       images: [
         {
-          url: `https://utils.live/og/${category}/${toolSlug}.png`,
+          url: "https://utils.live/og/default.png",
           width: 1200,
           height: 630,
           alt: `${meta.name} - Free Online Tool`,
@@ -86,7 +86,7 @@ export async function generateMetadata({
       description: seoDescription,
       images: [
         {
-          url: `https://utils.live/og/${category}/${toolSlug}.png`,
+          url: "https://utils.live/og/default.png",
           width: 1200,
           height: 630,
           alt: `${meta.name} - Free Online Tool`,

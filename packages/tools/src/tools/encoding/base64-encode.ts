@@ -86,7 +86,16 @@ export const base64Encode = defineTool({
     category: "encoding",
     subgroup: "Base64",
     tier: ToolTier.CLIENT,
-    keywords: ["base64", "encode", "encoding", "binary", "text"],
+    keywords: [
+      "base64",
+      "encode",
+      "encoding",
+      "binary",
+      "text",
+      "base64 encode online",
+      "base64 encoder",
+      "text to base64",
+    ],
     examples: [
       {
         title: "Simple Text",

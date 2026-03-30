@@ -221,6 +221,54 @@ export function generateToolFAQJsonLd(
 }
 
 /**
+ * ItemList JSON-LD schema for collection pages (category tool listings).
+ */
+export interface ItemListSchema {
+  "@context": "https://schema.org";
+  "@type": "ItemList";
+  name: string;
+  description: string;
+  url: string;
+  numberOfItems: number;
+  itemListElement: Array<{
+    "@type": "ListItem";
+    position: number;
+    name: string;
+    description: string;
+    url: string;
+  }>;
+}
+
+/**
+ * Generate ItemList JSON-LD for a category page.
+ */
+export function generateCategoryItemListJsonLd(
+  categoryId: string,
+  categoryName: string,
+  categoryDescription: string,
+  tools: Array<{ id: string; name: string; description: string }>
+): ItemListSchema {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `Free Online ${categoryName}`,
+    description: categoryDescription,
+    url: `${BASE_URL}/tools/${categoryId}`,
+    numberOfItems: tools.length,
+    itemListElement: tools.slice(0, 20).map((tool, index) => {
+      const parts = tool.id.split("/");
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name: tool.name,
+        description: tool.description,
+        url: `${BASE_URL}/tools/${parts[0] ?? ""}/${parts[1] ?? ""}`,
+      };
+    }),
+  };
+}
+
+/**
  * Generate a breadcrumb path for category pages.
  */
 export function getCategoryBreadcrumbs(

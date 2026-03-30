@@ -36,7 +36,16 @@ export const urlDecode = defineTool({
     category: "encoding",
     subgroup: "URL Encoding",
     tier: ToolTier.CLIENT,
-    keywords: ["url", "decode", "percent", "uri", "decodeURIComponent"],
+    keywords: [
+      "url",
+      "decode",
+      "percent",
+      "uri",
+      "decodeURIComponent",
+      "url decoder online",
+      "percent decode url",
+      "url decoding tool",
+    ],
     examples: [
       {
         title: "Query Parameter",

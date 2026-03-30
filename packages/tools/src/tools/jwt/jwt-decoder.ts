@@ -84,6 +84,10 @@ export const jwtDecoder = defineTool({
       "header",
       "payload",
       "claims",
+      "jwt decoder online",
+      "decode jwt",
+      "jwt parser",
+      "jwt viewer",
     ],
     examples: [
       {

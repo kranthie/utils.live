@@ -50,6 +50,9 @@ export const uuidV4Generator = defineTool({
       "identifier",
       "guid",
       "rfc4122",
+      "uuid generator online",
+      "uuid v4 generator",
+      "generate uuid",
     ],
     examples: [
       {

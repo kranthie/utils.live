@@ -97,7 +97,17 @@ export const base64Decode = defineTool({
     category: "encoding",
     subgroup: "Base64",
     tier: ToolTier.CLIENT,
-    keywords: ["base64", "decode", "decoding", "binary", "text"],
+    keywords: [
+      "base64",
+      "decode",
+      "decoding",
+      "binary",
+      "text",
+      "base64 decode online",
+      "base64 decoder",
+      "decode base64 string",
+      "base64 to text",
+    ],
     examples: [
       {
         title: "Simple Text",

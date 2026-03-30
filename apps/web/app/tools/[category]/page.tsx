@@ -8,8 +8,9 @@ import {
 import {
   getCategoryBreadcrumbs,
   generateBreadcrumbJsonLd,
+  generateCategoryItemListJsonLd,
 } from "@/lib/seo/json-ld";
-import { JsonLd } from "@/components/seo/json-ld";
+import { JsonLdMultiple } from "@/components/seo/json-ld";
 import { Breadcrumb } from "@/components/layout/breadcrumb";
 import { CategoryToolsClient } from "@/components/tools/category-tools-client";
 import { LucideIcon } from "@/components/shared/lucide-icon";
@@ -46,9 +47,24 @@ export async function generateMetadata({
     };
   }
 
+  // Extract keyword phrases from category description (first sentence words)
+  const descWords = categoryInfo.description
+    .split(/[.,]/)[0]
+    ?.toLowerCase()
+    .replace(/free online /g, "")
+    .trim();
+
+  const keywords = [
+    categoryInfo.name.toLowerCase(),
+    `free online ${categoryInfo.name.toLowerCase()}`,
+    `${categoryInfo.name.toLowerCase()} online`,
+    ...(descWords ? [descWords] : []),
+  ];
+
   return {
     title: `Free Online ${categoryInfo.name} - ${categoryInfo.toolCount} Tools`,
     description: categoryInfo.description,
+    keywords,
     openGraph: {
       title: `Free Online ${categoryInfo.name} - ${categoryInfo.toolCount} Tools | utils.live`,
       description: categoryInfo.description,
@@ -56,7 +72,7 @@ export async function generateMetadata({
       url: `https://utils.live/tools/${category}`,
       images: [
         {
-          url: `https://utils.live/og/${category}/index.png`,
+          url: "https://utils.live/og/default.png",
           width: 1200,
           height: 630,
           alt: `${categoryInfo.name} - Free Online Tools`,
@@ -69,7 +85,7 @@ export async function generateMetadata({
       description: categoryInfo.description,
       images: [
         {
-          url: `https://utils.live/og/${category}/index.png`,
+          url: "https://utils.live/og/default.png",
           width: 1200,
           height: 630,
           alt: `${categoryInfo.name} - Free Online Tools`,
@@ -97,10 +113,16 @@ export default async function CategoryPage({
   // Generate breadcrumbs
   const breadcrumbs = getCategoryBreadcrumbs(categoryInfo.name);
   const breadcrumbJsonLd = generateBreadcrumbJsonLd(breadcrumbs);
+  const itemListJsonLd = generateCategoryItemListJsonLd(
+    category,
+    categoryInfo.name,
+    categoryInfo.description,
+    tools
+  );
 
   return (
     <>
-      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLdMultiple items={[breadcrumbJsonLd, itemListJsonLd]} />
 
       <div className="flex flex-col gap-8">
         {/* Breadcrumb navigation */}

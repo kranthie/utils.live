@@ -188,6 +188,10 @@ export const regexTester = defineTool({
       "highlight",
       "debugger",
       "playground",
+      "regex tester online",
+      "regex checker",
+      "regex validator",
+      "regexp tester",
     ],
     examples: [
       {

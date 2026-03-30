@@ -19,7 +19,18 @@ export const sha256Hash = defineTool({
     category: "crypto",
     subgroup: "Hash Generators",
     tier: ToolTier.CLIENT,
-    keywords: ["sha256", "sha-256", "hash", "digest", "crypto", "sha2"],
+    keywords: [
+      "sha256",
+      "sha-256",
+      "hash",
+      "digest",
+      "crypto",
+      "sha2",
+      "sha256 generator online",
+      "sha256 calculator",
+      "sha256 hash tool",
+      "sha-256 hash generator",
+    ],
     icon: "Hash",
     examples: [
       {
