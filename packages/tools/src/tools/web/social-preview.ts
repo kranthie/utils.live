@@ -97,7 +97,7 @@ function execute(input: Input): Output {
   <h3 style="margin: 0 0 8px 0; font-size: 15px; color: #666;">Detected Tags</h3>
   <div style="font-size: 13px; color: #333; line-height: 1.8;">
     og:title: ${ogTitle}<br>
-    og:description: ${ogDesc.substring(0, 60)}...<br>
+    og:description: ${ogDesc.substring(0, 60)}${ogDesc.length > 60 ? "..." : ""}<br>
     og:image: ${ogImage || "(not set)"}<br>
     og:url: ${ogUrl || "(not set)"}<br>
     og:site_name: ${ogSiteName || "(not set)"}<br>

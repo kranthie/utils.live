@@ -86,7 +86,7 @@ export const weekNumber = defineTool({
         description: "Find the ISO week number for a specific date",
         input: "2025-03-15",
         output:
-          "Date: 2025-03-15\nISO Week: 2025-W11\nWeek Number: 11\nWeek Year: 2025\nDay of Week: Friday (5)",
+          "Date: 2025-03-15\nISO Week: 2025-W11\nWeek Number: 11\nWeek Year: 2025\nDay of Week: Saturday (6)",
       },
     ],
   },

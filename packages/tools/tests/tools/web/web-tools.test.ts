@@ -466,6 +466,20 @@ describe("Social Preview", () => {
       );
     }
   });
+
+  it("should not append ellipsis to og:description under 60 chars", async () => {
+    const html = `<head>
+      <meta property="og:title" content="Short">
+      <meta property="og:description" content="Short desc">
+    </head>`;
+    const result = await executeTool(socialPreview, { input: html });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = String((result.data as Record<string, unknown>).output);
+      expect(output).toContain("Short desc");
+      expect(output).not.toContain("Short desc...");
+    }
+  });
 });
 
 // =====================================================
