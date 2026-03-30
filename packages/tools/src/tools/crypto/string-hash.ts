@@ -43,10 +43,13 @@ function execute(
     throw new Error("Input cannot be empty");
   }
 
+  const d = djb2(input.input);
+  const s = sdbm(input.input);
+  const f = fnv1a(input.input);
   const results = [
-    `DJB2:   ${djb2(input.input).toString(16)} (${djb2(input.input)})`,
-    `SDBM:   ${sdbm(input.input).toString(16)} (${sdbm(input.input)})`,
-    `FNV-1a: ${fnv1a(input.input).toString(16)} (${fnv1a(input.input)})`,
+    `DJB2:   ${d.toString(16)} (${d})`,
+    `SDBM:   ${s.toString(16)} (${s})`,
+    `FNV-1a: ${f.toString(16)} (${f})`,
   ];
 
   return { output: results.join("\n") };
