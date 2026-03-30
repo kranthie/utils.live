@@ -70,6 +70,19 @@ describe("Days in Month", () => {
     }
   });
 
+  it("should be timezone-invariant: date string 2025-01-01 must give month=1 year=2025", async () => {
+    // Regression: getMonth()/getFullYear() used local time. "2025-01-01" parses as
+    // UTC midnight; in PST (UTC-8) that is Dec 2024, giving month=12 year=2024.
+    const result = await executeTool(daysInMonth, { input: "2025-01-01" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.month).toBe(1);
+      expect(data.year).toBe(2025);
+      expect(data.days).toBe(31);
+    }
+  });
+
   it("should fail on empty input", async () => {
     const result = await executeTool(daysInMonth, { input: "" });
     expect(result.success).toBe(false);

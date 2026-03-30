@@ -119,6 +119,27 @@ describe("Date Range Generator", () => {
     }
   });
 
+  it("daily ISO iteration should be timezone-invariant: 2024-01-01 to 2024-01-03 has exactly 3 unique entries", async () => {
+    // Regression: setDate(getDate()+1) used local time. For UTC midnight inputs in
+    // PST (UTC-8), the first step jumped from Jan 1 00:00 UTC to Jan 1 08:00 UTC,
+    // producing a duplicate "2024-01-01" entry before continuing to Jan 2.
+    const result = await executeTool(dateRangeGenerator, {
+      startDate: "2024-01-01",
+      endDate: "2024-01-03",
+      step: "day",
+      format: "iso",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.count).toBe(3);
+      const lines = (data.output as string).split("\n");
+      expect(lines[0]).toBe("2024-01-01");
+      expect(lines[1]).toBe("2024-01-02");
+      expect(lines[2]).toBe("2024-01-03");
+    }
+  });
+
   it("long format should be timezone-invariant: 2024-01-01 must be Monday", async () => {
     // Jan 1, 2024 is a Monday. In PST it would fall on Dec 31 2023 (Sunday)
     // if local methods are used. Must use UTC methods.

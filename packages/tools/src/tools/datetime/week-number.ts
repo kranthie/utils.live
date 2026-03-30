@@ -18,7 +18,7 @@ type Output = z.infer<typeof outputSchema>;
 
 function getISOWeek(date: Date): { year: number; week: number } {
   const d = new Date(
-    Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
+    Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate())
   );
   d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
@@ -43,7 +43,7 @@ function execute(input: Input): Output {
   if (isNaN(date.getTime())) throw new Error("Unable to parse date");
 
   const { year, week } = getISOWeek(date);
-  const dayOfWeek = date.getDay() === 0 ? 7 : date.getDay();
+  const dayOfWeek = date.getUTCDay() === 0 ? 7 : date.getUTCDay();
   const DAYS = [
     "",
     "Monday",

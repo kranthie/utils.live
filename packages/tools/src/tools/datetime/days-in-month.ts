@@ -62,8 +62,8 @@ function execute(input: Input, options?: Options): Output {
   } else {
     const date = new Date(str);
     if (isNaN(date.getTime())) throw new Error("Unable to parse input");
-    month = date.getMonth() + 1;
-    year = date.getFullYear();
+    month = date.getUTCMonth() + 1;
+    year = date.getUTCFullYear();
   }
 
   if (month < 1 || month > 12)

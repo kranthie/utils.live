@@ -75,13 +75,13 @@ function execute(input: Input): Output {
 
     switch (input.step) {
       case "day":
-        current.setDate(current.getDate() + 1);
+        current.setUTCDate(current.getUTCDate() + 1);
         break;
       case "week":
-        current.setDate(current.getDate() + 7);
+        current.setUTCDate(current.getUTCDate() + 7);
         break;
       case "month":
-        current.setMonth(current.getMonth() + 1);
+        current.setUTCMonth(current.getUTCMonth() + 1);
         break;
     }
   }

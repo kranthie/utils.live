@@ -118,6 +118,23 @@ describe("Workdays Calculator", () => {
     }
   });
 
+  it("should be timezone-invariant: Mon-Fri week with UTC midnight inputs has 5 business days", async () => {
+    // Regression: getDay() used local time. For UTC midnight inputs in PST (UTC-8),
+    // the local day is the previous day, misclassifying weekday/weekend.
+    // 2024-01-08 (Mon) to 2024-01-12 (Fri) = 5 business days, 0 weekends.
+    const result = await executeTool(
+      workdaysCalculator,
+      { input1: "2024-01-08", input2: "2024-01-12" },
+      { excludeWeekends: true }
+    );
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.weekends).toBe(0);
+      expect(data.businessDays).toBe(5);
+    }
+  });
+
   it("example output matches execute()", async () => {
     const example = workdaysCalculator.meta.examples![0]!;
     const input = example.input as { input1: string; input2: string };

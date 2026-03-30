@@ -61,8 +61,8 @@ describe("Week Number", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("ISO Week:");
-      expect((data.output as string)).toContain("2024-W02");
+      expect(data.output as string).toContain("ISO Week:");
+      expect(data.output as string).toContain("2024-W02");
     }
   });
 
@@ -80,6 +80,19 @@ describe("Week Number", () => {
       const data = result.data as Record<string, unknown>;
       expect(data.weekNumber).toBeGreaterThan(0);
       expect(data.weekNumber).toBeLessThanOrEqual(53);
+    }
+  });
+
+  it("should be timezone-invariant: 2025-01-01 is week 1 of 2025, Wednesday (dayOfWeek=3)", async () => {
+    // Regression: getFullYear/getMonth/getDate/getDay used local time.
+    // "2025-01-01" is UTC midnight; in PST (UTC-8) it is Tue Dec 31 (dayOfWeek=2).
+    const result = await executeTool(weekNumber, { input: "2025-01-01" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.weekYear).toBe(2025);
+      expect(data.weekNumber).toBe(1);
+      expect(data.dayOfWeek).toBe(3); // Wednesday
     }
   });
 });
