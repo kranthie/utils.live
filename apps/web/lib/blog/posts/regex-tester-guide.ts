@@ -134,7 +134,7 @@ Most regex engines support flags (also called modifiers) that change matching be
 | \`g\`  | Global — find all matches, not just the first    |
 | \`i\`  | Case-insensitive matching                        |
 | \`m\`  | Multiline — \`^\` and \`$\` match line boundaries   |
-| \`s\`  | Dot-all — \`.` matches newlines too               |
+| \`s\`  | Dot-all — \`.\` matches newlines too               |
 
 In JavaScript: \`/pattern/gi\`
 
