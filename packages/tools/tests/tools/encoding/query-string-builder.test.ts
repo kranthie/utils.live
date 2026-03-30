@@ -49,4 +49,18 @@ describe("queryStringBuilder", () => {
     const result = await executeTool(queryStringBuilder, { input: "" });
     expect(result.success).toBe(false);
   });
+
+  it("should not encode values when encode is false", async () => {
+    // Regression: decodeURIComponent doesn't convert + → space; unencoded build must be done manually
+    const result = await executeTool(
+      queryStringBuilder,
+      { input: "name=John Doe\nq=hello world" },
+      { encode: false, includeQuestion: false }
+    );
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as { output: string }).output;
+      expect(output).toBe("name=John Doe&q=hello world");
+    }
+  });
 });

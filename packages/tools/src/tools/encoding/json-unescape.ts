@@ -18,7 +18,7 @@ type Output = z.infer<typeof outputSchema>;
 function execute(input: Input): Output {
   try {
     // Wrap in quotes and parse as JSON string
-    const result = JSON.parse(`"${input.input}"`) as Record<string, unknown>;
+    const result = JSON.parse(`"${input.input}"`) as string;
     if (typeof result !== "string") {
       throw new Error("Result is not a string");
     }

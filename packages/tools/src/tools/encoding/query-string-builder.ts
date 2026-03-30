@@ -67,9 +67,15 @@ function execute(input: Input, options?: Options): Output {
       params.append(key, value);
     }
 
-    let result = params.toString();
+    let result: string;
     if (!encode) {
-      result = decodeURIComponent(result);
+      const rawParts: string[] = [];
+      params.forEach((value, key) => {
+        rawParts.push(`${key}=${value}`);
+      });
+      result = rawParts.join("&");
+    } else {
+      result = params.toString();
     }
 
     if (includeQuestion && result) {
