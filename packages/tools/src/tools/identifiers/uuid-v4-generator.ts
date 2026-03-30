@@ -66,7 +66,7 @@ export const uuidV4Generator = defineTool({
         description: "Generate 3 uppercase UUID v4 identifiers",
         input: { count: 3, uppercase: true },
         output:
-          "550E8400-E29B-41D4-A716-446655440000\n6BA7B810-9DAD-11D1-80B4-00C04FD430C8\n7C9E6679-7425-40DE-944B-E07FC1F90AE7",
+          "550E8400-E29B-41D4-A716-446655440000\n6FA1C3D9-4B82-4F3E-9A28-7E2B5F84C601\n3D9B0F1A-82C4-4E57-B631-8A2E6D94F802",
       },
     ],
   },

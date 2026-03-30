@@ -33,4 +33,34 @@ describe("CUID2 Generator", () => {
       expect(unique.size).toBe(5);
     }
   });
+
+  it("should only contain lowercase letters (a-z) with no digits", async () => {
+    // CUID2 alphabet is purely lowercase letters; Math.random() output would also
+    // produce lowercase letters, but crypto is more correct. This test enforces
+    // the alphabet constraint regardless of the RNG used.
+    const result = await executeTool(cuid2Generator, { length: 24, count: 20 });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const ids = String((result.data as Record<string, unknown>).output).split(
+        "\n"
+      );
+      for (const id of ids) {
+        expect(id).toMatch(/^[a-z]+$/);
+        expect(id).toHaveLength(24);
+      }
+    }
+  });
+
+  it("should start with a lowercase letter (first char is not a digit)", async () => {
+    const result = await executeTool(cuid2Generator, { length: 24, count: 50 });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const ids = String((result.data as Record<string, unknown>).output).split(
+        "\n"
+      );
+      for (const id of ids) {
+        expect(id[0]).toMatch(/[a-z]/);
+      }
+    }
+  });
 });

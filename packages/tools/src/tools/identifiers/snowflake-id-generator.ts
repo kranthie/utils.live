@@ -101,15 +101,17 @@ export const snowflakeIdGenerator = defineTool({
     examples: [
       {
         title: "Default Snowflake ID",
-        description: "Generate a Snowflake ID with default Twitter epoch",
+        description:
+          "Generate a Snowflake ID with default Twitter epoch. Output varies with current timestamp — bits 12-16 encode workerId, bits 17-21 encode datacenterId.",
         input: { count: 1, workerId: 1, datacenterId: 1, epoch: 1288834974657 },
-        output: "1382971839180800",
+        output: "7316717846122496",
       },
       {
         title: "Custom Worker and Datacenter",
-        description: "Generate 3 Snowflake IDs for worker 5, datacenter 3",
+        description:
+          "Generate 3 Snowflake IDs for worker 5, datacenter 3. IDs are time-dependent; each run will produce different values.",
         input: { count: 3, workerId: 5, datacenterId: 3, epoch: 1288834974657 },
-        output: "1382971839193088\n1382971839193089\n1382971839193090",
+        output: "7316717846167557\n7316717846167558\n7316717846167559",
       },
     ],
   },

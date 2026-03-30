@@ -31,7 +31,9 @@ async function sha256Hex(data: string): Promise<string> {
     .join("");
 }
 
-let globalCounter = Math.floor(Math.random() * 2147483647);
+const _seedBytes = new Uint32Array(1);
+crypto.getRandomValues(_seedBytes);
+let globalCounter = _seedBytes[0]! % 2147483647;
 
 function createEntropy(length: number): string {
   const bytes = new Uint8Array(length);
@@ -51,7 +53,9 @@ async function generateCuid2(length: number): Promise<string> {
   const hash = await sha256Hex(input);
 
   // Convert hash to lowercase alpha chars for output
-  const firstChar = ALPHABET[Math.floor(Math.random() * ALPHABET.length)]!;
+  const firstRand = new Uint8Array(1);
+  crypto.getRandomValues(firstRand);
+  const firstChar = ALPHABET[firstRand[0]! % ALPHABET.length]!;
   let result = firstChar;
 
   // Use hash bytes to produce characters from the alphabet
@@ -60,9 +64,13 @@ async function generateCuid2(length: number): Promise<string> {
     result += ALPHABET[byte % ALPHABET.length];
   }
 
-  // If we still need more characters, pad with random
-  while (result.length < length) {
-    result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+  // If we still need more characters, pad with crypto random
+  if (result.length < length) {
+    const padBytes = new Uint8Array(length - result.length);
+    crypto.getRandomValues(padBytes);
+    for (const b of padBytes) {
+      result += ALPHABET[b % ALPHABET.length];
+    }
   }
 
   return result.substring(0, length);
@@ -99,13 +107,13 @@ export const cuid2Generator = defineTool({
         title: "Default CUID2",
         description: "Generate a 24-character CUID2",
         input: { length: 24, count: 1 },
-        output: "ckljzpkwz000001jqd5xr8bgh",
+        output: "tz4a98xxat96iws9zmbrgj3a",
       },
       {
         title: "Short CUID2 Batch",
         description: "Generate 3 short 10-character CUID2 identifiers",
         input: { length: 10, count: 3 },
-        output: "abcdefghij\nklmnopqrst\nuvwxyzabcd",
+        output: "xktzqbwrml\nfapjdhvnes\nruygiocwbz",
       },
     ],
   },

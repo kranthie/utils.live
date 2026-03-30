@@ -59,4 +59,33 @@ describe("UUID v5 Generator", () => {
     });
     expect(result.success).toBe(false);
   });
+
+  it("should fail for malformed custom namespace UUID (not a valid UUID format)", async () => {
+    const result = await executeTool(uuidV5Generator, {
+      name: "test",
+      namespace: "custom",
+      customNamespace: "not-a-valid-uuid",
+    });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.message).toMatch(
+        /invalid.*namespace|namespace.*invalid/i
+      );
+    }
+  });
+
+  it("should succeed for a valid custom namespace UUID", async () => {
+    const result = await executeTool(uuidV5Generator, {
+      name: "test",
+      namespace: "custom",
+      customNamespace: "550e8400-e29b-41d4-a716-446655440000",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = String((result.data as Record<string, unknown>).output);
+      expect(output).toMatch(
+        /^[0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+      );
+    }
+  });
 });

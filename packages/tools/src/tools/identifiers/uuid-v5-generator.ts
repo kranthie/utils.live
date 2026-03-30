@@ -84,6 +84,13 @@ async function execute(input: Input): Promise<Output> {
         "Custom namespace UUID is required when namespace is 'custom'"
       );
     }
+    const uuidRegex =
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    if (!uuidRegex.test(input.customNamespace)) {
+      throw new Error(
+        "Invalid namespace UUID format — must be a valid UUID (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)"
+      );
+    }
     namespace = input.customNamespace;
   } else {
     namespace = namespaceMap[input.namespace]!;

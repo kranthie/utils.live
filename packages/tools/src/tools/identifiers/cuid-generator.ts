@@ -40,7 +40,8 @@ function fingerprint(): string {
 
 function generateCuid(): string {
   const timestamp = toBase36(Date.now(), 8);
-  const count = toBase36(counter++, 4);
+  // Wrap at 36^4 = 1,679,616 to keep the counter always exactly 4 base36 chars
+  const count = toBase36(counter++ % 1679616, 4);
   const fp = fingerprint();
   const rand1 = randomBlock();
   const rand2 = randomBlock();
