@@ -47,6 +47,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "utils.live" }],
   creator: "utils.live",
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && {
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    },
+  }),
   openGraph: {
     type: "website",
     locale: "en_US",
