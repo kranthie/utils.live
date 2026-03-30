@@ -123,12 +123,13 @@ function execute(input: Input, options?: Options): Output {
         closeMatch[1].toLowerCase() === rawTagName
       ) {
         inRawElement = false;
-        // Output the content as-is and the closing tag
-        lines.push(
-          indentStr.repeat(level + 1) +
-            trimmed.replace(/^<\/\w+\s*>$/, "").trim()
-        );
-        level = Math.max(0, level);
+        // If the closing token somehow contains content (edge case), output it
+        const rawContent = trimmed.replace(/^<\/\w+\s*>$/, "").trim();
+        if (rawContent) {
+          lines.push(indentStr.repeat(level + 1) + rawContent);
+        }
+        // Decrement level back to match the opening tag's level
+        level = Math.max(0, level - 1);
         lines.push(indentStr.repeat(level) + `</${rawTagName}>`);
         continue;
       }

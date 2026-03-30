@@ -72,6 +72,22 @@ describe("HTML Formatter", () => {
     expect(result.success).toBe(false);
   });
 
+  it("should not emit empty lines before closing raw element tags", async () => {
+    const result = await executeTool(htmlFormatter, {
+      input: "<script>var x=1;</script>",
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const output = (result.data as Record<string, unknown>).output as string;
+      const lines = output.split("\n").filter((l) => l.trim() !== "");
+      // Lines should be: <script>, <content>, </script> — no blank lines
+      expect(lines).toHaveLength(3);
+      expect(lines[0]).toBe("<script>");
+      expect(lines[1]).toContain("var x=1;");
+      expect(lines[2]).toBe("</script>");
+    }
+  });
+
   it("should respect custom indent option", async () => {
     const result = await executeTool(
       htmlFormatter,
