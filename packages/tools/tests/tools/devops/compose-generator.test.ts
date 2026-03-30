@@ -123,5 +123,22 @@ describe("composeGenerator", () => {
         expect(output).toContain("postgres_data:");
       }
     });
+
+    it("should include healthcheck for mongodb when healthchecks is true", async () => {
+      const result = await executeTool(composeGenerator, {
+        database: "mongodb",
+        healthchecks: true,
+      });
+      expect(result.success).toBe(true);
+      if (result.success) {
+        const output = (result.data as Record<string, unknown>)
+          .output as string;
+        // MongoDB healthcheck required so service_healthy condition works
+        expect(output).toContain("healthcheck:");
+        expect(output).toContain("mongosh");
+        // depends_on condition must match the healthcheck
+        expect(output).toContain("condition: service_healthy");
+      }
+    });
   });
 });

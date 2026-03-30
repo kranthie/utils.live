@@ -117,6 +117,15 @@ function execute(
       lines.push("      - mongo_data:/data/db");
       volumes.push("mongo_data");
     }
+    if (input.healthchecks) {
+      lines.push("    healthcheck:");
+      lines.push(
+        '      test: ["CMD", "mongosh", "--eval", "db.adminCommand(\'ping\')"]'
+      );
+      lines.push("      interval: 10s");
+      lines.push("      timeout: 5s");
+      lines.push("      retries: 5");
+    }
     lines.push("    restart: unless-stopped");
     lines.push("");
   } else if (input.database === "mariadb") {
