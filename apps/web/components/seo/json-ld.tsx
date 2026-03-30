@@ -4,6 +4,7 @@ import type {
   WebsiteSchema,
   OrganizationSchema,
   FAQPageSchema,
+  ItemListSchema,
 } from "@/lib/seo/json-ld";
 
 type JsonLdData =
@@ -12,6 +13,7 @@ type JsonLdData =
   | WebsiteSchema
   | OrganizationSchema
   | FAQPageSchema
+  | ItemListSchema
   | Record<string, unknown>;
 
 interface JsonLdProps {
