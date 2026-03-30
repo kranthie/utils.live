@@ -35,10 +35,9 @@ function execute(input: Input): Output {
 
   if (isNaN(date.getTime())) throw new Error("Unable to parse date");
 
-  const year = date.getFullYear();
-  const startOfYear = new Date(year, 0, 1);
-  const dayOfYear =
-    Math.floor((date.getTime() - startOfYear.getTime()) / 86400000) + 1;
+  const year = date.getUTCFullYear();
+  const startOfYear = Date.UTC(year, 0, 1);
+  const dayOfYear = Math.floor((date.getTime() - startOfYear) / 86400000) + 1;
   const daysInYear = isLeapYear(year) ? 366 : 365;
   const remaining = daysInYear - dayOfYear;
   const percentComplete = Math.round((dayOfYear / daysInYear) * 10000) / 100;
@@ -75,7 +74,7 @@ export const dayOfYear = defineTool({
         description: "Find which day of the year March 15 is",
         input: "2025-03-15",
         output:
-          "Date: 2025-03-15\nDay of Year: 73 / 365\nDays Remaining: 292\nYear Progress: 20%\nLeap Year: No",
+          "Date: 2025-03-15\nDay of Year: 74 / 365\nDays Remaining: 291\nYear Progress: 20.27%\nLeap Year: No",
       },
     ],
   },

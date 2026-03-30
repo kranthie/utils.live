@@ -82,4 +82,17 @@ describe("Day of Year", () => {
       expect(data.remaining).toBe(365); // 366 - 1
     }
   });
+
+  it("day-of-year should be timezone-invariant for date-only strings", async () => {
+    // Regression: getFullYear()/new Date(year,0,1) used local time.
+    // "2025-03-15" is parsed as UTC midnight; in PDT (UTC-7) local year/
+    // startOfYear shift the delta by -7h, making dayOfYear 73 instead of 74.
+    // Jan(31) + Feb(28) + Mar(1..15) = 74.
+    const result = await executeTool(dayOfYear, { input: "2025-03-15" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.dayOfYear).toBe(74);
+    }
+  });
 });
