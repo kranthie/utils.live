@@ -39,7 +39,8 @@ function execute(input: Input, options?: Options): Output {
 
   let businessDays = 0;
   let weekends = 0;
-  const totalDays = Math.floor((end.getTime() - start.getTime()) / 86400000);
+  const totalDays =
+    Math.floor((end.getTime() - start.getTime()) / 86400000) + 1;
   const excludeWeekends = options?.excludeWeekends ?? true;
 
   const current = new Date(start);
@@ -92,7 +93,7 @@ export const workdaysCalculator = defineTool({
         description: "Calculate business days in the first quarter of 2024",
         input: { input1: "2025-01-01", input2: "2025-03-31" },
         output:
-          "From: 2025-01-01\nTo:   2025-03-31\n\nBusiness days: 64\nWeekend days:  26\nTotal days:    89\nResult:        64 business days",
+          "From: 2025-01-01\nTo:   2025-03-31\n\nBusiness days: 64\nWeekend days:  26\nTotal days:    90\nResult:        64 business days",
       },
     ],
   },

@@ -20,7 +20,9 @@ describe("Workdays Calculator", () => {
       expect(typeof data.businessDays).toBe("number");
       expect(typeof data.weekends).toBe("number");
       expect(typeof data.totalDays).toBe("number");
-      expect((data.businessDays as number) + (data.weekends as number)).toBeGreaterThan(0);
+      expect(
+        (data.businessDays as number) + (data.weekends as number)
+      ).toBeGreaterThan(0);
     }
   });
 
@@ -90,9 +92,40 @@ describe("Workdays Calculator", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("Business days:");
-      expect((data.output as string)).toContain("Weekend days:");
-      expect((data.output as string)).toContain("Total days:");
+      expect(data.output as string).toContain("Business days:");
+      expect(data.output as string).toContain("Weekend days:");
+      expect(data.output as string).toContain("Total days:");
+    }
+  });
+
+  it("totalDays equals businessDays + weekends (inclusive count)", async () => {
+    // Jan 8 Mon to Jan 12 Fri = 5 days inclusive: 5 business, 0 weekend
+    const result = await executeTool(
+      workdaysCalculator,
+      { input1: "2024-01-08T12:00:00Z", input2: "2024-01-12T12:00:00Z" },
+      { excludeWeekends: true }
+    );
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      const total = data.totalDays as number;
+      const biz = data.businessDays as number;
+      const wknd = data.weekends as number;
+      expect(total).toBe(biz + wknd);
+    }
+  });
+
+  it("example output matches execute()", async () => {
+    const example = workdaysCalculator.meta.examples![0]!;
+    const input = example.input as { input1: string; input2: string };
+    const result = await executeTool(workdaysCalculator, {
+      input1: input.input1,
+      input2: input.input2,
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.output).toBe(example.output);
     }
   });
 });

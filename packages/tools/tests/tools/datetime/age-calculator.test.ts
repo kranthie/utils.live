@@ -20,7 +20,7 @@ describe("Age Calculator", () => {
       expect(data.months).toBe(5);
       expect(data.days).toBe(14);
       expect(typeof data.totalDays).toBe("number");
-      expect((data.output as string)).toContain("34 years");
+      expect(data.output as string).toContain("34 years");
     }
   });
 
@@ -83,7 +83,21 @@ describe("Age Calculator", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect((data.output as string)).toContain("Next birthday");
+      expect(data.output as string).toContain("Next birthday");
+    }
+  });
+
+  it("example output matches execute()", async () => {
+    const example = ageCalculator.meta.examples![0]!;
+    const input = example.input as { birthdate: string; referenceDate: string };
+    const result = await executeTool(ageCalculator, {
+      birthdate: input.birthdate,
+      referenceDate: input.referenceDate,
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.output).toBe(example.output);
     }
   });
 });

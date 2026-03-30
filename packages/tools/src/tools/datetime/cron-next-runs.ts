@@ -61,7 +61,9 @@ function execute(input: Input, options?: Options): Output {
   const hours = parseField(fields[1]!, 0, 23);
   const daysOfMonth = parseField(fields[2]!, 1, 31);
   const months = parseField(fields[3]!, 1, 12);
-  const daysOfWeek = parseField(fields[4]!, 0, 6);
+  const daysOfWeek = parseField(fields[4]!, 0, 7);
+  // 7 is an alias for Sunday (0) used by some cron implementations
+  if (daysOfWeek.has(7)) daysOfWeek.add(0);
 
   const results: string[] = [];
   const current = new Date();
