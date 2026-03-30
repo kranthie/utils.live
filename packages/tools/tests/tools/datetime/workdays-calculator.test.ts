@@ -35,7 +35,10 @@ describe("Workdays Calculator", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const data = result.data as Record<string, unknown>;
-      expect(data.totalDays).toBeGreaterThanOrEqual(6);
+      // Jan 1–7 = 7 calendar days inclusive
+      expect(data.totalDays).toBe(7);
+      // Result for calendar-day mode must equal totalDays, not totalDays+1
+      expect(data.output as string).toContain("Result:        7 calendar days");
     }
   });
 

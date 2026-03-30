@@ -54,7 +54,7 @@ function execute(input: Input, options?: Options): Output {
     current.setDate(current.getDate() + 1);
   }
 
-  const result = excludeWeekends ? businessDays : totalDays + 1;
+  const result = excludeWeekends ? businessDays : totalDays;
 
   const lines: string[] = [];
   lines.push(`From: ${start.toISOString().split("T")[0]}`);
