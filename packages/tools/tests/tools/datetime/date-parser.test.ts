@@ -25,4 +25,19 @@ describe("Date Parser", () => {
       expect((result.data as Record<string, unknown>).valid).toBe(false);
     }
   });
+
+  it("date-parser should be timezone-invariant: 2025-07-04 is year=2025 month=7 day=4 Friday", async () => {
+    // Regression: getFullYear/getMonth/getDate/getDay used local time.
+    // "2025-07-04" is UTC midnight; in PDT (UTC-7) it is Jul 3 (Thursday),
+    // giving wrong year/month/day/dayOfWeek values.
+    const result = await executeTool(dateParser, { input: "2025-07-04" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const data = result.data as Record<string, unknown>;
+      expect(data.year).toBe(2025);
+      expect(data.month).toBe(7);
+      expect(data.day).toBe(4);
+      expect(data.dayOfWeek).toBe("Friday");
+    }
+  });
 });

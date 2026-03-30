@@ -20,7 +20,7 @@ type Output = z.infer<typeof outputSchema>;
 
 function getISOWeek(date: Date): { year: number; week: number } {
   const d = new Date(
-    Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
+    Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate())
   );
   d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
@@ -31,9 +31,8 @@ function getISOWeek(date: Date): { year: number; week: number } {
 }
 
 function getDayOfYear(date: Date): number {
-  const start = new Date(date.getFullYear(), 0, 0);
-  const diff = date.getTime() - start.getTime();
-  return Math.floor(diff / 86400000);
+  const startOfYear = Date.UTC(date.getUTCFullYear(), 0, 1);
+  return Math.floor((date.getTime() - startOfYear) / 86400000) + 1;
 }
 
 function execute(input: Input): Output {
@@ -60,7 +59,7 @@ function execute(input: Input): Output {
   const weekStr = `${year}-W${String(week).padStart(2, "0")}`;
 
   const dayOfYear = getDayOfYear(date);
-  const ordinal = `${date.getFullYear()}-${String(dayOfYear).padStart(3, "0")}`;
+  const ordinal = `${date.getUTCFullYear()}-${String(dayOfYear).padStart(3, "0")}`;
 
   const lines: string[] = [];
   lines.push(`ISO 8601 Formats:`);

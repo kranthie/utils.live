@@ -59,28 +59,28 @@ const MONTHS_SHORT = [
 
 function formatDate(date: Date, fmt: string): string {
   const tokens: Record<string, string> = {
-    YYYY: String(date.getFullYear()),
-    YY: String(date.getFullYear()).slice(-2),
-    MMMM: MONTHS[date.getMonth()]!,
-    MMM: MONTHS_SHORT[date.getMonth()]!,
-    MM: String(date.getMonth() + 1).padStart(2, "0"),
-    M: String(date.getMonth() + 1),
-    DD: String(date.getDate()).padStart(2, "0"),
-    D: String(date.getDate()),
-    dddd: DAYS[date.getDay()]!,
-    ddd: DAYS_SHORT[date.getDay()]!,
-    dd: DAYS_SHORT[date.getDay()]!.substring(0, 2),
-    HH: String(date.getHours()).padStart(2, "0"),
-    H: String(date.getHours()),
-    hh: String(date.getHours() % 12 || 12).padStart(2, "0"),
-    h: String(date.getHours() % 12 || 12),
-    mm: String(date.getMinutes()).padStart(2, "0"),
-    m: String(date.getMinutes()),
-    ss: String(date.getSeconds()).padStart(2, "0"),
-    s: String(date.getSeconds()),
-    SSS: String(date.getMilliseconds()).padStart(3, "0"),
-    A: date.getHours() >= 12 ? "PM" : "AM",
-    a: date.getHours() >= 12 ? "pm" : "am",
+    YYYY: String(date.getUTCFullYear()),
+    YY: String(date.getUTCFullYear()).slice(-2),
+    MMMM: MONTHS[date.getUTCMonth()]!,
+    MMM: MONTHS_SHORT[date.getUTCMonth()]!,
+    MM: String(date.getUTCMonth() + 1).padStart(2, "0"),
+    M: String(date.getUTCMonth() + 1),
+    DD: String(date.getUTCDate()).padStart(2, "0"),
+    D: String(date.getUTCDate()),
+    dddd: DAYS[date.getUTCDay()]!,
+    ddd: DAYS_SHORT[date.getUTCDay()]!,
+    dd: DAYS_SHORT[date.getUTCDay()]!.substring(0, 2),
+    HH: String(date.getUTCHours()).padStart(2, "0"),
+    H: String(date.getUTCHours()),
+    hh: String(date.getUTCHours() % 12 || 12).padStart(2, "0"),
+    h: String(date.getUTCHours() % 12 || 12),
+    mm: String(date.getUTCMinutes()).padStart(2, "0"),
+    m: String(date.getUTCMinutes()),
+    ss: String(date.getUTCSeconds()).padStart(2, "0"),
+    s: String(date.getUTCSeconds()),
+    SSS: String(date.getUTCMilliseconds()).padStart(3, "0"),
+    A: date.getUTCHours() >= 12 ? "PM" : "AM",
+    a: date.getUTCHours() >= 12 ? "pm" : "am",
     ZZ: (() => {
       const offset = -date.getTimezoneOffset();
       const sign = offset >= 0 ? "+" : "-";
@@ -99,13 +99,14 @@ function formatDate(date: Date, fmt: string): string {
     x: String(date.getTime()),
   };
 
-  // Sort by token length (longest first) to avoid partial replacements
+  // Single-pass replacement: build one regex with all tokens (longest first)
+  // so token values never get re-scanned for further substitution.
   const sortedKeys = Object.keys(tokens).sort((a, b) => b.length - a.length);
-  let result = fmt;
-  for (const key of sortedKeys) {
-    result = result.replace(new RegExp(key, "g"), tokens[key]!);
-  }
-  return result;
+  const pattern = new RegExp(
+    sortedKeys.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|"),
+    "g"
+  );
+  return fmt.replace(pattern, (match) => tokens[match] ?? match);
 }
 
 function execute(input: Input, options?: Options): Output {
@@ -143,7 +144,7 @@ export const dateFormatter = defineTool({
         title: "Format ISO Date",
         description: "Format a date using a custom pattern with day name",
         input: "2025-07-04T15:30:00Z",
-        output: "2025-07-04 08:30:00",
+        output: "2025-07-04 15:30:00",
       },
     ],
   },

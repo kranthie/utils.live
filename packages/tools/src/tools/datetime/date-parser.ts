@@ -54,13 +54,13 @@ function execute(input: Input): Output {
 
   const lines: string[] = [];
   lines.push(`Parsed Date: ${date.toISOString()}`);
-  lines.push(`Year:        ${date.getFullYear()}`);
-  lines.push(`Month:       ${date.getMonth() + 1}`);
-  lines.push(`Day:         ${date.getDate()}`);
-  lines.push(`Day of Week: ${DAYS[date.getDay()]}`);
-  lines.push(`Hours:       ${date.getHours()}`);
-  lines.push(`Minutes:     ${date.getMinutes()}`);
-  lines.push(`Seconds:     ${date.getSeconds()}`);
+  lines.push(`Year:        ${date.getUTCFullYear()}`);
+  lines.push(`Month:       ${date.getUTCMonth() + 1}`);
+  lines.push(`Day:         ${date.getUTCDate()}`);
+  lines.push(`Day of Week: ${DAYS[date.getUTCDay()]}`);
+  lines.push(`Hours:       ${date.getUTCHours()}`);
+  lines.push(`Minutes:     ${date.getUTCMinutes()}`);
+  lines.push(`Seconds:     ${date.getUTCSeconds()}`);
   lines.push(`Timestamp:   ${Math.floor(date.getTime() / 1000)}`);
 
   return {
@@ -68,13 +68,13 @@ function execute(input: Input): Output {
     valid: true,
     iso: date.toISOString(),
     timestamp: Math.floor(date.getTime() / 1000),
-    year: date.getFullYear(),
-    month: date.getMonth() + 1,
-    day: date.getDate(),
-    hours: date.getHours(),
-    minutes: date.getMinutes(),
-    seconds: date.getSeconds(),
-    dayOfWeek: DAYS[date.getDay()],
+    year: date.getUTCFullYear(),
+    month: date.getUTCMonth() + 1,
+    day: date.getUTCDate(),
+    hours: date.getUTCHours(),
+    minutes: date.getUTCMinutes(),
+    seconds: date.getUTCSeconds(),
+    dayOfWeek: DAYS[date.getUTCDay()],
   };
 }
 
@@ -94,7 +94,7 @@ export const dateParser = defineTool({
         description: "Parse an ISO 8601 date string into its components",
         input: "2025-03-15T14:30:00Z",
         output:
-          "Parsed Date: 2025-03-15T14:30:00.000Z\nYear:        2025\nMonth:       3\nDay:         15\nDay of Week: Saturday\nHours:       7\nMinutes:     30\nSeconds:     0\nTimestamp:   1742049000",
+          "Parsed Date: 2025-03-15T14:30:00.000Z\nYear:        2025\nMonth:       3\nDay:         15\nDay of Week: Saturday\nHours:       14\nMinutes:     30\nSeconds:     0\nTimestamp:   1742049000",
       },
     ],
   },

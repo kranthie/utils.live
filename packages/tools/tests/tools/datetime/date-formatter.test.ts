@@ -47,4 +47,38 @@ describe("Date Formatter", () => {
     const result = await executeTool(dateFormatter, { input: "not-a-date" });
     expect(result.success).toBe(false);
   });
+
+  it("YYYY-MM-DD should be timezone-invariant: date-only string 2024-01-01 must format as 2024-01-01", async () => {
+    // Regression: getFullYear/getMonth/getDate used local time.
+    // "2024-01-01" parses as UTC midnight; in PST (UTC-8) that is Dec 31 2023,
+    // so the formatted output came out as "2023-12-31" instead of "2024-01-01".
+    const result = await executeTool(
+      dateFormatter,
+      { input: "2024-01-01" },
+      { format: "YYYY-MM-DD" }
+    );
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect((result.data as Record<string, unknown>).output).toBe(
+        "2024-01-01"
+      );
+    }
+  });
+
+  it("dddd token should be timezone-invariant: 2025-07-04 must be Friday", async () => {
+    // July 4, 2025 UTC is a Friday. In PDT (UTC-7) it falls on July 3 (Thursday).
+    // Also a regression for cascade substitution: "Friday" contains "a" which was
+    // replaced by the am/pm token in the old multi-pass approach → "Fridamy".
+    const result = await executeTool(
+      dateFormatter,
+      { input: "2025-07-04" },
+      { format: "dddd YYYY-MM-DD" }
+    );
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect((result.data as Record<string, unknown>).output).toBe(
+        "Friday 2025-07-04"
+      );
+    }
+  });
 });
