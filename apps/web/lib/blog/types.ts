@@ -4,6 +4,7 @@ export interface BlogPost {
   description: string;
   publishedAt: string; // ISO date string
   readingTimeMinutes: number;
+  category: string;
   ctaTools: { name: string; href: string }[];
   content: string; // Markdown content
 }

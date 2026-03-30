@@ -7,6 +7,7 @@ export const md5HashGeneratorGuide: BlogPost = {
     "Learn what MD5 hashing is, how to generate MD5 checksums for file verification, and why MD5 should never be used for passwords.",
   publishedAt: "2026-03-29",
   readingTimeMinutes: 6,
+  category: "Crypto",
   ctaTools: [{ name: "MD5 Hash Generator", href: "/tools/crypto/md5-hash" }],
   content: `## What Is Cryptographic Hashing?
 

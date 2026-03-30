@@ -7,6 +7,7 @@ export const uuidGeneratorGuide: BlogPost = {
     "Everything you need to know about UUIDs — the differences between v1, v4, and v7, use cases, and how to generate them online.",
   publishedAt: "2026-03-29",
   readingTimeMinutes: 5,
+  category: "Identifiers",
   ctaTools: [
     {
       name: "UUID v4 Generator",

@@ -9,7 +9,10 @@ interface FooterProps {
 const GITHUB_URL = "https://github.com/kranthie/utils.live";
 
 const FOOTER_LINKS = {
-  product: [{ label: "All Tools", href: "/tools" }],
+  product: [
+    { label: "All Tools", href: "/tools" },
+    { label: "Blog", href: "/blog" },
+  ],
   company: [
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },

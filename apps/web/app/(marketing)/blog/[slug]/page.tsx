@@ -72,22 +72,25 @@ export default async function BlogPostPage({
 
         {/* Post header */}
         <header className="mb-10">
-          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
-            {post.title}
-          </h1>
-          <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-            {post.description}
-          </p>
-          <div className="text-muted-foreground flex flex-wrap items-center gap-4 text-sm">
-            <span className="flex items-center gap-1.5">
-              <Calendar className="h-4 w-4" />
+          <div className="mb-4 flex flex-wrap items-center gap-3">
+            <span className="bg-primary/10 text-primary rounded-full px-3 py-1 text-xs font-semibold">
+              {post.category}
+            </span>
+            <span className="text-muted-foreground flex items-center gap-1.5 text-sm">
+              <Calendar className="h-3.5 w-3.5" />
               {formatDate(post.publishedAt)}
             </span>
-            <span className="flex items-center gap-1.5">
-              <Clock className="h-4 w-4" />
+            <span className="text-muted-foreground flex items-center gap-1.5 text-sm">
+              <Clock className="h-3.5 w-3.5" />
               {post.readingTimeMinutes} min read
             </span>
           </div>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {post.title}
+          </h1>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            {post.description}
+          </p>
         </header>
 
         {/* Divider */}

@@ -7,6 +7,7 @@ export const jwtDecoderGuide: BlogPost = {
     "Understand JWT structure (header.payload.signature), how to decode tokens online, and key security considerations.",
   publishedAt: "2026-03-29",
   readingTimeMinutes: 6,
+  category: "JWT",
   ctaTools: [{ name: "JWT Decoder", href: "/tools/jwt/jwt-decoder" }],
   content: `## What Is a JSON Web Token?
 

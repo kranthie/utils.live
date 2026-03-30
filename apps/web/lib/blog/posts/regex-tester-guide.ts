@@ -7,6 +7,7 @@ export const regexTesterGuide: BlogPost = {
     "A practical guide to regular expressions with syntax overview, common patterns, and a live online regex tester.",
   publishedAt: "2026-03-29",
   readingTimeMinutes: 8,
+  category: "Regex",
   ctaTools: [{ name: "Regex Tester", href: "/tools/regex/regex-tester" }],
   content: `## What Are Regular Expressions?
 

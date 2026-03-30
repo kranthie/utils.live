@@ -7,6 +7,7 @@ export const base64EncodingExplained: BlogPost = {
     "Learn what Base64 encoding is, how it works, and common use cases like data URLs, JWTs, and API authentication.",
   publishedAt: "2026-03-29",
   readingTimeMinutes: 7,
+  category: "Encoding",
   ctaTools: [
     { name: "Base64 Encoder", href: "/tools/encoding/base64-encode" },
     { name: "Base64 Decoder", href: "/tools/encoding/base64-decode" },
