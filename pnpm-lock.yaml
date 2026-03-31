@@ -49,6 +49,9 @@ importers:
       "@types/node":
         specifier: "catalog:"
         version: 22.19.9
+      dotenv:
+        specifier: 17.3.1
+        version: 17.3.1
       eslint:
         specifier: 9.17.0
         version: 9.17.0(jiti@2.6.1)
@@ -5048,6 +5051,13 @@ packages:
       {
         integrity: sha512-Oj6pzI2+RqBfFG+qOaOLbFXLQ90ARpcGG6UePL82bJLtdsa6CYJD7nmiU8MW9nQNOtCHV3lZ/Bzq1X0QYbBZCA==,
       }
+
+  dotenv@17.3.1:
+    resolution:
+      {
+        integrity: sha512-IO8C/dzEb6O3F9/twg6ZLXz164a2fhTnEWb95H23Dm4OuN+92NmEAlTrupP9VW6Jm3sO26tQlqyvyi4CsnY9GA==,
+      }
+    engines: { node: ">=12" }
 
   dunder-proto@1.0.1:
     resolution:
@@ -11954,6 +11964,8 @@ snapshots:
   dompurify@3.3.3:
     optionalDependencies:
       "@types/trusted-types": 2.0.7
+
+  dotenv@17.3.1: {}
 
   dunder-proto@1.0.1:
     dependencies:

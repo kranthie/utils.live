@@ -1,0 +1,3447 @@
+{
+  "common": {
+    "nav": {
+      "home": "主页",
+      "tools": "工具",
+      "blog": "博客",
+      "about": "关于",
+      "contact": "联系"
+    },
+    "actions": {
+      "copy": "复制到剪贴板",
+      "copied": "已复制！",
+      "download": "下载",
+      "share": "分享",
+      "tryAgain": "重试",
+      "goHome": "返回主页",
+      "goBack": "返回",
+      "retry": "重试",
+      "dismiss": "关闭",
+      "reset": "重置为默认值",
+      "clear": "清除",
+      "sample": "示例",
+      "upload": "上传",
+      "search": "搜索",
+      "send": "发送消息",
+      "sending": "发送中...",
+      "browseTools": "浏览所有工具",
+      "searchTools": "搜索工具",
+      "viewAllTools": "查看所有工具",
+      "viewAllCategories": "查看所有分类",
+      "contactSupport": "联系支持"
+    },
+    "search": {
+      "placeholder": "搜索工具...",
+      "noResults": "未找到工具。",
+      "resultsCount": "{count, plural, one {# 个结果} other {# 个结果}}已找到",
+      "searchToolsPlaceholder": "搜索工具...",
+      "ariaLabel": "搜索开发者工具"
+    },
+    "theme": {
+      "toggle": "切换主题",
+      "light": "浅色",
+      "dark": "深色",
+      "system": "系统"
+    },
+    "brand": {
+      "name": "utils.live",
+      "homeAriaLabel": "utils.live 主页"
+    }
+  },
+  "home": {
+    "hero": {
+      "openSourceBadge": "免费开源",
+      "headline": "开发者工具，即时可用",
+      "subheadline": "JSON 格式化、编码、转换、哈希生成器等工具。完全在浏览器中运行的免费工具。",
+      "searchPlaceholder": "搜索 {toolCountLabel} 个开发者工具...",
+      "searchAriaLabel": "搜索开发者工具"
+    },
+    "features": {
+      "eyebrow": "[REVIEW] 为什么选择 utils.live",
+      "heading": "[REVIEW] 开发者为什么选择 utils.live",
+      "instantResults": {
+        "title": "即时结果",
+        "description": "客户端工具在浏览器中运行，零延迟。无需等待，无需服务器往返。"
+      },
+      "privacyFirst": {
+        "title": "隐私优先",
+        "description": "您的数据永远不会离开您的设备。我们不追踪、存储或分析您的工具输入。"
+      },
+      "freeOpenSource": {
+        "title": "免费开源",
+        "description": "每个工具完全免费使用。无需账户、无付费墙、无使用限制。完全开源。"
+      },
+      "toolsCount": {
+        "title": "{toolCountLabel} 个工具",
+        "description": "全面的开发者工具集合——从 JSON 格式化到图像处理。"
+      }
+    },
+    "cta": {
+      "toolsLabel": "工具",
+      "categoriesLabel": "分类",
+      "freeLabel": "免费且开源",
+      "heading": "使用 {toolCount}+ 个工具开始构建",
+      "subheading": "找到适合任何任务的工具。搜索、点击、完成。",
+      "searchToolsButton": "搜索工具",
+      "browseAllTools": "浏览所有工具"
+    },
+    "categoryShowcase": {
+      "eyebrow": "分类",
+      "heading": "按分类浏览",
+      "subheading": "找到适合任何任务的工具",
+      "toolsCount": "{count} 个工具",
+      "viewAllTools": "查看所有工具",
+      "viewAllCategories": "查看所有分类"
+    },
+    "toolDemo": {
+      "heading": "实际应用演示",
+      "subheading": "观看工具实时转换数据",
+      "inputLabel": "输入",
+      "outputLabel": "输出"
+    },
+    "metadata": {
+      "title": "[REVIEW] utils.live | 免费开发者工具和实用程序",
+      "description": "{toolCountLabel} 个免费开发者工具集于一处。JSON 格式化器、编码器、转换器、哈希生成器等。快速、免费且隐私保护。"
+    }
+  },
+  "tools": {
+    "shell": {
+      "options": "选项",
+      "optionsCount": "({count})",
+      "resetToDefaults": "重置为默认值",
+      "resetAriaLabel": "将选项重置为默认值",
+      "auto": "自动",
+      "autoWaiting": " - 等待输入",
+      "autoExecuting": " - 执行中",
+      "autoReady": " - 就绪",
+      "autoTooltip": "此工具在您键入时自动执行。",
+      "generating": "生成中...",
+      "generate": "生成",
+      "keyboardShortcuts": "键盘快捷键",
+      "keyboardShortcutsAriaLabel": "键盘快捷键",
+      "shortcutExecute": "执行",
+      "shortcutClear": "清除 / 重置",
+      "undoLabel": "撤销",
+      "exampleLoaded": "示例已加载",
+      "inputLabel": "输入",
+      "outputLabel": "输出",
+      "configureLabel": "配置",
+      "previewLabel": "预览",
+      "sourceLabel": "源",
+      "convertedLabel": "已转换",
+      "editLabel": "编辑",
+      "toolsAvailable": "可用 {count} 个工具",
+      "toolNotFound": {
+        "title": "工具未找到",
+        "description": "请求的工具无法找到。"
+      }
+    },
+    "search": {
+      "heading": "探索工具",
+      "subheading": "{count, number} 个免费开发者工具触手可及",
+      "searchResults": "搜索结果",
+      "recent": "最近",
+      "popular": "热门",
+      "categories": "分类",
+      "noToolsFound": "未找到工具。",
+      "resultsFound": "{count, plural, one {# 个结果} other {# 个结果}}已找到",
+      "noResultsFound": "未找到工具"
+    },
+    "categories": {
+      "categoryNotFound": {
+        "title": "分类未找到",
+        "description": "请求的分类无法找到。"
+      },
+      "toolsAvailable": "{count} 个工具可用"
+    },
+    "breadcrumbs": {
+      "home": "首页",
+      "tools": "工具"
+    },
+    "metadata": {
+      "tools": {
+        "title": "浏览工具",
+        "description": "浏览 {toolCountLabel} 个免费开发者工具。JSON 格式化器、编码器、转换器、哈希生成器等。",
+        "ogTitle": "[REVIEW] 浏览工具 | utils.live",
+        "ogDescription": "浏览 {toolCountLabel} 个免费开发者工具。JSON 格式化器、编码器、转换器等。"
+      }
+    }
+  },
+  "editor": {
+    "input": {
+      "title": "输入",
+      "loadSampleAriaLabel": "加载示例数据",
+      "sampleButton": "示例",
+      "uploadButton": "上传",
+      "clearAriaLabel": "清除输入",
+      "dropFileHere": "在此放置文件",
+      "dragAndDrop": "或将文件拖放到此处",
+      "failedToRead": "文件读取失败"
+    },
+    "output": {
+      "title": "输出",
+      "processing": "处理中...",
+      "success": "成功",
+      "error": "错误",
+      "noOutputYet": "暂无输出",
+      "enterInputInstant": "输入内容以即时查看结果",
+      "enterInputExecute": "输入内容并点击执行以查看结果",
+      "emptyResult": "空结果",
+      "emptyResultDescription": "操作已完成但未生成输出",
+      "loadingEditor": "加载编辑器中...",
+      "loadingDiffViewer": "加载差异查看器中...",
+      "loadingJsonViewer": "加载 JSON 查看器中...",
+      "loadingMarkdown": "加载 Markdown 预览中...",
+      "loadingTable": "加载表格中...",
+      "loadingHtml": "加载 HTML 预览中...",
+      "loadingDiagram": "加载图表中...",
+      "loadingImage": "加载图像预览中...",
+      "loadingColor": "加载颜色中...",
+      "loadingColors": "加载颜色中...",
+      "statusProcessing": "处理中...",
+      "statusComplete": "执行完成。",
+      "statusProcessedIn": " 处理耗时 {time}。",
+      "statusFailed": "执行失败：{message}"
+    }
+  },
+  "errorDisplay": {
+    "defaultTitles": {
+      "error": "错误",
+      "warning": "警告",
+      "info": "信息"
+    },
+    "pathLabel": "路径: {path}",
+    "lineLabel": "第 {line} 行",
+    "retryButton": "重试",
+    "dismissButton": "关闭"
+  },
+  "marketing": {
+    "about": {
+      "metadata": {
+        "title": "关于",
+        "description": "[REVIEW] 了解 utils.live - 我们的使命是让开发者工具变得易用、快速且尊重隐私。",
+        "ogTitle": "[REVIEW] 关于 | utils.live"
+      },
+      "hero": {
+        "heading": "尊重您时间的开发者工具",
+        "headingPrefix": "尊重您时间的",
+        "gradientText": "开发者工具",
+        "description": "[REVIEW] utils.live 源于对缓慢、充斥广告和侵犯隐私的在线工具的不满。我们打造了自己想要使用的工具：快速、免费且尊重隐私的实用程序。"
+      },
+      "stats": {
+        "developerTools": "开发者工具",
+        "freeCoreTools": "免费核心工具",
+        "dataCollected": "收集的数据",
+        "avgResponseTime": "平均响应时间"
+      },
+      "values": {
+        "heading": "我们的价值观",
+        "speedFirst": {
+          "title": "速度优先",
+          "description": "工具应该即时响应。我们的客户端工具在您的浏览器中运行，实现零延迟。"
+        },
+        "privacyByDesign": {
+          "title": "隐私优先设计",
+          "description": "您的数据保留在您的设备上。我们不会追踪、存储或分析您的工具输入。"
+        },
+        "developerExperience": {
+          "title": "开发者体验",
+          "description": "由开发者打造，为开发者服务。每个工具都旨在为您节省时间。"
+        },
+        "freeAccessible": {
+          "title": "免费与易用",
+          "description": "核心工具永久免费。我们相信每个人都应该能够访问优质工具。"
+        }
+      },
+      "mission": {
+        "heading": "我们的使命",
+        "description": "我们相信开发者工具应该对所有人都可用，无论预算或技术水平如何。[REVIEW] utils.live 提供专业级别的实用工具，无冗余、无追踪、无付费墙。我们的目标是帮助你专注于重要的事情：构建优秀的软件。"
+      },
+      "team": {
+        "heading": "用心打造",
+        "headingPrefix": "用",
+        "gradientText": "心打造",
+        "description": "[REVIEW] utils.live 由一个小团队的热情开发者维护，他们每天都使用这些工具。我们不断添加新工具并根据社区反馈改进现有工具。",
+        "feedbackWelcome": "欢迎反馈和建议"
+      }
+    },
+    "contact": {
+      "metadata": {
+        "title": "联系我们",
+        "description": "与 [REVIEW] utils.live 团队取得联系。我们很想听到你关于功能、bug 或合作机会的想法。",
+        "ogTitle": "联系我们 | [REVIEW] utils.live",
+        "ogDescription": "与 [REVIEW] utils.live 团队取得联系。我们很想听到你的想法。"
+      },
+      "hero": {
+        "heading": "取得联系",
+        "description": "有疑问、功能请求，或只是想打个招呼？我们很想听到你的意见。"
+      },
+      "info": {
+        "responseTime": {
+          "title": "响应时间",
+          "value": "< 24 小时",
+          "description": "对于大多数询问"
+        },
+        "location": {
+          "title": "位置",
+          "value": "远程团队",
+          "description": "全球分布式"
+        }
+      },
+      "lookingForTool": {
+        "heading": "在寻找工具？",
+        "description": "浏览我们的完整工具集合。",
+        "linkText": "完整工具集合"
+      },
+      "form": {
+        "heading": "给我们发送消息",
+        "successTitle": "消息已发送！",
+        "successDescription": "感谢你的联系。我们会尽快回复你，通常在 24 小时内。",
+        "sendAnother": "发送另一条消息",
+        "errorMessage": "出现问题，请重试。",
+        "namePlaceholder": "您的名字",
+        "nameLabel": "名称",
+        "emailLabel": "邮箱",
+        "emailPlaceholder": "you@example.com",
+        "subjectLabel": "主题",
+        "subjectPlaceholder": "选择一个主题",
+        "messageLabel": "消息",
+        "messagePlaceholder": "我们能如何帮助你？",
+        "submitButton": "发送消息",
+        "submittingButton": "发送中...",
+        "subjects": {
+          "general": "一般咨询",
+          "bug": "Bug 报告",
+          "feature": "功能请求",
+          "support": "技术支持",
+          "partnership": "合作",
+          "other": "其他"
+        }
+      }
+    }
+  },
+  "blog": {
+    "metadata": {
+      "title": "[REVIEW] 开发者工具博客 | utils.live",
+      "description": "学习开发者工具概念 — Base64、JWT、正则表达式、UUID、哈希等。包含实时示例的实用指南。",
+      "postNotFound": "文章未找到"
+    },
+    "page": {
+      "heading": "开发者工具博客",
+      "gradientText": "博客",
+      "description": "编码、哈希、令牌等方面的实用指南。深入理解你每天使用的工具。",
+      "readArticle": "阅读文章",
+      "minRead": "{count} 分钟阅读",
+      "allArticles": "所有文章",
+      "backToArticles": "返回所有文章"
+    },
+    "cta": {
+      "heading": "[REVIEW] 在 utils.live 上试试",
+      "description": "免费的浏览器工具 — 无需注册，您的数据不会离开您的设备。"
+    }
+  },
+  "errors": {
+    "generic": {
+      "heading": "出错了",
+      "description": "发生了意外错误。我们已收到通知，正在调查中。",
+      "errorId": "错误 ID：{id}",
+      "tryAgain": "重试",
+      "goHome": "返回首页",
+      "contactSupport": "联系支持",
+      "whatCanYouDo": "您可以做什么？",
+      "suggestions": {
+        "refresh": "尝试刷新页面",
+        "clearCache": "清除浏览器缓存",
+        "checkConnection": "检查您的网络连接",
+        "contactUs": "如果问题仍然存在"
+      },
+      "contactLink": "联系我们"
+    },
+    "notFound": {
+      "heading": "找不到页面",
+      "description": "抱歉，我们找不到您要查找的页面。它可能已被移动或不存在。",
+      "goHome": "返回首页",
+      "browseTools": "浏览工具",
+      "goBack": "返回上一步",
+      "popularTools": "热门工具"
+    },
+    "critical": {
+      "heading": "严重错误",
+      "description": "发生了严重错误。此页面无法正确加载。",
+      "tryAgain": "重试",
+      "goHome": "返回首页",
+      "errorId": "错误 ID: {id}"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "[REVIEW] utils.live | 免费开发者工具和实用程序",
+      "description": "{toolCountLabel} 个免费开发者工具集中在一个平台。JSON 格式化、编码、转换、哈希生成等工具。快速、免费且隐私保护。"
+    },
+    "layout": {
+      "title": "[REVIEW] utils.live | 开发者实用工具平台",
+      "titleTemplate": "%s | [REVIEW] utils.live",
+      "description": "{toolCountLabel} 个开发者工具集中在一个平台。JSON 格式化、编码、转换等工具。免费且隐私保护。",
+      "ogTitle": "[REVIEW] utils.live | 开发者实用工具平台",
+      "ogAlt": "[REVIEW] utils.live - 免费开发者工具",
+      "skipToMain": "跳转到主要内容"
+    },
+    "tools": {
+      "title": "浏览工具",
+      "description": "浏览 {toolCountLabel} 个免费开发者工具。JSON 格式化、编码、转换、哈希生成等工具。",
+      "ogTitle": "[REVIEW] 浏览工具 | utils.live"
+    },
+    "about": {
+      "title": "关于我们",
+      "ogTitle": "[REVIEW] 关于我们 | utils.live"
+    },
+    "contact": {
+      "title": "联系我们",
+      "ogTitle": "[REVIEW] 联系我们 | utils.live"
+    },
+    "blog": {
+      "title": "[REVIEW] 开发者工具博客 | utils.live"
+    }
+  },
+  "footer": {
+    "tagline": "免费、开源的开发者实用工具，用于编码、转换、格式化等。",
+    "sections": {
+      "product": "产品",
+      "company": "公司",
+      "community": "社区"
+    },
+    "links": {
+      "allTools": "所有工具",
+      "blog": "博客",
+      "about": "关于我们",
+      "contact": "联系我们",
+      "github": "GitHub",
+      "reportIssue": "报告问题"
+    }
+  },
+  "mobileNav": {
+    "openMenu": "打开菜单",
+    "searchLabel": "搜索工具",
+    "searchPlaceholder": "搜索工具...",
+    "title": "[REVIEW] utils.live"
+  },
+  "forms": {
+    "fileUpload": {
+      "defaultPlaceholder": "拖拽文件到此处或点击上传",
+      "accepted": "接受的格式: {types}",
+      "maxSize": "最大大小: {size}",
+      "filesCount": "{count, plural, one {# 个文件} other {# 个文件}}",
+      "clearAll": "全部清除",
+      "fileError": "错误",
+      "fileSuccess": "成功",
+      "removeFile": "移除 {filename}",
+      "uploadAriaLabel": "上传 {suffix}接受的类型: {accept}",
+      "failedToRead": "读取文件失败"
+    },
+    "keyValueEditor": {
+      "defaultKeyLabel": "键",
+      "defaultValueLabel": "值",
+      "defaultKeyPlaceholder": "输入键",
+      "defaultValuePlaceholder": "输入值",
+      "duplicateKey": "重复的键",
+      "addPair": "添加 {keyLabel}/{valueLabel}",
+      "removeAriaLabel": "移除第 {index} 对",
+      "keyAriaLabel": "{label} {index}",
+      "valueAriaLabel": "{label} {index}",
+      "pairsCount": "{current} / {max} 对"
+    },
+    "multiSelect": {
+      "defaultPlaceholder": "选择选项...",
+      "searchPlaceholder": "搜索...",
+      "noOptionsFound": "未找到选项。",
+      "selectedCount": "已选择 {count} 个",
+      "selectionCount": "已选择 {current} / {max} 个"
+    },
+    "tagInput": {
+      "defaultPlaceholder": "添加标签...",
+      "addMore": "添加更多...",
+      "tagsCount": "{current} / {max} 个标签"
+    },
+    "searchableSelect": {
+      "defaultPlaceholder": "选择一个选项...",
+      "searchPlaceholder": "搜索...",
+      "noOptionsFound": "未找到选项。"
+    },
+    "numberInput": {
+      "decreaseAriaLabel": "减小值",
+      "increaseAriaLabel": "增大值"
+    }
+  },
+  "header": {
+    "searchToolsPlaceholder": "搜索工具...",
+    "searchAriaLabel": "搜索工具",
+    "searchMobileAriaLabel": "搜索",
+    "githubAriaLabel": "在 GitHub 上查看"
+  },
+  "toolMeta": {
+    "json": {
+      "formatter": {
+        "name": "JSON 格式化工具",
+        "description": "免费在线 JSON 格式化工具 — 在浏览器中即时美化和格式化 JSON，支持可配置的缩进。无数据存储。支持 0-8 空格缩进和可选的键排序。"
+      },
+      "validator": {
+        "name": "JSON 验证工具",
+        "description": "免费在线 JSON 验证工具 — 在浏览器中即时检查 JSON 语法并获取详细的错误信息。无数据存储。报告错误的行列位置和检测到的 JSON 类型。"
+      },
+      "minify": {
+        "name": "JSON 压缩工具",
+        "description": "免费在线 JSON 压缩工具 — 在浏览器中即时压缩 JSON，移除所有空格和格式。无数据存储。显示原始大小与压缩后的大小对比和压缩百分比。"
+      },
+      "path-query": {
+        "name": "JSON 路径查询",
+        "description": "免费在线 JSON 路径查询工具 — 使用点号表示法和括号语法在浏览器中立即从 JSON 提取值。无数据存储。支持嵌套对象、数组和字符串键。"
+      },
+      "jmespath": {
+        "name": "JSON JMESPath",
+        "description": "免费在线 JMESPath 查询工具 — 在浏览器中使用 JMESPath 表达式立即过滤和转换 JSON。无数据存储。支持点号表示法、数组切片、投影和函数。"
+      },
+      "diff": {
+        "name": "JSON 差异对比",
+        "description": "免费在线 JSON 差异对比工具 — 比较两个 JSON 对象并在浏览器中立即显示添加、删除和更改的字段。无数据存储。报告带有 JSON 路径位置的差异。"
+      },
+      "sort-keys": {
+        "name": "JSON 排序键",
+        "description": "免费在线 JSON 键排序工具 — 在浏览器中按字母升序或降序立即排序对象键。无数据存储。支持嵌套对象的递归排序。"
+      },
+      "flatten": {
+        "name": "JSON 扁平化",
+        "description": "免费在线 JSON 扁平化工具 — 在浏览器中将嵌套 JSON 转换为具有点号表示法键的单级对象。无数据存储。可配置分隔符、最大深度和数组处理。"
+      },
+      "unflatten": {
+        "name": "JSON 反扁平化",
+        "description": "免费在线 JSON 反扁平化工具 — 在浏览器中从扁平点号表示法键重建嵌套对象。无数据存储。支持自定义分隔符和数组索引表示法。"
+      },
+      "escape": {
+        "name": "JSON 转义",
+        "description": "免费在线 JSON 转义工具 — 在浏览器中为 JSON 转义字符串中的特殊字符。无数据存储。处理引号、换行符、制表符、反斜杠和 Unicode 字符。"
+      },
+      "unescape": {
+        "name": "JSON 反转义",
+        "description": "免费在线 JSON 反转义工具 — 在浏览器中将转义字符转换回其字面形式。无数据存储。处理 \\n、\\t、\\\" 和其他 JSON 转义序列。"
+      },
+      "to-yaml": {
+        "name": "JSON 转 YAML",
+        "description": "免费在线 JSON 转 YAML 转换器 — 在浏览器中将 JSON 转换为 YAML 格式。无数据存储。可配置缩进、流样式级别、键排序和行宽。"
+      },
+      "to-xml": {
+        "name": "JSON 转 XML",
+        "description": "免费在线 JSON 转 XML 转换器 — 在浏览器中将 JSON 对象转换为 XML 格式。无数据存储。可配置根元素名称、数组节点名称和 XML 声明。"
+      },
+      "to-csv": {
+        "name": "JSON 转 CSV",
+        "description": "免费在线 JSON 转 CSV 转换器 — 在浏览器中将 JSON 对象数组转换为 CSV 格式。无数据存储。可配置分隔符、引用和标题行。"
+      },
+      "remove-nulls": {
+        "name": "JSON 移除空值",
+        "description": "免费在线 JSON 空值移除工具 — 在浏览器中从 JSON 对象和数组中删除空值。无数据存储。可选择移除空字符串、数组和对象。"
+      },
+      "merge": {
+        "name": "JSON 合并",
+        "description": "免费在线 JSON 合并工具 — 在您的浏览器中即时深度合并两个 JSON 对象，支持可配置的数组策略。无数据存储。支持替换、连接和唯一数组合并。"
+      },
+      "size-analyzer": {
+        "name": "JSON 大小分析器",
+        "description": "免费在线 JSON 大小分析器 — 在您的浏览器中即时测量 JSON 结构、嵌套深度和值类型分布。无数据存储。显示字节大小、键计数和最大条目。"
+      },
+      "tree-viewer": {
+        "name": "JSON 树形查看器",
+        "description": "免费在线 JSON 树形查看器 — 在您的浏览器中即时将 JSON 显示为带有类型和值的分层树。无数据存储。支持可配置的深度、类型标签和缩进。"
+      },
+      "json-schema-generator": {
+        "name": "JSON Schema 生成器",
+        "description": "免费在线 JSON Schema 生成器 — 在您的浏览器中即时从示例数据推断 JSON Schema，支持格式检测。无数据存储。检测电子邮件、URI、UUID、日期时间和 IP 格式。"
+      },
+      "json-schema-to-typescript": {
+        "name": "JSON Schema 转 TypeScript",
+        "description": "免费在线 JSON Schema 转 TypeScript 转换器 — 在您的浏览器中即时从 JSON Schema 定义生成 TypeScript 接口。无数据存储。处理引用、枚举、allOf/oneOf 和嵌套类型。"
+      },
+      "json-schema-validator-api": {
+        "name": "JSON Schema 验证器",
+        "description": "免费在线 JSON Schema 验证器 — 在您的浏览器中即时验证 JSON Schema 文档的结构。无数据存储。检查类型、格式、必填字段并检测草稿版本。"
+      },
+      "json-schema-validator-tool": {
+        "name": "JSON Schema 验证器",
+        "description": "免费在线 JSON 数据验证器 — 在您的浏览器中即时针对 JSON Schema 验证 JSON 数据，支持并排视图。无数据存储。检查类型、必填字段、模式和约束。"
+      },
+      "json-schema-faker": {
+        "name": "JSON Schema 数据生成器",
+        "description": "免费在线 JSON Schema 数据生成器 — 在您的浏览器中即时从 JSON Schema 定义生成真实的模拟数据。无数据存储。支持所有 JSON Schema 类型、格式、枚举和约束。"
+      },
+      "json-to-typescript": {
+        "name": "JSON 转 TypeScript",
+        "description": "免费在线 JSON 转 TypeScript 转换器 — 在您的浏览器中即时从 JSON 数据生成 TypeScript 接口。无数据存储。支持可选字段、只读、类型别名和嵌套接口。"
+      },
+      "json-to-go": {
+        "name": "JSON 转 Go",
+        "description": "免费在线 JSON 转 Go 转换器 — 在您的浏览器中即时从示例数据生成带有 JSON 标签的 Go 结构体。无数据存储。支持 omitempty、内联结构体和嵌套类型推断。"
+      },
+      "json-to-java": {
+        "name": "JSON 转 Java",
+        "description": "免费在线 JSON 转 Java 转换器 — 在您的浏览器中即时从 JSON 数据生成 Java POJO，支持 Jackson 和 Lombok。无数据存储。包括 getter/setter 和导入语句。"
+      },
+      "json-to-python": {
+        "name": "JSON 转 Python",
+        "description": "免费在线 JSON 转 Python 转换器 — 在您的浏览器中即时从 JSON 生成 Python 数据类、Pydantic 模型或 TypedDict。无数据存储。支持四种类样式和 Optional 类型。"
+      },
+      "json-to-rust": {
+        "name": "JSON 转 Rust",
+        "description": "免费在线 JSON 转 Rust 转换器 — 在您的浏览器中即时从 JSON 数据生成带有 serde 派生宏的 Rust 结构体。无数据存储。支持可配置的派生特征、pub 字段和 Option 类型。"
+      },
+      "json-to-csharp": {
+        "name": "JSON 转 C#",
+        "description": "免费在线 JSON 转 C# 转换器 — 在浏览器中从 JSON 数据即时生成 C# 类或记录类型。不存储任何数据。支持 JsonPropertyName 属性和可空引用类型。"
+      }
+    },
+    "yaml": {
+      "formatter": {
+        "name": "YAML 格式化器",
+        "description": "免费在线 YAML 格式化工具 — 在浏览器中即时美化和规范化 YAML 文件。不存储任何数据。支持可配置的缩进、键排序、行宽和流式风格控制。"
+      },
+      "to-json": {
+        "name": "YAML 转 JSON",
+        "description": "免费在线 YAML 转 JSON 转换器 — 粘贴 YAML 在浏览器中即时获得 JSON 输出。不存储任何数据。处理嵌套对象、数组、锚点和所有 YAML 数据类型，支持可配置缩进。"
+      },
+      "to-xml": {
+        "name": "YAML 转 XML",
+        "description": "免费在线 YAML 转 XML 转换器 — 粘贴 YAML 在浏览器中即时获得 XML 输出。不存储任何数据。支持可配置的根元素名称、数组节点命名、缩进和可选 XML 声明。"
+      },
+      "minify": {
+        "name": "YAML 压缩器",
+        "description": "免费在线 YAML 压缩工具 — 在浏览器中即时将 YAML 文档压缩为流式风格。不存储任何数据。将块式嵌套转换为内联大括号和方括号，减小文件大小。"
+      },
+      "diff": {
+        "name": "YAML 差异对比",
+        "description": "免费在线 YAML 差异对比工具 — 比较两个 YAML 文档并在浏览器中即时查看结构差异。不存储任何数据。按 JSON 路径显示添加、删除和更改的键，并提供汇总计数。"
+      },
+      "merge": {
+        "name": "YAML 合并",
+        "description": "免费在线 YAML 合并工具 — 在浏览器中即时合并两个 YAML 文档。不存储任何数据。支持深层和浅层合并策略，支持可配置的数组处理（替换、连接、唯一）。"
+      },
+      "path-query": {
+        "name": "YAML 路径查询",
+        "description": "免费在线 YAML 路径查询工具 — 使用点符号在浏览器中即时从 YAML 提取值。不存储任何数据。支持嵌套键、数组索引、带引号的键和 JSONPath 风格的 $ 前缀。"
+      },
+      "sort-keys": {
+        "name": "YAML 排序键",
+        "description": "免费在线 YAML 键排序工具 — 在浏览器中即时按字母顺序对 YAML 文档中的对象键进行排序。不存储任何数据。支持升序/降序、深递归排序和可配置缩进。"
+      },
+      "lint": {
+        "name": "YAML 检查器",
+        "description": "免费在线 YAML 检查工具 — 在浏览器中即时检查 YAML 语法错误和风格问题。不存储任何数据。检测制表符、尾部空格、不一致的缩进、长行和重复键。"
+      },
+      "splitter": {
+        "name": "YAML 分割器",
+        "description": "免费在线 YAML 分割工具 — 在浏览器中即时将多文档 YAML 文件分割成单个文档。不存储任何数据。处理 Kubernetes 清单、CI/CD 配置和任何带有 --- 分隔符的 YAML。"
+      }
+    },
+    "xml": {
+      "formatter": {
+        "name": "XML 格式化器",
+        "description": "免费在线 XML 格式化工具 — 在浏览器中即时美化和缩进 XML 文档。不存储任何数据。支持可配置的缩进、属性保留和元素顺序控制，适用于 pom.xml、web.xml 和其他 XML 配置。"
+      },
+      "validator": {
+        "name": "XML 验证器",
+        "description": "免费在线 XML 验证工具 — 在浏览器中即时检查 XML 文档的语法错误。不存储任何数据。报告错误位置、行号和列号，用于检测标签不匹配、未闭合的元素和格式错误的内容。"
+      },
+      "to-json": {
+        "name": "XML 转 JSON",
+        "description": "免费在线 XML 转 JSON 转换器 — 在浏览器中即时将 XML 文档转换为 JSON 对象。不存储任何数据。支持属性、命名空间、可配置的缩进和文本节点命名。"
+      },
+      "to-yaml": {
+        "name": "XML 转 YAML",
+        "description": "免费在线 XML 转 YAML 转换器 — 在浏览器中即时将 XML 文档转换为 YAML 格式。不存储任何数据。使用可配置的前缀保留属性，支持自定义缩进。"
+      },
+      "minify": {
+        "name": "XML 压缩",
+        "description": "免费在线 XML 压缩工具 — 在浏览器中即时从 XML 文档中删除空白、注释和缩进。不存储任何数据。显示原始大小与压缩大小对比和压缩率。"
+      },
+      "xpath": {
+        "name": "XML XPath 查询",
+        "description": "免费在线 XML XPath 查询工具 — 在浏览器中使用 XPath 类似表达式即时从 XML 文档中提取节点。不存储任何数据。支持绝对路径、递归搜索 (//) 和属性过滤器 ([@attr='value'])。"
+      },
+      "diff": {
+        "name": "XML 对比",
+        "description": "免费在线 XML 对比工具 — 在浏览器中即时比较两个 XML 文档并查找结构差异。不存储任何数据。检测已添加、已删除和已更改的元素、属性和文本节点，使用 XPath 风格的路径标识。"
+      },
+      "escape": {
+        "name": "XML 转义",
+        "description": "免费在线 XML 转义工具 — 在浏览器中即时将特殊字符转换为 XML 实体。不存储任何数据。转义和号、尖括号、引号和换行符，以安全用于 XML 内容和属性。"
+      },
+      "to-csv": {
+        "name": "XML 转 CSV",
+        "description": "免费在线 XML 转 CSV 转换器 — 在浏览器中即时从 XML 文档中提取表格数据。不存储任何数据。自动检测重复元素，支持自定义分隔符和 XPath 类似的行选择。"
+      }
+    },
+    "csv": {
+      "formatter": {
+        "name": "CSV 格式化工具",
+        "description": "免费在线 CSV 格式化工具 — 在浏览器中使用可配置的引号和分隔符即时规范化和重新格式化 CSV 数据。不存储任何数据。支持引号模式、值修剪、分隔符转换和输入格式自动检测。"
+      },
+      "validator": {
+        "name": "CSV 验证工具",
+        "description": "免费在线 CSV 验证工具 — 在浏览器中即时检查 CSV 结构、列一致性和语法错误。不存储任何数据。检测列数不匹配、格式错误的字段，并报告行级错误详情。"
+      },
+      "to-json": {
+        "name": "CSV 转 JSON",
+        "description": "免费在线 CSV 转 JSON 转换器 — 在浏览器中即时将 CSV 数据转换为 JSON 对象数组。不存储任何数据。自动检测数字和布尔值，支持自定义分隔符和可配置的缩进。"
+      },
+      "to-yaml": {
+        "name": "CSV 转 YAML",
+        "description": "免费在线 CSV 转 YAML 转换器 — 在浏览器中即时将 CSV 数据转换为 YAML 对象数组。不存储任何数据。自动检测数字和布尔值，支持自定义缩进和分隔符。"
+      },
+      "to-xml": {
+        "name": "CSV 转 XML",
+        "description": "免费在线 CSV 转 XML 转换器 — 在浏览器中即时使用可配置的根元素和行元素名称将 CSV 行转换为 XML 元素。不存储任何数据。支持自定义缩进、XML 声明和动态类型检测。"
+      },
+      "diff": {
+        "name": "CSV 对比",
+        "description": "免费在线 CSV 对比工具 — 比较两个 CSV 文件并在浏览器中即时显示行级差异。无数据存储。支持关键列匹配、表头变更检测、已添加/已删除/已修改行跟踪和自定义分隔符。"
+      },
+      "merge": {
+        "name": "CSV 合并",
+        "description": "免费在线 CSV 合并工具 — 在浏览器中即时将两个 CSV 文件合并为一个。无数据存储。支持追加、联合（不同列）和连接策略，可选重复数据删除。"
+      },
+      "filter": {
+        "name": "CSV 筛选",
+        "description": "免费在线 CSV 筛选工具 — 在浏览器中按列条件即时筛选行。无数据存储。支持比较运算符（==、!=、>、<、>=、<=）、字符串匹配（包含、开头为、结尾为）和自定义分隔符。"
+      },
+      "sort": {
+        "name": "CSV 排序",
+        "description": "免费在线 CSV 排序工具 — 在浏览器中按任何列即时排序行。无数据存储。支持升序/降序、数值排序、不区分大小写的比较和自定义分隔符。"
+      },
+      "stats": {
+        "name": "CSV 统计",
+        "description": "免费在线 CSV 统计计算器 — 在浏览器中即时分析列类型、最小/最大值、平均值、中位数和唯一值计数。无数据存储。自动检测数值列与字符串列，计算每列摘要统计。"
+      },
+      "viewer": {
+        "name": "CSV 查看器",
+        "description": "免费在线 CSV 查看工具 — 在浏览器中即时将 CSV 数据显示为格式化对齐表格。无数据存储。支持行号、列对齐、行限制和自定义分隔符。"
+      },
+      "to-sql": {
+        "name": "CSV 转 SQL",
+        "description": "免费在线 CSV 转 SQL 转换器 — 在浏览器中从 CSV 数据即时生成 CREATE TABLE 和 INSERT 语句。无数据存储。自动检测列类型（INTEGER、REAL、VARCHAR、TEXT），支持批量插入和自定义表名。"
+      },
+      "column-extractor": {
+        "name": "CSV 列提取器",
+        "description": "免费在线 CSV 列提取工具 — 在浏览器中按名称或索引即时从 CSV 数据中提取特定列。无数据存储。支持逗号分隔的列列表、不区分大小写的匹配、自定义分隔符和带引号的字段。"
+      },
+      "deduplicator": {
+        "name": "CSV 去重",
+        "description": "免费在线 CSV 去重工具 — 在浏览器中即时从 CSV 数据中删除重复行。无数据存储。支持关键列匹配、保留第一行或保留最后一行策略、自定义分隔符和带引号的字段。"
+      },
+      "to-tsv": {
+        "name": "CSV 转 TSV",
+        "description": "免费在线 CSV 转 TSV 转换器 — 在浏览器中即时将逗号分隔值转换为制表符分隔值。无数据存储。通过转义、删除或空格替换模式处理嵌入制表符。"
+      },
+      "to-markdown": {
+        "name": "CSV 转 Markdown",
+        "description": "免费在线 CSV 转 Markdown 表格转换器 — 在浏览器中即时将 CSV 数据转换为格式化 Markdown 表格。无数据存储。支持左对齐/居中/右对齐/自动对齐、填充列和自定义分隔符。"
+      }
+    },
+    "toml": {
+      "formatter": {
+        "name": "TOML 格式化",
+        "description": "免费在线 TOML 格式化工具 — 粘贴杂乱的 TOML 并在浏览器中即时获得清晰的规范化输出。无数据存储。展开内联表、规范化间距并验证语法。"
+      },
+      "validator": {
+        "name": "TOML 验证",
+        "description": "免费在线 TOML 验证器——在浏览器中即时检查 TOML 语法错误。无数据存储。报告错误位置的行号和列号，方便快速调试。"
+      },
+      "to-json": {
+        "name": "TOML 转 JSON",
+        "description": "免费在线 TOML 转 JSON 转换器——粘贴 TOML 配置文件，在浏览器中即时获得 JSON 输出。无数据存储。支持嵌套表、数组、内联表和所有 TOML 数据类型。"
+      },
+      "to-yaml": {
+        "name": "TOML 转 YAML",
+        "description": "免费在线 TOML 转 YAML 转换器——粘贴 TOML 配置文件，在浏览器中即时获得 YAML 输出。无数据存储。支持嵌套表、表数组和内联表，自动处理缩进。"
+      }
+    },
+    "data": {
+      "ini-formatter": {
+        "name": "INI 格式化工具",
+        "description": "免费在线 INI 格式化工具——在浏览器中即时格式化和美化 INI 配置文件。无数据存储。规范化分段间距、对齐键值对，处理嵌套分段组。"
+      },
+      "ini-validator": {
+        "name": "INI 验证器",
+        "description": "免费在线 INI 验证器——在浏览器中即时验证 INI 配置语法。无数据存储。检查重复分段、重复键、未闭合标头、空键名，提供详细警告。"
+      },
+      "ini-to-json": {
+        "name": "INI 转 JSON",
+        "description": "免费在线 INI 转 JSON 转换器——在浏览器中即时将 INI 配置文件转换为 JSON 格式。无数据存储。解析分段、键值对和嵌套组为结构化 JSON 输出。"
+      },
+      "json-to-toml": {
+        "name": "JSON 转 TOML",
+        "description": "免费在线 JSON 转 TOML 转换器——在浏览器中即时将 JSON 对象转换为 TOML 配置格式。无数据存储。将嵌套 JSON 对象映射到 TOML 表、数组和内联表。"
+      },
+      "json-to-ini": {
+        "name": "JSON 转 INI",
+        "description": "免费在线 JSON 转 INI 转换器——在浏览器中即时将 JSON 对象转换为 INI 配置格式。无数据存储。将嵌套 JSON 对象映射到带键值对的 INI 分段。"
+      },
+      "jsonc-stripper": {
+        "name": "JSONC 注释移除器",
+        "description": "免费在线 JSONC 注释移除工具——从 JSON with Comments (JSONC) 中移除注释以获得有效 JSON，在浏览器中即时处理。无数据存储。移除单行 (//) 和多行 (/* */) 注释，以及尾部逗号。"
+      },
+      "messagepack-viewer": {
+        "name": "MessagePack 查看器",
+        "description": "免费在线 MessagePack 查看器——在浏览器中即时解码和查看 MessagePack 二进制数据。无数据存储。解码 base64 编码的 msgpack 为 JSON，提供十六进制转储、格式类型识别和字节长度。"
+      },
+      "protobuf-viewer": {
+        "name": "Protobuf 查看器",
+        "description": "免费在线 Protobuf 查看器——在浏览器中即时解码和查看 Protocol Buffer 二进制线格式数据。无数据存储。解析字段标签、线类型（varint、length-delimited、fixed32/64），显示可能的值解释。"
+      },
+      "avro-viewer": {
+        "name": "Avro 查看器",
+        "description": "免费在线 Avro 查看器——在浏览器中即时查看 base64 编码的 Avro 二进制数据。无数据存储。检测对象容器文件、解析标头、模式、同步标记和数据块，提供十六进制预览。"
+      },
+      "ndjson-parser": {
+        "name": "NDJSON 解析器",
+        "description": "免费在线 NDJSON 解析器——在浏览器中即时将换行符分隔的 JSON (JSONL) 转换为 JSON 数组。无数据存储。将每行解析为独立 JSON 值，可选择跳过空行或无效行。"
+      },
+      "json-to-ndjson": {
+        "name": "JSON 转 NDJSON",
+        "description": "免费在线 JSON 转 NDJSON 转换器 — 在浏览器中即时将 JSON 数组转换为换行分隔的 JSON (JSONL) 格式。无数据存储。每行输出一个 JSON 对象，适用于流式处理、日志和大数据管道。"
+      },
+      "hjson-to-json": {
+        "name": "HJSON 转 JSON",
+        "description": "免费在线 HJSON 转 JSON 转换器 — 在浏览器中即时将 Human JSON 转换为标准 JSON。无数据存储。移除注释 (// /* #)，处理尾随逗号、不带引号的键和多行字符串。"
+      },
+      "json5-to-json": {
+        "name": "JSON5 转 JSON",
+        "description": "免费在线 JSON5 转 JSON 转换器 — 在浏览器中即时将 JSON5 转换为标准 JSON。无数据存储。移除注释 (// /*)，处理尾随逗号、不带引号的键、单引号字符串和十六进制数字。"
+      },
+      "avro-schema-formatter": {
+        "name": "Avro Schema 格式化工具",
+        "description": "免费在线 Avro schema 格式化工具 — 在浏览器中即时对 Apache Avro schema JSON 进行美化和验证。无数据存储。验证 Avro 类型 (record、enum、array、map、fixed) 并格式化嵌套字段定义，提供适当缩进。"
+      },
+      "protobuf-editor": {
+        "name": "Protobuf 编辑器",
+        "description": "免费在线 Protobuf 编辑器 — 在浏览器中即时格式化和缩进 Protocol Buffer .proto 文件。无数据存储。自动缩进 message、service、enum 和 oneof 代码块，使用一致的 2 空格缩进。"
+      }
+    },
+    "encoding": {
+      "base64-encode": {
+        "name": "Base64 编码",
+        "description": "免费在线 Base64 编码器 — 在浏览器中即时将文本转换为 Base64 格式。无数据存储。支持 UTF-8 文本、可选的 URL 安全编码，处理多字节字符。"
+      },
+      "base64-decode": {
+        "name": "Base64 解码",
+        "description": "免费在线 Base64 解码器 — 在浏览器中即时将 Base64 编码的字符串转换回纯文本。无数据存储。支持标准和 URL 安全的 Base64，处理填充，解码 UTF-8 多字节字符。"
+      },
+      "base64url-encode": {
+        "name": "Base64URL 编码",
+        "description": "免费在线 Base64URL 编码器 — 在浏览器中即时将文本编码为 URL 安全的 Base64 格式。无数据存储。生成 RFC 4648 输出，使用 -_ 代替 +/，无填充，适用于 JWT 和 URL 参数。"
+      },
+      "base64url-decode": {
+        "name": "Base64URL 解码",
+        "description": "免费在线 Base64URL 解码器 — 在浏览器中即时将 URL 安全的 Base64 编码字符串解码回文本。无数据存储。处理 RFC 4648 格式的 -_ 字符和缺失的填充。"
+      },
+      "base32-encode-decode": {
+        "name": "Base32 编码/解码",
+        "description": "免费在线 Base32 编码/解码器 — 在浏览器中即时将文本编码为 Base32 或将 Base32 解码回文本。无数据存储。支持 RFC 4648 标准，可选填充字符。"
+      },
+      "base58-encode-decode": {
+        "name": "Base58 编码/解码",
+        "description": "免费在线 Base58 编码/解码器 — 在浏览器中即时使用 Bitcoin 风格的 Base58 编码进行编码或解码。无数据存储。使用标准 Bitcoin 字母表，处理前导零字节，支持加密货币地址格式。"
+      },
+      "base62-encode-decode": {
+        "name": "Base62 编码/解码",
+        "description": "免费在线 Base62 编码/解码器 — 在浏览器中即时使用 Base62 字母数字编码进行编码或解码。无数据存储。仅使用 0-9、A-Z 和 a-z 字符生成 URL 安全输出。"
+      },
+      "hex-encode": {
+        "name": "十六进制编码",
+        "description": "免费在线十六进制编码器 — 在浏览器中即时将文本转换为十六进制字节表示。无数据存储。支持大写/小写输出和可自定义的字节分隔符（空格、冒号、破折号）。"
+      },
+      "hex-decode": {
+        "name": "十六进制解码",
+        "description": "免费在线十六进制解码器 — 在浏览器中即时将十六进制字符串转换回可读文本。无数据存储。处理 0x 前缀、冒号/破折号/空格分隔符和混合大小写十六进制输入。"
+      },
+      "binary-to-text": {
+        "name": "二进制转文本",
+        "description": "免费在线二进制转文本转换器 — 在浏览器中即时将二进制 0 和 1 字符串解码回可读的 ASCII/UTF-8 文本。无数据存储。接受空格分隔、逗号分隔或连续二进制输入。"
+      },
+      "text-to-binary": {
+        "name": "文本转二进制",
+        "description": "免费在线文本转二进制转换器 — 在浏览器中即时将 ASCII/UTF-8 文本转换为二进制 0 和 1。无数据存储。每字节输出 8 位二进制，字节间可自定义分隔符。"
+      },
+      "octal-converter": {
+        "name": "八进制转换器",
+        "description": "免费在线八进制转换器 — 在浏览器中即时将文本编码为八进制字节值或将八进制解码回文本。无数据存储。支持可自定义的分隔符并处理 UTF-8 多字节字符。"
+      },
+      "url-encode": {
+        "name": "URL 编码",
+        "description": "免费在线 URL 编码器 — 在浏览器中即时使用标准 encodeURIComponent 编码进行百分号编码。无数据存储。编码特殊字符、空格、Unicode 和保留 URL 字符，同时保留安全的 ASCII 字符。"
+      },
+      "url-decode": {
+        "name": "URL 解码",
+        "description": "免费在线 URL 解码器 — 在浏览器中即时将百分号编码（URL 编码）字符串解码回可读文本。无数据存储。处理 %XX 十六进制序列、UTF-8 多字节字符和嵌套编码。"
+      },
+      "url-encode-full": {
+        "name": "URL 编码（完整）",
+        "description": "免费在线完整 URL 编码器 — 在浏览器中即时对所有字符（包括安全 ASCII 字符）进行百分号编码。无数据存储。将所有字节编码为 %XX 格式，适用于混淆或严格编码需求。"
+      },
+      "url-parser": {
+        "name": "URL 解析器",
+        "description": "免费在线 URL 解析器 — 在浏览器中即时将 URL 分解为协议、主机、路径、查询参数和哈希组件。无数据存储。处理复杂 URL，包括身份验证、端口和编码字符。"
+      },
+      "url-builder": {
+        "name": "URL 构建器",
+        "description": "免费在线 URL 构建器 — 在浏览器中即时从协议、主机、路径、查询和哈希等单个组件构建 URL。无数据存储。验证生成的 URL 并处理端口号、查询字符串和片段标识符。"
+      },
+      "query-string-parser": {
+        "name": "查询字符串解析器",
+        "description": "免费在线查询字符串解析器 — 在浏览器中即时将 URL 查询字符串分解为单个键值对。无数据存储。处理前导 ? 前缀、完整 URL 和百分号编码参数。"
+      },
+      "query-string-builder": {
+        "name": "查询字符串构建器",
+        "description": "免费在线查询字符串构建器 — 在浏览器中即时从键值对构建 URL 查询字符串。无数据存储。接受 key=value 或 key: value 格式，支持 URL 编码，并添加可选的前导 ? 前缀。"
+      },
+      "data-url-builder": {
+        "name": "数据 URL 构建器",
+        "description": "免费在线数据 URL 构建器 — 在浏览器中即时从文本内容创建数据 URI。无数据存储。支持可自定义的 MIME 类型、Base64 或 UTF-8 编码，以及用于嵌入内联资源的可配置字符集。"
+      },
+      "unicode-escape": {
+        "name": "Unicode 转义",
+        "description": "免费在线 Unicode 转义工具 — 在浏览器中即时将文本转换为 \\uXXXX Unicode 转义符号。无数据存储。支持 BMP (\\uXXXX) 和补充平面 (\\u{XXXXXX}) 格式，可选完整字符转义。"
+      },
+      "unicode-unescape": {
+        "name": "Unicode 反转义",
+        "description": "免费在线 Unicode 反转义工具 — 在浏览器中即时解码 \\uXXXX 和 \\u{XXXXXX} Unicode 转义序列为可读文本。无数据存储。支持 BMP 和补充平面字符。"
+      },
+      "html-entity-encode": {
+        "name": "HTML 实体编码",
+        "description": "免费在线 HTML 实体编码工具 — 在浏览器中即时将文本编码为 HTML 实体。无数据存储。支持命名 (&amp;)、数字 (&#38;) 和十六进制 (&#x26;) 格式，可选完整字符编码用于 XSS 防护。"
+      },
+      "html-entity-decode": {
+        "name": "HTML 实体解码",
+        "description": "免费在线 HTML 实体解码工具 — 在浏览器中即时将 HTML 实体转换为可读文本。无数据存储。支持命名实体 (&amp;)、数字 (&#38;) 和十六进制 (&#x26;) 格式，包括特殊符号和货币字符。"
+      },
+      "js-escape": {
+        "name": "JavaScript 转义",
+        "description": "免费在线 JavaScript 字符串转义工具 — 在浏览器中即时转义文本以安全用于 JavaScript 字符串字面量。无数据存储。处理引号、反斜杠、换行符、制表符、控制字符和 Unicode。"
+      },
+      "js-unescape": {
+        "name": "JavaScript 反转义",
+        "description": "免费在线 JavaScript 字符串反转义工具 — 在浏览器中即时将 JavaScript 转义序列转换为可读文本。无数据存储。处理 \\n、\\t、\\uXXXX、\\u{XXXXXX}、\\xHH 和所有标准 JS 转义序列。"
+      },
+      "json-escape": {
+        "name": "JSON 转义",
+        "description": "免费在线 JSON 字符串转义工具 — 在浏览器中即时转义文本以安全嵌入 JSON 字符串。无数据存储。根据 JSON 规范正确转义引号、反斜杠、换行符、制表符和控制字符。"
+      },
+      "json-unescape": {
+        "name": "JSON 反转义",
+        "description": "免费在线 JSON 字符串反转义工具 — 在浏览器中即时将 JSON 转义序列转换为可读文本。无数据存储。处理 \\n、\\t、\\\"、\\\\和 Unicode 转义序列。"
+      },
+      "punycode-encode": {
+        "name": "Punycode 编码",
+        "description": "免费在线 Punycode 编码工具 — 在浏览器中即时将 Unicode 域名和文本转换为 Punycode (IDN) 编码。无数据存储。根据 RFC 3492 为包含非 ASCII 字符的标签添加 xn-- 前缀。"
+      },
+      "punycode-decode": {
+        "name": "Punycode 解码",
+        "description": "免费在线 Punycode 解码工具 — 在浏览器中即时将 Punycode 编码的国际化域名 (IDN) 转换为 Unicode 文本。无数据存储。根据 RFC 3492 处理 xn-- 前缀标签和完整域名。"
+      },
+      "utf8-to-utf16": {
+        "name": "UTF-8 转 UTF-16",
+        "description": "免费在线 UTF-8 转 UTF-16 转换工具 — 在浏览器中即时比较任何文本的 UTF-8 字节和 UTF-16 代码单元。无数据存储。显示每个字符的字节分解、补充平面字符的代理对和编码大小比较。"
+      },
+      "utf16-to-utf8": {
+        "name": "UTF-16 转 UTF-8",
+        "description": "免费在线 UTF-16 转 UTF-8 转换工具 — 在浏览器中即时比较任何文本的 UTF-16 代码单元和 UTF-8 字节。无数据存储。显示十六进制值、字节计数和 UTF-16 与 UTF-8 编码的大小比较。"
+      },
+      "latin1-converter": {
+        "name": "Latin-1 转换工具",
+        "description": "免费在线Latin-1转换器——在浏览器中即时将文本转换为ISO-8859-1字节值或将字节值转换回文本。不存储任何数据。显示十六进制和十进制字节值,并标记超出Latin-1范围(0-255)的字符。"
+      },
+      "ascii-table": {
+        "name": "ASCII表",
+        "description": "免费在线ASCII表生成器——在浏览器中即时查看ASCII字符代码及其十进制、十六进制、八进制和二进制值。不存储任何数据。支持可打印字符、控制字符、完整范围(0-127)和扩展范围(0-255),可按表格或紧凑格式显示。"
+      },
+      "unicode-lookup": {
+        "name": "Unicode查询",
+        "description": "免费在线Unicode查询——在浏览器中即时通过代码点、十六进制值、十进制或字符搜索Unicode字符。不存储任何数据。显示区块分类、UTF-8/UTF-16编码详情及HTML/CSS/JavaScript转义格式。"
+      },
+      "character-inspector": {
+        "name": "字符检查器",
+        "description": "免费在线字符检查器——在浏览器中即时检查每个字符的Unicode代码点、UTF-8字节和类型分类。不存储任何数据。检测控制字符、零宽字符、表情符号,并显示详细的字节级信息。"
+      },
+      "charset-detector": {
+        "name": "字符集检测器",
+        "description": "免费在线字符集检测器——在浏览器中即时分析文本编码特性和兼容性。不存储任何数据。报告ASCII、Latin-1、BMP和补充字符分布,以及UTF-8/UTF-16/UTF-32大小估计。"
+      },
+      "bom-remover": {
+        "name": "BOM移除器",
+        "description": "免费在线BOM移除器——在浏览器中即时从文本中删除字节顺序标记(BOM)字符。不存储任何数据。检测并移除UTF-8、UTF-16 BE和UTF-16 LE的BOM标记(包括文本开头和中间位置)。"
+      },
+      "any-base-converter": {
+        "name": "任意进制转换器",
+        "description": "免费在线任意进制数字转换器——在浏览器中即时在任意进制(2-36)之间转换数字。不存储任何数据。支持十进制、十六进制、二进制、八进制及任意进制(最高36进制)。"
+      },
+      "morse-code": {
+        "name": "莫尔斯电码",
+        "description": "免费在线莫尔斯电码转换器——在浏览器中即时将文本转换为莫尔斯电码点和划号。不存储任何数据。支持所有字母A-Z、数字0-9及常见标点符号。"
+      },
+      "nato-alphabet": {
+        "name": "北约字母",
+        "description": "免费在线北约音标字母转换器——在浏览器中即时使用北约/国际民航组织音标字母拼写文本。不存储任何数据。将字母A-Z和数字0-9转换为其标准音标代称。"
+      }
+    },
+    "text": {
+      "case-converter": {
+        "name": "大小写转换器",
+        "description": "免费在线大小写转换器——在浏览器中即时在camelCase、PascalCase、snake_case、kebab-case等格式之间转换文本。不存储任何数据。支持11种格式,包括CONSTANT_CASE、dot.case和path/case。"
+      },
+      "slugify": {
+        "name": "Slugify",
+        "description": "免费在线Slugify工具——在浏览器中即时将文本转换为URL友好的缩略字符串。不存储任何数据。支持自定义分隔符、Unicode/重音处理和特殊字符严格模式。"
+      },
+      "reverser": {
+        "name": "文本反转器",
+        "description": "免费在线文本反转器——在浏览器中即时反转字符、单词顺序或行顺序。不存储任何数据。同时输出三种反转模式,具有完整的Unicode支持。"
+      },
+      "line-sorter": {
+        "name": "行排序器",
+        "description": "免费在线行排序器——在浏览器中即时按字母、数字、自然或长度对文本行进行排序。不存储任何数据。支持升序/降序、区分大小写和空行过滤。"
+      },
+      "line-deduplicator": {
+        "name": "行去重工具",
+        "description": "免费在线行去重工具 — 在浏览器中即时删除文本中的重复行。无数据存储。支持区分大小写匹配、空白符修剪和顺序保留。"
+      },
+      "line-shuffler": {
+        "name": "行随机排序工具",
+        "description": "免费在线行随机排序工具 — 在浏览器中即时随机重新排列文本行。无数据存储。使用 Fisher-Yates 洗牌算法，支持忽略空行。"
+      },
+      "line-numberer": {
+        "name": "行号添加工具",
+        "description": "免费在线行号添加工具 — 在浏览器中即时为文本添加序列行号。无数据存储。支持可配置的起始数字、分隔符、填充宽度和空行处理。"
+      },
+      "empty-line-remover": {
+        "name": "空行删除工具",
+        "description": "免费在线空行删除工具 — 在浏览器中即时从文本中移除空行。无数据存储。支持仅空白符行和控制最大连续空行数。"
+      },
+      "whitespace-cleaner": {
+        "name": "空白符清理工具",
+        "description": "免费在线空白符清理工具 — 在浏览器中即时规范化文本中的空格、制表符和换行符。无数据存储。将多个空格转换为单个空格、制表符转换为空格、修剪行和规范化换行符。"
+      },
+      "trimmer": {
+        "name": "文本修剪工具",
+        "description": "免费在线文本修剪工具 — 在浏览器中即时删除文本的前导和尾随空白符。无数据存储。支持起始/结束/两端修剪、逐行模式和自定义修剪字符。"
+      },
+      "find-replace": {
+        "name": "查找和替换",
+        "description": "免费在线查找和替换 — 在浏览器中即时使用字面或正则表达式模式搜索和替换文本。无数据存储。支持区分大小写、整词和正则表达式驱动的替换。"
+      },
+      "wrapper": {
+        "name": "文本换行工具",
+        "description": "免费在线文本换行工具 — 在浏览器中即时按指定列宽换行文本。无数据存储。支持可配置的行宽（10-200）、断词模式和段落保留。"
+      },
+      "prefix-suffix-adder": {
+        "name": "前缀/后缀添加工具",
+        "description": "免费在线前缀/后缀添加工具 — 在浏览器中即时为每行添加前缀或后缀。无数据存储。支持自定义前缀和后缀字符串、跳过空行和行修剪。"
+      },
+      "column-aligner": {
+        "name": "列对齐工具",
+        "description": "免费在线列对齐工具 — 在浏览器中即时将分隔符文本对齐为均匀间距的列。无数据存储。支持自定义分隔符、左/右/中心对齐和可调填充。"
+      },
+      "truncator": {
+        "name": "文本截断工具",
+        "description": "免费在线文本截断工具 — 在浏览器中即时将文本缩短至最大长度并添加省略号。无数据存储。支持保留单词边界和起始/中间/结束截断位置。"
+      },
+      "palindrome-checker": {
+        "name": "回文检查工具",
+        "description": "免费在线回文检查工具 — 在浏览器中即时验证文本是否正反读相同。无数据存储。支持忽略大小写、空格、标点符号和数字。"
+      },
+      "rot13-encoder": {
+        "name": "ROT13 编码器",
+        "description": "免费在线 ROT13 编码器/解码器 — 在浏览器中即时对文本应用 ROT13 替换密码。无数据存储。编码和解码使用相同操作，因为 ROT13 是自身的反函数。"
+      },
+      "reading-time": {
+        "name": "阅读时间",
+        "description": "免费在线阅读时间估算器 — 在浏览器中即时计算任何文本的阅读时长。无数据存储。支持可配置的每分钟字数速度和图像数量调整。"
+      },
+      "word-frequency": {
+        "name": "词频统计",
+        "description": "免费在线词频计数器 — 在浏览器中即时统计文本中的单词出现次数和百分比。无数据存储。支持区分大小写、最小单词长度、停用词排除和可配置的结果限制。"
+      },
+      "statistics": {
+        "name": "文本统计",
+        "description": "免费在线文本统计分析器 — 在浏览器中即时统计字符、单词、句子、段落等信息。无数据存储。包含词汇丰富度、单词长度分布和音节平均值。"
+      },
+      "readability-score": {
+        "name": "可读性评分",
+        "description": "免费在线可读性评分计算器 — 在浏览器中即时计算 Flesch-Kincaid、Gunning Fog、Coleman-Liau、SMOG 和 ARI 评分。无数据存储。提供年级水平、阅读难度和单词/句子/音节统计。"
+      },
+      "letter-frequency": {
+        "name": "字母频率",
+        "description": "免费在线字母频率分析器 — 在浏览器中即时统计文本中的字母出现次数和百分比。无数据存储。显示最常见/最不常见的字母、元音/辅音计数和区分大小写模式。"
+      },
+      "ngram-generator": {
+        "name": "N-gram 生成器",
+        "description": "免费在线 n-gram 生成器 — 在浏览器中即时创建带频率计数的单词或字符 n-gram。无数据存储。支持可配置的 n-gram 大小（1-5）、单词或字符模式和结果限制。"
+      },
+      "diff": {
+        "name": "文本对比",
+        "description": "免费在线文本对比工具 — 在浏览器中即时比较两个文本并高亮单词级差异。无数据存储。支持忽略空白和不区分大小写的比较模式。"
+      },
+      "similarity-score": {
+        "name": "相似度评分",
+        "description": "免费在线文本相似度计算器 — 在浏览器中即时使用 Levenshtein、Jaccard、余弦和 Dice 算法比较两个文本。无数据存储。返回距离、相似度百分比和加权综合评分。"
+      },
+      "plagiarism-highlighter": {
+        "name": "文本重叠查找器",
+        "description": "免费在线文本重叠查找器 — 在浏览器中即时检测和高亮两个文本之间的匹配段落。无数据存储。查找公共子字符串，支持可配置的最小匹配长度和大小写敏感性。"
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum",
+        "description": "免费在线 Lorem Ipsum 生成器 — 在浏览器中即时生成单词、句子或段落的占位符文本。无数据存储。支持可配置的数量、单位类型和可选的经典开头。"
+      },
+      "email-extractor": {
+        "name": "邮箱提取器",
+        "description": "免费在线邮箱提取器 — 在浏览器中即时从任何文本中查找和提取电子邮件地址。无数据存储。返回唯一邮箱、域名和计数，支持可选去重。"
+      },
+      "url-extractor": {
+        "name": "URL 提取器",
+        "description": "免费在线 URL 提取器 — 在浏览器中即时从文本中查找和提取所有网络链接。无数据存储。检测 HTTP/HTTPS URL 和 www 地址，返回唯一 URL、域名和协议。"
+      },
+      "phone-extractor": {
+        "name": "电话号码提取器",
+        "description": "免费在线电话号码提取器 — 在浏览器中即时查找和提取文本中的电话号码。无数据存储。识别美国、国际和纯数字格式，支持可选的规范化。"
+      },
+      "ip-extractor": {
+        "name": "IP 地址提取器",
+        "description": "免费在线 IP 地址提取器 — 在浏览器中即时查找和提取文本中的 IPv4 和 IPv6 地址。无数据存储。返回唯一 IP、计数，并区分 IPv4 和 IPv6。"
+      },
+      "hashtag-extractor": {
+        "name": "话题标签提取器",
+        "description": "免费在线话题标签提取器 — 在浏览器中即时查找和提取社交媒体文本中的话题标签。无数据存储。返回唯一标签、去除 # 的标签和总计数。"
+      },
+      "mention-extractor": {
+        "name": "@提及提取器",
+        "description": "免费在线@提及提取器 — 在浏览器中即时查找和提取社交媒体文本中的@提及。无数据存储。返回唯一提及、去除@的用户名和总计数。"
+      },
+      "number-extractor": {
+        "name": "数字提取器",
+        "description": "免费在线数字提取器 — 在浏览器中即时查找和提取文本中的所有数值。无数据存储。支持整数、小数、负数和百分比，包含求和、平均值、最小值和最大值。"
+      },
+      "date-extractor": {
+        "name": "日期提取器",
+        "description": "免费在线日期提取器 — 在浏览器中即时查找和解析任何文本中的日期。无数据存储。识别 ISO、美国、欧洲、书写和相对日期格式。"
+      },
+      "keyword-extractor": {
+        "name": "关键词提取器",
+        "description": "免费在线关键词提取器 — 在浏览器中使用频率评分即时识别文本中的重要关键词。无数据存储。支持可配置的停用词过滤、最小字长和结果限制。"
+      },
+      "language-detector": {
+        "name": "语言检测器",
+        "description": "免费在线语言检测器 — 在浏览器中使用三元组分析即时识别任何文本的语言。无数据存储。支持英语、西班牙语、法语、德语、意大利语、葡萄牙语、荷兰语、俄语、中文和日语。"
+      },
+      "anagram-generator": {
+        "name": "字母洗牌器",
+        "description": "免费在线字母洗牌器 — 在浏览器中即时随机重排单词或短语中的字母。无数据存储。生成排列组合，支持可配置的限制和最小长度。"
+      },
+      "semantic-diff": {
+        "name": "单词重叠对比",
+        "description": "免费在线单词重叠对比 — 在浏览器中使用 Jaccard 相似度即时比较两个文本的词汇重叠。无数据存储。显示常用词、每个文本的独有词和相似度百分比。"
+      },
+      "fake-name": {
+        "name": "虚假名称生成器",
+        "description": "免费在线虚假名称生成器 — 在浏览器中即时创建用于测试的随机名称和电子邮件。无数据存储。批量生成名字、姓氏、全名和电子邮件地址。"
+      },
+      "fake-address": {
+        "name": "虚假地址生成器",
+        "description": "免费在线虚假地址生成器 — 在浏览器中即时创建用于测试的随机美国地址。无数据存储。生成街道、城市、州和邮编组合。"
+      },
+      "fake-company": {
+        "name": "虚假公司生成器",
+        "description": "免费在线虚拟公司生成器 — 即时创建随机公司名称、行业和标语，在浏览器中进行测试。无数据存储。生成名称、行业和广告语。"
+      },
+      "soundex-generator": {
+        "name": "Soundex 生成器",
+        "description": "免费在线 Soundex 生成器 — 在浏览器中即时计算单词的 Soundex 音标代码。无数据存储。用于匹配发音相似的名称和音标搜索。"
+      },
+      "metaphone-generator": {
+        "name": "Metaphone 生成器",
+        "description": "免费在线 Metaphone 生成器 — 在浏览器中即时计算单词的 Metaphone 音标代码。无数据存储。用于模糊名称匹配和音标搜索索引。"
+      }
+    },
+    "markdown": {
+      "to-html": {
+        "name": "Markdown 转 HTML",
+        "description": "免费在线 Markdown 转 HTML 转换器 — 在浏览器中即时将 Markdown 渲染为已清理的 HTML，支持 GitHub Flavored Markdown。无数据存储。支持 GFM 表格、任务列表、删除线、自动链接和可选的换行符转换。"
+      },
+      "from-html": {
+        "name": "HTML 转 Markdown",
+        "description": "免费在线 HTML 转 Markdown 转换器 — 在浏览器中即时将 HTML 标签、列表、链接和代码块转换为 Markdown。无数据存储。支持 ATX/setext 标题样式、可配置的项目符号、分隔符和缩进代码块。"
+      },
+      "formatter": {
+        "name": "Markdown 格式化工具",
+        "description": "免费在线 Markdown 格式化工具 — 在浏览器中即时美化和规范化 Markdown，包括一致的间距、正确的标题结构和去除多余空白。无数据存储。确保标题和代码块周围有空行，移除过多的空行。"
+      },
+      "toc-generator": {
+        "name": "Markdown TOC 生成器",
+        "description": "免费在线 Markdown TOC 生成器 — 在浏览器中即时从 Markdown 标题生成带锚点链接的目录。无数据存储。支持可配置的最大深度、有序/无序列表和嵌套文档的链接前缀。"
+      },
+      "link-extractor": {
+        "name": "Markdown 链接提取器",
+        "description": "免费在线 Markdown 链接提取器 — 在浏览器中即时查找和列出 Markdown 文档中的所有超链接，包括内联链接、参考链接和自动链接。无数据存储。报告链接文本、URL、唯一 URL 和唯一域名。"
+      },
+      "image-extractor": {
+        "name": "Markdown 图片提取器",
+        "description": "免费在线 Markdown 图片提取器 — 在浏览器中即时查找和列出 Markdown 文档中的所有图片引用，包括内联图片、参考图片和 HTML img 标签。无数据存储。报告 alt 文本、源 URL 和唯一图片源。"
+      },
+      "table-generator": {
+        "name": "Markdown 表格生成器",
+        "description": "免费在线 Markdown 表格生成器 — 在浏览器中即时从表头和数据行创建格式化的 Markdown 表格。无数据存储。支持左对齐、居中和右对齐，具有正确的分隔符行和竖线转义。"
+      },
+      "table-formatter": {
+        "name": "Markdown 表格格式化工具",
+        "description": "免费在线 Markdown 表格格式化工具 — 在浏览器中即时对现有 Markdown 表格进行列对齐、规范化间距，并设置左对齐/居中/右对齐。无数据存储。自动计算列宽并格式化分隔符行。"
+      },
+      "to-plain-text": {
+        "name": "Markdown 转纯文本",
+        "description": "免费在线 Markdown 转纯文本转换器 — 在浏览器中即时移除所有 Markdown 格式（包括标题、加粗、斜体、链接、图片、代码块、列表和表格）以获取干净的纯文本。无数据存储。报告字符数和字数。"
+      },
+      "escaper": {
+        "name": "Markdown 转义工具",
+        "description": "免费在线 Markdown 转义工具 — 在浏览器中即时转义文本中的特殊 Markdown 字符，如星号、方括号和竖线。无数据存储。通过反斜线转义所有 Markdown 语法字符以防止意外格式化。"
+      },
+      "frontmatter-editor": {
+        "name": "Frontmatter 编辑器",
+        "description": "免费在线 frontmatter 编辑器 — 在浏览器中即时解析、添加、更新和删除 Markdown 文档中的 YAML frontmatter 字段。无数据存储。读取现有 frontmatter，应用字段更新，并重新构建文档。"
+      },
+      "to-slack": {
+        "name": "Markdown 转 Slack",
+        "description": "免费在线 Markdown 转 Slack 转换器 — 在浏览器中即时将 Markdown 标题、粗体、链接、图像和删除线转换为 Slack mrkdwn 格式。无数据存储。将标题转换为粗体文本，链接转换为 Slack 尖括号语法，保留代码块。"
+      },
+      "from-slack": {
+        "name": "Slack 转 Markdown",
+        "description": "免费在线 Slack 转 Markdown 转换器 — 在浏览器中即时将 Slack mrkdwn 粗体、斜体、链接、提及、频道和删除线转换为标准 Markdown。无数据存储。转换过程中保留代码块和内联代码。"
+      },
+      "to-jira": {
+        "name": "Markdown 转 Jira",
+        "description": "免费在线 Markdown 转 Jira 转换器 — 在浏览器中即时将 Markdown 标题、粗体、斜体、代码块、链接、列表和引用转换为 Jira wiki 标记。无数据存储。支持嵌套列表、删除线、图像和水平线。"
+      },
+      "from-jira": {
+        "name": "Jira 转 Markdown",
+        "description": "免费在线 Jira 转 Markdown 转换器 — 在浏览器中即时将 Jira wiki 标记标题、粗体、斜体、代码块、链接和列表转换为 Markdown。无数据存储。支持嵌套列表、引用、图像和删除线。"
+      },
+      "to-discord": {
+        "name": "Markdown 转 Discord",
+        "description": "免费在线 Markdown 转 Discord 转换器 — 在浏览器中即时将 Markdown 转换为 Discord 兼容格式，支持标题转粗体、图像 URL 提取和 ISO 时间戳转 Discord 时间戳。无数据存储。保留代码块并支持提及格式。"
+      },
+      "to-bbcode": {
+        "name": "Markdown 转 BBCode",
+        "description": "免费在线 Markdown 转 BBCode 转换器 — 在浏览器中即时将 Markdown 标题、粗体、斜体、链接、图像、列表和代码块转换为 BBCode 论坛格式。无数据存储。支持可配置的标题大小、引用和删除线。"
+      },
+      "readme-generator": {
+        "name": "README 生成器",
+        "description": "免费在线 README 生成器 — 在浏览器中即时创建包含安装、使用、API、贡献和许可证部分的 README.md 模板。无数据存储。根据项目名称自动生成导入语句和 npm install 命令。"
+      },
+      "license-picker": {
+        "name": "许可证选择器",
+        "description": "免费在线许可证文本生成器 — 在浏览器中即时生成 MIT、Apache-2.0、GPL-3.0、BSD-3-Clause 和 ISC 许可证文本，包含你的名称和年份。无数据存储。输出完整许可证文本和 SPDX 标识符。"
+      },
+      "changelog-generator": {
+        "name": "变更日志生成器",
+        "description": "免费在线变更日志生成器 — 在浏览器中即时创建 Keep a Changelog 格式的版本条目。无数据存储。支持 Added、Changed、Deprecated、Removed、Fixed 和 Security 类别，可选版本比较链接。"
+      },
+      "contributing-guide": {
+        "name": "贡献指南",
+        "description": "免费在线贡献指南生成器 — 在浏览器中即时为开源项目创建 CONTRIBUTING.md 文件。无数据存储。包含错误报告、功能请求、拉取请求和代码风格指南等部分。"
+      },
+      "linter": {
+        "name": "Markdown 检查工具",
+        "description": "免费在线 Markdown 检查工具 — 在浏览器中即时检查 Markdown 的样式问题，如尾部空格、缺少标题空格、过度空行、裸 URL 和制表符。无数据存储。报告包含行号和规则名称的错误和警告。"
+      },
+      "badge-generator": {
+        "name": "徽章生成器",
+        "description": "免费在线徽章生成器 — 为 npm、GitHub、许可证、构建状态和自定义徽章创建 shields.io 徽章 markdown，在浏览器中即时生成。无数据存储。支持 flat、square、plastic、for-the-badge 和 social 样式。"
+      },
+      "issue-template": {
+        "name": "Issue 模板生成器",
+        "description": "免费在线 GitHub issue 模板生成器 — 在浏览器中即时创建 bug 报告、功能请求、问题和空白 issue 模板。无数据存储。生成带有标签和分配者字段的 YAML 前言。"
+      },
+      "pr-template": {
+        "name": "PR 模板生成器",
+        "description": "免费在线 PR 模板生成器 — 在浏览器中以标准、最小或详细样式即时创建 GitHub pull request 模板。无数据存储。包含检查清单、变更类型选项和测试部分。"
+      },
+      "code-of-conduct": {
+        "name": "行为准则生成器",
+        "description": "免费在线行为准则生成器 — 在浏览器中即时创建 Contributor Covenant、Citizen Code 或最小行为准则文档。无数据存储。可使用你的项目名称和联系邮箱自定义。"
+      },
+      "link-checker": {
+        "name": "Markdown 链接检查器",
+        "description": "免费在线 Markdown 链接检查器 — 在浏览器中即时验证 Markdown 文档中的所有链接，检查空 URL、未解析的模板变量和未编码空格等常见问题。无数据存储。按类型（URL、锚点、相对路径、电子邮件）分类链接并报告验证摘要。"
+      },
+      "to-confluence": {
+        "name": "Markdown 转 Confluence",
+        "description": "免费在线 Markdown 转 Confluence 转换器 — 在浏览器中即时将 Markdown 标题、粗体、斜体、代码块、链接、列表和表格转换为 Confluence wiki 标记。无数据存储。支持任务列表、删除线、水平线和图像。"
+      },
+      "rst-to-md": {
+        "name": "RST 转 Markdown",
+        "description": "免费在线 reStructuredText 转 Markdown 转换器 — 在浏览器中即时将 RST 标题、内联格式、代码块、指令、链接和列表转换为 Markdown。无数据存储。支持 Sphinx 角色、提示、图像和定义列表。"
+      },
+      "asciidoc-to-md": {
+        "name": "AsciiDoc 转 Markdown",
+        "description": "免费在线 AsciiDoc 转 Markdown 转换器 — 在浏览器中即时将 AsciiDoc 标题、格式、链接、列表和代码块转换为 Markdown。无数据存储。支持提示、块引用、表格和定义列表。"
+      },
+      "textile-to-md": {
+        "name": "Textile 转 Markdown",
+        "description": "免费在线 Textile 转 Markdown 转换器 — 在浏览器中即时将 Textile 标题、粗体、斜体、删除线、链接、列表、块引用和表格转换为 Markdown。无数据存储。支持脚注、代码块和嵌套列表级别。"
+      }
+    },
+    "api": {
+      "curl-converter": {
+        "name": "cURL 转换器",
+        "description": "免费在线 cURL 转换器 — 在浏览器中即时将 cURL 命令转换为 fetch、axios、Python requests、Go、Rust 和 PHP 代码。无数据存储。解析请求头、身份验证、请求体和所有常见 cURL 标志。"
+      },
+      "openapi-viewer": {
+        "name": "OpenAPI 查看器",
+        "description": "免费在线 OpenAPI 查看器 — 在浏览器中即时以人类可读的格式显示 OpenAPI 和 Swagger 规范，包括端点摘要、服务器信息和架构列表。无数据存储。"
+      },
+      "openapi-validator": {
+        "name": "OpenAPI 验证器",
+        "description": "免费在线 OpenAPI 验证器 — 在浏览器中即时检查 OpenAPI 和 Swagger 规范的结构错误、缺失字段和最佳实践警告。无数据存储。报告路径计数、操作计数和架构统计。"
+      },
+      "openapi-formatter": {
+        "name": "OpenAPI 格式化器",
+        "description": "免费在线 OpenAPI 格式化器 — 在浏览器中即时使用一致的 2 空格缩进对 OpenAPI 规范 JSON 进行美化和格式化。无数据存储。验证 JSON 语法并输出格式化良好的规范。"
+      },
+      "openapi-to-json": {
+        "name": "OpenAPI YAML 转 JSON",
+        "description": "免费在线 OpenAPI YAML 转 JSON 转换器 — 在浏览器中即时将 OpenAPI 规范从 YAML 转换为 JSON 格式。无数据存储。支持标准 YAML 语法，包括嵌套对象、数组和引用字符串。"
+      },
+      "json-to-openapi": {
+        "name": "JSON 转 OpenAPI YAML",
+        "description": "免费在线 OpenAPI JSON 转 YAML 转换器 — 在浏览器中即时将 OpenAPI 规范从 JSON 转换为 YAML 格式。无数据存储。保留所有路径、架构、响应和 OpenAPI 3.x 结构。"
+      },
+      "openapi-diff": {
+        "name": "OpenAPI 差异对比",
+        "description": "免费在线 OpenAPI 差异对比工具 — 并排比较两个 OpenAPI 规范，在浏览器中即时检测已添加、已移除和已更改的路径、架构和属性。无数据存储。"
+      },
+      "openapi-mock": {
+        "name": "OpenAPI 模拟响应生成器",
+        "description": "免费在线 OpenAPI 模拟响应生成器 — 在浏览器中根据 OpenAPI 规范路径和架构即时创建真实的模拟 JSON 响应。无数据存储。解析 $ref 引用，支持所有数据类型和格式。"
+      },
+      "swagger2-to-openapi3": {
+        "name": "Swagger 2.0 转 OpenAPI 3.0",
+        "description": "免费在线 Swagger 2.0 转 OpenAPI 3.0 转换器 — 在浏览器中即时将 Swagger 规范升级为 OpenAPI 3.0.3 格式。无数据存储。转换路径、定义至组件、安全方案、请求体参数和内容类型。"
+      },
+      "openapi-merger": {
+        "name": "OpenAPI 合并器",
+        "description": "免费在线 OpenAPI 合并器 — 在浏览器中即时将两个 OpenAPI 规范合并为一个统一规范。无数据存储。合并路径、架构、服务器、标签和安全定义，并进行去重。"
+      },
+      "openapi-splitter": {
+        "name": "OpenAPI 拆分器",
+        "description": "免费在线 OpenAPI 拆分器 — 在浏览器中按标签或路径前缀即时将大型 OpenAPI 规范拆分为较小的规范。无数据存储。在每个拆分中保留组件、服务器和规范元数据。"
+      },
+      "json-schema-to-openapi": {
+        "name": "JSON Schema 转 OpenAPI",
+        "description": "免费在线 JSON Schema 转 OpenAPI 转换器 — 在浏览器中即时将 JSON Schema 定义包装为 OpenAPI 3.0 组件架构。无数据存储。保留类型、必需字段、格式和嵌套对象结构。"
+      },
+      "openapi-to-json-schema": {
+        "name": "OpenAPI 转 JSON Schema",
+        "description": "免费在线 OpenAPI 转 JSON Schema 转换器 — 在浏览器中即时从 OpenAPI 规范中提取组件架构并将其转换为标准 JSON Schema（draft-07）。无数据存储。处理 $ref、nullable 和嵌套结构。"
+      },
+      "graphql-schema-viewer": {
+        "name": "GraphQL Schema 查看器",
+        "description": "免费在线 GraphQL Schema 查看器 — 在浏览器中格式化并显示 GraphQL SDL 定义，具有适当的缩进。无数据存储。支持类型、接口、枚举、联合和嵌套字段定义。"
+      },
+      "request-builder": {
+        "name": "HTTP 请求构建器",
+        "description": "免费在线 HTTP 请求构建器 — 在浏览器中以 fetch、cURL、HTTPie 或 wget 格式即时构建 HTTP 请求，支持自定义请求头、请求体和查询参数。无数据存储。"
+      },
+      "response-formatter": {
+        "name": "API 响应格式化器",
+        "description": "免费在线 API 响应格式化器 — 在浏览器中即时美化 JSON 和 XML API 响应，支持可配置的缩进和可选的键排序。无数据存储。"
+      },
+      "graphql-formatter-api": {
+        "name": "GraphQL 格式化器",
+        "description": "免费在线 GraphQL 格式化工具 — 即时美化和缩进 GraphQL 查询和 Schema 定义。无数据存储。支持格式化嵌套字段、参数和类型定义，可配置缩进。"
+      },
+      "graphql-to-typescript": {
+        "name": "GraphQL to TypeScript",
+        "description": "免费在线 GraphQL 转 TypeScript 转换器 — 从 GraphQL Schema 定义即时生成 TypeScript 接口。无数据存储。映射标量类型、处理可空性，支持导出和只读选项。"
+      },
+      "rest-to-graphql": {
+        "name": "REST to GraphQL",
+        "description": "免费在线 REST 转 GraphQL 转换器 — 从 REST API 端点描述即时生成 GraphQL Schema 定义。无数据存储。从 HTTP 方法和响应结构推断类型、查询、变更和输入类型。"
+      },
+      "webhook-curl-generator": {
+        "name": "Webhook cURL 生成器",
+        "description": "免费在线 Webhook cURL 生成器 — 即时创建用于测试 Webhook 的 cURL 命令，支持自定义负载、请求头和内容类型。无数据存储。支持 webhook.site、requestbin 和 ngrok。"
+      },
+      "api-mock-generator": {
+        "name": "API 模拟数据生成器",
+        "description": "免费在线 API 模拟数据生成器 — 从 JSON Schema 或示例数据即时生成真实的模拟 JSON 数据。无数据存储。从示例数据推断类型并生成多条随机值记录。"
+      },
+      "postman-to-curl": {
+        "name": "Postman to cURL",
+        "description": "免费在线 Postman 转 cURL 转换器 — 即时将 Postman 集合请求转换为 cURL 命令。无数据存储。支持 v2.0/v2.1 集合、请求头、请求体、查询参数和嵌套文件夹。"
+      },
+      "openapi-to-typescript": {
+        "name": "OpenAPI to TypeScript",
+        "description": "免费在线 OpenAPI 转 TypeScript 转换器 — 从 OpenAPI 规范即时生成 TypeScript 接口和可选客户端函数签名。无数据存储。映射 Schema、处理必需字段，支持 $ref 解析。"
+      },
+      "graphql-schema-generator": {
+        "name": "GraphQL Schema 生成器",
+        "description": "免费在线 GraphQL Schema 生成器 — 从 JSON 数据即时创建 GraphQL 类型定义。无数据存储。从示例数据推断类型，可选生成 Query 和 Mutation 根类型。"
+      },
+      "gitignore-generator": {
+        "name": ".gitignore 生成器",
+        "description": "免费在线 .gitignore 生成器 — 即时为 Node.js、Python、Java、Go、Rust、Ruby 等创建 .gitignore 文件。无数据存储。包含 IDE 特定规则、操作系统文件和常见附加项（如 .env 和日志文件）。"
+      },
+      "aws-arn-parser": {
+        "name": "AWS ARN 解析器",
+        "description": "免费在线 AWS ARN 解析器 — 即时将 Amazon 资源名称分解为分区、服务、区域、账户和资源组件。无数据存储。解析 IAM、S3、Lambda、EC2 和所有 AWS 服务 ARN。"
+      },
+      "cloud-resource-namer": {
+        "name": "云资源命名器",
+        "description": "免费在线云资源名称生成器 — 即时为 AWS、GCP 和 Azure 创建格式正确的资源名称。无数据存储。遵循提供商特定的命名规则，适用于存储桶、虚拟机、数据库、队列等。"
+      }
+    },
+    "code": {
+      "js-formatter": {
+        "name": "JavaScript 格式化工具",
+        "description": "免费在线 JavaScript 格式化工具 — 基于大括号和方括号结构即时格式化和缩进 JavaScript 代码。无数据存储。基础格式化工具，支持可配置缩进大小 — 生产使用建议使用 Prettier。"
+      },
+      "graphql-formatter": {
+        "name": "GraphQL 格式化工具",
+        "description": "免费在线 GraphQL 格式化工具 — 即时格式化和美化 GraphQL 查询，使用正确的缩进。无数据存储。支持可配置缩进大小，适用于查询、变更和片段。"
+      },
+      "md-formatter": {
+        "name": "Markdown 格式化工具",
+        "description": "免费在线 Markdown 格式化工具 — 规范化间距、在标题和列表前添加空行、删除尾部空格并即时修复结构。无需存储数据。"
+      },
+      "python-formatter": {
+        "name": "Python 格式化工具",
+        "description": "免费在线 Python 格式化工具 — 使用一致的缩进即时格式化 Python 代码。无需存储数据。基础格式化工具，支持对 def、class、if、for、while 和 try 代码块的可配置缩进大小。"
+      },
+      "js-minify": {
+        "name": "JavaScript 压缩工具",
+        "description": "免费在线 JavaScript 压缩工具 — 通过删除空格和注释即时压缩 JavaScript 代码。无需存储数据。显示原始大小与压缩大小及缩小百分比。"
+      },
+      "json-minify-code": {
+        "name": "JSON 压缩工具",
+        "description": "免费在线 JSON 压缩工具 — 通过删除所有空格和格式即时压缩 JSON。无需存储数据。显示原始大小与压缩大小及缩小百分比。"
+      },
+      "xml-minify-code": {
+        "name": "XML 压缩工具",
+        "description": "免费在线 XML 压缩工具 — 通过删除空格、注释和不必要的格式即时压缩 XML。无需存储数据。显示原始大小与压缩大小及缩小百分比。"
+      },
+      "graphql-minify": {
+        "name": "GraphQL 压缩工具",
+        "description": "免费在线 GraphQL 压缩工具 — 通过删除空格和不必要的格式即时压缩 GraphQL 查询。无需存储数据。显示原始大小与压缩大小及缩小百分比。"
+      },
+      "ts-minify": {
+        "name": "TypeScript 压缩工具",
+        "description": "免费在线 TypeScript 压缩工具 — 删除类型注解、接口、泛型和空格，即时生成压缩的 JavaScript。无需存储数据。显示原始大小与压缩大小及缩小百分比。"
+      },
+      "batch-minify": {
+        "name": "批量压缩工具",
+        "description": "免费在线批量代码压缩工具 — 自动检测并即时压缩 JavaScript、CSS、HTML、JSON、XML 或 SQL 代码。无需存储数据。显示原始大小与压缩大小及缩小百分比。"
+      },
+      "js-obfuscator": {
+        "name": "JavaScript 混淆工具",
+        "description": "免费在线 JavaScript 混淆工具 — 将变量和函数重命名为短标识符、删除注释和折叠空格，即时完成。无需存储数据。通过变量重命名进行简单混淆。"
+      },
+      "code-complexity": {
+        "name": "代码复杂度分析工具",
+        "description": "免费在线代码复杂度分析工具 — 即时计算 JavaScript 和 TypeScript 函数的圈复杂度。无需存储数据。按函数细分报告，包括风险等级（简单、中等、复杂）。"
+      },
+      "syntax-highlighter": {
+        "name": "语法高亮工具",
+        "description": "免费在线语法高亮工具 — 将 JavaScript、TypeScript、HTML、CSS、Python 和 SQL 代码转换为语法高亮的 HTML，支持深色或浅色主题，即时完成。无需存储数据。"
+      },
+      "line-counter": {
+        "name": "行数计数工具",
+        "description": "免费在线行数计数工具 — 即时计数总行数、代码行、注释行和空白行，并显示百分比细分。无需存储数据。可检测跨语言的单行和块注释。"
+      },
+      "code-to-image": {
+        "name": "代码转图片工具",
+        "description": "免费在线代码转图片工具 — 在浏览器中即时生成深色、浅色或 Monokai 主题的样式化 HTML 代码卡片。无数据存储。包含行号、窗口框架和可自定义的字体大小及填充。"
+      },
+      "comment-stripper": {
+        "name": "注释移除工具",
+        "description": "免费在线注释移除工具 — 在浏览器中即时从 JavaScript、CSS、HTML、Python 和 SQL 代码中移除单行、块和文档注释。无数据存储。支持自动检测和 JSDoc 保留。"
+      },
+      "dead-code-finder": {
+        "name": "死代码查找器",
+        "description": "免费在线死代码查找器 — 在浏览器中即时检测 JavaScript 和 TypeScript 代码中可能未使用的变量和函数。无数据存储。使用静态分析识别仅被引用一次的声明。"
+      },
+      "eslint-config-generator": {
+        "name": "ESLint 配置生成器",
+        "description": "免费在线 ESLint 配置生成器 — 在浏览器中即时创建扁平或传统 ESLint 配置，支持 TypeScript、React、Vue、Prettier 集成和规则严格度预设。无数据存储。"
+      },
+      "prettier-config-generator": {
+        "name": "Prettier 配置生成器",
+        "description": "免费在线 Prettier 配置生成器 — 在浏览器中即时创建 Prettier 配置，包括打印宽度、引号、分号、尾部逗号等。无数据存储。输出 JSON、JS 模块或 YAML 格式。"
+      },
+      "editorconfig-generator": {
+        "name": ".editorconfig 生成器",
+        "description": "免费在线 .editorconfig 生成器 — 在浏览器中即时创建 EditorConfig 文件，包含缩进风格、字符集、行尾符和文件类型特定规则。无数据存储。包含 Markdown 和 Makefile 覆盖。"
+      },
+      "tsconfig-generator": {
+        "name": "tsconfig.json 生成器",
+        "description": "免费在线 tsconfig.json 生成器 — 在浏览器中即时为 Next.js、React、Node.js 或库项目创建 TypeScript 编译器配置，支持严格模式、路径别名和源映射。无数据存储。"
+      },
+      "babel-config-generator": {
+        "name": "Babel 配置生成器",
+        "description": "免费在线 Babel 配置生成器 — 在浏览器中即时为浏览器、Node.js 或通用环境创建 Babel 配置，支持 TypeScript、React 和装饰器。无数据存储。输出 JSON 或 JS 模块格式。"
+      },
+      "env-generator": {
+        "name": ".env 生成器",
+        "description": "免费在线 .env 文件生成器 — 在浏览器中即时为 Next.js、React、Node.js、Django、Rails、Laravel 和 Spring 创建环境变量模板。无数据存储。包含数据库、身份验证、邮件、存储和日志预设。"
+      },
+      "env-parser": {
+        "name": ".env 解析器",
+        "description": "免费在线 .env 文件解析器 — 在浏览器中即时将 dotenv 文件解析为结构化 JSON，显示变量名、值、键数和注释数。无数据存储。处理带引号的值和内联注释。"
+      },
+      "env-validator": {
+        "name": ".env 验证器",
+        "description": "免费在线 .env 文件验证器 — 在浏览器中即时检查 dotenv 文件的语法错误、重复键、缺失值、不匹配的引号和安全问题。无数据存储。报告带行号的错误和警告。"
+      },
+      "package-json-validator": {
+        "name": "package.json 验证器",
+        "description": "免费在线 package.json 验证器 — 在浏览器中即时检查必需字段、命名规范、semver 格式和常见问题。无数据存储。报告错误、警告和包信息。"
+      },
+      "package-json-merger": {
+        "name": "package.json 合并工具",
+        "description": "免费在线 package.json 合并工具 — 在浏览器中即时深层合并两个 package.json 文件，合并依赖项、脚本和嵌套对象。无数据存储。显示包含添加和更新键的合并摘要。"
+      },
+      "semver-bumper": {
+        "name": "Semver 版本号升级器",
+        "description": "免费在线 semver 版本号升级工具 — 按照语义化版本控制规则，在浏览器中即时递增主版本号、次版本号、修订号或预发布版本号。不存储任何数据。"
+      },
+      "sql-to-typescript": {
+        "name": "SQL 转 TypeScript",
+        "description": "免费在线 SQL 转 TypeScript 转换器 — 从 CREATE TABLE 语句生成 TypeScript 接口，支持驼峰命名、可空类型和可选字段，在浏览器中即时转换。不存储任何数据。"
+      }
+    },
+    "color": {
+      "hex-to-rgb": {
+        "name": "十六进制转 RGB",
+        "description": "免费在线十六进制转 RGB 转换器 — 在浏览器中即时将十六进制颜色代码转换为 RGB（红、绿、蓝）值。不存储任何数据。"
+      },
+      "rgb-to-hex": {
+        "name": "RGB 转十六进制",
+        "description": "免费在线 RGB 转十六进制转换器 — 在浏览器中即时将 RGB 颜色值转换为十六进制代码。不存储任何数据。"
+      },
+      "hex-to-hsl": {
+        "name": "十六进制转 HSL",
+        "description": "免费在线十六进制转 HSL 转换器 — 在浏览器中即时将十六进制颜色代码转换为 HSL（色调、饱和度、亮度）格式。不存储任何数据。"
+      },
+      "hsl-to-hex": {
+        "name": "HSL 转十六进制",
+        "description": "免费在线 HSL 转十六进制转换器 — 在浏览器中即时将 HSL 颜色值转换为十六进制代码。不存储任何数据。"
+      },
+      "rgb-to-hsl": {
+        "name": "RGB 转 HSL",
+        "description": "免费在线 RGB 转 HSL 转换器 — 在浏览器中即时将 RGB 颜色值转换为 HSL（色调、饱和度、亮度）格式。不存储任何数据。"
+      },
+      "hsl-to-rgb": {
+        "name": "HSL 转 RGB",
+        "description": "免费在线 HSL 转 RGB 转换器 — 在浏览器中即时将 HSL 颜色值转换为 RGB 格式。不存储任何数据。"
+      },
+      "rgb-to-cmyk": {
+        "name": "RGB 转 CMYK",
+        "description": "免费在线 RGB 转 CMYK 转换器 — 在浏览器中即时将 RGB 屏幕颜色值转换为 CMYK 印刷颜色值。不存储任何数据。"
+      },
+      "cmyk-to-rgb": {
+        "name": "CMYK 转 RGB",
+        "description": "免费在线 CMYK 转 RGB 转换器 — 在浏览器中即时将 CMYK 印刷颜色值转换为 RGB 屏幕颜色值。不存储任何数据。"
+      },
+      "hex-to-hsv": {
+        "name": "十六进制转 HSV",
+        "description": "免费在线十六进制转 HSV 转换器 — 在浏览器中即时将十六进制颜色代码转换为 HSV（色调、饱和度、明度）格式。不存储任何数据。"
+      },
+      "color-name-to-hex": {
+        "name": "颜色名称转十六进制",
+        "description": "免费在线颜色名称转十六进制转换器 — 在浏览器中即时将 CSS 颜色名称（如'coral'、'steelblue'或'tomato'）转换为十六进制代码。不存储任何数据。支持全部 148 种 CSS 命名颜色。"
+      },
+      "hex-to-color-name": {
+        "name": "十六进制转颜色名称",
+        "description": "免费在线十六进制转颜色名称转换器 — 在浏览器中即时查找任何十六进制代码对应的最接近的 CSS 颜色名称。无数据存储。匹配全部 148 个 CSS 命名颜色。"
+      },
+      "all-color-formats": {
+        "name": "所有颜色格式",
+        "description": "免费在线颜色格式转换器 — 在浏览器中即时将任何颜色转换为十六进制、RGB、HSL、HSV 和 CMYK 格式。无数据存储。接受十六进制代码、RGB 值、HSL 值和 CSS 颜色名称。"
+      },
+      "color-picker": {
+        "name": "取色器",
+        "description": "免费在线取色器 — 输入任何十六进制、RGB 或 HSL 颜色，在浏览器中即时查看详细信息，包括所有格式转换和感知亮度。无数据存储。"
+      },
+      "random-color": {
+        "name": "随机颜色生成器",
+        "description": "免费在线随机颜色生成器 — 在浏览器中即时生成十六进制、RGB 或 HSL 格式的随机颜色。无数据存储。可配置数量为 1 到 50 种颜色。"
+      },
+      "palette-generator": {
+        "name": "调色板生成器",
+        "description": "免费在线调色板生成器 — 在浏览器中即时使用邻近色、补色、三色或单色和谐规则创建和谐的颜色调色板。无数据存储。"
+      },
+      "complementary-color": {
+        "name": "补色",
+        "description": "免费在线补色查找器 — 在浏览器中即时计算来自任何十六进制、RGB 或 HSL 输入的色轮上的对比色。无数据存储。"
+      },
+      "analogous-colors": {
+        "name": "邻近色",
+        "description": "免费在线邻近色查找器 — 在浏览器中即时从任何十六进制、RGB 或 HSL 输入生成色轮上的相邻颜色。无数据存储。显示 5 种和谐的相邻色调。"
+      },
+      "triadic-colors": {
+        "name": "三色",
+        "description": "免费在线三色查找器 — 在浏览器中即时计算色轮上均匀分布的三种颜色。无数据存储。"
+      },
+      "split-complementary": {
+        "name": "分割补色",
+        "description": "免费在线分割补色查找器 — 在浏览器中即时计算色轮上与补色相邻的两种颜色。无数据存储。"
+      },
+      "color-shades": {
+        "name": "颜色深度",
+        "description": "免费在线颜色深度生成器 — 在浏览器中即时创建任何颜色的逐步加深变体。无数据存储。可配置深度级数为 2 到 20 步。"
+      },
+      "color-tints": {
+        "name": "颜色浅度",
+        "description": "免费在线颜色浅度生成器 — 在浏览器中即时创建任何颜色的逐步变浅变体。无数据存储。可配置浅度级数为 2 到 20 步。"
+      },
+      "gradient-generator": {
+        "name": "渐变生成器",
+        "description": "免费在线 CSS 渐变生成器 — 在浏览器中即时使用自定义颜色、方向和颜色停止点创建线性或径向渐变字符串。无数据存储。输出开箱即用的 CSS。"
+      },
+      "contrast-checker": {
+        "name": "对比度检查器",
+        "description": "免费在线 WCAG 对比度检查器 — 在浏览器中即时计算前景色和背景色之间的对比度，并测试 AA/AAA 合规性。无数据存储。检查常规和大型文本要求。"
+      },
+      "color-blindness-simulator": {
+        "name": "色盲模拟器",
+        "description": "免费在线色盲模拟器 — 在浏览器中即时预览红绿色盲、绿色色盲、蓝黄色盲和全色盲的色彩效果。不存储任何数据。帮助测试色彩可访问性。"
+      },
+      "color-brightness": {
+        "name": "色彩亮度",
+        "description": "免费在线色彩亮度计算器 — 在浏览器中使用标准光度公式 (0.299R + 0.587G + 0.114B) 即时计算感知亮度。不存储任何数据。将色彩分类为浅色或深色。"
+      },
+      "color-luminance": {
+        "name": "色彩亮度值",
+        "description": "免费在线色彩亮度值计算器 — 根据 WCAG 2.0 标准在浏览器中即时计算相对亮度以进行可访问性测试。不存储任何数据。"
+      },
+      "color-distance": {
+        "name": "色彩距离",
+        "description": "免费在线色彩距离计算器 — 在 CIE Lab 色彩空间中计算两种颜色之间的感知距离 (Delta E / CIE76)，在浏览器中即时完成。不存储任何数据。测量两种颜色对人眼的差异程度。"
+      },
+      "color-mixer": {
+        "name": "色彩混合器",
+        "description": "免费在线色彩混合器 — 以任意比例混合两种颜色以找到中间色，在浏览器中即时完成。不存储任何数据。以 hex 和 RGB 格式显示混合后的颜色。"
+      },
+      "color-inverter": {
+        "name": "色彩反转工具",
+        "description": "免费在线色彩反转工具 — 计算任何 hex、RGB 或 HSL 颜色的补色反转，在浏览器中即时完成。不存储任何数据。显示原始颜色和反转颜色的 hex 和 RGB 值。"
+      }
+    },
+    "communication": {
+      "email-header-parser": {
+        "name": "邮件头解析器",
+        "description": "免费在线邮件头解析器 — 粘贴原始 SMTP 头，在浏览器中即时获得结构化 JSON。不存储任何数据。提取发件人、收件人、主题、日期、消息 ID，追踪 Received 跳转，并检测 SPF/DKIM 认证。"
+      },
+      "email-template-builder": {
+        "name": "邮件模板生成器",
+        "description": "免费在线邮件模板生成器 — 在浏览器中即时创建响应式 HTML 邮件模板。不存储任何数据。生成与 Outlook、Gmail 和 Apple Mail 兼容的表格布局，支持自定义颜色、行动按钮和页脚。"
+      },
+      "email-to-markdown": {
+        "name": "邮件转 Markdown",
+        "description": "免费在线邮件转 Markdown 转换器 — 粘贴纯文本邮件，在浏览器中即时获得 Markdown。不存储任何数据。将头转换为元数据表、URL 转换为可点击链接、邮件地址转换为 mailto 链接、缩进文本转换为引用块。"
+      },
+      "email-address-parser": {
+        "name": "邮件地址解析器",
+        "description": "免费在线邮件地址解析器 — 从邮件地址中提取姓名、本地部分和域，在浏览器中即时完成。不存储任何数据。处理 Name <email>、\"Name\" <email>、email (Name) 和纯邮件地址格式，带验证。"
+      },
+      "email-signature-generator": {
+        "name": "邮件签名生成器",
+        "description": "免费在线邮件签名生成器 — 在浏览器中即时创建专业 HTML 邮件签名。不存储任何数据。选择专业、极简或创意风格，支持可选的电话、网站、LinkedIn 和 Twitter 链接。"
+      },
+      "spf-record-generator": {
+        "name": "SPF 记录生成器",
+        "description": "免费在线 SPF 记录生成器 — 为你的域名生成 SPF DNS TXT 记录，在浏览器中即时完成。不存储任何数据。支持 Google Workspace、Microsoft 365、Mailgun、SendGrid、Amazon SES、自定义 IP 和 DNS 查询计数。"
+      },
+      "dkim-validator": {
+        "name": "DKIM 验证器",
+        "description": "免费在线 DKIM 记录验证器 — 粘贴您的 DKIM DNS TXT 记录，在浏览器中即时检查其格式。不存储任何数据。验证版本、密钥类型、公钥、哈希算法、服务类型和标志，提供详细的错误和警告信息。"
+      },
+      "telegram-formatter": {
+        "name": "Telegram 格式化工具",
+        "description": "免费在线 Telegram 格式化工具 — 在浏览器中将 Markdown 转换为 Telegram HTML 或 MarkdownV2 格式。不存储任何数据。转换粗体、斜体、下划线、删除线、代码、链接和块引用，并为 Telegram Bot API 提供正确的转义。"
+      },
+      "teams-formatter": {
+        "name": "Teams 格式化工具",
+        "description": "免费在线 Teams 格式化工具 — 在浏览器中将 HTML 或纯文本转换为 Microsoft Teams Markdown 或 Adaptive Card JSON。不存储任何数据。将粗体、斜体、删除线、链接和换行符转换为 Teams 兼容格式。"
+      },
+      "irc-formatter": {
+        "name": "IRC 格式化工具",
+        "description": "免费在线 IRC 格式化工具 — 在浏览器中将 Markdown 风格的文本转换为 mIRC 颜色代码。不存储任何数据。支持粗体、斜体、下划线、16 种前景色、背景色和 Markdown 语法（**粗体**、*斜体*、__下划线__）。"
+      }
+    },
+    "crypto": {
+      "md5-hash": {
+        "name": "MD5 哈希",
+        "description": "免费在线 MD5 哈希生成器 — 在浏览器中即时计算 MD5 摘要。不存储任何数据。生成 32 字符十六进制哈希，用于校验和和非安全指纹识别（不适合加密使用）。"
+      },
+      "sha1-hash": {
+        "name": "SHA-1 哈希",
+        "description": "免费在线 SHA-1 哈希生成器 — 在浏览器中即时计算 SHA-1 摘要。不存储任何数据。生成 40 字符十六进制哈希，用于校验和和非安全指纹识别（已弃用加密用途）。"
+      },
+      "sha256-hash": {
+        "name": "SHA-256 哈希",
+        "description": "免费在线 SHA-256 哈希生成器 — 在浏览器中即时计算 SHA-256 摘要。不存储任何数据。使用 Web Crypto API 生成 64 字符十六进制哈希，用于数据完整性和加密验证。"
+      },
+      "sha384-hash": {
+        "name": "SHA-384 哈希",
+        "description": "免费在线 SHA-384 哈希生成器 — 在浏览器中即时计算 SHA-384 摘要。不存储任何数据。使用 Web Crypto API 生成 96 字符十六进制哈希，用于需要更长摘要的加密应用。"
+      },
+      "sha512-hash": {
+        "name": "SHA-512 哈希",
+        "description": "免费在线 SHA-512 哈希生成器 — 在浏览器中即时计算 SHA-512 摘要。不存储任何数据。使用 Web Crypto API 生成 128 字符十六进制哈希，用于高安全性加密应用。"
+      },
+      "sha3-hash": {
+        "name": "SHA-3 哈希",
+        "description": "免费在线 SHA-3 哈希生成器 — 在浏览器中即时计算 SHA-3（Keccak）摘要。不存储任何数据。支持 SHA3-256 和 SHA3-512 变体，提供十六进制输出。"
+      },
+      "blake2-hash": {
+        "name": "BLAKE2b 哈希",
+        "description": "免费在线 BLAKE2b 哈希生成器 — 在浏览器中即时计算 BLAKE2b 哈希。不存储任何数据。支持 1 到 64 字节的可配置摘要长度，提供十六进制输出。"
+      },
+      "ripemd160-hash": {
+        "name": "RIPEMD-160 哈希",
+        "description": "免费在线 RIPEMD-160 哈希生成器 — 在浏览器中即时计算 RIPEMD-160 摘要。不存储任何数据。生成 40 字符十六进制哈希，用于比特币地址生成和旧版加密应用。"
+      },
+      "crc32-checksum": {
+        "name": "CRC32 校验和",
+        "description": "免费在线 CRC32 校验和计算器 — 在浏览器中即时计算 CRC32 校验和。不存储任何数据。输出 8 字符十六进制校验和，用于文件完整性和数据验证。"
+      },
+      "adler32-checksum": {
+        "name": "Adler-32 校验和",
+        "description": "免费在线 Adler-32 校验和生成器 — 在浏览器中即时计算 Adler-32 校验和。无数据存储。输出 8 字符十六进制校验和，用于 zlib 和数据完整性检查。"
+      },
+      "xxhash": {
+        "name": "xxHash",
+        "description": "免费在线 xxHash32 生成器 — 在浏览器中即时计算 xxHash32 非密码学哈希。无数据存储。支持可配置的种子值，输出 8 字符十六进制格式，用于快速数据校验。"
+      },
+      "murmurhash": {
+        "name": "MurmurHash3",
+        "description": "免费在线 MurmurHash3 生成器 — 在浏览器中即时计算 MurmurHash3 32 位哈希。无数据存储。支持可配置的种子值和十六进制输出，用于哈希表和数据分区。"
+      },
+      "hash-identifier": {
+        "name": "哈希识别器",
+        "description": "免费在线哈希识别器 — 在浏览器中即时识别哈希字符串的类型。无数据存储。根据长度和格式识别 MD5、SHA-1、SHA-256、SHA-512、bcrypt、Argon2、CRC32 等。"
+      },
+      "multi-hash": {
+        "name": "多哈希",
+        "description": "免费在线多哈希生成器 — 在浏览器中即时计算 SHA-1、SHA-256、SHA-384 和 SHA-512 哈希。无数据存储。在单次操作中并排比较多个哈希算法。"
+      },
+      "hmac-sha256": {
+        "name": "HMAC-SHA256",
+        "description": "免费在线 HMAC-SHA256 生成器 — 在浏览器中即时计算 HMAC-SHA256 消息认证码。无数据存储。支持使用 Web Crypto API 的十六进制和 Base64 输出格式。"
+      },
+      "hmac-sha512": {
+        "name": "HMAC-SHA512",
+        "description": "免费在线 HMAC-SHA512 生成器 — 在浏览器中即时计算 HMAC-SHA512 消息认证码。无数据存储。支持使用 Web Crypto API 的十六进制和 Base64 输出格式。"
+      },
+      "pbkdf2": {
+        "name": "PBKDF2",
+        "description": "免费在线 PBKDF2 密钥派生工具 — 在浏览器中即时从密码派生密码学密钥。无数据存储。支持 SHA-256 和 SHA-512，可配置迭代次数和密钥长度。"
+      },
+      "bcrypt-generator": {
+        "name": "Bcrypt 哈希生成器",
+        "description": "免费在线 bcrypt 哈希生成器 — 在浏览器中即时生成 bcrypt 密码哈希。无数据存储。支持可配置的成本因子（4-12 轮），每个哈希使用随机盐。"
+      },
+      "bcrypt-verifier": {
+        "name": "Bcrypt 验证器",
+        "description": "免费在线 bcrypt 验证器 — 在浏览器中即时针对 bcrypt 哈希验证密码。无数据存储。验证 $2a$、$2b$ 和 $2y$ bcrypt 哈希格式，返回匹配/不匹配结果。"
+      },
+      "aes-encrypt": {
+        "name": "AES-GCM 加密",
+        "description": "免费在线 AES-GCM 加密工具 — 在浏览器中即时使用 AES-GCM 加密文本。无数据存储。支持 AES-128 和 AES-256 密钥大小，使用 PBKDF2 密钥派生和 Base64 输出。"
+      },
+      "aes-decrypt": {
+        "name": "AES-GCM 解密",
+        "description": "免费在线 AES-GCM 解密工具 — 在浏览器中即时解密 AES-GCM 密文。无数据存储。支持 AES-128 和 AES-256，使用 PBKDF2 从密码派生密钥。"
+      },
+      "rsa-encrypt": {
+        "name": "RSA-OAEP 加密",
+        "description": "免费在线 RSA-OAEP 加密工具 — 在浏览器中即时加密文本。无数据存储。支持 JWK 格式的 RSA 公钥，输出 Base64 编码的密文。"
+      },
+      "rsa-decrypt": {
+        "name": "RSA-OAEP 解密",
+        "description": "免费在线 RSA-OAEP 解密工具 — 在浏览器中即时解密 RSA-OAEP 密文。无数据存储。支持 JWK 格式的 RSA 私钥，解码 Base64 编码的密文。"
+      },
+      "chacha20-encrypt": {
+        "name": "ChaCha20-Poly1305 加密",
+        "description": "免费在线 ChaCha20-Poly1305 加密工具 — 在浏览器中即时进行认证加密。无数据存储。使用 RFC 8439 ChaCha20-Poly1305 AEAD，配合 PBKDF2 密钥推导和 Base64 输出。"
+      },
+      "chacha20-decrypt": {
+        "name": "ChaCha20-Poly1305 解密",
+        "description": "免费在线 ChaCha20-Poly1305 解密工具 — 在浏览器中即时解密认证密文。无数据存储。解密 RFC 8439 ChaCha20-Poly1305 AEAD 数据，支持 PBKDF2 推导的密钥。"
+      },
+      "rsa-key-generator": {
+        "name": "RSA 密钥生成器",
+        "description": "免费在线 RSA 密钥对生成工具 — 在浏览器中即时生成 RSA-2048 和 RSA-4096 密钥对。无数据存储。支持 JWK 或 PEM（PKCS#8/SPKI）格式输出，使用 Web Crypto API。"
+      },
+      "ec-key-generator": {
+        "name": "EC 密钥生成器",
+        "description": "免费在线 EC 密钥对生成工具 — 在浏览器中即时生成 ECDSA 密钥对。无数据存储。支持 P-256、P-384 和 P-521 曲线，输出 JWK 和 PEM（PKCS#8/SPKI）格式。"
+      },
+      "ed25519-key-generator": {
+        "name": "Ed25519 密钥生成器",
+        "description": "免费在线 Ed25519 密钥对生成工具 — 在浏览器中即时生成 Ed25519 签名密钥对。无数据存储。输出 32 字节的私钥和公钥，支持十六进制或 Base64 格式。"
+      },
+      "pem-parser": {
+        "name": "PEM 解析器",
+        "description": "免费在线 PEM 解析工具 — 在浏览器中即时解析和分析 PEM 编码数据。无数据存储。识别密钥类型（RSA、EC、X.509）、格式（PKCS#1、PKCS#8、SPKI），显示大小和十六进制预览。"
+      },
+      "jwk-converter": {
+        "name": "JWK 转换器",
+        "description": "免费在线 JWK 转换工具 — 在浏览器中即时转换和检查 JSON Web Key。无数据存储。支持 RSA、EC 和 OKP 密钥类型，显示 JWK 信息、PEM 导出和密钥元数据。"
+      },
+      "csr-decoder": {
+        "name": "CSR 解码器",
+        "description": "免费在线 CSR 解码工具 — 在浏览器中即时解码 PEM 格式的证书签名请求。无数据存储。显示主体字段、算法和 PKCS#10 CSR 数据中的 OID。"
+      },
+      "certificate-decoder": {
+        "name": "X.509 证书解码器",
+        "description": "免费在线 X.509 证书解码工具 — 在浏览器中即时解码并显示 PEM 格式的证书详情。无数据存储。显示主体、颁发者、有效期和签名算法。"
+      },
+      "key-fingerprint": {
+        "name": "密钥指纹",
+        "description": "免费在线密钥指纹计算工具 — 在浏览器中即时计算公钥的 SHA-256 和 SHA-1 指纹。无数据存储。支持 PEM 和 JWK 密钥格式，输出冒号分隔和十六进制格式。"
+      },
+      "password-generator": {
+        "name": "密码生成器",
+        "description": "免费在线密码生成工具 — 在浏览器中即时生成安全的随机密码。无数据存储。可配置长度、字符集（大写、小写、数字、符号），支持排除歧义字符。"
+      },
+      "passphrase-generator": {
+        "name": "密码短语生成器",
+        "description": "免费在线密码短语生成器 — 在浏览器中即时生成骰子软件风格的密码短语。无数据存储。可配置字数、分隔符、大小写，以及来自 800+ 词列表的可选数字后缀。"
+      },
+      "password-strength": {
+        "name": "密码强度分析器",
+        "description": "免费在线密码强度分析器 — 在浏览器中即时分析密码安全性。无数据存储。计算熵、破解时间估计、检测常见模式、键盘序列和重复字符。"
+      },
+      "pin-generator": {
+        "name": "PIN 码生成器",
+        "description": "免费在线 PIN 码生成器 — 在浏览器中即时生成安全随机 PIN 码。无数据存储。可配置长度（3-12 位数字）、批量生成，以及可选的非重复数字模式。"
+      },
+      "memorable-password": {
+        "name": "易记密码生成器",
+        "description": "免费在线易记密码生成器 — 在浏览器中即时生成易于记忆的密码。无数据存储。结合词语、数字和符号，采用 word-number-word 和 adjective-noun-number 等模式。"
+      },
+      "password-hash-check": {
+        "name": "密码哈希格式检查",
+        "description": "免费在线密码哈希格式检查工具 — 在浏览器中即时验证密码哈希格式。无数据存储。识别 bcrypt、Argon2、scrypt、PBKDF2、Unix crypt、MD5、SHA-1、SHA-256 和 SHA-512 哈希格式。"
+      },
+      "password-entropy": {
+        "name": "密码熵计算器",
+        "description": "免费在线密码熵计算器 — 在浏览器中即时计算密码熵（比特）。无数据存储。计算标准熵和 Shannon 熵、字符集分析和安全级别评估。"
+      },
+      "api-key-generator": {
+        "name": "API 密钥生成器",
+        "description": "免费在线 API 密钥生成器 — 在浏览器中即时生成安全随机 API 密钥。无数据存储。支持十六进制、Base64、字母数字和 Base62 格式，可配置前缀和长度。"
+      },
+      "string-hash": {
+        "name": "字符串哈希",
+        "description": "免费在线字符串哈希计算器 — 在浏览器中即时计算 DJB2、SDBM 和 FNV-1a 哈希。无数据存储。以十六进制和十进制输出 32 位非密码学哈希，用于哈希表和数据分布。"
+      }
+    },
+    "css": {
+      "formatter": {
+        "name": "CSS 格式化器",
+        "description": "免费在线 CSS 格式化器 — 在浏览器中即时美化和缩进压缩后的 CSS，具有正确的间距。无数据存储。可配置缩进、规则间的空行，以及注释保留。"
+      },
+      "minify": {
+        "name": "CSS 压缩",
+        "description": "免费在线 CSS 压缩器 — 在浏览器中即时通过删除空白、注释和不必要的字符来压缩 CSS。无数据存储。删除末尾分号、空规则，并报告体积减少百分比。"
+      },
+      "validator": {
+        "name": "CSS 验证器",
+        "description": "免费在线 CSS 验证器 — 在浏览器中即时检查 CSS 是否存在语法错误、不匹配的大括号和常见问题。无数据存储。报告无效声明、厂商前缀警告、!important 使用情况和规则统计。"
+      },
+      "scss-to-css": {
+        "name": "SCSS 转 CSS",
+        "description": "免费在线 SCSS 转 CSS 编译器 — 在浏览器中即时将 SCSS 变量和嵌套转换为纯 CSS。无数据存储。支持 $variables、嵌套选择器和 &-parent 引用。不支持 mixins、@extend 或 @import。"
+      },
+      "less-to-css": {
+        "name": "LESS 转 CSS",
+        "description": "免费在线 LESS 转 CSS 编译器 — 在浏览器中即时将 LESS 变量和嵌套转换为纯 CSS。不存储任何数据。支持 @variables、嵌套选择器和 &-parent 引用。不支持 mixins、guards 或 @import。"
+      },
+      "css-to-scss": {
+        "name": "CSS 转 SCSS",
+        "description": "免费在线 CSS 转 SCSS 转换器 — 在浏览器中即时将平面 CSS 选择器转换为嵌套 SCSS 结构。不存储任何数据。将子选择器分组到父块中，并具有适当的缩进。"
+      },
+      "specificity": {
+        "name": "CSS 特异性计算器",
+        "description": "免费在线 CSS 特异性计算器 — 在浏览器中即时计算 CSS 选择器的特异性分数并按优先级排列。不存储任何数据。分解 ID、类、属性、伪类和元素。"
+      },
+      "gradient-generator": {
+        "name": "CSS 渐变生成器",
+        "description": "免费在线 CSS 渐变生成器 — 在浏览器中即时创建线性、径向和圆锥渐变，支持自定义颜色停止点。不存储任何数据。支持重复渐变并生成备用和供应商前缀属性。"
+      },
+      "box-shadow": {
+        "name": "CSS 盒影生成器",
+        "description": "免费在线 CSS box-shadow 生成器 — 在浏览器中即时创建可自定义偏移、模糊、扩展和颜色的投影和内阴影。不存储任何数据。生成标准和供应商前缀属性。"
+      },
+      "border-radius": {
+        "name": "CSS 圆角生成器",
+        "description": "免费在线 CSS border-radius 生成器 — 在浏览器中即时创建带有每个角落控制的圆角。不存储任何数据。生成简写和单个角落属性，带供应商前缀。"
+      },
+      "flexbox-generator": {
+        "name": "CSS Flexbox 生成器",
+        "description": "免费在线 CSS flexbox 生成器 — 在浏览器中即时构建具有可配置方向、对齐、换行和间距的弹性布局。不存储任何数据。生成现成的 CSS 和 HTML，包含 flex 容器和项目样式。"
+      },
+      "grid-generator": {
+        "name": "CSS Grid 生成器",
+        "description": "免费在线 CSS Grid 生成器 — 在浏览器中即时构建具有可配置列、行、间距和对齐的网格布局。不存储任何数据。支持等宽、自动和自定义列/行大小，提供现成的 CSS 和 HTML。"
+      }
+    },
+    "datetime": {
+      "unix-timestamp": {
+        "name": "Unix 时间戳转换器",
+        "description": "免费在线 Unix 时间戳转换器 — 在浏览器中即时在 Unix 时间戳和人类可读日期之间转换。不存储任何数据。支持秒和毫秒，显示 ISO 8601 和 UTC 格式。"
+      },
+      "iso8601-converter": {
+        "name": "ISO 8601 转换器",
+        "description": "免费在线 ISO 8601 转换器 — 在浏览器中即时将日期转换为所有 ISO 8601 表示形式。不存储任何数据。显示仅日期、日期-时间、完整、ISO 周和序数格式。"
+      },
+      "rfc2822-converter": {
+        "name": "RFC 2822 转换器",
+        "description": "免费在线 RFC 2822 转换器 — 在浏览器中即时转换日期为/来自 RFC 2822 电子邮件日期格式。不存储任何数据。显示 RFC 2822 和 ISO 8601 表示形式。"
+      },
+      "epoch-converter": {
+        "name": "Epoch 转换器",
+        "description": "免费在线 epoch 转换器 — 在浏览器中即时在 Unix 秒、毫秒、微秒和纳秒之间转换。不存储任何数据。还显示 Excel 序列和儒略日。"
+      },
+      "date-formatter": {
+        "name": "日期格式化器",
+        "description": "免费在线日期格式化器 — 在浏览器中使用 YYYY-MM-DD HH:mm:ss 等自定义模式即时格式化日期。不存储任何数据。支持日期名称、12/24 小时制、AM/PM 和时区偏移。"
+      },
+      "date-parser": {
+        "name": "日期解析器",
+        "description": "免费在线日期解析器 — 在浏览器中即时解析任何日期字符串格式为年、月、日和时间分量。无数据存储。支持 ISO 8601、时间戳和自然格式。"
+      },
+      "julian-day-converter": {
+        "name": "儒略日转换器",
+        "description": "免费在线儒略日转换器 — 在浏览器中即时转换儒略日数与日历日期。无数据存储。适用于天文学和历史日期计算。"
+      },
+      "excel-date-converter": {
+        "name": "Excel 日期转换器",
+        "description": "免费在线 Excel 日期转换器 — 在浏览器中即时转换 Excel 序列日期数与日历日期。无数据存储。精确处理 Excel 闰年问题。"
+      },
+      "relative-time": {
+        "name": "相对时间",
+        "description": "免费在线相对时间转换器 — 在浏览器中即时将日期转换为人类可读的相对格式，如'2 天前'。无数据存储。支持过去和未来日期，自动调整单位。"
+      },
+      "date-to-words": {
+        "name": "日期转文字",
+        "description": "免费在线日期转文字转换器 — 在浏览器中即时将任何日期拼写为英文单词形式。无数据存储。生成序数日期名称和年份的单词形式。"
+      },
+      "timezone-converter": {
+        "name": "时区转换器",
+        "description": "免费在线时区转换器 — 在浏览器中即时转换 IANA 时区间的日期和时间。无数据存储。支持所有主要世界时区，完整日期格式化。"
+      },
+      "utc-converter": {
+        "name": "UTC 转换器",
+        "description": "免费在线 UTC 转换器 — 在浏览器中即时转换本地时间与 UTC。无数据存储。支持任何 IANA 时区，完整日期和时间显示。"
+      },
+      "date-difference": {
+        "name": "日期差异计算器",
+        "description": "免费在线日期差异计算器 — 在浏览器中即时计算两个日期之间的间隔（年、月、周、日）。无数据存储。还显示小时、分钟和秒。"
+      },
+      "date-add-subtract": {
+        "name": "日期加减",
+        "description": "免费在线日期加减工具 — 在浏览器中即时从任何日期加减天、月和年。无数据存储。支持小时、分钟、秒和周。"
+      },
+      "age-calculator": {
+        "name": "年龄计算器",
+        "description": "免费在线年龄计算器 — 在浏览器中即时从出生日期计算精确年龄。无数据存储。显示年、月、日、总天数和下一个生日。"
+      },
+      "workdays-calculator": {
+        "name": "工作日计算器",
+        "description": "免费在线工作日计算器 — 在浏览器中即时计算两个日期之间的工作日数。无数据存储。排除周末并显示总日历天数细分。"
+      },
+      "week-number": {
+        "name": "周数",
+        "description": "免费在线周数计算器 — 在浏览器中即时获取任何日期的 ISO 周数。无数据存储。显示 ISO 周年、周数和星期几。"
+      },
+      "quarter-calculator": {
+        "name": "季度计算器",
+        "description": "免费在线季度计算器 — 在浏览器中快速确定任何日期的财政季度。无数据存储。显示季度数、开始日期和结束日期。"
+      },
+      "day-of-year": {
+        "name": "年度日期",
+        "description": "免费在线年度日期计算器 — 在浏览器中快速查找任何日期在该年的第几天。无数据存储。显示剩余天数、年度进度百分比和闰年状态。"
+      },
+      "leap-year-checker": {
+        "name": "闰年检查器",
+        "description": "免费在线闰年检查器 — 在浏览器中快速检查任何年份是否为闰年并显示详细说明。无数据存储。显示整除规则和相邻闰年。"
+      },
+      "days-in-month": {
+        "name": "月份天数",
+        "description": "免费在线月份天数计算器 — 在浏览器中快速查找任何月份有多少天。无数据存储。处理闰年并接受日期字符串或 YYYY-MM 格式。"
+      },
+      "date-range-generator": {
+        "name": "日期范围生成器",
+        "description": "免费在线日期范围生成器 — 在浏览器中快速生成开始和结束日期之间的日期序列。无数据存储。支持每日、每周和每月间隔。"
+      },
+      "timezone-list": {
+        "name": "时区列表",
+        "description": "免费在线时区列表 — 在浏览器中快速浏览所有主要 IANA 时区名称和当前本地时间。无数据存储。按地区（如欧洲、亚洲或美洲）筛选。"
+      },
+      "world-clock": {
+        "name": "世界时钟",
+        "description": "免费在线世界时钟 — 在浏览器中快速查看全球多个城市的当前时间。无数据存储。默认显示 10 个主要城市或自定义 IANA 时区。"
+      },
+      "duration-calculator": {
+        "name": "时长计算器",
+        "description": "免费在线时长计算器 — 在浏览器中快速加减 HH:MM:SS 格式的时间时长。无数据存储。显示格式化时间和总秒数的结果。"
+      },
+      "duration-formatter": {
+        "name": "时长格式化器",
+        "description": "免费在线时长格式化器 — 在浏览器中快速将毫秒转换为人类可读的时长。无数据存储。分解为天、小时、分钟、秒和毫秒。"
+      },
+      "time-parser": {
+        "name": "时间解析器",
+        "description": "免费在线时间解析器 — 在浏览器中快速将任何时间字符串格式解析为小时、分钟和秒分量。无数据存储。输出 12 小时和 24 小时格式。"
+      },
+      "time-12h-24h-converter": {
+        "name": "12/24 小时时间转换器",
+        "description": "免费在线 12/24 小时时间转换器 — 在浏览器中快速转换 12 小时和 24 小时时间格式。无数据存储。处理 AM/PM 并支持秒。"
+      },
+      "countdown-calculator": {
+        "name": "倒计时计算器",
+        "description": "免费在线倒计时计算器 — 在浏览器中快速计算到任何目标日期的剩余时间。无数据存储。显示天数、小时、分钟和秒的分解。"
+      },
+      "meeting-planner": {
+        "name": "会议计划器",
+        "description": "免费在线会议计划器 — 在浏览器中快速查找跨时区的重叠工作时间。无数据存储。比较多个 IANA 时区并显示共同可用时间窗口。"
+      },
+      "cron-builder": {
+        "name": "Cron 表达式生成器",
+        "description": "免费在线 cron 表达式生成器 — 在浏览器中使用预设或自定义字段快速创建 cron 表达式。不存储任何数据。支持小时、每日、工作日等预设和自定义计划。"
+      },
+      "cron-parser": {
+        "name": "Cron 解析器",
+        "description": "免费在线 cron 解析器 — 在浏览器中将 cron 表达式转换为易读的人类语言。不存储任何数据。分解分钟、小时、日期、月份和周日字段。"
+      },
+      "cron-next-runs": {
+        "name": "Cron 下次运行时间",
+        "description": "免费在线 cron 下次运行计算器 — 在浏览器中预览任何 cron 表达式的即将执行时间。不存储任何数据。显示后续 N 个计划运行及其日期。"
+      },
+      "cron-validator": {
+        "name": "Cron 验证器",
+        "description": "免费在线 cron 验证器 — 在浏览器中检查 cron 表达式语法错误。不存储任何数据。验证全部五个字段的范围和步长检查。"
+      },
+      "cron-to-english": {
+        "name": "Cron 转英文",
+        "description": "免费在线 cron 转英文转换器 — 在浏览器中将 cron 表达式转换为纯英文。不存储任何数据。支持常见模式和复杂计划。"
+      },
+      "english-to-cron": {
+        "name": "英文转 Cron",
+        "description": "免费在线英文转 cron 转换器 — 在浏览器中将自然语言计划描述转换为 cron 表达式。不存储任何数据。支持「每个工作日」和「每天上午 9 点」等短语。"
+      },
+      "rate-limiter-calculator": {
+        "name": "速率限制计算器",
+        "description": "免费在线速率限制计算器 — 在浏览器中快速计算速率限制参数和转换。不存储任何数据。显示每秒/每分钟/每小时的请求数、令牌桶和滑动窗口分析。"
+      },
+      "interval-calculator": {
+        "name": "时间间隔计算器",
+        "description": "免费在线时间间隔计算器 — 在浏览器中计算时间间隔、频率和执行次数。不存储任何数据。显示每秒、每分钟、每小时的请求数和令牌桶分析。"
+      },
+      "calendar-generator": {
+        "name": "日历生成器",
+        "description": "免费在线日历生成器 — 在浏览器中快速为任何月份和年份创建文本日历。不存储任何数据。显示周日至周六的周日期网格。"
+      },
+      "holiday-lookup": {
+        "name": "假日查询",
+        "description": "免费在线假日查询 — 在浏览器中快速查找任何年份的美国和国际假日。不存储任何数据。列出联邦假日及其确切日期和周几。"
+      },
+      "ical-generator": {
+        "name": "iCal 生成器",
+        "description": "免费在线 iCal 生成器 — 在浏览器中快速为事件创建 .ics 日历文件内容。不存储任何数据。支持全天事件、描述和位置。"
+      },
+      "ical-parser": {
+        "name": "iCal 解析器",
+        "description": "免费在线 iCal 解析器 — 在浏览器中将 .ics iCalendar 文件内容解析为事件详情。不存储任何数据。提取标题、日期、位置和描述。"
+      },
+      "vcard-generator": {
+        "name": "vCard 生成器",
+        "description": "免费在线 vCard 生成器 — 在您的浏览器中即时创建 vCard (.vcf) 联系人文件内容。不存储任何数据。支持姓名、电子邮件、电话、地址、组织和网站字段。"
+      },
+      "vcard-parser": {
+        "name": "vCard 解析器",
+        "description": "免费在线 vCard 解析器 — 在您的浏览器中即时将 vCard (.vcf) 联系人文件内容解析为结构化数据。不存储任何数据。提取姓名、电子邮件、电话、组织和职务。"
+      }
+    },
+    "diagram": {
+      "mermaid-renderer": {
+        "name": "Mermaid 渲染器",
+        "description": "免费在线 Mermaid 渲染器 — 验证和渲染 Mermaid 图表语法，用于流程图、序列图、ER 图等，在您的浏览器中即时生成。不存储任何数据。检测图表类型并报告语法错误。"
+      },
+      "mermaid-editor": {
+        "name": "Mermaid 编辑器",
+        "description": "免费在线 Mermaid 编辑器 — 编辑 Mermaid 图表语法，提供主题和方向选项，在您的浏览器中即时预览渲染结果。不存储任何数据。支持默认、深色、森林和中立主题。"
+      },
+      "plantuml-analyzer": {
+        "name": "PlantUML 分析器",
+        "description": "免费在线 PlantUML 分析器 — 解析 PlantUML 图表语法并提取参与者、消息和图表结构，在您的浏览器中即时完成。不存储任何数据。支持序列图、类图和活动图分析。"
+      },
+      "graphviz-analyzer": {
+        "name": "Graphviz 分析器",
+        "description": "免费在线 Graphviz DOT 分析器 — 解析 DOT 图定义并提取节点、边和图属性，在您的浏览器中即时完成。不存储任何数据。分析有向和无向图，支持子图。"
+      },
+      "sequence-diagram-editor": {
+        "name": "序列图编辑器",
+        "description": "免费在线序列图编辑器 — 从参与者和消息生成 Mermaid 序列图语法，在您的浏览器中即时完成。不存储任何数据。支持参与者、激活、注解、循环和 alt 块。"
+      },
+      "flowchart-editor": {
+        "name": "流程图编辑器",
+        "description": "免费在线流程图编辑器 — 从节点和边生成 Mermaid 流程图语法，支持可定制的形状和箭头样式，在您的浏览器中即时完成。不存储任何数据。支持矩形、菱形、体育场、圆形和六边形节点形状。"
+      },
+      "er-diagram-editor": {
+        "name": "ER 图编辑器",
+        "description": "免费在线 ER 图编辑器 — 从实体、属性和关系生成 Mermaid 实体关系图语法，在您的浏览器中即时完成。不存储任何数据。支持主键/外键注解和基数符号。"
+      },
+      "gantt-chart-editor": {
+        "name": "甘特图编辑器",
+        "description": "免费在线甘特图编辑器 — 从项目分段、任务和时间线生成 Mermaid 甘特图语法，在您的浏览器中即时完成。不存储任何数据。支持任务依赖、里程碑和活跃/完成/关键状态。"
+      },
+      "mind-map-editor": {
+        "name": "思维导图编辑器",
+        "description": "免费在线思维导图编辑器 — 从分层主题树生成 Mermaid 思维导图语法，在您的浏览器中即时完成。不存储任何数据。支持无限嵌套深度和自动缩进输出。"
+      },
+      "ascii-diagram": {
+        "name": "ASCII 图表",
+        "description": "免费在线 ASCII 图表生成器 — 从结构化输入创建盒形、表格、树和流程图作为 ASCII 艺术，在您的浏览器中即时完成。不存储任何数据。支持标题分段、盒形连接和文件树视图。"
+      },
+      "qr-code-generator": {
+        "name": "二维码生成器",
+        "description": "免费在线二维码生成器 — 从文本或 URL 创建二维码（SVG 格式），支持可定制的大小、颜色和纠错级别，在您的浏览器中即时完成。不存储任何数据。支持 L/M/Q/H 纠错级别。"
+      },
+      "qr-with-logo": {
+        "name": "带Logo的二维码",
+        "description": "免费在线带Logo二维码生成器 — 在浏览器中instantly创建SVG格式的二维码，并具有居中的Logo占位符区域。不存储数据。使用高纠错级别以在Logo区域下保持可扫描性。"
+      },
+      "styled-qr-code": {
+        "name": "风格化二维码",
+        "description": "免费在线风格化二维码生成器 — 在浏览器中instantly创建SVG格式的二维码，支持自定义模块形状、定位图案和颜色。不存储数据。支持点状、圆形和菱形模块样式。"
+      },
+      "wifi-qr-code": {
+        "name": "WiFi二维码",
+        "description": "免费在线WiFi二维码生成器 — 从SSID、密码和加密类型在浏览器中instantly创建SVG格式的WiFi网络二维码。不存储数据。支持WPA、WEP和开放网络类型。"
+      },
+      "vcard-qr-code": {
+        "name": "vCard二维码",
+        "description": "免费在线vCard二维码生成器 — 从姓名、邮箱、电话和地址在浏览器中instantly创建SVG格式的联系人二维码。不存储数据。生成vCard 3.0格式以确保通用兼容性。"
+      },
+      "url-qr-code": {
+        "name": "URL二维码",
+        "description": "免费在线URL二维码生成器 — 从URL及可选文本标签在浏览器中instantly创建SVG格式的二维码。不存储数据。支持自定义大小、颜色和纠错级别。"
+      },
+      "bulk-qr-generator": {
+        "name": "批量二维码生成器",
+        "description": "免费在线批量二维码生成器 — 从文本项列表在浏览器中instantly创建多个二维码，并生成为HTML网格。不存储数据。支持自定义标签、大小和纠错级别。"
+      },
+      "code128-generator": {
+        "name": "Code 128生成器",
+        "description": "免费在线Code 128条码生成器 — 在浏览器中instantly从字母数字文本创建SVG格式的Code 128条码。不存储数据。支持自定义宽度、高度、可选文本显示和可配置的条宽。"
+      },
+      "code39-generator": {
+        "name": "Code 39生成器",
+        "description": "免费在线Code 39条码生成器 — 在浏览器中instantly从大写字母数字文本创建SVG格式的Code 39条码。不存储数据。支持自定义尺寸、文本可见性和窄/宽条比例。"
+      },
+      "ean13-generator": {
+        "name": "EAN-13生成器",
+        "description": "免费在线EAN-13条码生成器 — 在浏览器中instantly从12位商品代码创建SVG格式的EAN-13条码，自动包含校验位。不存储数据。支持自定义尺寸和文本可见性。"
+      },
+      "ean8-generator": {
+        "name": "EAN-8生成器",
+        "description": "免费在线EAN-8条码生成器 — 在浏览器中instantly从7位代码创建SVG格式的EAN-8条码，自动包含校验位。不存储数据。支持自定义尺寸和文本可见性。"
+      },
+      "upc-a-generator": {
+        "name": "UPC-A生成器",
+        "description": "免费在线UPC-A条码生成器 — 在浏览器中instantly从11位商品代码创建SVG格式的UPC-A条码，自动包含校验位。不存储数据。支持自定义尺寸和文本可见性。"
+      },
+      "upc-e-generator": {
+        "name": "UPC-E生成器",
+        "description": "免费在线UPC-E条码生成器 — 在浏览器中instantly从6位压缩代码创建SVG格式的UPC-E条码。不存储数据。支持自定义尺寸和文本可见性。"
+      },
+      "itf-generator": {
+        "name": "ITF生成器",
+        "description": "免费在线 ITF 条形码生成器 — 直接在浏览器中从数字数据即时生成 Interleaved 2 of 5 条形码（SVG 格式）。无数据存储。支持可选校验位和自定义尺寸。"
+      },
+      "pdf417-info": {
+        "name": "PDF417 信息",
+        "description": "免费在线 PDF417 信息工具 — 直接在浏览器中即时分析 PDF417 条形码参数，包括数据容量、编码模式和纠错级别。无数据存储。显示符号尺寸和字符计数。"
+      },
+      "data-matrix-info": {
+        "name": "Data Matrix 信息",
+        "description": "免费在线 Data Matrix 信息工具 — 直接在浏览器中即时分析 Data Matrix 条形码参数，包括容量、编码模式和符号大小。无数据存储。显示纠错级别、数据长度和推荐矩阵大小。"
+      },
+      "line-chart-generator": {
+        "name": "折线图生成器",
+        "description": "免费在线折线图生成器 — 从数据序列直接在浏览器中即时生成具有可自定义颜色、标记和标签的折线图（SVG 格式）。无数据存储。支持多个序列、X 轴标签和网格线。"
+      },
+      "bar-chart-generator": {
+        "name": "柱状图生成器",
+        "description": "免费在线柱状图生成器 — 从标签和数值直接在浏览器中即时生成水平或垂直柱状图（SVG 格式）。无数据存储。支持自定义颜色、可配置的图表尺寸和网格线。"
+      },
+      "pie-chart-generator": {
+        "name": "饼图生成器",
+        "description": "免费在线饼图生成器 — 从标签数据段直接在浏览器中即时生成饼图和甜甜圈图（SVG 格式）。无数据存储。支持自定义颜色、百分比标签和图例。"
+      },
+      "scatter-plot-generator": {
+        "name": "散点图生成器",
+        "description": "免费在线散点图生成器 — 从 X/Y 数据点直接在浏览器中即时生成具有可选标签的散点图（SVG 格式）。无数据存储。支持自定义颜色、点大小和轴标签。"
+      },
+      "area-chart-generator": {
+        "name": "面积图生成器",
+        "description": "免费在线面积图生成器 — 从数据序列直接在浏览器中即时生成具有可自定义颜色、标签和堆叠的平滑面积图（SVG 格式）。无数据存储。支持多个序列、堆叠面积和 X 轴标签。"
+      },
+      "radar-chart-generator": {
+        "name": "雷达图生成器",
+        "description": "免费在线雷达图生成器 — 从多轴数据序列直接在浏览器中即时生成雷达/蜘蛛图（SVG 格式）。无数据存储。支持多个序列、可自定义的轴标签和同心网格环。"
+      },
+      "sparkline-generator": {
+        "name": "迷你图生成器",
+        "description": "免费在线迷你图生成器 — 从数字数据直接在浏览器中即时生成紧凑的内联迷你图（SVG 格式）。无数据存储。支持填充颜色、点标记和最小/最大值高亮。"
+      },
+      "json-to-chart": {
+        "name": "JSON 转图表",
+        "description": "免费在线 JSON 转图表转换器 — 将 JSON 数据数组转换为柱状图、折线图、饼图或散点图（SVG 格式）直接在浏览器中即时生成。无数据存储。自动从数据中检测标签和数值字段。"
+      }
+    },
+    "feeds": {
+      "rss-parser": {
+        "name": "RSS 解析器",
+        "description": "免费在线 RSS 源解析器 — 粘贴 RSS XML 并直接在浏览器中即时获得包含频道元数据和项目的结构化 JSON。无数据存储。提取标题、链接、描述、作者、分类和附件。"
+      },
+      "atom-parser": {
+        "name": "Atom 解析器",
+        "description": "免费在线 Atom 源解析器 — 粘贴 Atom XML 并直接在浏览器中即时获得包含源元数据、条目和作者的结构化 JSON。无数据存储。提取标题、链接、摘要、内容、分类和发布日期。"
+      },
+      "rss-generator": {
+        "name": "RSS 生成器",
+        "description": "免费在线 RSS 源生成器——在浏览器中即时创建有效的 RSS 2.0 XML 源，包含项目、分类和封装。无数据存储。支持项目描述、发布日期、GUID、作者和 Atom 自链接。"
+      },
+      "atom-generator": {
+        "name": "Atom 生成器",
+        "description": "免费在线 Atom 源生成器——在浏览器中即时创建有效的 Atom 1.0 XML 源，包含条目、作者和元数据。无数据存储。支持条目摘要、内容、发布日期和逐条目作者。"
+      },
+      "rss-validator": {
+        "name": "RSS 验证器",
+        "description": "免费在线 RSS 源验证器——在浏览器中即时检查 RSS XML 结构、必需元素和最佳实践。无数据存储。报告错误（缺少频道、标题、链接）和警告（缺少语言、日期），检测 RSS 版本。"
+      },
+      "feed-merger": {
+        "name": "源合并器",
+        "description": "免费在线源合并器——在浏览器中即时合并两个 JSON 源的条目、按 ID/链接去重并按日期排序。无数据存储。接受包含 items 或 entries 数组的源并将其合并为统一列表。"
+      },
+      "json-feed-parser": {
+        "name": "JSON Feed 解析器",
+        "description": "免费在线 JSON Feed 解析器——粘贴 JSON Feed 1.1 文档，在浏览器中即时获得验证、格式化的源元数据和项目视图。无数据存储。验证版本字段，提取作者、标签和附件。"
+      },
+      "opml-parser": {
+        "name": "OPML 解析器",
+        "description": "免费在线 OPML 解析器——粘贴 OPML 订阅 XML，在浏览器中即时获得包含文件夹的结构化 JSON 源列表。无数据存储。提取源 URL、标题、类型和文件夹层级。"
+      },
+      "schema-org-generator": {
+        "name": "Schema.org 生成器",
+        "description": "[REVIEW] 免费在线 Schema.org JSON-LD 生成器——在浏览器中即时为 Article、Product、Event、Recipe 等 10 多种类型创建结构化数据。无数据存储。输出可嵌入的脚本标签，包含类型特定字段。"
+      },
+      "schema-org-validator": {
+        "name": "Schema.org 验证器",
+        "description": "[REVIEW] 免费在线 Schema.org 验证器——粘贴 JSON-LD，在浏览器中即时检查缺少的必需字段、无效日期和结构问题。无数据存储。验证 @context、@type 和类型特定的必需属性。"
+      },
+      "json-ld-editor": {
+        "name": "JSON-LD 编辑器",
+        "description": "免费在线 JSON-LD 格式化器——粘贴压缩的 JSON-LD，在浏览器中即时获得美化的结构化数据。无数据存储。从脚本标签提取 JSON，验证 JSON 语法，并使用一致缩进进行格式化。"
+      },
+      "microdata-extractor": {
+        "name": "微数据提取器",
+        "description": "免费在线微数据提取器——粘贴 HTML，在浏览器中即时将 itemscope、itemtype 和 itemprop 属性提取为结构化 JSON。无数据存储。查找包含属性的有作用域项目和独立 itemprop 值。"
+      },
+      "rich-snippet-preview": {
+        "name": "富媒体摘要预览",
+        "description": "免费在线富媒体摘要预览器——粘贴 JSON-LD，在浏览器中即时查看结构化数据如何显示为 Google 富媒体结果。无数据存储。支持 Article、Product、Recipe、Review、Event 和 JobPosting 类型。"
+      },
+      "breadcrumb-generator": {
+        "name": "面包屑生成器",
+        "description": "[REVIEW] 免费在线面包屑 JSON-LD 生成器——在浏览器中即时为 SEO 创建 BreadcrumbList 结构化数据。无数据存储。输出可嵌入的脚本标签，包含符合 Schema.org 的 ListItem 元素。"
+      },
+      "faq-schema-generator": {
+        "name": "FAQ Schema 生成器",
+        "description": "免费在线 FAQ Schema 生成器 — 在浏览器中即时创建用于 Google 富结果的 FAQPage JSON-LD 结构化数据。无数据存储。输出可直接嵌入的脚本标签，包含 Question 和 Answer 实体。"
+      },
+      "product-schema-generator": {
+        "name": "Product Schema 生成器",
+        "description": "免费在线 Product Schema 生成器 — 在浏览器中即时创建包含优惠、品牌和评分的 Product JSON-LD 结构化数据以获得 Google 富结果。无数据存储。支持定价、可用性、SKU 和聚合评分。"
+      }
+    },
+    "html": {
+      "formatter": {
+        "name": "HTML 格式化器",
+        "description": "免费在线 HTML 格式化器 — 在浏览器中即时美化和缩进 HTML。无数据存储。处理嵌套标签、自闭合元素、DOCTYPE、注释，并保留 script/style/pre 块中的原始内容。"
+      },
+      "minify": {
+        "name": "HTML 压缩工具",
+        "description": "免费在线 HTML 压缩器 — 通过移除空白和注释在浏览器中即时压缩 HTML。无数据存储。保留 pre/script/style 块中的内容，报告大小缩减，支持可选的标签移除。"
+      },
+      "validator": {
+        "name": "HTML 验证器",
+        "description": "免费在线 HTML 验证器 — 在浏览器中即时检查 HTML 结构的错误和警告。无数据存储。检测未闭合标签、嵌套错误、缺失 alt 属性、重复 ID 和自闭合元素误用。"
+      },
+      "to-text": {
+        "name": "HTML 转纯文本",
+        "description": "免费在线 HTML 转纯文本转换器 — 在浏览器中即时从 HTML 中剔除标签并提取可读文本。无数据存储。移除脚本、样式和注释，解码实体，可选保留链接 URL。"
+      },
+      "entity-encoder": {
+        "name": "HTML 实体编码器",
+        "description": "免费在线 HTML 实体编码器 — 在浏览器中即时将特殊字符转义为 HTML 实体。无数据存储。支持命名 (&amp;)、十进制 (&#38;) 和十六进制 (&#x26;) 编码模式，可选全文编码。"
+      },
+      "entity-decoder": {
+        "name": "HTML 实体解码器",
+        "description": "免费在线 HTML 实体解码器 — 在浏览器中即时将 HTML 实体转换回可读字符。无数据存储。支持命名实体 (&amp;、&lt;、&copy;)、十进制 (&#38;) 和十六进制 (&#x26;) 引用。"
+      },
+      "attribute-remover": {
+        "name": "HTML 属性移除工具",
+        "description": "免费在线 HTML 属性移除器 — 在浏览器中即时从 HTML 中删除内联样式、事件处理程序和数据属性。无数据存储。可配置的属性列表、批量移除所有 data-* 或 on* 属性，以及属性计数报告。"
+      },
+      "playground": {
+        "name": "HTML 游乐场",
+        "description": "免费在线 HTML 游乐场 — 在浏览器中即时编写 HTML、CSS 和 JavaScript 并预览。无数据存储。将代码片段包装成完整文档，提取 style/script 标签，支持额外的 CSS 和 JS 注入。"
+      },
+      "table-generator": {
+        "name": "HTML 表格生成器",
+        "description": "免费在线 HTML 表格生成器 — 在浏览器中即时创建带样式的 HTML 表格。无数据存储。可配置的行、列、标题、单元格数据、边框样式和条纹行，输出可直接复制。"
+      },
+      "list-generator": {
+        "name": "HTML 列表生成器",
+        "description": "免费在线 HTML 列表生成器 — 在浏览器中即时创建有序或无序 HTML 列表。无数据存储。通过缩进支持嵌套列表、自定义列表样式（圆点、空心圆、方形、十进制），以及 CSS 类名。"
+      },
+      "favicon-generator": {
+        "name": "Favicon 生成器",
+        "description": "免费在线 Favicon 生成器 — 在浏览器中即时创建基于文本的 SVG favicon。无数据存储。可自定义的文本、颜色、形状（方形、圆形、圆角）、大小，并生成可直接使用的 HTML 链接标签。"
+      }
+    },
+    "image": {
+      "png-to-jpg": {
+        "name": "PNG 转 JPG",
+        "description": "免费在线 PNG 转 JPG 转换器 — 在浏览器中即时将 PNG 图像转换为 JPEG 格式，支持可调整的质量。不存储任何数据。用可配置的背景色替换透明度。"
+      },
+      "jpg-to-png": {
+        "name": "JPG 转 PNG",
+        "description": "免费在线 JPG 转 PNG 转换器 — 在浏览器中即时将 JPEG 图像转换为无损 PNG 格式，支持透明度。不存储任何数据。保留原始图像质量。"
+      },
+      "image-to-webp": {
+        "name": "图像转 WebP",
+        "description": "免费在线图像转 WebP 转换器 — 在浏览器中即时将 PNG 和 JPEG 图像转换为 WebP 格式，支持可调整的质量。不存储任何数据。通常可减少 25-35% 的文件大小。"
+      },
+      "webp-to-png": {
+        "name": "WebP 转 PNG",
+        "description": "免费在线 WebP 转 PNG 转换器 — 在浏览器中即时将 WebP 图像转换为无损 PNG 格式。不存储任何数据。保留透明度和原始图像质量。"
+      },
+      "image-to-base64": {
+        "name": "图像转 Base64",
+        "description": "免费在线图像转 base64 编码器 — 在浏览器中即时将图像转换为 base64 编码字符串，用于嵌入 HTML、CSS 或 JSON。不存储任何数据。支持所有常见图像格式。"
+      },
+      "base64-to-image": {
+        "name": "Base64 转图像",
+        "description": "免费在线 base64 转图像转换器 — 在浏览器中即时将 base64 编码的图像数据解码回可查看的图像。不存储任何数据。支持 PNG、JPEG、GIF、WebP 和 SVG 格式。"
+      },
+      "image-to-data-url": {
+        "name": "图像转数据 URL",
+        "description": "免费在线图像转数据 URL 转换器 — 在浏览器中即时将图像转换为数据 URI 字符串，用于在 HTML 和 CSS 中内联嵌入。不存储任何数据。输出即用的 data:image/... URI。"
+      },
+      "image-resizer": {
+        "name": "图像调整器",
+        "description": "免费在线图像调整器 — 在浏览器中即时将图像调整为精确的像素尺寸或按比例百分比。不存储任何数据。支持锁定宽高比和自定义宽度/高度。"
+      },
+      "image-cropper": {
+        "name": "图像裁剪器",
+        "description": "免费在线图像裁剪器 — 在浏览器中即时将图像裁剪为精确的像素尺寸，支持自定义 X、Y 偏移。不存储任何数据。支持矩形裁剪，具有精确的坐标控制。"
+      },
+      "image-rotator": {
+        "name": "图像旋转器",
+        "description": "免费在线图像旋转器 — 在浏览器中即时将图像旋转任意角度（0 到 360 度）。不存储任何数据。自动调整画布大小以适应旋转的内容。"
+      },
+      "image-flipper": {
+        "name": "图像翻转器",
+        "description": "免费在线图像翻转器 — 在浏览器中一键即时水平或垂直翻转图像。不存储任何数据。支持镜像和垂直翻转操作。"
+      },
+      "image-compressor": {
+        "name": "图像压缩器",
+        "description": "免费在线图像压缩器 — 在浏览器中即时以可调整的质量（1 到 100）减少 JPEG 文件大小。不存储任何数据。输出压缩后的 JPEG 并显示大小对比。"
+      },
+      "aspect-ratio-calculator": {
+        "name": "宽高比计算器",
+        "description": "免费在线宽高比计算器 — 在浏览器中即时计算显示比例、最大公约数和像素尺寸调整。无数据存储。匹配最接近的标准比例如 16:9、4:3 和 3:2。"
+      },
+      "image-border-adder": {
+        "name": "图片边框添加器",
+        "description": "免费在线图片边框工具 — 在浏览器中即时为图片添加自定义宽度的纯色边框。无数据存储。支持任意边框宽度和 HEX 格式颜色。"
+      },
+      "image-watermark": {
+        "name": "图片水印",
+        "description": "免费在线图片水印工具 — 在浏览器中即时添加自定义字体大小、颜色、不透明度和位置的文字水印。无数据存储。支持角落和中心位置。"
+      },
+      "round-corners": {
+        "name": "圆角处理",
+        "description": "免费在线圆角工具 — 在浏览器中即时为图片添加带透明背景的圆角。无数据存储。支持可调节的圆角半径和抗锯齿边缘。"
+      },
+      "circle-crop": {
+        "name": "圆形裁剪",
+        "description": "免费在线圆形裁剪工具 — 在浏览器中即时将图片裁剪成完美的圆形，背景透明。无数据存储。使用较短的尺寸作为直径，具有抗锯齿边缘。"
+      },
+      "thumbnail-generator": {
+        "name": "缩略图生成器",
+        "description": "免费在线缩略图生成器 — 在浏览器中即时创建具有最大宽度和高度限制的图片预览版本。无数据存储。自动保持宽高比。"
+      },
+      "image-splitter": {
+        "name": "图片分割器",
+        "description": "免费在线图片分割工具 — 在浏览器中即时按行列将图片分割成均等瓦片网格。无数据存储。将单个瓦片输出为 data URLs。"
+      },
+      "grayscale": {
+        "name": "灰度",
+        "description": "免费在线灰度转换器 — 在浏览器中即时使用亮度加权平均法将彩色图片转换为灰度。无数据存储。使用标准 BT.709 系数获得准确结果。"
+      },
+      "sepia": {
+        "name": "褐色调",
+        "description": "免费在线褐色调滤镜 — 在浏览器中即时为图片应用温暖的复古褐色调。无数据存储。使用经典褐色调颜色矩阵变换。"
+      },
+      "invert-colors": {
+        "name": "反色",
+        "description": "免费在线颜色反转器 — 在浏览器中即时反转图片中的所有颜色以创建负片效果。无数据存储。保留 alpha 通道透明度。"
+      },
+      "brightness-adjuster": {
+        "name": "亮度调节器",
+        "description": "免费在线亮度调节工具 — 在浏览器中即时以 -100 到 100 范围增加或降低图片亮度。无数据存储。保留 alpha 通道透明度。"
+      },
+      "contrast-adjuster": {
+        "name": "对比度调节器",
+        "description": "免费在线对比度调节工具 — 在浏览器中即时以 -100 到 100 范围增加或降低图片对比度。无数据存储。保留 alpha 通道透明度。"
+      },
+      "blur-filter": {
+        "name": "模糊滤镜",
+        "description": "免费在线图片模糊工具 — 在浏览器中即时对图片应用可调节的高斯模糊。无数据存储。支持 PNG、JPEG 和 WebP 图片的 1 到 50 像素半径。"
+      },
+      "sharpen-filter": {
+        "name": "锐化滤镜",
+        "description": "免费在线图像锐化工具 — 通过可调节的锐化量在浏览器中即时增强图像细节和清晰度。无数据存储。采用虚焦遮罩算法获得自然效果。"
+      },
+      "pixelate": {
+        "name": "像素化",
+        "description": "免费在线像素化工具 — 在浏览器中即时对图像应用可调节块大小的马赛克像素化效果。无数据存储。支持 2 到 100 像素的块大小。"
+      },
+      "posterize": {
+        "name": "色调分离",
+        "description": "免费在线色调分离工具 — 在浏览器中即时减少图像中的色阶数量以实现海报风格效果。无数据存储。每个通道可调节 2 到 32 个色阶。"
+      },
+      "duotone": {
+        "name": "双色调",
+        "description": "免费在线双色调图像滤镜 — 在浏览器中即时使用自定义高光和阴影颜色对图像应用双色调效果。无数据存储。先转换为灰度图，然后映射到选定的颜色对。"
+      },
+      "image-info": {
+        "name": "图像信息",
+        "description": "免费在线图像信息查看器 — 在浏览器中即时显示图像的尺寸、文件大小、格式、色深和宽高比。无数据存储。分析 PNG、JPEG、GIF、WebP 和 SVG 文件。"
+      },
+      "exif-reader": {
+        "name": "EXIF 读取器",
+        "description": "免费在线 EXIF 读取器 — 在浏览器中即时从 JPEG 图像中提取包括相机品牌、型号、曝光、ISO、GPS 坐标和时间戳等元数据。无数据存储。显示所有 EXIF、IPTC 和 XMP 标签。"
+      },
+      "exif-remover": {
+        "name": "EXIF 移除器",
+        "description": "免费在线 EXIF 移除器 — 在浏览器中即时从 JPEG 图像中删除所有元数据以保护隐私。无数据存储。移除相机信息、GPS 位置、时间戳和软件标签。"
+      },
+      "color-picker-from-image": {
+        "name": "从图像提取颜色",
+        "description": "免费在线颜色提取工具 — 在浏览器中即时从图像的任意像素坐标提取颜色值。无数据存储。返回 HEX、RGB 和 HSL 颜色值。"
+      },
+      "dominant-colors": {
+        "name": "主色提取",
+        "description": "免费在线主色提取工具 — 在浏览器中即时使用 k-means 聚类分析图像并提取主要颜色。无数据存储。返回带有百分比权重的 HEX 值。"
+      },
+      "image-histogram": {
+        "name": "图像直方图",
+        "description": "免费在线图像直方图分析工具 — 在浏览器中即时可视化图像的红、绿、蓝和亮度通道分布。无数据存储。生成 SVG 直方图图表。"
+      },
+      "image-diff": {
+        "name": "图像对比",
+        "description": "免费在线图像对比工具 — 在浏览器中即时逐像素比较两张图像并突出显示差异。无数据存储。用红色显示变化的像素，具有可配置的阈值。"
+      },
+      "placeholder-image": {
+        "name": "占位图生成器",
+        "description": "免费在线占位图生成器 — 在浏览器中即时以 SVG 或服务 URL 的形式创建具有自定义尺寸、颜色和文本的占位图。无数据存储。生成内联 SVG 或通过 placeholder.com、placehold.co 和 dummyimage.com URL。"
+      }
+    },
+    "jwt": {
+      "jwt-decoder": {
+        "name": "JWT 解码器",
+        "description": "免费在线JWT解码器 — 在浏览器中即时解码JWT令牌为header、payload和signature。无数据存储。解析base64url编码的header和payload声明，显示原始签名。"
+      },
+      "jwt-encoder": {
+        "name": "JWT编码器",
+        "description": "免费在线JWT编码器 — 在浏览器中即时创建HMAC签名的JWT令牌。无数据存储。支持HS256、HS384和HS512算法，可配置密钥。"
+      },
+      "jwt-debugger": {
+        "name": "JWT调试器",
+        "description": "免费在线JWT调试器 — 在浏览器中即时分析JWT令牌的过期、格式和声明问题。无数据存储。检测过期令牌、缺失声明、无效算法、格式错误的header和结构问题。"
+      },
+      "jwt-expiry-checker": {
+        "name": "JWT过期检查器",
+        "description": "免费在线JWT过期检查器 — 在浏览器中即时检查JWT令牌过期状态。无数据存储。读取exp、iat和nbf声明，以人类可读的格式显示剩余生命周期或过期时间。"
+      },
+      "jwt-claims-builder": {
+        "name": "JWT声明构建器",
+        "description": "免费在线JWT声明构建器 — 在浏览器中即时使用标准RFC 7519声明组装JWT负载对象。无数据存储。支持iss、sub、aud、exp、iat、jti声明及自定义键值对。"
+      },
+      "jwt-rs256-generator": {
+        "name": "JWT RS256生成器",
+        "description": "免费在线JWT RS256生成器 — 在浏览器中即时使用自动生成的RSA密钥对创建RS256签名的JWT令牌。无数据存储。生成2048位RSA密钥，导出PEM格式的公钥/私钥用于验证。"
+      },
+      "paseto-decoder": {
+        "name": "PASETO解码器",
+        "description": "免费在线PASETO解码器 — 在浏览器中即时解码和检查PASETO令牌结构。无数据存储。解析版本（v1-v4）、用途（local/public）、编码的负载和可选的带密钥ID的footer。"
+      },
+      "oauth-token-decoder": {
+        "name": "OAuth令牌解码器",
+        "description": "免费在线OAuth令牌解码器 — 在浏览器中即时解码和检查OAuth访问令牌/刷新令牌。无数据存储。检测JWT与不透明令牌，提取scopes、client ID、audience和过期声明。"
+      },
+      "saml-decoder": {
+        "name": "SAML解码器",
+        "description": "免费在线SAML解码器 — 在浏览器中即时将Base64编码的SAML断言和响应解码为可读XML。无数据存储。处理URL编码和base64url输入，以正确缩进格式显示XML。"
+      },
+      "fernet-encoder": {
+        "name": "Fernet编码器",
+        "description": "免费在线Fernet编码器 — 在浏览器中即时生成Fernet加密令牌。无数据存储。使用AES-128-CBC加密和HMAC-SHA256认证，自动生成或接受32字节的对称密钥。"
+      }
+    },
+    "identifiers": {
+      "uuid-v1-generator": {
+        "name": "UUID v1生成器",
+        "description": "免费在线UUID v1生成器 — 在浏览器中即时创建基于时间的UUID版本1标识符。无数据存储。生成RFC 4122兼容的UUID，包含嵌入式100纳秒时间戳、时钟序列和随机节点字节。"
+      },
+      "uuid-v4-generator": {
+        "name": "UUID v4生成器",
+        "description": "免费在线UUID v4生成器 — 在浏览器中即时创建密码学随机UUID版本4标识符。无数据存储。使用Web Crypto API实现安全随机性，支持可选的大写输出和批量生成最多100个。"
+      },
+      "uuid-v5-generator": {
+        "name": "UUID v5生成器",
+        "description": "免费在线UUID v5生成器 — 在浏览器中即时使用SHA-1哈希创建确定性的基于名称的UUID版本5标识符。无数据存储。支持DNS、URL、OID、X.500命名空间和自定义命名空间UUID。"
+      },
+      "uuid-v7-generator": {
+        "name": "UUID v7 生成器",
+        "description": "免费在线 UUID v7 生成器 — 在浏览器中instantly创建按时间排序的 UUID version 7 标识符。无数据存储。生成符合 RFC 9562 标准的 UUID，包含嵌入式 Unix 毫秒时间戳，支持数据库中的自然时间排序。"
+      },
+      "ulid-generator": {
+        "name": "ULID 生成器",
+        "description": "免费在线 ULID 生成器 — 在浏览器中instantly创建通用唯一词典可排序标识符。无数据存储。生成 26 字符 Crockford base32 编码的 ID，包含嵌入式毫秒时间戳，支持自然排序。"
+      },
+      "nanoid-generator": {
+        "name": "NanoID 生成器",
+        "description": "免费在线 NanoID 生成器 — 在浏览器中instantly创建小型、URL 友好的唯一标识符。无数据存储。支持自定义字母表、可配置长度（1–256 个字符）和批量生成，采用密码学安全的随机数。"
+      },
+      "cuid-generator": {
+        "name": "CUID 生成器",
+        "description": "免费在线 CUID 生成器 — 在浏览器中instantly创建防碰撞的唯一标识符。无数据存储。生成 CUID v1 格式的 ID，包含嵌入式时间戳、计数器、指纹和随机块，支持水平扩展。"
+      },
+      "cuid2-generator": {
+        "name": "CUID2 生成器",
+        "description": "免费在线 CUID2 生成器 — 在浏览器中instantly创建安全、防碰撞的标识符。无数据存储。使用 SHA-256 哈希生成 CUID2 格式的 ID，支持可配置长度（2–32 个字符）和批量生成（最多 100 个）。"
+      },
+      "snowflake-id-generator": {
+        "name": "Snowflake ID 生成器",
+        "description": "免费在线 Snowflake ID 生成器 — 在浏览器中instantly创建 Twitter 风格的分布式唯一标识符。无数据存储。生成 64 位 ID，支持可配置的 worker ID、数据中心 ID 和自定义 epoch，适用于分布式系统。"
+      },
+      "ksuid-generator": {
+        "name": "KSUID 生成器",
+        "description": "免费在线 KSUID 生成器 — 在浏览器中instantly创建 K 可排序唯一标识符。无数据存储。生成 27 字符 base62 编码的 ID，包含嵌入式时间戳，支持自然时间排序。"
+      },
+      "objectid-generator": {
+        "name": "ObjectID 生成器",
+        "description": "免费在线 MongoDB ObjectID 生成器 — 在浏览器中instantly创建 24 字符十六进制标识符。无数据存储。生成有效的 ObjectID，包含嵌入式时间戳、随机字节和递增计数器，遵循 BSON 规范。"
+      },
+      "short-id-generator": {
+        "name": "Short ID 生成器",
+        "description": "免费在线 short ID 生成器 — 在浏览器中instantly创建小型、URL 友好的标识符。无数据存储。支持字母数字、小写、大写、纯数字、十六进制和 URL 安全字母表，可配置长度（2–64 个字符）。"
+      },
+      "bulk-id-generator": {
+        "name": "批量 ID 生成器",
+        "description": "免费在线批量 ID 生成器 — 在浏览器中instantly创建多个 UUID、NanoID、short ID、十六进制或纯数字标识符。无数据存储。支持 UUID v4、UUID v7、NanoID、short 字母数字、十六进制和纯数字格式，可配置数量、长度和分隔符。"
+      },
+      "session-token-generator": {
+        "name": "会话令牌生成器",
+        "description": "免费在线会话令牌生成器 — 在浏览器中instantly创建密码学安全的令牌。无数据存储。支持十六进制、base64、URL 安全和字母数字格式，可配置长度（16–512 个字符）和熵报告。"
+      }
+    },
+    "git": {
+      "git-branch-namer": {
+        "name": "Git 分支命名器",
+        "description": "免费在线 git 分支名称生成器 — 在浏览器中instantly从任务描述创建清晰、一致的分支名称。无数据存储。支持 Gitflow、GitHub、Jira 和简单命名约定，包含自动 slugification。"
+      },
+      "git-command-builder": {
+        "name": "Git 命令生成器",
+        "description": "免费在线 git 命令构建器 — 通过选择操作并填写参数在浏览器中即时以可视方式组建 git 命令。不存储任何数据。支持 clone、commit、push、pull、merge、rebase、stash、reset、log、diff、tag、cherry-pick 和 bisect。"
+      },
+      "git-commit-message": {
+        "name": "Git 提交信息",
+        "description": "免费在线 git 提交信息格式化器 — 输入描述，在浏览器中即时获得格式正确的常规提交信息。不存储任何数据。自动小写主题，支持所有提交类型、作用域、重大更改、body 和 footer。"
+      },
+      "git-diff-viewer": {
+        "name": "Git Diff 查看器",
+        "description": "免费在线 git diff 查看器 — 在浏览器中并排比较两个文本版本，添加、删除和未改变的行即时高亮。不存储任何数据。使用基于 LCS 的算法进行精确的可视化差异对比。"
+      },
+      "gitignore-builder": {
+        "name": ".gitignore 构建器",
+        "description": "免费在线 .gitignore 构建器 — 切换复选框在浏览器中即时为项目构建 .gitignore 文件。不存储任何数据。涵盖 node_modules、构建输出、环境文件、IDE 设置、操作系统文件、Docker、Terraform 和自定义模式。"
+      },
+      "git-ignore-checker": {
+        "name": "Git 忽略规则检查器",
+        "description": "免费在线 .gitignore 检查器 — 粘贴 .gitignore 规则，在浏览器中即时测试文件路径是否被忽略或跟踪。不存储任何数据。显示匹配的模式，支持否定规则、全局模式、目录模式和注释。"
+      },
+      "conventional-commits": {
+        "name": "常规提交构建器",
+        "description": "免费在线常规提交构建器 — 在浏览器中即时组建格式正确的提交信息，包括类型、作用域、body 和 footer。不存储任何数据。支持所有提交类型（feat、fix、docs、refactor 等）、重大更改、问题引用和共同作者。"
+      },
+      "changelog-parser": {
+        "name": "变更日志解析器",
+        "description": "免费在线变更日志解析器 — 在浏览器中即时从 CHANGELOG.md 中提取版本、日期和更改内容到结构化 JSON。不存储任何数据。支持 Keep a Changelog 格式、semver 版本和多种章节类型（Added、Fixed、Changed、Removed）。"
+      }
+    },
+    "devops": {
+      "dockerfile-generator": {
+        "name": "Dockerfile 生成器",
+        "description": "免费在线 Dockerfile 生成器 — 在浏览器中即时创建生产就绪的 Dockerfile。不存储任何数据。支持 Node.js、Python、Go、Rust、Java、Ruby、PHP 和 .NET，具有多阶段构建、Alpine 镜像和非 root 用户。"
+      },
+      "dockerfile-linter": {
+        "name": "Dockerfile 代码检查工具",
+        "description": "免费在线 Dockerfile 代码检查工具 — 在浏览器中即时检查 Dockerfile 是否违反最佳实践。不存储任何数据。检测 :latest 标签、sudo 使用、ADD vs COPY、相对 WORKDIR、apt-get 缓存问题和连续 RUN 层。"
+      },
+      "compose-generator": {
+        "name": "Docker Compose 生成器",
+        "description": "免费在线 Docker Compose 生成器 — 在浏览器中即时构建 docker-compose.yaml 文件。不存储任何数据。支持 PostgreSQL、MySQL、MariaDB、MongoDB、Redis、Nginx 反向代理、健康检查和命名卷。"
+      },
+      "compose-validator": {
+        "name": "Docker Compose 验证器",
+        "description": "免费在线 Docker Compose 验证器 — 在浏览器中即时检查 docker-compose.yaml 中的常见问题。不存储任何数据。检测 :latest 标签、特权模式、过期版本、端口绑定风险和混合缩进。"
+      },
+      "k8s-yaml-generator": {
+        "name": "Kubernetes YAML 生成器",
+        "description": "免费在线 Kubernetes YAML 生成器 — 在浏览器中即时为 Deployments、Services、ConfigMaps、Secrets、Ingress、CronJobs 和 PVCs 创建 K8s 清单。不存储任何数据。包括资源限制、存活性/就绪性探针和命名空间支持。"
+      },
+      "k8s-yaml-validator": {
+        "name": "Kubernetes YAML 验证器",
+        "description": "免费在线 Kubernetes YAML 验证器 — 在浏览器中即时检查 K8s 清单中的缺失字段和最佳实践问题。不存储任何数据。检查 apiVersion、kind、metadata、labels、资源限制、健康检查、安全上下文和镜像标签。"
+      },
+      "helm-values-generator": {
+        "name": "Helm Values 生成器",
+        "description": "免费在线 Helm values.yaml 生成器 — 在浏览器中即时创建 Kubernetes Helm chart 值。无数据存储。支持副本、入站、HPA 自动扩展、持久卷、资源限制和节点亲和性。"
+      },
+      "container-image-parser": {
+        "name": "容器镜像解析器",
+        "description": "免费在线容器镜像引用解析器 — 在浏览器中即时将 Docker 和 OCI 镜像字符串分解为注册表、命名空间、名称、标签和摘要。无数据存储。支持 Docker Hub、GHCR、ECR、GCR 和自定义注册表。"
+      }
+    },
+    "legal": {
+      "privacy-policy-generator": {
+        "name": "隐私政策生成器",
+        "description": "免费在线隐私政策生成器 — 在浏览器中即时为您的网站创建隐私政策。无数据存储。涵盖数据收集、Cookie、分析、用户权利、数据安全和第三方链接，支持切换部分。"
+      },
+      "cookie-policy-generator": {
+        "name": "Cookie 政策生成器",
+        "description": "免费在线 Cookie 政策生成器 — 在浏览器中即时为您的网站创建 Cookie 政策。无数据存储。涵盖必需、分析、营销和偏好设置 Cookie，包含浏览器控制说明和第三方 Cookie 披露。"
+      },
+      "terms-of-service-generator": {
+        "name": "服务条款生成器",
+        "description": "免费在线服务条款生成器 — 在浏览器中即时为您的网站创建 ToS。无数据存储。涵盖条款接受、知识产权、用户内容、保证、责任、赔偿、终止和管辖法律。"
+      },
+      "copyright-notice-generator": {
+        "name": "版权声明生成器",
+        "description": "免费在线版权声明生成器 — 在浏览器中即时为您的项目创建版权头部。无数据存储。支持标准、MIT、Apache 2.0、知识共享、全保留权、HTML 和代码注释格式。"
+      },
+      "disclaimer-generator": {
+        "name": "免责声明生成器",
+        "description": "免费在线免责声明生成器 — 在浏览器中即时创建网站免责声明。无数据存储。支持通用、博客、附属、专业、医疗和财务免责声明模板。"
+      },
+      "gdpr-statement-generator": {
+        "name": "GDPR 声明生成器",
+        "description": "免费在线 GDPR 声明生成器 — 在浏览器中即时为您的网站创建 GDPR 合规声明。无数据存储。涵盖数据控制者详情、法律依据、全部七项数据主体权利、违规通知和数据转移保障。"
+      }
+    },
+    "reference": {
+      "country-code-reference": {
+        "name": "国家代码参考",
+        "description": "免费在线国家代码查询 — 在浏览器中即时查找 ISO 3166 字母-2、字母-3 和国际拨号代码。无数据存储。涵盖 50 多个国家，支持按名称、ISO 代码或电话前缀搜索。"
+      },
+      "currency-code-reference": {
+        "name": "货币代码参考",
+        "description": "免费在线货币代码参考 — 在浏览器中即时查找 ISO 4217 代码、符号和 40 多种世界货币名称。无数据存储。按代码、名称或符号搜索 — 包括法定货币和加密货币（BTC、ETH）。"
+      },
+      "language-code-reference": {
+        "name": "语言代码参考",
+        "description": "免费在线语言代码参考 — 在浏览器中即时查找 55 多种语言的 ISO 639-1 和 ISO 639-2 代码。无数据存储。按语言名称或代码搜索 — 涵盖主要世界语言、欧洲、亚洲和非洲语言。"
+      },
+      "keyboard-shortcuts-reference": {
+        "name": "键盘快捷键参考",
+        "description": "免费在线键盘快捷键参考 — 在浏览器中即时查找 VS Code、Chrome、终端和 git 热键。无数据存储。并排显示 Windows/Linux 和 macOS 按键绑定，支持搜索过滤。"
+      },
+      "emoji-reference": {
+        "name": "表情符号参考",
+        "description": "免费在线emoji参考——在浏览器中按名称或类别即时搜索和浏览60多个常见emoji。无数据存储。按笑脸、人物、动物、食物、旅行、物品和符号筛选。"
+      }
+    },
+    "math": {
+      "length-converter": {
+        "name": "长度转换器",
+        "description": "免费在线长度转换器——在浏览器中即时转换长度和距离单位。无数据存储。支持公里、米、厘米、毫米、英里、码、英尺、英寸和海里。"
+      },
+      "weight-converter": {
+        "name": "重量转换器",
+        "description": "免费在线重量转换器——在浏览器中即时转换重量和质量单位。无数据存储。支持公斤、克、毫克、磅、盎司、吨、石头和微克。"
+      },
+      "temperature-converter": {
+        "name": "温度转换器",
+        "description": "免费在线温度转换器——在浏览器中即时转换温度单位。无数据存储。支持摄氏度、华氏度和开尔文的转换。"
+      },
+      "volume-converter": {
+        "name": "体积转换器",
+        "description": "免费在线体积转换器——在浏览器中即时转换体积单位。无数据存储。支持升、毫升、加仑、夸脱、品脱、杯、液体盎司、汤匙、茶匙和立方米。"
+      },
+      "area-converter": {
+        "name": "面积转换器",
+        "description": "免费在线面积转换器——在浏览器中即时转换面积单位。无数据存储。支持平方米、平方英尺、英亩、公顷、平方公里、平方码、平方英寸和平方厘米。"
+      },
+      "speed-converter": {
+        "name": "速度转换器",
+        "description": "免费在线速度转换器——在浏览器中即时转换速度单位。无数据存储。支持km/h、mph、m/s、节、ft/s和马赫数。"
+      },
+      "time-unit-converter": {
+        "name": "时间单位转换器",
+        "description": "免费在线时间单位转换器——在浏览器中即时转换时间单位。无数据存储。支持毫秒、秒、分钟、小时、天、周、月和年。"
+      },
+      "data-size-converter": {
+        "name": "数据大小转换器",
+        "description": "免费在线数据大小转换器——在浏览器中即时转换数据大小单位。无数据存储。支持字节、KB、MB、GB、TB、PB和二进制单位(KiB、MiB、GiB、TiB)。"
+      },
+      "pressure-converter": {
+        "name": "压力转换器",
+        "description": "免费在线压力转换器——在浏览器中即时转换压力单位。无数据存储。支持帕斯卡、千帕、兆帕、巴、大气压、PSI、托和毫米汞柱。"
+      },
+      "energy-converter": {
+        "name": "能量转换器",
+        "description": "免费在线能量转换器——在浏览器中即时转换能量单位。无数据存储。支持焦耳、千焦耳、卡路里、千卡、瓦时、千瓦时、BTU和电子伏。"
+      },
+      "power-converter": {
+        "name": "功率转换器",
+        "description": "免费在线功率转换器——在浏览器中即时转换功率单位。无数据存储。支持瓦、千瓦、兆瓦、马力、PS、BTU/h和ft-lbs/s。"
+      },
+      "frequency-converter": {
+        "name": "频率转换器",
+        "description": "免费在线频率转换器——在浏览器中即时转换频率单位。无数据存储。支持Hz、kHz、MHz、GHz、THz和RPM。"
+      },
+      "angle-converter": {
+        "name": "角度转换器",
+        "description": "免费在线角度转换器 — 在浏览器中instantly转换角度单位。不存储任何数据。支持度、弧度、百分度、转、弧分和弧秒。"
+      },
+      "force-converter": {
+        "name": "力转换器",
+        "description": "免费在线力转换器 — 在浏览器中instantly转换力的单位。不存储任何数据。支持牛顿、千牛顿、磅力、达因、公斤力和盎司力。"
+      },
+      "fuel-economy-converter": {
+        "name": "燃油经济性转换器",
+        "description": "免费在线燃油经济性转换器 — 在浏览器中instantly转换燃油经济性单位。不存储任何数据。支持每加仑英里（美国/英国）、每100公里升数和每升公里数。"
+      },
+      "currency-converter": {
+        "name": "货币转换器",
+        "description": "免费在线货币转换器 — 在浏览器中instantly转换货币。不存储任何数据。警告：使用静态近似汇率，NOT实时市场数据。支持USD、EUR、GBP、JPY、CAD、AUD、CHF、CNY、INR和BRL。"
+      },
+      "number-formatter": {
+        "name": "数字格式化器",
+        "description": "免费在线数字格式化器 — 在浏览器中instantly使用特定地区的分隔符格式化数字。不存储任何数据。支持逗号、小数位、科学计数法、紧凑记数法和多个地区。"
+      },
+      "percentage-calculator": {
+        "name": "百分比计算器",
+        "description": "免费在线百分比计算器 — 在浏览器中instantly计算百分比。不存储任何数据。支持X%的Y、X是Y的多少%、增加百分比和减少百分比的计算。"
+      },
+      "ratio-calculator": {
+        "name": "比例计算器",
+        "description": "免费在线比例计算器 — 在浏览器中instantly将比例化简为最简形式。不存储任何数据。使用基于最大公约数的化简方法减化任何比例，支持小数。"
+      },
+      "fraction-calculator": {
+        "name": "分数计算器",
+        "description": "免费在线分数计算器 — 在浏览器中instantly执行分数算术运算。不存储任何数据。加、减、乘、除分数，带自动化简和十进制转换。"
+      },
+      "percentage-change": {
+        "name": "百分比变化",
+        "description": "免费在线百分比变化计算器 — 在浏览器中instantly计算两个数字之间的百分比增加或减少。不存储任何数据。显示方向（增加/减少）和精确的百分比变化。"
+      },
+      "tip-calculator": {
+        "name": "小费计算器",
+        "description": "免费在线小费计算器 — 在浏览器中instantly计算小费和分摊账单。不存储任何数据。输入账单金额、小费百分比和人数，查看人均总额和小费明细。"
+      },
+      "discount-calculator": {
+        "name": "折扣计算器",
+        "description": "免费在线折扣计算器 — 在浏览器中instantly计算促销价格和节省金额。不存储任何数据。输入原价和折扣百分比，查看最终价格、节省金额和折扣明细。"
+      },
+      "markup-calculator": {
+        "name": "加价计算器",
+        "description": "免费在线加价计算器 — 在浏览器中instantly计算加价和售价。不存储任何数据。输入成本和加价百分比，查看售价、利润金额和利润率。"
+      },
+      "vat-calculator": {
+        "name": "增值税计算器",
+        "description": "免费在线增值税计算器 — 在浏览器中即时添加或移除任何金额的增值税。无数据存储。支持任何增值税税率，并提供净额、总额和增值税金额明细。"
+      },
+      "compound-interest": {
+        "name": "复利计算器",
+        "description": "免费在线复利计算器 — 在浏览器中即时计算复利。无数据存储。支持年度、半年度、季度、月度和日度复利频率。"
+      },
+      "loan-calculator": {
+        "name": "贷款计算器",
+        "description": "免费在线贷款计算器 — 在浏览器中即时计算月度贷款付款。无数据存储。输入本金、利率和期限即可查看月付款、总付款和总利息。"
+      },
+      "bmi-calculator": {
+        "name": "BMI计算器",
+        "description": "免费在线BMI计算器 — 在浏览器中即时计算您的身体质量指数。无数据存储。输入体重（公斤）和身高（米）即可获得BMI值和健康分类。"
+      },
+      "expression-evaluator": {
+        "name": "表达式计算器",
+        "description": "免费在线表达式计算器 — 在浏览器中即时计算数学表达式。无数据存储。支持加法、减法、乘法、除法、乘方、取模和括号。"
+      },
+      "scientific-calculator": {
+        "name": "科学计算器",
+        "description": "免费在线科学计算器 — 在浏览器中即时执行高级数学运算。无数据存储。支持三角函数、对数函数、指数函数和其他科学函数（弧度或度数）。"
+      },
+      "matrix-calculator": {
+        "name": "矩阵计算器",
+        "description": "免费在线矩阵计算器 — 在浏览器中即时执行矩阵运算。无数据存储。支持加法、减法、乘法、转置、行列式和标量乘法。"
+      },
+      "prime-checker": {
+        "name": "质数检测器",
+        "description": "免费在线质数检测器 — 在浏览器中即时检测一个数字是否为质数。无数据存储。对任何整数进行快速质性测试，直至最大安全整数。"
+      },
+      "prime-factorization": {
+        "name": "质因数分解",
+        "description": "免费在线质因数分解 — 在浏览器中即时将任何数字分解为质因数。无数据存储。显示完整的质因数分解及指数表示法。"
+      },
+      "gcd-lcm-calculator": {
+        "name": "最大公约数和最小公倍数计算器",
+        "description": "免费在线最大公约数和最小公倍数计算器 — 在浏览器中即时计算最大公约数和最小公倍数。无数据存储。支持两个或更多数字的分步计算结果。"
+      },
+      "factorial-calculator": {
+        "name": "阶乘计算器",
+        "description": "免费在线阶乘计算器 — 在浏览器中即时计算任何数字的阶乘。无数据存储。支持计算至170!的值，提供即时结果。"
+      },
+      "fibonacci-generator": {
+        "name": "斐波那契数列生成器",
+        "description": "免费在线斐波那契数列生成器 — 在浏览器中即时生成斐波那契数列。无数据存储。生成斐波那契数列中的最多100个数字。"
+      },
+      "random-number-generator": {
+        "name": "随机数生成器",
+        "description": "免费在线随机数生成器 — 在浏览器中即时生成任何范围内的随机数。无数据存储。支持整数和小数，支持单个或批量生成最多1000个数字。"
+      },
+      "statistics-calculator": {
+        "name": "统计计算器",
+        "description": "免费在线统计计算器 — 在浏览器中即时计算平均值、中位数、众数、最小值、最大值和总和。无数据存储。获取包括计数、范围和频率分析的完整统计摘要。"
+      },
+      "standard-deviation": {
+        "name": "标准差",
+        "description": "免费在线标准差计算器 — 在浏览器中即时计算标准差和方差。无数据存储。支持总体标准差和样本标准差，包括平均值、方差和离散度分析。"
+      },
+      "permutation-combination": {
+        "name": "排列与组合",
+        "description": "免费在线排列组合计算器 — 在浏览器中即时计算 nPr 和 nCr。无数据存储。输入 n 和 r 值以计算概率和计数问题的排列和组合。"
+      },
+      "quadratic-solver": {
+        "name": "二次方程求解器",
+        "description": "免费在线二次方程求解器 — 在浏览器中即时求解二次方程（ax² + bx + c = 0）。无数据存储。求解实根和复根，计算判别式，并显示完整解。"
+      },
+      "bitwise-calculator": {
+        "name": "按位计算器",
+        "description": "免费在线按位计算器 — 在浏览器中即时执行按位运算。无数据存储。支持 AND、OR、XOR、NOT、左移和右移，具有十进制、二进制、十六进制和八进制输出。"
+      },
+      "roman-numeral-converter": {
+        "name": "罗马数字转换器",
+        "description": "免费在线罗马数字转换器 — 在浏览器中即时在十进制数字和罗马数字之间转换。无数据存储。支持数字 1-3999，具有自动检测和往返验证。"
+      },
+      "scientific-notation": {
+        "name": "科学计数法",
+        "description": "免费在线科学计数法转换器 — 在浏览器中即时在标准和科学计数法之间转换。无数据存储。自动检测输入格式，精度可配置至 20 位有效数字。"
+      }
+    },
+    "misc": {
+      "string-length": {
+        "name": "字符串长度",
+        "description": "免费在线字符串长度计算器 — 在浏览器中即时计算字符数、码点、UTF-8 字节、单词和行数。无数据存储。正确处理 Unicode、emoji 和多字节字符。"
+      },
+      "string-obfuscator": {
+        "name": "字符串混淆器",
+        "description": "免费在线字符串混淆器 — 在浏览器中即时用视觉上相同的 Unicode 同形体替换拉丁字符。无数据存储。使用西里尔字母和其他相似字符创建外观相同但码点不同的文本。"
+      },
+      "character-repeater": {
+        "name": "字符重复器",
+        "description": "免费在线字符串重复器 — 在浏览器中即时重复任何文本或字符 N 次。无数据存储。可配置重复次数（最多 1000 次）和重复之间的自定义分隔符。"
+      },
+      "pig-latin": {
+        "name": "猪拉丁语",
+        "description": "免费在线猪拉丁语翻译器 — 在浏览器中即时将英文文本转换为猪拉丁语。无数据存储。处理辅音群、保留大小写，并为以元音开头的单词追加 'yay'。"
+      },
+      "leet-speak": {
+        "name": "1337 语",
+        "description": "免费在线 1337 语转换器 — 在浏览器中即时将纯文本转换为 1337 语。无数据存储。使用常见替换来替换字母（a→4、e→3、o→0、s→5、t→7 等）。"
+      },
+      "emoji-converter": {
+        "name": "Emoji 转换器",
+        "description": "免费在线表情符号转换器 — 在浏览器中立即将常见英文单词替换为匹配的表情符号。无数据存储。识别70多个单词，包括情感、动物、天气、食物和物体。"
+      },
+      "zalgo-text": {
+        "name": "Zalgo 文本",
+        "description": "免费在线 Zalgo 文本生成器 — 在浏览器中立即为任何文本添加故障组合变音符。无数据存储。可调强度（低、中、高）控制在每个字母上下方添加多少个组合字符。"
+      },
+      "upside-down-text": {
+        "name": "倒置文本",
+        "description": "免费在线倒置文本生成器 — 在浏览器中使用 Unicode 字符立即翻转文本。无数据存储。反转字符顺序并将每个字母映射到其旋转的等效形式。"
+      },
+      "fancy-text": {
+        "name": "花式文本",
+        "description": "免费在线花式文本生成器 — 在浏览器中立即将纯文本转换为 Unicode 样式字符。无数据存储。支持粗体、斜体、脚本、Fraktur、双线、等宽、圆圈、方框和全角样式。"
+      },
+      "mime-type-reference": {
+        "name": "MIME 类型参考",
+        "description": "免费在线 MIME 类型参考 — 在浏览器中立即查找文件扩展名及其内容类型。无数据存储。涵盖50多种常见类型，包括文本、图像、音频、视频、应用和字体类别。"
+      },
+      "html-entity-reference": {
+        "name": "HTML 实体参考",
+        "description": "免费在线 HTML 实体参考 — 在浏览器中立即查找命名实体、字符和数字代码。无数据存储。涵盖45多个常见实体，包括符号、箭头、货币符号和标点符号。"
+      }
+    },
+    "network": {
+      "http-status-reference": {
+        "name": "HTTP 状态参考",
+        "description": "免费在线 HTTP 状态代码参考 — 在浏览器中按代码或描述立即查找任何状态代码以获得含义、类别和 RFC 规范。无数据存储。涵盖所有62个标准代码（1xx 至 5xx），支持类别搜索如 \"4xx\"。"
+      },
+      "subnet-calculator": {
+        "name": "子网计算器",
+        "description": "免费在线子网计算器 — 输入 CIDR 记号或带子网掩码的 IP，在浏览器中立即获得网络地址、广播地址、首/末主机、可用主机、通配符掩码、IP 类别和二进制表示。无数据存储。"
+      },
+      "cidr-calculator": {
+        "name": "CIDR 计算器",
+        "description": "免费在线 CIDR 计算器 — 输入 CIDR 记号，在浏览器中立即获得网络地址、广播地址、子网掩码、通配符掩码和 IP 范围。无数据存储。支持多个 CIDR，用换行符分隔。"
+      },
+      "ip-range-calculator": {
+        "name": "IP 范围计算器",
+        "description": "免费在线 IP 范围计算器 — 输入 CIDR、破折号范围或起/终 IP，在浏览器中立即获得总地址数、最小 CIDR 块和十进制值。无数据存储。检测范围是否与单个子网对齐。"
+      },
+      "mac-address-lookup": {
+        "name": "MAC 地址查询",
+        "description": "免费在线 MAC 地址查询 — 输入 MAC 地址，在浏览器中立即获得供应商/制造商、OUI 前缀、所有格式变体（冒号、破折号、点、裸）和单播/多播标志。无数据存储。识别90多个 OUI 前缀。"
+      },
+      "curl-builder": {
+        "name": "cURL 生成器",
+        "description": "免费在线 cURL 命令生成器 — 配置 URL、方法、请求头、认证和请求体，在浏览器中立即生成可直接粘贴的 cURL 命令。无数据存储。支持基本认证/Bearer/API-key 认证、代理、超时和常见标志。"
+      },
+      "cidr-to-range": {
+        "name": "CIDR 转 IP 范围",
+        "description": "免费在线 CIDR 转 IP 范围转换器 — 输入 CIDR 记号，在浏览器中立即获得首个 IP、末个 IP、总地址数、可用主机和子网掩码。无数据存储。支持多个 CIDR。"
+      },
+      "integer-to-ip": {
+        "name": "整数转IP",
+        "description": "免费在线整数转IPv4转换器——输入十进制、十六进制或八进制整数，即可在浏览器中获取点分十进制IP地址、十六进制和二进制表示。无数据存储。支持0x十六进制和0八进制前缀。"
+      },
+      "ip-in-cidr-checker": {
+        "name": "IP在CIDR范围检查器",
+        "description": "免费在线IP-in-CIDR检查器——输入IP地址和CIDR范围，即可在浏览器中立即检查该IP是否在子网内。无数据存储。显示网络地址、广播地址以及多个CIDR的匹配结果。"
+      },
+      "ip-info-parser": {
+        "name": "IP信息解析器",
+        "description": "免费在线IP地址分析器——输入IPv4或IPv6地址，即可在浏览器中立即获取版本、类型（私有/公网/本地回环/组播）、类别、十进制、十六进制、二进制和反向PTR。无数据存储。"
+      },
+      "ip-to-integer": {
+        "name": "IP转整数",
+        "description": "免费在线IPv4转整数转换器——输入点分十进制IP地址，即可在浏览器中立即获取十进制整数、十六进制、二进制、八进制和八位组分解。无数据存储。"
+      },
+      "ipv6-compressor": {
+        "name": "IPv6压缩器",
+        "description": "免费在线IPv6压缩器——输入完整或部分IPv6地址，即可在浏览器中立即获取使用::符号的最短压缩形式。无数据存储。支持以换行符分隔的多个地址。"
+      },
+      "ipv6-expander": {
+        "name": "IPv6扩展器",
+        "description": "免费在线IPv6扩展器——输入压缩的IPv6地址，即可在浏览器中立即获取8组完整表示法、各组、二进制和位数。无数据存储。支持以换行符分隔的多个地址。"
+      },
+      "range-to-cidr": {
+        "name": "范围转CIDR",
+        "description": "免费在线IP范围转CIDR转换器——输入起止IP范围，即可在浏览器中立即获取完全覆盖该范围的最小CIDR块集合。无数据存储。支持以破折号或换行符分隔的范围。"
+      },
+      "har-analyzer": {
+        "name": "HAR分析器",
+        "description": "免费在线HAR文件分析器——粘贴HTTP归档JSON，即可在浏览器中立即获取请求统计、状态码分布、最慢请求和域名分解。无数据存储。支持按状态码和MIME类型筛选。"
+      },
+      "http-headers-reference": {
+        "name": "HTTP头部参考",
+        "description": "免费在线HTTP头部参考——按类别（请求、响应、安全、CORS、缓存）浏览40多个标准头部，包含描述和使用示例，在浏览器中即时查看。无数据存储。按名称或描述搜索。"
+      },
+      "http-header-parser": {
+        "name": "HTTP头部解析器",
+        "description": "免费在线HTTP头部解析器——粘贴原始头部，即可在浏览器中立即获取包含头部计数、键值对和详情的结构化JSON。无数据存储。处理请求和响应头部，跳过HTTP状态行。"
+      },
+      "mime-type-lookup": {
+        "name": "MIME类型查询",
+        "description": "免费在线MIME类型查询——输入文件扩展名或MIME类型字符串，即可在浏览器中立即获取匹配的类型、描述和类别。无数据存储。涵盖80多个常见扩展名，包括媒体、代码、字体和归档。"
+      }
+    },
+    "regex": {
+      "regex-tester": {
+        "name": "正则表达式测试器",
+        "description": "免费在线正则表达式测试器——在浏览器中即时测试正则表达式，具有实时匹配突出显示和位置跟踪。无数据存储。显示匹配位置和匹配文本的可视化突出显示。"
+      },
+      "regex-explainer": {
+        "name": "正则表达式解释器",
+        "description": "免费在线正则表达式解析器 — 在浏览器中即时将任何正则表达式分解为简明英文描述。无数据存储。解释字符类、量词、分组、锚点和前向断言。"
+      },
+      "regex-replace": {
+        "name": "正则替换",
+        "description": "免费在线正则查找和替换 — 在浏览器中即时使用正则表达式搜索文本并用自定义模式替换匹配项。无数据存储。支持替换字符串中的捕获组引用（$1、$2）。"
+      },
+      "regex-split": {
+        "name": "正则分割",
+        "description": "免费在线正则文本分割器 — 在浏览器中即时使用正则表达式分隔符将文本分割成多个部分。无数据存储。支持自定义标志和可配置的结果限制。"
+      },
+      "regex-extract": {
+        "name": "正则提取",
+        "description": "免费在线正则匹配提取器 — 在浏览器中即时查找并提取文本中的所有模式匹配项。无数据存储。支持全局、不区分大小写和仅唯一匹配。"
+      },
+      "regex-groups": {
+        "name": "正则分组",
+        "description": "免费在线正则分组提取器 — 在浏览器中即时从正则匹配中提取命名和编号的捕获组。无数据存储。显示每个匹配的所有分组，格式清晰。"
+      },
+      "regex-flags-tester": {
+        "name": "正则标志测试器",
+        "description": "免费在线正则标志测试器 — 在浏览器中即时比较不同正则标志（g、i、m、s、u、y）如何影响模式匹配。无数据存储。为每个标志组合并排显示匹配计数。"
+      },
+      "regex-escape": {
+        "name": "正则转义",
+        "description": "免费在线正则转义工具 — 在浏览器中即时转义字符串中的特殊正则字符以进行安全的字面匹配。无数据存储。转义点、括号、圆括号和所有正则元字符。"
+      },
+      "glob-to-regex": {
+        "name": "Glob 转正则",
+        "description": "免费在线 Glob 转正则转换器 — 在浏览器中即时将 Glob 通配符模式转换为等效的正则表达式。无数据存储。支持扩展 Glob、大括号扩展和字符类。"
+      },
+      "regex-to-glob": {
+        "name": "正则转 Glob",
+        "description": "免费在线正则转 Glob 转换器 — 在浏览器中即时将简单正则表达式模式转换为等效的 Glob 通配符。无数据存储。当模式无法精确表示时提供转换注释。"
+      },
+      "regex-optimizer": {
+        "name": "正则优化器",
+        "description": "免费在线正则优化器 — 在浏览器中即时建议更简洁、更易读的正则表达式替代方案。无数据存储。简化字符类、量词和常见模式。"
+      },
+      "common-patterns": {
+        "name": "常见正则模式",
+        "description": "免费在线正则模式库 — 在浏览器中即时浏览电子邮件、URL、IP、电话、日期、UUID 等常见正则表达式模式。无数据存储。包含描述和测试示例的现成模式。"
+      },
+      "email-regex": {
+        "name": "电子邮件正则",
+        "description": "免费在线电子邮件正则生成器 — 在浏览器中即时创建基本、标准和严格级别的电子邮件验证模式。无数据存储。可配置的严格程度，从简单格式检查到 RFC 兼容模式。"
+      },
+      "url-regex": {
+        "name": "URL 正则",
+        "description": "免费在线 URL 正则生成器 — 在浏览器中即时为 HTTP、HTTPS、FTP 和自定义协议创建 URL 匹配模式。无数据存储。支持路径、查询字符串和片段匹配。"
+      },
+      "phone-regex": {
+        "name": "电话正则表达式",
+        "description": "免费在线电话号码正则生成器 — 立即在浏览器中为美国、英国、国际和 E.164 格式创建验证模式。不存储任何数据。包括每种格式的匹配示例。"
+      },
+      "ip-regex": {
+        "name": "IP 地址正则表达式",
+        "description": "免费在线 IP 地址正则生成器 — 立即在浏览器中为 IPv4、IPv6 和 CIDR 记号创建验证模式。不存储任何数据。支持严格的八位组验证和子网掩码模式。"
+      },
+      "date-regex": {
+        "name": "日期正则表达式",
+        "description": "免费在线日期正则生成器 — 立即在浏览器中为 ISO 8601、美国、欧盟、英国和日期时间格式创建验证模式。不存储任何数据。包括每种格式的匹配示例。"
+      },
+      "credit-card-regex": {
+        "name": "信用卡正则表达式",
+        "description": "免费在线信用卡正则生成器 — 立即在浏览器中为 Visa、Mastercard、Amex、Discover、Diners 和 JCB 卡创建验证模式。不存储任何数据。仅格式验证，支持可配置的卡类型。"
+      },
+      "password-regex": {
+        "name": "密码正则表达式",
+        "description": "免费在线密码正则生成器 — 立即在浏览器中创建可自定义的密码验证模式，包含大小写、数字和特殊字符要求。不存储任何数据。支持可配置的最小和最大长度。"
+      }
+    },
+    "sql": {
+      "formatter": {
+        "name": "SQL 格式化工具",
+        "description": "免费在线 SQL 格式化工具 — 立即在浏览器中格式化和美化 SQL 查询，包括适当的缩进和关键字大小写。不存储任何数据。支持 SELECT、INSERT、UPDATE、DELETE、CREATE TABLE 和复杂的 JOIN 查询。"
+      },
+      "minify": {
+        "name": "SQL 压缩工具",
+        "description": "免费在线 SQL 压缩工具 — 立即在浏览器中通过删除空白、注释和不必要的格式来压缩 SQL 查询。不存储任何数据。保留字符串字面量和查询语义。"
+      },
+      "validator": {
+        "name": "SQL 验证工具",
+        "description": "免费在线 SQL 验证工具 — 立即在浏览器中检查 SQL 查询的语法错误、缺失子句和常见问题（如没有 WHERE 的 DELETE）。不存储任何数据。报告语句计数、类型和警告。"
+      },
+      "to-json": {
+        "name": "SQL 转 JSON",
+        "description": "免费在线 SQL 转 JSON 转换器 — 立即在浏览器中将 SQL 查询解析为详细的 AST JSON 表示，包括列引用、表引用、二元表达式和子句结构。不存储任何数据。"
+      },
+      "sql-parser": {
+        "name": "SQL 解析器",
+        "description": "免费在线 SQL 解析器 — 立即在浏览器中将 SQL 查询解析为结构化的类 AST JSON，包括列、表、条件和子句。不存储任何数据。"
+      },
+      "sql-explainer": {
+        "name": "SQL 解释器",
+        "description": "免费在线 SQL 解释器 — 立即在浏览器中将 SQL 查询翻译为纯英文描述，并按子句分解。不存储任何数据。解释 SELECT、JOIN、WHERE、GROUP BY 和子查询。"
+      },
+      "sql-to-nosql": {
+        "name": "SQL 转 NoSQL",
+        "description": "免费在线 SQL 转 NoSQL 转换器 — 立即在浏览器中将 SQL SELECT 查询转换为 MongoDB 风格的 find、sort 和 limit 查询语法。不存储任何数据。"
+      },
+      "sql-dialect-converter": {
+        "name": "SQL 方言转换器",
+        "description": "免费在线 SQL 方言转换器 — 在浏览器中即时在 MySQL、PostgreSQL 和 SQLite 语法之间转换 SQL。无数据存储。处理 AUTO_INCREMENT vs SERIAL、TINYINT vs BOOLEAN、引擎子句和引号差异。"
+      },
+      "sql-query-builder": {
+        "name": "SQL 查询生成器",
+        "description": "免费在线 SQL 查询生成器 — 在浏览器中从参数构建 SELECT、INSERT、UPDATE 和 DELETE 查询，支持 MySQL、PostgreSQL 和 SQLite 方言。无数据存储。"
+      },
+      "sql-index-suggester": {
+        "name": "SQL 索引建议器",
+        "description": "免费在线 SQL 索引建议器 — 分析查询并为 WHERE、JOIN 和 ORDER BY 列推荐 CREATE INDEX 语句，在浏览器中即时生成。无数据存储。"
+      },
+      "json-to-sql-insert": {
+        "name": "JSON 转 SQL INSERT",
+        "description": "免费在线 JSON 转 SQL INSERT 转换器 — 在浏览器中即时将 JSON 数组或对象转换为 SQL INSERT 语句。无数据存储。自动从 JSON 键检测列名并处理嵌套值。"
+      },
+      "csv-to-sql-insert": {
+        "name": "CSV 转 SQL INSERT",
+        "description": "免费在线 CSV 转 SQL INSERT 转换器 — 在浏览器中即时将 CSV 数据转换为 SQL INSERT 语句。无数据存储。处理带引号的值、自定义表名并生成正确转义的 SQL。"
+      },
+      "connection-string-builder": {
+        "name": "连接字符串生成器",
+        "description": "免费在线数据库连接字符串生成器 — 在浏览器中从参数即时生成 PostgreSQL、MySQL、MongoDB、Redis、SQLite 和 MSSQL 连接 URI。无数据存储。支持 URI、键值和环境变量输出格式。"
+      },
+      "dsn-parser": {
+        "name": "DSN 解析器",
+        "description": "免费在线 DSN 解析器 — 在浏览器中即时将 PHP PDO、JDBC、ODBC 和 ADO.NET 数据源名称字符串解析为结构化组件。无数据存储。提取驱动程序、主机、端口、数据库和连接参数。"
+      },
+      "redis-command-builder": {
+        "name": "Redis 命令生成器",
+        "description": "免费在线 Redis 命令生成器 — 在浏览器中即时生成 GET、SET、HSET、LPUSH、SADD、ZADD 等 Redis 命令为 CLI、Node.js 或 Python 格式。无数据存储。"
+      },
+      "mongodb-query-builder": {
+        "name": "MongoDB 查询生成器",
+        "description": "免费在线 MongoDB 查询生成器 — 在浏览器中即时构建 find、insert、update、delete、aggregate、count 和 distinct 查询为 shell、Node.js 或 Python 格式。无数据存储。"
+      },
+      "elasticsearch-query-builder": {
+        "name": "Elasticsearch 查询生成器",
+        "description": "免费在线 Elasticsearch 查询生成器 — 在浏览器中即时构建 match、term、range、bool 和 wildcard 查询为 JSON、cURL 或 Python 格式。无数据存储。支持分页、排序和复杂布尔查询。"
+      },
+      "database-url-converter": {
+        "name": "数据库 URL 转换器",
+        "description": "免费在线数据库 URL 转换器 — 在浏览器中即时将数据库连接 URL 转换为 env、JSON、YAML、Prisma、Sequelize、TypeORM、Knex、Django、Laravel 和 Spring 配置格式。无数据存储。"
+      },
+      "er-diagram-generator": {
+        "name": "ER 图生成器",
+        "description": "免费在线 ER 图生成器 — 在浏览器中从 SQL CREATE TABLE 语句即时创建实体关系图。无数据存储。生成 Mermaid 图表语法，包含表、列、类型和关系。"
+      },
+      "create-table-generator": {
+        "name": "CREATE TABLE 生成器",
+        "description": "免费在线 CREATE TABLE 生成器 — 在浏览器中从列定义和约束即时生成 SQL CREATE TABLE 语句。无数据存储。支持主键、唯一约束、NOT NULL、默认值、自增、外键和检查约束。"
+      },
+      "diff": {
+        "name": "SQL 对比",
+        "description": "免费在线 SQL 对比工具 — 并排比较两个 SQL 查询，即时检测列、表、连接和子句中的结构差异。浏览器中完成，无数据存储。"
+      },
+      "escape": {
+        "name": "SQL 转义",
+        "description": "免费在线 SQL 转义工具 — 转义 SQL 字符串中的特殊字符以防止语法错误，在浏览器中即时处理。无数据存储。支持 MySQL、PostgreSQL、SQLite 和 MSSQL 转义规则。"
+      },
+      "explain-visualizer": {
+        "name": "EXPLAIN 可视化工具",
+        "description": "免费在线 SQL EXPLAIN 可视化工具 — 在浏览器中解析和可视化 PostgreSQL 和 MySQL 查询执行计划。无数据存储。显示扫描类型、成本、行数估计和性能警告。"
+      },
+      "index-advisor": {
+        "name": "索引顾问",
+        "description": "免费在线 SQL 索引顾问 — 分析 SQL 查询并为 WHERE、JOIN、ORDER BY 和 GROUP BY 子句建议最优索引，在浏览器中即时处理。无数据存储。生成可直接使用的 CREATE INDEX 语句。"
+      },
+      "insert-generator": {
+        "name": "INSERT 生成器",
+        "description": "免费在线 SQL INSERT 生成器 — 从表名、列定义和行数据构建 INSERT 语句，在浏览器中即时处理。无数据存储。支持多行、批量插入和各种 SQL 方言。"
+      },
+      "migration-generator": {
+        "name": "迁移脚本生成器",
+        "description": "免费在线 SQL 迁移脚本生成器 — 从结构化操作创建包含向上和向下操作的数据库迁移脚本，在浏览器中即时处理。无数据存储。支持添加/删除列、创建/删除表、添加/删除索引和重命名操作。"
+      },
+      "schema-diff": {
+        "name": "Schema 对比",
+        "description": "免费在线 SQL Schema 对比工具 — 比较两个数据库 Schema 并为已添加、已删除和已修改的列生成 ALTER TABLE 迁移语句，在浏览器中即时处理。无数据存储。"
+      },
+      "select-builder": {
+        "name": "SELECT 构建器",
+        "description": "免费在线 SQL SELECT 构建器 — 从结构化输入构建包含连接、WHERE、GROUP BY、HAVING、ORDER BY 和 LIMIT 子句的 SELECT 查询，在浏览器中即时处理。无数据存储。"
+      }
+    },
+    "svg": {
+      "svg-optimizer": {
+        "name": "SVG 优化工具",
+        "description": "免费在线 SVG 优化工具 — 通过删除注释、元数据、空白和缩短颜色值来减小 SVG 文件大小，在浏览器中即时处理。无数据存储。每个优化步骤都提供可配置选项。"
+      },
+      "svg-viewer": {
+        "name": "SVG 查看器",
+        "description": "免费在线 SVG 查看器 — 预览和检查 SVG 图形及其尺寸信息和元素计数，在浏览器中即时处理。无数据存储。显示宽度、高度、viewBox 和 SVG 元素的详细信息。"
+      },
+      "svg-to-png": {
+        "name": "SVG 转 PNG",
+        "description": "免费在线 SVG 转 PNG 转换器 — 将 SVG 矢量图形栅格化为 PNG 格式并支持透明度，在浏览器中即时处理。无数据存储。支持自定义缩放因子以获得高 DPI 输出。"
+      },
+      "svg-to-jpg": {
+        "name": "SVG 转 JPG",
+        "description": "免费在线 SVG 转 JPG 转换器 — 将 SVG 矢量图形栅格化为 JPEG 格式并支持可配置质量，在浏览器中即时处理。无数据存储。支持自定义背景色和 JPEG 压缩质量。"
+      },
+      "svg-to-base64": {
+        "name": "SVG 转 Base64",
+        "description": "免费在线 SVG 转 Base64 转换器 — 在浏览器中即时将 SVG 源代码编码为 base64 数据 URL。无数据存储。生成可直接使用的 data:image/svg+xml;base64 URI。"
+      },
+      "svg-to-data-uri": {
+        "name": "SVG 转数据 URI",
+        "description": "免费在线 SVG 转数据 URI 转换器 — 在浏览器中即时创建 URL 编码的 SVG 数据 URI，比 base64 更高效。无数据存储。生成可直接使用的 data:image/svg+xml URI，编码最小化。"
+      },
+      "svg-formatter": {
+        "name": "SVG 格式化工具",
+        "description": "免费在线 SVG 格式化工具 — 在浏览器中即时美化并缩进 SVG 源代码。无数据存储。支持可配置的缩进大小和制表符或空格。"
+      },
+      "svg-path-editor": {
+        "name": "SVG 路径分析器",
+        "description": "免费在线 SVG 路径分析器 — 在浏览器中即时解析并可视化 SVG 路径命令及详细分解。无数据存储。显示命令类型、统计数据和路径属性，如曲线、圆弧和闭合。"
+      },
+      "svg-to-css": {
+        "name": "SVG 转 CSS",
+        "description": "免费在线 SVG 转 CSS 转换器 — 在浏览器中即时将 SVG 嵌入为 CSS background-image、mask-image 或 content 属性。无数据存储。生成可直接使用的 CSS，支持可配置的选择器和大小。"
+      },
+      "svg-sprite-generator": {
+        "name": "SVG 精灵图生成器",
+        "description": "免费在线 SVG 精灵图生成器 — 在浏览器中即时将多个 SVG 图标合并为单个精灵图，使用 symbol 元素。无数据存储。为每个图标生成 use 标签引用。"
+      },
+      "svg-color-changer": {
+        "name": "SVG 颜色更换器",
+        "description": "免费在线 SVG 颜色更换器 — 在浏览器中即时查找并替换 SVG 源代码中的颜色。无数据存储。支持十六进制、RGB 和命名颜色，不区分大小写匹配。"
+      },
+      "svg-wave-generator": {
+        "name": "SVG 波浪生成器",
+        "description": "免费在线 SVG 波浪生成器 — 在浏览器中即时为分段背景和页面分隔线创建分层波浪图案。无数据存储。支持多层波浪、自定义颜色、振幅、频率和垂直翻转。"
+      },
+      "svg-blob-generator": {
+        "name": "SVG 斑点生成器",
+        "description": "免费在线 SVG 斑点生成器 — 在浏览器中即时使用 Catmull-Rom 样条曲线创建有机光滑的斑点形状。无数据存储。支持可配置的复杂度、颜色、笔画和可重现的种子。"
+      },
+      "svg-pattern-generator": {
+        "name": "SVG 图案生成器",
+        "description": "免费在线 SVG 图案生成器 — 在浏览器中即时创建点、线、网格、对角线、交叉影线、人字纹、之字形和六边形的重复图案。无数据存储。支持自定义瓦片大小、颜色和透明度。"
+      },
+      "svg-avatar-generator": {
+        "name": "SVG 头像生成器",
+        "description": "免费在线 SVG 头像生成器 — 在浏览器中即时创建带有首字母、几何图案或环形样式的个人资料图片占位符。无数据存储。支持圆形、方形和圆角形状，自定义颜色和大小。"
+      },
+      "svg-divider-generator": {
+        "name": "SVG 分隔线生成器",
+        "description": "免费在线 SVG 分隔线生成器 — 在浏览器中即时创建波浪、三角形、曲线、倾斜、之字形、箭头和圆角样式的分段分隔线。无数据存储。支持自定义颜色、大小和垂直翻转。"
+      },
+      "svg-background-generator": {
+        "name": "SVG 背景生成器",
+        "description": "免费在线 SVG 背景生成器 — 在浏览器中即时创建具有圆形、三角形、地形图、波浪和噪点图案的装饰性渐变背景。无数据存储。支持自定义颜色、大小、透明度和可重现的种子。"
+      }
+    },
+    "validation": {
+      "email-validator": {
+        "name": "电子邮件验证器",
+        "description": "免费在线电子邮件地址验证器 — 在浏览器中即时检查电子邮件是否遵循 RFC 5322 格式。不存储任何数据。验证本地部分、域名和总体结构。"
+      },
+      "url-validator": {
+        "name": "URL 验证器",
+        "description": "免费在线 URL 验证器 — 在浏览器中即时检查 URL 格式是否正确。不存储任何数据。解析并显示协议、主机、路径、查询参数和片段。"
+      },
+      "phone-validator": {
+        "name": "电话号码验证器",
+        "description": "免费在线电话号码验证器 — 在浏览器中即时检查电话号码是否遵循国际 E.164 格式。不存储任何数据。验证数字数量和国家代码前缀。"
+      },
+      "uuid-validator": {
+        "name": "UUID 验证器",
+        "description": "免费在线 UUID 验证器 — 在浏览器中即时检查 UUID 格式是否正确并识别其版本。不存储任何数据。根据 RFC 4122 验证版本 1 至 7 的 8-4-4-4-12 十六进制格式。"
+      },
+      "mac-address-validator": {
+        "name": "MAC 地址验证器",
+        "description": "免费在线 MAC 地址验证器 — 在浏览器中即时检查 MAC 地址格式是否正确。不存储任何数据。支持冒号分隔、连字符分隔和点分隔表示法。"
+      },
+      "ipv4-validator": {
+        "name": "IPv4 验证器",
+        "description": "免费在线 IPv4 地址验证器 — 在浏览器中即时检查 IP 地址格式是否正确。不存储任何数据。验证八位组范围并识别地址类型（公有、私有、环回、多播）。"
+      },
+      "ipv6-validator": {
+        "name": "IPv6 验证器",
+        "description": "免费在线 IPv6 地址验证器 — 在浏览器中即时检查 IPv6 地址格式是否正确。不存储任何数据。验证完整和简写格式，并识别地址类型（环回、链路本地、多播）。"
+      },
+      "domain-validator": {
+        "name": "域名验证器",
+        "description": "免费在线域名验证器 — 在浏览器中即时检查域名格式是否正确。不存储任何数据。验证标签、长度限制、顶级域名存在性和符合 RFC 的字符使用。"
+      },
+      "hostname-validator": {
+        "name": "主机名验证器",
+        "description": "免费在线主机名验证器 — 在浏览器中即时检查主机名是否遵循 RFC 1123 格式。不存储任何数据。验证标签长度、字符集和总体主机名结构。"
+      },
+      "slug-validator": {
+        "name": "URL Slug 验证器",
+        "description": "免费在线 URL slug 验证器 — 在浏览器中即时检查字符串是否为有效的 URL 友好 slug。不存储任何数据。根据 SEO 最佳实践验证小写字母、数字和连字符。"
+      },
+      "semver-validator": {
+        "name": "SemVer 验证器",
+        "description": "免费在线语义版本验证器 — 在浏览器中即时检查版本字符串是否遵循 SemVer 2.0 格式。不存储任何数据。解析主版本号、次版本号、修订版本号、预发布版本和构建元数据组件。"
+      },
+      "hex-color-validator": {
+        "name": "十六进制颜色验证器",
+        "description": "免费在线十六进制颜色验证器 — 在浏览器中即时检查十六进制颜色代码是否有效。不存储任何数据。支持 3 位、4 位（带 alpha）、6 位和 8 位（带 alpha）十六进制格式 — 需要 # 前缀。"
+      },
+      "credit-card-validator": {
+        "name": "信用卡验证器",
+        "description": "免费在线信用卡验证器 — 在浏览器中立即检查卡号是否通过 Luhn 算法。不存储任何数据。检测卡类型（Visa、Mastercard、Amex、Discover）并隐藏显示的号码。"
+      },
+      "isbn-validator": {
+        "name": "ISBN 验证器",
+        "description": "免费在线 ISBN 验证器 — 在浏览器中立即检查 ISBN-10 或 ISBN-13 号码是否有效。不存储任何数据。验证校验位并规范化两种格式的 ISBN。"
+      },
+      "issn-validator": {
+        "name": "ISSN 验证器",
+        "description": "免费在线 ISSN 验证器 — 在浏览器中立即检查国际标准连续出版物号是否有效。不存储任何数据。验证校验位并检验 8 位数字 ISSN 格式。"
+      },
+      "doi-validator": {
+        "name": "DOI 验证器",
+        "description": "免费在线 DOI 验证器 — 在浏览器中立即验证数字对象标识符格式。不存储任何数据。根据 DOI 规范验证前缀和后缀结构。"
+      },
+      "json-validator": {
+        "name": "JSON 验证器",
+        "description": "免费在线 JSON 验证器 — 在浏览器中立即检查 JSON 数据的语法错误。不存储任何数据。检测顶层类型（对象、数组、字符串、数字、布尔值、null）并验证结构。"
+      },
+      "xml-validator": {
+        "name": "XML 验证器",
+        "description": "免费在线 XML 验证器 — 在浏览器中立即检查 XML 文档的格式良好性错误。不存储任何数据。验证标签匹配、正确嵌套和 XML 声明语法。"
+      },
+      "yaml-validator": {
+        "name": "YAML 验证器",
+        "description": "免费在线 YAML 验证器 — 在浏览器中立即检查 YAML 文档的语法错误。不存储任何数据。验证缩进、键值对、序列和嵌套结构。"
+      },
+      "toml-validator": {
+        "name": "TOML 验证器",
+        "description": "免费在线 TOML 验证器 — 在浏览器中立即检查 TOML 配置文件的语法错误。不存储任何数据。验证表、键值对、数组和内联表。"
+      },
+      "csv-validator": {
+        "name": "CSV 验证器",
+        "description": "免费在线 CSV 验证器 — 在浏览器中立即检查 CSV 数据的格式错误和列一致性。不存储任何数据。验证行结构、列计数，并报告总行数和列数。"
+      },
+      "html-validator": {
+        "name": "HTML 验证器",
+        "description": "免费在线 HTML 验证器 — 在浏览器中立即检查 HTML 的标签匹配和结构错误。不存储任何数据。验证开闭标签对、嵌套和自闭合元素。"
+      },
+      "css-validator": {
+        "name": "CSS 验证器",
+        "description": "免费在线 CSS 语法验证器 — 在浏览器中立即检查样式表的语法错误。不存储任何数据。验证选择器、属性、值、媒体查询和嵌套规则。"
+      },
+      "javascript-validator": {
+        "name": "JavaScript 验证器",
+        "description": "免费在线 JavaScript 语法验证器 — 在浏览器中立即检查 JS 代码的语法错误。不存储任何数据。解析 ES2020+ 语法，包括箭头函数、模板字符串和解构赋值。"
+      },
+      "sql-validator": {
+        "name": "SQL 验证器",
+        "description": "免费在线 SQL 语法验证器 — 在浏览器中立即检查 SQL 查询的基本语法错误。不存储任何数据。验证 SELECT、INSERT、UPDATE、DELETE 和 CREATE 语句。"
+      },
+      "cron-validator-tool": {
+        "name": "Cron 表达式验证器",
+        "description": "免费在线 cron 表达式验证工具 — 在浏览器中即时验证你的 cron 计划语法。无数据存储。支持解析分钟、小时、月份日期、月份和周期字段，包括范围、步进和通配符。"
+      }
+    },
+    "web": {
+      "meta-tag-generator": {
+        "name": "Meta 标签生成器",
+        "description": "免费在线 HTML meta 标签生成工具 — 在浏览器中即时创建 SEO、视口、字符集和社交发现必要的 meta 标签。无数据存储。支持自定义标题、描述、关键词、作者、robots 指令和主题颜色。"
+      },
+      "og-generator": {
+        "name": "Open Graph 生成器",
+        "description": "免费在线 Open Graph meta 标签生成工具 — 在浏览器中即时创建 og: meta 标签以获得 Facebook、LinkedIn 等平台上的富媒体社交预览。无数据存储。支持自定义标题、描述、图片尺寸、类型、网站名称和地区。"
+      },
+      "twitter-card-generator": {
+        "name": "Twitter 卡片生成器",
+        "description": "免费在线 Twitter 卡片 meta 标签生成工具 — 在浏览器中即时创建摘要、大图片、应用和播放器卡片标签以获得富媒体社交预览。无数据存储。支持自定义卡片类型、图片、网站账号和创建者账号。"
+      },
+      "schema-org-generator": {
+        "name": "Schema.org 生成器",
+        "description": "免费在线 Schema.org JSON-LD 生成工具 — 在浏览器中即时为文章、产品、组织、事件等创建结构化数据标记。无数据存储。输出可直接粘贴的 script 标签以获得丰富搜索结果。"
+      },
+      "robots-txt-generator": {
+        "name": "robots.txt 生成器",
+        "description": "免费在线 robots.txt 生成工具 — 在浏览器中即时创建爬虫指令（包含禁止路径、网站地图 URL 和爬虫延迟设置）。无数据存储。支持自定义机器人特定规则和多个路径条目。"
+      },
+      "robots-txt-validator": {
+        "name": "robots.txt 验证器",
+        "description": "免费在线 robots.txt 验证工具 — 在浏览器中即时检查 robots.txt 语法、指令和爬虫规则的错误。无数据存储。验证 User-agent、Disallow、Allow、Sitemap 和 Crawl-delay 指令。"
+      },
+      "sitemap-generator": {
+        "name": "网站地图生成器",
+        "description": "免费在线 XML 网站地图生成工具 — 在浏览器中即时创建包含更改频率、优先级和最后修改时间设置的 sitemap.xml 文件。无数据存储。支持多个 URL，每个条目均可配置 SEO 元数据。"
+      },
+      "sitemap-validator": {
+        "name": "网站地图验证器",
+        "description": "免费在线 XML 网站地图验证工具 — 在浏览器中即时检查 sitemap.xml 结构、URL 条目和命名空间声明的错误。无数据存储。验证 loc、changefreq、priority 和 URL 数量限制。"
+      },
+      "canonical-url-builder": {
+        "name": "规范 URL 构建器",
+        "description": "免费在线规范 URL 构建工具 — 在浏览器中即时生成规范链接标签以防止重复内容问题。无数据存储。支持 HTML 链接标签和 HTTP 头格式。"
+      },
+      "hreflang-generator": {
+        "name": "Hreflang 生成器",
+        "description": "免费在线 hreflang 标签生成工具 — 在浏览器中即时为多语言和多区域 SEO 创建 hreflang 链接标签。无数据存储。生成带有 x-default 回退的替代链接标签。"
+      },
+      "meta-preview": {
+        "name": "Meta 标签预览",
+        "description": "免费在线 meta 标签预览工具 — 在浏览器中即时查看你的页面在 Google 搜索结果中的显示效果，包括标题长度和描述分析。无数据存储。显示 SERP 预览与字符计数指示器。"
+      },
+      "social-preview": {
+        "name": "社交预览",
+        "description": "免费在线社交媒体预览 — 即时查看您的页面在 Facebook 和 Twitter 上分享时的样式，包括 Open Graph 和 Twitter Card 分析，全在浏览器中进行。不存储任何数据。显示 Facebook 卡片、Twitter 卡片和检测到的元标签值。"
+      },
+      "csp-builder": {
+        "name": "CSP Builder",
+        "description": "免费在线 CSP 构建器 — 使用指令配置和服务器配置示例快速创建 Content Security Policy 标头，全在浏览器中进行。不存储任何数据。生成标头、HTML 元标签、Apache 和 Nginx 格式。"
+      },
+      "csp-validator": {
+        "name": "CSP Validator",
+        "description": "免费在线 CSP 验证器 — 检查 Content Security Policy 标头的语法错误和安全警告，全在浏览器中即时进行。不存储任何数据。检测 unsafe-inline、通配符源、重复指令和缺失的推荐策略。"
+      },
+      "cors-builder": {
+        "name": "CORS Builder",
+        "description": "免费在线 CORS 标头构建器 — 配置跨域资源共享标头，包括 Express、Nginx 和 Apache 示例，全在浏览器中即时进行。不存储任何数据。支持允许的源、方法、标头、凭证和预检缓存持续时间。"
+      },
+      "sri-hash-generator": {
+        "name": "SRI Hash Generator",
+        "description": "免费在线 SRI 哈希生成器 — 为脚本和样式表生成子资源完整性哈希，支持 SHA-256、SHA-384 和 SHA-512，全在浏览器中即时进行。不存储任何数据。输出 integrity 属性和可直接使用的脚本和链接标签。"
+      },
+      "security-headers-check": {
+        "name": "Security Headers Check",
+        "description": "免费在线安全标头分析器 — 审核 HTTP 响应标头是否符合 OWASP 安全最佳实践，即时获得安全评分，全在浏览器中进行。不存储任何数据。检查 CSP、HSTS、X-Frame-Options、Referrer-Policy 和 7 个其他标头。"
+      },
+      "hsts-builder": {
+        "name": "HSTS Builder",
+        "description": "免费在线 HSTS 标头构建器 — 生成 HTTP Strict Transport Security 标头，包括 Apache、Nginx 和 Express 配置示例，全在浏览器中即时进行。不存储任何数据。支持预加载资格和子域包含。"
+      },
+      "permissions-policy-builder": {
+        "name": "Permissions Policy Builder",
+        "description": "免费在线 Permissions-Policy 标头构建器 — 控制浏览器对摄像头、麦克风、地理定位等功能的访问权限，全在浏览器中即时进行。不存储任何数据。生成包含 Apache、Nginx 和 Express 配置示例的标头。"
+      },
+      "xss-filter-tester": {
+        "name": "XSS Filter Tester",
+        "description": "免费在线 XSS 过滤器测试器 — 在输入字符串中检测跨站脚本模式，包括严重程度评级和清理后的输出，全在浏览器中即时进行。不存储任何数据。测试脚本标签、事件处理程序、JavaScript URI 和 15+ 种攻击模式。"
+      }
+    }
+  }
+}

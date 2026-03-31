@@ -18,9 +18,12 @@
  *   ICU plural/select patterns are preserved as-is — only the surrounding text is translated.
  */
 
+import dotenv from "dotenv";
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
+
+dotenv.config();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -29,12 +32,33 @@ const ROOT = resolve(__dirname, "..");
 // Arg parsing
 // ---------------------------------------------------------------------------
 
-function parseArgs(): { locale: string } {
+/** The 10 target locales for utils.live translations. */
+const TARGET_LOCALES = [
+  "ja",
+  "pt-BR",
+  "ko",
+  "zh-CN",
+  "de",
+  "fr",
+  "es",
+  "ru",
+  "zh-TW",
+  "tr",
+];
+
+function parseArgs(): { locales: string[] } {
   const args = process.argv.slice(2);
+
+  if (args.includes("--all")) {
+    return { locales: TARGET_LOCALES };
+  }
+
   const localeIndex = args.indexOf("--locale");
   if (localeIndex === -1 || !args[localeIndex + 1]) {
     console.error("Usage: pnpm translate --locale <locale-code>");
+    console.error("       pnpm translate --all");
     console.error("Example: pnpm translate --locale es");
+    console.error(`Supported locales: ${TARGET_LOCALES.join(", ")}`);
     process.exit(1);
   }
   const locale = args[localeIndex + 1].trim();
@@ -44,7 +68,7 @@ function parseArgs(): { locale: string } {
     );
     process.exit(1);
   }
-  return { locale };
+  return { locales: [locale] };
 }
 
 // ---------------------------------------------------------------------------
@@ -108,7 +132,7 @@ const LOCALE_NAMES: Record<string, string> = {
   pt: "Portuguese",
   "pt-BR": "Brazilian Portuguese",
   ja: "Japanese",
-  zh: "Simplified Chinese",
+  "zh-CN": "Simplified Chinese",
   "zh-TW": "Traditional Chinese",
   ko: "Korean",
   ru: "Russian",
@@ -168,8 +192,8 @@ ${inputJson}`;
       "anthropic-version": "2023-06-01",
     },
     body: JSON.stringify({
-      model: "claude-opus-4-6",
-      max_tokens: 8192,
+      model: "claude-haiku-4-5-20251001",
+      max_tokens: 16384,
       system: systemPrompt,
       messages: [{ role: "user", content: userPrompt }],
     }),
@@ -202,7 +226,7 @@ ${inputJson}`;
 // Chunking to stay within token limits
 // ---------------------------------------------------------------------------
 
-const CHUNK_SIZE = 80; // strings per API call
+const CHUNK_SIZE = 25; // strings per API call (kept small for CJK output token limits)
 
 function chunk<T>(arr: T[], size: number): T[][] {
   const chunks: T[][] = [];
@@ -216,31 +240,18 @@ function chunk<T>(arr: T[], size: number): T[][] {
 // Main
 // ---------------------------------------------------------------------------
 
-async function main(): Promise<void> {
-  const { locale } = parseArgs();
-
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
-    console.error("Error: ANTHROPIC_API_KEY environment variable is not set.");
-    console.error("Set it with: export ANTHROPIC_API_KEY=sk-ant-...");
-    process.exit(1);
-  }
-
-  const inputPath = resolve(ROOT, "apps/web/messages/en.json");
+async function translateLocale(
+  locale: string,
+  source: JsonObject,
+  strings: Record<string, string>,
+  apiKey: string
+): Promise<void> {
   const outputPath = resolve(ROOT, `apps/web/messages/${locale}.json`);
-
-  console.log(`Reading source: ${inputPath}`);
-  const source = JSON.parse(
-    readFileSync(inputPath, "utf-8")
-  ) as unknown as JsonObject;
-
-  const strings = flattenStrings(source);
   const entries = Object.entries(strings);
-  console.log(`Found ${entries.length} translatable strings`);
 
   const chunks = chunk(entries, CHUNK_SIZE);
   console.log(
-    `Translating to ${getLocaleName(locale)} (${locale}) in ${chunks.length} batch(es)...`
+    `\nTranslating to ${getLocaleName(locale)} (${locale}) in ${chunks.length} batch(es)...`
   );
 
   const allTranslated: Record<string, string> = {};
@@ -281,14 +292,43 @@ async function main(): Promise<void> {
   mkdirSync(dirname(outputPath), { recursive: true });
   writeFileSync(outputPath, JSON.stringify(output, null, 2) + "\n", "utf-8");
 
-  console.log(`\nDone! Written to: ${outputPath}`);
+  console.log(`Done! Written to: ${outputPath}`);
   console.log(`Total strings translated: ${Object.keys(allTranslated).length}`);
   if (reviewCount > 0) {
     console.log(
       `Strings flagged for human review ([REVIEW] prefix): ${reviewCount}`
     );
-    console.log(`  Search for "[REVIEW]" in ${outputPath} to find them.`);
   }
+}
+
+async function main(): Promise<void> {
+  const { locales } = parseArgs();
+
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    console.error("Error: ANTHROPIC_API_KEY environment variable is not set.");
+    console.error(
+      "Set it in .env file or with: export ANTHROPIC_API_KEY=sk-ant-..."
+    );
+    process.exit(1);
+  }
+
+  const inputPath = resolve(ROOT, "apps/web/messages/en.json");
+
+  console.log(`Reading source: ${inputPath}`);
+  const source = JSON.parse(
+    readFileSync(inputPath, "utf-8")
+  ) as unknown as JsonObject;
+
+  const strings = flattenStrings(source);
+  console.log(`Found ${Object.keys(strings).length} translatable strings`);
+  console.log(`Target locales: ${locales.join(", ")}`);
+
+  for (const locale of locales) {
+    await translateLocale(locale, source, strings, apiKey);
+  }
+
+  console.log(`\nAll done! Translated ${locales.length} locale(s).`);
 }
 
 main().catch((err) => {

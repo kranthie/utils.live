@@ -1,0 +1,3447 @@
+{
+  "common": {
+    "nav": {
+      "home": "首頁",
+      "tools": "工具",
+      "blog": "部落格",
+      "about": "關於",
+      "contact": "聯絡"
+    },
+    "actions": {
+      "copy": "複製到剪貼簿",
+      "copied": "已複製！",
+      "download": "下載",
+      "share": "分享",
+      "tryAgain": "重試",
+      "goHome": "返回首頁",
+      "goBack": "返回",
+      "retry": "重試",
+      "dismiss": "關閉",
+      "reset": "重設為預設值",
+      "clear": "清除",
+      "sample": "範例",
+      "upload": "上傳",
+      "search": "搜尋",
+      "send": "傳送訊息",
+      "sending": "傳送中...",
+      "browseTools": "瀏覽所有工具",
+      "searchTools": "搜尋工具",
+      "viewAllTools": "檢視所有工具",
+      "viewAllCategories": "檢視所有分類",
+      "contactSupport": "聯絡支援"
+    },
+    "search": {
+      "placeholder": "搜尋工具...",
+      "noResults": "找不到工具。",
+      "resultsCount": "{count, plural, one {# 個結果} other {# 個結果}}已找到",
+      "searchToolsPlaceholder": "搜尋工具...",
+      "ariaLabel": "搜尋開發者工具"
+    },
+    "theme": {
+      "toggle": "切換主題",
+      "light": "淺色",
+      "dark": "深色",
+      "system": "系統"
+    },
+    "brand": {
+      "name": "[REVIEW] utils.live",
+      "homeAriaLabel": "[REVIEW] utils.live 首頁"
+    }
+  },
+  "home": {
+    "hero": {
+      "openSourceBadge": "免費且開源",
+      "headline": "開發者工具，立即可用",
+      "subheadline": "JSON 格式化工具、編碼器、轉換器、雜湊產生器等。完全在瀏覽器中執行的免費工具。",
+      "searchPlaceholder": "搜尋 {toolCountLabel} 個開發者工具...",
+      "searchAriaLabel": "搜尋開發者工具"
+    },
+    "features": {
+      "eyebrow": "[REVIEW] 為什麼選擇 utils.live",
+      "heading": "[REVIEW] 開發者選擇 utils.live 的原因",
+      "instantResults": {
+        "title": "即時結果",
+        "description": "客戶端工具在瀏覽器中執行，零延遲。無需等待，無伺服器往返。"
+      },
+      "privacyFirst": {
+        "title": "隱私優先",
+        "description": "您的資料永遠不會離開您的裝置。我們不追蹤、儲存或分析您的工具輸入。"
+      },
+      "freeOpenSource": {
+        "title": "免費且開源",
+        "description": "每個工具都完全免費使用。無需帳戶、無付費牆、無使用限制。完全開源。"
+      },
+      "toolsCount": {
+        "title": "{toolCountLabel} 個工具",
+        "description": "完整的開發者工具集合 — 從 JSON 格式化到影像處理。"
+      }
+    },
+    "cta": {
+      "toolsLabel": "工具",
+      "categoriesLabel": "分類",
+      "freeLabel": "免費且開源",
+      "heading": "使用 {toolCount}+ 個工具開始建構",
+      "subheading": "為任何任務找到正確的工具。搜尋、點擊，完成。",
+      "searchToolsButton": "搜尋工具",
+      "browseAllTools": "瀏覽所有工具"
+    },
+    "categoryShowcase": {
+      "eyebrow": "分類",
+      "heading": "按分類瀏覽",
+      "subheading": "為任何任務找到正確的工具",
+      "toolsCount": "{count} 個工具",
+      "viewAllTools": "檢視所有工具",
+      "viewAllCategories": "檢視所有分類"
+    },
+    "toolDemo": {
+      "heading": "看看它的實際運作",
+      "subheading": "觀看工具即時轉換您的資料",
+      "inputLabel": "輸入",
+      "outputLabel": "輸出"
+    },
+    "metadata": {
+      "title": "[REVIEW] utils.live | 免費開發者工具與公用程式",
+      "description": "{toolCountLabel} 個免費開發者工具於一處。JSON 格式化工具、編碼器、轉換器、雜湊生成器等。快速、免費且注重隱私。"
+    }
+  },
+  "tools": {
+    "shell": {
+      "options": "選項",
+      "optionsCount": "({count})",
+      "resetToDefaults": "重設為預設值",
+      "resetAriaLabel": "將選項重設為預設值",
+      "auto": "自動",
+      "autoWaiting": " - 等待輸入",
+      "autoExecuting": " - 執行中",
+      "autoReady": " - 就緒",
+      "autoTooltip": "此工具會在您輸入時自動執行。",
+      "generating": "生成中...",
+      "generate": "生成",
+      "keyboardShortcuts": "鍵盤快捷鍵",
+      "keyboardShortcutsAriaLabel": "鍵盤快捷鍵",
+      "shortcutExecute": "執行",
+      "shortcutClear": "清除 / 重置",
+      "undoLabel": "復原",
+      "exampleLoaded": "範例已載入",
+      "inputLabel": "輸入",
+      "outputLabel": "輸出",
+      "configureLabel": "設定",
+      "previewLabel": "預覽",
+      "sourceLabel": "原始碼",
+      "convertedLabel": "已轉換",
+      "editLabel": "編輯",
+      "toolsAvailable": "{count} 個可用工具",
+      "toolNotFound": {
+        "title": "找不到工具",
+        "description": "找不到所請求的工具。"
+      }
+    },
+    "search": {
+      "heading": "探索工具",
+      "subheading": "{count, number} 個免費開發者工具唾手可得",
+      "searchResults": "結果",
+      "recent": "最近",
+      "popular": "熱門",
+      "categories": "分類",
+      "noToolsFound": "找不到工具。",
+      "resultsFound": "{count, plural, one {# 個結果} other {# 個結果}}已找到",
+      "noResultsFound": "找不到工具"
+    },
+    "categories": {
+      "categoryNotFound": {
+        "title": "分類未找到",
+        "description": "請求的分類無法找到。"
+      },
+      "toolsAvailable": "有 {count} 個工具可用"
+    },
+    "breadcrumbs": {
+      "home": "首頁",
+      "tools": "工具"
+    },
+    "metadata": {
+      "tools": {
+        "title": "探索工具",
+        "description": "瀏覽 {toolCountLabel} 個免費開發者工具。JSON 格式化器、編碼器、轉換器、雜湊產生器等。",
+        "ogTitle": "[REVIEW] Explore Tools | utils.live",
+        "ogDescription": "瀏覽 {toolCountLabel} 個免費開發者工具。JSON 格式化器、編碼器、轉換器等。"
+      }
+    }
+  },
+  "editor": {
+    "input": {
+      "title": "輸入",
+      "loadSampleAriaLabel": "載入範例資料",
+      "sampleButton": "範例",
+      "uploadButton": "上傳",
+      "clearAriaLabel": "清除輸入",
+      "dropFileHere": "將檔案放在此處",
+      "dragAndDrop": "或將檔案拖放到此處",
+      "failedToRead": "無法讀取檔案"
+    },
+    "output": {
+      "title": "輸出",
+      "processing": "處理中...",
+      "success": "成功",
+      "error": "錯誤",
+      "noOutputYet": "尚無輸出",
+      "enterInputInstant": "輸入內容以即時查看結果",
+      "enterInputExecute": "輸入內容並點擊執行以查看結果",
+      "emptyResult": "空結果",
+      "emptyResultDescription": "操作已完成但未產生任何輸出",
+      "loadingEditor": "載入編輯器中...",
+      "loadingDiffViewer": "載入差異檢視器中...",
+      "loadingJsonViewer": "載入 JSON 檢視器中...",
+      "loadingMarkdown": "載入 Markdown 預覽中...",
+      "loadingTable": "載入表格中...",
+      "loadingHtml": "載入 HTML 預覽中...",
+      "loadingDiagram": "載入圖表中...",
+      "loadingImage": "載入圖片預覽中...",
+      "loadingColor": "載入顏色中...",
+      "loadingColors": "載入顏色中...",
+      "statusProcessing": "處理中...",
+      "statusComplete": "執行完成。",
+      "statusProcessedIn": "已在 {time} 內完成處理。",
+      "statusFailed": "執行失敗：{message}"
+    }
+  },
+  "errorDisplay": {
+    "defaultTitles": {
+      "error": "錯誤",
+      "warning": "警告",
+      "info": "資訊"
+    },
+    "pathLabel": "路徑: {path}",
+    "lineLabel": "第 {line} 行",
+    "retryButton": "重試",
+    "dismissButton": "關閉"
+  },
+  "marketing": {
+    "about": {
+      "metadata": {
+        "title": "關於",
+        "description": "[REVIEW] 了解 utils.live - 我們致力於讓開發者工具易用、快速且尊重隱私。",
+        "ogTitle": "[REVIEW] 關於 | utils.live"
+      },
+      "hero": {
+        "heading": "尊重你的時間的開發者工具",
+        "headingPrefix": "尊重你的時間的",
+        "gradientText": "開發者工具",
+        "description": "[REVIEW] utils.live 源自對緩慢、充滿廣告且侵犯隱私的線上工具的不滿。我們打造了自己想使用的工具：快速、免費且尊重隱私的實用程式。"
+      },
+      "stats": {
+        "developerTools": "開發者工具",
+        "freeCoreTools": "免費核心工具",
+        "dataCollected": "蒐集的資料",
+        "avgResponseTime": "平均回應時間"
+      },
+      "values": {
+        "heading": "我們的價值觀",
+        "speedFirst": {
+          "title": "速度至上",
+          "description": "工具應該瞬間完成。我們的客戶端工具在你的瀏覽器中執行，零延遲。"
+        },
+        "privacyByDesign": {
+          "title": "隱私優先設計",
+          "description": "你的資料留在你的裝置上。我們不追蹤、儲存或分析你的工具輸入。"
+        },
+        "developerExperience": {
+          "title": "開發者體驗",
+          "description": "由開發者打造，為開發者設計。每個工具都是為了節省你的時間。"
+        },
+        "freeAccessible": {
+          "title": "免費且無障礙",
+          "description": "核心工具永遠免費。我們相信每個人都應該能使用優質的實用程式。"
+        }
+      },
+      "mission": {
+        "heading": "我們的使命",
+        "description": "我們相信開發者工具應該對每個人開放，無論預算或技術專業程度如何。[REVIEW] utils.live 提供專業級的公用程式，沒有臃腫、追蹤或付費牆。我們的目標是幫助你專注於重要的事：構建優質軟體。"
+      },
+      "team": {
+        "heading": "用心打造",
+        "headingPrefix": "用心",
+        "gradientText": "打造",
+        "description": "[REVIEW] utils.live 由一群充滿熱情的開發者維護，他們每天都使用這些工具。我們不斷新增工具並根據社群意見改進現有工具。",
+        "feedbackWelcome": "歡迎回饋與建議"
+      }
+    },
+    "contact": {
+      "metadata": {
+        "title": "聯絡",
+        "description": "與 [REVIEW] utils.live 團隊聯絡。我們很樂意聽到你關於功能、錯誤或合作的想法。",
+        "ogTitle": "聯絡 | [REVIEW] utils.live",
+        "ogDescription": "與 [REVIEW] utils.live 團隊聯絡。我們很樂意聽到你的想法。"
+      },
+      "hero": {
+        "heading": "聯絡我們",
+        "description": "有問題、功能請求，或只是想打個招呼？我們很樂意聽到你的想法。"
+      },
+      "info": {
+        "responseTime": {
+          "title": "回應時間",
+          "value": "< 24 小時",
+          "description": "針對大多數詢問"
+        },
+        "location": {
+          "title": "位置",
+          "value": "遠端團隊",
+          "description": "全球分佈"
+        }
+      },
+      "lookingForTool": {
+        "heading": "尋找工具？",
+        "description": "瀏覽我們的完整工具集合。",
+        "linkText": "完整工具集合"
+      },
+      "form": {
+        "heading": "傳送訊息給我們",
+        "successTitle": "訊息已傳送！",
+        "successDescription": "感謝你的來信。我們會盡快回覆，通常在 24 小時內。",
+        "sendAnother": "傳送另一則訊息",
+        "errorMessage": "發生錯誤。請重試。",
+        "namePlaceholder": "您的名字",
+        "nameLabel": "名稱",
+        "emailLabel": "電郵",
+        "emailPlaceholder": "you@example.com",
+        "subjectLabel": "主旨",
+        "subjectPlaceholder": "選擇一個主題",
+        "messageLabel": "訊息",
+        "messagePlaceholder": "我們可以如何幫助您？",
+        "submitButton": "發送訊息",
+        "submittingButton": "傳送中...",
+        "subjects": {
+          "general": "一般查詢",
+          "bug": "錯誤報告",
+          "feature": "功能請求",
+          "support": "技術支援",
+          "partnership": "合作",
+          "other": "其他"
+        }
+      }
+    }
+  },
+  "blog": {
+    "metadata": {
+      "title": "[REVIEW] 開發工具部落格 | utils.live",
+      "description": "了解開發工具概念 — Base64、JWT、正規表達式、UUID、雜湊等。包含實用指南和即時範例。",
+      "postNotFound": "找不到文章"
+    },
+    "page": {
+      "heading": "開發工具部落格",
+      "gradientText": "部落格",
+      "description": "關於編碼、雜湊、Token 等的實用指南。了解您每天使用的工具。",
+      "readArticle": "閱讀文章",
+      "minRead": "{count} 分鐘閱讀",
+      "allArticles": "所有文章",
+      "backToArticles": "返回所有文章"
+    },
+    "cta": {
+      "heading": "[REVIEW] 在 utils.live 上試試",
+      "description": "免費的瀏覽器工具 — 無需註冊，您的資料不會離開您的裝置。"
+    }
+  },
+  "errors": {
+    "generic": {
+      "heading": "發生錯誤",
+      "description": "發生了意外錯誤。我們已收到通知並正在調查。",
+      "errorId": "錯誤 ID：{id}",
+      "tryAgain": "重試",
+      "goHome": "返回首頁",
+      "contactSupport": "聯絡支援",
+      "whatCanYouDo": "您可以做什麼？",
+      "suggestions": {
+        "refresh": "嘗試重新整理頁面",
+        "clearCache": "清除瀏覽器快取",
+        "checkConnection": "檢查您的網際網路連線",
+        "contactUs": "如果問題仍然存在"
+      },
+      "contactLink": "聯絡我們"
+    },
+    "notFound": {
+      "heading": "找不到頁面",
+      "description": "抱歉，我們找不到您要查找的頁面。它可能已被移動或不存在。",
+      "goHome": "返回首頁",
+      "browseTools": "瀏覽工具",
+      "goBack": "返回",
+      "popularTools": "熱門工具"
+    },
+    "critical": {
+      "heading": "嚴重錯誤",
+      "description": "發生了嚴重錯誤。此頁面無法正常載入。",
+      "tryAgain": "重試",
+      "goHome": "返回首頁",
+      "errorId": "錯誤 ID：{id}"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "[REVIEW] utils.live | 免費開發者工具和公用程式",
+      "description": "{toolCountLabel} 個免費開發者工具合集。JSON 格式化工具、編碼器、轉換器、雜湊生成器等。快速、免費且隱私優先。"
+    },
+    "layout": {
+      "title": "[REVIEW] utils.live | 開發者公用程式平台",
+      "titleTemplate": "%s | utils.live",
+      "description": "{toolCountLabel} 個開發者工具合集。JSON 格式化工具、編碼器、轉換器等。免費且隱私優先。",
+      "ogTitle": "[REVIEW] utils.live | 開發者公用程式平台",
+      "ogAlt": "[REVIEW] utils.live - 免費開發者工具",
+      "skipToMain": "跳至主要內容"
+    },
+    "tools": {
+      "title": "探索工具",
+      "description": "瀏覽 {toolCountLabel} 個免費開發者工具。JSON 格式化工具、編碼器、轉換器、雜湊生成器等。",
+      "ogTitle": "[REVIEW] 探索工具 | utils.live"
+    },
+    "about": {
+      "title": "關於",
+      "ogTitle": "[REVIEW] 關於 | utils.live"
+    },
+    "contact": {
+      "title": "聯絡",
+      "ogTitle": "[REVIEW] 聯絡 | utils.live"
+    },
+    "blog": {
+      "title": "[REVIEW] 開發者工具部落格 | utils.live"
+    }
+  },
+  "footer": {
+    "tagline": "免費、開源的開發者公用程式，用於編碼、轉換、格式化等。",
+    "sections": {
+      "product": "產品",
+      "company": "公司",
+      "community": "社群"
+    },
+    "links": {
+      "allTools": "所有工具",
+      "blog": "部落格",
+      "about": "關於",
+      "contact": "聯絡我們",
+      "github": "GitHub",
+      "reportIssue": "回報問題"
+    }
+  },
+  "mobileNav": {
+    "openMenu": "開啟選單",
+    "searchLabel": "搜尋工具",
+    "searchPlaceholder": "搜尋工具...",
+    "title": "[REVIEW] utils.live"
+  },
+  "forms": {
+    "fileUpload": {
+      "defaultPlaceholder": "拖放檔案或點擊上傳",
+      "accepted": "接受的類型: {types}",
+      "maxSize": "最大檔案大小: {size}",
+      "filesCount": "{count, plural, one {# 個檔案} other {# 個檔案}}",
+      "clearAll": "全部清除",
+      "fileError": "錯誤",
+      "fileSuccess": "成功",
+      "removeFile": "移除 {filename}",
+      "uploadAriaLabel": "上傳 {suffix}接受的類型: {accept}",
+      "failedToRead": "檔案讀取失敗"
+    },
+    "keyValueEditor": {
+      "defaultKeyLabel": "鍵",
+      "defaultValueLabel": "值",
+      "defaultKeyPlaceholder": "輸入鍵",
+      "defaultValuePlaceholder": "輸入值",
+      "duplicateKey": "重複的鍵",
+      "addPair": "新增 {keyLabel}/{valueLabel}",
+      "removeAriaLabel": "移除對 {index}",
+      "keyAriaLabel": "{label} {index}",
+      "valueAriaLabel": "{label} {index}",
+      "pairsCount": "{current} / {max} 對"
+    },
+    "multiSelect": {
+      "defaultPlaceholder": "選擇選項...",
+      "searchPlaceholder": "搜尋...",
+      "noOptionsFound": "找不到選項。",
+      "selectedCount": "已選擇 {count} 個",
+      "selectionCount": "已選擇 {current} / {max} 個"
+    },
+    "tagInput": {
+      "defaultPlaceholder": "新增標籤...",
+      "addMore": "新增更多...",
+      "tagsCount": "{current} / {max} 個標籤"
+    },
+    "searchableSelect": {
+      "defaultPlaceholder": "選擇選項...",
+      "searchPlaceholder": "搜尋...",
+      "noOptionsFound": "找不到選項。"
+    },
+    "numberInput": {
+      "decreaseAriaLabel": "減少數值",
+      "increaseAriaLabel": "增加數值"
+    }
+  },
+  "header": {
+    "searchToolsPlaceholder": "搜尋工具...",
+    "searchAriaLabel": "搜尋工具",
+    "searchMobileAriaLabel": "搜尋",
+    "githubAriaLabel": "在 GitHub 上檢視"
+  },
+  "toolMeta": {
+    "json": {
+      "formatter": {
+        "name": "JSON 格式化工具",
+        "description": "免費線上 JSON 格式化工具 — 在瀏覽器中立即美化和格式化 JSON，支援可配置的縮排。無數據儲存。支援 0-8 個空格縮排和選擇性鍵值排序。"
+      },
+      "validator": {
+        "name": "JSON 驗證工具",
+        "description": "免費線上 JSON 驗證工具 — 在瀏覽器中立即檢查 JSON 語法並取得詳細的錯誤資訊。無數據儲存。報告錯誤行列位置和偵測到的 JSON 類型。"
+      },
+      "minify": {
+        "name": "JSON 縮小工具",
+        "description": "免費線上 JSON 縮小工具 — 在瀏覽器中立即移除所有空白和格式化以壓縮 JSON。無數據儲存。顯示原始大小與縮小後的大小及縮減百分比。"
+      },
+      "path-query": {
+        "name": "JSON 路徑查詢",
+        "description": "免費線上 JSON 路徑查詢工具 — 使用點符號和括號語法從 JSON 提取數值，在瀏覽器中即時執行。無資料儲存。支援巢狀物件、陣列和字串鍵。"
+      },
+      "jmespath": {
+        "name": "JSON JMESPath",
+        "description": "免費線上 JMESPath 查詢工具 — 使用 JMESPath 表達式篩選和轉換 JSON，在瀏覽器中即時執行。無資料儲存。支援點符號、陣列切片、投影和函數。"
+      },
+      "diff": {
+        "name": "JSON 比較",
+        "description": "免費線上 JSON 比較工具 — 比較兩個 JSON 物件並即時顯示新增、移除和變更的欄位。無資料儲存。報告差異並提供 JSON 路徑位置。"
+      },
+      "sort-keys": {
+        "name": "JSON 排序鍵",
+        "description": "免費線上 JSON 鍵值排序工具 — 按字母順序或降序排列物件鍵，在瀏覽器中即時執行。無資料儲存。支援巢狀物件的遞迴排序。"
+      },
+      "flatten": {
+        "name": "JSON 扁平化",
+        "description": "免費線上 JSON 扁平化工具 — 將巢狀 JSON 轉換為單層物件，使用點符號鍵，在瀏覽器中即時執行。無資料儲存。可設定分隔符、最大深度和陣列處理方式。"
+      },
+      "unflatten": {
+        "name": "JSON 解扁平化",
+        "description": "免費線上 JSON 解扁平化工具 — 從扁平點符號鍵重建巢狀物件，在瀏覽器中即時執行。無資料儲存。支援自訂分隔符和陣列索引符號。"
+      },
+      "escape": {
+        "name": "JSON 逃脫",
+        "description": "免費線上 JSON 逃脫工具 — 在字串中逃脫特殊字元以供 JSON 使用，在瀏覽器中即時執行。無資料儲存。處理引號、換行符、製表符、反斜線和 Unicode 字元。"
+      },
+      "unescape": {
+        "name": "JSON 解逃脫",
+        "description": "免費線上 JSON 解逃脫工具 — 將逃脫字元轉換回字面形式，在瀏覽器中即時執行。無資料儲存。處理 \\n、\\t、\\\" 和其他 JSON 逃脫序列。"
+      },
+      "to-yaml": {
+        "name": "JSON 轉 YAML",
+        "description": "免費線上 JSON 轉 YAML 轉換工具 — 將 JSON 轉換為 YAML 格式，在瀏覽器中即時執行。無資料儲存。可設定縮排、流程樣式級別、鍵值排序和行寬。"
+      },
+      "to-xml": {
+        "name": "JSON 轉 XML",
+        "description": "免費線上 JSON 轉 XML 轉換工具 — 將 JSON 物件轉換為 XML 格式，在瀏覽器中即時執行。無資料儲存。可設定根元素名稱、陣列節點名稱和 XML 宣告。"
+      },
+      "to-csv": {
+        "name": "JSON 轉 CSV",
+        "description": "免費線上 JSON 轉 CSV 轉換工具 — 將 JSON 物件陣列轉換為 CSV 格式，在瀏覽器中即時執行。無資料儲存。可設定分隔符、引號和標題列。"
+      },
+      "remove-nulls": {
+        "name": "JSON 移除空值",
+        "description": "免費線上 JSON 移除空值工具 — 從 JSON 物件和陣列中移除空值，在瀏覽器中即時執行。無資料儲存。可選擇性移除空字串、陣列和物件。"
+      },
+      "merge": {
+        "name": "JSON 合併",
+        "description": "免費線上 JSON 合併工具 — 在瀏覽器中即時深度合併兩個 JSON 物件，支援可配置的陣列策略。不儲存任何資料。支援取代、連接和唯一陣列合併。"
+      },
+      "size-analyzer": {
+        "name": "JSON 大小分析器",
+        "description": "免費線上 JSON 大小分析器 — 在瀏覽器中即時測量 JSON 結構、巢狀深度和數值類型分佈。不儲存任何資料。顯示位元組大小、鍵值數量和最大項目。"
+      },
+      "tree-viewer": {
+        "name": "JSON 樹狀檢視器",
+        "description": "免費線上 JSON 樹狀檢視器 — 在瀏覽器中即時以階層樹狀結構顯示 JSON，包含類型和數值。不儲存任何資料。支援可配置的深度、類型標籤和縮排。"
+      },
+      "json-schema-generator": {
+        "name": "JSON Schema 產生器",
+        "description": "免費線上 JSON Schema 產生器 — 在瀏覽器中即時從樣本資料推斷 JSON Schema，支援格式偵測。不儲存任何資料。偵測 email、URI、UUID、date-time 和 IP 格式。"
+      },
+      "json-schema-to-typescript": {
+        "name": "JSON Schema 轉 TypeScript",
+        "description": "免費線上 JSON Schema 轉 TypeScript 轉換器 — 在瀏覽器中即時從 JSON Schema 定義產生 TypeScript 介面。不儲存任何資料。支援 refs、enums、allOf/oneOf 和巢狀類型。"
+      },
+      "json-schema-validator-api": {
+        "name": "JSON Schema 驗證器",
+        "description": "免費線上 JSON Schema 驗證器 — 在瀏覽器中即時驗證 JSON Schema 文件的結構。不儲存任何資料。檢查類型、格式、必要欄位和偵測草稿版本。"
+      },
+      "json-schema-validator-tool": {
+        "name": "JSON Schema 驗證器",
+        "description": "免費線上 JSON 資料驗證器 — 在瀏覽器中以並排檢視即時針對 JSON Schema 驗證 JSON 資料。不儲存任何資料。檢查類型、必要欄位、模式和約束。"
+      },
+      "json-schema-faker": {
+        "name": "JSON Schema 虛擬資料產生器",
+        "description": "免費線上 JSON Schema 虛擬資料產生器 — 在瀏覽器中即時從 JSON Schema 定義產生逼真的模擬資料。不儲存任何資料。支援所有 JSON Schema 類型、格式、enums 和約束。"
+      },
+      "json-to-typescript": {
+        "name": "JSON 轉 TypeScript",
+        "description": "免費線上 JSON 轉 TypeScript 轉換器 — 在瀏覽器中即時從 JSON 資料產生 TypeScript 介面。不儲存任何資料。支援選擇性欄位、readonly、類型別名和巢狀介面。"
+      },
+      "json-to-go": {
+        "name": "JSON 轉 Go",
+        "description": "免費線上 JSON 轉 Go 轉換器 — 在瀏覽器中即時從樣本資料產生帶有 JSON 標籤的 Go structs。不儲存任何資料。支援 omitempty、內聯 structs 和巢狀類型推斷。"
+      },
+      "json-to-java": {
+        "name": "JSON 轉 Java",
+        "description": "免費線上 JSON 轉 Java 轉換器 — 在瀏覽器中即時從 JSON 資料產生 Java POJOs，支援 Jackson 和 Lombok。不儲存任何資料。包含 getters/setters 和匯入陳述式。"
+      },
+      "json-to-python": {
+        "name": "JSON 轉 Python",
+        "description": "免費線上 JSON 轉 Python 轉換器 — 在瀏覽器中即時從 JSON 產生 Python dataclasses、Pydantic models 或 TypedDicts。不儲存任何資料。支援四種類別樣式，包含 Optional 類型。"
+      },
+      "json-to-rust": {
+        "name": "JSON 轉 Rust",
+        "description": "免費線上 JSON 轉 Rust 轉換器 — 在瀏覽器中即時從 JSON 資料產生具有 serde derive macros 的 Rust structs。不儲存任何資料。支援可配置的 derive traits、pub 欄位和 Option 類型。"
+      },
+      "json-to-csharp": {
+        "name": "JSON 轉 C#",
+        "description": "免費線上 JSON 轉 C# 轉換器 — 在瀏覽器中即時從 JSON 資料產生 C# 類別或記錄類型。無資料儲存。支持 JsonPropertyName 屬性和可空引用類型。"
+      }
+    },
+    "yaml": {
+      "formatter": {
+        "name": "YAML 格式化工具",
+        "description": "免費線上 YAML 格式化工具 — 在瀏覽器中即時美化和標準化 YAML 檔案。無資料儲存。支援可配置的縮排、金鑰排序、行寬和流樣式控制。"
+      },
+      "to-json": {
+        "name": "YAML 轉 JSON",
+        "description": "免費線上 YAML 轉 JSON 轉換器 — 貼上 YAML 在瀏覽器中即時取得 JSON 輸出。無資料儲存。處理嵌套物件、陣列、錨點和所有 YAML 資料類型，支援可配置的縮排。"
+      },
+      "to-xml": {
+        "name": "YAML 轉 XML",
+        "description": "免費線上 YAML 轉 XML 轉換器 — 貼上 YAML 在瀏覽器中即時取得 XML 輸出。無資料儲存。支援可配置的根元素名稱、陣列節點命名、縮排和選用的 XML 宣告。"
+      },
+      "minify": {
+        "name": "YAML 壓縮工具",
+        "description": "免費線上 YAML 壓縮器 — 在瀏覽器中即時將 YAML 文件壓縮為流樣式。無資料儲存。將區塊樣式嵌套轉換為內嵌大括號和方括號，減少檔案大小。"
+      },
+      "diff": {
+        "name": "YAML 比較工具",
+        "description": "免費線上 YAML 比較工具 — 比較兩個 YAML 文件並在瀏覽器中即時查看結構差異。無資料儲存。按 JSON 路徑顯示新增、移除和變更的金鑰，包括摘要計數。"
+      },
+      "merge": {
+        "name": "YAML 合併工具",
+        "description": "免費線上 YAML 合併工具 — 在瀏覽器中即時合併兩個 YAML 文件。無資料儲存。支持深層和淺層合併策略，具有可配置的陣列處理方式（取代、串聯、唯一）。"
+      },
+      "path-query": {
+        "name": "YAML 路徑查詢工具",
+        "description": "免費線上 YAML 路徑查詢工具 — 在瀏覽器中使用點表示法即時從 YAML 提取值。無資料儲存。支援嵌套金鑰、陣列索引、引用金鑰和 JSONPath 風格的 $ 前綴。"
+      },
+      "sort-keys": {
+        "name": "YAML 金鑰排序工具",
+        "description": "免費線上 YAML 金鑰排序器 — 在瀏覽器中即時按字母順序排序 YAML 文件中的物件金鑰。無資料儲存。支持升序/降序、深層遞迴排序和可配置的縮排。"
+      },
+      "lint": {
+        "name": "YAML 檢查工具",
+        "description": "免費線上 YAML 檢查工具 — 在瀏覽器中即時檢查 YAML 的語法錯誤和樣式問題。無資料儲存。偵測制表符、尾隨空格、不一致的縮排、長行和重複金鑰。"
+      },
+      "splitter": {
+        "name": "YAML 分割工具",
+        "description": "免費線上 YAML 分割器 — 在瀏覽器中即時將多文件 YAML 檔案分割為單個文件。無資料儲存。處理 Kubernetes 清單、CI/CD 配置和任何帶有 --- 分隔符的 YAML。"
+      }
+    },
+    "xml": {
+      "formatter": {
+        "name": "XML 格式化工具",
+        "description": "免費線上 XML 格式化工具 — 在瀏覽器中即時美化和縮排 XML 文件。無資料儲存。支持可配置的縮排、屬性保留和元素順序控制，適用於 pom.xml、web.xml 和其他 XML 配置。"
+      },
+      "validator": {
+        "name": "XML 驗證工具",
+        "description": "免費線上 XML 驗證器 — 在您的瀏覽器中即時檢查 XML 文件的語法錯誤。不儲存任何數據。報告錯誤位置，包括標籤不匹配、未閉合元素和格式不當內容的行號和列號。"
+      },
+      "to-json": {
+        "name": "XML 轉 JSON",
+        "description": "免費線上 XML 轉 JSON 轉換器 — 在您的瀏覽器中即時將 XML 文件轉換為 JSON 物件。不儲存任何數據。支援屬性、命名空間、可配置的縮進和文本節點命名。"
+      },
+      "to-yaml": {
+        "name": "XML 轉 YAML",
+        "description": "免費線上 XML 轉 YAML 轉換器 — 在您的瀏覽器中即時將 XML 文件轉換為 YAML 格式。不儲存任何數據。使用可配置的前綴保留屬性，支援自訂縮進。"
+      },
+      "minify": {
+        "name": "XML 縮小",
+        "description": "免費線上 XML 縮小工具 — 在您的瀏覽器中即時從 XML 文件中移除空白、註解和縮進。不儲存任何數據。顯示原始大小與縮小後大小以及縮減百分比。"
+      },
+      "xpath": {
+        "name": "XML XPath 查詢",
+        "description": "免費線上 XML XPath 查詢工具 — 在您的瀏覽器中即時使用 XPath 類表達式從 XML 文件中提取節點。不儲存任何數據。支援絕對路徑、遞迴搜尋 (//) 和屬性篩選 ([@attr='value'])。"
+      },
+      "diff": {
+        "name": "XML 差異比較",
+        "description": "免費線上 XML 差異比較工具 — 在您的瀏覽器中即時比較兩個 XML 文件並找出結構差異。不儲存任何數據。偵測已新增、已移除和已變更的元素、屬性和文本節點，並使用 XPath 風格的路徑標識。"
+      },
+      "escape": {
+        "name": "XML 轉義",
+        "description": "免費線上 XML 轉義工具 — 在您的瀏覽器中即時將特殊字元轉換為 XML 實體。不儲存任何數據。轉義 &、< > 符號、引號和換行符，以安全地用於 XML 內容和屬性。"
+      },
+      "to-csv": {
+        "name": "XML 轉 CSV",
+        "description": "免費線上 XML 轉 CSV 轉換器 — 在您的瀏覽器中即時從 XML 文件中提取表格數據。不儲存任何數據。自動偵測重複元素，支援自訂分隔符和 XPath 類行選擇。"
+      }
+    },
+    "csv": {
+      "formatter": {
+        "name": "CSV 格式化",
+        "description": "免費線上 CSV 格式化工具 — 在您的瀏覽器中即時使用可配置的引號和分隔符規範化和重新格式化 CSV 資料。不儲存任何數據。支援全引號模式、值修剪、分隔符轉換和輸入格式自動偵測。"
+      },
+      "validator": {
+        "name": "CSV 驗證器",
+        "description": "免費線上 CSV 驗證器 — 在您的瀏覽器中即時檢查 CSV 結構、欄位一致性和語法錯誤。不儲存任何數據。偵測欄數不匹配、格式不當的欄位，並報告行級錯誤詳情。"
+      },
+      "to-json": {
+        "name": "CSV 轉 JSON",
+        "description": "免費線上 CSV 轉 JSON 轉換器 — 在您的瀏覽器中即時將 CSV 資料轉換為 JSON 物件陣列。不儲存任何數據。自動偵測數字和布林值，支援自訂分隔符和可配置的縮進。"
+      },
+      "to-yaml": {
+        "name": "CSV 轉 YAML",
+        "description": "免費線上 CSV 轉 YAML 轉換器 — 在您的瀏覽器中即時將 CSV 資料轉換為 YAML 物件陣列。不儲存任何數據。自動偵測數字和布林值，支援自訂縮進和分隔符。"
+      },
+      "to-xml": {
+        "name": "CSV 轉 XML",
+        "description": "免費線上 CSV 轉 XML 轉換器 — 在您的瀏覽器中即時使用可配置的根/列名稱將 CSV 列轉換為 XML 元素。不儲存任何數據。支援自訂縮進、XML 宣告和動態類型偵測。"
+      },
+      "diff": {
+        "name": "CSV 比較",
+        "description": "免費線上 CSV 比較工具 — 比較兩個 CSV 檔案並即時在瀏覽器中顯示列級差異。無資料儲存。支援關鍵欄位配對、標題變更偵測、新增/移除/修改列追蹤和自訂分隔符。"
+      },
+      "merge": {
+        "name": "CSV 合併",
+        "description": "免費線上 CSV 合併工具 — 即時在瀏覽器中將兩個 CSV 檔案合併為一個。無資料儲存。支援附加、聯合（不同欄位）和聯結策略，可選的重複資料刪除。"
+      },
+      "filter": {
+        "name": "CSV 篩選",
+        "description": "免費線上 CSV 篩選 — 即時在瀏覽器中按欄位條件篩選列。無資料儲存。支援比較運算子（==、!=、>、<、>=、<=）、字串配對（contains、startsWith、endsWith）和自訂分隔符。"
+      },
+      "sort": {
+        "name": "CSV 排序",
+        "description": "免費線上 CSV 排序工具 — 即時在瀏覽器中按任何欄位排序列。無資料儲存。支援升序/降序、數值排序、不分大小寫比較和自訂分隔符。"
+      },
+      "stats": {
+        "name": "CSV 統計",
+        "description": "免費線上 CSV 統計計算機 — 即時在瀏覽器中分析欄位類型、最小值/最大值、平均值、中位數和唯一值計數。無資料儲存。自動偵測數值對字串欄位並計算每欄摘要統計。"
+      },
+      "viewer": {
+        "name": "CSV 檢視器",
+        "description": "免費線上 CSV 檢視器 — 即時在瀏覽器中將 CSV 資料顯示為格式化、對齊的表格。無資料儲存。支援行號、欄對齊、列限制和自訂分隔符。"
+      },
+      "to-sql": {
+        "name": "CSV 轉 SQL",
+        "description": "免費線上 CSV 轉 SQL 轉換器 — 即時在瀏覽器中從 CSV 資料產生 CREATE TABLE 和 INSERT 陳述式。無資料儲存。自動偵測欄位類型（INTEGER、REAL、VARCHAR、TEXT），支援批次插入和自訂表格名稱。"
+      },
+      "column-extractor": {
+        "name": "CSV 欄位提取器",
+        "description": "免費線上 CSV 欄位提取器 — 即時在瀏覽器中按名稱或索引從 CSV 資料中提取特定欄位。無資料儲存。支援逗號分隔的欄位列表、不分大小寫配對、自訂分隔符和引號欄位。"
+      },
+      "deduplicator": {
+        "name": "CSV 去重複",
+        "description": "免費線上 CSV 去重複工具 — 即時在瀏覽器中從 CSV 資料移除重複列。無資料儲存。支援關鍵欄位配對、保留第一列或保留最後一列策略、自訂分隔符和引號欄位。"
+      },
+      "to-tsv": {
+        "name": "CSV 轉 TSV",
+        "description": "免費線上 CSV 轉 TSV 轉換器 — 即時在瀏覽器中將逗號分隔值轉換為製表符分隔值。無資料儲存。透過逸出、移除或空格替換模式處理內嵌製表符。"
+      },
+      "to-markdown": {
+        "name": "CSV 轉 Markdown",
+        "description": "免費線上 CSV 轉 Markdown 表格轉換器 — 即時在瀏覽器中將 CSV 資料轉換為格式化的 Markdown 表格。無資料儲存。支援左/中/右/自動對齊、填充欄位和自訂分隔符。"
+      }
+    },
+    "toml": {
+      "formatter": {
+        "name": "TOML 格式化工具",
+        "description": "免費線上 TOML 格式化工具 — 貼上凌亂的 TOML 並即時在瀏覽器中獲得整潔的標準化輸出。無資料儲存。展開內嵌表格、標準化間距和驗證語法。"
+      },
+      "validator": {
+        "name": "TOML 驗證器",
+        "description": "免費線上 TOML 驗證器 — 在瀏覽器中立即檢查你的 TOML 語法。不儲存任何資料。報告錯誤位置、行號和列號，方便快速除錯。"
+      },
+      "to-json": {
+        "name": "TOML 轉 JSON",
+        "description": "免費線上 TOML 轉 JSON 轉換器 — 貼上你的 TOML 設定檔，在瀏覽器中立即取得 JSON 輸出。不儲存任何資料。支援巢狀表、陣列、內嵌表及所有 TOML 資料型別。"
+      },
+      "to-yaml": {
+        "name": "TOML 轉 YAML",
+        "description": "免費線上 TOML 轉 YAML 轉換器 — 貼上你的 TOML 設定檔，在瀏覽器中立即取得 YAML 輸出。不儲存任何資料。支援巢狀表、表陣列及內嵌表，並正確縮排。"
+      }
+    },
+    "data": {
+      "ini-formatter": {
+        "name": "INI 格式化工具",
+        "description": "免費線上 INI 格式化工具 — 在瀏覽器中立即格式化與美化 INI 設定檔。不儲存任何資料。標準化區段間距、對齊鍵值對，並處理巢狀區段群組。"
+      },
+      "ini-validator": {
+        "name": "INI 驗證器",
+        "description": "免費線上 INI 驗證器 — 在瀏覽器中立即驗證 INI 設定語法。不儲存任何資料。檢查重複區段、重複鍵、未閉合標頭及空鍵名稱，並提供詳細警告。"
+      },
+      "ini-to-json": {
+        "name": "INI 轉 JSON",
+        "description": "免費線上 INI 轉 JSON 轉換器 — 在瀏覽器中立即將 INI 設定檔轉換為 JSON 格式。不儲存任何資料。解析區段、鍵值對及巢狀群組為結構化 JSON 輸出。"
+      },
+      "json-to-toml": {
+        "name": "JSON 轉 TOML",
+        "description": "免費線上 JSON 轉 TOML 轉換器 — 在瀏覽器中立即將 JSON 物件轉換為 TOML 設定格式。不儲存任何資料。將巢狀 JSON 物件對應至 TOML 表、陣列及內嵌表。"
+      },
+      "json-to-ini": {
+        "name": "JSON 轉 INI",
+        "description": "免費線上 JSON 轉 INI 轉換器 — 在瀏覽器中立即將 JSON 物件轉換為 INI 設定格式。不儲存任何資料。將巢狀 JSON 物件對應至 INI 區段與鍵值對。"
+      },
+      "jsonc-stripper": {
+        "name": "JSONC 註解移除工具",
+        "description": "免費線上 JSONC 註解移除工具 — 在瀏覽器中立即從 JSON with Comments (JSONC) 移除註解以取得有效 JSON。不儲存任何資料。移除單行 (//) 及多行 (/* */) 註解，以及移除尾部逗號。"
+      },
+      "messagepack-viewer": {
+        "name": "MessagePack 檢視工具",
+        "description": "免費線上 MessagePack 檢視工具 — 在瀏覽器中立即解碼並檢查 MessagePack 二進位資料。不儲存任何資料。解碼 base64 編碼的 msgpack 為 JSON，含 16 進位轉存、格式型別識別及位元組長度。"
+      },
+      "protobuf-viewer": {
+        "name": "Protobuf 檢視工具",
+        "description": "免費線上 Protobuf 檢視工具 — 在瀏覽器中立即解碼並檢查 Protocol Buffer 二進位連線格式資料。不儲存任何資料。解析欄位標籤、連線型別 (varint、length-delimited、fixed32/64)，並顯示可能的值解釋。"
+      },
+      "avro-viewer": {
+        "name": "Avro 檢視工具",
+        "description": "免費線上 Avro 檢視工具 — 在瀏覽器中立即檢查 base64 編碼的 Avro 二進位資料。不儲存任何資料。偵測物件容器檔案、解析標頭、結構描述、同步標記及資料區塊，含 16 進位預覽。"
+      },
+      "ndjson-parser": {
+        "name": "NDJSON 解析器",
+        "description": "免費線上 NDJSON 解析器 — 在瀏覽器中立即將換行符分隔 JSON (JSONL) 轉換為 JSON 陣列。不儲存任何資料。將每一行解析為獨立的 JSON 值，並支援跳過空行或無效行的選項。"
+      },
+      "json-to-ndjson": {
+        "name": "JSON 轉 NDJSON",
+        "description": "免費線上 JSON 轉 NDJSON 轉換器 — 在瀏覽器中立即將 JSON 陣列轉換為換行分隔的 JSON (JSONL) 格式。不儲存任何資料。每行輸出一個 JSON 物件，適用於串流、日誌記錄和大資料管道。"
+      },
+      "hjson-to-json": {
+        "name": "HJSON 轉 JSON",
+        "description": "免費線上 HJSON 轉 JSON 轉換器 — 在瀏覽器中立即將人類可讀 JSON 轉換為標準 JSON。不儲存任何資料。移除註解 (// /* #)、處理尾隨逗號、未加引號的鍵和多行字串。"
+      },
+      "json5-to-json": {
+        "name": "JSON5 轉 JSON",
+        "description": "免費線上 JSON5 轉 JSON 轉換器 — 在瀏覽器中立即將 JSON5 轉換為標準 JSON。不儲存任何資料。移除註解 (// /*)、處理尾隨逗號、未加引號的鍵、單引號字串和十六進位數字。"
+      },
+      "avro-schema-formatter": {
+        "name": "Avro Schema 格式化工具",
+        "description": "免費線上 Avro schema 格式化工具 — 在瀏覽器中立即美化列印並驗證 Apache Avro schema JSON。不儲存任何資料。驗證 Avro 類型 (record、enum、array、map、fixed) 並使用適當縮進格式化巢狀欄位定義。"
+      },
+      "protobuf-editor": {
+        "name": "Protobuf 編輯器",
+        "description": "免費線上 Protobuf 編輯器 — 在瀏覽器中立即格式化和縮進 Protocol Buffer .proto 檔案。不儲存任何資料。自動縮進 message、service、enum 和 oneof 區塊，採用一致的 2 空格縮進。"
+      }
+    },
+    "encoding": {
+      "base64-encode": {
+        "name": "Base64 編碼",
+        "description": "免費線上 Base64 編碼器 — 在瀏覽器中立即將文字轉換為 Base64 格式。不儲存任何資料。支援 UTF-8 文字、可選的 URL 安全編碼，並處理多位元組字元。"
+      },
+      "base64-decode": {
+        "name": "Base64 解碼",
+        "description": "免費線上 Base64 解碼器 — 在瀏覽器中立即將 Base64 編碼的字串轉換回純文字。不儲存任何資料。支援標準和 URL 安全 Base64、處理填充，並解碼 UTF-8 多位元組字元。"
+      },
+      "base64url-encode": {
+        "name": "Base64URL 編碼",
+        "description": "免費線上 Base64URL 編碼器 — 在瀏覽器中立即將文字編碼為 URL 安全 Base64 格式。不儲存任何資料。輸出符合 RFC 4648 標準，使用 -_ 代替 +/，無填充，適用於 JWT 和 URL 參數。"
+      },
+      "base64url-decode": {
+        "name": "Base64URL 解碼",
+        "description": "免費線上 Base64URL 解碼器 — 在瀏覽器中立即將 URL 安全 Base64 編碼的字串解碼為文字。不儲存任何資料。處理符合 RFC 4648 格式的 -_ 字元和遺漏的填充。"
+      },
+      "base32-encode-decode": {
+        "name": "Base32 編碼/解碼",
+        "description": "免費線上 Base32 編碼器/解碼器 — 在瀏覽器中立即將文字編碼為 Base32 或將 Base32 解碼為文字。不儲存任何資料。支援 RFC 4648 標準，可選填充字元。"
+      },
+      "base58-encode-decode": {
+        "name": "Base58 編碼/解碼",
+        "description": "免費線上 Base58 編碼器/解碼器 — 在瀏覽器中立即使用比特幣風格 Base58 編碼來編碼或解碼文字。不儲存任何資料。使用標準比特幣字母表、處理前導零位元組，並支援加密貨幣地址格式。"
+      },
+      "base62-encode-decode": {
+        "name": "Base62 編碼/解碼",
+        "description": "免費線上 Base62 編碼器/解碼器 — 在瀏覽器中立即使用 Base62 英數字編碼來編碼或解碼文字。不儲存任何資料。使用 0-9、A-Z 和 a-z 字元產生 URL 安全輸出。"
+      },
+      "hex-encode": {
+        "name": "十六進位編碼",
+        "description": "免費線上十六進制編碼器 — 在您的瀏覽器中即時將文字轉換為十六進制位元組表示。不儲存任何資料。支援大寫/小寫輸出和可自訂的位元組分隔符（空格、冒號、破折號）。"
+      },
+      "hex-decode": {
+        "name": "Hex 解碼",
+        "description": "免費線上十六進制解碼器 — 在您的瀏覽器中即時將十六進制字串轉換回可讀文字。不儲存任何資料。處理 0x 前綴、冒號/破折號/空格分隔符和混合大小寫十六進制輸入。"
+      },
+      "binary-to-text": {
+        "name": "二進制轉文字",
+        "description": "免費線上二進制轉文字轉換器 — 在您的瀏覽器中即時將 0 和 1 的二進制字串解碼回可讀的 ASCII/UTF-8 文字。不儲存任何資料。接受空格分隔、逗號分隔或連續的二進制輸入。"
+      },
+      "text-to-binary": {
+        "name": "文字轉二進制",
+        "description": "免費線上文字轉二進制轉換器 — 在您的瀏覽器中即時將 ASCII/UTF-8 文字轉換為二進制 0 和 1。不儲存任何資料。每個位元組輸出 8 位元二進制，位元組之間支援可自訂的分隔符。"
+      },
+      "octal-converter": {
+        "name": "八進制轉換器",
+        "description": "免費線上八進制轉換器 — 在您的瀏覽器中即時將文字編碼為八進制位元組值或將八進制解碼回文字。不儲存任何資料。支援可自訂的分隔符，並處理 UTF-8 多位元組字元。"
+      },
+      "url-encode": {
+        "name": "URL 編碼",
+        "description": "免費線上 URL 編碼器 — 在您的瀏覽器中即時使用標準 encodeURIComponent 編碼進行百分比編碼。不儲存任何資料。編碼特殊字元、空格、Unicode 和保留的 URL 字元，同時保留安全的 ASCII。"
+      },
+      "url-decode": {
+        "name": "URL 解碼",
+        "description": "免費線上 URL 解碼器 — 在您的瀏覽器中即時將百分比編碼（URL 編碼）的字串解碼回可讀文字。不儲存任何資料。處理 %XX 十六進制序列、UTF-8 多位元組字元和巢狀編碼。"
+      },
+      "url-encode-full": {
+        "name": "URL 編碼（完整）",
+        "description": "免費線上完整 URL 編碼器 — 在您的瀏覽器中即時百分比編碼每個字元，包括安全的 ASCII 字元。不儲存任何資料。將所有位元組編碼為 %XX 格式，適用於混淆或嚴格編碼需求。"
+      },
+      "url-parser": {
+        "name": "URL 解析器",
+        "description": "免費線上 URL 解析器 — 在您的瀏覽器中即時將 URL 分解為協定、主機、路徑、查詢參數和雜湊元件。不儲存任何資料。處理複雜的 URL，包括身驗、連接埠和編碼字元。"
+      },
+      "url-builder": {
+        "name": "URL 構建器",
+        "description": "免費線上 URL 構建器 — 在您的瀏覽器中即時從個別元件（如協定、主機、路徑、查詢和雜湊）構建 URL。不儲存任何資料。驗證產生的 URL，並處理連接埠號、查詢字串和片段識別碼。"
+      },
+      "query-string-parser": {
+        "name": "查詢字串解析器",
+        "description": "免費線上查詢字串解析器 — 在您的瀏覽器中即時將 URL 查詢字串分解為個別的鍵值對。不儲存任何資料。處理前導 ? 前綴、完整 URL 和百分比編碼的參數。"
+      },
+      "query-string-builder": {
+        "name": "查詢字串構建器",
+        "description": "免費線上查詢字串構建器 — 在您的瀏覽器中即時從鍵值對構建 URL 查詢字串。不儲存任何資料。接受 key=value 或 key: value 格式，支援 URL 編碼，並新增可選的前導 ? 前綴。"
+      },
+      "data-url-builder": {
+        "name": "Data URL 構建器",
+        "description": "免費線上 Data URL 構建器 — 在您的瀏覽器中即時從文字內容建立 data URI。不儲存任何資料。支援可自訂的 MIME 類型、Base64 或 UTF-8 編碼，以及可設定的字元集用於嵌入內聯資源。"
+      },
+      "unicode-escape": {
+        "name": "Unicode 逸出",
+        "description": "免費線上 Unicode 逸出工具 — 在您的瀏覽器中立即將文字轉換為 \\uXXXX Unicode 逸出符號。不儲存任何資料。支援 BMP (\\uXXXX) 和補充平面 (\\u{XXXXXX}) 格式，可選擇完整字元逸出。"
+      },
+      "unicode-unescape": {
+        "name": "Unicode 反逸出",
+        "description": "免費線上 Unicode 反逸出工具 — 在您的瀏覽器中立即將 \\uXXXX 和 \\u{XXXXXX} Unicode 逸出序列解碼回可讀文字。不儲存任何資料。處理 BMP 和補充平面字元。"
+      },
+      "html-entity-encode": {
+        "name": "HTML 實體編碼",
+        "description": "免費線上 HTML 實體編碼工具 — 在您的瀏覽器中立即將文字編碼為 HTML 實體。不儲存任何資料。支援具名 (&amp;)、數值 (&#38;) 和十六進位 (&#x26;) 格式，可選擇完整字元編碼以防止 XSS。"
+      },
+      "html-entity-decode": {
+        "name": "HTML 實體解碼",
+        "description": "免費線上 HTML 實體解碼工具 — 在您的瀏覽器中立即將 HTML 實體轉換回可讀文字。不儲存任何資料。支援具名實體 (&amp;)、數值 (&#38;) 和十六進位 (&#x26;) 格式，包括特殊符號和貨幣字元。"
+      },
+      "js-escape": {
+        "name": "JavaScript 逸出",
+        "description": "免費線上 JavaScript 字串逸出工具 — 在您的瀏覽器中立即逸出文字以安全用於 JavaScript 字串字面量。不儲存任何資料。處理引號、反斜線、換行、制表符、控制字元和 Unicode。"
+      },
+      "js-unescape": {
+        "name": "JavaScript 反逸出",
+        "description": "免費線上 JavaScript 字串反逸出工具 — 在您的瀏覽器中立即將 JavaScript 逸出序列轉換回可讀文字。不儲存任何資料。處理 \\n、\\t、\\uXXXX、\\u{XXXXXX}、\\xHH 和所有標準 JS 逸出序列。"
+      },
+      "json-escape": {
+        "name": "JSON 逸出",
+        "description": "免費線上 JSON 字串逸出工具 — 在您的瀏覽器中立即逸出文字以安全嵌入 JSON 字串。不儲存任何資料。根據 JSON 規範正確逸出引號、反斜線、換行、制表符和控制字元。"
+      },
+      "json-unescape": {
+        "name": "JSON 反逸出",
+        "description": "免費線上 JSON 字串反逸出工具 — 在您的瀏覽器中立即將 JSON 逸出序列轉換回可讀文字。不儲存任何資料。處理 \\n、\\t、\\\"、\\\\，和 Unicode 逸出序列。"
+      },
+      "punycode-encode": {
+        "name": "Punycode 編碼",
+        "description": "免費線上 Punycode 編碼工具 — 在您的瀏覽器中立即將 Unicode 網域名稱和文字轉換為 Punycode (IDN) 編碼。不儲存任何資料。根據 RFC 3492 為包含非 ASCII 字元的標籤新增 xn-- 前綴。"
+      },
+      "punycode-decode": {
+        "name": "Punycode 解碼",
+        "description": "免費線上 Punycode 解碼工具 — 在您的瀏覽器中立即將 Punycode 編碼的國際化網域名稱 (IDN) 轉換回 Unicode 文字。不儲存任何資料。根據 RFC 3492 處理 xn-- 前綴標籤和完整網域名稱。"
+      },
+      "utf8-to-utf16": {
+        "name": "UTF-8 轉 UTF-16",
+        "description": "免費線上 UTF-8 轉 UTF-16 轉換工具 — 在您的瀏覽器中立即比較任何文字的 UTF-8 位元組和 UTF-16 程式碼單元。不儲存任何資料。顯示每字元位元組分解、補充平面字元的代理對，以及編碼大小比較。"
+      },
+      "utf16-to-utf8": {
+        "name": "UTF-16 轉 UTF-8",
+        "description": "免費線上 UTF-16 轉 UTF-8 轉換工具 — 在您的瀏覽器中立即比較任何文字的 UTF-16 程式碼單元和 UTF-8 位元組。不儲存任何資料。顯示十六進位值、位元組計數，以及 UTF-16 和 UTF-8 編碼之間的大小比較。"
+      },
+      "latin1-converter": {
+        "name": "Latin-1 轉換工具",
+        "description": "免費線上 Latin-1 轉換器 — 在瀏覽器中立即將文字轉換為 ISO-8859-1 位元值，或將位元值轉換回文字。不儲存任何資料。顯示十六進位和十進位位元值，並標記超出 Latin-1 範圍 (0-255) 的字元。"
+      },
+      "ascii-table": {
+        "name": "ASCII 表",
+        "description": "免費線上 ASCII 表產生器 — 在瀏覽器中立即檢視 ASCII 字元代碼及其十進位、十六進位、八進位和二進位值。不儲存任何資料。支援可列印、控制、完整 (0-127) 和擴展 (0-255) 範圍，提供表格或精簡格式。"
+      },
+      "unicode-lookup": {
+        "name": "Unicode 查詢",
+        "description": "免費線上 Unicode 查詢 — 在瀏覽器中按代碼點、十六進位值、十進位或字元立即搜尋 Unicode 字元。不儲存任何資料。顯示區塊分類、UTF-8/UTF-16 編碼詳情，以及 HTML/CSS/JavaScript 轉義格式。"
+      },
+      "character-inspector": {
+        "name": "字元檢查器",
+        "description": "免費線上字元檢查器 — 在瀏覽器中立即檢查每個字元的 Unicode 代碼點、UTF-8 位元和型態分類。不儲存任何資料。偵測控制字元、零寬度字元、表情符號，並顯示詳細的位元級資訊。"
+      },
+      "charset-detector": {
+        "name": "字符集偵測器",
+        "description": "免費線上字符集偵測器 — 在瀏覽器中立即分析文字編碼特性和相容性。不儲存任何資料。報告 ASCII、Latin-1、BMP 和補充字元分佈，以及 UTF-8/UTF-16/UTF-32 大小估計。"
+      },
+      "bom-remover": {
+        "name": "BOM 移除器",
+        "description": "免費線上 BOM 移除器 — 在瀏覽器中立即從文字移除位元組順序標記字元。不儲存任何資料。偵測並移除 UTF-8、UTF-16 BE 和 UTF-16 LE BOM（位於文字開頭和中間）。"
+      },
+      "any-base-converter": {
+        "name": "任意進制轉換器",
+        "description": "免費線上任意進制數字轉換器 — 在瀏覽器中立即在任意進制 (2-36) 之間轉換數字。不儲存任何資料。支援十進位、十六進位、二進位、八進位和任意進位制最高到 36 進制。"
+      },
+      "morse-code": {
+        "name": "摩斯密碼",
+        "description": "免費線上摩斯密碼轉換器 — 在瀏覽器中立即將文字轉換為摩斯密碼點和線。不儲存任何資料。支援字母 A-Z、數字 0-9 和常見標點符號。"
+      },
+      "nato-alphabet": {
+        "name": "北約字母",
+        "description": "免費線上北約音標字母轉換器 — 在瀏覽器中使用北約/ICAO 音標字母立即拼出文字。不儲存任何資料。將字母 A-Z 和數字 0-9 轉換為標準音標等效語。"
+      }
+    },
+    "text": {
+      "case-converter": {
+        "name": "大小寫轉換器",
+        "description": "免費線上大小寫轉換器 — 在瀏覽器中立即在 camelCase、PascalCase、snake_case、kebab-case 等之間轉換文字。不儲存任何資料。支援 11 種格式，包括 CONSTANT_CASE、dot.case 和 path/case。"
+      },
+      "slugify": {
+        "name": "Slugify",
+        "description": "免費線上 Slugify 工具 — 在瀏覽器中立即將文字轉換為 URL 友善的 Slug。不儲存任何資料。支援自訂分隔符、Unicode/重音處理和特殊字元的嚴格模式。"
+      },
+      "reverser": {
+        "name": "文字反轉器",
+        "description": "免費線上文字反轉器 — 在瀏覽器中立即反轉字元、單詞順序或行順序。不儲存任何資料。同時輸出所有三種反轉模式，並具完整 Unicode 支援。"
+      },
+      "line-sorter": {
+        "name": "行排序器",
+        "description": "免費線上行排序器 — 在瀏覽器中立即按字母、數字、自然或長度對文字行進行排序。不儲存任何資料。支援升序/降序、區分大小寫和空行過濾。"
+      },
+      "line-deduplicator": {
+        "name": "行去重工具",
+        "description": "免費線上行去重工具 — 立即在瀏覽器中從文字移除重複行。不儲存任何資料。支援區分大小寫匹配、空白字元修剪和順序保留。"
+      },
+      "line-shuffler": {
+        "name": "行打亂工具",
+        "description": "免費線上行打亂工具 — 立即在瀏覽器中隨機重新排序文字行。不儲存任何資料。使用 Fisher-Yates 洗牌演算法，可選擇忽略空行。"
+      },
+      "line-numberer": {
+        "name": "行編號工具",
+        "description": "免費線上行編號工具 — 立即在瀏覽器中為文字添加順序行號。不儲存任何資料。支援可配置的起始編號、分隔符、填充寬度和空行處理。"
+      },
+      "empty-line-remover": {
+        "name": "空行移除工具",
+        "description": "免費線上空行移除工具 — 立即在瀏覽器中從文字移除空行。不儲存任何資料。支援空白字元專用行和控制最大連續空行。"
+      },
+      "whitespace-cleaner": {
+        "name": "空白字元清理工具",
+        "description": "免費線上空白字元清理工具 — 立即在瀏覽器中規範化空格、製表符和行尾符。不儲存任何資料。將多個空格轉換為單一空格、製表符轉換為空格、修剪行和規範化行尾符。"
+      },
+      "trimmer": {
+        "name": "文字修剪工具",
+        "description": "免費線上文字修剪工具 — 立即在瀏覽器中移除文字的前導和尾隨空白字元。不儲存任何資料。支援開始/結束/兩側修剪、逐行模式和自訂字元修剪。"
+      },
+      "find-replace": {
+        "name": "尋找與取代",
+        "description": "免費線上尋找與取代 — 立即在瀏覽器中使用字面或正規表示式模式搜尋和替換文字。不儲存任何資料。支援區分大小寫、全字匹配和正規表示式替換。"
+      },
+      "wrapper": {
+        "name": "文字換行工具",
+        "description": "免費線上文字換行工具 — 立即在瀏覽器中以指定欄寬換行文字。不儲存任何資料。支援可配置的行寬 (10-200)、字符斷行模式和段落保留。"
+      },
+      "prefix-suffix-adder": {
+        "name": "前綴/後綴添加工具",
+        "description": "免費線上前綴/後綴添加工具 — 立即在瀏覽器中為每行添加前綴或後綴。不儲存任何資料。支援自訂前綴和後綴字串、空行跳過和行修剪。"
+      },
+      "column-aligner": {
+        "name": "欄對齊工具",
+        "description": "免費線上欄對齊工具 — 立即在瀏覽器中將分隔符分隔的文字對齊為均勻間距的欄。不儲存任何資料。支援自訂分隔符、左/右/中對齊和可調整的填充。"
+      },
+      "truncator": {
+        "name": "文字截斷工具",
+        "description": "免費線上文字截斷工具 — 立即在瀏覽器中將文字縮短至最大長度並添加省略號。不儲存任何資料。支援字邊界保留和開始/中間/結束截斷位置。"
+      },
+      "palindrome-checker": {
+        "name": "迴文檢查工具",
+        "description": "免費線上迴文檢查工具 — 立即在瀏覽器中驗證文字正向和反向讀取是否相同。不儲存任何資料。支援忽略大小寫、空格、標點符號和數字。"
+      },
+      "rot13-encoder": {
+        "name": "ROT13 編碼器",
+        "description": "免費線上 ROT13 編碼器/解碼器 — 在瀏覽器中即時對文本應用 ROT13 替代密碼。無數據存儲。編碼和解碼使用相同操作，因為 ROT13 是自反的。"
+      },
+      "reading-time": {
+        "name": "閱讀時間",
+        "description": "免費線上閱讀時間估算器 — 在瀏覽器中即時計算任何文本的閱讀時間。無數據存儲。可配置字數/分鐘速度和圖片數量調整。"
+      },
+      "word-frequency": {
+        "name": "詞頻統計",
+        "description": "免費線上詞頻計數器 — 在瀏覽器中即時計算文本中的詞出現次數和百分比。無數據存儲。支持區分大小寫、最小詞長度、停用詞排除和可配置的結果限制。"
+      },
+      "statistics": {
+        "name": "文本統計",
+        "description": "免費線上文本統計分析器 — 在瀏覽器中即時計算字符、字詞、句子、段落等。無數據存儲。包括詞彙豐富度、詞長分佈和音節平均值。"
+      },
+      "readability-score": {
+        "name": "可讀性評分",
+        "description": "免費線上可讀性評分計算器 — 在瀏覽器中即時計算 Flesch-Kincaid、Gunning Fog、Coleman-Liau、SMOG 和 ARI 評分。無數據存儲。提供年級級別、閱讀難度和字詞/句子/音節統計。"
+      },
+      "letter-frequency": {
+        "name": "字母頻率",
+        "description": "免費線上字母頻率分析器 — 在瀏覽器中即時計算文本中的字母出現次數和百分比。無數據存儲。顯示最常見/最少見字母、元音/輔音計數和區分大小寫模式。"
+      },
+      "ngram-generator": {
+        "name": "N-gram 生成器",
+        "description": "免費線上 n-gram 生成器 — 在瀏覽器中即時創建詞或字符 n-gram 並計算頻率。無數據存儲。可配置 n-gram 大小 (1-5)、詞或字符模式和結果限制。"
+      },
+      "diff": {
+        "name": "文本差異",
+        "description": "免費線上文本差異工具 — 在瀏覽器中即時比較兩個文本並高亮字級差異。無數據存儲。支持空白字符不敏感和大小寫不敏感的比較模式。"
+      },
+      "similarity-score": {
+        "name": "相似度評分",
+        "description": "免費線上文本相似度計算器 — 在瀏覽器中即時使用 Levenshtein、Jaccard、餘弦和 Dice 算法比較兩個文本。無數據存儲。返回距離、相似度百分比和加權總體評分。"
+      },
+      "plagiarism-highlighter": {
+        "name": "文本重疊查找器",
+        "description": "免費線上文本重疊查找器 — 在瀏覽器中即時檢測並高亮兩個文本之間的匹配段落。無數據存儲。查找公共子字符串，可配置最小匹配長度和大小寫敏感性。"
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum",
+        "description": "免費線上 Lorem Ipsum 生成器 — 在瀏覽器中即時按字詞、句子或段落創建佔位符文本。無數據存儲。可配置數量、單位類型和可選的經典開頭。"
+      },
+      "email-extractor": {
+        "name": "電郵提取器",
+        "description": "免費線上電郵提取器 — 在瀏覽器中即時從任何文本中查找並提取電郵地址。無數據存儲。返回唯一電郵、域名和計數，支持可選的去重。"
+      },
+      "url-extractor": {
+        "name": "URL 提取器",
+        "description": "免費線上 URL 提取器 — 在瀏覽器中即時從文本中查找並提取所有網絡連結。無數據存儲。檢測 HTTP/HTTPS URL 和 www 地址，返回唯一 URL、域名和協議。"
+      },
+      "phone-extractor": {
+        "name": "電話號碼提取器",
+        "description": "免費線上電話號碼提取器 — 在瀏覽器中即時從文字中查找並提取電話號碼。無需存儲任何資料。支援美國、國際和純數字格式，可選規範化。"
+      },
+      "ip-extractor": {
+        "name": "IP 位址提取器",
+        "description": "免費線上 IP 位址提取器 — 在瀏覽器中即時從文字中查找並提取 IPv4 和 IPv6 位址。無需存儲任何資料。返回唯一 IP、計數，並分離 IPv4 和 IPv6。"
+      },
+      "hashtag-extractor": {
+        "name": "主題標籤提取器",
+        "description": "免費線上主題標籤提取器 — 在瀏覽器中即時從社群媒體文字中查找並提取主題標籤。無需存儲任何資料。返回唯一主題標籤、不含 # 的標籤和總計數。"
+      },
+      "mention-extractor": {
+        "name": "提及提取器",
+        "description": "免費線上提及提取器 — 在瀏覽器中即時從社群媒體文字中查找並提取 @提及。無需存儲任何資料。返回唯一提及、不含 @ 的使用者名稱和總計數。"
+      },
+      "number-extractor": {
+        "name": "數字提取器",
+        "description": "免費線上數字提取器 — 在瀏覽器中即時從文字中查找並提取所有數值。無需存儲任何資料。支援整數、小數、負數和百分比，含和、平均值、最小值和最大值。"
+      },
+      "date-extractor": {
+        "name": "日期提取器",
+        "description": "免費線上日期提取器 — 在瀏覽器中即時從任何文字中查找並解析日期。無需存儲任何資料。識別 ISO、美國、歐洲、書寫和相對日期格式。"
+      },
+      "keyword-extractor": {
+        "name": "關鍵字提取器",
+        "description": "免費線上關鍵字提取器 — 使用頻率評分在瀏覽器中即時識別文字中的重要關鍵字。無需存儲任何資料。可配置停用字詞過濾、最少字長和結果限制。"
+      },
+      "language-detector": {
+        "name": "語言檢測器",
+        "description": "免費線上語言檢測器 — 在瀏覽器中使用三元組分析即時識別任何文字的語言。無需存儲任何資料。支援英文、西班牙文、法文、德文、義大利文、葡萄牙文、荷蘭文、俄文、中文和日文。"
+      },
+      "anagram-generator": {
+        "name": "字母亂序器",
+        "description": "免費線上字母亂序器 — 在瀏覽器中即時隨機重新排列字詞或片語中的字母。無需存儲任何資料。生成可配置限制和最少長度的排列組合。"
+      },
+      "semantic-diff": {
+        "name": "字詞重疊對比",
+        "description": "免費線上字詞重疊對比 — 在瀏覽器中使用 Jaccard 相似度即時比較兩段文字的詞彙重疊。無需存儲任何資料。顯示共同字詞、每段文字的獨有字詞和相似度百分比。"
+      },
+      "fake-name": {
+        "name": "假名產生器",
+        "description": "免費線上假名產生器 — 在瀏覽器中即時為測試建立隨機名稱和電子郵件。無需存儲任何資料。批量產生名、姓、全名和電子郵件位址。"
+      },
+      "fake-address": {
+        "name": "假地址產生器",
+        "description": "免費線上假地址產生器 — 在瀏覽器中即時為測試建立隨機美國地址。無需存儲任何資料。產生街道、城市、州和郵遞區號組合。"
+      },
+      "fake-company": {
+        "name": "假公司產生器",
+        "description": "免費線上虛假公司產生器 — 立即在瀏覽器中建立隨機公司名稱、行業和標語進行測試。不儲存任何資料。生成名稱、行業和標語。"
+      },
+      "soundex-generator": {
+        "name": "Soundex 產生器",
+        "description": "免費線上 Soundex 產生器 — 立即在瀏覽器中計算詞語的 Soundex 音位代碼。不儲存任何資料。對於匹配相似發音的名稱和音位搜尋很有用。"
+      },
+      "metaphone-generator": {
+        "name": "Metaphone 產生器",
+        "description": "免費線上 Metaphone 產生器 — 立即在瀏覽器中計算詞語的 Metaphone 音位代碼。不儲存任何資料。對於模糊名稱匹配和音位搜尋索引很有用。"
+      }
+    },
+    "markdown": {
+      "to-html": {
+        "name": "Markdown 轉 HTML",
+        "description": "免費線上 Markdown 轉 HTML 轉換器 — 立即在瀏覽器中將 Markdown 轉譯為已淨化的 HTML，支援 GitHub Flavored Markdown。不儲存任何資料。支援 GFM 表格、任務清單、刪除線、自動連結和可選換行轉換。"
+      },
+      "from-html": {
+        "name": "HTML 轉 Markdown",
+        "description": "免費線上 HTML 轉 Markdown 轉換器 — 立即在瀏覽器中將 HTML 標籤、清單、連結和程式碼區塊轉換為 Markdown。不儲存任何資料。支援 ATX/setext 標題樣式、可設定的項目符號標記以及有圍欄/縮排程式碼區塊。"
+      },
+      "formatter": {
+        "name": "Markdown 格式化工具",
+        "description": "免費線上 Markdown 格式化工具 — 立即在瀏覽器中美化和標準化 Markdown，具有一致的間距、適當的標題結構和修剪的空白。不儲存任何資料。確保標題和程式碼區塊周圍有空行，移除過多的空行。"
+      },
+      "toc-generator": {
+        "name": "Markdown 目錄產生器",
+        "description": "免費線上 Markdown 目錄產生器 — 立即在瀏覽器中從 Markdown 標題產生具有錨點連結的目錄。不儲存任何資料。支援可設定的最大深度、有序/無序清單和巢狀文件的連結前綴。"
+      },
+      "link-extractor": {
+        "name": "Markdown 連結提取器",
+        "description": "免費線上 Markdown 連結提取器 — 立即在瀏覽器中從 Markdown 文件中尋找並列出所有超連結，包括內文連結、參考連結和自動連結。不儲存任何資料。報告連結文本、URL、唯一 URL 和唯一網域。"
+      },
+      "image-extractor": {
+        "name": "Markdown 圖片提取器",
+        "description": "免費線上 Markdown 圖片提取器 — 立即在瀏覽器中從 Markdown 文件中尋找並列出所有圖片參考，包括內文圖片、參考圖片和 HTML img 標籤。不儲存任何資料。報告替代文本、來源 URL 和唯一圖片來源。"
+      },
+      "table-generator": {
+        "name": "Markdown 表格產生器",
+        "description": "免費線上 Markdown 表格產生器 — 立即在瀏覽器中從標題和資料列建立格式化的 Markdown 表格。不儲存任何資料。支援左對齐、中心對齐和右對齐欄位對齐，具有適當的分隔符列和管道逸出。"
+      },
+      "table-formatter": {
+        "name": "Markdown 表格格式化工具",
+        "description": "免費線上 Markdown 表格格式化工具 — 立即在瀏覽器中對齐欄位、標準化填充和設定現有 Markdown 表格的左對齐/中心對齐/右對齐。不儲存任何資料。自動計算欄位寬度並格式化分隔符列。"
+      },
+      "to-plain-text": {
+        "name": "Markdown 轉純文字",
+        "description": "免費線上 Markdown 轉純文字轉換器 — 立即在瀏覽器中移除所有 Markdown 格式（包括標題、粗體、斜體、連結、圖片、程式碼區塊、清單和表格）以取得乾淨的純文字。不儲存任何資料。報告字元和字數統計。"
+      },
+      "escaper": {
+        "name": "Markdown 逸出工具",
+        "description": "免費線上 Markdown 逸出工具 — 立即在瀏覽器中逸出文字中的特殊 Markdown 字元，例如星號、括號和管道。不儲存任何資料。通過反斜線逸出所有 Markdown 語法字元來防止意外格式化。"
+      },
+      "frontmatter-editor": {
+        "name": "Frontmatter 編輯器",
+        "description": "免費線上 frontmatter 編輯器 — 在瀏覽器中即時解析、新增、更新和移除 Markdown 文件中的 YAML frontmatter 欄位。無資料儲存。讀取現有 frontmatter、套用欄位更新並重新建構文件。"
+      },
+      "to-slack": {
+        "name": "Markdown 轉 Slack",
+        "description": "免費線上 Markdown 轉 Slack 轉換器 — 在瀏覽器中即時將 Markdown 標題、粗體、連結、圖片和刪除線轉換為 Slack mrkdwn 格式。無資料儲存。將標題轉換為粗體文字，連結轉換為 Slack 角括號語法，並保留程式碼區塊。"
+      },
+      "from-slack": {
+        "name": "Slack 轉 Markdown",
+        "description": "免費線上 Slack 轉 Markdown 轉換器 — 在瀏覽器中即時將 Slack mrkdwn 粗體、斜體、連結、提及、頻道和刪除線轉換為標準 Markdown。無資料儲存。在轉換過程中保留程式碼區塊和行內程式碼。"
+      },
+      "to-jira": {
+        "name": "Markdown 轉 Jira",
+        "description": "免費線上 Markdown 轉 Jira 轉換器 — 在瀏覽器中即時將 Markdown 標題、粗體、斜體、程式碼區塊、連結、清單和引用轉換為 Jira wiki 標記。無資料儲存。支援巢狀清單、刪除線、圖片和水平線。"
+      },
+      "from-jira": {
+        "name": "Jira 轉 Markdown",
+        "description": "免費線上 Jira 轉 Markdown 轉換器 — 在瀏覽器中即時將 Jira wiki 標記標題、粗體、斜體、程式碼區塊、連結和清單轉換為 Markdown。無資料儲存。支援巢狀清單、引用、圖片和刪除線。"
+      },
+      "to-discord": {
+        "name": "Markdown 轉 Discord",
+        "description": "免費線上 Markdown 轉 Discord 轉換器 — 在瀏覽器中即時將 Markdown 轉換為 Discord 相容格式，包括標題轉粗體轉換、圖片 URL 提取和 ISO 時間戳轉 Discord 時間戳轉換。無資料儲存。保留程式碼區塊並支援提及格式。"
+      },
+      "to-bbcode": {
+        "name": "Markdown 轉 BBCode",
+        "description": "免費線上 Markdown 轉 BBCode 轉換器 — 在瀏覽器中即時將 Markdown 標題、粗體、斜體、連結、圖片、清單和程式碼區塊轉換為 BBCode 論壇格式。無資料儲存。支援可設定的標題大小、引用和刪除線。"
+      },
+      "readme-generator": {
+        "name": "README 產生器",
+        "description": "免費線上 README 產生器 — 在瀏覽器中即時建立包含安裝、使用、API、貢獻和授權等章節的 README.md 範本。無資料儲存。從專案名稱自動產生匯入陳述式和 npm install 指令。"
+      },
+      "license-picker": {
+        "name": "授權條款選擇器",
+        "description": "免費線上授權條款文字產生器 — 在瀏覽器中即時產生 MIT、Apache-2.0、GPL-3.0、BSD-3-Clause 和 ISC 授權條款文字（含您的名稱和年份）。無資料儲存。輸出包含 SPDX 識別碼的完整授權條款文字。"
+      },
+      "changelog-generator": {
+        "name": "Changelog 產生器",
+        "description": "免費線上 Changelog 產生器 — 在瀏覽器中即時建立符合 Keep a Changelog 格式的版本項目。無資料儲存。支援 Added、Changed、Deprecated、Removed、Fixed 和 Security 分類，並可選擇版本比較連結。"
+      },
+      "contributing-guide": {
+        "name": "貢獻指南",
+        "description": "免費線上貢獻指南產生器 — 在瀏覽器中即時為開源專案建立 CONTRIBUTING.md 檔案。無資料儲存。包含 bug 報告、功能請求、pull request 和程式碼風格指南等章節。"
+      },
+      "linter": {
+        "name": "Markdown Linter",
+        "description": "免費線上 Markdown linter — 在瀏覽器中即時檢查 Markdown 的風格問題，如尾部空白、標題空格缺失、過多空行、赤裸 URL 和製表符。無資料儲存。報告包含行號和規則名稱的錯誤和警告。"
+      },
+      "badge-generator": {
+        "name": "Badge 產生器",
+        "description": "免費線上徽章生成器 — 在瀏覽器中立即為 npm、GitHub、授權、建置狀態和自訂徽章建立 shields.io 徽章 Markdown。無數據儲存。支援平面、方形、塑膠、for-the-badge 和社交樣式。"
+      },
+      "issue-template": {
+        "name": "Issue 模板生成器",
+        "description": "免費線上 GitHub issue 模板生成器 — 在瀏覽器中立即建立錯誤報告、功能請求、問題和空白 issue 模板。無數據儲存。產生具有標籤和受指派人欄位的 YAML 前置資料。"
+      },
+      "pr-template": {
+        "name": "PR 模板生成器",
+        "description": "免費線上 PR 模板生成器 — 在瀏覽器中立即建立標準、最小或詳細樣式的 GitHub pull request 模板。無數據儲存。包含檢查清單、變更類型選項和測試部分。"
+      },
+      "code-of-conduct": {
+        "name": "行為守則生成器",
+        "description": "免費線上行為守則生成器 — 在瀏覽器中立即建立 Contributor Covenant、Citizen Code 或最小行為守則文件。無數據儲存。使用專案名稱和聯絡電子郵件自訂。"
+      },
+      "link-checker": {
+        "name": "Markdown 連結檢查器",
+        "description": "免費線上 Markdown 連結檢查器 — 在瀏覽器中立即驗證 Markdown 文件中的所有連結，檢查空 URL、未解析的範本變數和未編碼空格等常見問題。無數據儲存。按類型（URL、錨點、相對、電子郵件）分類連結並報告驗證摘要。"
+      },
+      "to-confluence": {
+        "name": "Markdown 轉 Confluence",
+        "description": "免費線上 Markdown 轉 Confluence 轉換器 — 在瀏覽器中立即將 Markdown 標題、粗體、斜體、程式碼區塊、連結、清單和表格轉換為 Confluence wiki 標記。無數據儲存。支援工作清單、刪除線、水平線和圖像。"
+      },
+      "rst-to-md": {
+        "name": "RST 轉 Markdown",
+        "description": "免費線上 reStructuredText 轉 Markdown 轉換器 — 在瀏覽器中立即將 RST 標題、行內格式、程式碼區塊、指令、連結和清單轉換為 Markdown。無數據儲存。支援 Sphinx 角色、警告、圖像和定義清單。"
+      },
+      "asciidoc-to-md": {
+        "name": "AsciiDoc 轉 Markdown",
+        "description": "免費線上 AsciiDoc 轉 Markdown 轉換器 — 在瀏覽器中立即將 AsciiDoc 標題、格式、連結、清單和程式碼區塊轉換為 Markdown。無數據儲存。支援警告、引用塊、表格和定義清單。"
+      },
+      "textile-to-md": {
+        "name": "Textile 轉 Markdown",
+        "description": "免費線上 Textile 轉 Markdown 轉換器 — 在瀏覽器中立即將 Textile 標題、粗體、斜體、刪除線、連結、清單、引用塊和表格轉換為 Markdown。無數據儲存。支援註腳、程式碼區塊和巢狀清單層級。"
+      }
+    },
+    "api": {
+      "curl-converter": {
+        "name": "cURL 轉換器",
+        "description": "免費線上 cURL 轉換器 — 在瀏覽器中立即將 cURL 指令轉換為 fetch、axios、Python requests、Go、Rust 和 PHP 程式碼。無數據儲存。解析標題、驗證、請求本體和所有常見 cURL 旗標。"
+      },
+      "openapi-viewer": {
+        "name": "OpenAPI 檢視器",
+        "description": "免費線上 OpenAPI 檢視器 — 在瀏覽器中立即以人類可讀的格式顯示 OpenAPI 和 Swagger 規範，包含端點摘要、伺服器資訊和結構描述清單。無數據儲存。"
+      },
+      "openapi-validator": {
+        "name": "OpenAPI 驗證器",
+        "description": "免費線上 OpenAPI 驗證器 — 在瀏覽器中立即檢查 OpenAPI 和 Swagger 規範的結構錯誤、遺漏欄位和最佳實踐警告。無數據儲存。報告路徑計數、操作計數和結構描述統計。"
+      },
+      "openapi-formatter": {
+        "name": "OpenAPI 格式化工具",
+        "description": "免費線上 OpenAPI 格式化工具 — 在瀏覽器中立即使用一致的 2 空格縮進對 OpenAPI 規範 JSON 進行美化和格式化。無數據儲存。驗證 JSON 語法並輸出清晰格式化的規範。"
+      },
+      "openapi-to-json": {
+        "name": "OpenAPI YAML 轉 JSON",
+        "description": "免費線上 OpenAPI YAML 轉 JSON 轉換工具 — 在瀏覽器中即時將 OpenAPI 規範從 YAML 轉換為 JSON 格式。無資料儲存。支援標準 YAML 語法，包括巢狀物件、陣列和引號字串。"
+      },
+      "json-to-openapi": {
+        "name": "JSON 轉 OpenAPI YAML",
+        "description": "免費線上 OpenAPI JSON 轉 YAML 轉換工具 — 在瀏覽器中即時將 OpenAPI 規範從 JSON 轉換為 YAML 格式。無資料儲存。保留路徑、結構、回應及所有 OpenAPI 3.x 結構。"
+      },
+      "openapi-diff": {
+        "name": "OpenAPI 差異比較",
+        "description": "免費線上 OpenAPI 差異工具 — 並列比較兩個 OpenAPI 規範，並在瀏覽器中即時檢測新增、移除和變更的路徑、結構和屬性。無資料儲存。"
+      },
+      "openapi-mock": {
+        "name": "OpenAPI 模擬回應產生器",
+        "description": "免費線上 OpenAPI 模擬回應產生器 — 在瀏覽器中從 OpenAPI 規範路徑和結構即時建立逼真的模擬 JSON 回應。無資料儲存。解析 $ref 參考、支援所有資料型別和格式。"
+      },
+      "swagger2-to-openapi3": {
+        "name": "Swagger 2.0 轉 OpenAPI 3.0",
+        "description": "免費線上 Swagger 2.0 轉 OpenAPI 3.0 轉換工具 — 在瀏覽器中即時升級 Swagger 規範至 OpenAPI 3.0.3 格式。無資料儲存。轉換路徑、定義轉換為元件、安全配置、body 參數轉換為 requestBody，以及 produces/consumes 轉換為內容型別。"
+      },
+      "openapi-merger": {
+        "name": "OpenAPI 合併工具",
+        "description": "免費線上 OpenAPI 合併工具 — 在瀏覽器中即時將兩個 OpenAPI 規範合併為單一統一規範。無資料儲存。合併路徑、結構、伺服器、標籤和安全定義，並進行去重。"
+      },
+      "openapi-splitter": {
+        "name": "OpenAPI 分割工具",
+        "description": "免費線上 OpenAPI 分割工具 — 在瀏覽器中即時按標籤或路徑前綴將大型 OpenAPI 規範分解為較小規範。無資料儲存。在每個分割中保留元件、伺服器和規範中繼資料。"
+      },
+      "json-schema-to-openapi": {
+        "name": "JSON Schema 轉 OpenAPI",
+        "description": "免費線上 JSON Schema 轉 OpenAPI 轉換工具 — 在瀏覽器中即時將 JSON Schema 定義包裝為 OpenAPI 3.0 元件結構。無資料儲存。保留型別、必填欄位、格式和巢狀物件結構。"
+      },
+      "openapi-to-json-schema": {
+        "name": "OpenAPI 轉 JSON Schema",
+        "description": "免費線上 OpenAPI 轉 JSON Schema 轉換工具 — 在瀏覽器中即時從 OpenAPI 規範提取元件結構並轉換為標準 JSON Schema (draft-07)。無資料儲存。處理 $ref、nullable 和巢狀結構。"
+      },
+      "graphql-schema-viewer": {
+        "name": "GraphQL Schema 檢視器",
+        "description": "免費線上 GraphQL schema 檢視器 — 在瀏覽器中即時格式化並顯示 GraphQL SDL 定義，具適當縮排。無資料儲存。處理型別、介面、列舉、聯合和巢狀欄位定義。"
+      },
+      "request-builder": {
+        "name": "HTTP 請求建立器",
+        "description": "免費線上 HTTP 請求建立器 — 在瀏覽器中即時以 fetch、cURL、HTTPie 或 wget 格式建構 HTTP 請求，包含自訂標頭、內容和查詢參數。無資料儲存。"
+      },
+      "response-formatter": {
+        "name": "API 回應格式化工具",
+        "description": "免費線上 API 回應格式化工具 — 在瀏覽器中即時美化列印 JSON 和 XML API 回應，支援可設定的縮排和選用的鍵值排序。無資料儲存。"
+      },
+      "graphql-formatter-api": {
+        "name": "GraphQL 格式化工具",
+        "description": "免費線上 GraphQL 格式化工具 — 在瀏覽器中立即美化並縮排 GraphQL 查詢和架構定義。無資料儲存。支援格式化巢狀欄位、引數和型別定義，提供可配置的縮排。"
+      },
+      "graphql-to-typescript": {
+        "name": "GraphQL 轉 TypeScript",
+        "description": "免費線上 GraphQL 轉 TypeScript 轉換器 — 在瀏覽器中從 GraphQL 架構定義立即產生 TypeScript 介面。無資料儲存。對應純量型別、處理可空性，支援匯出和唯讀選項。"
+      },
+      "rest-to-graphql": {
+        "name": "REST 轉 GraphQL",
+        "description": "免費線上 REST 轉 GraphQL 轉換器 — 在瀏覽器中從 REST API 端點描述立即產生 GraphQL 架構定義。無資料儲存。從 HTTP 方法和回應形狀推斷型別、查詢、異動和輸入型別。"
+      },
+      "webhook-curl-generator": {
+        "name": "Webhook cURL 產生器",
+        "description": "免費線上 webhook cURL 產生器 — 在瀏覽器中立即建立可用的 cURL 命令來測試 webhook，支援自訂有效負載、標頭和內容類型。無資料儲存。相容 webhook.site、requestbin 和 ngrok。"
+      },
+      "api-mock-generator": {
+        "name": "API 模擬資料產生器",
+        "description": "免費線上 API 模擬資料產生器 — 在瀏覽器中從 JSON Schema 或樣本資料立即產生逼真的模擬 JSON 資料。無資料儲存。從樣本資料推斷型別，並使用隨機值產生多筆記錄。"
+      },
+      "postman-to-curl": {
+        "name": "Postman 轉 cURL",
+        "description": "免費線上 Postman 轉 cURL 轉換器 — 在瀏覽器中將 Postman 集合請求立即轉換為 cURL 命令。無資料儲存。支援 v2.0/v2.1 集合，包括標頭、本體、查詢參數和巢狀資料夾。"
+      },
+      "openapi-to-typescript": {
+        "name": "OpenAPI 轉 TypeScript",
+        "description": "免費線上 OpenAPI 轉 TypeScript 轉換器 — 在瀏覽器中從 OpenAPI 規格立即產生 TypeScript 介面和選用的用戶端函式簽名。無資料儲存。對應架構、處理必要欄位，支援 $ref 解析。"
+      },
+      "graphql-schema-generator": {
+        "name": "GraphQL 架構產生器",
+        "description": "免費線上 GraphQL 架構產生器 — 在瀏覽器中從 JSON 資料立即建立 GraphQL 型別定義。無資料儲存。從樣本資料推斷型別，並選用產生 Query 和 Mutation 根型別。"
+      },
+      "gitignore-generator": {
+        "name": ".gitignore 產生器",
+        "description": "免費線上 .gitignore 產生器 — 在瀏覽器中為 Node.js、Python、Java、Go、Rust、Ruby 等立即建立 .gitignore 檔案。無資料儲存。包含 IDE 特定規則、OS 檔案和常見附加項如 .env 和日誌檔案。"
+      },
+      "aws-arn-parser": {
+        "name": "AWS ARN 解析器",
+        "description": "免費線上 AWS ARN 解析器 — 在瀏覽器中立即分解 Amazon 資源名稱為分割區、服務、地區、帳戶和資源元件。無資料儲存。解析 IAM、S3、Lambda、EC2 和所有 AWS 服務 ARN。"
+      },
+      "cloud-resource-namer": {
+        "name": "雲端資源命名器",
+        "description": "免費線上雲端資源名稱產生器 — 在瀏覽器中為 AWS、GCP 和 Azure 立即建立正確格式的資源名稱。無資料儲存。遵循提供者特定的命名慣例，適用於儲存桶、虛擬機、資料庫、佇列等。"
+      }
+    },
+    "code": {
+      "js-formatter": {
+        "name": "JavaScript 格式化工具",
+        "description": "免費線上 JavaScript 格式化工具 — 在瀏覽器中根據大括號和方括號結構立即格式化和縮排 JavaScript 程式碼。無資料儲存。基本格式化工具，支援可配置的縮排大小 — 用於正式環境，建議使用 Prettier。"
+      },
+      "graphql-formatter": {
+        "name": "GraphQL 格式化工具",
+        "description": "免費線上 GraphQL 格式化工具 — 在瀏覽器中以正確的縮排立即格式化和美化 GraphQL 查詢。無資料儲存。支援可配置的縮排大小，適用於查詢、異動和片段。"
+      },
+      "md-formatter": {
+        "name": "Markdown 格式化工具",
+        "description": "免費線上 Markdown 格式化工具 — 標準化間距、在標題和列表前添加空行、修剪尾部空白並立即修復結構。瀏覽器內處理，無資料儲存。"
+      },
+      "python-formatter": {
+        "name": "Python 格式化工具",
+        "description": "免費線上 Python 格式化工具 — 使用一致的縮排立即格式化 Python 代碼。瀏覽器內處理，無資料儲存。基礎格式化工具，支援為 def、class、if、for、while 和 try 區塊配置縮排大小。"
+      },
+      "js-minify": {
+        "name": "JavaScript 壓縮工具",
+        "description": "免費線上 JavaScript 壓縮工具 — 通過移除空白和註解立即壓縮 JavaScript 代碼。瀏覽器內處理，無資料儲存。顯示原始大小與壓縮後大小及減少百分比。"
+      },
+      "json-minify-code": {
+        "name": "JSON 壓縮工具",
+        "description": "免費線上 JSON 壓縮工具 — 通過移除所有空白和格式立即壓縮 JSON。瀏覽器內處理，無資料儲存。顯示原始大小與壓縮後大小及減少百分比。"
+      },
+      "xml-minify-code": {
+        "name": "XML 壓縮工具",
+        "description": "免費線上 XML 壓縮工具 — 通過移除空白、註解和不必要的格式立即壓縮 XML。瀏覽器內處理，無資料儲存。顯示原始大小與壓縮後大小及減少百分比。"
+      },
+      "graphql-minify": {
+        "name": "GraphQL 壓縮工具",
+        "description": "免費線上 GraphQL 壓縮工具 — 通過移除空白和不必要的格式立即壓縮 GraphQL 查詢。瀏覽器內處理，無資料儲存。顯示原始大小與壓縮後大小及減少百分比。"
+      },
+      "ts-minify": {
+        "name": "TypeScript 壓縮工具",
+        "description": "免費線上 TypeScript 壓縮工具 — 移除型別標註、介面、泛型和空白以立即產生壓縮後的 JavaScript。瀏覽器內處理，無資料儲存。顯示原始大小與壓縮後大小及減少百分比。"
+      },
+      "batch-minify": {
+        "name": "批量壓縮工具",
+        "description": "免費線上批量代碼壓縮工具 — 自動偵測並立即壓縮 JavaScript、CSS、HTML、JSON、XML 或 SQL 代碼。瀏覽器內處理，無資料儲存。顯示原始大小與壓縮後大小及減少百分比。"
+      },
+      "js-obfuscator": {
+        "name": "JavaScript 混淆工具",
+        "description": "免費線上 JavaScript 混淆工具 — 將變數和函式重新命名為簡短識別符、移除註解並摺疊空白。瀏覽器內處理，無資料儲存。通過變數重新命名進行簡單混淆。"
+      },
+      "code-complexity": {
+        "name": "代碼複雜度分析器",
+        "description": "免費線上代碼複雜度分析器 — 為 JavaScript 和 TypeScript 函式立即計算環路複雜度。瀏覽器內處理，無資料儲存。以函式為單位報告分析結果，包含風險等級（簡單、中等、複雜）。"
+      },
+      "syntax-highlighter": {
+        "name": "語法高亮工具",
+        "description": "免費線上語法高亮工具 — 將 JavaScript、TypeScript、HTML、CSS、Python 和 SQL 代碼轉換為具有深色或淺色主題的語法高亮 HTML。瀏覽器內處理，無資料儲存。"
+      },
+      "line-counter": {
+        "name": "行數計算器",
+        "description": "免費線上行數計算器 — 計算總行數、代碼行、註解行和空行，並顯示百分比分佈。瀏覽器內處理，無資料儲存。可偵測多種語言的單行和區塊註解。"
+      },
+      "code-to-image": {
+        "name": "代碼轉圖片",
+        "description": "免費線上程式碼轉圖片轉換器 — 在瀏覽器中立即生成具有深色、淺色或 Monokai 主題的樣式 HTML 程式碼卡片。無資料儲存。包括行號、視窗邊框和可自訂的字型大小及內距。"
+      },
+      "comment-stripper": {
+        "name": "註解移除工具",
+        "description": "免費線上註解移除工具 — 在瀏覽器中立即從 JavaScript、CSS、HTML、Python 和 SQL 程式碼中移除單行、區塊和文件註解。無資料儲存。支援自動偵測和 JSDoc 保留。"
+      },
+      "dead-code-finder": {
+        "name": "死代碼查找器",
+        "description": "免費線上死代碼查找器 — 在瀏覽器中立即偵測 JavaScript 和 TypeScript 程式碼中潛在未使用的變數和函式。無資料儲存。使用靜態分析識別僅引用一次的宣告。"
+      },
+      "eslint-config-generator": {
+        "name": "ESLint 設定產生器",
+        "description": "免費線上 ESLint 設定產生器 — 在瀏覽器中立即建立平面或舊式 ESLint 設定，具有 TypeScript、React、Vue、Prettier 整合及規則嚴格度預設。無資料儲存。"
+      },
+      "prettier-config-generator": {
+        "name": "Prettier 設定產生器",
+        "description": "免費線上 Prettier 設定產生器 — 在瀏覽器中立即建立 Prettier 設定，包括列印寬度、引號、分號、尾部逗號等。無資料儲存。輸出 JSON、JS 模組或 YAML 格式。"
+      },
+      "editorconfig-generator": {
+        "name": ".editorconfig 產生器",
+        "description": "免費線上 .editorconfig 產生器 — 在瀏覽器中立即建立 EditorConfig 檔案，包括縮排風格、字元集、行結束符和檔案類型特定規則。無資料儲存。包括 Markdown 和 Makefile 覆蓋。"
+      },
+      "tsconfig-generator": {
+        "name": "tsconfig.json 產生器",
+        "description": "免費線上 tsconfig.json 產生器 — 在瀏覽器中立即為 Next.js、React、Node.js 或程式庫專案建立 TypeScript 編譯器設定，具有嚴格模式、路徑別名和來源對應。無資料儲存。"
+      },
+      "babel-config-generator": {
+        "name": "Babel 設定產生器",
+        "description": "免費線上 Babel 設定產生器 — 在瀏覽器中立即為瀏覽器、Node.js 或通用環境建立 Babel 設定，具有 TypeScript、React 和裝飾器支援。無資料儲存。輸出 JSON 或 JS 模組格式。"
+      },
+      "env-generator": {
+        "name": ".env 產生器",
+        "description": "免費線上 .env 檔案產生器 — 在瀏覽器中立即為 Next.js、React、Node.js、Django、Rails、Laravel 和 Spring 建立環境變數範本。無資料儲存。包括資料庫、驗證、電子郵件、儲存和日誌預設。"
+      },
+      "env-parser": {
+        "name": ".env 解析器",
+        "description": "免費線上 .env 檔案解析器 — 在瀏覽器中立即將 dotenv 檔案解析成結構化 JSON，包括變數名稱、值、鍵計數和註解計數。無資料儲存。處理帶引號的值和內聯註解。"
+      },
+      "env-validator": {
+        "name": ".env 驗證器",
+        "description": "免費線上 .env 檔案驗證器 — 在瀏覽器中立即檢查 dotenv 檔案的語法錯誤、重複鍵、缺失值、不符的引號和安全問題。無資料儲存。報告錯誤和警告及行號。"
+      },
+      "package-json-validator": {
+        "name": "package.json 驗證器",
+        "description": "免費線上 package.json 驗證器 — 在瀏覽器中立即檢查必填欄位、命名慣例、semver 格式和常見問題。無資料儲存。報告錯誤、警告和套件資訊。"
+      },
+      "package-json-merger": {
+        "name": "package.json 合併工具",
+        "description": "免費線上 package.json 合併工具 — 在瀏覽器中立即深度合併兩個 package.json 檔案，結合相依性、指令碼和巢狀物件。無資料儲存。顯示合併摘要及新增和更新的鍵。"
+      },
+      "semver-bumper": {
+        "name": "Semver 版本升級器",
+        "description": "免費線上 semver 版本升級工具 — 遵循語義化版本規則，立即在瀏覽器中遞增主版本號、次版本號、修訂版本號或預發佈版本號。無數據儲存。"
+      },
+      "sql-to-typescript": {
+        "name": "SQL 轉 TypeScript",
+        "description": "免費線上 SQL 轉 TypeScript 轉換器 — 從 CREATE TABLE 語句生成 TypeScript 介面，支援駝峰命名法轉換、可空類型和可選欄位，立即在瀏覽器中執行。無數據儲存。"
+      }
+    },
+    "color": {
+      "hex-to-rgb": {
+        "name": "十六進位轉 RGB",
+        "description": "免費線上十六進位轉 RGB 轉換器 — 將十六進位色碼轉換為 RGB（紅、綠、藍）值，立即在瀏覽器中執行。無數據儲存。"
+      },
+      "rgb-to-hex": {
+        "name": "RGB 轉十六進位",
+        "description": "免費線上 RGB 轉十六進位轉換器 — 將 RGB 色值轉換為十六進位碼，立即在瀏覽器中執行。無數據儲存。"
+      },
+      "hex-to-hsl": {
+        "name": "十六進位轉 HSL",
+        "description": "免費線上十六進位轉 HSL 轉換器 — 將十六進位色碼轉換為 HSL（色相、飽和度、亮度）格式，立即在瀏覽器中執行。無數據儲存。"
+      },
+      "hsl-to-hex": {
+        "name": "HSL 轉十六進位",
+        "description": "免費線上 HSL 轉十六進位轉換器 — 將 HSL 色值轉換為十六進位碼，立即在瀏覽器中執行。無數據儲存。"
+      },
+      "rgb-to-hsl": {
+        "name": "RGB 轉 HSL",
+        "description": "免費線上 RGB 轉 HSL 轉換器 — 將 RGB 色值轉換為 HSL（色相、飽和度、亮度）格式，立即在瀏覽器中執行。無數據儲存。"
+      },
+      "hsl-to-rgb": {
+        "name": "HSL 轉 RGB",
+        "description": "免費線上 HSL 轉 RGB 轉換器 — 將 HSL 色值轉換為 RGB 格式，立即在瀏覽器中執行。無數據儲存。"
+      },
+      "rgb-to-cmyk": {
+        "name": "RGB 轉 CMYK",
+        "description": "免費線上 RGB 轉 CMYK 轉換器 — 將 RGB 螢幕色值轉換為 CMYK 印刷色值，立即在瀏覽器中執行。無數據儲存。"
+      },
+      "cmyk-to-rgb": {
+        "name": "CMYK 轉 RGB",
+        "description": "免費線上 CMYK 轉 RGB 轉換器 — 將 CMYK 印刷色值轉換為 RGB 螢幕色值，立即在瀏覽器中執行。無數據儲存。"
+      },
+      "hex-to-hsv": {
+        "name": "十六進位轉 HSV",
+        "description": "免費線上十六進位轉 HSV 轉換器 — 將十六進位色碼轉換為 HSV（色相、飽和度、值）格式，立即在瀏覽器中執行。無數據儲存。"
+      },
+      "color-name-to-hex": {
+        "name": "色彩名稱轉十六進位",
+        "description": "免費線上色彩名稱轉十六進位轉換器 — 將 CSS 色彩名稱如 'coral'、'steelblue' 或 'tomato' 轉換為十六進位碼，立即在瀏覽器中執行。無數據儲存。支援全部 148 個 CSS 命名色。"
+      },
+      "hex-to-color-name": {
+        "name": "十六進位轉色彩名稱",
+        "description": "免費線上十六進制轉色彩名稱轉換器 — 立即在瀏覽器中找到任何十六進制代碼最接近的 CSS 色彩名稱。無資料儲存。符合所有 148 個 CSS 命名色彩。"
+      },
+      "all-color-formats": {
+        "name": "所有色彩格式",
+        "description": "免費線上色彩格式轉換器 — 立即在瀏覽器中將任何色彩轉換為十六進制、RGB、HSL、HSV 和 CMYK 格式。無資料儲存。接受十六進制代碼、RGB 值、HSL 值和 CSS 色彩名稱。"
+      },
+      "color-picker": {
+        "name": "色彩選擇器",
+        "description": "免費線上色彩選擇器 — 輸入任何十六進制、RGB 或 HSL 色彩，立即在瀏覽器中查看詳細資訊，包括所有格式轉換和感知亮度。無資料儲存。"
+      },
+      "random-color": {
+        "name": "隨機色彩產生器",
+        "description": "免費線上隨機色彩產生器 — 立即在瀏覽器中以十六進制、RGB 或 HSL 格式產生隨機色彩。無資料儲存。可配置產生 1 到 50 種色彩。"
+      },
+      "palette-generator": {
+        "name": "調色盤產生器",
+        "description": "免費線上色彩調色盤產生器 — 使用類似色、補色、三角配色或單色調和規則，立即在瀏覽器中建立協調的色彩調色盤。無資料儲存。"
+      },
+      "complementary-color": {
+        "name": "補色",
+        "description": "免費線上補色尋找器 — 從任何十六進制、RGB 或 HSL 輸入，立即在瀏覽器中計算色輪上的對比色。無資料儲存。"
+      },
+      "analogous-colors": {
+        "name": "類似色",
+        "description": "免費線上類似色尋找器 — 從任何十六進制、RGB 或 HSL 輸入，立即在瀏覽器中產生色輪上的相鄰色彩。無資料儲存。顯示 5 種協調的相鄰色調。"
+      },
+      "triadic-colors": {
+        "name": "三角配色",
+        "description": "免費線上三角配色尋找器 — 從任何輸入色彩，立即在瀏覽器中計算色輪上均勻間隔的三種色彩。無資料儲存。"
+      },
+      "split-complementary": {
+        "name": "分割補色",
+        "description": "免費線上分割補色尋找器 — 立即在瀏覽器中計算色輪上補色相鄰的兩種色彩。無資料儲存。"
+      },
+      "color-shades": {
+        "name": "色彩陰影",
+        "description": "免費線上色彩陰影產生器 — 立即在瀏覽器中建立任何色彩的逐漸變暗變化。無資料儲存。可配置陰影步數從 2 到 20 步。"
+      },
+      "color-tints": {
+        "name": "色彩色調",
+        "description": "免費線上色彩色調產生器 — 立即在瀏覽器中建立任何色彩的逐漸變亮變化。無資料儲存。可配置色調步數從 2 到 20 步。"
+      },
+      "gradient-generator": {
+        "name": "漸層產生器",
+        "description": "免費線上 CSS 漸層產生器 — 使用自訂色彩、方向和色彩終點，立即在瀏覽器中建立線性或徑向漸層字串。無資料儲存。輸出現成可用的 CSS。"
+      },
+      "contrast-checker": {
+        "name": "對比度檢查器",
+        "description": "免費線上 WCAG 對比度檢查器 — 立即在瀏覽器中計算前景色和背景色之間的對比度，並測試 AA/AAA 合規性。無資料儲存。檢查一般和大型文字要求。"
+      },
+      "color-blindness-simulator": {
+        "name": "色盲模擬器",
+        "description": "免費線上色盲模擬器 — 即時預覽色覺異常症（紅色色盲、綠色色盲、藍-黃色盲及全色盲）色彩顯示效果。無數據存儲。協助測試色彩無障礙設計。"
+      },
+      "color-brightness": {
+        "name": "色彩亮度",
+        "description": "免費線上色彩亮度計算器 — 使用標準亮度公式（0.299R + 0.587G + 0.114B）即時計算感知亮度。無數據存儲。將色彩分類為淺色或深色。"
+      },
+      "color-luminance": {
+        "name": "色彩相對亮度",
+        "description": "免費線上色彩相對亮度計算器 — 根據 WCAG 2.0 標準即時計算相對亮度以進行無障礙測試。無數據存儲。"
+      },
+      "color-distance": {
+        "name": "色彩距離",
+        "description": "免費線上色彩距離計算器 — 在 CIE Lab 色彩空間中即時計算兩色之間的感知距離（Delta E / CIE76）。無數據存儲。測量人眼感知的色彩差異程度。"
+      },
+      "color-mixer": {
+        "name": "色彩混合器",
+        "description": "免費線上色彩混合器 — 以任意比例混合兩種色彩尋找中間色。無數據存儲。顯示混合色的十六進位和 RGB 格式。"
+      },
+      "color-inverter": {
+        "name": "色彩反轉器",
+        "description": "免費線上色彩反轉器 — 即時計算任何十六進位、RGB 或 HSL 色彩的補色反轉。無數據存儲。顯示原始色與反轉色的十六進位和 RGB 值。"
+      }
+    },
+    "communication": {
+      "email-header-parser": {
+        "name": "電子郵件標頭解析器",
+        "description": "免費線上電子郵件標頭解析器 — 貼上原始 SMTP 標頭並即時取得結構化 JSON。無數據存儲。提取寄件者、收件者、主旨、日期、訊息識別碼，追蹤接收跳轉，偵測 SPF/DKIM 驗證。"
+      },
+      "email-template-builder": {
+        "name": "電子郵件範本產生器",
+        "description": "免費線上電子郵件範本產生器 — 即時建立響應式 HTML 電子郵件範本。無數據存儲。產生與 Outlook、Gmail 及 Apple Mail 相容的表格式排版，支援自訂色彩、行動呼籲按鈕及頁尾。"
+      },
+      "email-to-markdown": {
+        "name": "電子郵件轉 Markdown",
+        "description": "免費線上電子郵件轉 Markdown 轉換器 — 貼上純文字電子郵件並即時取得 Markdown。無數據存儲。將標頭轉換為元數據表格，URL 轉為可點擊連結，電子郵件地址轉為 mailto 連結，縮排文字轉為區塊引言。"
+      },
+      "email-address-parser": {
+        "name": "電子郵件地址解析器",
+        "description": "免費線上電子郵件地址解析器 — 即時從電子郵件地址中提取名稱、本地部分及網域。無數據存儲。支援 Name <email>、\"Name\" <email>、email (Name) 及純電子郵件格式，並進行驗證。"
+      },
+      "email-signature-generator": {
+        "name": "電子郵件簽名產生器",
+        "description": "免費線上電子郵件簽名產生器 — 即時建立專業 HTML 電子郵件簽名。無數據存儲。選擇專業、精簡或創意風格，可選擇性加入電話、網站、LinkedIn 及 Twitter 連結。"
+      },
+      "spf-record-generator": {
+        "name": "SPF 記錄產生器",
+        "description": "免費線上 SPF 記錄產生器 — 即時為您的網域建立 SPF DNS TXT 記錄。無數據存儲。支援 Google Workspace、Microsoft 365、Mailgun、SendGrid、Amazon SES、自訂 IP 及 DNS 查詢計數。"
+      },
+      "dkim-validator": {
+        "name": "DKIM 驗證器",
+        "description": "免費線上 DKIM 記錄驗證器 — 貼上您的 DKIM DNS TXT 記錄並在瀏覽器中立即檢查其格式。不儲存任何資料。驗證版本、金鑰類型、公開金鑰、雜湊演算法、服務類型和標誌，並提供詳細的錯誤和警告訊息。"
+      },
+      "telegram-formatter": {
+        "name": "Telegram 格式化工具",
+        "description": "免費線上 Telegram 格式化工具 — 在瀏覽器中立即將 Markdown 轉換為 Telegram HTML 或 MarkdownV2 格式。不儲存任何資料。使用正確的跳脫符號轉換粗體、斜體、底線、刪除線、代碼、連結和引用塊以適配 Telegram Bot API。"
+      },
+      "teams-formatter": {
+        "name": "Teams 格式化工具",
+        "description": "免費線上 Teams 格式化工具 — 在瀏覽器中立即將 HTML 或純文字轉換為 Microsoft Teams Markdown 或 Adaptive Card JSON 格式。不儲存任何資料。將粗體、斜體、刪除線、連結和換行轉換為 Teams 相容格式。"
+      },
+      "irc-formatter": {
+        "name": "IRC 格式化工具",
+        "description": "免費線上 IRC 格式化工具 — 在瀏覽器中立即將 Markdown 風格的文字轉換為 mIRC 彩色代碼。不儲存任何資料。支援粗體、斜體、底線、16 種前景色、背景色和 Markdown 語法（**粗體**、*斜體*、__底線__）。"
+      }
+    },
+    "crypto": {
+      "md5-hash": {
+        "name": "MD5 雜湊",
+        "description": "免費線上 MD5 雜湊產生器 — 在瀏覽器中立即計算 MD5 摘要。不儲存任何資料。產生 32 字元十六進位雜湊用於校驗和及非安全性指紋識別（不適合密碼學用途）。"
+      },
+      "sha1-hash": {
+        "name": "SHA-1 雜湊",
+        "description": "免費線上 SHA-1 雜湊產生器 — 在瀏覽器中立即計算 SHA-1 摘要。不儲存任何資料。產生 40 字元十六進位雜湊用於校驗和及非安全性指紋識別（已廢止用於密碼學用途）。"
+      },
+      "sha256-hash": {
+        "name": "SHA-256 雜湊",
+        "description": "免費線上 SHA-256 雜湊產生器 — 在瀏覽器中立即計算 SHA-256 摘要。不儲存任何資料。使用 Web Crypto API 產生 64 字元十六進位雜湊以進行資料完整性和密碼學驗證。"
+      },
+      "sha384-hash": {
+        "name": "SHA-384 雜湊",
+        "description": "免費線上 SHA-384 雜湊產生器 — 在瀏覽器中立即計算 SHA-384 摘要。不儲存任何資料。使用 Web Crypto API 產生 96 字元十六進位雜湊以應用於需要更長摘要的密碼學應用。"
+      },
+      "sha512-hash": {
+        "name": "SHA-512 雜湊",
+        "description": "免費線上 SHA-512 雜湊產生器 — 在瀏覽器中立即計算 SHA-512 摘要。不儲存任何資料。使用 Web Crypto API 產生 128 字元十六進位雜湊用於高安全密碼學應用。"
+      },
+      "sha3-hash": {
+        "name": "SHA-3 雜湊",
+        "description": "免費線上 SHA-3 雜湊產生器 — 在瀏覽器中立即計算 SHA-3（Keccak）摘要。不儲存任何資料。支援 SHA3-256 和 SHA3-512 變體及十六進位輸出。"
+      },
+      "blake2-hash": {
+        "name": "BLAKE2b 雜湊",
+        "description": "免費線上 BLAKE2b 雜湊產生器 — 在瀏覽器中立即計算 BLAKE2b 雜湊。不儲存任何資料。支援可設定的 1 至 64 位元組摘要長度及十六進位輸出。"
+      },
+      "ripemd160-hash": {
+        "name": "RIPEMD-160 雜湊",
+        "description": "免費線上 RIPEMD-160 雜湊產生器 — 在瀏覽器中立即計算 RIPEMD-160 摘要。不儲存任何資料。產生 40 字元十六進位雜湊用於比特幣位址生成及舊版密碼學應用。"
+      },
+      "crc32-checksum": {
+        "name": "CRC32 校驗和",
+        "description": "免費線上 CRC32 校驗和計算器 — 在瀏覽器中立即計算 CRC32 校驗和。不儲存任何資料。輸出 8 字元十六進位校驗和用於檔案完整性和資料驗證。"
+      },
+      "adler32-checksum": {
+        "name": "Adler-32 校驗和",
+        "description": "免費線上 Adler-32 校驗和生成器 — 在瀏覽器中即時計算 Adler-32 校驗和。無資料儲存。輸出 8 字元十六進位校驗和，用於 zlib 和資料完整性檢查。"
+      },
+      "xxhash": {
+        "name": "xxHash",
+        "description": "免費線上 xxHash32 生成器 — 在瀏覽器中即時計算 xxHash32 非密碼學雜湊。無資料儲存。支援可配置的種子值，輸出 8 字元十六進位，用於快速資料校驗和。"
+      },
+      "murmurhash": {
+        "name": "MurmurHash3",
+        "description": "免費線上 MurmurHash3 生成器 — 在瀏覽器中即時計算 MurmurHash3 32 位元雜湊。無資料儲存。支援可配置的種子值和十六進位輸出，用於雜湊表和資料分割。"
+      },
+      "hash-identifier": {
+        "name": "雜湊識別器",
+        "description": "免費線上雜湊識別器 — 在瀏覽器中即時偵測雜湊字串的類型。無資料儲存。根據長度和格式識別 MD5、SHA-1、SHA-256、SHA-512、bcrypt、Argon2、CRC32 等。"
+      },
+      "multi-hash": {
+        "name": "多重雜湊",
+        "description": "免費線上多重雜湊生成器 — 在瀏覽器中即時同時計算 SHA-1、SHA-256、SHA-384 和 SHA-512 雜湊。無資料儲存。在單一操作中並列比較多個雜湊演算法。"
+      },
+      "hmac-sha256": {
+        "name": "HMAC-SHA256",
+        "description": "免費線上 HMAC-SHA256 生成器 — 在瀏覽器中即時計算 HMAC-SHA256 訊息認證碼。無資料儲存。使用 Web Crypto API，支援十六進位和 Base64 輸出格式。"
+      },
+      "hmac-sha512": {
+        "name": "HMAC-SHA512",
+        "description": "免費線上 HMAC-SHA512 生成器 — 在瀏覽器中即時計算 HMAC-SHA512 訊息認證碼。無資料儲存。使用 Web Crypto API，支援十六進位和 Base64 輸出格式。"
+      },
+      "pbkdf2": {
+        "name": "PBKDF2",
+        "description": "免費線上 PBKDF2 金鑰衍生工具 — 在瀏覽器中即時從密碼衍生密碼學金鑰。無資料儲存。支援 SHA-256 和 SHA-512，可配置迭代次數和金鑰長度。"
+      },
+      "bcrypt-generator": {
+        "name": "Bcrypt 雜湊生成器",
+        "description": "免費線上 bcrypt 雜湊生成器 — 在瀏覽器中即時生成 bcrypt 密碼雜湊。無資料儲存。支援可配置的成本因子（4-12 輪），每個雜湊使用隨機鹽。"
+      },
+      "bcrypt-verifier": {
+        "name": "Bcrypt 驗證器",
+        "description": "免費線上 bcrypt 驗證器 — 在瀏覽器中即時驗證密碼與 bcrypt 雜湊。無資料儲存。驗證 $2a$、$2b$ 和 $2y$ bcrypt 雜湊格式，返回匹配或不匹配結果。"
+      },
+      "aes-encrypt": {
+        "name": "AES-GCM 加密",
+        "description": "免費線上 AES-GCM 加密工具 — 在瀏覽器中即時使用 AES-GCM 加密文字。無資料儲存。支援 AES-128 和 AES-256 金鑰大小，使用 PBKDF2 金鑰衍生和 Base64 輸出。"
+      },
+      "aes-decrypt": {
+        "name": "AES-GCM 解密",
+        "description": "免費線上 AES-GCM 解密工具 — 在瀏覽器中即時解密 AES-GCM 密文。無資料儲存。支援 AES-128 和 AES-256，使用 PBKDF2 從密碼衍生金鑰。"
+      },
+      "rsa-encrypt": {
+        "name": "RSA-OAEP 加密",
+        "description": "免費線上 RSA-OAEP 加密工具 — 在瀏覽器中立即用 RSA-OAEP 加密文字。無資料儲存。接受 JWK 格式的 RSA 公鑰，並生成 Base64 編碼的密文。"
+      },
+      "rsa-decrypt": {
+        "name": "RSA-OAEP 解密",
+        "description": "免費線上 RSA-OAEP 解密工具 — 在瀏覽器中立即解密 RSA-OAEP 密文。無資料儲存。接受 JWK 格式的 RSA 私鑰，並解碼 Base64 編碼的密文。"
+      },
+      "chacha20-encrypt": {
+        "name": "ChaCha20-Poly1305 加密",
+        "description": "免費線上 ChaCha20-Poly1305 加密工具 — 在瀏覽器中立即用已認證的加密方式加密文字。無資料儲存。使用 RFC 8439 ChaCha20-Poly1305 AEAD，並搭配 PBKDF2 金鑰衍生和 Base64 輸出。"
+      },
+      "chacha20-decrypt": {
+        "name": "ChaCha20-Poly1305 解密",
+        "description": "免費線上 ChaCha20-Poly1305 解密工具 — 在瀏覽器中立即解密已認證的密文。無資料儲存。解密 RFC 8439 ChaCha20-Poly1305 AEAD 資料，使用 PBKDF2 衍生的金鑰。"
+      },
+      "rsa-key-generator": {
+        "name": "RSA 金鑰生成器",
+        "description": "免費線上 RSA 金鑰對生成器 — 在瀏覽器中立即生成 RSA-2048 和 RSA-4096 金鑰對。無資料儲存。使用 Web Crypto API 輸出 JWK 或 PEM（PKCS#8/SPKI）格式。"
+      },
+      "ec-key-generator": {
+        "name": "EC 金鑰生成器",
+        "description": "免費線上 EC 金鑰對生成器 — 在瀏覽器中立即生成 ECDSA 金鑰對。無資料儲存。支援 P-256、P-384 和 P-521 曲線，輸出 JWK 和 PEM（PKCS#8/SPKI）格式。"
+      },
+      "ed25519-key-generator": {
+        "name": "Ed25519 金鑰生成器",
+        "description": "免費線上 Ed25519 金鑰對生成器 — 在瀏覽器中立即生成 Ed25519 簽署金鑰對。無資料儲存。以 16 進位或 Base64 格式輸出 32 位元組的私鑰和公鑰。"
+      },
+      "pem-parser": {
+        "name": "PEM 解析器",
+        "description": "免費線上 PEM 解析器 — 在瀏覽器中立即解析和分析 PEM 編碼的資料。無資料儲存。識別金鑰類型（RSA、EC、X.509）、格式（PKCS#1、PKCS#8、SPKI），並顯示大小和 16 進位預覽。"
+      },
+      "jwk-converter": {
+        "name": "JWK 轉換器",
+        "description": "免費線上 JWK 轉換器 — 在瀏覽器中立即轉換和檢查 JSON Web Keys。無資料儲存。支援 RSA、EC 和 OKP 金鑰類型，顯示 JWK 資訊、PEM 匯出和金鑰中繼資料。"
+      },
+      "csr-decoder": {
+        "name": "CSR 解碼器",
+        "description": "免費線上 CSR 解碼器 — 在瀏覽器中立即解碼 PEM 格式的證書簽署請求。無資料儲存。顯示主體欄位、演算法和 PKCS#10 CSR 資料中的 OID。"
+      },
+      "certificate-decoder": {
+        "name": "X.509 證書解碼器",
+        "description": "免費線上 X.509 證書解碼器 — 在瀏覽器中立即解碼和顯示 PEM 格式的證書詳情。無資料儲存。顯示主體、簽發者、有效期和簽署演算法。"
+      },
+      "key-fingerprint": {
+        "name": "金鑰指紋",
+        "description": "免費線上金鑰指紋計算器 — 在瀏覽器中立即計算公鑰的 SHA-256 和 SHA-1 指紋。無資料儲存。接受 PEM 和 JWK 金鑰格式，輸出冒號分隔和 16 進位格式。"
+      },
+      "password-generator": {
+        "name": "密碼生成器",
+        "description": "免費線上密碼生成器 — 在瀏覽器中立即生成安全的隨機密碼。無資料儲存。可配置長度、字元集（大寫、小寫、數字、符號）和排除模稜兩可的字元。"
+      },
+      "passphrase-generator": {
+        "name": "通行句生成器",
+        "description": "免費線上通行句生成器 — 在瀏覽器中立即生成骰子軟體風格的通行句。不存儲任何數據。可配置字數、分隔符、大小寫和來自 800+ 字詞列表的可選數字後綴。"
+      },
+      "password-strength": {
+        "name": "密碼強度分析器",
+        "description": "免費線上密碼強度分析器 — 在瀏覽器中立即分析密碼安全性。不存儲任何數據。計算熵、破解時間估計、檢測常見模式、鍵盤序列和重複字符。"
+      },
+      "pin-generator": {
+        "name": "PIN 生成器",
+        "description": "免費線上 PIN 生成器 — 在瀏覽器中立即生成安全隨機 PIN。不存儲任何數據。可配置長度（3-12 位數字）、批量生成和可選的非重複數字模式。"
+      },
+      "memorable-password": {
+        "name": "易記密碼生成器",
+        "description": "免費線上易記密碼生成器 — 在瀏覽器中立即生成易於記住的密碼。不存儲任何數據。結合字詞、數字和符號，採用字詞-數字-字詞和形容詞-名詞-數字等模式。"
+      },
+      "password-hash-check": {
+        "name": "密碼雜湊格式檢查",
+        "description": "免費線上密碼雜湊格式檢查器 — 在瀏覽器中立即驗證密碼雜湊格式。不存儲任何數據。識別 bcrypt、Argon2、scrypt、PBKDF2、Unix crypt、MD5、SHA-1、SHA-256 和 SHA-512 雜湊格式。"
+      },
+      "password-entropy": {
+        "name": "密碼熵計算器",
+        "description": "免費線上密碼熵計算器 — 在瀏覽器中立即以位計算密碼熵。不存儲任何數據。計算標準熵和香農熵、字符集分析和安全級別評估。"
+      },
+      "api-key-generator": {
+        "name": "API 金鑰生成器",
+        "description": "免費線上 API 金鑰生成器 — 在瀏覽器中立即生成安全隨機 API 金鑰。不存儲任何數據。支持十六進制、Base64、字母數字和 Base62 格式，可配置前綴和長度。"
+      },
+      "string-hash": {
+        "name": "字串雜湊",
+        "description": "免費線上字串雜湊計算器 — 在瀏覽器中立即計算 DJB2、SDBM 和 FNV-1a 雜湊。不存儲任何數據。以十六進制和十進制輸出 32 位非密碼學雜湊，用於雜湊表和數據分佈。"
+      }
+    },
+    "css": {
+      "formatter": {
+        "name": "CSS 格式化器",
+        "description": "免費線上 CSS 格式化器 — 在瀏覽器中立即美化和縮進縮小化的 CSS，具有適當的間距。不存儲任何數據。可配置的縮進、規則之間的空白行和註釋保留。"
+      },
+      "minify": {
+        "name": "CSS 縮小化",
+        "description": "免費線上 CSS 縮小化工具 — 在瀏覽器中立即透過移除空白、註釋和不必要的字符來壓縮 CSS。不存儲任何數據。移除尾部分號、空規則，並報告大小減少百分比。"
+      },
+      "validator": {
+        "name": "CSS 驗證器",
+        "description": "免費線上 CSS 驗證器 — 在瀏覽器中立即檢查 CSS 的語法錯誤、不匹配的大括號和常見問題。不存儲任何數據。報告無效聲明、廠商前綴警告、!important 使用情況和規則統計。"
+      },
+      "scss-to-css": {
+        "name": "SCSS 轉 CSS",
+        "description": "免費線上 SCSS 至 CSS 編譯器 — 在瀏覽器中立即將 SCSS 變數和巢狀轉換為純 CSS。不存儲任何數據。支持 $variables、巢狀選擇器和 &-父引用。不支持 mixin、@extend 或 @import。"
+      },
+      "less-to-css": {
+        "name": "LESS 轉 CSS",
+        "description": "免費線上 LESS 轉 CSS 編譯器 — 在瀏覽器中即時將 LESS 變數和嵌套轉換為純 CSS。不儲存任何資料。支援 @variables、嵌套選擇器和 &-parent 參考。不支援 mixins、guards 或 @import。"
+      },
+      "css-to-scss": {
+        "name": "CSS 轉 SCSS",
+        "description": "免費線上 CSS 轉 SCSS 轉換器 — 在瀏覽器中即時將平面 CSS 選擇器轉換為嵌套 SCSS 結構。不儲存任何資料。將子選擇器組織在父區塊下，具有正確的縮排。"
+      },
+      "specificity": {
+        "name": "CSS 特異性計算器",
+        "description": "免費線上 CSS 特異性計算器 — 在瀏覽器中即時計算 CSS 選擇器的特異性分數並按優先級排名。不儲存任何資料。分解 ID、類別、屬性、偽類和元素。"
+      },
+      "gradient-generator": {
+        "name": "CSS 漸層生成器",
+        "description": "免費線上 CSS 漸層生成器 — 在瀏覽器中即時建立線性、徑向和錐形漸層，具有自訂色標。不儲存任何資料。支援重複漸層並生成 fallback 和供應商前綴屬性。"
+      },
+      "box-shadow": {
+        "name": "CSS 盒形陰影生成器",
+        "description": "免費線上 CSS box-shadow 生成器 — 在瀏覽器中即時建立投影和內部陰影，具有可自訂的偏移、模糊、擴展和顏色。不儲存任何資料。生成標準和供應商前綴屬性。"
+      },
+      "border-radius": {
+        "name": "CSS 邊框圓角生成器",
+        "description": "免費線上 CSS border-radius 生成器 — 在瀏覽器中即時建立圓角，支援單個角落控制。不儲存任何資料。生成簡寫和單個角落屬性，附加供應商前綴。"
+      },
+      "flexbox-generator": {
+        "name": "CSS Flexbox 生成器",
+        "description": "免費線上 CSS flexbox 生成器 — 在瀏覽器中即時建立 flex 佈局，具有可配置的方向、對齐、換行和間距。不儲存任何資料。生成現成可用的 CSS 和 HTML，包含 flex 容器和項目樣式。"
+      },
+      "grid-generator": {
+        "name": "CSS Grid 生成器",
+        "description": "免費線上 CSS Grid 生成器 — 在瀏覽器中即時建立網格佈局，具有可配置的列、行、間距和對齐。不儲存任何資料。支援等寬、自動和自訂列/行大小，提供現成可用的 CSS 和 HTML。"
+      }
+    },
+    "datetime": {
+      "unix-timestamp": {
+        "name": "Unix 時間戳轉換器",
+        "description": "免費線上 Unix 時間戳轉換器 — 在瀏覽器中即時在 Unix 時間戳和人類可讀日期之間轉換。不儲存任何資料。支援秒和毫秒，顯示 ISO 8601 和 UTC 格式。"
+      },
+      "iso8601-converter": {
+        "name": "ISO 8601 轉換器",
+        "description": "免費線上 ISO 8601 轉換器 — 在瀏覽器中即時將日期轉換為所有 ISO 8601 表示形式。不儲存任何資料。顯示僅日期、日期時間、完整、ISO 週和序數格式。"
+      },
+      "rfc2822-converter": {
+        "name": "RFC 2822 轉換器",
+        "description": "免費線上 RFC 2822 轉換器 — 在瀏覽器中即時轉換日期為 RFC 2822 電子郵件日期格式或從中轉換。不儲存任何資料。顯示 RFC 2822 和 ISO 8601 表示形式。"
+      },
+      "epoch-converter": {
+        "name": "Epoch 轉換器",
+        "description": "免費線上 Epoch 轉換器 — 在瀏覽器中即時在 Unix 秒、毫秒、微秒和納秒之間轉換。不儲存任何資料。同時顯示 Excel 序列號和儒略日。"
+      },
+      "date-formatter": {
+        "name": "日期格式化工具",
+        "description": "免費線上日期格式化工具 — 在瀏覽器中即時使用自訂模式（如 YYYY-MM-DD HH:mm:ss）格式化日期。不儲存任何資料。支援日期名稱、12/24 小時制、AM/PM 和時區偏移。"
+      },
+      "date-parser": {
+        "name": "日期解析器",
+        "description": "免費線上日期解析器 — 在瀏覽器中瞬間將任何日期字符串格式解析為年、月、日和時間組件。無數據存儲。支援 ISO 8601、時間戳和自然格式。"
+      },
+      "julian-day-converter": {
+        "name": "儒略日轉換器",
+        "description": "免費線上儒略日轉換器 — 在瀏覽器中瞬間在儒略日編號和日曆日期之間轉換。無數據存儲。適用於天文學和歷史日期計算。"
+      },
+      "excel-date-converter": {
+        "name": "Excel 日期轉換器",
+        "description": "免費線上 Excel 日期轉換器 — 在瀏覽器中瞬間在 Excel 序列日期號和日曆日期之間轉換。無數據存儲。處理 Excel 閏年錯誤以確保精確性。"
+      },
+      "relative-time": {
+        "name": "相對時間",
+        "description": "免費線上相對時間轉換器 — 在瀏覽器中瞬間將日期轉換為人類可讀的相對格式，如「2 天前」。無數據存儲。支援過去和未來日期，自動調整單位。"
+      },
+      "date-to-words": {
+        "name": "日期轉文字",
+        "description": "免費線上日期轉文字轉換器 — 在瀏覽器中瞬間將任何日期拼寫為書面英文形式。無數據存儲。產生序數日期名和年份文字。"
+      },
+      "timezone-converter": {
+        "name": "時區轉換器",
+        "description": "免費線上時區轉換器 — 在瀏覽器中瞬間在 IANA 時區之間轉換日期和時間。無數據存儲。支援所有主要世界時區，提供完整日期格式。"
+      },
+      "utc-converter": {
+        "name": "UTC 轉換器",
+        "description": "免費線上 UTC 轉換器 — 在瀏覽器中瞬間在本地時間和 UTC 之間轉換。無數據存儲。支援任何 IANA 時區，提供完整日期和時間顯示。"
+      },
+      "date-difference": {
+        "name": "日期差異",
+        "description": "免費線上日期差異計算器 — 在瀏覽器中瞬間計算兩個日期之間的間隔（以年、月、周和天為單位）。無數據存儲。也顯示小時、分鐘和秒。"
+      },
+      "date-add-subtract": {
+        "name": "日期加減",
+        "description": "免費線上日期加減工具 — 在瀏覽器中瞬間從任何日期加或減去天、月和年。無數據存儲。支援小時、分鐘、秒和周。"
+      },
+      "age-calculator": {
+        "name": "年齡計算器",
+        "description": "免費線上年齡計算器 — 在瀏覽器中瞬間從出生日期計算確切年齡。無數據存儲。顯示年、月、日、總天數和下次生日。"
+      },
+      "workdays-calculator": {
+        "name": "工作日計算器",
+        "description": "免費線上工作日計算器 — 在瀏覽器中瞬間計算兩個日期之間的營業日。無數據存儲。排除周末並顯示總日曆天數明細。"
+      },
+      "week-number": {
+        "name": "周數",
+        "description": "免費線上周數計算器 — 在瀏覽器中瞬間取得任何日期的 ISO 周數。無數據存儲。顯示 ISO 周年、周數和星期幾。"
+      },
+      "quarter-calculator": {
+        "name": "季度計算器",
+        "description": "免費線上季度計算機 — 在瀏覽器中立即確定任何日期的財務季度。無資料儲存。顯示季度號碼、開始日期和結束日期。"
+      },
+      "day-of-year": {
+        "name": "年度日期",
+        "description": "免費線上年度日期計算機 — 在瀏覽器中立即查找任何日期在該年內的日期號碼。無資料儲存。顯示剩餘天數、年度進度百分比和閏年狀態。"
+      },
+      "leap-year-checker": {
+        "name": "閏年檢查器",
+        "description": "免費線上閏年檢查器 — 在瀏覽器中立即檢查任何年份是否為閏年並提供詳細說明。無資料儲存。顯示整除規則和附近的閏年。"
+      },
+      "days-in-month": {
+        "name": "月份天數",
+        "description": "免費線上月份天數計算機 — 在瀏覽器中立即查找任何月份有多少天。無資料儲存。處理閏年並接受日期字符串或 YYYY-MM 格式。"
+      },
+      "date-range-generator": {
+        "name": "日期範圍生成器",
+        "description": "免費線上日期範圍生成器 — 在瀏覽器中立即建立起始日期和結束日期之間的日期序列。無資料儲存。支援每日、每週和每月間隔。"
+      },
+      "timezone-list": {
+        "name": "時區列表",
+        "description": "免費線上時區列表 — 在瀏覽器中立即瀏覽所有主要 IANA 時區名稱及其當地時間。無資料儲存。按歐洲、亞洲或美洲等地區篩選。"
+      },
+      "world-clock": {
+        "name": "世界時鐘",
+        "description": "免費線上世界時鐘 — 在瀏覽器中立即查看世界各主要城市的當前時間。無資料儲存。預設顯示 10 個主要城市或自訂 IANA 時區。"
+      },
+      "duration-calculator": {
+        "name": "時長計算機",
+        "description": "免費線上時長計算機 — 在瀏覽器中立即以 HH:MM:SS 格式加減時間時長。無資料儲存。顯示格式化時間結果和總秒數。"
+      },
+      "duration-formatter": {
+        "name": "時長格式化工具",
+        "description": "免費線上時長格式化工具 — 在瀏覽器中立即將毫秒轉換為人類可讀的時長。無資料儲存。分解為天、小時、分鐘、秒和毫秒。"
+      },
+      "time-parser": {
+        "name": "時間解析器",
+        "description": "免費線上時間解析器 — 在瀏覽器中立即將任何時間字符串格式解析為小時、分鐘和秒組成部分。無資料儲存。輸出 12 小時和 24 小時格式。"
+      },
+      "time-12h-24h-converter": {
+        "name": "12小時/24小時時間轉換器",
+        "description": "免費線上 12 小時/24 小時時間轉換器 — 在瀏覽器中立即在 12 小時和 24 小時時間格式之間轉換。無資料儲存。處理上午/下午並支援秒數。"
+      },
+      "countdown-calculator": {
+        "name": "倒計時計算機",
+        "description": "免費線上倒計時計算機 — 在瀏覽器中立即計算距離任何目標日期的剩餘時間。無資料儲存。顯示天、小時、分鐘和秒的詳細分解。"
+      },
+      "meeting-planner": {
+        "name": "會議規劃工具",
+        "description": "免費線上會議規劃工具 — 在瀏覽器中立即查找不同時區間的重疊工作時間。無資料儲存。比較多個 IANA 時區並顯示常見可用時間窗口。"
+      },
+      "cron-builder": {
+        "name": "Cron 建構工具",
+        "description": "免費線上 cron 建構工具 — 在瀏覽器中使用預設值或自訂欄位即時建立 cron 運算式。無資料儲存。支援每小時、每日、工作日等預設值和自訂排程。"
+      },
+      "cron-parser": {
+        "name": "Cron 剖析器",
+        "description": "免費線上 cron 剖析器 — 在瀏覽器中即時以人類可讀的形式解釋 cron 運算式。無資料儲存。將分鐘、小時、日期、月份和星期欄位分解開來。"
+      },
+      "cron-next-runs": {
+        "name": "Cron 後續執行次數",
+        "description": "免費線上 cron 後續執行次數計算機 — 在瀏覽器中即時預覽任何 cron 運算式的後續執行時間。無資料儲存。顯示後續 N 次排定的執行次數及日期。"
+      },
+      "cron-validator": {
+        "name": "Cron 驗證工具",
+        "description": "免費線上 cron 驗證工具 — 在瀏覽器中即時檢查 cron 運算式語法是否有錯誤。無資料儲存。驗證所有五個欄位的範圍和步驟檢查。"
+      },
+      "cron-to-english": {
+        "name": "Cron 轉英文",
+        "description": "免費線上 cron 轉英文轉換器 — 在瀏覽器中即時將 cron 運算式轉換為平白英文。無資料儲存。支援常見模式和複雜排程。"
+      },
+      "english-to-cron": {
+        "name": "英文轉 Cron",
+        "description": "免費線上英文轉 cron 轉換器 — 在瀏覽器中即時將自然語言排程描述轉換為 cron 運算式。無資料儲存。支援「每個工作日」和「每天上午 9 點」之類的短語。"
+      },
+      "rate-limiter-calculator": {
+        "name": "速率限制計算機",
+        "description": "免費線上速率限制計算機 — 在瀏覽器中即時計算速率限制參數和轉換。無資料儲存。顯示每秒/分鐘/小時的請求數、權杖桶和滑動視窗分析。"
+      },
+      "interval-calculator": {
+        "name": "間隔計算機",
+        "description": "免費線上間隔計算機 — 在瀏覽器中即時計算時間間隔、頻率和執行計數。無資料儲存。顯示每秒、每分鐘、每小時的請求數和權杖桶分析。"
+      },
+      "calendar-generator": {
+        "name": "日曆產生器",
+        "description": "免費線上日曆產生器 — 在瀏覽器中即時為任何月份和年份建立文字日曆。無資料儲存。顯示星期日至星期六的工作日網格。"
+      },
+      "holiday-lookup": {
+        "name": "假日查詢",
+        "description": "免費線上假日查詢 — 在瀏覽器中即時查找任何年份的美國和國際假日。無資料儲存。列出聯邦假日及確切日期和星期幾。"
+      },
+      "ical-generator": {
+        "name": "iCal 產生器",
+        "description": "免費線上 iCal 產生器 — 在瀏覽器中即時建立事件的 .ics 日曆檔案內容。無資料儲存。支援全天事件、描述和位置。"
+      },
+      "ical-parser": {
+        "name": "iCal 剖析器",
+        "description": "免費線上 iCal 剖析器 — 在瀏覽器中即時將 .ics iCalendar 檔案內容剖析為事件詳情。無資料儲存。提取標題、日期、位置和描述。"
+      },
+      "vcard-generator": {
+        "name": "vCard 產生器",
+        "description": "免費線上 vCard 產生器 — 在瀏覽器中即時建立 vCard (.vcf) 聯絡人檔案內容。無資料儲存。支援姓名、電子郵件、電話、地址、組織和網站欄位。"
+      },
+      "vcard-parser": {
+        "name": "vCard 解析器",
+        "description": "免費線上 vCard 解析器 — 在瀏覽器中即時將 vCard (.vcf) 聯絡人檔案內容解析為結構化資料。無資料儲存。提取姓名、電子郵件、電話、組織和職稱。"
+      }
+    },
+    "diagram": {
+      "mermaid-renderer": {
+        "name": "Mermaid 渲染器",
+        "description": "免費線上 Mermaid 渲染器 — 驗證並渲染 Mermaid 圖表語法，支援流程圖、序列圖、ER 圖等，在瀏覽器中即時進行。無資料儲存。偵測圖表類型並報告語法錯誤。"
+      },
+      "mermaid-editor": {
+        "name": "Mermaid 編輯器",
+        "description": "免費線上 Mermaid 編輯器 — 編輯 Mermaid 圖表語法，支援主題和方向選項，在瀏覽器中即時預覽渲染結果。無資料儲存。支援預設、深色、森林和中性主題。"
+      },
+      "plantuml-analyzer": {
+        "name": "PlantUML 分析器",
+        "description": "免費線上 PlantUML 分析器 — 解析 PlantUML 圖表語法並即時提取參與者、訊息和圖表結構。無資料儲存。支援序列圖、類別圖和活動圖分析。"
+      },
+      "graphviz-analyzer": {
+        "name": "Graphviz 分析器",
+        "description": "免費線上 Graphviz DOT 分析器 — 解析 DOT 圖表定義並即時提取節點、邊和圖表屬性。無資料儲存。分析有向和無向圖表，支援子圖。"
+      },
+      "sequence-diagram-editor": {
+        "name": "序列圖編輯器",
+        "description": "免費線上序列圖編輯器 — 從參與者和訊息在瀏覽器中即時產生 Mermaid 序列圖語法。無資料儲存。支援行動者、啟動、備註、迴圈和 alt 區塊。"
+      },
+      "flowchart-editor": {
+        "name": "流程圖編輯器",
+        "description": "免費線上流程圖編輯器 — 從節點和邊在瀏覽器中即時產生 Mermaid 流程圖語法，支援可自訂的形狀和箭頭樣式。無資料儲存。支援矩形、菱形、體育場、圓形和六邊形節點形狀。"
+      },
+      "er-diagram-editor": {
+        "name": "ER 圖編輯器",
+        "description": "免費線上 ER 圖編輯器 — 從實體、屬性和關係在瀏覽器中即時產生 Mermaid 實體-關係圖語法。無資料儲存。支援主要/外來鍵註釋和基數標記法。"
+      },
+      "gantt-chart-editor": {
+        "name": "甘特圖編輯器",
+        "description": "免費線上甘特圖編輯器 — 從專案章節、任務和時間表在瀏覽器中即時產生 Mermaid 甘特圖語法。無資料儲存。支援任務相依性、里程碑和進行中/完成/關鍵狀態。"
+      },
+      "mind-map-editor": {
+        "name": "心智圖編輯器",
+        "description": "免費線上心智圖編輯器 — 從主題階層樹在瀏覽器中即時產生 Mermaid 心智圖語法。無資料儲存。支援無限巢狀深度和自動縮排輸出。"
+      },
+      "ascii-diagram": {
+        "name": "ASCII 圖表",
+        "description": "免費線上 ASCII 圖表產生器 — 從結構化輸入在瀏覽器中即時建立方框、表格、樹和流程圖等 ASCII 藝術。無資料儲存。支援標題章節、方框連接和檔案樹檢視。"
+      },
+      "qr-code-generator": {
+        "name": "QR Code 產生器",
+        "description": "免費線上 QR Code 產生器 — 在瀏覽器中即時從文字或 URL 建立 SVG QR Code，支援可自訂的大小、顏色和錯誤修正。無資料儲存。支援 L/M/Q/H 錯誤修正等級。"
+      },
+      "qr-with-logo": {
+        "name": "含標誌的二維碼",
+        "description": "免費線上二維碼含標誌產生器 — 在瀏覽器中立即建立 SVG 格式的二維碼，並在中心放置標誌佔位符區域。不儲存任何資料。使用高錯誤修正功能，即使有標誌區域也能保持可掃描性。"
+      },
+      "styled-qr-code": {
+        "name": "風格化二維碼",
+        "description": "免費線上風格化二維碼產生器 — 在瀏覽器中立即建立 SVG 格式的二維碼，可自訂模組形狀、搜尋圖案和顏色。不儲存任何資料。支援圓點、圓角和菱形模組樣式。"
+      },
+      "wifi-qr-code": {
+        "name": "WiFi 二維碼",
+        "description": "免費線上 WiFi 二維碼產生器 — 根據 SSID、密碼和加密類型在瀏覽器中立即建立 SVG 格式的 WiFi 網路二維碼。不儲存任何資料。支援 WPA、WEP 和開放網路類型。"
+      },
+      "vcard-qr-code": {
+        "name": "vCard 二維碼",
+        "description": "免費線上 vCard 二維碼產生器 — 根據姓名、電子郵件、電話和地址在瀏覽器中立即建立 SVG 格式的聯絡人二維碼。不儲存任何資料。產生 vCard 3.0 格式以確保通用相容性。"
+      },
+      "url-qr-code": {
+        "name": "URL 二維碼",
+        "description": "免費線上 URL 二維碼產生器 — 根據 URL 在瀏覽器中立即建立 SVG 格式的二維碼，可選擇新增文字標籤。不儲存任何資料。支援自訂尺寸、顏色和錯誤修正等級。"
+      },
+      "bulk-qr-generator": {
+        "name": "批量二維碼產生器",
+        "description": "免費線上批量二維碼產生器 — 根據文字項目清單在瀏覽器中立即建立多個 HTML 網格格式的二維碼。不儲存任何資料。支援自訂標籤、尺寸和錯誤修正等級。"
+      },
+      "code128-generator": {
+        "name": "Code 128 產生器",
+        "description": "免費線上 Code 128 條碼產生器 — 根據英數字文字在瀏覽器中立即建立 SVG 格式的 Code 128 條碼。不儲存任何資料。支援自訂寬度、高度、選擇性文字顯示和可配置的條形寬度。"
+      },
+      "code39-generator": {
+        "name": "Code 39 產生器",
+        "description": "免費線上 Code 39 條碼產生器 — 根據大寫英數字文字在瀏覽器中立即建立 SVG 格式的 Code 39 條碼。不儲存任何資料。支援自訂尺寸、文字可見性和寬/窄條形比例。"
+      },
+      "ean13-generator": {
+        "name": "EAN-13 產生器",
+        "description": "免費線上 EAN-13 條碼產生器 — 根據 12 位數商品代碼在瀏覽器中立即建立 SVG 格式的 EAN-13 條碼，並自動計算檢查碼。不儲存任何資料。支援自訂尺寸和文字可見性。"
+      },
+      "ean8-generator": {
+        "name": "EAN-8 產生器",
+        "description": "免費線上 EAN-8 條碼產生器 — 根據 7 位數代碼在瀏覽器中立即建立 SVG 格式的 EAN-8 條碼，並自動計算檢查碼。不儲存任何資料。支援自訂尺寸和文字可見性。"
+      },
+      "upc-a-generator": {
+        "name": "UPC-A 產生器",
+        "description": "免費線上 UPC-A 條碼產生器 — 根據 11 位數商品代碼在瀏覽器中立即建立 SVG 格式的 UPC-A 條碼，並自動計算檢查碼。不儲存任何資料。支援自訂尺寸和文字可見性。"
+      },
+      "upc-e-generator": {
+        "name": "UPC-E 產生器",
+        "description": "免費線上 UPC-E 條碼產生器 — 根據 6 位數壓縮代碼在瀏覽器中立即建立 SVG 格式的 UPC-E 條碼。不儲存任何資料。支援自訂尺寸和文字可見性。"
+      },
+      "itf-generator": {
+        "name": "ITF 產生器",
+        "description": "免費線上 ITF 條碼產生器——從數字資料即時產生交錯 2 of 5 條碼 SVG，無需存儲任何資料。支援選擇性檢查數字和自訂尺寸。"
+      },
+      "pdf417-info": {
+        "name": "PDF417 資訊",
+        "description": "免費線上 PDF417 資訊工具——即時分析 PDF417 條碼參數，包括資料容量、編碼模式和錯誤更正等級，無需存儲任何資料。顯示符號尺寸和字元計數。"
+      },
+      "data-matrix-info": {
+        "name": "Data Matrix 資訊",
+        "description": "免費線上 Data Matrix 資訊工具——即時分析 Data Matrix 條碼參數，包括容量、編碼模式和符號大小，無需存儲任何資料。顯示錯誤更正等級、資料長度和建議的矩陣大小。"
+      },
+      "line-chart-generator": {
+        "name": "折線圖產生器",
+        "description": "免費線上折線圖產生器——從資料序列即時產生具有可自訂顏色、標記和標籤的折線圖 SVG，無需存儲任何資料。支援多個序列、X 軸標籤和網格線。"
+      },
+      "bar-chart-generator": {
+        "name": "長條圖產生器",
+        "description": "免費線上長條圖產生器——從標籤和值即時產生水平或垂直長條圖 SVG，無需存儲任何資料。支援自訂顏色、可配置的圖表尺寸和網格線。"
+      },
+      "pie-chart-generator": {
+        "name": "圓餅圖產生器",
+        "description": "免費線上圓餅圖產生器——從標籤資料段即時產生圓餅圖和甜甜圈圖 SVG，無需存儲任何資料。支援自訂顏色、百分比標籤和圖例列。"
+      },
+      "scatter-plot-generator": {
+        "name": "散點圖產生器",
+        "description": "免費線上散點圖產生器——從 X/Y 資料點即時產生包含選擇性標籤的散點圖 SVG，無需存儲任何資料。支援自訂顏色、點大小和軸標籤。"
+      },
+      "area-chart-generator": {
+        "name": "面積圖產生器",
+        "description": "免費線上面積圖產生器——從資料序列即時產生具有可自訂顏色、標籤和堆疊的平滑面積圖 SVG，無需存儲任何資料。支援多個序列、堆疊面積和 X 軸標籤。"
+      },
+      "radar-chart-generator": {
+        "name": "雷達圖產生器",
+        "description": "免費線上雷達圖產生器——從多軸資料序列即時產生雷達/蜘蛛圖 SVG，無需存儲任何資料。支援多個序列、可自訂的軸標籤和同心網格環。"
+      },
+      "sparkline-generator": {
+        "name": "迷你圖產生器",
+        "description": "免費線上迷你圖產生器——從數字資料即時產生緊湊內聯迷你圖 SVG，無需存儲任何資料。支援填充顏色、點標記和最小/最大值醒目提示。"
+      },
+      "json-to-chart": {
+        "name": "JSON 轉圖表",
+        "description": "免費線上 JSON 轉圖表轉換器——將 JSON 資料陣列即時轉換為長條圖、折線圖、圓餅圖或散點圖 SVG，無需存儲任何資料。自動從資料偵測標籤和值欄位。"
+      }
+    },
+    "feeds": {
+      "rss-parser": {
+        "name": "RSS 解析器",
+        "description": "免費線上 RSS 訂閱源解析器——貼上 RSS XML 即時取得包含頻道中繼資料和項目的結構化 JSON，無需存儲任何資料。提取標題、連結、說明、作者、類別和附件。"
+      },
+      "atom-parser": {
+        "name": "Atom 解析器",
+        "description": "免費線上 Atom 訂閱源解析器——貼上 Atom XML 即時取得包含訂閱源中繼資料、項目和作者的結構化 JSON，無需存儲任何資料。提取標題、連結、摘要、內容、類別和發佈日期。"
+      },
+      "rss-generator": {
+        "name": "RSS 產生器",
+        "description": "免費線上 RSS 源產生器 — 在瀏覽器中即時建立有效的 RSS 2.0 XML 源，包含項目、類別和附件。不儲存任何資料。支援項目說明、發佈日期、GUID、作者和 Atom self-links。"
+      },
+      "atom-generator": {
+        "name": "Atom 產生器",
+        "description": "免費線上 Atom 源產生器 — 在瀏覽器中即時建立有效的 Atom 1.0 XML 源，包含項目、作者和中繼資料。不儲存任何資料。支援項目摘要、內容、發佈日期和各項目作者。"
+      },
+      "rss-validator": {
+        "name": "RSS 驗證器",
+        "description": "免費線上 RSS 源驗證器 — 在瀏覽器中即時檢查 RSS XML 結構、必需元素和最佳實踐。不儲存任何資料。報告錯誤（缺少 channel、title、link）和警告（缺少 language、dates），偵測 RSS 版本。"
+      },
+      "feed-merger": {
+        "name": "源合併工具",
+        "description": "免費線上源合併工具 — 在瀏覽器中即時合併兩個 JSON 源的項目、按 ID/link 去重複，並依日期排序。不儲存任何資料。接受包含 items 或 entries 陣列的源，並將其合併成統一清單。"
+      },
+      "json-feed-parser": {
+        "name": "JSON 源解析器",
+        "description": "免費線上 JSON Feed 解析器 — 貼上 JSON Feed 1.1 文件，在瀏覽器中即時取得已驗證且格式化的源中繼資料和項目檢視。不儲存任何資料。驗證版本欄位，提取作者、標籤和附件。"
+      },
+      "opml-parser": {
+        "name": "OPML 解析器",
+        "description": "免費線上 OPML 解析器 — 貼上 OPML 訂閱 XML，在瀏覽器中即時取得包含資料夾的結構化 JSON 源清單。不儲存任何資料。提取源 URL、標題、類型和資料夾層級結構。"
+      },
+      "schema-org-generator": {
+        "name": "Schema.org 產生器",
+        "description": "免費線上 Schema.org JSON-LD 產生器 — 在瀏覽器中即時為 Article、Product、Event、Recipe 和 10 多種類型建立結構化資料。不儲存任何資料。輸出包含特定類型欄位的現成嵌入 script 標籤。"
+      },
+      "schema-org-validator": {
+        "name": "Schema.org 驗證器",
+        "description": "免費線上 Schema.org 驗證器 — 貼上 JSON-LD 並在瀏覽器中即時檢查缺少的必需欄位、無效日期和結構問題。不儲存任何資料。驗證 @context、@type 和類型特定的必需屬性。"
+      },
+      "json-ld-editor": {
+        "name": "JSON-LD 編輯器",
+        "description": "免費線上 JSON-LD 格式化工具 — 貼上縮小化的 JSON-LD 並在瀏覽器中即時取得美化的結構化資料。不儲存任何資料。從 script 標籤提取 JSON、驗證 JSON 語法，並以一致的縮排格式化。"
+      },
+      "microdata-extractor": {
+        "name": "微資料提取器",
+        "description": "免費線上微資料提取器 — 貼上 HTML 並在瀏覽器中即時將 itemscope、itemtype 和 itemprop 屬性提取為結構化 JSON。不儲存任何資料。尋找包含屬性的範圍項目和獨立 itemprop 值。"
+      },
+      "rich-snippet-preview": {
+        "name": "豐富摘要預覽",
+        "description": "免費線上豐富摘要預覽工具 — 貼上 JSON-LD 並在瀏覽器中即時查看結構化資料如何顯示為 Google 豐富結果。不儲存任何資料。支援 Article、Product、Recipe、Review、Event 和 JobPosting 類型。"
+      },
+      "breadcrumb-generator": {
+        "name": "麵包屑產生器",
+        "description": "免費線上麵包屑 JSON-LD 產生器 — 在瀏覽器中即時為 SEO 建立 BreadcrumbList 結構化資料。不儲存任何資料。輸出包含符合 Schema.org 規範 ListItem 元素的現成嵌入 script 標籤。"
+      },
+      "faq-schema-generator": {
+        "name": "FAQ 結構產生器",
+        "description": "免費線上 FAQ Schema 生成器 — 在瀏覽器中立即建立 FAQPage JSON-LD 結構化資料，用於 Google 豐富結果。無資料儲存。輸出包含 Question 和 Answer 實體的現成指令碼標籤。"
+      },
+      "product-schema-generator": {
+        "name": "Product Schema 生成器",
+        "description": "免費線上 Product Schema 生成器 — 在瀏覽器中立即建立包含優惠、品牌和評分的 Product JSON-LD 結構化資料，用於 Google 豐富結果。無資料儲存。支援定價、庫存、SKU 和彙總評分。"
+      }
+    },
+    "html": {
+      "formatter": {
+        "name": "HTML 格式化器",
+        "description": "免費線上 HTML 格式化器 — 在瀏覽器中立即美化和縮排 HTML。無資料儲存。處理巢狀標籤、void 元素、doctypes、註解，並保留 script/style/pre 區塊中的原始內容。"
+      },
+      "minify": {
+        "name": "HTML 壓縮",
+        "description": "免費線上 HTML 壓縮工具 — 在瀏覽器中立即通過移除空白和註解來壓縮 HTML。無資料儲存。保留 pre/script/style 區塊中的內容，報告大小減少，並支援可選標籤移除。"
+      },
+      "validator": {
+        "name": "HTML 驗證器",
+        "description": "免費線上 HTML 驗證器 — 在瀏覽器中立即檢查 HTML 結構是否有錯誤和警告。無資料儲存。偵測未閉合標籤、不匹配的巢狀、缺失的 alt 屬性、重複的 ID 和 void 元素誤用。"
+      },
+      "to-text": {
+        "name": "HTML 轉文字",
+        "description": "免費線上 HTML 轉純文字轉換器 — 在瀏覽器中立即從 HTML 中移除標籤並提取可讀文字。無資料儲存。移除指令碼、樣式和註解，解碼實體，並可選擇保留連結 URL。"
+      },
+      "entity-encoder": {
+        "name": "HTML 實體編碼器",
+        "description": "免費線上 HTML 實體編碼器 — 在瀏覽器中立即將特殊字元轉義為 HTML 實體。無資料儲存。支援命名 (&amp;)、十進位 (&#38;) 和十六進位 (&#x26;) 編碼模式，以及可選的全文編碼。"
+      },
+      "entity-decoder": {
+        "name": "HTML 實體解碼器",
+        "description": "免費線上 HTML 實體解碼器 — 在瀏覽器中立即將 HTML 實體轉換回可讀字元。無資料儲存。支援命名實體 (&amp;, &lt;, &copy;)、十進位 (&#38;) 和十六進位 (&#x26;) 參考。"
+      },
+      "attribute-remover": {
+        "name": "HTML 屬性移除器",
+        "description": "免費線上 HTML 屬性移除器 — 在瀏覽器中立即從 HTML 中移除內嵌樣式、事件處理程式和資料屬性。無資料儲存。可配置的屬性清單、批量移除所有 data-* 或 on* 屬性，以及屬性計數報告。"
+      },
+      "playground": {
+        "name": "HTML 遊樂場",
+        "description": "免費線上 HTML 遊樂場 — 在瀏覽器中以即時預覽方式編寫 HTML、CSS 和 JavaScript。無資料儲存。將片段包裝成完整文件、提取 style/script 標籤，並支援額外的 CSS 和 JS 注入。"
+      },
+      "table-generator": {
+        "name": "HTML 表格生成器",
+        "description": "免費線上 HTML 表格生成器 — 在瀏覽器中立即建立樣式化的 HTML 表格。無資料儲存。可配置的列、欄、標題、儲存格資料、邊框樣式和條紋列，提供現成的複製輸出。"
+      },
+      "list-generator": {
+        "name": "HTML 清單生成器",
+        "description": "免費線上 HTML 清單生成器 — 在瀏覽器中立即建立有序或無序 HTML 清單。無資料儲存。支援通過縮排的巢狀清單、自訂清單樣式 (disc、circle、square、decimal) 和 CSS 類別名稱。"
+      },
+      "favicon-generator": {
+        "name": "Favicon 生成器",
+        "description": "免費線上 Favicon 生成器 — 在瀏覽器中立即建立基於文字的 SVG Favicon。無資料儲存。可自訂的文字、顏色、形狀 (正方形、圓形、圓角)、大小，並生成現成可用的 HTML 連結標籤。"
+      }
+    },
+    "image": {
+      "png-to-jpg": {
+        "name": "PNG 轉 JPG",
+        "description": "免費線上 PNG 轉 JPG 轉換器 — 在瀏覽器中即時將 PNG 圖片轉換為 JPEG 格式，可調整品質。無數據儲存。透明度由可配置的背景色替代。"
+      },
+      "jpg-to-png": {
+        "name": "JPG 轉 PNG",
+        "description": "免費線上 JPG 轉 PNG 轉換器 — 在瀏覽器中即時將 JPEG 圖片轉換為無損 PNG 格式，支援透明度。無數據儲存。保留原始圖片品質。"
+      },
+      "image-to-webp": {
+        "name": "圖片轉 WebP",
+        "description": "免費線上圖片轉 WebP 轉換器 — 在瀏覽器中即時將 PNG 和 JPEG 圖片轉換為 WebP 格式，可調整品質。無數據儲存。通常可減少檔案大小 25-35%。"
+      },
+      "webp-to-png": {
+        "name": "WebP 轉 PNG",
+        "description": "免費線上 WebP 轉 PNG 轉換器 — 在瀏覽器中即時將 WebP 圖片轉換為無損 PNG 格式。無數據儲存。保留透明度和原始圖片品質。"
+      },
+      "image-to-base64": {
+        "name": "圖片轉 Base64",
+        "description": "免費線上圖片轉 Base64 編碼器 — 在瀏覽器中即時將圖片轉換為 Base64 編碼字串，用於嵌入 HTML、CSS 或 JSON。無數據儲存。支援所有常見圖片格式。"
+      },
+      "base64-to-image": {
+        "name": "Base64 轉圖片",
+        "description": "免費線上 Base64 轉圖片轉換器 — 在瀏覽器中即時解碼 Base64 編碼的圖片資料為可檢視的圖片。無數據儲存。支援 PNG、JPEG、GIF、WebP 和 SVG 格式。"
+      },
+      "image-to-data-url": {
+        "name": "圖片轉 Data URL",
+        "description": "免費線上圖片轉 Data URL 轉換器 — 在瀏覽器中即時將圖片轉換為 Data URI 字串，用於在 HTML 和 CSS 中內聯嵌入。無數據儲存。輸出可直接使用的 data:image/... URI。"
+      },
+      "image-resizer": {
+        "name": "圖片重新調整大小",
+        "description": "免費線上圖片重新調整大小工具 — 在瀏覽器中即時將圖片調整為確切的像素尺寸或按比例百分比調整。無數據儲存。支援鎖定寬高比和自訂寬度/高度。"
+      },
+      "image-cropper": {
+        "name": "圖片裁剪",
+        "description": "免費線上圖片裁剪工具 — 在瀏覽器中即時以確切的像素尺寸和自訂 X、Y 偏移裁剪圖片。無數據儲存。支援矩形裁剪和精確座標控制。"
+      },
+      "image-rotator": {
+        "name": "圖片旋轉",
+        "description": "免費線上圖片旋轉工具 — 在瀏覽器中即時將圖片旋轉任意角度（0 到 360 度）。無數據儲存。自動調整畫布大小以適應旋轉後的內容。"
+      },
+      "image-flipper": {
+        "name": "圖片翻轉",
+        "description": "免費線上圖片翻轉工具 — 在瀏覽器中一鍵即時水平或垂直翻轉圖片。無數據儲存。支援鏡像和垂直翻轉操作。"
+      },
+      "image-compressor": {
+        "name": "圖片壓縮",
+        "description": "免費線上圖片壓縮工具 — 在瀏覽器中即時壓縮 JPEG 檔案，品質可調 1 到 100。無數據儲存。輸出壓縮後的 JPEG 並顯示大小對比。"
+      },
+      "aspect-ratio-calculator": {
+        "name": "寬高比計算器",
+        "description": "免費線上寬高比計算器 — 即時計算顯示比例、最大公因數和像素尺寸調整，無需儲存任何資料。支援 16:9、4:3 和 3:2 等標準比例。"
+      },
+      "image-border-adder": {
+        "name": "影像邊框新增工具",
+        "description": "免費線上影像邊框工具 — 即時為影像新增自訂寬度的純色邊框，無需儲存任何資料。支援任意邊框寬度和 HEX 格式顏色。"
+      },
+      "image-watermark": {
+        "name": "影像浮水印",
+        "description": "免費線上影像浮水印工具 — 即時為影像新增文字浮水印，支援自訂字體大小、顏色、不透明度和位置，無需儲存任何資料。支援角落和中心位置。"
+      },
+      "round-corners": {
+        "name": "圓角邊框",
+        "description": "免費線上圓角工具 — 即時為影像新增透明背景的圓角，無需儲存任何資料。支援可調整的圓角半徑和防鋸齒邊緣。"
+      },
+      "circle-crop": {
+        "name": "圓形裁切",
+        "description": "免費線上圓形裁切工具 — 即時將影像裁切成完美圓形並具有透明背景，無需儲存任何資料。使用較短的尺寸作為直徑，具備防鋸齒邊緣。"
+      },
+      "thumbnail-generator": {
+        "name": "縮圖產生器",
+        "description": "免費線上縮圖產生器 — 即時建立具有最大寬度和高度限制的影像預覽版本，無需儲存任何資料。自動維持寬高比。"
+      },
+      "image-splitter": {
+        "name": "影像分割工具",
+        "description": "免費線上影像分割工具 — 即時按行列將影像分割成等尺寸網格磁貼，無需儲存任何資料。輸出個別磁貼影像的資料 URL。"
+      },
+      "grayscale": {
+        "name": "灰階",
+        "description": "免費線上灰階轉換器 — 即時使用亮度加權平均將彩色影像轉換為灰階，無需儲存任何資料。採用標準 BT.709 係數以獲得準確結果。"
+      },
+      "sepia": {
+        "name": "棕褐色",
+        "description": "免費線上棕褐色濾鏡 — 即時為影像套用溫暖復古的棕褐色調，無需儲存任何資料。使用經典棕褐色色彩矩陣轉換。"
+      },
+      "invert-colors": {
+        "name": "反轉顏色",
+        "description": "免費線上反轉顏色工具 — 即時反轉影像中的所有顏色以建立負片效果，無需儲存任何資料。保留 Alpha 通道透明度。"
+      },
+      "brightness-adjuster": {
+        "name": "亮度調整工具",
+        "description": "免費線上亮度調整工具 — 即時以 -100 到 100 的範圍增加或降低影像亮度，無需儲存任何資料。保留 Alpha 通道透明度。"
+      },
+      "contrast-adjuster": {
+        "name": "對比度調整工具",
+        "description": "免費線上對比度調整工具 — 即時以 -100 到 100 的範圍增加或降低影像對比度，無需儲存任何資料。保留 Alpha 通道透明度。"
+      },
+      "blur-filter": {
+        "name": "模糊濾鏡",
+        "description": "免費線上影像模糊工具 — 即時為影像套用可調整的高斯模糊，無需儲存任何資料。支援 PNG、JPEG 和 WebP 影像的 1 到 50 像素半徑。"
+      },
+      "sharpen-filter": {
+        "name": "銳化濾鏡",
+        "description": "免費線上影像銳化工具 — 在瀏覽器中立即增強影像細節和清晰度，並可調整銳化量。無資料儲存。使用非銳化遮罩演算法獲得自然效果。"
+      },
+      "pixelate": {
+        "name": "像素化",
+        "description": "免費線上像素化工具 — 在瀏覽器中立即對影像套用可調整區塊大小的馬賽克像素化效果。無資料儲存。區塊大小從 2 到 100 像素。"
+      },
+      "posterize": {
+        "name": "海報化",
+        "description": "免費線上海報化工具 — 在瀏覽器中立即減少影像中的色彩級別，實現海報風格效果。無資料儲存。可調整每個色彩通道 2 到 32 個色彩級別。"
+      },
+      "duotone": {
+        "name": "雙色調",
+        "description": "免費線上雙色調影像濾鏡 — 在瀏覽器中立即使用自訂高亮和陰影顏色對影像套用雙色調效果。無資料儲存。轉換為灰度後映射到您選擇的顏色對。"
+      },
+      "image-info": {
+        "name": "影像資訊",
+        "description": "免費線上影像資訊檢視器 — 在瀏覽器中立即顯示影像的尺寸、檔案大小、格式、色彩深度和寬高比。無資料儲存。分析 PNG、JPEG、GIF、WebP 和 SVG 檔案。"
+      },
+      "exif-reader": {
+        "name": "EXIF 讀取器",
+        "description": "免費線上 EXIF 讀取器 — 在瀏覽器中立即從 JPEG 影像提取相機中繼資料，包括製造商、型號、曝光、ISO、GPS 座標和時間戳。無資料儲存。顯示所有 EXIF、IPTC 和 XMP 標籤。"
+      },
+      "exif-remover": {
+        "name": "EXIF 移除器",
+        "description": "免費線上 EXIF 移除器 — 在瀏覽器中立即從 JPEG 影像移除所有中繼資料以保護隱私。無資料儲存。移除相機資訊、GPS 位置、時間戳和軟體標籤。"
+      },
+      "color-picker-from-image": {
+        "name": "從影像取色",
+        "description": "免費線上影像取色器 — 在瀏覽器中立即從影像的任何像素座標提取顏色值。無資料儲存。傳回 HEX、RGB 和 HSL 顏色值。"
+      },
+      "dominant-colors": {
+        "name": "主色調",
+        "description": "免費線上主色調提取器 — 在瀏覽器中立即使用 k-均值聚類分析影像並提取首要顏色。無資料儲存。傳回 HEX 值及百分比權重。"
+      },
+      "image-histogram": {
+        "name": "影像直方圖",
+        "description": "免費線上影像直方圖分析工具 — 在瀏覽器中立即視覺化影像中紅、綠、藍和亮度通道的分佈。無資料儲存。生成 SVG 直方圖圖表。"
+      },
+      "image-diff": {
+        "name": "影像比較",
+        "description": "免費線上影像比較工具 — 在瀏覽器中立即逐像素比較兩張影像並醒目提示差異。無資料儲存。以紅色顯示改變的像素，具有可配置的閾值。"
+      },
+      "placeholder-image": {
+        "name": "佔位符影像",
+        "description": "免費線上佔位符影像產生器 — 在瀏覽器中立即建立具有自訂尺寸、顏色和文字的 SVG 或服務 URL 佔位符影像。無資料儲存。生成內嵌 SVG 或透過 via.placeholder.com、placehold.co 和 dummyimage.com URL。"
+      }
+    },
+    "jwt": {
+      "jwt-decoder": {
+        "name": "JWT 解碼器",
+        "description": "免費線上 JWT 解碼器 — 在瀏覽器中即時將 JWT 令牌解碼為標頭、負載和簽名。無任何資料儲存。解析 base64url 編碼的標頭和負載聲明，顯示原始簽名。"
+      },
+      "jwt-encoder": {
+        "name": "JWT 編碼器",
+        "description": "免費線上 JWT 編碼器 — 在瀏覽器中即時建立 HMAC 簽名的 JWT 令牌。無任何資料儲存。支援 HS256、HS384 和 HS512 演算法，可配置密鑰。"
+      },
+      "jwt-debugger": {
+        "name": "JWT 除錯工具",
+        "description": "免費線上 JWT 除錯工具 — 在瀏覽器中即時分析 JWT 令牌的過期、格式和聲明問題。無任何資料儲存。偵測過期令牌、缺失聲明、無效演算法、格式錯誤的標頭和結構問題。"
+      },
+      "jwt-expiry-checker": {
+        "name": "JWT 過期檢查器",
+        "description": "免費線上 JWT 過期檢查器 — 在瀏覽器中即時檢查 JWT 令牌過期狀態。無任何資料儲存。讀取 exp、iat 和 nbf 聲明，以人類可讀格式顯示剩餘壽命或過期後經過的時間。"
+      },
+      "jwt-claims-builder": {
+        "name": "JWT 聲明建構工具",
+        "description": "免費線上 JWT 聲明建構工具 — 在瀏覽器中即時使用標準 RFC 7519 聲明組合 JWT 負載物件。無任何資料儲存。支援 iss、sub、aud、exp、iat、jti 聲明及自訂鍵值對。"
+      },
+      "jwt-rs256-generator": {
+        "name": "JWT RS256 產生器",
+        "description": "免費線上 JWT RS256 產生器 — 在瀏覽器中即時使用自動產生的 RSA 金鑰對建立 RS256 簽名的 JWT 令牌。無任何資料儲存。產生 2048 位 RSA 金鑰，匯出 PEM 公鑰/私鑰供驗證使用。"
+      },
+      "paseto-decoder": {
+        "name": "PASETO 解碼器",
+        "description": "免費線上 PASETO 解碼器 — 在瀏覽器中即時解碼和檢查 PASETO 令牌結構。無任何資料儲存。解析版本 (v1-v4)、目的 (本地/公開)、編碼負載和可選頁腳（含金鑰 ID）。"
+      },
+      "oauth-token-decoder": {
+        "name": "OAuth 令牌解碼器",
+        "description": "免費線上 OAuth 令牌解碼器 — 在瀏覽器中即時解碼和檢查 OAuth 存取/刷新令牌。無任何資料儲存。偵測 JWT 對比不透明令牌、提取範圍、用戶端 ID、受眾和過期聲明。"
+      },
+      "saml-decoder": {
+        "name": "SAML 解碼器",
+        "description": "免費線上 SAML 解碼器 — 在瀏覽器中即時將 Base64 編碼的 SAML 聲明和回應解碼為可讀 XML。無任何資料儲存。處理 URL 編碼和 base64url 輸入，使用正確縮排美化列印 XML。"
+      },
+      "fernet-encoder": {
+        "name": "Fernet 編碼器",
+        "description": "免費線上 Fernet 編碼器 — 在瀏覽器中即時產生 Fernet 加密令牌。無任何資料儲存。使用 AES-128-CBC 加密搭配 HMAC-SHA256 驗證，自動產生或接受 32 位元組對稱金鑰。"
+      }
+    },
+    "identifiers": {
+      "uuid-v1-generator": {
+        "name": "UUID v1 產生器",
+        "description": "免費線上 UUID v1 產生器 — 在瀏覽器中即時建立時間型 UUID 第 1 版識別碼。無任何資料儲存。產生符合 RFC 4122 的 UUID，包含嵌入式 100 奈秒時戳、時鐘序列和隨機節點位元組。"
+      },
+      "uuid-v4-generator": {
+        "name": "UUID v4 產生器",
+        "description": "免費線上 UUID v4 產生器 — 在瀏覽器中即時建立密碼隨機 UUID 第 4 版識別碼。無任何資料儲存。使用 Web Crypto API 實現安全隨機性，支援可選大寫輸出和批量產生（最多 100 個）。"
+      },
+      "uuid-v5-generator": {
+        "name": "UUID v5 產生器",
+        "description": "免費線上 UUID v5 產生器 — 在瀏覽器中即時使用 SHA-1 雜湊建立確定性名稱型 UUID 第 5 版識別碼。無任何資料儲存。支援 DNS、URL、OID、X.500 命名空間和自訂命名空間 UUID。"
+      },
+      "uuid-v7-generator": {
+        "name": "UUID v7 產生器",
+        "description": "免費線上 UUID v7 產生器 — 在瀏覽器中立即建立時間排序的 UUID 第 7 版識別碼。無數據存儲。產生符合 RFC 9562 的 UUID，內嵌 Unix 毫秒時間戳，適合數據庫中自然時間順序排序。"
+      },
+      "ulid-generator": {
+        "name": "ULID 產生器",
+        "description": "免費線上 ULID 產生器 — 在瀏覽器中立即建立通用唯一字典可排序識別碼。無數據存儲。產生 26 字元 Crockford base32 編碼的 ID，內嵌毫秒時間戳，自然排序。"
+      },
+      "nanoid-generator": {
+        "name": "NanoID 產生器",
+        "description": "免費線上 NanoID 產生器 — 在瀏覽器中立即建立緊湊、網址友善的唯一識別碼。無數據存儲。支持自訂字母表、可配置長度（1–256 字元）及批量產生，使用密碼學安全隨機性。"
+      },
+      "cuid-generator": {
+        "name": "CUID 產生器",
+        "description": "免費線上 CUID 產生器 — 在瀏覽器中立即建立防碰撞唯一識別碼。無數據存儲。產生 CUID v1 格式 ID，內嵌時間戳、計數器、指紋及隨機區塊，適合水平擴展。"
+      },
+      "cuid2-generator": {
+        "name": "CUID2 產生器",
+        "description": "免費線上 CUID2 產生器 — 在瀏覽器中立即建立安全、防碰撞識別碼。無數據存儲。使用 SHA-256 雜湊產生 CUID2 格式 ID，可配置長度（2–32 字元），批量產生最多 100 個。"
+      },
+      "snowflake-id-generator": {
+        "name": "Snowflake ID 產生器",
+        "description": "免費線上 Snowflake ID 產生器 — 在瀏覽器中立即建立 Twitter 風格分散式唯一識別碼。無數據存儲。產生 64 位 ID，可配置工作節點 ID、數據中心 ID 及自訂紀元，適合分散式系統。"
+      },
+      "ksuid-generator": {
+        "name": "KSUID 產生器",
+        "description": "免費線上 KSUID 產生器 — 在瀏覽器中立即建立 K-可排序唯一識別碼。無數據存儲。產生 27 字元 base62 編碼 ID，內嵌時間戳，自然時間順序排列。"
+      },
+      "objectid-generator": {
+        "name": "ObjectID 產生器",
+        "description": "免費線上 MongoDB ObjectID 產生器 — 在瀏覽器中立即建立 24 字元十六進制識別碼。無數據存儲。產生有效 ObjectID，內嵌時間戳、隨機位元組及遞增計數器，遵循 BSON 規範。"
+      },
+      "short-id-generator": {
+        "name": "短 ID 產生器",
+        "description": "免費線上短 ID 產生器 — 在瀏覽器中立即建立緊湊、網址友善識別碼。無數據存儲。支持英數字、小寫、大寫、數字、十六進制及網址安全字母表，可配置長度（2–64 字元）。"
+      },
+      "bulk-id-generator": {
+        "name": "批量 ID 產生器",
+        "description": "免費線上批量 ID 產生器 — 在瀏覽器中立即建立多個 UUID、NanoID、短 ID、十六進制或數字識別碼。無數據存儲。支持 UUID v4、UUID v7、NanoID、短英數字、十六進制及數字格式，可配置數量、長度及分隔符。"
+      },
+      "session-token-generator": {
+        "name": "工作階段令牌產生器",
+        "description": "免費線上工作階段令牌產生器 — 在瀏覽器中立即建立密碼學安全令牌。無數據存儲。支持十六進制、base64、網址安全及英數字格式，可配置長度（16–512 字元）及熵報告。"
+      }
+    },
+    "git": {
+      "git-branch-namer": {
+        "name": "Git 分支命名工具",
+        "description": "免費線上 Git 分支名稱產生器 — 在瀏覽器中立即從任務描述建立清晰、一致的分支名稱。無數據存儲。支持 Gitflow、GitHub、Jira 及簡單命名慣例，自動 slugification。"
+      },
+      "git-command-builder": {
+        "name": "Git 命令建構工具",
+        "description": "免費線上 git 指令建構器 — 透過選擇動作並在瀏覽器中即時填入參數，以視覺化方式組合 git 指令。不存儲任何資料。支援 clone、commit、push、pull、merge、rebase、stash、reset、log、diff、tag、cherry-pick 和 bisect。"
+      },
+      "git-commit-message": {
+        "name": "Git 提交訊息",
+        "description": "免費線上 git 提交訊息格式化工具 — 輸入描述並在瀏覽器中即時獲得格式正確的 conventional commit 訊息。不存儲任何資料。主動將主旨轉為小寫，支援所有提交類型、範疇、破壞性變更、正文和頁腳。"
+      },
+      "git-diff-viewer": {
+        "name": "Git Diff 檢視器",
+        "description": "免費線上 git diff 檢視器 — 在瀏覽器中並排比較兩個文字版本，新增、刪除和未更改的行即時高亮顯示。不存儲任何資料。採用基於 LCS 的演算法實現精確的視覺差異比較。"
+      },
+      "gitignore-builder": {
+        "name": ".gitignore 建構器",
+        "description": "免費線上 .gitignore 建構器 — 勾選核取方塊在瀏覽器中即時為您的專案建構 .gitignore 檔案。不存儲任何資料。涵蓋 node_modules、build 輸出、env 檔案、IDE 設定、OS 檔案、Docker、Terraform 和自訂模式。"
+      },
+      "git-ignore-checker": {
+        "name": "Git Ignore 檢查器",
+        "description": "免費線上 .gitignore 檢查器 — 貼上您的 .gitignore 規則並在瀏覽器中即時測試檔案路徑是否被忽略或追蹤。不存儲任何資料。顯示相符模式，支援否定規則、glob、目錄模式和註解。"
+      },
+      "conventional-commits": {
+        "name": "Conventional Commit 建構器",
+        "description": "免費線上 conventional commit 建構器 — 在瀏覽器中即時組合格式正確的提交訊息，包括類型、範疇、正文和頁腳。不存儲任何資料。支援所有提交類型（feat、fix、docs、refactor 等）、破壞性變更、問題參考和共同作者。"
+      },
+      "changelog-parser": {
+        "name": "Changelog 解析器",
+        "description": "免費線上 changelog 解析器 — 在瀏覽器中即時將版本、日期和變更從 CHANGELOG.md 提取至結構化 JSON。不存儲任何資料。支援 Keep a Changelog 格式、semver 版本和多種區段類型（Added、Fixed、Changed、Removed）。"
+      }
+    },
+    "devops": {
+      "dockerfile-generator": {
+        "name": "Dockerfile 產生器",
+        "description": "免費線上 Dockerfile 產生器 — 在瀏覽器中即時建立生產就緒的 Dockerfile。不存儲任何資料。支援 Node.js、Python、Go、Rust、Java、Ruby、PHP 和 .NET，包括多階段建構、Alpine 映像和非 root 使用者。"
+      },
+      "dockerfile-linter": {
+        "name": "Dockerfile Linter",
+        "description": "免費線上 Dockerfile linter — 在瀏覽器中即時檢查您的 Dockerfile 是否違反最佳實踐。不存儲任何資料。偵測 :latest 標籤、sudo 用法、ADD 對比 COPY、相對 WORKDIR、apt-get 快取問題和連續的 RUN 層級。"
+      },
+      "compose-generator": {
+        "name": "Docker Compose 產生器",
+        "description": "免費線上 Docker Compose 產生器 — 在瀏覽器中即時建立 docker-compose.yaml 檔案。不存儲任何資料。支援 PostgreSQL、MySQL、MariaDB、MongoDB、Redis、Nginx 反向代理、健康檢查和命名磁區。"
+      },
+      "compose-validator": {
+        "name": "Docker Compose 驗證器",
+        "description": "免費線上 Docker Compose 驗證器 — 在瀏覽器中即時檢查您的 docker-compose.yaml 是否存在常見問題。不存儲任何資料。偵測 :latest 標籤、特權模式、過時版本、連接埠綁定風險和混合縮排。"
+      },
+      "k8s-yaml-generator": {
+        "name": "Kubernetes YAML 產生器",
+        "description": "免費線上 Kubernetes YAML 產生器 — 在瀏覽器中即時為 Deployments、Services、ConfigMaps、Secrets、Ingress、CronJobs 和 PVCs 建立 K8s 資源清單。不存儲任何資料。包括資源限制、活躍性/就緒性探針和命名空間支援。"
+      },
+      "k8s-yaml-validator": {
+        "name": "Kubernetes YAML 驗證器",
+        "description": "免費線上 Kubernetes YAML 驗證器 — 在瀏覽器中即時檢查您的 K8s 資源清單是否遺漏欄位和最佳實踐問題。不存儲任何資料。檢查 apiVersion、kind、metadata、標籤、資源限制、健康探針、安全內容和映像標籤。"
+      },
+      "helm-values-generator": {
+        "name": "Helm Values 生成器",
+        "description": "免費線上 Helm values.yaml 生成器 — 在瀏覽器中即時建立 Kubernetes Helm chart values。無資料儲存。支援副本、Ingress、HPA 自動擴展、持久化卷、資源限制和節點親和性。"
+      },
+      "container-image-parser": {
+        "name": "容器映像解析器",
+        "description": "免費線上容器映像引用解析器 — 在瀏覽器中即時將 Docker 和 OCI 映像字串分解為 registry、namespace、name、tag 和 digest。無資料儲存。支援 Docker Hub、GHCR、ECR、GCR 和自訂 registry。"
+      }
+    },
+    "legal": {
+      "privacy-policy-generator": {
+        "name": "隱私政策生成器",
+        "description": "免費線上隱私政策生成器 — 在瀏覽器中即時為您的網站建立隱私政策。無資料儲存。涵蓋資料收集、cookies、分析、使用者權利、資料安全和第三方連結，具有可切換的章節。"
+      },
+      "cookie-policy-generator": {
+        "name": "Cookie 政策生成器",
+        "description": "免費線上 cookie 政策生成器 — 在瀏覽器中即時為您的網站建立 cookie 政策。無資料儲存。涵蓋必要、分析、行銷和偏好 cookies，含瀏覽器控制說明和第三方 cookie 揭露。"
+      },
+      "terms-of-service-generator": {
+        "name": "服務條款生成器",
+        "description": "免費線上服務條款生成器 — 在瀏覽器中即時為您的網站建立 ToS。無資料儲存。涵蓋條款接受、智慧財產權、使用者內容、保證、責任、賠償、終止和適用法律。"
+      },
+      "copyright-notice-generator": {
+        "name": "著作權聲明生成器",
+        "description": "免費線上著作權聲明生成器 — 在瀏覽器中即時為您的專案建立著作權標頭。無資料儲存。支援標準、MIT、Apache 2.0、Creative Commons、all-rights-reserved、HTML 和程式碼註解格式。"
+      },
+      "disclaimer-generator": {
+        "name": "免責聲明生成器",
+        "description": "免費線上免責聲明生成器 — 在瀏覽器中即時建立網站免責聲明。無資料儲存。支援一般、部落格、聯盟行銷、專業、醫療和財務免責聲明範本。"
+      },
+      "gdpr-statement-generator": {
+        "name": "GDPR 聲明生成器",
+        "description": "免費線上 GDPR 聲明生成器 — 在瀏覽器中即時為您的網站建立 GDPR 合規聲明。無資料儲存。涵蓋資料控制者詳情、法律基礎、全部七項資料主體權利、違規通知和資料轉移保障。"
+      }
+    },
+    "reference": {
+      "country-code-reference": {
+        "name": "國家代碼參考",
+        "description": "免費線上國家代碼查詢 — 在瀏覽器中即時查找 ISO 3166 alpha-2、alpha-3 和國際撥號代碼。無資料儲存。涵蓋 50+ 個國家，可按名稱、ISO 代碼或電話前綴搜尋。"
+      },
+      "currency-code-reference": {
+        "name": "貨幣代碼參考",
+        "description": "免費線上貨幣代碼參考 — 在瀏覽器中即時查詢 40+ 個世界貨幣的 ISO 4217 代碼、符號和名稱。無資料儲存。按代碼、名稱或符號搜尋 — 包括法定貨幣和加密貨幣（BTC、ETH）。"
+      },
+      "language-code-reference": {
+        "name": "語言代碼參考",
+        "description": "免費線上語言代碼參考 — 在瀏覽器中即時查詢 55+ 種語言的 ISO 639-1 和 ISO 639-2 代碼。無資料儲存。按語言名稱或代碼搜尋 — 涵蓋主要世界語言、歐洲、亞洲和非洲語言。"
+      },
+      "keyboard-shortcuts-reference": {
+        "name": "鍵盤快捷鍵參考",
+        "description": "免費線上鍵盤快捷鍵參考 — 在瀏覽器中即時查詢 VS Code、Chrome、終端和 git 的熱鍵。無資料儲存。並排顯示 Windows/Linux 和 macOS 按鍵綁定，支援搜尋篩選。"
+      },
+      "emoji-reference": {
+        "name": "Emoji 參考",
+        "description": "免費線上表情符號參考 — 在瀏覽器中按名稱或類別即時搜尋和瀏覽 60+ 個常用表情符號。不儲存任何資料。按表情、人物、動物、食物、旅遊、物體和符號篩選。"
+      }
+    },
+    "math": {
+      "length-converter": {
+        "name": "長度轉換器",
+        "description": "免費線上長度轉換器 — 在瀏覽器中即時轉換長度和距離單位。不儲存任何資料。支援公里、公尺、公分、公釐、英里、碼、英尺、英寸和海里。"
+      },
+      "weight-converter": {
+        "name": "重量轉換器",
+        "description": "免費線上重量轉換器 — 在瀏覽器中即時轉換重量和質量單位。不儲存任何資料。支援公斤、克、毫克、磅、盎司、噸、英石和微克。"
+      },
+      "temperature-converter": {
+        "name": "溫度轉換器",
+        "description": "免費線上溫度轉換器 — 在瀏覽器中即時轉換溫度標度。不儲存任何資料。支援攝氏度、華氏度和克耳文轉換。"
+      },
+      "volume-converter": {
+        "name": "體積轉換器",
+        "description": "免費線上體積轉換器 — 在瀏覽器中即時轉換體積單位。不儲存任何資料。支援公升、毫升、加侖、夸脫、品脫、杯、液體盎司、湯匙、茶匙和立方公尺。"
+      },
+      "area-converter": {
+        "name": "面積轉換器",
+        "description": "免費線上面積轉換器 — 在瀏覽器中即時轉換面積單位。不儲存任何資料。支援平方公尺、平方英尺、英畝、公頃、平方公里、平方碼、平方英寸和平方公分。"
+      },
+      "speed-converter": {
+        "name": "速度轉換器",
+        "description": "免費線上速度轉換器 — 在瀏覽器中即時轉換速度單位。不儲存任何資料。支援公里/小時、英里/小時、公尺/秒、節、英尺/秒和馬赫數。"
+      },
+      "time-unit-converter": {
+        "name": "時間單位轉換器",
+        "description": "免費線上時間單位轉換器 — 在瀏覽器中即時轉換時間單位。不儲存任何資料。支援毫秒、秒、分鐘、小時、天、週、月和年。"
+      },
+      "data-size-converter": {
+        "name": "資料大小轉換器",
+        "description": "免費線上資料大小轉換器 — 在瀏覽器中即時轉換資料大小單位。不儲存任何資料。支援位元組、KB、MB、GB、TB、PB 和二進位單位 (KiB、MiB、GiB、TiB)。"
+      },
+      "pressure-converter": {
+        "name": "壓力轉換器",
+        "description": "免費線上壓力轉換器 — 在瀏覽器中即時轉換壓力單位。不儲存任何資料。支援帕斯卡、千帕、百萬帕、巴、大氣壓、PSI、托和毫米汞柱。"
+      },
+      "energy-converter": {
+        "name": "能量轉換器",
+        "description": "免費線上能量轉換器 — 在瀏覽器中即時轉換能量單位。不儲存任何資料。支援焦耳、千焦耳、卡路里、千卡路里、瓦特小時、千瓦小時、BTU 和電子伏特。"
+      },
+      "power-converter": {
+        "name": "功率轉換器",
+        "description": "免費線上功率轉換器 — 在瀏覽器中即時轉換功率單位。不儲存任何資料。支援瓦特、千瓦、百萬瓦、馬力、PS、BTU/小時和英尺-磅/秒。"
+      },
+      "frequency-converter": {
+        "name": "頻率轉換器",
+        "description": "免費線上頻率轉換器 — 在瀏覽器中即時轉換頻率單位。不儲存任何資料。支援赫茲、千赫茲、兆赫茲、吉赫茲、太赫茲和轉/分。"
+      },
+      "angle-converter": {
+        "name": "角度轉換器",
+        "description": "免費線上角度轉換器 — 在瀏覽器中即時轉換角度單位。無資料儲存。支援度、弧度、百分度、轉、角分和角秒。"
+      },
+      "force-converter": {
+        "name": "力量轉換器",
+        "description": "免費線上力量轉換器 — 在瀏覽器中即時轉換力量單位。無資料儲存。支援牛頓、千牛頓、磅力、達因、公斤力和盎司力。"
+      },
+      "fuel-economy-converter": {
+        "name": "油耗轉換器",
+        "description": "免費線上油耗轉換器 — 在瀏覽器中即時轉換油耗單位。無資料儲存。支援英里/加侖(美制/英制)、升/100公里和公里/升。"
+      },
+      "currency-converter": {
+        "name": "貨幣轉換器",
+        "description": "免費線上貨幣轉換器 — 在瀏覽器中即時轉換貨幣。無資料儲存。警告：使用靜態近似匯率，非即時市場數據。支援美元、歐元、英鎊、日圓、加幣、澳幣、瑞郎、人民幣、印度盧比和巴西雷亞爾。"
+      },
+      "number-formatter": {
+        "name": "數字格式化工具",
+        "description": "免費線上數字格式化工具 — 在瀏覽器中即時使用地區設定特定分隔符格式化數字。無資料儲存。支援逗號、小數位數、科學記號法、緊湊記號法和多種地區設定。"
+      },
+      "percentage-calculator": {
+        "name": "百分比計算器",
+        "description": "免費線上百分比計算器 — 在瀏覽器中即時計算百分比。無資料儲存。支援X%的Y、X是Y的多少%、增加百分比和減少百分比計算。"
+      },
+      "ratio-calculator": {
+        "name": "比例計算器",
+        "description": "免費線上比例計算器 — 在瀏覽器中即時將比例簡化為最簡形式。無資料儲存。使用基於最大公約數的簡化方法縮減任何比例，支援小數。"
+      },
+      "fraction-calculator": {
+        "name": "分數計算器",
+        "description": "免費線上分數計算器 — 在瀏覽器中即時執行分數運算。無資料儲存。加、減、乘、除分數，並自動簡化及轉換為小數。"
+      },
+      "percentage-change": {
+        "name": "百分比變化",
+        "description": "免費線上百分比變化計算器 — 在瀏覽器中即時計算兩個數字之間的百分比增加或減少。無資料儲存。顯示方向(增加/減少)和精確百分比變化。"
+      },
+      "tip-calculator": {
+        "name": "小費計算器",
+        "description": "免費線上小費計算器 — 在瀏覽器中即時計算小費並分帳。無資料儲存。輸入帳單金額、小費百分比和人數，查看每人總額和小費明細。"
+      },
+      "discount-calculator": {
+        "name": "折扣計算器",
+        "description": "免費線上折扣計算器 — 在瀏覽器中即時計算銷售價格和節省金額。無資料儲存。輸入原價和折扣百分比，查看最終價格、節省金額和折扣明細。"
+      },
+      "markup-calculator": {
+        "name": "加成計算器",
+        "description": "免費線上加成計算器 — 在瀏覽器中即時計算加成和銷售價格。無資料儲存。輸入成本和加成百分比，查看銷售價格、利潤金額和利潤率。"
+      },
+      "vat-calculator": {
+        "name": "增值稅計算器",
+        "description": "免費線上增值稅計算器 — 在瀏覽器中即時添加或移除任何金額的增值稅。無資料儲存。支援任何增值稅率，提供淨額、總額和增值稅金額明細。"
+      },
+      "compound-interest": {
+        "name": "複利計算器",
+        "description": "免費線上複利計算器 — 在瀏覽器中即時計算複利。無資料儲存。支援年度、半年度、季度、月度和日度複利頻率。"
+      },
+      "loan-calculator": {
+        "name": "貸款計算器",
+        "description": "免費線上貸款計算器 — 在瀏覽器中即時計算月度貸款還款。無資料儲存。輸入本金、利率和期限，查看月度還款、總還款和總利息。"
+      },
+      "bmi-calculator": {
+        "name": "身體質量指數計算器",
+        "description": "免費線上身體質量指數計算器 — 在瀏覽器中即時計算您的身體質量指數。無資料儲存。輸入體重（公斤）和身高（公尺）以獲得 BMI 值和健康類別。"
+      },
+      "expression-evaluator": {
+        "name": "運算式求值器",
+        "description": "免費線上運算式求值器 — 在瀏覽器中即時計算數學運算式。無資料儲存。支援加法、減法、乘法、除法、指數、模除和括號。"
+      },
+      "scientific-calculator": {
+        "name": "科學計算器",
+        "description": "免費線上科學計算器 — 在瀏覽器中即時執行高等數學運算。無資料儲存。支援三角函數、對數函數、指數函數及其他科學函數（弧度或度數）。"
+      },
+      "matrix-calculator": {
+        "name": "矩陣計算器",
+        "description": "免費線上矩陣計算器 — 在瀏覽器中即時執行矩陣運算。無資料儲存。支援加法、減法、乘法、轉置、行列式和標量乘法。"
+      },
+      "prime-checker": {
+        "name": "質數檢查器",
+        "description": "免費線上質數檢查器 — 在瀏覽器中即時檢查數字是否為質數。無資料儲存。快速質數測試，支援任何整數直至最大安全整數。"
+      },
+      "prime-factorization": {
+        "name": "質因數分解",
+        "description": "免費線上質因數分解 — 在瀏覽器中即時將任何數字分解為質因數。無資料儲存。顯示完整的質因數分解，包含指數表示法。"
+      },
+      "gcd-lcm-calculator": {
+        "name": "最大公約數和最小公倍數計算器",
+        "description": "免費線上最大公約數和最小公倍數計算器 — 在瀏覽器中即時計算最大公約數和最小公倍數。無資料儲存。支援兩個或更多數字，含逐步結果。"
+      },
+      "factorial-calculator": {
+        "name": "階乘計算器",
+        "description": "免費線上階乘計算器 — 在瀏覽器中即時計算任何數字的階乘。無資料儲存。支援高達 170! 的值，提供即時結果。"
+      },
+      "fibonacci-generator": {
+        "name": "費波那契數列生成器",
+        "description": "免費線上費波那契數列生成器 — 在瀏覽器中即時生成費波那契數列。無資料儲存。生成費波那契數列中最多 100 個數字。"
+      },
+      "random-number-generator": {
+        "name": "隨機數字生成器",
+        "description": "免費線上隨機數字生成器 — 在瀏覽器中即時生成任何範圍內的隨機數字。無資料儲存。支援整數和小數，單個或批量生成，最多 1000 個數字。"
+      },
+      "statistics-calculator": {
+        "name": "統計計算機",
+        "description": "免費線上統計計算機 — 在瀏覽器中即時計算平均值、中位數、眾數、最小值、最大值和總和。無任何資料儲存。獲得完整的統計摘要，包括計數、範圍和頻率分析。"
+      },
+      "standard-deviation": {
+        "name": "標準差",
+        "description": "免費線上標準差計算機 — 在瀏覽器中即時計算標準差和變異數。無任何資料儲存。支援母體和樣本標準差，包括平均值、變異數和分散分析。"
+      },
+      "permutation-combination": {
+        "name": "排列與組合",
+        "description": "免費線上排列與組合計算機 — 在瀏覽器中即時計算 nPr 和 nCr。無任何資料儲存。輸入 n 和 r 值，為概率和計數問題計算排列和組合。"
+      },
+      "quadratic-solver": {
+        "name": "二次方程求解器",
+        "description": "免費線上二次方程求解器 — 在瀏覽器中即時求解二次方程式（ax² + bx + c = 0）。無任何資料儲存。尋找實根和複數根，計算判別式，並顯示完整解答。"
+      },
+      "bitwise-calculator": {
+        "name": "位元計算機",
+        "description": "免費線上位元計算機 — 在瀏覽器中即時執行位元運算。無任何資料儲存。支援 AND、OR、XOR、NOT、左移和右移，輸出十進制、二進制、十六進制和八進制。"
+      },
+      "roman-numeral-converter": {
+        "name": "羅馬數字轉換器",
+        "description": "免費線上羅馬數字轉換器 — 在瀏覽器中即時轉換十進制數字和羅馬數字。無任何資料儲存。支援 1-3999 的數字，具自動偵測和雙向驗證功能。"
+      },
+      "scientific-notation": {
+        "name": "科學記數法",
+        "description": "免費線上科學記數法轉換器 — 在瀏覽器中即時在標準和科學記數法之間轉換。無任何資料儲存。自動偵測輸入格式，精度可配置至 20 位有效數字。"
+      }
+    },
+    "misc": {
+      "string-length": {
+        "name": "字串長度",
+        "description": "免費線上字串長度計算機 — 在瀏覽器中即時計算字元、代碼點、UTF-8 位元組、單詞和行數。無任何資料儲存。正確處理 Unicode、表情符號和多位元組字元。"
+      },
+      "string-obfuscator": {
+        "name": "字串混淆器",
+        "description": "免費線上字串混淆器 — 在瀏覽器中即時將拉丁字母替換為視覺上相同的 Unicode 同形字。無任何資料儲存。使用西里爾字母和其他相似字元建立看似相同但代碼點不同的文字。"
+      },
+      "character-repeater": {
+        "name": "字元重複器",
+        "description": "免費線上字串重複器 — 在瀏覽器中即時重複任何文字或字元 N 次。無任何資料儲存。可配置重複次數（最多 1000 次）和重複之間的自訂分隔符。"
+      },
+      "pig-latin": {
+        "name": "豬拉丁語",
+        "description": "免費線上豬拉丁語翻譯器 — 在瀏覽器中即時將英文文字轉換為豬拉丁語。無任何資料儲存。處理輔音群集、保留大小寫，並為元音開頭的單詞附加 'yay'。"
+      },
+      "leet-speak": {
+        "name": "1337 語言",
+        "description": "免費線上 1337 語言轉換器 — 在瀏覽器中即時將純文字轉換為 1337 語言。無任何資料儲存。使用常見替換（a→4、e→3、o→0、s→5、t→7 等）替換字母。"
+      },
+      "emoji-converter": {
+        "name": "表情符號轉換器",
+        "description": "免費線上emoji轉換器 — 在您的瀏覽器中立即用匹配的emoji替換常見英文單詞。不存儲任何資料。識別70多個詞彙，包括情感、動物、天氣、食物和物體。"
+      },
+      "zalgo-text": {
+        "name": "Zalgo 文字",
+        "description": "免費線上Zalgo文字生成器 — 在您的瀏覽器中立即為任何文字加入故障風格組合變音符號。不存儲任何資料。可調整強度（低、中、高）控制在每個字母上方和下方添加多少個組合字符。"
+      },
+      "upside-down-text": {
+        "name": "上下顛倒文字",
+        "description": "免費線上上下顛倒文字生成器 — 在您的瀏覽器中使用Unicode字符立即將文字翻轉。不存儲任何資料。反轉字符順序並將每個字母映射到其旋轉等效項。"
+      },
+      "fancy-text": {
+        "name": "花式文字",
+        "description": "免費線上花式文字生成器 — 在您的瀏覽器中立即將純文字轉換為Unicode風格字符。不存儲任何資料。支援粗體、斜體、手寫體、尖角體、雙線體、等寬、圈圈、方框和全寬風格。"
+      },
+      "mime-type-reference": {
+        "name": "MIME 類型參考",
+        "description": "免費線上MIME類型參考 — 在您的瀏覽器中立即查詢檔案副檔名及其內容類型。不存儲任何資料。涵蓋50多種常見類型，涵蓋文本、圖像、音頻、視頻、應用和字體類別。"
+      },
+      "html-entity-reference": {
+        "name": "HTML 實體參考",
+        "description": "免費線上HTML實體參考 — 在您的瀏覽器中立即查詢命名實體、字符和數值代碼。不存儲任何資料。涵蓋45多個常見實體，包括符號、箭頭、貨幣符號和標點符號。"
+      }
+    },
+    "network": {
+      "http-status-reference": {
+        "name": "HTTP 狀態碼參考",
+        "description": "免費線上HTTP狀態碼參考 — 在您的瀏覽器中立即查詢任何狀態碼或按描述搜尋以取得含義、類別和RFC規範。不存儲任何資料。涵蓋所有62個標準代碼（1xx至5xx），支援類別搜尋，如「4xx」。"
+      },
+      "subnet-calculator": {
+        "name": "子網計算器",
+        "description": "免費線上子網計算器 — 輸入CIDR標記法或IP加子網掩碼，在您的瀏覽器中立即取得網路地址、廣播、首/尾主機、可用主機、反向遮罩和二進制表示。不存儲任何資料。"
+      },
+      "cidr-calculator": {
+        "name": "CIDR 計算器",
+        "description": "免費線上CIDR計算器 — 輸入CIDR標記法，在您的瀏覽器中立即取得網路地址、廣播、子網掩碼、反向遮罩和IP範圍。不存儲任何資料。支援多個CIDR，用換行分隔。"
+      },
+      "ip-range-calculator": {
+        "name": "IP 範圍計算器",
+        "description": "免費線上IP範圍計算器 — 輸入CIDR、虛線範圍或起始/結束IP，在您的瀏覽器中立即取得總位址數、最小CIDR區塊和十進制值。不存儲任何資料。偵測範圍是否與單一子網對齐。"
+      },
+      "mac-address-lookup": {
+        "name": "MAC 位址查詢",
+        "description": "免費線上MAC位址查詢 — 輸入MAC位址，在您的瀏覽器中立即取得廠商/製造商、OUI前綴、所有格式變體（冒號、虛線、點、裸格式）和單播/多播標誌。不存儲任何資料。識別90多個OUI前綴。"
+      },
+      "curl-builder": {
+        "name": "cURL 構建器",
+        "description": "免費線上cURL指令構建器 — 配置URL、方法、標題、驗證和本體，在您的瀏覽器中立即生成可複製貼上的cURL指令。不存儲任何資料。支援基本/承載/API金鑰驗證、代理、逾時和常見標誌。"
+      },
+      "cidr-to-range": {
+        "name": "CIDR 轉 IP 範圍",
+        "description": "免費線上CIDR轉IP範圍轉換器 — 輸入CIDR標記法，在您的瀏覽器中立即取得首個IP、末個IP、總位址數、可用主機和子網掩碼。不存儲任何資料。支援多個CIDR。"
+      },
+      "integer-to-ip": {
+        "name": "整數轉 IP",
+        "description": "免費線上整數轉 IPv4 轉換器 — 輸入十進位、十六進位或八進位整數，在瀏覽器中立即取得點分十進位 IP 位址、十六進位和二進位表示。不儲存任何資料。支援 0x 十六進位和 0 八進位前綴。"
+      },
+      "ip-in-cidr-checker": {
+        "name": "IP in CIDR 檢查器",
+        "description": "免費線上 IP-in-CIDR 檢查器 — 輸入 IP 位址和 CIDR 範圍，在瀏覽器中立即檢查 IP 是否落在子網路內。不儲存任何資料。顯示網路位址、廣播位址和多個 CIDR 的匹配結果。"
+      },
+      "ip-info-parser": {
+        "name": "IP 資訊解析器",
+        "description": "免費線上 IP 位址分析器 — 輸入 IPv4 或 IPv6 位址，在瀏覽器中立即取得版本、類型（私有/公開/回路/多播）、類別、十進位、十六進位、二進位和反向 PTR。不儲存任何資料。"
+      },
+      "ip-to-integer": {
+        "name": "IP 轉整數",
+        "description": "免費線上 IPv4 轉整數轉換器 — 輸入點分十進位 IP 位址，在瀏覽器中立即取得十進位整數、十六進位、二進位、八進位和八位元分解。不儲存任何資料。"
+      },
+      "ipv6-compressor": {
+        "name": "IPv6 壓縮器",
+        "description": "免費線上 IPv6 壓縮器 — 輸入完整或部分 IPv6 位址，在瀏覽器中立即取得使用 :: 符號的最短壓縮形式。不儲存任何資料。支援以換行符分隔的多個位址。"
+      },
+      "ipv6-expander": {
+        "name": "IPv6 展開器",
+        "description": "免費線上 IPv6 展開器 — 輸入壓縮的 IPv6 位址，在瀏覽器中立即取得完整的 8 組表示法，包括組別、二進位和位元計數。不儲存任何資料。支援以換行符分隔的多個位址。"
+      },
+      "range-to-cidr": {
+        "name": "範圍轉 CIDR",
+        "description": "免費線上 IP 範圍轉 CIDR 轉換器 — 輸入起始-結束 IP 範圍，在瀏覽器中立即取得完全涵蓋該範圍的最小 CIDR 區塊集合。不儲存任何資料。支援以破折號或換行符分隔的範圍。"
+      },
+      "har-analyzer": {
+        "name": "HAR 分析器",
+        "description": "免費線上 HAR 檔案分析器 — 貼上 HTTP Archive JSON，在瀏覽器中立即取得請求統計、狀態碼分佈、最慢請求和網域分解。不儲存任何資料。支援按狀態碼和 MIME 類型篩選。"
+      },
+      "http-headers-reference": {
+        "name": "HTTP 標頭參考",
+        "description": "免費線上 HTTP 標頭參考 — 按類別（請求、回應、安全、CORS、快取）瀏覽 40+ 個標準標頭，在瀏覽器中立即檢視說明和使用範例。不儲存任何資料。按名稱或說明搜尋。"
+      },
+      "http-header-parser": {
+        "name": "HTTP 標頭解析器",
+        "description": "免費線上 HTTP 標頭解析器 — 貼上原始標頭，在瀏覽器中立即取得結構化 JSON，包含標頭計數、鍵值對和詳細資料。不儲存任何資料。處理請求和回應標頭，略過 HTTP 狀態列。"
+      },
+      "mime-type-lookup": {
+        "name": "MIME 類型查詢",
+        "description": "免費線上 MIME 類型查詢 — 輸入檔案副檔名或 MIME 類型字串，在瀏覽器中立即取得匹配的類型、說明和類別。不儲存任何資料。涵蓋 80+ 個常見副檔名，包括媒體、程式碼、字型和封存。"
+      }
+    },
+    "regex": {
+      "regex-tester": {
+        "name": "正規表達式測試器",
+        "description": "免費線上正規表達式測試器 — 在瀏覽器中即時測試正規表達式，具有即時匹配反白顯示和位置追蹤。不儲存任何資料。顯示匹配位置和匹配文字的視覺反白顯示。"
+      },
+      "regex-explainer": {
+        "name": "正規表達式解釋器",
+        "description": "免費線上正規表達式說明器 — 在瀏覽器中即時將任何正規表達式分解為清晰的英文描述。不儲存任何資料。說明字元類別、量詞、群組、錨點和先行斷言。"
+      },
+      "regex-replace": {
+        "name": "正規表達式替換",
+        "description": "免費線上正規表達式查詢和替換 — 使用正規表達式搜尋文字，並在瀏覽器中即時以自訂模式替換相符項目。不儲存任何資料。支援替換字符串中的擷取群組參考 ($1, $2)。"
+      },
+      "regex-split": {
+        "name": "正規表達式分割",
+        "description": "免費線上正規表達式文字分割器 — 在瀏覽器中使用正規表達式分隔符號即時將文字分割成多個部分。不儲存任何資料。支援自訂旗標和可配置的結果限制。"
+      },
+      "regex-extract": {
+        "name": "正規表達式擷取",
+        "description": "免費線上正規表達式匹配擷取器 — 在瀏覽器中即時找出並擷取文字中的所有模式相符項目。不儲存任何資料。支援全域、不區分大小寫和唯一項目匹配。"
+      },
+      "regex-groups": {
+        "name": "正規表達式群組",
+        "description": "免費線上正規表達式群組擷取器 — 在瀏覽器中即時擷取正規表達式相符項目中的具名和編號擷取群組。不儲存任何資料。以清晰的格式顯示每個相符項目的所有群組。"
+      },
+      "regex-flags-tester": {
+        "name": "正規表達式旗標測試器",
+        "description": "免費線上正規表達式旗標測試器 — 比較不同正規表達式旗標 (g, i, m, s, u, y) 如何影響模式匹配，在瀏覽器中即時進行。不儲存任何資料。並列顯示每個旗標組合的相符計數。"
+      },
+      "regex-escape": {
+        "name": "正規表達式逸出",
+        "description": "免費線上正規表達式逸出工具 — 在瀏覽器中即時逸出字符串中的特殊正規表達式字元以進行安全的字面匹配。不儲存任何資料。逸出點、括號、圓括號和所有正規表達式元字元。"
+      },
+      "glob-to-regex": {
+        "name": "Glob 轉正規表達式",
+        "description": "免費線上 Glob 轉正規表達式轉換器 — 在瀏覽器中即時將 Glob 萬用字元模式轉換為等效的正規表達式。不儲存任何資料。支援擴展 Glob、大括號展開和字元類別。"
+      },
+      "regex-to-glob": {
+        "name": "正規表達式轉 Glob",
+        "description": "免費線上正規表達式轉 Glob 轉換器 — 在瀏覽器中即時將簡單的正規表達式模式轉換為 Glob 萬用字元等效項。不儲存任何資料。當模式無法精確表示時提供轉換注釋。"
+      },
+      "regex-optimizer": {
+        "name": "正規表達式最佳化器",
+        "description": "免費線上正規表達式最佳化器 — 在瀏覽器中即時建議更短、更易讀的正規表達式替代方案。不儲存任何資料。簡化字元類別、量詞和常見模式。"
+      },
+      "common-patterns": {
+        "name": "常見正規表達式模式",
+        "description": "免費線上正規表達式模式庫 — 在瀏覽器中即時瀏覽電子郵件、URL、IP、電話、日期、UUID 等常見正規表達式模式。不儲存任何資料。可立即使用的模式，含說明和測試範例。"
+      },
+      "email-regex": {
+        "name": "電子郵件正規表達式",
+        "description": "免費線上電子郵件正規表達式產生器 — 在瀏覽器中即時建立基礎、標準和嚴格等級的電子郵件驗證模式。不儲存任何資料。可配置的嚴格程度，從簡單格式檢查到 RFC 相容模式。"
+      },
+      "url-regex": {
+        "name": "URL 正規表達式",
+        "description": "免費線上 URL 正規表達式產生器 — 在瀏覽器中即時建立 HTTP、HTTPS、FTP 和自訂協定的 URL 匹配模式。不儲存任何資料。支援路徑、查詢字符串和片段匹配。"
+      },
+      "phone-regex": {
+        "name": "電話號碼正則表達式",
+        "description": "免費在線電話號碼正則表達式產生器 — 立即在瀏覽器中建立美國、英國、國際和 E.164 格式的驗證模式。不儲存任何資料。包含每種格式的配對範例。"
+      },
+      "ip-regex": {
+        "name": "IP 位址正則表達式",
+        "description": "免費在線 IP 位址正則表達式產生器 — 立即在瀏覽器中建立 IPv4、IPv6 和 CIDR 標記法的驗證模式。不儲存任何資料。支援嚴格的八位元組驗證和子網遮罩模式。"
+      },
+      "date-regex": {
+        "name": "日期正則表達式",
+        "description": "免費在線日期正則表達式產生器 — 立即在瀏覽器中建立 ISO 8601、美國、歐盟、英國和日期時間格式的日期驗證模式。不儲存任何資料。包含每種格式的配對範例。"
+      },
+      "credit-card-regex": {
+        "name": "信用卡正則表達式",
+        "description": "免費在線信用卡正則表達式產生器 — 立即在瀏覽器中建立 Visa、Mastercard、Amex、Discover、Diners 和 JCB 卡的驗證模式。不儲存任何資料。僅格式驗證，支援可配置的卡類型。"
+      },
+      "password-regex": {
+        "name": "密碼正則表達式",
+        "description": "免費在線密碼正則表達式產生器 — 立即在瀏覽器中建立包含大寫、小寫、數字和特殊字元要求的可自訂密碼驗證模式。不儲存任何資料。支援可配置的最小和最大長度。"
+      }
+    },
+    "sql": {
+      "formatter": {
+        "name": "SQL 格式化工具",
+        "description": "免費在線 SQL 格式化工具 — 立即在瀏覽器中以適當的縮排和關鍵字大小寫格式化和美化 SQL 查詢。不儲存任何資料。支援 SELECT、INSERT、UPDATE、DELETE、CREATE TABLE 和複雜 JOIN 查詢。"
+      },
+      "minify": {
+        "name": "SQL 壓縮工具",
+        "description": "免費在線 SQL 壓縮工具 — 立即在瀏覽器中透過移除空白、註解和不必要的格式來壓縮 SQL 查詢。不儲存任何資料。保留字串常值和查詢語義。"
+      },
+      "validator": {
+        "name": "SQL 驗證工具",
+        "description": "免費在線 SQL 驗證工具 — 立即在瀏覽器中檢查 SQL 查詢是否有語法錯誤、缺少的子句和常見問題（如不含 WHERE 的 DELETE）。不儲存任何資料。報告陳述式計數、類型和警告。"
+      },
+      "to-json": {
+        "name": "SQL 轉 JSON",
+        "description": "免費在線 SQL 轉 JSON 轉換器 — 立即在瀏覽器中將 SQL 查詢解析為詳細的 AST JSON 表示法，包含列參考、表參考、二進位表達式和子句結構。不儲存任何資料。"
+      },
+      "sql-parser": {
+        "name": "SQL 解析器",
+        "description": "免費在線 SQL 解析器 — 立即在瀏覽器中將 SQL 查詢解析為結構化的類 AST JSON，包含列、表、條件和子句。不儲存任何資料。"
+      },
+      "sql-explainer": {
+        "name": "SQL 說明工具",
+        "description": "免費在線 SQL 說明工具 — 立即在瀏覽器中將 SQL 查詢翻譯為普通英文描述，並逐子句分解。不儲存任何資料。說明 SELECT、JOIN、WHERE、GROUP BY 和子查詢。"
+      },
+      "sql-to-nosql": {
+        "name": "SQL 轉 NoSQL",
+        "description": "免費在線 SQL 轉 NoSQL 轉換器 — 立即在瀏覽器中將 SQL SELECT 查詢轉換為 MongoDB 風格的 find、sort 和 limit 查詢語法。不儲存任何資料。"
+      },
+      "sql-dialect-converter": {
+        "name": "SQL 方言轉換器",
+        "description": "免費線上 SQL 方言轉換器 — 在瀏覽器中即時在 MySQL、PostgreSQL 和 SQLite 語法之間轉換 SQL。無資料儲存。處理 AUTO_INCREMENT vs SERIAL、TINYINT vs BOOLEAN、引擎子句和引號差異。"
+      },
+      "sql-query-builder": {
+        "name": "SQL Query Builder",
+        "description": "免費線上 SQL 查詢產生器 — 在瀏覽器中即時從參數建構 SELECT、INSERT、UPDATE 和 DELETE 查詢，支援 MySQL、PostgreSQL 和 SQLite 方言。無資料儲存。"
+      },
+      "sql-index-suggester": {
+        "name": "SQL Index Suggester",
+        "description": "免費線上 SQL 索引建議工具 — 分析查詢並在瀏覽器中即時為 WHERE、JOIN 和 ORDER BY 欄位建議 CREATE INDEX 陳述式。無資料儲存。"
+      },
+      "json-to-sql-insert": {
+        "name": "JSON to SQL INSERT",
+        "description": "免費線上 JSON 轉 SQL INSERT 轉換器 — 在瀏覽器中即時將 JSON 陣列或物件轉換為 SQL INSERT 陳述式。無資料儲存。自動從 JSON 鍵偵測欄位名稱並處理嵌套值。"
+      },
+      "csv-to-sql-insert": {
+        "name": "CSV to SQL INSERT",
+        "description": "免費線上 CSV 轉 SQL INSERT 轉換器 — 在瀏覽器中即時將 CSV 資料轉換為 SQL INSERT 陳述式。無資料儲存。處理引號值、自訂表格名稱，並產生正確逸出的 SQL。"
+      },
+      "connection-string-builder": {
+        "name": "Connection String Builder",
+        "description": "免費線上資料庫連接字串產生器 — 在瀏覽器中即時從參數產生 PostgreSQL、MySQL、MongoDB、Redis、SQLite 和 MSSQL 連接 URI。無資料儲存。支援 URI、鍵值和環境變數輸出格式。"
+      },
+      "dsn-parser": {
+        "name": "DSN Parser",
+        "description": "免費線上 DSN 解析器 — 在瀏覽器中即時將 PHP PDO、JDBC、ODBC 和 ADO.NET 資料來源名稱字串解析為結構化元件。無資料儲存。提取驅動程式、主機、連接埠、資料庫和連接參數。"
+      },
+      "redis-command-builder": {
+        "name": "Redis Command Builder",
+        "description": "免費線上 Redis 命令產生器 — 在瀏覽器中即時產生 CLI、Node.js 或 Python 格式的 GET、SET、HSET、LPUSH、SADD、ZADD 和其他 Redis 命令。無資料儲存。"
+      },
+      "mongodb-query-builder": {
+        "name": "MongoDB Query Builder",
+        "description": "免費線上 MongoDB 查詢產生器 — 在瀏覽器中即時以 shell、Node.js 或 Python 格式建構 find、insert、update、delete、aggregate、count 和 distinct 查詢。無資料儲存。"
+      },
+      "elasticsearch-query-builder": {
+        "name": "Elasticsearch Query Builder",
+        "description": "免費線上 Elasticsearch 查詢產生器 — 在瀏覽器中即時以 JSON、cURL 或 Python 格式建構 match、term、range、bool 和 wildcard 查詢。無資料儲存。支援分頁、排序和複雜布林查詢。"
+      },
+      "database-url-converter": {
+        "name": "Database URL Converter",
+        "description": "免費線上資料庫 URL 轉換器 — 在瀏覽器中即時將資料庫連接 URL 轉換為 env、JSON、YAML、Prisma、Sequelize、TypeORM、Knex、Django、Laravel 和 Spring 設定格式。無資料儲存。"
+      },
+      "er-diagram-generator": {
+        "name": "ER Diagram Generator",
+        "description": "免費線上 ER 圖表產生器 — 在瀏覽器中即時從 SQL CREATE TABLE 陳述式建立實體關聯圖。無資料儲存。使用表格、欄位、類型和關聯產生 Mermaid 圖表語法。"
+      },
+      "create-table-generator": {
+        "name": "CREATE TABLE Generator",
+        "description": "免費線上 CREATE TABLE 產生器 — 在瀏覽器中即時從欄位定義和條件約束建置 SQL CREATE TABLE 陳述式。無資料儲存。支援主鍵、唯一條件約束、NOT NULL、預設值、自動遞增、外鍵和檢查條件約束。"
+      },
+      "diff": {
+        "name": "SQL 比較",
+        "description": "免費線上 SQL 比較工具 — 並排比較兩個 SQL 查詢，立即在瀏覽器中偵測欄位、表格、聯結和子句的結構差異。不儲存任何資料。"
+      },
+      "escape": {
+        "name": "SQL 逃脫",
+        "description": "免費線上 SQL 逃脫工具 — 在 SQL 字串中逃脫特殊字元以防止語法錯誤，立即在瀏覽器中執行。不儲存任何資料。支援 MySQL、PostgreSQL、SQLite 和 MSSQL 逃脫規則。"
+      },
+      "explain-visualizer": {
+        "name": "EXPLAIN 視覺化工具",
+        "description": "免費線上 SQL EXPLAIN 視覺化工具 — 解析並視覺化 PostgreSQL 和 MySQL 查詢執行計畫，立即在瀏覽器中執行。不儲存任何資料。顯示掃描類型、成本、列估計和效能警告。"
+      },
+      "index-advisor": {
+        "name": "索引顧問",
+        "description": "免費線上 SQL 索引顧問 — 分析 SQL 查詢並建議 WHERE、JOIN、ORDER BY 和 GROUP BY 子句的最佳索引，立即在瀏覽器中執行。不儲存任何資料。產生可直接使用的 CREATE INDEX 陳述式。"
+      },
+      "insert-generator": {
+        "name": "INSERT 產生器",
+        "description": "免費線上 SQL INSERT 產生器 — 從表格名稱、欄位定義和列資料建立 INSERT 陳述式，立即在瀏覽器中執行。不儲存任何資料。支援多列、批次插入和多種 SQL 方言。"
+      },
+      "migration-generator": {
+        "name": "遷移產生器",
+        "description": "免費線上 SQL 遷移產生器 — 從結構化操作建立包含上升和下降操作的資料庫遷移指令，立即在瀏覽器中執行。不儲存任何資料。支援新增/刪除欄位、建立/刪除表格、新增/刪除索引和重新命名操作。"
+      },
+      "schema-diff": {
+        "name": "結構描述比較",
+        "description": "免費線上 SQL 結構描述比較工具 — 比較兩個資料庫結構描述並產生 ALTER TABLE 遷移陳述式以新增、移除和修改欄位，立即在瀏覽器中執行。不儲存任何資料。"
+      },
+      "select-builder": {
+        "name": "SELECT 建立器",
+        "description": "免費線上 SQL SELECT 建立器 — 從結構化輸入建立具有聯結、WHERE、GROUP BY、HAVING、ORDER BY 和 LIMIT 子句的 SELECT 查詢，立即在瀏覽器中執行。不儲存任何資料。"
+      }
+    },
+    "svg": {
+      "svg-optimizer": {
+        "name": "SVG 最佳化工具",
+        "description": "免費線上 SVG 最佳化工具 — 透過移除註解、中繼資料、空白字元和縮短顏色來減少 SVG 檔案大小，立即在瀏覽器中執行。不儲存任何資料。為每個最佳化通過提供可配置選項。"
+      },
+      "svg-viewer": {
+        "name": "SVG 檢視器",
+        "description": "免費線上 SVG 檢視器 — 預覽和檢查 SVG 圖形，包含尺寸資訊和元素計數，立即在瀏覽器中執行。不儲存任何資料。顯示寬度、高度、viewBox 和 SVG 元素的細目。"
+      },
+      "svg-to-png": {
+        "name": "SVG 轉 PNG",
+        "description": "免費線上 SVG 轉 PNG 轉換器 — 將 SVG 向量圖形轉光柵化為 PNG 格式並支援透明度，立即在瀏覽器中執行。不儲存任何資料。支援自訂縮放因子以進行高 DPI 輸出。"
+      },
+      "svg-to-jpg": {
+        "name": "SVG 轉 JPG",
+        "description": "免費線上 SVG 轉 JPG 轉換器 — 將 SVG 向量圖形轉光柵化為 JPEG 格式並支援可配置品質，立即在瀏覽器中執行。不儲存任何資料。支援自訂背景顏色和 JPEG 壓縮品質。"
+      },
+      "svg-to-base64": {
+        "name": "SVG 轉 Base64",
+        "description": "免費線上 SVG 轉 Base64 轉換器 — 在瀏覽器中即時將 SVG 原始碼編碼為 base64 資料 URL。無資料儲存。生成隨時可用的 data:image/svg+xml;base64 URI。"
+      },
+      "svg-to-data-uri": {
+        "name": "SVG 轉 Data URI",
+        "description": "免費線上 SVG 轉 Data URI 轉換器 — 在瀏覽器中即時建立 URL 編碼的 SVG Data URI，比 Base64 更高效。無資料儲存。生成隨時可用的 data:image/svg+xml URI，最少編碼。"
+      },
+      "svg-formatter": {
+        "name": "SVG 格式化工具",
+        "description": "免費線上 SVG 格式化工具 — 在瀏覽器中即時美化列印和縮排 SVG 原始碼。無資料儲存。支援可配置的縮排大小和 Tab 或空格。"
+      },
+      "svg-path-editor": {
+        "name": "SVG 路徑分析器",
+        "description": "免費線上 SVG 路徑分析器 — 在瀏覽器中即時解析和視覺化 SVG 路徑命令及詳細分解。無資料儲存。顯示命令類型、統計資訊和路徑屬性如曲線、圓弧和閉合。"
+      },
+      "svg-to-css": {
+        "name": "SVG 轉 CSS",
+        "description": "免費線上 SVG 轉 CSS 轉換器 — 在瀏覽器中即時將 SVG 嵌入為 CSS background-image、mask-image 或 content 屬性。無資料儲存。生成隨時可用的 CSS，支援可配置的選擇器和大小。"
+      },
+      "svg-sprite-generator": {
+        "name": "SVG 精靈圖生成器",
+        "description": "免費線上 SVG 精靈圖生成器 — 在瀏覽器中即時將多個 SVG 圖示合併為單一精靈表，使用 symbol 元素。無資料儲存。為每個圖示生成 use 標籤參考。"
+      },
+      "svg-color-changer": {
+        "name": "SVG 色彩變更工具",
+        "description": "免費線上 SVG 色彩變更工具 — 在瀏覽器中即時查找和取代 SVG 原始碼中的色彩。無資料儲存。支援十六進位、RGB 和命名色彩，不分大小寫。"
+      },
+      "svg-wave-generator": {
+        "name": "SVG 波浪生成器",
+        "description": "免費線上 SVG 波浪生成器 — 在瀏覽器中即時為區段背景和頁面分隔線建立分層波浪圖案。無資料儲存。支援多個波浪圖層、自訂色彩、振幅、頻率和垂直翻轉。"
+      },
+      "svg-blob-generator": {
+        "name": "SVG Blob 生成器",
+        "description": "免費線上 SVG Blob 生成器 — 在瀏覽器中即時使用 Catmull-Rom 樣條曲線建立有機、平滑的 blob 形狀。無資料儲存。支援可配置的複雜度、色彩、筆畫和可重現的種子。"
+      },
+      "svg-pattern-generator": {
+        "name": "SVG 圖案生成器",
+        "description": "免費線上 SVG 圖案生成器 — 在瀏覽器中即時建立重複圖案，包含點、線、網格、對角線、交叉網紋、人字紋、鋸齒和六邊形。無資料儲存。支援自訂磁貼大小、色彩和不透明度。"
+      },
+      "svg-avatar-generator": {
+        "name": "SVG 頭像生成器",
+        "description": "免費線上 SVG 頭像生成器 — 在瀏覽器中即時建立個人檔案圖片佔位符，包含縮寫、幾何圖案或環形樣式。無資料儲存。支援圓形、方形和圓角形狀，自訂色彩和大小。"
+      },
+      "svg-divider-generator": {
+        "name": "SVG 分隔線生成器",
+        "description": "免費線上 SVG 分隔線生成器 — 在瀏覽器中即時建立區段分隔線，包含波浪、三角形、曲線、傾斜、鋸齒、箭頭和圓角樣式。無資料儲存。支援自訂色彩、大小和垂直翻轉。"
+      },
+      "svg-background-generator": {
+        "name": "SVG 背景生成器",
+        "description": "免費線上 SVG 背景生成器 — 在瀏覽器中即時建立裝飾性漸層背景，包含圓形、三角形、地形、波浪和雜訊圖案。無資料儲存。支援自訂色彩、大小、不透明度和可重現的種子。"
+      }
+    },
+    "validation": {
+      "email-validator": {
+        "name": "電子郵件驗證器",
+        "description": "免費線上電子郵件地址驗證器 — 立即在瀏覽器中檢查電子郵件是否遵循 RFC 5322 格式。不儲存任何資料。驗證本地部分、網域和整體結構。"
+      },
+      "url-validator": {
+        "name": "URL 驗證器",
+        "description": "免費線上 URL 驗證器 — 立即在瀏覽器中檢查 URL 格式是否正確。不儲存任何資料。解析並顯示協定、主機、路徑、查詢參數和片段。"
+      },
+      "phone-validator": {
+        "name": "電話號碼驗證器",
+        "description": "免費線上電話號碼驗證器 — 立即在瀏覽器中檢查電話號碼是否遵循國際 E.164 格式。不儲存任何資料。驗證數字計數和國家代碼前綴。"
+      },
+      "uuid-validator": {
+        "name": "UUID 驗證器",
+        "description": "免費線上 UUID 驗證器 — 立即在瀏覽器中檢查 UUID 格式是否正確並識別其版本。不儲存任何資料。根據 RFC 4122 驗證版本 1 至 7 的 8-4-4-4-12 十六進位格式。"
+      },
+      "mac-address-validator": {
+        "name": "MAC 位址驗證器",
+        "description": "免費線上 MAC 位址驗證器 — 立即在瀏覽器中檢查 MAC 位址格式是否正確。不儲存任何資料。支援冒號分隔、連字號分隔和點號分隔的表示法。"
+      },
+      "ipv4-validator": {
+        "name": "IPv4 驗證器",
+        "description": "免費線上 IPv4 位址驗證器 — 立即在瀏覽器中檢查 IP 位址格式是否正確。不儲存任何資料。驗證八位組範圍並識別位址類型（公用、私用、回送、多播）。"
+      },
+      "ipv6-validator": {
+        "name": "IPv6 驗證器",
+        "description": "免費線上 IPv6 位址驗證器 — 立即在瀏覽器中檢查 IPv6 位址格式是否正確。不儲存任何資料。驗證完整和縮寫格式，並識別位址類型（回送、連結本地、多播）。"
+      },
+      "domain-validator": {
+        "name": "網域驗證器",
+        "description": "免費線上網域名稱驗證器 — 立即在瀏覽器中檢查網域名稱格式是否正確。不儲存任何資料。驗證標籤、長度限制、TLD 存在和 RFC 相容的字元使用。"
+      },
+      "hostname-validator": {
+        "name": "主機名稱驗證器",
+        "description": "免費線上主機名稱驗證器 — 立即在瀏覽器中檢查主機名稱是否遵循 RFC 1123 格式。不儲存任何資料。驗證標籤長度、字元集和整體主機名稱結構。"
+      },
+      "slug-validator": {
+        "name": "Slug 驗證器",
+        "description": "免費線上 URL slug 驗證器 — 立即在瀏覽器中檢查字串是否為有效的 URL 友善 slug。不儲存任何資料。根據 SEO 最佳實踐驗證小寫字母、數字和連字號。"
+      },
+      "semver-validator": {
+        "name": "SemVer 驗證器",
+        "description": "免費線上語義版本驗證器 — 立即在瀏覽器中檢查版本字串是否遵循 SemVer 2.0 格式。不儲存任何資料。解析主要版本、次要版本、補丁、預發佈和建置中繼資料元件。"
+      },
+      "hex-color-validator": {
+        "name": "十六進位色碼驗證器",
+        "description": "免費線上十六進位色碼驗證器 — 立即在瀏覽器中檢查十六進位色碼是否有效。不儲存任何資料。支援 3 位、4 位（含 Alpha 通道）、6 位和 8 位（含 Alpha 通道）的十六進位格式 — 需要 # 前綴。"
+      },
+      "credit-card-validator": {
+        "name": "信用卡驗證器",
+        "description": "免費線上信用卡驗證器 — 在瀏覽器中即時檢查卡號是否通過 Luhn 演算法。不儲存任何資料。偵測卡片類型（Visa、Mastercard、Amex、Discover）並遮蓋號碼顯示。"
+      },
+      "isbn-validator": {
+        "name": "ISBN 驗證器",
+        "description": "免費線上 ISBN 驗證器 — 在瀏覽器中即時檢查 ISBN-10 或 ISBN-13 號碼是否有效。不儲存任何資料。驗證檢查碼並規範化兩種格式的 ISBN。"
+      },
+      "issn-validator": {
+        "name": "ISSN 驗證器",
+        "description": "免費線上 ISSN 驗證器 — 在瀏覽器中即時檢查國際標準期刊號是否有效。不儲存任何資料。驗證檢查碼並驗證 8 位數 ISSN 格式。"
+      },
+      "doi-validator": {
+        "name": "DOI 驗證器",
+        "description": "免費線上 DOI 驗證器 — 在瀏覽器中即時驗證數字物件識別碼格式。不儲存任何資料。根據 DOI 規範驗證前綴和後綴結構。"
+      },
+      "json-validator": {
+        "name": "JSON 驗證器",
+        "description": "免費線上 JSON 驗證器 — 在瀏覽器中即時檢查 JSON 資料的語法錯誤。不儲存任何資料。偵測頂層類型（物件、陣列、字串、數字、布林值、null）並驗證結構。"
+      },
+      "xml-validator": {
+        "name": "XML 驗證器",
+        "description": "免費線上 XML 驗證器 — 在瀏覽器中即時檢查 XML 文件的格式完整性錯誤。不儲存任何資料。驗證標籤匹配、適當的巢狀和 XML 聲明語法。"
+      },
+      "yaml-validator": {
+        "name": "YAML 驗證器",
+        "description": "免費線上 YAML 驗證器 — 在瀏覽器中即時檢查 YAML 文件的語法錯誤。不儲存任何資料。驗證縮排、鍵值對、序列和巢狀結構。"
+      },
+      "toml-validator": {
+        "name": "TOML 驗證器",
+        "description": "免費線上 TOML 驗證器 — 在瀏覽器中即時檢查 TOML 組態檔的語法錯誤。不儲存任何資料。驗證表格、鍵值對、陣列和內聯表格。"
+      },
+      "csv-validator": {
+        "name": "CSV 驗證器",
+        "description": "免費線上 CSV 驗證器 — 在瀏覽器中即時檢查 CSV 資料的格式錯誤和列一致性。不儲存任何資料。驗證列結構、欄位計數並報告總列數和欄數。"
+      },
+      "html-validator": {
+        "name": "HTML 驗證器",
+        "description": "免費線上 HTML 驗證器 — 在瀏覽器中即時檢查 HTML 的標籤匹配和結構錯誤。不儲存任何資料。驗證開標籤和閉標籤對、巢狀和自關閉元素。"
+      },
+      "css-validator": {
+        "name": "CSS 驗證器",
+        "description": "免費線上 CSS 語法驗證器 — 在瀏覽器中即時檢查樣式表的語法錯誤。不儲存任何資料。驗證選擇器、屬性、值、媒體查詢和巢狀規則。"
+      },
+      "javascript-validator": {
+        "name": "JavaScript 驗證器",
+        "description": "免費線上 JavaScript 語法驗證器 — 在瀏覽器中即時檢查 JS 程式碼的語法錯誤。不儲存任何資料。解析 ES2020+ 語法，包括箭頭函式、樣板字面值和解構。"
+      },
+      "sql-validator": {
+        "name": "SQL 驗證器",
+        "description": "免費線上 SQL 語法驗證器 — 在瀏覽器中即時檢查 SQL 查詢的基本語法錯誤。不儲存任何資料。驗證 SELECT、INSERT、UPDATE、DELETE 和 CREATE 語句。"
+      },
+      "cron-validator-tool": {
+        "name": "Cron 驗證器",
+        "description": "免費線上 cron 表達式驗證器 — 在瀏覽器中即時驗證您的 cron 排程語法。不儲存任何資料。解析分鐘、小時、日期、月份和星期欄位，支援範圍、步長和萬用字元。"
+      }
+    },
+    "web": {
+      "meta-tag-generator": {
+        "name": "Meta 標籤產生器",
+        "description": "免費線上 HTML meta 標籤產生器 — 在瀏覽器中即時建立 SEO、viewport、charset 和社交發現所需的 meta 標籤。不儲存任何資料。可設定標題、描述、關鍵字、作者、robots 指令和主題顏色。"
+      },
+      "og-generator": {
+        "name": "Open Graph 產生器",
+        "description": "免費線上 Open Graph meta 標籤產生器 — 在瀏覽器中即時建立 og: meta 標籤，用於在 Facebook、LinkedIn 和其他平台的豐富社交預覽。不儲存任何資料。可設定標題、描述、圖片尺寸、類型、網站名稱和語言。"
+      },
+      "twitter-card-generator": {
+        "name": "Twitter 卡片產生器",
+        "description": "免費線上 Twitter 卡片 meta 標籤產生器 — 在瀏覽器中即時建立摘要、大圖片、應用程式和播放器卡片標籤，用於豐富的社交預覽。不儲存任何資料。可設定卡片類型、圖片、網站帳號和建立者帳號。"
+      },
+      "schema-org-generator": {
+        "name": "Schema.org 產生器",
+        "description": "免費線上 Schema.org JSON-LD 產生器 — 在瀏覽器中即時為文章、產品、組織、活動等建立結構化資料標記。不儲存任何資料。輸出隨時可貼上的指令碼標籤以改善搜尋結果。"
+      },
+      "robots-txt-generator": {
+        "name": "robots.txt 產生器",
+        "description": "免費線上 robots.txt 產生器 — 在瀏覽器中即時建立爬蟲指令、disallow 路徑、sitemap URL 和爬蟲延遲設定。不儲存任何資料。支援自訂機器人規則和多個路徑項目。"
+      },
+      "robots-txt-validator": {
+        "name": "robots.txt 驗證器",
+        "description": "免費線上 robots.txt 驗證器 — 在瀏覽器中即時檢查 robots.txt 語法、指令和爬蟲規則是否有誤。不儲存任何資料。驗證 User-agent、Disallow、Allow、Sitemap 和 Crawl-delay 指令。"
+      },
+      "sitemap-generator": {
+        "name": "Sitemap 產生器",
+        "description": "免費線上 XML sitemap 產生器 — 在瀏覽器中即時建立 sitemap.xml 檔案，可設定更新頻率、優先順序和最後修改時間。不儲存任何資料。支援多個 URL 且每項可設定 SEO 中繼資料。"
+      },
+      "sitemap-validator": {
+        "name": "Sitemap 驗證器",
+        "description": "免費線上 XML sitemap 驗證器 — 在瀏覽器中即時檢查 sitemap.xml 結構、URL 項目和命名空間聲明是否有誤。不儲存任何資料。驗證 loc、changefreq、priority 和 URL 計數限制。"
+      },
+      "canonical-url-builder": {
+        "name": "Canonical URL 產生器",
+        "description": "免費線上 canonical URL 產生器 — 在瀏覽器中即時產生 canonical 連結標籤以防止重複內容問題。不儲存任何資料。支援 HTML 連結標籤和 HTTP 標頭格式。"
+      },
+      "hreflang-generator": {
+        "name": "Hreflang 產生器",
+        "description": "免費線上 hreflang 標籤產生器 — 在瀏覽器中即時建立多語言和多地區 SEO 的 hreflang 連結標籤。不儲存任何資料。產生包含 x-default 備選項的替代連結標籤。"
+      },
+      "meta-preview": {
+        "name": "Meta 預覽",
+        "description": "免費線上 meta 標籤預覽 — 在瀏覽器中即時查看您的頁面在 Google 搜尋結果中的外觀，含標題長度和描述分析。不儲存任何資料。顯示搜尋結果預覽並標示字元計數。"
+      },
+      "social-preview": {
+        "name": "社交預覽",
+        "description": "免費線上社交媒體預覽 — 檢視您的頁面在 Facebook 和 Twitter 上分享時的顯示效果，並在瀏覽器中即時進行 Open Graph 和 Twitter Card 分析。不儲存任何資料。顯示 Facebook 卡片、Twitter 卡片和偵測到的中繼標籤值。"
+      },
+      "csp-builder": {
+        "name": "CSP Builder",
+        "description": "免費線上 CSP 建立器 — 在瀏覽器中即時建立內容安全政策標頭，包括指令設定和伺服器設定範例。不儲存任何資料。產生標頭、HTML 中繼標籤、Apache 和 Nginx 格式。"
+      },
+      "csp-validator": {
+        "name": "CSP 驗證器",
+        "description": "免費線上 CSP 驗證器 — 在瀏覽器中即時檢查內容安全政策標頭的語法錯誤和安全警告。不儲存任何資料。偵測 unsafe-inline、萬用字元來源、重複指令和遺失的建議政策。"
+      },
+      "cors-builder": {
+        "name": "CORS Builder",
+        "description": "免費線上 CORS 標頭建立器 — 在瀏覽器中即時設定跨來源資源共用標頭，包括 Express、Nginx 和 Apache 範例。不儲存任何資料。支援允許的來源、方法、標頭、認證和預檢快取期限。"
+      },
+      "sri-hash-generator": {
+        "name": "SRI 雜湊產生器",
+        "description": "免費線上 SRI 雜湊產生器 — 在瀏覽器中即時為指令碼和樣式表產生子資源完整性雜湊（SHA-256、SHA-384 和 SHA-512）。不儲存任何資料。輸出完整性屬性，附帶現成可用的指令碼和連結標籤。"
+      },
+      "security-headers-check": {
+        "name": "安全標頭檢查",
+        "description": "免費線上安全標頭分析器 — 在瀏覽器中審計 HTTP 回應標頭以符合 OWASP 安全最佳實務，並取得安全評分。不儲存任何資料。檢查 CSP、HSTS、X-Frame-Options、Referrer-Policy 及其他 7 個標頭。"
+      },
+      "hsts-builder": {
+        "name": "HSTS Builder",
+        "description": "免費線上 HSTS 標頭建立器 — 在瀏覽器中即時產生 HTTP 嚴格傳輸安全標頭，包括 Apache、Nginx 和 Express 設定範例。不儲存任何資料。支援預載資格和子網域納入。"
+      },
+      "permissions-policy-builder": {
+        "name": "Permissions Policy Builder",
+        "description": "免費線上 Permissions-Policy 標頭建立器 — 在瀏覽器中即時控制攝影機、麥克風、地理位置等瀏覽器功能的存取權限。不儲存任何資料。產生標頭，附帶 Apache、Nginx 和 Express 設定範例。"
+      },
+      "xss-filter-tester": {
+        "name": "XSS 篩選測試器",
+        "description": "免費線上 XSS 篩選測試器 — 在瀏覽器中即時偵測輸入字串中的跨網站指令碼模式，具有嚴重程度等級和經過淨化的輸出。不儲存任何資料。測試指令碼標籤、事件處理器、JavaScript URI 和 15+ 個攻擊模式。"
+      }
+    }
+  }
+}

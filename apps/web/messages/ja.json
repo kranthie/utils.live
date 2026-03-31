@@ -1,0 +1,3447 @@
+{
+  "common": {
+    "nav": {
+      "home": "ホーム",
+      "tools": "ツール",
+      "blog": "ブログ",
+      "about": "について",
+      "contact": "お問い合わせ"
+    },
+    "actions": {
+      "copy": "クリップボードにコピー",
+      "copied": "コピーしました!",
+      "download": "ダウンロード",
+      "share": "共有",
+      "tryAgain": "もう一度試す",
+      "goHome": "ホームに戻る",
+      "goBack": "戻る",
+      "retry": "再試行",
+      "dismiss": "閉じる",
+      "reset": "デフォルトにリセット",
+      "clear": "クリア",
+      "sample": "サンプル",
+      "upload": "アップロード",
+      "search": "検索",
+      "send": "メッセージ送信",
+      "sending": "送信中...",
+      "browseTools": "すべてのツールを参照",
+      "searchTools": "ツールを検索",
+      "viewAllTools": "すべてのツールを表示",
+      "viewAllCategories": "すべてのカテゴリを表示",
+      "contactSupport": "サポートに連絡"
+    },
+    "search": {
+      "placeholder": "ツールを検索...",
+      "noResults": "ツールが見つかりません。",
+      "resultsCount": "{count, plural, one {# 件} other {# 件}}見つかりました",
+      "searchToolsPlaceholder": "ツールを検索...",
+      "ariaLabel": "開発者ツールを検索"
+    },
+    "theme": {
+      "toggle": "テーマを切り替え",
+      "light": "ライト",
+      "dark": "ダーク",
+      "system": "システム"
+    },
+    "brand": {
+      "name": "[REVIEW] utils.live",
+      "homeAriaLabel": "[REVIEW] utils.live ホーム"
+    }
+  },
+  "home": {
+    "hero": {
+      "openSourceBadge": "無料 & オープンソース",
+      "headline": "開発者ユーティリティ、すぐに使える",
+      "subheadline": "JSON フォーマッタ、エンコーダ、コンバータ、ハッシュジェネレータなど。ブラウザで完全に動作する無料ツール。",
+      "searchPlaceholder": "{toolCountLabel} 個の開発者ツールを検索...",
+      "searchAriaLabel": "開発者ツールを検索"
+    },
+    "features": {
+      "eyebrow": "[REVIEW] utils.live を選ぶ理由",
+      "heading": "[REVIEW] 開発者が utils.live を選ぶ理由",
+      "instantResults": {
+        "title": "瞬間的な結果",
+        "description": "クライアント側のツールはブラウザで実行され、レイテンシはゼロです。待機なし、サーバーラウンドトリップなし。"
+      },
+      "privacyFirst": {
+        "title": "プライバシー優先",
+        "description": "あなたのデータはデバイスを離れません。追跡、保存、分析はしません。"
+      },
+      "freeOpenSource": {
+        "title": "無料 & オープンソース",
+        "description": "すべてのツールは完全に無料です。アカウント、ペイウォール、使用制限なし。完全にオープンソース。"
+      },
+      "toolsCount": {
+        "title": "{toolCountLabel} 個のツール",
+        "description": "JSON フォーマットから画像処理まで、包括的な開発者ユーティリティのコレクション。"
+      }
+    },
+    "cta": {
+      "toolsLabel": "ツール",
+      "categoriesLabel": "カテゴリ",
+      "freeLabel": "無料 & オープンソース",
+      "heading": "{toolCount}+ 個のツールで構築を開始",
+      "subheading": "あらゆるタスクに適したツールを見つけてください。検索、クリック、完了。",
+      "searchToolsButton": "ツールを検索",
+      "browseAllTools": "すべてのツールを参照"
+    },
+    "categoryShowcase": {
+      "eyebrow": "カテゴリ",
+      "heading": "カテゴリで参照",
+      "subheading": "あらゆるタスクに適したツールを見つけてください",
+      "toolsCount": "{count} 個のツール",
+      "viewAllTools": "すべてのツールを表示",
+      "viewAllCategories": "すべてのカテゴリを表示"
+    },
+    "toolDemo": {
+      "heading": "実際の動作を見る",
+      "subheading": "ツールがリアルタイムでデータを変換する様子を見てください",
+      "inputLabel": "入力",
+      "outputLabel": "出力"
+    },
+    "metadata": {
+      "title": "[REVIEW] utils.live | 無料開発者ツール & ユーティリティ",
+      "description": "{toolCountLabel} 個の無料開発者ツールをまとめて。JSON フォーマッタ、エンコーダ、コンバータ、ハッシュジェネレータなど。高速、無料、プライバシー重視。"
+    }
+  },
+  "tools": {
+    "shell": {
+      "options": "オプション",
+      "optionsCount": "({count})",
+      "resetToDefaults": "デフォルトにリセット",
+      "resetAriaLabel": "オプションをデフォルトにリセット",
+      "auto": "自動",
+      "autoWaiting": " - 入力待機中",
+      "autoExecuting": " - 実行中",
+      "autoReady": " - 準備完了",
+      "autoTooltip": "このツールは入力時に自動的に実行されます。",
+      "generating": "生成中...",
+      "generate": "生成",
+      "keyboardShortcuts": "キーボードショートカット",
+      "keyboardShortcutsAriaLabel": "キーボードショートカット",
+      "shortcutExecute": "実行",
+      "shortcutClear": "クリア / リセット",
+      "undoLabel": "元に戻す",
+      "exampleLoaded": "サンプルが読み込まれました",
+      "inputLabel": "入力",
+      "outputLabel": "出力",
+      "configureLabel": "設定",
+      "previewLabel": "プレビュー",
+      "sourceLabel": "ソース",
+      "convertedLabel": "変換済み",
+      "editLabel": "編集",
+      "toolsAvailable": "{count} 個のツールが利用可能",
+      "toolNotFound": {
+        "title": "ツールが見つかりません",
+        "description": "リクエストされたツールが見つかりませんでした。"
+      }
+    },
+    "search": {
+      "heading": "ツールを探索",
+      "subheading": "{count, number} 個の無料開発者ツールが手のひらの中に",
+      "searchResults": "結果",
+      "recent": "最近使用したもの",
+      "popular": "人気",
+      "categories": "カテゴリ",
+      "noToolsFound": "ツールが見つかりません。",
+      "resultsFound": "{count, plural, one {# 件} other {# 件}}の結果が見つかりました",
+      "noResultsFound": "ツールが見つかりません"
+    },
+    "categories": {
+      "categoryNotFound": {
+        "title": "カテゴリが見つかりません",
+        "description": "リクエストされたカテゴリが見つかりませんでした。"
+      },
+      "toolsAvailable": "{count} 個のツールが利用可能"
+    },
+    "breadcrumbs": {
+      "home": "ホーム",
+      "tools": "ツール"
+    },
+    "metadata": {
+      "tools": {
+        "title": "ツールを探索",
+        "description": "{toolCountLabel} 個の無料開発者ツールを閲覧。JSON フォーマッター、エンコーダー、コンバーター、ハッシュジェネレーターなど。",
+        "ogTitle": "[REVIEW] ツールを探索 | utils.live",
+        "ogDescription": "{toolCountLabel} 個の無料開発者ツールを閲覧。JSON フォーマッター、エンコーダー、コンバーターなど。"
+      }
+    }
+  },
+  "editor": {
+    "input": {
+      "title": "入力",
+      "loadSampleAriaLabel": "サンプルデータを読み込む",
+      "sampleButton": "サンプル",
+      "uploadButton": "アップロード",
+      "clearAriaLabel": "入力をクリア",
+      "dropFileHere": "ファイルをここにドロップ",
+      "dragAndDrop": "またはファイルをここにドラッグ&ドロップ",
+      "failedToRead": "ファイルの読み込みに失敗しました"
+    },
+    "output": {
+      "title": "出力",
+      "processing": "処理中...",
+      "success": "成功",
+      "error": "エラー",
+      "noOutputYet": "まだ出力がありません",
+      "enterInputInstant": "入力してリアルタイムで結果を確認",
+      "enterInputExecute": "入力を入力し、実行をクリックして結果を表示",
+      "emptyResult": "空の結果",
+      "emptyResultDescription": "操作は完了しましたが、出力が生成されませんでした",
+      "loadingEditor": "エディターを読み込み中...",
+      "loadingDiffViewer": "差分ビューアーを読み込み中...",
+      "loadingJsonViewer": "JSON ビューアーを読み込み中...",
+      "loadingMarkdown": "マークダウンプレビューを読み込み中...",
+      "loadingTable": "テーブルを読み込み中...",
+      "loadingHtml": "HTMLプレビューを読み込み中...",
+      "loadingDiagram": "ダイアグラムを読み込み中...",
+      "loadingImage": "画像プレビューを読み込み中...",
+      "loadingColor": "色を読み込み中...",
+      "loadingColors": "色を読み込み中...",
+      "statusProcessing": "処理中...",
+      "statusComplete": "実行が完了しました。",
+      "statusProcessedIn": " {time}で処理されました。",
+      "statusFailed": "実行に失敗しました: {message}"
+    }
+  },
+  "errorDisplay": {
+    "defaultTitles": {
+      "error": "エラー",
+      "warning": "警告",
+      "info": "情報"
+    },
+    "pathLabel": "パス: {path}",
+    "lineLabel": "行 {line}",
+    "retryButton": "再試行",
+    "dismissButton": "閉じる"
+  },
+  "marketing": {
+    "about": {
+      "metadata": {
+        "title": "について",
+        "description": "[REVIEW] utils.live について - 開発者ツールをアクセス可能、高速、プライバシー重視にするというミッション。",
+        "ogTitle": "[REVIEW] について | utils.live"
+      },
+      "hero": {
+        "heading": "あなたの時間を大切にする開発者ツール",
+        "headingPrefix": "開発者ツール",
+        "gradientText": "あなたの時間を大切にする",
+        "description": "[REVIEW] utils.liveは、遅い、広告まみれ、プライバシーを侵害するオンラインツールへの不満から生まれました。私たちは自分たちが使いたいものを作りました：高速で、無料で、尊重されたユーティリティです。"
+      },
+      "stats": {
+        "developerTools": "開発者ツール",
+        "freeCoreTools": "無料コアツール",
+        "dataCollected": "収集されたデータ",
+        "avgResponseTime": "平均応答時間"
+      },
+      "values": {
+        "heading": "私たちの価値観",
+        "speedFirst": {
+          "title": "スピード最優先",
+          "description": "ツールは瞬時に動作すべきです。私たちのクライアント側ツールはブラウザで実行され、遅延ゼロです。"
+        },
+        "privacyByDesign": {
+          "title": "デザイン優先のプライバシー",
+          "description": "あなたのデータはあなたのデバイスに留まります。私たちはツール入力を追跡、保存、分析しません。"
+        },
+        "developerExperience": {
+          "title": "開発者体験",
+          "description": "開発者によって作られ、開発者のために設計されています。すべてのツールはあなたの時間を節約するために設計されています。"
+        },
+        "freeAccessible": {
+          "title": "無料でアクセス可能",
+          "description": "コアツールは永遠に無料です。誰もが質の高いユーティリティにアクセスできるべきだと信じています。"
+        }
+      },
+      "mission": {
+        "heading": "私たちのミッション",
+        "description": "[REVIEW] 開発者ツールは予算や技術的専門知識に関係なく、すべての人がアクセスできるべきだと考えています。utils.liveは、ブロートウェア、追跡、給与制度なしで、プロフェッショナルグレードのユーティリティを提供します。私たちの目標は、あなたが重要なことに集中するのを支援することです：素晴らしいソフトウェアの構築。"
+      },
+      "team": {
+        "heading": "思いを込めて構築",
+        "headingPrefix": "思いを込めて",
+        "gradientText": "構築",
+        "description": "[REVIEW] utils.liveは、これらのツールを毎日使用する情熱的な開発者の小さなチームによって維持されています。コミュニティフィードバックに基づいて、常に新しいツールを追加し、既存のツールを改善しています。",
+        "feedbackWelcome": "フィードバックと提案を歓迎します"
+      }
+    },
+    "contact": {
+      "metadata": {
+        "title": "お問い合わせ",
+        "description": "[REVIEW] utils.liveチームに連絡してください。機能、バグ、パートナーシップについてお聞かせください。",
+        "ogTitle": "[REVIEW] お問い合わせ | utils.live",
+        "ogDescription": "[REVIEW] utils.liveチームに連絡してください。ご意見をお聞かせください。"
+      },
+      "hero": {
+        "heading": "ご連絡ください",
+        "description": "ご質問、機能リクエスト、またはご挨拶がありますか？お聞かせください。"
+      },
+      "info": {
+        "responseTime": {
+          "title": "応答時間",
+          "value": "24時間以内",
+          "description": "ほとんどのお問い合わせについて"
+        },
+        "location": {
+          "title": "所在地",
+          "value": "リモートチーム",
+          "description": "世界中に分散"
+        }
+      },
+      "lookingForTool": {
+        "heading": "ツールを探していますか？",
+        "description": "当社のツール全体を参照してください。",
+        "linkText": "ツール全体"
+      },
+      "form": {
+        "heading": "メッセージを送信",
+        "successTitle": "メッセージが送信されました！",
+        "successDescription": "ご連絡ありがとうございます。通常24時間以内にご返信させていただきます。",
+        "sendAnother": "別のメッセージを送信",
+        "errorMessage": "エラーが発生しました。もう一度お試しください。",
+        "namePlaceholder": "お名前",
+        "nameLabel": "名前",
+        "emailLabel": "メール",
+        "emailPlaceholder": "you@example.com",
+        "subjectLabel": "件名",
+        "subjectPlaceholder": "トピックを選択",
+        "messageLabel": "メッセージ",
+        "messagePlaceholder": "どのようにお手伝いできますか？",
+        "submitButton": "メッセージを送信",
+        "submittingButton": "送信中...",
+        "subjects": {
+          "general": "一般的なお問い合わせ",
+          "bug": "バグ報告",
+          "feature": "機能リクエスト",
+          "support": "技術サポート",
+          "partnership": "パートナーシップ",
+          "other": "その他"
+        }
+      }
+    }
+  },
+  "blog": {
+    "metadata": {
+      "title": "[REVIEW] 開発者ツールブログ | utils.live",
+      "description": "Base64、JWT、正規表現、UUID、ハッシュなど、開発者ツールの概念について学びましょう。ライブ例を使った実践的なガイド。",
+      "postNotFound": "投稿が見つかりません"
+    },
+    "page": {
+      "heading": "開発者ツールブログ",
+      "gradientText": "ブログ",
+      "description": "エンコーディング、ハッシュ、トークンなどに関する実践的なガイド。毎日使用するツールについて理解してください。",
+      "readArticle": "記事を読む",
+      "minRead": "{count} 分で読めます",
+      "allArticles": "すべての記事",
+      "backToArticles": "すべての記事に戻る"
+    },
+    "cta": {
+      "heading": "[REVIEW] utils.liveで試す",
+      "description": "無料のブラウザベースツール — サインアップ不要、データはあなたのデバイスに留まります。"
+    }
+  },
+  "errors": {
+    "generic": {
+      "heading": "エラーが発生しました",
+      "description": "予期しないエラーが発生しました。当社に通知され、調査しています。",
+      "errorId": "エラーID：{id}",
+      "tryAgain": "もう一度試す",
+      "goHome": "ホームに戻る",
+      "contactSupport": "サポートに連絡",
+      "whatCanYouDo": "何ができますか？",
+      "suggestions": {
+        "refresh": "ページをリフレッシュしてみてください",
+        "clearCache": "ブラウザキャッシュをクリアしてください",
+        "checkConnection": "インターネット接続を確認してください",
+        "contactUs": "問題が解決しない場合"
+      },
+      "contactLink": "お問い合わせ"
+    },
+    "notFound": {
+      "heading": "ページが見つかりません",
+      "description": "申し訳ございません。お探しのページが見つかりませんでした。ページが移動されたか、存在しない可能性があります。",
+      "goHome": "ホームに戻る",
+      "browseTools": "ツールを参照",
+      "goBack": "戻る",
+      "popularTools": "人気のツール"
+    },
+    "critical": {
+      "heading": "重大なエラー",
+      "description": "重大なエラーが発生しました。このページを正しく読み込めませんでした。",
+      "tryAgain": "もう一度試す",
+      "goHome": "ホームに戻る",
+      "errorId": "エラーID: {id}"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "[REVIEW] utils.live | 無料開発者ツール・ユーティリティ",
+      "description": "{toolCountLabel}の無料開発者ツールが一箇所に。JSONフォーマッタ、エンコーダ、コンバータ、ハッシュジェネレータなど。高速、無料、プライバシー重視。"
+    },
+    "layout": {
+      "title": "[REVIEW] utils.live | 開発者ユーティリティプラットフォーム",
+      "titleTemplate": "%s | utils.live",
+      "description": "{toolCountLabel}の開発者ツールが一箇所に。JSONフォーマッタ、エンコーダ、コンバータなど。無料でプライバシー重視。",
+      "ogTitle": "[REVIEW] utils.live | 開発者ユーティリティプラットフォーム",
+      "ogAlt": "[REVIEW] utils.live - 無料開発者ツール",
+      "skipToMain": "メインコンテンツへスキップ"
+    },
+    "tools": {
+      "title": "ツールを探索",
+      "description": "{toolCountLabel}の無料開発者ツールを参照。JSONフォーマッタ、エンコーダ、コンバータ、ハッシュジェネレータなど。",
+      "ogTitle": "[REVIEW] ツールを探索 | utils.live"
+    },
+    "about": {
+      "title": "について",
+      "ogTitle": "[REVIEW] について | utils.live"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "ogTitle": "[REVIEW] お問い合わせ | utils.live"
+    },
+    "blog": {
+      "title": "[REVIEW] 開発者ツールブログ | utils.live"
+    }
+  },
+  "footer": {
+    "tagline": "エンコーディング、変換、フォーマットなどのための無料でオープンソースの開発者ユーティリティ。",
+    "sections": {
+      "product": "製品",
+      "company": "企業",
+      "community": "コミュニティ"
+    },
+    "links": {
+      "allTools": "すべてのツール",
+      "blog": "ブログ",
+      "about": "について",
+      "contact": "お問い合わせ",
+      "github": "GitHub",
+      "reportIssue": "問題を報告"
+    }
+  },
+  "mobileNav": {
+    "openMenu": "メニューを開く",
+    "searchLabel": "ツールを検索",
+    "searchPlaceholder": "ツールを検索...",
+    "title": "utils.live"
+  },
+  "forms": {
+    "fileUpload": {
+      "defaultPlaceholder": "ここにファイルをドロップするか、クリックしてアップロード",
+      "accepted": "対応形式: {types}",
+      "maxSize": "最大サイズ: {size}",
+      "filesCount": "{count, plural, one {# ファイル} other {# ファイル}}",
+      "clearAll": "すべてクリア",
+      "fileError": "エラー",
+      "fileSuccess": "成功",
+      "removeFile": "{filename}を削除",
+      "uploadAriaLabel": "アップロード {suffix}対応形式: {accept}",
+      "failedToRead": "ファイルの読み込みに失敗しました"
+    },
+    "keyValueEditor": {
+      "defaultKeyLabel": "キー",
+      "defaultValueLabel": "値",
+      "defaultKeyPlaceholder": "キーを入力",
+      "defaultValuePlaceholder": "値を入力",
+      "duplicateKey": "重複したキー",
+      "addPair": "{keyLabel}/{valueLabel}を追加",
+      "removeAriaLabel": "ペア {index}を削除",
+      "keyAriaLabel": "{label} {index}",
+      "valueAriaLabel": "{label} {index}",
+      "pairsCount": "{current} / {max} ペア"
+    },
+    "multiSelect": {
+      "defaultPlaceholder": "オプションを選択...",
+      "searchPlaceholder": "検索...",
+      "noOptionsFound": "オプションが見つかりません。",
+      "selectedCount": "{count}個を選択",
+      "selectionCount": "{current} / {max}個を選択"
+    },
+    "tagInput": {
+      "defaultPlaceholder": "タグを追加...",
+      "addMore": "さらに追加...",
+      "tagsCount": "{current} / {max}個のタグ"
+    },
+    "searchableSelect": {
+      "defaultPlaceholder": "オプションを選択...",
+      "searchPlaceholder": "検索...",
+      "noOptionsFound": "オプションが見つかりません。"
+    },
+    "numberInput": {
+      "decreaseAriaLabel": "値を減らす",
+      "increaseAriaLabel": "値を増やす"
+    }
+  },
+  "header": {
+    "searchToolsPlaceholder": "ツールを検索...",
+    "searchAriaLabel": "ツールを検索",
+    "searchMobileAriaLabel": "検索",
+    "githubAriaLabel": "GitHubで表示"
+  },
+  "toolMeta": {
+    "json": {
+      "formatter": {
+        "name": "JSONフォーマッタ",
+        "description": "無料のオンラインJSONフォーマッター — JSONを整形し、ブラウザ内で設定可能なインデントで即座にフォーマットします。データは保存されません。0～8スペースインデントと任意のキーソートに対応。"
+      },
+      "validator": {
+        "name": "JSONバリデータ",
+        "description": "無料のオンラインJSONバリデータ — JSONの構文をチェックし、ブラウザ内で詳細なエラー情報を即座に取得します。データは保存されません。エラーの行/列位置と検出されたJSON型を報告。"
+      },
+      "minify": {
+        "name": "JSONミニファイ",
+        "description": "無料のオンラインJSONミニファイアー — すべての空白とフォーマットを削除してJSONを圧縮し、ブラウザ内で即座に処理します。データは保存されません。元のサイズとミニファイ後のサイズ、削減率を表示。"
+      },
+      "path-query": {
+        "name": "JSONパスクエリ",
+        "description": "無料のオンラインJSONパスクエリツール — ドット記法とブラケット構文を使用してJSONから値を抽出し、ブラウザ内で即座に処理します。データは保存されません。ネストされたオブジェクト、配列、文字列キーに対応。"
+      },
+      "jmespath": {
+        "name": "JSON JMESPath",
+        "description": "無料のオンラインJMESPathクエリツール — JMESPath式を使用してJSONをフィルタリングおよび変換し、ブラウザ内で即座に処理します。データは保存されません。ドット記法、配列スライシング、プロジェクション、関数に対応。"
+      },
+      "diff": {
+        "name": "JSON差分",
+        "description": "無料のオンラインJSON差分ツール — 2つのJSONオブジェクトを比較し、追加、削除、変更されたフィールドをブラウザ内で即座に表示します。データは保存されません。JSONパス位置で差分を報告。"
+      },
+      "sort-keys": {
+        "name": "JSONキーソート",
+        "description": "無料のオンラインJSONキーソーター — オブジェクトキーをアルファベット順（昇順または降順）にブラウザ内で即座にソートします。データは保存されません。ネストされたオブジェクトの再帰的ソートに対応。"
+      },
+      "flatten": {
+        "name": "JSONフラット化",
+        "description": "無料のオンラインJSONフラット化ツール — ネストされたJSONを単一レベルのオブジェクトにドット記法キーで変換し、ブラウザ内で即座に処理します。データは保存されません。区切り文字、最大深度、配列処理のカスタマイズが可能。"
+      },
+      "unflatten": {
+        "name": "JSONアンフラット化",
+        "description": "無料のオンラインJSONアンフラット化ツール — フラットなドット記法キーからネストされたオブジェクトを復元し、ブラウザ内で即座に処理します。データは保存されません。カスタム区切り文字と配列インデックス記法に対応。"
+      },
+      "escape": {
+        "name": "JSONエスケープ",
+        "description": "無料のオンラインJSONエスケープツール — JSON用の文字列内の特殊文字をエスケープし、ブラウザ内で即座に処理します。データは保存されません。引用符、改行、タブ、バックスラッシュ、Unicodeに対応。"
+      },
+      "unescape": {
+        "name": "JSONアンエスケープ",
+        "description": "無料のオンラインJSONアンエスケープツール — エスケープされた文字をリテラル形式に戻し、ブラウザ内で即座に処理します。データは保存されません。\\n、\\t、\\\"その他のJSONエスケープシーケンスに対応。"
+      },
+      "to-yaml": {
+        "name": "JSONからYAMLへ",
+        "description": "無料のオンラインJSONからYAMLへのコンバーター — JSONをYAML形式に変換し、ブラウザ内で即座に処理します。データは保存されません。インデント、フロースタイルレベル、キーソート、行幅のカスタマイズが可能。"
+      },
+      "to-xml": {
+        "name": "JSONからXMLへ",
+        "description": "無料のオンラインJSONからXMLへのコンバーター — JSONオブジェクトをXML形式に変換し、ブラウザ内で即座に処理します。データは保存されません。ルート要素名、配列ノード名、XML宣言のカスタマイズが可能。"
+      },
+      "to-csv": {
+        "name": "JSONからCSVへ",
+        "description": "無料のオンラインJSONからCSVへのコンバーター — JSONオブジェクト配列をCSV形式に変換し、ブラウザ内で即座に処理します。データは保存されません。区切り文字、クォート、ヘッダー行のカスタマイズが可能。"
+      },
+      "remove-nulls": {
+        "name": "JSON Null削除",
+        "description": "無料のオンラインJSONヌルリムーバー — JSONオブジェクトと配列からnull値を削除し、ブラウザ内で即座に処理します。データは保存されません。オプションで空の文字列、配列、オブジェクトも削除可能。"
+      },
+      "merge": {
+        "name": "JSONマージ",
+        "description": "無料のオンラインJSONマージツール — 2つのJSONオブジェクトをディープマージし、設定可能な配列戦略でブラウザ内で即座に処理します。データは保存されません。置換、連結、ユニーク配列マージに対応。"
+      },
+      "size-analyzer": {
+        "name": "JSONサイズ分析",
+        "description": "無料のオンラインJSONサイズ分析ツール — JSON構造、ネスティング深度、値の型分布を測定し、ブラウザ内で即座に処理します。データは保存されません。バイトサイズ、キー数、最大エントリを表示。"
+      },
+      "tree-viewer": {
+        "name": "JSONツリービューアー",
+        "description": "無料のオンラインJSONツリービューアー — JSONを階層的ツリーとして型と値を表示し、ブラウザ内で即座に処理します。データは保存されません。深度、型ラベル、インデントのカスタマイズが可能。"
+      },
+      "json-schema-generator": {
+        "name": "JSONスキーマジェネレータ",
+        "description": "無料のオンラインJSONスキーマジェネレータ — サンプルデータからJSON Schemaを推測し、フォーマット検出でブラウザ内で即座に処理します。データは保存されません。メール、URI、UUID、日時、IP形式を検出。"
+      },
+      "json-schema-to-typescript": {
+        "name": "JSONスキーマからTypeScriptへ",
+        "description": "無料のオンラインJSONスキーマからTypeScriptへのコンバーター — JSON Schema定義からTypeScriptインターフェースを生成し、ブラウザ内で即座に処理します。データは保存されません。refs、enums、allOf/oneOf、ネストされた型に対応。"
+      },
+      "json-schema-validator-api": {
+        "name": "JSONスキーマバリデータ",
+        "description": "無料のオンラインJSONスキーマバリデータ — JSON Schemaドキュメントの構造を検証し、ブラウザ内で即座に処理します。データは保存されません。型、形式、必須フィールドをチェックし、ドラフトバージョンを検出。"
+      },
+      "json-schema-validator-tool": {
+        "name": "JSONスキーマバリデータ",
+        "description": "無料のオンラインJSONデータバリデータ — JSONデータをJSON Schemaに対して検証し、ブラウザ内で並列ビューで即座に処理します。データは保存されません。型、必須フィールド、パターン、制約をチェック。"
+      },
+      "json-schema-faker": {
+        "name": "JSONスキーマフェイカー",
+        "description": "無料のオンラインJSONスキーマフェイカー — JSON Schema定義から現実的なモックデータを生成し、ブラウザ内で即座に処理します。データは保存されません。すべてのJSON Schemaの型、形式、enum、制約に対応。"
+      },
+      "json-to-typescript": {
+        "name": "JSONからTypeScriptへ",
+        "description": "無料のオンラインJSONからTypeScriptへのコンバーター — JSONデータからTypeScriptインターフェースを生成し、ブラウザ内で即座に処理します。データは保存されません。オプショナルフィールド、readonly、型エイリアス、ネストされたインターフェースに対応。"
+      },
+      "json-to-go": {
+        "name": "JSONからGoへ",
+        "description": "無料のオンラインJSONからGoへのコンバーター — サンプルデータからJSONタグ付きGo構造体を生成し、ブラウザ内で即座に処理します。データは保存されません。omitempty、インライン構造体、ネストされた型推論に対応。"
+      },
+      "json-to-java": {
+        "name": "JSONからJavaへ",
+        "description": "無料のオンラインJSONからJavaへのコンバーター — JSONデータからJacksonおよびLombokサポート付きJava POJOを生成し、ブラウザ内で即座に処理します。データは保存されません。ゲッター/セッターとインポートステートメント付き。"
+      },
+      "json-to-python": {
+        "name": "JSONからPythonへ",
+        "description": "無料のオンラインJSONからPythonへのコンバーター — JSONからPythonデータクラス、Pydanticモデル、またはTypedDictを生成し、ブラウザ内で即座に処理します。データは保存されません。4つのクラススタイルすべてにOptional型で対応。"
+      },
+      "json-to-rust": {
+        "name": "JSONからRustへ",
+        "description": "無料のオンラインJSONからRustへのコンバーター — JSONデータからserdeデリバイブマクロ付きRust構造体を生成し、ブラウザ内で即座に処理します。データは保存されません。デリバイブトレイト、pubフィールド、Optionタイプのカスタマイズが可能。"
+      },
+      "json-to-csharp": {
+        "name": "JSONからC#へ",
+        "description": "無料のオンラインJSONからC#へのコンバーター — JSONデータからC#クラスまたはレコード型を生成し、ブラウザ内で即座に処理します。データは保存されません。JsonPropertyName属性と null許容参照型に対応。"
+      }
+    },
+    "yaml": {
+      "formatter": {
+        "name": "YAMLフォーマッター",
+        "description": "無料のオンラインYAMLフォーマッター — YAMLファイルを整形し、正規化してブラウザ内で即座に処理します。データは保存されません。インデント、キーソート、行幅、フロースタイル制御のカスタマイズが可能。"
+      },
+      "to-json": {
+        "name": "YAMLからJSONへ",
+        "description": "無料のオンラインYAMLからJSONへのコンバーター — YAMLを貼り付けてJSONを取得し、ブラウザ内で即座に処理します。データは保存されません。ネストされたオブジェクト、配列、アンカー、すべてのYAMLデータ型にインデント設定で対応。"
+      },
+      "to-xml": {
+        "name": "YAMLからXMLへ",
+        "description": "無料のオンラインYAMLからXMLへのコンバーター — YAMLを貼り付けてXMLを取得し、ブラウザ内で即座に処理します。データは保存されません。ルート要素名、配列ノード命名、インデント、オプションのXML宣言のカスタマイズが可能。"
+      },
+      "minify": {
+        "name": "YAMLミニファイ",
+        "description": "無料のオンラインYAMLミニファイアー — YAMLドキュメントをフロースタイルにコンパクト化し、ブラウザ内で即座に処理します。データは保存されません。ブロックスタイルのネストをインラインの中括弧と角括弧に変換し、ファイルサイズを削減。"
+      },
+      "diff": {
+        "name": "YAML差分",
+        "description": "無料のオンラインYAML差分ツール — 2つのYAMLドキュメントを比較し、構造的な違いをブラウザ内で即座に表示します。データは保存されません。JSON パスで追加、削除、変更されたキーを表示し、サマリーカウント付き。"
+      },
+      "merge": {
+        "name": "YAMLマージ",
+        "description": "無料のオンラインYAMLマージツール — 2つのYAMLドキュメントを組み合わせ、ブラウザ内で即座に処理します。データは保存されません。ディープマージとシャローマージ戦略に対応し、配列処理（置換、連結、ユニーク）をカスタマイズ可能。"
+      },
+      "path-query": {
+        "name": "YAMLパスクエリ",
+        "description": "無料のオンラインYAMLパスクエリツール — ドット記法を使用してYAMLから値を抽出し、ブラウザ内で即座に処理します。データは保存されません。ネストされたキー、配列インデックス、クォートされたキー、JSONPath形式の$プレフィックスに対応。"
+      },
+      "sort-keys": {
+        "name": "YAMLキーソート",
+        "description": "無料のオンラインYAMLキーソーター — YAMLドキュメント内のオブジェクトキーをアルファベット順にソートし、ブラウザ内で即座に処理します。データは保存されません。昇順/降順、ディープ再帰ソート、インデント設定に対応。"
+      },
+      "lint": {
+        "name": "YAMLリント",
+        "description": "無料のオンラインYAMLリンター — YAMLの構文エラーとスタイル問題をチェックし、ブラウザ内で即座に処理します。データは保存されません。タブ、末尾の空白、インデント不一致、長い行、重複キーを検出。"
+      },
+      "splitter": {
+        "name": "YAMLスプリッター",
+        "description": "無料のオンラインYAMLスプリッター — マルチドキュメントYAMLファイルを個別のドキュメントに分割し、ブラウザ内で即座に処理します。データは保存されません。Kubernetesマニフェスト、CI/CDコンフィグ、---区切り文字付きYAMLに対応。"
+      }
+    },
+    "xml": {
+      "formatter": {
+        "name": "XMLフォーマッター",
+        "description": "無料のオンラインXMLフォーマッター — XMLドキュメントを整形してインデントし、ブラウザ内で即座に処理します。データは保存されません。インデント設定、属性保持、要素順序制御に対応し、pom.xml、web.xml、その他のXMLコンフィグに対応。"
+      },
+      "validator": {
+        "name": "XMLバリデータ",
+        "description": "無料のオンラインXMLバリデーター — XMLドキュメントの構文エラーをブラウザで即座にチェック。データは保存されません。ミスマッチのタグ、閉じられていない要素、不正な形式のコンテンツのエラー位置を行番号と列番号で報告。"
+      },
+      "to-json": {
+        "name": "XML to JSON",
+        "description": "無料のオンラインXML to JSONコンバーター — XMLドキュメントをブラウザで即座にJSONオブジェクトに変換。データは保存されません。属性、名前空間、設定可能なインデント、テキストノード命名をサポート。"
+      },
+      "to-yaml": {
+        "name": "XML to YAML",
+        "description": "無料のオンラインXML to YAMLコンバーター — XMLドキュメントをブラウザで即座にYAML形式に変換。データは保存されません。設定可能なプレフィックスで属性を保持し、カスタムインデントをサポート。"
+      },
+      "minify": {
+        "name": "XML Minify",
+        "description": "無料のオンラインXMLミニファイアー — XMLドキュメントから空白、コメント、インデントをブラウザで即座に削除。データは保存されません。元のサイズとミニファイ後のサイズを削減率とともに表示。"
+      },
+      "xpath": {
+        "name": "XML XPath Query",
+        "description": "無料のオンラインXML XPathクエリツール — XPath風の式を使用してブラウザでXMLドキュメントからノードを即座に抽出。データは保存されません。絶対パス、再帰的検索（//）、属性フィルター（[@attr='value']）をサポート。"
+      },
+      "diff": {
+        "name": "XML Diff",
+        "description": "無料のオンラインXML diffツール — 2つのXMLドキュメントを比較し、構造上の違いをブラウザで即座に検出。データは保存されません。追加、削除、変更された要素、属性、テキストノードをXPath風のパスで検出。"
+      },
+      "escape": {
+        "name": "XML Escape",
+        "description": "無料のオンラインXMLエスケープツール — 特殊文字をブラウザで即座にXMLエンティティに変換。データは保存されません。アンパーサンド、角括弧、引用符、改行をエスケープしてXMLコンテンツと属性で安全に使用可能。"
+      },
+      "to-csv": {
+        "name": "XML to CSV",
+        "description": "無料のオンラインXML to CSVコンバーター — XMLドキュメントから表形式データをブラウザで即座に抽出。データは保存されません。繰り返し要素の自動検出、カスタム区切り文字、XPath風の行選択をサポート。"
+      }
+    },
+    "csv": {
+      "formatter": {
+        "name": "CSV Formatter",
+        "description": "無料のオンラインCSVフォーマッター — CSVデータを設定可能なクォーティングと区切り文字でブラウザで即座に正規化と再フォーマット。データは保存されません。全値クォートモード、値トリミング、区切り文字変換、入力形式の自動検出をサポート。"
+      },
+      "validator": {
+        "name": "CSV Validator",
+        "description": "無料のオンラインCSVバリデーター — CSVの構造、列の一貫性、構文エラーをブラウザで即座にチェック。データは保存されません。列数の不一致、不正な形式のフィールド、行レベルのエラー詳細を検出。"
+      },
+      "to-json": {
+        "name": "CSV to JSON",
+        "description": "無料のオンラインCSV to JSONコンバーター — CSVデータをブラウザでJSONオブジェクトの配列に即座に変換。データは保存されません。数値と論理値の自動検出、カスタム区切り文字、設定可能なインデントをサポート。"
+      },
+      "to-yaml": {
+        "name": "CSV to YAML",
+        "description": "無料のオンラインCSV to YAMLコンバーター — CSVデータをブラウザでYAMLオブジェクトの配列に即座に変換。データは保存されません。数値と論理値の自動検出、カスタムインデント、区切り文字をサポート。"
+      },
+      "to-xml": {
+        "name": "CSV to XML",
+        "description": "無料のオンラインCSV to XMLコンバーター — CSV行をブラウザで設定可能なルート/行名のXML要素に即座に変換。データは保存されません。カスタムインデント、XML宣言、動的型検出をサポート。"
+      },
+      "diff": {
+        "name": "CSV Diff",
+        "description": "無料のオンラインCSV diffツール — 2つのCSVファイルを比較し、ブラウザで行レベルの違いを即座に表示。データは保存されません。キー列マッチング、ヘッダー変更検出、追加/削除/変更行の追跡、カスタム区切り文字をサポート。"
+      },
+      "merge": {
+        "name": "CSV Merge",
+        "description": "無料のオンラインCSVマージツール — 2つのCSVファイルをブラウザで即座に1つに結合。データは保存されません。追記、統合（異なる列）、結合ストラテジーをオプション重複排除とともにサポート。"
+      },
+      "filter": {
+        "name": "CSV Filter",
+        "description": "無料のオンラインCSVフィルター — 列条件によるブラウザでの行フィルタリングを即座に実行。データは保存されません。比較演算子（==、!=、>、<、>=、<=）、文字列マッチング（contains、startsWith、endsWith）、カスタム区切り文字をサポート。"
+      },
+      "sort": {
+        "name": "CSV Sort",
+        "description": "無料のオンラインCSVソーター — 任意の列でブラウザでの行ソートを即座に実行。データは保存されません。昇順/降順、数値ソート、大文字小文字を区別しない比較、カスタム区切り文字をサポート。"
+      },
+      "stats": {
+        "name": "CSV Statistics",
+        "description": "無料のオンラインCSV統計計算ツール — 列の型、最小値/最大値、平均、中央値、ユニークカウントをブラウザで即座に分析。データは保存されません。数値列と文字列列を自動検出し、列ごとの要約統計を計算。"
+      },
+      "viewer": {
+        "name": "CSV Viewer",
+        "description": "無料のオンラインCSVビューアー — CSVデータをブラウザでフォーマットされた整列テーブルとして即座に表示。データは保存されません。行番号、列の配置、行の制限、カスタム区切り文字をサポート。"
+      },
+      "to-sql": {
+        "name": "CSV to SQL",
+        "description": "無料のオンラインCSV to SQLコンバーター — CSVデータからブラウザでCREATE TABLEおよびINSERT文を即座に生成。データは保存されません。列型の自動検出（INTEGER、REAL、VARCHAR、TEXT）、バッチ挿入、カスタムテーブル名をサポート。"
+      },
+      "column-extractor": {
+        "name": "CSV Column Extractor",
+        "description": "無料のオンラインCSV列エクストラクター — 名前またはインデックスでCSVデータから特定の列をブラウザで即座に抽出。データは保存されません。カンマ区切り列リスト、大文字小文字を区別しないマッチング、カスタム区切り文字、クォート形式のフィールドをサポート。"
+      },
+      "deduplicator": {
+        "name": "CSV Deduplicator",
+        "description": "無料のオンラインCSVデデュプリケーター — CSVデータから重複行をブラウザで即座に削除。データは保存されません。キー列マッチング、最初を保持または最後を保持戦略、カスタム区切り文字、クォート形式のフィールドをサポート。"
+      },
+      "to-tsv": {
+        "name": "CSV to TSV",
+        "description": "無料のオンラインCSV to TSVコンバーター — カンマ区切り値をブラウザでタブ区切り値に即座に変換。データは保存されません。埋め込みタブをエスケープ、削除、スペース置換モードで処理。"
+      },
+      "to-markdown": {
+        "name": "CSV to Markdown",
+        "description": "無料のオンラインCSV to Markdownテーブルコンバーター — CSVデータをブラウザでフォーマットされたMarkdownテーブルに即座に変換。データは保存されません。左/中央/右/自動配置、パディング列、カスタム区切り文字をサポート。"
+      }
+    },
+    "toml": {
+      "formatter": {
+        "name": "TOML Formatter",
+        "description": "無料のオンラインTOMLフォーマッター — ぐちゃぐちゃなTOMLを貼り付けて、ブラウザで即座にきれいに正規化された出力を取得。データは保存されません。インラインテーブルの展開、スペースの正規化、構文検証。"
+      },
+      "validator": {
+        "name": "TOML Validator",
+        "description": "無料のオンラインTOMLバリデーター — TOMLの構文エラーをブラウザで即座にチェック。データは保存されません。素早いデバッグのためエラー位置を行番号と列番号で報告。"
+      },
+      "to-json": {
+        "name": "TOML to JSON",
+        "description": "無料のオンラインTOML to JSONコンバーター — TOMLの設定を貼り付けて、ブラウザでJSON出力を即座に取得。データは保存されません。ネストされたテーブル、配列、インラインテーブル、すべてのTOMLデータ型を処理。"
+      },
+      "to-yaml": {
+        "name": "TOML to YAML",
+        "description": "無料のオンラインTOML to YAMLコンバーター — TOMLの設定を貼り付けて、ブラウザでYAML出力を即座に取得。データは保存されません。ネストされたテーブル、テーブルの配列、インラインテーブルを適切なインデントで処理。"
+      }
+    },
+    "data": {
+      "ini-formatter": {
+        "name": "INI Formatter",
+        "description": "無料のオンラインINIフォーマッター — INI設定ファイルをブラウザで即座にフォーマットと整形。データは保存されません。セクション間のスペースを正規化し、キー値のペアを配置、ネストされたセクショングループを処理。"
+      },
+      "ini-validator": {
+        "name": "INI Validator",
+        "description": "無料のオンラインINIバリデーター — INI設定の構文をブラウザで即座に検証。データは保存されません。重複セクション、重複キー、閉じられていないヘッダー、空のキー名を詳細な警告とともに検出。"
+      },
+      "ini-to-json": {
+        "name": "INI to JSON",
+        "description": "無料のオンラインINI to JSONコンバーター — INI設定ファイルをブラウザでJSON形式に即座に変換。データは保存されません。セクション、キー値のペア、ネストされたグループを構造化されたJSON出力に解析。"
+      },
+      "json-to-toml": {
+        "name": "JSON to TOML",
+        "description": "無料のオンラインJSON to TOMLコンバーター — JSONオブジェクトをブラウザでTOML設定形式に即座に変換。データは保存されません。ネストされたJSONオブジェクトをTOMLテーブル、配列、インラインテーブルにマッピング。"
+      },
+      "json-to-ini": {
+        "name": "JSON to INI",
+        "description": "無料のオンラインJSON to INIコンバーター — JSONオブジェクトをブラウザでINI設定形式に即座に変換。データは保存されません。ネストされたJSONオブジェクトをINIセクションとキー値のペアにマッピング。"
+      },
+      "jsonc-stripper": {
+        "name": "JSONC Stripper",
+        "description": "無料のオンラインJSONCコメント削除ツール — JSON with Comments（JSONC）からコメントを削除してブラウザで有効なJSONを即座に取得。データは保存されません。単一行（//）と複数行（/* */）のコメント、末尾のカンマを削除。"
+      },
+      "messagepack-viewer": {
+        "name": "MessagePack Viewer",
+        "description": "無料のオンラインMessagePackビューアー — MessagePackバイナリデータをブラウザでデコードして即座に検査。データは保存されません。Base64エンコードされたmsgpackをJSONにデコード、16進ダンプ、形式型識別、バイト長。"
+      },
+      "protobuf-viewer": {
+        "name": "Protobuf Viewer",
+        "description": "無料のオンラインProtobufビューアー — Protocol Bufferのバイナリワイヤ形式データをブラウザでデコードして即座に検査。データは保存されません。フィールドタグ、ワイヤ型（varint、長さ区切り、fixed32/64）を解析し、可能な値の解釈を表示。"
+      },
+      "avro-viewer": {
+        "name": "Avro Viewer",
+        "description": "無料のオンラインAvroビューアー — Base64エンコードされたAvroバイナリデータをブラウザで即座に検査。データは保存されません。オブジェクトコンテナファイル、ヘッダー、スキーマ、同期マーカー、データブロックを16進プレビューで検出と解析。"
+      },
+      "ndjson-parser": {
+        "name": "NDJSON Parser",
+        "description": "無料のオンラインNDJSONパーサー — 改行区切りJSON（JSONL）をブラウザでJSON配列に即座に変換。データは保存されません。各行を別々のJSON値として解析し、空行または無効行をスキップするオプション。"
+      },
+      "json-to-ndjson": {
+        "name": "JSON to NDJSON",
+        "description": "無料のオンラインJSON to NDJSONコンバーター — JSONの配列をブラウザで改行区切りJSON（JSONL）形式に即座に変換。データは保存されません。各行に1つのJSONオブジェクトを出力、ストリーミング、ログ記録、ビッグデータパイプラインに対応。"
+      },
+      "hjson-to-json": {
+        "name": "HJSON to JSON",
+        "description": "無料のオンラインHJSON to JSONコンバーター — Human JSONを標準JSONにブラウザで即座に変換。データは保存されません。コメント（// /* #）を削除、末尾のカンマ、クォート形式のキー、複数行文字列を処理。"
+      },
+      "json5-to-json": {
+        "name": "JSON5 to JSON",
+        "description": "無料のオンラインJSON5からJSONへのコンバーター — JSON5を標準JSONに即座に変換できます。ブラウザで動作し、データは保存されません。コメント(/、/*)、末尾のカンマ、クォートなしのキー、シングルクォート文字列、16進数に対応しています。"
+      },
+      "avro-schema-formatter": {
+        "name": "Avro Schema Formatter",
+        "description": "無料のオンラインAvroスキーマフォーマッター — Apache Avroスキーマの整形と検証を即座に行えます。ブラウザで動作し、データは保存されません。Avroの型(record、enum、array、map、fixed)を検証し、ネストされたフィールド定義を適切なインデント付きでフォーマットします。"
+      },
+      "protobuf-editor": {
+        "name": "Protobuf Editor",
+        "description": "無料のオンラインProtobufエディター — Protocol Buffer .protoファイルのフォーマットとインデント設定を即座に行えます。ブラウザで動作し、データは保存されません。message、service、enum、oneofブロックを2スペースの一貫したインデントで自動インデントします。"
+      }
+    },
+    "encoding": {
+      "base64-encode": {
+        "name": "Base64 Encode",
+        "description": "無料のオンラインBase64エンコーダー — テキストをBase64形式に即座に変換できます。ブラウザで動作し、データは保存されません。UTF-8テキスト、オプションのURL安全エンコーディング、マルチバイト文字に対応しています。"
+      },
+      "base64-decode": {
+        "name": "Base64 Decode",
+        "description": "無料のオンラインBase64デコーダー — Base64エンコード済み文字列を平文に即座に変換できます。ブラウザで動作し、データは保存されません。標準とURL安全なBase64、パディング処理、UTF-8マルチバイト文字のデコードに対応しています。"
+      },
+      "base64url-encode": {
+        "name": "Base64URL Encode",
+        "description": "無料のオンラインBase64URLエンコーダー — テキストをURL安全なBase64形式にエンコードできます。ブラウザで動作し、データは保存されません。RFC 4648準拠の出力で、+/の代わりに-_を使用し、パディングなし。JWTとURLパラメーターに最適です。"
+      },
+      "base64url-decode": {
+        "name": "Base64URL Decode",
+        "description": "無料のオンラインBase64URLデコーダー — URL安全なBase64エンコード文字列をテキストに即座に変換できます。ブラウザで動作し、データは保存されません。RFC 4648形式の-_文字と欠落したパディングに対応しています。"
+      },
+      "base32-encode-decode": {
+        "name": "Base32 Encode/Decode",
+        "description": "無料のオンラインBase32エンコーダー/デコーダー — テキストをBase32にエンコードまたはBase32をテキストにデコードできます。ブラウザで動作し、データは保存されません。RFC 4648標準とオプションのパディング文字に対応しています。"
+      },
+      "base58-encode-decode": {
+        "name": "Base58 Encode/Decode",
+        "description": "無料のオンラインBase58エンコーダー/デコーダー — Bitcoin形式のBase58エンコーディングでテキストをエンコード/デコードできます。ブラウザで動作し、データは保存されません。標準的なBitcoinアルファベットを使用し、先頭のゼロバイト処理と暗号通貨アドレス形式に対応しています。"
+      },
+      "base62-encode-decode": {
+        "name": "Base62 Encode/Decode",
+        "description": "無料のオンラインBase62エンコーダー/デコーダー — Base62英数字エンコーディングでテキストをエンコード/デコードできます。ブラウザで動作し、データは保存されません。0-9、A-Z、a-zのみを使用したURL安全な出力を生成します。"
+      },
+      "hex-encode": {
+        "name": "Hex Encode",
+        "description": "無料のオンライン16進エンコーダー — テキストを16進バイト表現に即座に変換できます。ブラウザで動作し、データは保存されません。大文字/小文字の出力とカスタマイズ可能なバイト区切り文字(スペース、コロン、ダッシュ)に対応しています。"
+      },
+      "hex-decode": {
+        "name": "Hex Decode",
+        "description": "無料のオンライン16進デコーダー — 16進文字列を読みやすいテキストに即座に変換できます。ブラウザで動作し、データは保存されません。0xプレフィックス、コロン/ダッシュ/スペース区切り、混合ケースの16進入力に対応しています。"
+      },
+      "binary-to-text": {
+        "name": "Binary to Text",
+        "description": "無料のオンラインバイナリからテキストへのコンバーター — 0と1のバイナリ文字列を読みやすいASCII/UTF-8テキストにデコードできます。ブラウザで動作し、データは保存されません。スペース区切り、カンマ区切り、連続バイナリ入力に対応しています。"
+      },
+      "text-to-binary": {
+        "name": "Text to Binary",
+        "description": "無料のオンラインテキストからバイナリへのコンバーター — ASCII/UTF-8テキストをバイナリの0と1に即座に変換できます。ブラウザで動作し、データは保存されません。バイト当たり8ビットのバイナリを出力し、バイト間の区切り文字をカスタマイズできます。"
+      },
+      "octal-converter": {
+        "name": "Octal Converter",
+        "description": "無料のオンライン8進コンバーター — テキストを8進バイト値にエンコードまたは8進をテキストにデコードできます。ブラウザで動作し、データは保存されません。カスタマイズ可能な区切り文字とUTF-8マルチバイト文字に対応しています。"
+      },
+      "url-encode": {
+        "name": "URL Encode",
+        "description": "無料のオンラインURLエンコーダー — 標準的なencodeURIComponent エンコーディングでテキストをパーセントエンコードできます。ブラウザで動作し、データは保存されません。特殊文字、スペース、Unicode、予約文字をエンコードしながら、安全なASCIIは保持します。"
+      },
+      "url-decode": {
+        "name": "URL Decode",
+        "description": "無料のオンラインURLデコーダー — パーセントエンコード(URLエンコード)文字列を読みやすいテキストに即座に変換できます。ブラウザで動作し、データは保存されません。%XX16進数列、UTF-8マルチバイト文字、ネストされたエンコーディングに対応しています。"
+      },
+      "url-encode-full": {
+        "name": "URL Encode (Full)",
+        "description": "無料のオンライン完全URLエンコーダー — 安全なASCII文字を含むすべての文字をパーセントエンコードできます。ブラウザで動作し、データは保存されません。すべてのバイトを%XX形式にエンコードし、難読化または厳密なエンコーディング要件に最適です。"
+      },
+      "url-parser": {
+        "name": "URL Parser",
+        "description": "無料のオンラインURLパーサー — URLをプロトコル、ホスト、パス、クエリパラメーター、ハッシュコンポーネントに分解できます。ブラウザで動作し、データは保存されません。認証、ポート、エンコード文字を含む複雑なURLに対応しています。"
+      },
+      "url-builder": {
+        "name": "URL Builder",
+        "description": "無料のオンラインURLビルダー — プロトコル、ホスト、パス、クエリ、ハッシュなどの個別コンポーネントからURLを構築できます。ブラウザで動作し、データは保存されません。結果のURLを検証し、ポート番号、クエリ文字列、フラグメント識別子に対応しています。"
+      },
+      "query-string-parser": {
+        "name": "Query String Parser",
+        "description": "無料のオンラインクエリ文字列パーサー — URLクエリ文字列を個別のキー値ペアに分解できます。ブラウザで動作し、データは保存されません。先頭の?プレフィックス、完全なURL、パーセントエンコード済みパラメーターに対応しています。"
+      },
+      "query-string-builder": {
+        "name": "Query String Builder",
+        "description": "無料のオンラインクエリ文字列ビルダー — キー値ペアからURLクエリ文字列を構築できます。ブラウザで動作し、データは保存されません。key=valueまたはkey:valueの形式を受け入れ、URLエンコーディングに対応し、オプションの先頭?プレフィックスを追加します。"
+      },
+      "data-url-builder": {
+        "name": "Data URL Builder",
+        "description": "無料のオンラインデータURLビルダー — テキストコンテンツからデータURIを作成できます。ブラウザで動作し、データは保存されません。カスタマイズ可能なMIMEタイプ、Base64またはUTF-8エンコーディング、インラインリソース埋め込み用の設定可能な文字セットに対応しています。"
+      },
+      "unicode-escape": {
+        "name": "Unicode Escape",
+        "description": "無料のオンラインUnicodeエスケーパー — テキストを\\uXXXX Unicode エスケープ表記に即座に変換できます。ブラウザで動作し、データは保存されません。BMP(\\uXXXX)と補助面(\\u{XXXXXX})形式、オプションの全文字エスケーピングに対応しています。"
+      },
+      "unicode-unescape": {
+        "name": "Unicode Unescape",
+        "description": "無料のオンラインUnicodeアンエスケーパー — \\uXXXXと\\u{XXXXXX} Unicodeエスケープシーケンスを読みやすいテキストにデコードできます。ブラウザで動作し、データは保存されません。BMP文字と補助面文字に対応しています。"
+      },
+      "html-entity-encode": {
+        "name": "HTML Entity Encode",
+        "description": "無料のオンラインHTMLエンティティエンコーダー — テキストをHTMLエンティティにエンコードできます。ブラウザで動作し、データは保存されません。名前付き(&amp;)、数値(&#38;)、16進(&#x26;)形式とXSS対策用のオプションの全文字エンコーディングに対応しています。"
+      },
+      "html-entity-decode": {
+        "name": "HTML Entity Decode",
+        "description": "無料のオンラインHTMLエンティティデコーダー — HTMLエンティティを読みやすいテキストに変換できます。ブラウザで動作し、データは保存されません。名前付きエンティティ(&amp;)、数値(&#38;)、16進(&#x26;)形式、特殊記号と通貨文字に対応しています。"
+      },
+      "js-escape": {
+        "name": "JavaScript Escape",
+        "description": "無料のオンラインJavaScript文字列エスケーパー — JavaScriptの文字列リテラルで安全に使用するためにテキストをエスケープできます。ブラウザで動作し、データは保存されません。クォート、バックスラッシュ、改行、タブ、制御文字、Unicodeに対応しています。"
+      },
+      "js-unescape": {
+        "name": "JavaScript Unescape",
+        "description": "無料のオンラインJavaScript文字列アンエスケーパー — JavaScriptエスケープシーケンスを読みやすいテキストに変換できます。ブラウザで動作し、データは保存されません。\\n、\\t、\\uXXXX、\\u{XXXXXX}、\\xHH、すべての標準JSエスケープシーケンスに対応しています。"
+      },
+      "json-escape": {
+        "name": "JSON Escape",
+        "description": "無料のオンラインJSON文字列エスケーパー — JSON文字列内での安全な埋め込み用にテキストをエスケープできます。ブラウザで動作し、データは保存されません。JSON仕様に従って、クォート、バックスラッシュ、改行、タブ、制御文字を適切にエスケープします。"
+      },
+      "json-unescape": {
+        "name": "JSON Unescape",
+        "description": "無料のオンラインJSON文字列アンエスケーパー — JSONエスケープシーケンスを読みやすいテキストに変換できます。ブラウザで動作し、データは保存されません。\\n、\\t、\\\"、\\\\、Unicodeエスケープシーケンスに対応しています。"
+      },
+      "punycode-encode": {
+        "name": "Punycode Encode",
+        "description": "無料のオンラインPunycodeエンコーダー — Unicodeドメイン名とテキストをPunycode(IDN)エンコーディングに即座に変換できます。ブラウザで動作し、データは保存されません。RFC 3492に従い、非ASCII文字を含むラベルにxn--プレフィックスを追加します。"
+      },
+      "punycode-decode": {
+        "name": "Punycode Decode",
+        "description": "無料のオンラインPunycodeデコーダー — Punycodeエンコード済みの国際化ドメイン名(IDN)をUnicodeテキストに即座に変換できます。ブラウザで動作し、データは保存されません。RFC 3492に従い、xn--プレフィックス付きラベルと完全なドメイン名に対応しています。"
+      },
+      "utf8-to-utf16": {
+        "name": "UTF-8 to UTF-16",
+        "description": "無料のオンラインUTF-8からUTF-16へのコンバーター — UTF-8バイトとUTF-16コード単位をテキストで比較できます。ブラウザで動作し、データは保存されません。文字ごとのバイト分解、補助面文字のサロゲートペア、エンコーディングサイズ比較を表示します。"
+      },
+      "utf16-to-utf8": {
+        "name": "UTF-16 to UTF-8",
+        "description": "無料のオンラインUTF-16からUTF-8へのコンバーター — UTF-16コード単位とUTF-8バイトをテキストで比較できます。ブラウザで動作し、データは保存されません。16進値、バイトカウント、UTF-16とUTF-8エンコーディング間のサイズ比較を表示します。"
+      },
+      "latin1-converter": {
+        "name": "Latin-1 Converter",
+        "description": "無料のオンラインLatin-1コンバーター — テキストをISO-8859-1バイト値に変換またはバイト値をテキストに変換できます。ブラウザで動作し、データは保存されません。16進値と10進値を表示し、Latin-1範囲(0-255)外の文字にフラグを立てます。"
+      },
+      "ascii-table": {
+        "name": "ASCII Table",
+        "description": "無料のオンラインASCIIテーブルジェネレーター — 10進値、16進値、8進値、2進値を含むASCII文字コードを表示できます。ブラウザで動作し、データは保存されません。印字可能、制御、完全(0-127)、拡張(0-255)範囲をテーブルまたはコンパクト形式でサポートしています。"
+      },
+      "unicode-lookup": {
+        "name": "Unicode Lookup",
+        "description": "無料のオンラインUnicodeルックアップ — コード点、16進値、10進値、または文字でUnicode文字を検索できます。ブラウザで動作し、データは保存されません。ブロック分類、UTF-8/UTF-16エンコーディング詳細、HTML/CSS/JavaScriptエスケープ形式を表示します。"
+      },
+      "character-inspector": {
+        "name": "Character Inspector",
+        "description": "無料のオンライン文字インスペクター — 各文字のUnicodeコード点、UTF-8バイト、型分類を即座に確認できます。ブラウザで動作し、データは保存されません。制御文字、ゼロ幅文字、絵文字を検出し、詳細なバイトレベル情報を表示します。"
+      },
+      "charset-detector": {
+        "name": "Charset Detector",
+        "description": "無料のオンライン文字セット検出器 — テキストエンコーディング特性と互換性を即座に分析できます。ブラウザで動作し、データは保存されません。ASCII、Latin-1、BMP、補助文字の分布レポートとUTF-8/UTF-16/UTF-32サイズ推定を表示します。"
+      },
+      "bom-remover": {
+        "name": "BOM Remover",
+        "description": "無料のオンラインBOM削除ツール — Byte Order Mark文字をテキストから即座に削除します。ブラウザで動作し、データは保存されません。UTF-8、UTF-16 BE、UTF-16 LEのBOMをテキストの開始位置と中間から検出・削除します。"
+      },
+      "any-base-converter": {
+        "name": "任意進数コンバーター",
+        "description": "無料のオンライン任意進数コンバーター — 任意の進数（2～36進数）間で数値を即座に変換します。ブラウザで動作し、データは保存されません。10進数、16進数、2進数、8進数、および任意の基数（36進数まで）に対応しています。"
+      },
+      "morse-code": {
+        "name": "モールス信号",
+        "description": "無料のオンラインモールス符号コンバーター — テキストをモールス符号の点と線に即座に変換します。ブラウザで動作し、データは保存されません。A～Z、0～9、および一般的な句読点に対応しています。"
+      },
+      "nato-alphabet": {
+        "name": "NATO音韻文字",
+        "description": "無料のオンラインNATO音韻文字コンバーター — NATO/ICAO音韻文字を使用してテキストをスペルアウトします。ブラウザで動作し、データは保存されません。A～Z、0～9を標準的な音韻同等物に変換します。"
+      }
+    },
+    "text": {
+      "case-converter": {
+        "name": "ケースコンバーター",
+        "description": "無料のオンラインケースコンバーター — テキストをcamelCase、PascalCase、snake_case、kebab-caseなど複数の形式に即座に変換します。ブラウザで動作し、データは保存されません。CONSTANT_CASE、dot.case、path/caseを含む11形式に対応しています。"
+      },
+      "slugify": {
+        "name": "Slugify",
+        "description": "無料のオンラインスラッグ化ツール — テキストをURL対応のスラッグに即座に変換します。ブラウザで動作し、データは保存されません。カスタムセパレーター、Unicode/アクセント処理、特殊文字の厳密モードに対応しています。"
+      },
+      "reverser": {
+        "name": "テキスト反転ツール",
+        "description": "無料のオンラインテキスト反転ツール — 文字、単語、または行の順序を即座に反転します。ブラウザで動作し、データは保存されません。3つの反転モードすべてを同時に出力し、Unicodeを適切にサポートしています。"
+      },
+      "line-sorter": {
+        "name": "行ソーター",
+        "description": "無料のオンライン行ソーター — テキストの行をアルファベット順、数値順、自然順、または長さ順に即座にソートします。ブラウザで動作し、データは保存されません。昇順/降順、大文字小文字の区別、空行フィルタリングに対応しています。"
+      },
+      "line-deduplicator": {
+        "name": "行重複排除ツール",
+        "description": "無料のオンライン行重複排除ツール — テキストから重複する行を即座に削除します。ブラウザで動作し、データは保存されません。大文字小文字の区別、空白のトリミング、順序の保持に対応しています。"
+      },
+      "line-shuffler": {
+        "name": "行シャッフラー",
+        "description": "無料のオンライン行シャッフラー — テキストの行をランダムに並び替えます。ブラウザで動作し、データは保存されません。Fisher-Yatesシャッフルを使用し、空行を無視するオプションがあります。"
+      },
+      "line-numberer": {
+        "name": "行番号付与ツール",
+        "description": "無料のオンライン行番号付与ツール — テキストに連続した行番号を即座に追加します。ブラウザで動作し、データは保存されません。開始番号、セパレーター、パディング幅、空行処理をカスタマイズできます。"
+      },
+      "empty-line-remover": {
+        "name": "空行削除ツール",
+        "description": "無料のオンライン空行削除ツール — テキストから空白行を即座に削除します。ブラウザで動作し、データは保存されません。空白のみの行と連続する空行の最大数を制御するオプションがあります。"
+      },
+      "whitespace-cleaner": {
+        "name": "空白クリーナー",
+        "description": "無料のオンライン空白クリーナー — テキストのスペース、タブ、改行を即座に正規化します。ブラウザで動作し、データは保存されません。複数スペースを1つに、タブをスペースに変換し、行をトリミングし、改行を正規化します。"
+      },
+      "trimmer": {
+        "name": "テキストトリマー",
+        "description": "無料のオンラインテキストトリマー — テキストから先頭と末尾の空白を即座に削除します。ブラウザで動作し、データは保存されません。開始/終了/両方のトリミング、行ごとモード、カスタム文字のトリミングに対応しています。"
+      },
+      "find-replace": {
+        "name": "検索と置換",
+        "description": "無料のオンライン検索と置換 — リテラルまたは正規表現パターンでテキストを即座に検索・置換します。ブラウザで動作し、データは保存されません。大文字小文字の区別、完全一致、正規表現置換に対応しています。"
+      },
+      "wrapper": {
+        "name": "テキストラッパー",
+        "description": "無料のオンラインテキストラッパー — テキストを指定された列幅で即座に折り返します。ブラウザで動作し、データは保存されません。行幅（10～200）、単語区切りモード、段落保持をカスタマイズできます。"
+      },
+      "prefix-suffix-adder": {
+        "name": "接頭辞/接尾辞追加ツール",
+        "description": "無料のオンライン接頭辞/接尾辞追加ツール — すべての行の前後にテキストを即座に追加します。ブラウザで動作し、データは保存されません。カスタム接頭辞と接尾辞、空行スキップ、行トリミングに対応しています。"
+      },
+      "column-aligner": {
+        "name": "列揃えツール",
+        "description": "無料のオンライン列揃えツール — デリミタで区切られたテキストを即座に等間隔の列に揃えます。ブラウザで動作し、データは保存されません。カスタムデリミタ、左/右/中央揃え、パディング調整に対応しています。"
+      },
+      "truncator": {
+        "name": "テキストトランケーター",
+        "description": "無料のオンラインテキストトランケーター — テキストを最大長に短縮し、省略記号を付与します。ブラウザで動作し、データは保存されません。単語境界の保持と開始/中央/終了位置のトランケーションをサポートしています。"
+      },
+      "palindrome-checker": {
+        "name": "回文チェッカー",
+        "description": "無料のオンライン回文チェッカー — テキストが前後で同じ意味になるかを即座に検証します。ブラウザで動作し、データは保存されません。大文字小文字、スペース、句読点、数字を無視するオプションがあります。"
+      },
+      "rot13-encoder": {
+        "name": "ROT13エンコーダー",
+        "description": "無料のオンラインROT13エンコーダー/デコーダー — ROT13置換暗号をテキストに即座に適用します。ブラウザで動作し、データは保存されません。ROT13は自己逆元なため、エンコードとデコードは同じ操作です。"
+      },
+      "reading-time": {
+        "name": "読了時間",
+        "description": "無料のオンライン読了時間推定ツール — 任意のテキストを読むのにかかる時間を即座に計算します。ブラウザで動作し、データは保存されません。分単位の単語数を調整でき、画像カウント調整に対応しています。"
+      },
+      "word-frequency": {
+        "name": "単語頻度",
+        "description": "無料のオンライン単語頻度カウンター — テキスト内の単語の出現回数とパーセンテージを即座に数えます。ブラウザで動作し、データは保存されません。大文字小文字の区別、最小単語長、ストップワード除外、結果数制限に対応しています。"
+      },
+      "statistics": {
+        "name": "テキスト統計",
+        "description": "無料のオンラインテキスト統計分析ツール — 文字数、単語数、文数、段落数などを即座に計算します。ブラウザで動作し、データは保存されません。語彙の豊かさ、単語長分布、平均音節数を含みます。"
+      },
+      "readability-score": {
+        "name": "可読性スコア",
+        "description": "無料のオンライン可読性スコア計算ツール — Flesch-Kincaid、Gunning Fog、Coleman-Liau、SMOG、ARIスコアを即座に計算します。ブラウザで動作し、データは保存されません。学年レベル、読みやすさ、単語/文/音節の統計を提供します。"
+      },
+      "letter-frequency": {
+        "name": "文字頻度",
+        "description": "無料のオンライン文字頻度分析ツール — テキスト内の文字の出現回数とパーセンテージを即座に計算します。ブラウザで動作し、データは保存されません。最も一般的な/最も一般的でない文字、母音/子音カウント、大文字小文字の区別モードを表示します。"
+      },
+      "ngram-generator": {
+        "name": "N-gramジェネレーター",
+        "description": "無料のオンラインN-gramジェネレーター — 単語または文字N-gramを頻度カウント付きで即座に生成します。ブラウザで動作し、データは保存されません。N-gramサイズ（1～5）、単語/文字モード、結果数制限をカスタマイズできます。"
+      },
+      "diff": {
+        "name": "テキスト差分",
+        "description": "無料のオンラインテキスト差分ツール — 2つのテキストを比較し、単語レベルの違いを即座にハイライトします。ブラウザで動作し、データは保存されません。空白を無視する比較と大文字小文字を区別しない比較モードをサポートしています。"
+      },
+      "similarity-score": {
+        "name": "類似度スコア",
+        "description": "無料のオンラインテキスト類似度計算ツール — Levenshtein、Jaccard、cosine、Diceアルゴリズムを使用して2つのテキストを即座に比較します。ブラウザで動作し、データは保存されません。距離、類似度パーセンテージ、加重スコアを返します。"
+      },
+      "plagiarism-highlighter": {
+        "name": "テキスト重複検出ツール",
+        "description": "無料のオンラインテキスト重複検出ツール — 2つのテキスト間の一致する部分を即座に検出・ハイライトします。ブラウザで動作し、データは保存されません。共通部分文字列を検出し、最小一致長と大文字小文字の区別をカスタマイズできます。"
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum",
+        "description": "無料のオンラインLorem Ipsumジェネレーター — 単語、文、段落のプレースホルダーテキストを即座に生成します。ブラウザで動作し、データは保存されません。個数、ユニットタイプ、古典的な冒頭をカスタマイズできます。"
+      },
+      "email-extractor": {
+        "name": "メール抽出ツール",
+        "description": "無料のオンラインメール抽出ツール — 任意のテキストからメールアドレスを即座に検出・抽出します。ブラウザで動作し、データは保存されません。ユニークなメール、ドメイン、カウント、オプションの重複排除を返します。"
+      },
+      "url-extractor": {
+        "name": "URL抽出ツール",
+        "description": "無料のオンラインURL抽出ツール — テキストからすべてのウェブリンクを即座に検出・抽出します。ブラウザで動作し、データは保存されません。HTTP/HTTPS URLおよびwwwアドレスを検出し、ユニークなURL、ドメイン、プロトコルを返します。"
+      },
+      "phone-extractor": {
+        "name": "電話番号抽出ツール",
+        "description": "無料のオンライン電話番号抽出ツール — テキストから電話番号を即座に検出・抽出します。ブラウザで動作し、データは保存されません。米国、国際、プレーン数字形式を認識し、オプションの正規化に対応しています。"
+      },
+      "ip-extractor": {
+        "name": "IPアドレス抽出ツール",
+        "description": "無料のオンラインIPアドレス抽出ツール — テキストからIPv4およびIPv6アドレスを即座に検出・抽出します。ブラウザで動作し、データは保存されません。ユニークなIP、カウント、IPv4とIPv6を分離して返します。"
+      },
+      "hashtag-extractor": {
+        "name": "ハッシュタグ抽出ツール",
+        "description": "無料のオンラインハッシュタグ抽出ツール — ソーシャルメディアテキストからハッシュタグを即座に検出・抽出します。ブラウザで動作し、データは保存されません。ユニークなハッシュタグ、#なしのタグ、総カウントを返します。"
+      },
+      "mention-extractor": {
+        "name": "メンション抽出ツール",
+        "description": "無料のオンラインメンション抽出ツール — ソーシャルメディアテキストから@メンションを即座に検出・抽出します。ブラウザで動作し、データは保存されません。ユニークなメンション、@なしのユーザー名、総カウントを返します。"
+      },
+      "number-extractor": {
+        "name": "数値抽出ツール",
+        "description": "無料のオンライン数値抽出ツール — テキストからすべての数値を即座に検出・抽出します。ブラウザで動作し、データは保存されません。整数、小数、負の数、パーセンテージをサポートし、合計、平均、最小値、最大値を計算します。"
+      },
+      "date-extractor": {
+        "name": "日付抽出ツール",
+        "description": "無料のオンライン日付抽出ツール — 任意のテキストから日付を即座に検出・解析します。ブラウザで動作し、データは保存されません。ISO、米国、ヨーロッパ、記述形式、相対日付形式を認識しています。"
+      },
+      "keyword-extractor": {
+        "name": "キーワード抽出ツール",
+        "description": "無料のオンラインキーワード抽出ツール — テキストから頻度ベースのスコアリングを使用して重要なキーワードを即座に特定します。ブラウザで動作し、データは保存されません。ストップワードフィルタリング、最小単語長、結果数制限をカスタマイズできます。"
+      },
+      "language-detector": {
+        "name": "言語検出ツール",
+        "description": "無料のオンライン言語検出器 — テキストの言語をトライグラム分析を使用してブラウザで即座に識別します。データは保存されません。英語、スペイン語、フランス語、ドイツ語、イタリア語、ポルトガル語、オランダ語、ロシア語、中国語、日本語に対応。"
+      },
+      "anagram-generator": {
+        "name": "文字シャッフラー",
+        "description": "無料のオンライン文字シャッフラー — 単語またはフレーズの文字をランダムに並べ替えてブラウザで即座に生成します。データは保存されません。設定可能な上限と最小長で順列を生成。"
+      },
+      "semantic-diff": {
+        "name": "単語重複比較",
+        "description": "無料のオンライン単語重複比較 — ジャッカード類似度を使用して2つのテキスト間の語彙の重複をブラウザで即座に比較します。データは保存されません。共通単語、各テキストの固有単語、類似度パーセンテージを表示。"
+      },
+      "fake-name": {
+        "name": "ダミー名前ジェネレータ",
+        "description": "無料のオンラインダミー名前ジェネレータ — テスト用のランダムな名前とメールアドレスをブラウザで即座に生成します。データは保存されません。名、姓、フルネーム、メールアドレスを一括生成。"
+      },
+      "fake-address": {
+        "name": "ダミー住所ジェネレータ",
+        "description": "無料のオンラインダミー住所ジェネレータ — テスト用のランダムな米国住所をブラウザで即座に生成します。データは保存されません。住所、市区町村、州、郵便番号の組み合わせを生成。"
+      },
+      "fake-company": {
+        "name": "ダミー企業ジェネレータ",
+        "description": "無料のオンラインダミー企業ジェネレータ — テスト用の業種とキャッチフレーズ付きのランダムな企業名をブラウザで即座に生成します。データは保存されません。企業名、業種、キャッチフレーズを生成。"
+      },
+      "soundex-generator": {
+        "name": "Soundexジェネレータ",
+        "description": "無料のオンラインSoundexジェネレータ — 単語のSoundex音韻符号をブラウザで即座に計算します。データは保存されません。似た発音の名前マッチングと音韻検索に有用。"
+      },
+      "metaphone-generator": {
+        "name": "Metaphoneジェネレータ",
+        "description": "無料のオンラインMetaphoneジェネレータ — 単語のMetaphone音韻符号をブラウザで即座に計算します。データは保存されません。ファジー名前マッチングと音韻検索インデックスに有用。"
+      }
+    },
+    "markdown": {
+      "to-html": {
+        "name": "MarkdownからHTML",
+        "description": "無料のオンラインMarkdownからHTML変換ツール — GitHub Flavored Markdown対応のMarkdownをサニタイズされたHTMLにブラウザで即座にレンダリングします。データは保存されません。GFMテーブル、タスクリスト、打消し線、自動リンク、オプションの改行変換に対応。"
+      },
+      "from-html": {
+        "name": "HTMLからMarkdown",
+        "description": "無料のオンラインHTMLからMarkdown変換ツール — HTMLタグ、リスト、リンク、コードブロックをMarkdownにブラウザで即座に変換します。データは保存されません。ATX/setextヘッディング形式、設定可能な箇条書きマーカー、フェンス/インデント付きコードブロックに対応。"
+      },
+      "formatter": {
+        "name": "Markdownフォーマッタ",
+        "description": "無料のオンラインMarkdownフォーマッタ — 一貫した間隔、適切なヘッディング構造、トリミングされた空白でMarkdownを美化および正規化します。データは保存されません。ヘッディングとコードブロックの周りに空白行を確保し、過剰な空白行を削除。"
+      },
+      "toc-generator": {
+        "name": "Markdown目次ジェネレータ",
+        "description": "無料のオンラインMarkdown目次ジェネレータ — Markdownのヘッディングからアンカーリンク付きの目次をブラウザで即座に生成します。データは保存されません。設定可能な最大深さ、順序付き/順序なしリスト、ネストされたドキュメント用のリンクプレフィックスに対応。"
+      },
+      "link-extractor": {
+        "name": "Markdownリンク抽出ツール",
+        "description": "無料のオンラインMarkdownリンク抽出ツール — インラインリンク、参照リンク、自動リンクを含むMarkdownドキュメントのすべてのハイパーリンクをブラウザで即座に検出・一覧表示します。データは保存されません。リンクテキスト、URL、ユニークなURL、ユニークなドメインをレポート。"
+      },
+      "image-extractor": {
+        "name": "Markdown画像抽出ツール",
+        "description": "無料のオンラインMarkdown画像抽出ツール — インライン画像、参照画像、HTMLのimgタグを含むMarkdownドキュメントのすべての画像参照をブラウザで即座に検出・一覧表示します。データは保存されません。代替テキスト、ソースURL、ユニークな画像ソースをレポート。"
+      },
+      "table-generator": {
+        "name": "Markdownテーブルジェネレータ",
+        "description": "無料のオンラインMarkdownテーブルジェネレータ — ヘッダーとデータ行からフォーマットされたMarkdownテーブルをブラウザで即座に作成します。データは保存されません。左、中央、右の列配置に対応し、適切なセパレータ行とパイプエスケープに対応。"
+      },
+      "table-formatter": {
+        "name": "Markdownテーブルフォーマッタ",
+        "description": "無料のオンラインMarkdownテーブルフォーマッタ — 既存のMarkdownテーブルの列を配置し、パディングを正規化し、左/中央/右配置をブラウザで即座に設定します。データは保存されません。列幅を自動計算し、セパレータ行をフォーマット。"
+      },
+      "to-plain-text": {
+        "name": "Markdownからプレーンテキスト",
+        "description": "無料のオンラインMarkdownからプレーンテキスト変換ツール — ヘッダー、太字、斜体、リンク、画像、コードブロック、リスト、テーブルを含むすべてのMarkdownフォーマットを取り除き、ブラウザで即座にクリーンなプレーンテキストを取得します。データは保存されません。文字数と単語数をレポート。"
+      },
+      "escaper": {
+        "name": "Markdownエスケープツール",
+        "description": "無料のオンラインMarkdownエスケープツール — アスタリスク、括弧、パイプなどの特殊Markdown文字をテキスト内でブラウザで即座にエスケープします。データは保存されません。バックスラッシュ付きのすべてのMarkdown構文文字をエスケープすることで、誤ったフォーマットを防止。"
+      },
+      "frontmatter-editor": {
+        "name": "フロントマターエディタ",
+        "description": "無料のオンラインフロントマターエディタ — Markdownドキュメント内のYAMLフロントマターフィールドをブラウザで即座に解析、追加、更新、削除します。データは保存されません。既存のフロントマターを読み取り、フィールド更新を適用し、ドキュメントを再構築。"
+      },
+      "to-slack": {
+        "name": "MarkdownからSlack",
+        "description": "無料のオンラインMarkdownからSlack変換ツール — Markdownのヘッディング、太字、リンク、画像、打消し線をSlack mrkdwn形式にブラウザで即座に変換します。データは保存されません。ヘッダーを太字に、リンクをSlack角括弧構文に変換し、コードブロックは保持。"
+      },
+      "from-slack": {
+        "name": "SlackからMarkdown",
+        "description": "無料のオンラインSlackからMarkdown変換ツール — Slack mrkdwnの太字、斜体、リンク、メンション、チャンネル、打消し線を標準Markdownにブラウザで即座に変換します。データは保存されません。変換時にコードブロックとインラインコードを保持。"
+      },
+      "to-jira": {
+        "name": "MarkdownからJira",
+        "description": "無料のオンラインMarkdownからJira変換ツール — Markdownのヘッディング、太字、斜体、コードブロック、リンク、リスト、ブロッククォートをJira wikiマークアップにブラウザで即座に変換します。データは保存されません。ネストされたリスト、打消し線、画像、水平線に対応。"
+      },
+      "from-jira": {
+        "name": "JiraからMarkdown",
+        "description": "無料のオンラインJiraからMarkdown変換ツール — Jira wikiマークアップのヘッダー、太字、斜体、コードブロック、リンク、リストをMarkdownにブラウザで即座に変換します。データは保存されません。ネストされたリスト、ブロッククォート、画像、打消し線に対応。"
+      },
+      "to-discord": {
+        "name": "MarkdownからDiscord",
+        "description": "無料のオンラインMarkdownからDiscord変換ツール — MarkdownをDiscord互換形式に変換し、ヘッダーを太字に、画像URLを抽出し、ISO タイムスタンプをDiscordタイムスタンプに変換します。データは保存されません。コードブロックを保持し、メンション形式に対応。"
+      },
+      "to-bbcode": {
+        "name": "MarkdownからBBCode",
+        "description": "無料のオンラインMarkdownからBBCode変換ツール — Markdownのヘッディング、太字、斜体、リンク、画像、リスト、コードブロックをBBCodeフォーラム形式にブラウザで即座に変換します。データは保存されません。設定可能なヘッダーサイズ、ブロッククォート、打消し線に対応。"
+      },
+      "readme-generator": {
+        "name": "READMEジェネレータ",
+        "description": "無料のオンラインREADMEジェネレータ — インストール、使用方法、API、貢献、ライセンスセクション付きのREADME.mdテンプレートをブラウザで即座に作成します。データは保存されません。プロジェクト名からインポートステートメントとnpm installコマンドを自動生成。"
+      },
+      "license-picker": {
+        "name": "ライセンスピッカー",
+        "description": "無料のオンラインライセンステキストジェネレータ — MIT、Apache-2.0、GPL-3.0、BSD-3-Clause、ISCのライセンステキストを名前と年付きでブラウザで即座に生成します。データは保存されません。SPDX識別子付きの完全なライセンステキストを出力。"
+      },
+      "changelog-generator": {
+        "name": "Changelogジェネレータ",
+        "description": "無料のオンラインChangelogジェネレータ — Keep a Changelog形式のバージョンエントリをブラウザで即座に作成します。データは保存されません。Added、Changed、Deprecated、Removed、Fixed、Securityカテゴリに対応し、オプションのバージョン比較リンクに対応。"
+      },
+      "contributing-guide": {
+        "name": "貢献ガイド",
+        "description": "無料のオンライン貢献ガイドジェネレータ — オープンソースプロジェクト用のCONTRIBUTING.mdファイルをブラウザで即座に作成します。データは保存されません。バグ報告、機能リクエスト、プルリクエスト、コードスタイルガイドラインのセクションを含む。"
+      },
+      "linter": {
+        "name": "Markdownリンタ",
+        "description": "無料のオンラインMarkdownリンタ — 末尾の空白、ヘッディング前の空白の不在、過剰な空白行、生URL、タブなどのスタイルの問題についてMarkdownをチェックします。データは保存されません。行番号とルール名付きのエラーと警告をレポート。"
+      },
+      "badge-generator": {
+        "name": "バッジジェネレータ",
+        "description": "無料のオンラインバッジジェネレータ — npm、GitHub、ライセンス、ビルドステータス、カスタムバッジのためのshields.ioバッジMarkdownをブラウザで即座に作成します。データは保存されません。flat、square、plastic、for-the-badge、socialスタイルに対応。"
+      },
+      "issue-template": {
+        "name": "Issue テンプレートジェネレータ",
+        "description": "無料のオンラインGitHub Issue テンプレートジェネレータ — バグ報告、機能リクエスト、質問、空白Issueテンプレートをブラウザで即座に作成します。データは保存されません。ラベルと担当者フィールド付きのYAMLフロントマターを生成。"
+      },
+      "pr-template": {
+        "name": "PRテンプレートジェネレータ",
+        "description": "無料のオンラインPRテンプレートジェネレータ — 標準、ミニマル、詳細スタイルのGitHubプルリクエストテンプレートをブラウザで即座に作成します。データは保存されません。チェックリスト、変更の種類オプション、テストセクションを含む。"
+      },
+      "code-of-conduct": {
+        "name": "行動規範ジェネレータ",
+        "description": "無料のオンライン行動規範ジェネレータ — Contributor Covenant、Citizen Code、またはミニマル行動規範ドキュメントをブラウザで即座に作成します。データは保存されません。プロジェクト名と連絡先メールアドレスでカスタマイズ可能。"
+      },
+      "link-checker": {
+        "name": "Markdownリンクチェッカー",
+        "description": "無料のオンラインMarkdownリンクチェッカー — 空のURL、未解決のテンプレート変数、エンコードされていない空白などの一般的な問題についてMarkdownドキュメント内のすべてのリンクを検証します。データは保存されません。リンクをタイプ（URL、アンカー、相対、メール）で分類し、検証サマリーをレポート。"
+      },
+      "to-confluence": {
+        "name": "MarkdownからConfluence",
+        "description": "無料のオンラインMarkdownからConfluence変換ツール — Markdownのヘッディング、太字、斜体、コードブロック、リンク、リスト、テーブルをConfluence wikiマークアップにブラウザで即座に変換します。データは保存されません。タスクリスト、打消し線、水平線、画像に対応。"
+      },
+      "rst-to-md": {
+        "name": "RSTからMarkdown",
+        "description": "無料のオンラインreStructuredTextからMarkdown変換ツール — RSTのタイトル、インライン形式、コードブロック、ディレクティブ、リンク、リストをMarkdownにブラウザで即座に変換します。データは保存されません。Sphinxロール、注釈、画像、定義リストに対応。"
+      },
+      "asciidoc-to-md": {
+        "name": "AsciiDocからMarkdown",
+        "description": "無料のオンラインAsciiDocからMarkdown変換ツール — AsciiDocのヘッダー、形式、リンク、リスト、コードブロックをMarkdownにブラウザで即座に変換します。データは保存されません。注釈、ブロッククォート、テーブル、定義リストに対応。"
+      },
+      "textile-to-md": {
+        "name": "TextileからMarkdown",
+        "description": "無料のオンラインTextileからMarkdown変換ツール — Textileのヘッダー、太字、斜体、打消し線、リンク、リスト、ブロッククォート、テーブルをMarkdownにブラウザで即座に変換します。データは保存されません。脚注、コードブロック、ネストされたリストレベルに対応。"
+      }
+    },
+    "api": {
+      "curl-converter": {
+        "name": "cURLコンバーター",
+        "description": "無料のオンラインcURLコンバーター — cURLコマンドをfetch、axios、Python requests、Go、Rust、PHPコードにブラウザで即座に変換します。データは保存されません。ヘッダー、認証、リクエストボディ、一般的なcURLフラグをすべて解析。"
+      },
+      "openapi-viewer": {
+        "name": "OpenAPIビューアー",
+        "description": "無料のオンラインOpenAPIビューア — OpenAPIおよびSwagger仕様をブラウザで人間が読める形式で表示し、エンドポイントの概要、サーバー情報、スキーマリストを即座に確認できます。データは保存されません。"
+      },
+      "openapi-validator": {
+        "name": "OpenAPIバリデータ",
+        "description": "無料のオンラインOpenAPIバリデータ — OpenAPIおよびSwagger仕様の構造エラー、欠落フィールド、ベストプラクティス警告をブラウザで即座にチェックできます。データは保存されません。パスカウント、操作カウント、スキーマ統計をレポートします。"
+      },
+      "openapi-formatter": {
+        "name": "OpenAPIフォーマッタ",
+        "description": "無料のオンラインOpenAPIフォーマッタ — OpenAPI仕様JSONを整形し、一貫した2スペースインデントでブラウザで即座にフォーマットできます。データは保存されません。JSON構文をバリデートし、きれいにフォーマットされた仕様を出力します。"
+      },
+      "openapi-to-json": {
+        "name": "OpenAPI YAML to JSON",
+        "description": "無料のオンラインOpenAPI YAML to JSONコンバータ — OpenAPI仕様をYAMLからJSON形式に変換し、ブラウザで即座に処理できます。データは保存されません。ネストされたオブジェクト、配列、引用符で囲まれた文字列を含む標準YAML構文を解析します。"
+      },
+      "json-to-openapi": {
+        "name": "JSON to OpenAPI YAML",
+        "description": "無料のオンラインOpenAPI JSON to YAMLコンバータ — OpenAPI仕様をJSONからYAML形式に変換し、ブラウザで即座に処理できます。データは保存されません。パス、スキーマ、レスポンス、すべてのOpenAPI 3.x構造を保持します。"
+      },
+      "openapi-diff": {
+        "name": "OpenAPI Diff",
+        "description": "無料のオンラインOpenAPI diffツール — 2つのOpenAPI仕様を並べて比較し、追加、削除、変更されたパス、スキーマ、プロパティをブラウザで即座に検出できます。データは保存されません。"
+      },
+      "openapi-mock": {
+        "name": "OpenAPIモックジェネレータ",
+        "description": "無料のオンラインOpenAPIモックレスポンスジェネレータ — OpenAPI仕様のパスとスキーマから現実的なモックJSONレスポンスをブラウザで即座に作成できます。データは保存されません。$ref参照を解決し、すべてのデータ型とフォーマットをサポートします。"
+      },
+      "swagger2-to-openapi3": {
+        "name": "Swagger 2.0 to OpenAPI 3.0",
+        "description": "無料のオンラインSwagger 2.0 to OpenAPI 3.0コンバータ — Swagger仕様をOpenAPI 3.0.3形式にアップグレードし、ブラウザで即座に処理できます。データは保存されません。パス、定義をコンポーネントに、セキュリティスキーム、bodyパラメータをrequestBodyに、produces/consumesをコンテンツタイプに変換します。"
+      },
+      "openapi-merger": {
+        "name": "OpenAPIマージャー",
+        "description": "無料のオンラインOpenAPIマージャー — 2つのOpenAPI仕様を1つの統合仕様に組み合わせ、ブラウザで即座に処理できます。データは保存されません。パス、スキーマ、サーバー、タグ、セキュリティ定義を重複排除でマージします。"
+      },
+      "openapi-splitter": {
+        "name": "OpenAPIスプリッター",
+        "description": "無料のオンラインOpenAPIスプリッター — 大きなOpenAPI仕様をタグまたはパスプレフィックスでグループ化した小さな仕様に分割し、ブラウザで即座に処理できます。データは保存されません。各スプリットでコンポーネント、サーバー、仕様メタデータを保持します。"
+      },
+      "json-schema-to-openapi": {
+        "name": "JSON Schema to OpenAPI",
+        "description": "無料のオンラインJSON Schema to OpenAPIコンバータ — JSON Schema定義をOpenAPI 3.0コンポーネントスキーマにラップし、ブラウザで即座に処理できます。データは保存されません。型、必須フィールド、フォーマット、ネストされたオブジェクト構造を保持します。"
+      },
+      "openapi-to-json-schema": {
+        "name": "OpenAPI to JSON Schema",
+        "description": "無料のオンラインOpenAPI to JSON Schemaコンバータ — OpenAPI仕様からコンポーネントスキーマを抽出し、標準JSON Schema (draft-07) に変換し、ブラウザで即座に処理できます。データは保存されません。$ref、nullable、ネストされた構造を処理します。"
+      },
+      "graphql-schema-viewer": {
+        "name": "GraphQL Schema Viewer",
+        "description": "無料のオンラインGraphQL Schemaビューア — GraphQL SDL定義を適切なインデント付きでブラウザで即座にフォーマットして表示できます。データは保存されません。型、インターフェース、enum、union、ネストされたフィールド定義を処理します。"
+      },
+      "request-builder": {
+        "name": "HTTPリクエストビルダー",
+        "description": "無料のオンラインHTTPリクエストビルダー — fetch、cURL、HTTPie、wgetフォーマットでHTTPリクエストをカスタムヘッダ、ボディ、クエリパラメータ付きでブラウザで即座に構築できます。データは保存されません。"
+      },
+      "response-formatter": {
+        "name": "APIレスポンスフォーマッタ",
+        "description": "無料のオンラインAPIレスポンスフォーマッタ — JSONおよびXML APIレスポンスを設定可能なインデント付き、オプションのキーソート機能でブラウザで即座に整形できます。データは保存されません。"
+      },
+      "graphql-formatter-api": {
+        "name": "GraphQLフォーマッタ",
+        "description": "無料のオンラインGraphQLフォーマッタ — GraphQLクエリおよびスキーマ定義をブラウザで即座に整形してインデントできます。データは保存されません。ネストされたフィールド、引数、型定義を設定可能なインデント付きでフォーマットします。"
+      },
+      "graphql-to-typescript": {
+        "name": "GraphQL to TypeScript",
+        "description": "無料のオンラインGraphQL to TypeScriptコンバータ — GraphQLスキーマ定義からTypeScriptインターフェースを生成し、ブラウザで即座に処理できます。データは保存されません。スカラー型をマップし、nullability を処理し、export と readonly オプションをサポートします。"
+      },
+      "rest-to-graphql": {
+        "name": "REST to GraphQL",
+        "description": "無料のオンラインREST to GraphQLコンバータ — REST APIエンドポイント説明からGraphQLスキーマ定義を生成し、ブラウザで即座に処理できます。データは保存されません。HTTPメソッドとレスポンス形式から型、クエリ、ミューテーション、入力型を推論します。"
+      },
+      "webhook-curl-generator": {
+        "name": "Webhook cURLジェネレータ",
+        "description": "無料のオンラインWebhook cURLジェネレータ — カスタムペイロード、ヘッダ、コンテンツタイプ付きのWebhookテスト用cURLコマンドをブラウザで即座に作成できます。データは保存されません。webhook.site、requestbin、ngrokhで動作します。"
+      },
+      "api-mock-generator": {
+        "name": "APIモックデータジェネレータ",
+        "description": "無料のオンラインAPIモックデータジェネレータ — JSON SchemaまたはサンプルデータからリアルなモックJSONデータをブラウザで即座に作成できます。データは保存されません。サンプルデータから型を推論し、ランダム化された値で複数レコードを生成します。"
+      },
+      "postman-to-curl": {
+        "name": "Postman to cURL",
+        "description": "無料のオンラインPostman to cURLコンバータ — PostmanコレクションリクエストをcURLコマンドに変換し、ブラウザで即座に処理できます。データは保存されません。ヘッダ、ボディ、クエリパラメータ、ネストされたフォルダ付きv2.0/v2.1コレクションをサポートします。"
+      },
+      "openapi-to-typescript": {
+        "name": "OpenAPI to TypeScript",
+        "description": "無料のオンラインOpenAPI to TypeScriptコンバータ — OpenAPI仕様からTypeScriptインターフェースとオプションのクライアント関数シグネチャを生成し、ブラウザで即座に処理できます。データは保存されません。スキーマをマップし、必須フィールドを処理し、$ref解決をサポートします。"
+      },
+      "graphql-schema-generator": {
+        "name": "GraphQL Schema Generator",
+        "description": "無料のオンラインGraphQL Schemaジェネレータ — JSONデータからGraphQL型定義をブラウザで即座に作成できます。データは保存されません。サンプルデータから型を推論し、オプションでQuery およびMutation ルート型を生成します。"
+      },
+      "gitignore-generator": {
+        "name": ".gitignoreジェネレータ",
+        "description": "無料のオンライン.gitignoreジェネレータ — Node.js、Python、Java、Go、Rust、Rubyなど向けの.gitignoreファイルをブラウザで即座に作成できます。データは保存されません。IDEスペシフィックルール、OSファイル、.envとログファイルなどの一般的なエキストラを含みます。"
+      },
+      "aws-arn-parser": {
+        "name": "AWS ARNパーサー",
+        "description": "無料のオンラインAWS ARNパーサー — Amazon Resource Namesをパーティション、サービス、リージョン、アカウント、リソースコンポーネントに分解し、ブラウザで即座に処理できます。データは保存されません。IAM、S3、Lambda、EC2、すべてのAWSサービスARNを解析します。"
+      },
+      "cloud-resource-namer": {
+        "name": "クラウドリソースネーマー",
+        "description": "無料のオンラインクラウドリソース名ジェネレータ — AWS、GCP、Azure向けに適切にフォーマットされたリソース名をブラウザで即座に作成できます。データは保存されません。バケット、VM、データベース、キューなど、プロバイダー固有の命名規則に従います。"
+      }
+    },
+    "code": {
+      "js-formatter": {
+        "name": "JavaScriptフォーマッタ",
+        "description": "無料のオンラインJavaScriptフォーマッタ — JavaScriptコードをブレースとブラケット構造に基づいてブラウザで即座にフォーマットしてインデントできます。データは保存されません。設定可能なインデントサイズ付きの基本フォーマッタです。本番環境ではPrettierを検討してください。"
+      },
+      "graphql-formatter": {
+        "name": "GraphQLフォーマッタ",
+        "description": "無料のオンラインGraphQLフォーマッタ — GraphQLクエリを適切なインデント付きでブラウザで即座にフォーマットして整形できます。データは保存されません。クエリ、ミューテーション、フラグメント向けに設定可能なインデントサイズをサポートします。"
+      },
+      "md-formatter": {
+        "name": "Markdownフォーマッタ",
+        "description": "無料のオンラインMarkdownフォーマッタ — スペースを正規化し、見出しとリストの前に空行を追加し、末尾の空白をトリムし、構造を修正し、ブラウザで即座に処理できます。データは保存されません。"
+      },
+      "python-formatter": {
+        "name": "Pythonフォーマッタ",
+        "description": "無料のオンラインPythonフォーマッタ — Pythonコードを一貫したインデント付きでブラウザで即座にフォーマットできます。データは保存されません。def、class、if、for、while、tryブロック向けに設定可能なインデントサイズ付きの基本フォーマッタです。"
+      },
+      "js-minify": {
+        "name": "JavaScriptミニファイア",
+        "description": "無料のオンラインJavaScriptミニファイア — 空白とコメントを削除してJavaScriptコードを圧縮し、ブラウザで即座に処理できます。データは保存されません。元のサイズと圧縮後のサイズを削減率付きで表示します。"
+      },
+      "json-minify-code": {
+        "name": "JSONミニファイア",
+        "description": "無料のオンラインJSONミニファイア — すべての空白とフォーマットを削除してJSONを圧縮し、ブラウザで即座に処理できます。データは保存されません。元のサイズと圧縮後のサイズを削減率付きで表示します。"
+      },
+      "xml-minify-code": {
+        "name": "XMLミニファイア",
+        "description": "無料のオンラインXMLミニファイア — 空白、コメント、不要なフォーマットを削除してXMLを圧縮し、ブラウザで即座に処理できます。データは保存されません。元のサイズと圧縮後のサイズを削減率付きで表示します。"
+      },
+      "graphql-minify": {
+        "name": "GraphQLミニファイア",
+        "description": "無料のオンラインGraphQLミニファイア — 空白と不要なフォーマットを削除してGraphQLクエリを圧縮し、ブラウザで即座に処理できます。データは保存されません。元のサイズと圧縮後のサイズを削減率付きで表示します。"
+      },
+      "ts-minify": {
+        "name": "TypeScriptミニファイア",
+        "description": "無料のオンラインTypeScriptミニファイア — 型アノテーション、インターフェース、ジェネリクス、空白を削除して圧縮されたJavaScriptを生成し、ブラウザで即座に処理できます。データは保存されません。元のサイズと圧縮後のサイズを削減率付きで表示します。"
+      },
+      "batch-minify": {
+        "name": "バッチミニファイア",
+        "description": "無料のオンラインバッチコードミニファイア — JavaScriptおよびCSS、HTML、JSON、XML、SQLコードを自動検出して圧縮し、ブラウザで即座に処理できます。データは保存されません。元のサイズと圧縮後のサイズを削減率付きで表示します。"
+      },
+      "js-obfuscator": {
+        "name": "JavaScriptオブファスケータ",
+        "description": "無料のオンラインJavaScriptオブファスケータ — 変数と関数を短い識別子に名前変更し、コメントを削除し、空白を折り畳み、ブラウザで即座に処理できます。データは保存されません。変数名変更を経由した単純なオブファスケーションです。"
+      },
+      "code-complexity": {
+        "name": "コード複雑度アナライザー",
+        "description": "無料のオンラインコード複雑度アナライザー — JavaScriptおよびTypeScript関数の循環複雑度をブラウザで即座に計算できます。データは保存されません。関数ごとの内訳とリスクレベル (シンプル、中程度、複雑) をレポートします。"
+      },
+      "syntax-highlighter": {
+        "name": "シンタックスハイライター",
+        "description": "無料のオンラインシンタックスハイライター — JavaScript、TypeScript、HTML、CSS、Python、SQLコードをシンタックスハイライト付きHTMLに変換し、ダークまたはライトテーマでブラウザで即座に処理できます。データは保存されません。"
+      },
+      "line-counter": {
+        "name": "行カウンター",
+        "description": "無料のオンライン行カウンター — 総行数、コード行数、コメント行数、空行数をパーセント内訳付きでブラウザで即座にカウントできます。データは保存されません。言語全体で単一行とブロックコメントを検出します。"
+      },
+      "code-to-image": {
+        "name": "コード to イメージ",
+        "description": "無料のオンラインコード・ツー・イメージ変換ツール — ダーク、ライト、またはMonokaiテーマで、スタイル設定されたHTMLコードカードをブラウザで即座に生成できます。データは保存されません。行番号、ウィンドウクローム、カスタマイズ可能なフォントサイズとパディングを含みます。"
+      },
+      "comment-stripper": {
+        "name": "コメント削除ツール",
+        "description": "無料のオンラインコメント削除ツール — JavaScript、CSS、HTML、Python、SQLコードから単一行コメント、ブロックコメント、ドキュメントコメントをブラウザで即座に削除できます。データは保存されません。自動検出とJSDocの保持に対応しています。"
+      },
+      "dead-code-finder": {
+        "name": "デッドコード検出ツール",
+        "description": "無料のオンラインデッドコード検出ツール — JavaScriptおよびTypeScriptコード内の使用されていない可能性のある変数と関数をブラウザで即座に検出できます。データは保存されません。静的解析を使用して、1回のみ参照される宣言を識別します。"
+      },
+      "eslint-config-generator": {
+        "name": "ESLint設定ジェネレータ",
+        "description": "無料のオンラインESLint設定ジェネレータ — TypeScript、React、Vue、Prettier統合、およびルール厳密度プリセットを備えたフラットまたはレガシーESLint設定をブラウザで即座に作成できます。データは保存されません。"
+      },
+      "prettier-config-generator": {
+        "name": "Prettier設定ジェネレータ",
+        "description": "無料のオンラインPrettier設定ジェネレータ — 印字幅、クォート、セミコロン、末尾カンマなどを含むPrettier設定をブラウザで即座に作成できます。データは保存されません。JSON、JSモジュール、またはYAML形式で出力されます。"
+      },
+      "editorconfig-generator": {
+        "name": ".editorconfig ジェネレータ",
+        "description": "無料のオンライン.editorconfig ジェネレータ — インデントスタイル、文字セット、行末、およびファイルタイプ固有のルールを含むEditorConfigファイルをブラウザで即座に作成できます。データは保存されません。MarkdownとMakefileのオーバーライドを含みます。"
+      },
+      "tsconfig-generator": {
+        "name": "tsconfig.json ジェネレータ",
+        "description": "無料のオンラインtsconfig.json ジェネレータ — Next.js、React、Node.js、またはライブラリプロジェクト向けのTypeScriptコンパイラ設定を、厳密モード、パスエイリアス、およびソースマップを使用してブラウザで即座に作成できます。データは保存されません。"
+      },
+      "babel-config-generator": {
+        "name": "Babel設定ジェネレータ",
+        "description": "無料のオンラインBabel設定ジェネレータ — TypeScript、React、およびデコレータサポートを含むブラウザ、Node.js、またはユニバーサル環境向けBabel設定をブラウザで即座に作成できます。データは保存されません。JSONまたはJSモジュール形式で出力されます。"
+      },
+      "env-generator": {
+        "name": ".env ジェネレータ",
+        "description": "無料のオンライン.env ファイルジェネレータ — Next.js、React、Node.js、Django、Rails、Laravel、Springの環境変数テンプレートをブラウザで即座に作成できます。データは保存されません。データベース、認証、メール、ストレージ、ロギングプリセットを含みます。"
+      },
+      "env-parser": {
+        "name": ".env パーサ",
+        "description": "無料のオンライン.env ファイルパーサ — dotenvファイルを構造化JSONに解析し、変数名、値、キー数、およびコメント数をブラウザで即座に表示できます。データは保存されません。クォート値とインラインコメントに対応しています。"
+      },
+      "env-validator": {
+        "name": ".env バリデータ",
+        "description": "無料のオンライン.env ファイルバリデータ — dotenvファイルの構文エラー、重複キー、欠落値、クォート不一致、セキュリティ問題をブラウザで即座にチェックできます。データは保存されません。行番号付きのエラーと警告をレポートします。"
+      },
+      "package-json-validator": {
+        "name": "package.json バリデータ",
+        "description": "無料のオンラインpackage.json バリデータ — 必須フィールド、命名規則、semver形式、および一般的な問題をブラウザで即座にチェックできます。データは保存されません。エラー、警告、およびパッケージ情報をレポートします。"
+      },
+      "package-json-merger": {
+        "name": "package.json マージャー",
+        "description": "無料のオンラインpackage.json マージャー — 2つのpackage.json ファイルを深くマージし、依存関係、スクリプト、およびネストされたオブジェクトを組み合わせてブラウザで即座に処理できます。データは保存されません。追加されたキーと更新されたキーを示すマージサマリーを表示します。"
+      },
+      "semver-bumper": {
+        "name": "セマンティックバージョン バンパー",
+        "description": "無料のオンラインセマンティックバージョン バンパー — セマンティックバージョニング規則に従い、メジャー、マイナー、パッチ、またはプレリリースバージョン番号をブラウザで即座にインクリメントできます。データは保存されません。"
+      },
+      "sql-to-typescript": {
+        "name": "SQL から TypeScript",
+        "description": "無料のオンラインSQL から TypeScript変換ツール — CREATE TABLEステートメントからTypeScriptインターフェースを生成し、キャメルケース変換、nullableタイプ、およびオプショナルフィールドをブラウザで即座に処理できます。データは保存されません。"
+      }
+    },
+    "color": {
+      "hex-to-rgb": {
+        "name": "Hex から RGB",
+        "description": "無料のオンラインHex から RGB変換ツール — Hex カラーコードを RGB（赤、緑、青）値にブラウザで即座に変換できます。データは保存されません。"
+      },
+      "rgb-to-hex": {
+        "name": "RGB から Hex",
+        "description": "無料のオンラインRGB から Hex変換ツール — RGB カラー値をHexコードにブラウザで即座に変換できます。データは保存されません。"
+      },
+      "hex-to-hsl": {
+        "name": "Hex から HSL",
+        "description": "無料のオンラインHex から HSL変換ツール — Hex カラーコードを HSL（色相、彩度、明度）形式にブラウザで即座に変換できます。データは保存されません。"
+      },
+      "hsl-to-hex": {
+        "name": "HSL から Hex",
+        "description": "無料のオンラインHSL から Hex変換ツール — HSL カラー値をHexコードにブラウザで即座に変換できます。データは保存されません。"
+      },
+      "rgb-to-hsl": {
+        "name": "RGB から HSL",
+        "description": "無料のオンラインRGB から HSL変換ツール — RGB カラー値を HSL（色相、彩度、明度）形式にブラウザで即座に変換できます。データは保存されません。"
+      },
+      "hsl-to-rgb": {
+        "name": "HSL から RGB",
+        "description": "無料のオンラインHSL から RGB変換ツール — HSL カラー値をRGB形式にブラウザで即座に変換できます。データは保存されません。"
+      },
+      "rgb-to-cmyk": {
+        "name": "RGB から CMYK",
+        "description": "無料のオンラインRGB から CMYK変換ツール — RGB スクリーンカラー値をCMYK 印刷カラー値にブラウザで即座に変換できます。データは保存されません。"
+      },
+      "cmyk-to-rgb": {
+        "name": "CMYK から RGB",
+        "description": "無料のオンラインCMYK から RGB変換ツール — CMYK 印刷カラー値をRGB スクリーンカラー値にブラウザで即座に変換できます。データは保存されません。"
+      },
+      "hex-to-hsv": {
+        "name": "Hex から HSV",
+        "description": "無料のオンラインHex から HSV変換ツール — Hex カラーコードを HSV（色相、彩度、値）形式にブラウザで即座に変換できます。データは保存されません。"
+      },
+      "color-name-to-hex": {
+        "name": "カラー名から Hex",
+        "description": "無料のオンラインカラー名から Hex変換ツール — 「coral」、「steelblue」、「tomato」などのCSSカラー名をHexコードにブラウザで即座に変換できます。データは保存されません。148個すべてのCSS 名前付きカラーに対応しています。"
+      },
+      "hex-to-color-name": {
+        "name": "Hex からカラー名",
+        "description": "無料のオンラインHex からカラー名変換ツール — 任意のHexコードに最も近いCSSカラー名をブラウザで即座に検索できます。データは保存されません。148個すべてのCSS 名前付きカラーと照合します。"
+      },
+      "all-color-formats": {
+        "name": "すべてのカラー形式",
+        "description": "無料のオンラインカラー形式変換ツール — 任意のカラーを Hex、RGB、HSL、HSV、CMYK形式にブラウザで即座に変換できます。データは保存されません。Hexコード、RGB値、HSL値、CSSカラー名に対応しています。"
+      },
+      "color-picker": {
+        "name": "カラーピッカー",
+        "description": "無料のオンラインカラーピッカー — 任意のHex、RGB、またはHSLカラーを入力し、すべての形式変換と知覚的な明るさを含む詳細情報をブラウザで即座に表示できます。データは保存されません。"
+      },
+      "random-color": {
+        "name": "ランダムカラー ジェネレータ",
+        "description": "無料のオンラインランダムカラー ジェネレータ — Hex、RGB、またはHSL形式でランダムカラーをブラウザで即座に生成できます。データは保存されません。1～50色の設定可能な数に対応しています。"
+      },
+      "palette-generator": {
+        "name": "パレット ジェネレータ",
+        "description": "無料のオンラインカラーパレット ジェネレータ — アナロガス、コンプリメンタリ、トライアディック、またはモノクロマティックカラーハーモニー規則を使用して、調和したカラーパレットをブラウザで即座に作成できます。データは保存されません。"
+      },
+      "complementary-color": {
+        "name": "補色",
+        "description": "無料のオンライン補色ファインダー — 任意のHex、RGB、またはHSL入力からカラーホイール上の対となるカラーをブラウザで即座に計算できます。データは保存されません。"
+      },
+      "analogous-colors": {
+        "name": "類似色",
+        "description": "無料のオンライン類似色ファインダー — 任意のHex、RGB、またはHSL入力からカラーホイール上の隣接カラーをブラウザで即座に生成できます。データは保存されません。5つの調和した隣接色を表示します。"
+      },
+      "triadic-colors": {
+        "name": "三色配色",
+        "description": "無料のオンライン三色配色ファインダー — カラーホイール上で均等に配置された3つのカラーを、任意の入力カラーからブラウザで即座に計算できます。データは保存されません。"
+      },
+      "split-complementary": {
+        "name": "分割補色",
+        "description": "無料のオンライン分割補色ファインダー — カラーホイール上で補色に隣接する2つのカラーをブラウザで即座に計算できます。データは保存されません。"
+      },
+      "color-shades": {
+        "name": "カラー シェード",
+        "description": "無料のオンラインカラー シェード ジェネレータ — 任意のカラーをより暗くしたバリエーションをブラウザで即座に生成できます。データは保存されません。2～20ステップの設定可能なシェード数に対応しています。"
+      },
+      "color-tints": {
+        "name": "カラー ティント",
+        "description": "無料のオンラインカラー ティント ジェネレータ — 任意のカラーをより明るくしたバリエーションをブラウザで即座に生成できます。データは保存されません。2～20ステップの設定可能なティント数に対応しています。"
+      },
+      "gradient-generator": {
+        "name": "グラデーション ジェネレータ",
+        "description": "無料のオンラインCSSグラデーション ジェネレータ — カスタムカラー、方向、およびカラーストップを使用してリニアまたはラジアルグラデーション文字列をブラウザで即座に作成できます。データは保存されません。すぐに使用できるCSSで出力されます。"
+      },
+      "contrast-checker": {
+        "name": "コントラスト チェッカー",
+        "description": "無料のオンラインWCAG コントラスト チェッカー — 前景色と背景色間のコントラスト比を計算し、AA/AAA準拠をブラウザで即座にテストできます。データは保存されません。通常テキストと大文字テキストの要件をチェックします。"
+      },
+      "color-blindness-simulator": {
+        "name": "色覚異常シミュレータ",
+        "description": "無料のオンライン色覚異常シミュレータ — 強度近視、赤緑色盲、青黄色盲、全色盲でのカラーの見え方をブラウザで即座にプレビューできます。データは保存されません。カラーアクセシビリティテストに役立ちます。"
+      },
+      "color-brightness": {
+        "name": "カラー 明るさ",
+        "description": "無料のオンラインカラー 明るさ 計算ツール — 標準的な輝度公式（0.299R + 0.587G + 0.114B）を使用して知覚的な明るさをブラウザで即座に計算できます。データは保存されません。カラーを明るい色または暗い色に分類します。"
+      },
+      "color-luminance": {
+        "name": "カラー 輝度",
+        "description": "無料のオンラインカラー輝度計算機 — WCAG 2.0標準に従って相対輝度を計算し、ブラウザ上でアクセシビリティテストを即座に実施します。データは保存されません。"
+      },
+      "color-distance": {
+        "name": "色距離",
+        "description": "無料のオンライン色距離計算機 — 2つの色間の知覚距離(Delta E / CIE76)をCIE Lab色空間で計算し、ブラウザ上で即座に実施します。データは保存されません。2つの色がヒトの目にどの程度異なって見えるかを測定します。"
+      },
+      "color-mixer": {
+        "name": "色ミキサー",
+        "description": "無料のオンライン色ミキサー — 2つの色を任意の比率でブレンドして、ブラウザ上で中間色を即座に見つけます。データは保存されません。混合色をhex形式とRGB形式で表示します。"
+      },
+      "color-inverter": {
+        "name": "色反転",
+        "description": "無料のオンライン色反転ツール — hex、RGB、またはHSL色の補色反転を計算し、ブラウザ上で即座に実施します。データは保存されません。元の色と反転色をhexおよびRGB値で表示します。"
+      }
+    },
+    "communication": {
+      "email-header-parser": {
+        "name": "メールヘッダーパーサー",
+        "description": "無料のオンラインメールヘッダーパーサー — 生のSMTPヘッダーを貼り付けて、ブラウザ上で構造化JSON を即座に取得します。データは保存されません。From、To、Subject、Date、Message-IDを抽出し、Receivedホップをトレースし、SPF/DKIM認証を検出します。"
+      },
+      "email-template-builder": {
+        "name": "メールテンプレートビルダー",
+        "description": "無料のオンラインメールテンプレートビルダー — レスポンシブHTMLメールテンプレートをブラウザ上で即座に作成します。データは保存されません。Outlook、Gmail、Apple Mailと互換性のあるテーブルベースレイアウトを生成し、カスタマイズ可能な色、CTAボタン、フッターをサポートします。"
+      },
+      "email-to-markdown": {
+        "name": "メールからMarkdown",
+        "description": "無料のオンラインメールからMarkdown変換ツール — プレーンテキストメールを貼り付けて、ブラウザ上でMarkdownを即座に取得します。データは保存されません。ヘッダーをメタデータテーブルに、URLをクリック可能なリンクに、メールアドレスをmailtoリンクに、インデント付きテキストをブロッククォートに変換します。"
+      },
+      "email-address-parser": {
+        "name": "メールアドレスパーサー",
+        "description": "無料のオンラインメールアドレスパーサー — メールアドレスから名前、ローカル部分、ドメインを抽出し、ブラウザ上で即座に実施します。データは保存されません。Name <email>、\"Name\" <email>、email (Name)、プレーンメール形式を処理し、検証します。"
+      },
+      "email-signature-generator": {
+        "name": "メール署名ジェネレーター",
+        "description": "無料のオンラインメール署名ジェネレーター — プロフェッショナルHTMLメール署名をブラウザ上で即座に作成します。データは保存されません。プロフェッショナル、最小限、クリエイティブなスタイルから選択でき、オプションで電話、ウェブサイト、LinkedIn、Twitterリンクを追加できます。"
+      },
+      "spf-record-generator": {
+        "name": "SPFレコードジェネレーター",
+        "description": "無料のオンラインSPFレコードジェネレーター — ドメイン用のSPF DNS TXTレコードをブラウザ上で即座に構築します。データは保存されません。Google Workspace、Microsoft 365、Mailgun、SendGrid、Amazon SES、カスタムIP、DNSルックアップカウンティングをサポートします。"
+      },
+      "dkim-validator": {
+        "name": "DKIM検証ツール",
+        "description": "無料のオンラインDKIMレコード検証ツール — DKIM DNS TXTレコードを貼り付けて、ブラウザ上でフォーマットを即座にチェックします。データは保存されません。バージョン、キータイプ、公開鍵、ハッシュアルゴリズム、サービスタイプ、フラグを検証し、詳細なエラーおよび警告メッセージを表示します。"
+      },
+      "telegram-formatter": {
+        "name": "Telegramフォーマッター",
+        "description": "無料のオンラインTelegramフォーマッター — MarkdownをTelegram HTMLまたはMarkdownV2形式に変換し、ブラウザ上で即座に実施します。データは保存されません。太字、斜体、下線、打消線、コード、リンク、ブロッククォートをTelegram Bot APIの適切なエスケープで変換します。"
+      },
+      "teams-formatter": {
+        "name": "Teamsフォーマッター",
+        "description": "無料のオンラインTeamsフォーマッター — HTMLまたはプレーンテキストをMicrosoft Teams MarkdownまたはAdaptive Card JSONに変換し、ブラウザ上で即座に実施します。データは保存されません。太字、斜体、打消線、リンク、改行をTeams互換形式に変換します。"
+      },
+      "irc-formatter": {
+        "name": "IRCフォーマッター",
+        "description": "無料のオンラインIRCフォーマッター — Markdown形式テキストをmIRCカラーコードに変換し、ブラウザ上で即座に実施します。データは保存されません。太字、斜体、下線、16色の前景色、背景色、Markdown構文(**太字**、*斜体*、__下線__)をサポートします。"
+      }
+    },
+    "crypto": {
+      "md5-hash": {
+        "name": "MD5ハッシュ",
+        "description": "無料のオンラインMD5ハッシュジェネレーター — MD5ダイジェストをブラウザ上で即座に計算します。データは保存されません。チェックサムと非セキュリティフィンガープリント用の32文字16進ハッシュを生成します(暗号化用途には適さない)。"
+      },
+      "sha1-hash": {
+        "name": "SHA-1ハッシュ",
+        "description": "無料のオンラインSHA-1ハッシュジェネレーター — SHA-1ダイジェストをブラウザ上で即座に計算します。データは保存されません。チェックサムと非セキュリティフィンガープリント用の40文字16進ハッシュを生成します(暗号化用途では廃止)。"
+      },
+      "sha256-hash": {
+        "name": "SHA-256ハッシュ",
+        "description": "無料のオンラインSHA-256ハッシュジェネレーター — SHA-256ダイジェストをブラウザ上で即座に計算します。データは保存されません。Web Crypto APIを使用してデータ整合性と暗号検証用の64文字16進ハッシュを生成します。"
+      },
+      "sha384-hash": {
+        "name": "SHA-384ハッシュ",
+        "description": "無料のオンラインSHA-384ハッシュジェネレーター — SHA-384ダイジェストをブラウザ上で即座に計算します。データは保存されません。Web Crypto APIを使用して、より長いダイジェストが必要な暗号化用途向けの96文字16進ハッシュを生成します。"
+      },
+      "sha512-hash": {
+        "name": "SHA-512ハッシュ",
+        "description": "無料のオンラインSHA-512ハッシュジェネレーター — SHA-512ダイジェストをブラウザ上で即座に計算します。データは保存されません。Web Crypto APIを使用して、高セキュリティ暗号化用途向けの128文字16進ハッシュを生成します。"
+      },
+      "sha3-hash": {
+        "name": "SHA-3ハッシュ",
+        "description": "無料のオンラインSHA-3ハッシュジェネレーター — SHA-3(Keccak)ダイジェストをブラウザ上で即座に計算します。データは保存されません。SHA3-256およびSHA3-512バリアントを16進出力でサポートします。"
+      },
+      "blake2-hash": {
+        "name": "BLAKE2bハッシュ",
+        "description": "無料のオンラインBLAKE2bハッシュジェネレーター — BLAKE2bハッシュをブラウザ上で即座に計算します。データは保存されません。1〜64バイトの設定可能なダイジェスト長を16進出力でサポートします。"
+      },
+      "ripemd160-hash": {
+        "name": "RIPEMD-160ハッシュ",
+        "description": "無料のオンラインRIPEMD-160ハッシュジェネレーター — RIPEMD-160ダイジェストをブラウザ上で即座に計算します。データは保存されません。ビットコインアドレス生成とレガシー暗号化用途で使用される40文字16進ハッシュを生成します。"
+      },
+      "crc32-checksum": {
+        "name": "CRC32チェックサム",
+        "description": "無料のオンラインCRC32チェックサム計算機 — CRC32チェックサムをブラウザ上で即座に計算します。データは保存されません。ファイル整合性とデータ検証用の8文字16進チェックサムを出力します。"
+      },
+      "adler32-checksum": {
+        "name": "Adler-32チェックサム",
+        "description": "無料のオンラインAdler-32チェックサムジェネレーター — Adler-32チェックサムをブラウザ上で即座に計算します。データは保存されません。zlibおよびデータ整合性チェックで使用される8文字16進チェックサムを出力します。"
+      },
+      "xxhash": {
+        "name": "xxHash",
+        "description": "無料のオンラインxxHash32ジェネレーター — xxHash32非暗号ハッシュをブラウザ上で即座に計算します。データは保存されません。設定可能なシード値をサポートし、高速データチェックサム用の8文字16進出力を提供します。"
+      },
+      "murmurhash": {
+        "name": "MurmurHash3",
+        "description": "無料のオンラインMurmurHash3ジェネレーター — MurmurHash3 32ビットハッシュをブラウザ上で即座に計算します。データは保存されません。設定可能なシード値をサポートし、ハッシュテーブルとデータ分割用の16進出力を提供します。"
+      },
+      "hash-identifier": {
+        "name": "ハッシュ識別ツール",
+        "description": "無料のオンラインハッシュ識別ツール — ハッシュ文字列からハッシュタイプを検出し、ブラウザ上で即座に実施します。データは保存されません。長さと形式によってMD5、SHA-1、SHA-256、SHA-512、bcrypt、Argon2、CRC32などを認識します。"
+      },
+      "multi-hash": {
+        "name": "マルチハッシュ",
+        "description": "無料のオンラインマルチハッシュジェネレーター — SHA-1、SHA-256、SHA-384、SHA-512ハッシュをブラウザ上で即座に一度に計算します。データは保存されません。複数のハッシュアルゴリズムを1回の操作で並べて比較できます。"
+      },
+      "hmac-sha256": {
+        "name": "HMAC-SHA256",
+        "description": "無料のオンラインHMAC-SHA256ジェネレーター — HMAC-SHA256メッセージ認証コードをブラウザ上で即座に計算します。データは保存されません。Web Crypto APIを使用して16進およびBase64出力形式をサポートします。"
+      },
+      "hmac-sha512": {
+        "name": "HMAC-SHA512",
+        "description": "無料のオンラインHMAC-SHA512ジェネレーター — HMAC-SHA512メッセージ認証コードをブラウザ上で即座に計算します。データは保存されません。Web Crypto APIを使用して16進およびBase64出力形式をサポートします。"
+      },
+      "pbkdf2": {
+        "name": "PBKDF2",
+        "description": "無料のオンラインPBKDF2鍵導出ツール — パスワードから暗号化鍵をブラウザ上で即座に導出します。データは保存されません。SHA-256およびSHA-512をサポートし、反復回数と鍵長を設定可能です。"
+      },
+      "bcrypt-generator": {
+        "name": "Bcryptハッシュジェネレーター",
+        "description": "無料のオンラインBcryptハッシュジェネレーター — Bcryptパスワードハッシュをブラウザ上で即座に生成します。データは保存されません。設定可能なコスト係数(4-12ラウンド)と、ハッシュごとのランダムソルトをサポートします。"
+      },
+      "bcrypt-verifier": {
+        "name": "Bcrypt検証ツール",
+        "description": "無料のオンラインBcrypt検証ツール — パスワードをBcryptハッシュに照合して検証し、ブラウザ上で即座に実施します。データは保存されません。$2a$、$2b$、$2y$ Bcryptハッシュ形式を検証し、一致/不一致結果を表示します。"
+      },
+      "aes-encrypt": {
+        "name": "AES-GCM暗号化",
+        "description": "無料のオンラインAES-GCM暗号化ツール — テキストをAES-GCMで暗号化し、ブラウザ上で即座に実施します。データは保存されません。AES-128およびAES-256鍵サイズ、PBKDF2鍵導出、Base64出力をサポートします。"
+      },
+      "aes-decrypt": {
+        "name": "AES-GCM復号化",
+        "description": "無料のオンラインAES-GCM復号化ツール — AES-GCM暗号文を復号化し、ブラウザ上で即座に実施します。データは保存されません。AES-128およびAES-256とパスワードからのPBKDF2鍵導出をサポートします。"
+      },
+      "rsa-encrypt": {
+        "name": "RSA-OAEP暗号化",
+        "description": "無料のオンラインRSA-OAEP暗号化ツール — テキストをRSA-OAEPで暗号化し、ブラウザ上で即座に実施します。データは保存されません。JWK形式のRSA公開鍵を受け入れ、Base64エンコード暗号文を生成します。"
+      },
+      "rsa-decrypt": {
+        "name": "RSA-OAEP復号化",
+        "description": "無料のオンラインRSA-OAEP復号化ツール — RSA-OAEP暗号文を復号化し、ブラウザ上で即座に実施します。データは保存されません。JWK形式のRSA秘密鍵を受け入れ、Base64エンコード暗号文をデコードします。"
+      },
+      "chacha20-encrypt": {
+        "name": "ChaCha20-Poly1305暗号化",
+        "description": "無料のオンラインChaCha20-Poly1305暗号化ツール — 認証付き暗号化でテキストを暗号化し、ブラウザ上で即座に実施します。データは保存されません。RFC 8439 ChaCha20-Poly1305 AEADとPBKDF2鍵導出、Base64出力を使用します。"
+      },
+      "chacha20-decrypt": {
+        "name": "ChaCha20-Poly1305復号化",
+        "description": "無料のオンラインChaCha20-Poly1305復号化ツール — 認証付き暗号文を復号化し、ブラウザ上で即座に実施します。データは保存されません。RFC 8439 ChaCha20-Poly1305 AEADデータをPBKDF2導出鍵で復号化します。"
+      },
+      "rsa-key-generator": {
+        "name": "RSA鍵生成ツール",
+        "description": "無料のオンラインRSA鍵ペア生成ツール — RSA-2048およびRSA-4096鍵ペアをブラウザ上で即座に生成します。データは保存されません。Web Crypto APIを使用してJWKまたはPEM(PKCS#8/SPKI)形式で出力します。"
+      },
+      "ec-key-generator": {
+        "name": "EC鍵生成ツール",
+        "description": "無料のオンラインECキーペア生成ツール — ブラウザでECDSAキーペアを即座に生成します。データは保存されません。P-256、P-384、P-521曲線をサポートし、JWKおよびPEM（PKCS#8/SPKI）形式で出力します。"
+      },
+      "ed25519-key-generator": {
+        "name": "Ed25519キー生成ツール",
+        "description": "無料のオンラインEd25519キーペア生成ツール — ブラウザでEd25519署名キーペアを即座に生成します。データは保存されません。32バイトの秘密鍵と公開鍵を16進数またはBase64形式で出力します。"
+      },
+      "pem-parser": {
+        "name": "PEMパーサー",
+        "description": "無料のオンラインPEMパーサー — ブラウザでPEM形式データを即座に解析します。データは保存されません。キー種別（RSA、EC、X.509）、形式（PKCS#1、PKCS#8、SPKI）を識別し、サイズと16進数プレビューを表示します。"
+      },
+      "jwk-converter": {
+        "name": "JWKコンバーター",
+        "description": "無料のオンラインJWKコンバーター — ブラウザでJSON Web Keysを即座に変換・検査します。データは保存されません。RSA、EC、OKPキー種別をサポートし、JWK情報、PEM書き出し、キーメタデータ表示に対応します。"
+      },
+      "csr-decoder": {
+        "name": "CSRデコーダー",
+        "description": "無料のオンラインCSRデコーダー — ブラウザでPEM形式の証明書署名要求を即座にデコードします。データは保存されません。PKCS#10 CSRデータから、サブジェクトフィールド、アルゴリズム、OIDを表示します。"
+      },
+      "certificate-decoder": {
+        "name": "X.509証明書デコーダー",
+        "description": "無料のオンラインX.509証明書デコーダー — ブラウザでPEM形式から証明書詳細を即座にデコード・表示します。データは保存されません。サブジェクト、発行者、有効期限、署名アルゴリズムを表示します。"
+      },
+      "key-fingerprint": {
+        "name": "キーフィンガープリント",
+        "description": "無料のオンラインキーフィンガープリント計算ツール — ブラウザで公開鍵のSHA-256およびSHA-1フィンガープリントを即座に計算します。データは保存されません。PEMおよびJWK形式をサポートし、コロン区切りおよび16進数出力に対応します。"
+      },
+      "password-generator": {
+        "name": "パスワード生成ツール",
+        "description": "無料のオンラインパスワード生成ツール — ブラウザで安全なランダムパスワードを即座に生成します。データは保存されません。長さ、文字セット（大文字、小文字、数字、記号）、曖昧文字除外を設定可能です。"
+      },
+      "passphrase-generator": {
+        "name": "パスフレーズ生成ツール",
+        "description": "無料のオンラインパスフレーズ生成ツール — ブラウザでダイスウェア形式のパスフレーズを即座に生成します。データは保存されません。単語数、区切り文字、大文字化、800語以上のリストからのオプション数字サフィックスを設定可能です。"
+      },
+      "password-strength": {
+        "name": "パスワード強度アナライザー",
+        "description": "無料のオンラインパスワード強度アナライザー — ブラウザでパスワードセキュリティを即座に分析します。データは保存されません。エントロピー、クラック時間予測、一般的なパターン、キーボード配列、文字反復を検出します。"
+      },
+      "pin-generator": {
+        "name": "PIN生成ツール",
+        "description": "無料のオンラインPIN生成ツール — ブラウザで安全なランダムPINを即座に生成します。データは保存されません。長さ（3～12桁）、一括生成、重複なしモードをサポートします。"
+      },
+      "memorable-password": {
+        "name": "覚えやすいパスワード生成ツール",
+        "description": "無料のオンライン覚えやすいパスワード生成ツール — ブラウザで記憶しやすいパスワードを即座に生成します。データは保存されません。単語、数字、記号を「単語-数字-単語」「形容詞-名詞-数字」などのパターンで組み合わせます。"
+      },
+      "password-hash-check": {
+        "name": "パスワードハッシュ形式チェック",
+        "description": "無料のオンラインパスワードハッシュ形式チェッカー — ブラウザでパスワードハッシュ形式を即座に検証します。データは保存されません。bcrypt、Argon2、scrypt、PBKDF2、Unixcrypt、MD5、SHA-1、SHA-256、SHA-512を認識します。"
+      },
+      "password-entropy": {
+        "name": "パスワードエントロピー計算ツール",
+        "description": "無料のオンラインパスワードエントロピー計算ツール — ブラウザでパスワードエントロピーをビット単位で即座に計算します。データは保存されません。標準エントロピーとシャノンエントロピー、文字プール分析、セキュリティレベル評価を計算します。"
+      },
+      "api-key-generator": {
+        "name": "APIキー生成ツール",
+        "description": "無料のオンラインAPIキー生成ツール — ブラウザで安全なランダムAPIキーを即座に生成します。データは保存されません。16進数、Base64、英数字、Base62形式をサポートし、プレフィックスと長さを設定可能です。"
+      },
+      "string-hash": {
+        "name": "文字列ハッシュ",
+        "description": "無料のオンライン文字列ハッシュ計算ツール — ブラウザでDJB2、SDBM、FNV-1aハッシュを即座に計算します。データは保存されません。ハッシュテーブルとデータ分散用に32ビット非暗号ハッシュを16進数と10進数で出力します。"
+      }
+    },
+    "css": {
+      "formatter": {
+        "name": "CSSフォーマッター",
+        "description": "無料のオンラインCSSフォーマッター — ブラウザで最小化されたCSSを適切な間隔でフォーマットします。データは保存されません。インデント、ルール間の空行、コメント保持を設定可能です。"
+      },
+      "minify": {
+        "name": "CSSミニファイ",
+        "description": "無料のオンラインCSSミニファイアー — ブラウザで空白、コメント、不要な文字を削除してCSSを圧縮します。データは保存されません。末尾セミコロン、空のルールを削除し、サイズ削減率を報告します。"
+      },
+      "validator": {
+        "name": "CSSバリデーター",
+        "description": "無料のオンラインCSSバリデーター — ブラウザでCSSの構文エラー、不一致の括弧、一般的な問題を即座にチェックします。データは保存されません。無効な宣言、ベンダープレフィックス警告、!important使用法、ルール統計を報告します。"
+      },
+      "scss-to-css": {
+        "name": "SCSSからCSSへ",
+        "description": "無料のオンラインSCSSからCSSコンパイラー — ブラウザでSCSS変数とネストを通常のCSSに即座に変換します。データは保存されません。$変数、ネストセレクター、&親参照をサポートします。ミックスイン、@extend、@importはサポートしません。"
+      },
+      "less-to-css": {
+        "name": "LESSからCSSへ",
+        "description": "無料のオンラインLESSからCSSコンパイラー — ブラウザでLESS変数とネストを通常のCSSに即座に変換します。データは保存されません。@変数、ネストセレクター、&親参照をサポートします。ミックスイン、ガード、@importはサポートしません。"
+      },
+      "css-to-scss": {
+        "name": "CSSからSCSSへ",
+        "description": "無料のオンラインCSSからSCSSコンバーター — ブラウザで平坦なCSSセレクターをネストされたSCSS構造に即座に変換します。データは保存されません。子セレクターを親ブロック配下にグループ化し、適切にインデントします。"
+      },
+      "specificity": {
+        "name": "CSS詳細度計算ツール",
+        "description": "無料のオンラインCSS詳細度計算ツール — ブラウザでCSSセレクターの詳細度スコアを即座に計算し、優先度でランク付けします。データは保存されません。ID、クラス、属性、疑似クラス、要素に分解します。"
+      },
+      "gradient-generator": {
+        "name": "CSSグラデーション生成ツール",
+        "description": "無料のオンラインCSSグラデーション生成ツール — ブラウザで直線、放射状、円形グラデーションをカスタム色経由点で即座に作成します。データは保存されません。繰り返しグラデーション、フォールバック、ベンダープレフィックス付きプロパティを生成します。"
+      },
+      "box-shadow": {
+        "name": "CSSボックスシャドウ生成ツール",
+        "description": "無料のオンラインCSSボックスシャドウ生成ツール — ブラウザでドロップシャドウと内側シャドウをカスタマイズ可能なオフセット、ぼかし、広がり、色で即座に作成します。データは保存されません。標準とベンダープレフィックス付きプロパティを生成します。"
+      },
+      "border-radius": {
+        "name": "CSSボーダーラディウス生成ツール",
+        "description": "無料のオンラインCSSボーダーラディウス生成ツール — ブラウザで四隅制御付き角丸を即座に作成します。データは保存されません。短縮形と個別四隅プロパティをベンダープレフィックス付きで生成します。"
+      },
+      "flexbox-generator": {
+        "name": "CSSフレックスボックス生成ツール",
+        "description": "無料のオンラインCSSフレックスボックス生成ツール — ブラウザで方向、配置、折返し、ギャップを設定してフレックスレイアウトを即座に構築します。データは保存されません。フレックスコンテナとアイテムスタイル付き使用可能なCSSとHTMLを生成します。"
+      },
+      "grid-generator": {
+        "name": "CSSグリッド生成ツール",
+        "description": "無料のオンラインCSSグリッド生成ツール — ブラウザで列、行、ギャップ、配置を設定してグリッドレイアウトを即座に構築します。データは保存されません。同幅、自動、カスタム列/行サイズをサポートし、使用可能なCSSとHTMLを生成します。"
+      }
+    },
+    "datetime": {
+      "unix-timestamp": {
+        "name": "Unixタイムスタンプコンバーター",
+        "description": "無料のオンラインUnixタイムスタンプコンバーター — ブラウザでUnixタイムスタンプと人間が読める日付を即座に相互変換します。データは保存されません。秒とミリ秒をサポートし、ISO 8601とUTC形式を表示します。"
+      },
+      "iso8601-converter": {
+        "name": "ISO 8601コンバーター",
+        "description": "無料のオンラインISO 8601コンバーター — ブラウザで日付をすべてのISO 8601表記に即座に変換します。データは保存されません。日付のみ、日時、完全、ISOウィーク、通序日形式を表示します。"
+      },
+      "rfc2822-converter": {
+        "name": "RFC 2822コンバーター",
+        "description": "無料のオンラインRFC 2822コンバーター — ブラウザでRFC 2822メール日付形式との相互変換を即座に実行します。データは保存されません。RFC 2822とISO 8601の両表記を表示します。"
+      },
+      "epoch-converter": {
+        "name": "エポックコンバーター",
+        "description": "無料のオンラインエポックコンバーター — ブラウザでUnix秒、ミリ秒、マイクロ秒、ナノ秒を即座に相互変換します。データは保存されません。Excelシリアルとユリウス日も表示します。"
+      },
+      "date-formatter": {
+        "name": "日付フォーマッター",
+        "description": "無料のオンライン日付フォーマッター — ブラウザでYYYY-MM-DD HH:mm:ssなどのカスタムパターンを使用して日付を即座にフォーマットします。データは保存されません。曜日名、12/24時間、AM/PM、タイムゾーンオフセットをサポートします。"
+      },
+      "date-parser": {
+        "name": "日付パーサー",
+        "description": "無料のオンライン日付パーサー — ブラウザで任意の日付文字列形式を年月日時コンポーネントに即座に解析します。データは保存されません。ISO 8601、タイムスタンプ、自然形式に対応します。"
+      },
+      "julian-day-converter": {
+        "name": "ユリウス日コンバーター",
+        "description": "無料のオンラインユリウス日コンバーター — ブラウザでユリウス日番号とカレンダー日付を即座に相互変換します。データは保存されません。天文学と歴史的日付計算に有用です。"
+      },
+      "excel-date-converter": {
+        "name": "Excel日付コンバーター",
+        "description": "無料のオンラインExcel日付コンバーター — ブラウザでExcelシリアル日付番号とカレンダー日付を即座に相互変換します。データは保存されません。正確さのためExcelのうるう年バグに対応します。"
+      },
+      "relative-time": {
+        "name": "相対時間",
+        "description": "無料のオンライン相対時間コンバーター — ブラウザで日付を「2日前」などの人間が読める相対形式に即座に変換します。データは保存されません。過去と未来の日付に対応し、自動スケーリング単位をサポートします。"
+      },
+      "date-to-words": {
+        "name": "日付を単語に",
+        "description": "無料のオンライン日付を単語に変換ツール — ブラウザで任意の日付を英文表記に即座に変換します。データは保存されません。序数の曜日名と年を単語で出力します。"
+      },
+      "timezone-converter": {
+        "name": "タイムゾーンコンバーター",
+        "description": "無料のオンラインタイムゾーンコンバーター — ブラウザでIANAタイムゾーン間で日付と時刻を即座に変換します。データは保存されません。全主要タイムゾーンをサポートし、完全な日付フォーマットに対応します。"
+      },
+      "utc-converter": {
+        "name": "UTCコンバーター",
+        "description": "無料のオンラインUTCコンバーター — ブラウザでローカル時刻とUTCを即座に相互変換します。データは保存されません。任意のIANAタイムゾーンをサポートし、完全な日付と時刻を表示します。"
+      },
+      "date-difference": {
+        "name": "日付の差",
+        "description": "無料のオンライン日付差分計算機 — 2つの日付間の差を年、月、週、日単位で即座に計算できます。ブラウザで処理され、データは保存されません。時間、分、秒も表示します。"
+      },
+      "date-add-subtract": {
+        "name": "日付の加減算",
+        "description": "無料のオンライン日付加減算ツール — 任意の日付に日数、月数、年数を加算または減算できます。ブラウザで処理され、データは保存されません。時間、分、秒、週にも対応しています。"
+      },
+      "age-calculator": {
+        "name": "年齢計算機",
+        "description": "無料のオンライン年齢計算機 — 生年月日から正確な年齢を即座に計算できます。ブラウザで処理され、データは保存されません。年、月、日、合計日数、次の誕生日を表示します。"
+      },
+      "workdays-calculator": {
+        "name": "営業日計算機",
+        "description": "無料のオンライン営業日計算機 — 2つの日付間の営業日数を即座に計算できます。ブラウザで処理され、データは保存されません。週末を除外し、カレンダー日数の内訳を表示します。"
+      },
+      "week-number": {
+        "name": "週番号",
+        "description": "無料のオンライン週番号計算機 — 任意の日付のISO週番号を即座に取得できます。ブラウザで処理され、データは保存されません。ISO週年、週番号、曜日を表示します。"
+      },
+      "quarter-calculator": {
+        "name": "四半期計算機",
+        "description": "無料のオンライン四半期計算機 — 任意の日付の会計四半期を即座に判定できます。ブラウザで処理され、データは保存されません。四半期番号、開始日、終了日を表示します。"
+      },
+      "day-of-year": {
+        "name": "年間通日",
+        "description": "無料のオンライン年間通日計算機 — 任意の日付が年内の何日目かを即座に調べられます。ブラウザで処理され、データは保存されません。残り日数、年間進捗率、閏年判定を表示します。"
+      },
+      "leap-year-checker": {
+        "name": "閏年判定ツール",
+        "description": "無料のオンライン閏年判定ツール — 任意の年が閏年かどうかを詳細な説明付きで即座に判定できます。ブラウザで処理され、データは保存されません。除法規則と近傍の閏年を表示します。"
+      },
+      "days-in-month": {
+        "name": "月の日数",
+        "description": "無料のオンライン月の日数計算機 — 任意の月の日数を即座に調べられます。ブラウザで処理され、データは保存されません。閏年に対応し、日付文字列またはYYYY-MM形式に対応しています。"
+      },
+      "date-range-generator": {
+        "name": "日付範囲生成ツール",
+        "description": "無料のオンライン日付範囲生成ツール — 開始日と終了日の間の日付シーケンスを即座に生成できます。ブラウザで処理され、データは保存されません。日単位、週単位、月単位の間隔に対応しています。"
+      },
+      "timezone-list": {
+        "name": "タイムゾーン一覧",
+        "description": "無料のオンラインタイムゾーン一覧 — すべての主要なIANAタイムゾーン名と現在の現地時間を即座に閲覧できます。ブラウザで処理され、データは保存されません。欧州、アジア、アメリカなどの地域でフィルタリングできます。"
+      },
+      "world-clock": {
+        "name": "世界時計",
+        "description": "無料のオンライン世界時計 — 世界中の複数の都市の現在時刻を即座に表示できます。ブラウザで処理され、データは保存されません。デフォルトで10大都市を表示するか、カスタムIANAタイムゾーンを使用できます。"
+      },
+      "duration-calculator": {
+        "name": "期間計算機",
+        "description": "無料のオンライン期間計算機 — HH:MM:SS形式の時間期間を加算および減算できます。ブラウザで処理され、データは保存されません。結果をフォーマットされた時刻と合計秒数で表示します。"
+      },
+      "duration-formatter": {
+        "name": "期間フォーマッタ",
+        "description": "無料のオンライン期間フォーマッタ — ミリ秒を人間が読める期間に即座に変換できます。ブラウザで処理され、データは保存されません。日、時間、分、秒、ミリ秒に分解します。"
+      },
+      "time-parser": {
+        "name": "時刻パーサー",
+        "description": "無料のオンライン時刻パーサー — 任意の時刻文字列形式を時間、分、秒のコンポーネントに即座に解析できます。ブラウザで処理され、データは保存されません。12時間形式と24時間形式の両方を出力します。"
+      },
+      "time-12h-24h-converter": {
+        "name": "12時間/24時間時刻変換器",
+        "description": "無料のオンライン12時間/24時間時刻変換器 — 12時間形式と24時間形式の間で即座に変換できます。ブラウザで処理され、データは保存されません。AM/PMに対応し、秒もサポートしています。"
+      },
+      "countdown-calculator": {
+        "name": "カウントダウン計算機",
+        "description": "無料のオンラインカウントダウン計算機 — 目標日時までの残り時間を即座に計算できます。ブラウザで処理され、データは保存されません。日、時間、分、秒の内訳を表示します。"
+      },
+      "meeting-planner": {
+        "name": "会議プランナー",
+        "description": "無料のオンライン会議プランナー — タイムゾーン間の重複する営業時間を即座に検索できます。ブラウザで処理され、データは保存されません。複数のIANAタイムゾーンを比較し、共通の利用可能時間帯を表示します。"
+      },
+      "cron-builder": {
+        "name": "Cronビルダー",
+        "description": "無料のオンラインCronビルダー — プリセットまたはカスタムフィールドでCron式を即座に作成できます。ブラウザで処理され、データは保存されません。毎時、毎日、平日などのプリセットとカスタムスケジュールをサポートしています。"
+      },
+      "cron-parser": {
+        "name": "Cronパーサー",
+        "description": "無料のオンラインCronパーサー — Cron式を人間が読める形式で即座に説明できます。ブラウザで処理され、データは保存されません。分、時間、日、月、曜日のフィールドに分解します。"
+      },
+      "cron-next-runs": {
+        "name": "Cron次回実行時刻",
+        "description": "無料のオンラインCron次回実行時刻計算機 — 任意のCron式の今後の実行予定時刻を即座にプレビューできます。ブラウザで処理され、データは保存されません。次のN個の予定実行時刻を日付付きで表示します。"
+      },
+      "cron-validator": {
+        "name": "Cronバリデータ",
+        "description": "無料のオンラインCronバリデータ — Cron式の構文エラーを即座にチェックできます。ブラウザで処理され、データは保存されません。5つのフィールドすべてを範囲とステップチェックで検証します。"
+      },
+      "cron-to-english": {
+        "name": "Cron to English",
+        "description": "無料のオンラインCron to English変換器 — Cron式を平易な英文に即座に翻訳できます。ブラウザで処理され、データは保存されません。一般的なパターンと複雑なスケジュールをサポートしています。"
+      },
+      "english-to-cron": {
+        "name": "English to Cron",
+        "description": "無料のオンラインEnglish to Cron変換器 — 自然言語のスケジュール説明をCron式に即座に変換できます。ブラウザで処理され、データは保存されません。「毎平日」「毎日9時」などのフレーズをサポートしています。"
+      },
+      "rate-limiter-calculator": {
+        "name": "レート制限計算機",
+        "description": "無料のオンラインレート制限計算機 — レート制限パラメータと変換を即座に計算できます。ブラウザで処理され、データは保存されません。秒単位、分単位、時間単位のリクエスト数、トークンバケット、スライディングウィンドウ分析を表示します。"
+      },
+      "interval-calculator": {
+        "name": "間隔計算機",
+        "description": "無料のオンライン間隔計算機 — 時間間隔、周波数、実行回数を即座に計算できます。ブラウザで処理され、データは保存されません。秒単位、分単位、時間単位のリクエスト数とトークンバケット分析を表示します。"
+      },
+      "calendar-generator": {
+        "name": "カレンダー生成ツール",
+        "description": "無料のオンラインカレンダー生成ツール — 任意の月と年のテキストカレンダーを即座に作成できます。ブラウザで処理され、データは保存されません。日～土のグリッド形式で表示します。"
+      },
+      "holiday-lookup": {
+        "name": "祝日検索",
+        "description": "無料のオンライン祝日検索 — 任意の年の米国および国際祝日を即座に検索できます。ブラウザで処理され、データは保存されません。正確な日付と曜日付きで連邦祝日を一覧表示します。"
+      },
+      "ical-generator": {
+        "name": "iCal生成ツール",
+        "description": "無料のオンラインiCal生成ツール — イベント用の.icsカレンダーファイル内容を即座に作成できます。ブラウザで処理され、データは保存されません。終日イベント、説明、場所をサポートしています。"
+      },
+      "ical-parser": {
+        "name": "iCalパーサー",
+        "description": "無料のオンラインiCalパーサー — .ics iCalendarファイル内容をイベント詳細に即座に解析できます。ブラウザで処理され、データは保存されません。タイトル、日付、場所、説明を抽出します。"
+      },
+      "vcard-generator": {
+        "name": "vCard生成ツール",
+        "description": "無料のオンラインvCard生成ツール — vCard (.vcf) 連絡先ファイル内容を即座に作成できます。ブラウザで処理され、データは保存されません。名前、メール、電話、住所、組織、ウェブサイトのフィールドをサポートしています。"
+      },
+      "vcard-parser": {
+        "name": "vCardパーサー",
+        "description": "無料のオンラインvCardパーサー — vCard (.vcf) 連絡先ファイル内容を構造化データに即座に解析できます。ブラウザで処理され、データは保存されません。名前、メール、電話、組織、役職を抽出します。"
+      }
+    },
+    "diagram": {
+      "mermaid-renderer": {
+        "name": "Mermaidレンダラー",
+        "description": "無料のオンラインMermaidレンダラー — フローチャート、シーケンス図、ER図など、Mermaid図の構文を検証してレンダリングできます。ブラウザで処理され、データは保存されません。図のタイプを検出し、構文エラーを報告します。"
+      },
+      "mermaid-editor": {
+        "name": "Mermaidエディター",
+        "description": "無料のオンラインMermaidエディター — Mermaid図の構文をテーマと方向のオプション付きで編集し、レンダリング結果を即座にプレビューできます。ブラウザで処理され、データは保存されません。デフォルト、ダーク、フォレスト、ニュートラルテーマをサポートしています。"
+      },
+      "plantuml-analyzer": {
+        "name": "PlantUMLアナライザー",
+        "description": "無料のオンラインPlantUMLアナライザー — PlantUML図の構文を解析し、参加者、メッセージ、図の構造を即座に抽出できます。ブラウザで処理され、データは保存されません。シーケンス図、クラス図、アクティビティ図の分析をサポートしています。"
+      },
+      "graphviz-analyzer": {
+        "name": "Graphvizアナライザー",
+        "description": "無料のオンラインGraphviz DOTアナライザー — DOTグラフ定義を解析し、ノード、エッジ、グラフプロパティを即座に抽出できます。ブラウザで処理され、データは保存されません。部分グラフサポート付きで有向グラフと無向グラフを分析します。"
+      },
+      "sequence-diagram-editor": {
+        "name": "シーケンス図エディター",
+        "description": "無料のオンラインシーケンス図エディター — 参加者とメッセージからMermaidシーケンス図の構文を即座に生成できます。ブラウザで処理され、データは保存されません。アクター、アクティベーション、ノート、ループ、altブロックをサポートしています。"
+      },
+      "flowchart-editor": {
+        "name": "フローチャートエディター",
+        "description": "無料のオンラインフローチャートエディター — ノードとエッジからカスタマイズ可能な図形と矢印スタイルでMermaidフローチャート構文を即座に生成できます。ブラウザで処理され、データは保存されません。矩形、ダイヤモンド、スタジアム、円、六角形のノード図形をサポートしています。"
+      },
+      "er-diagram-editor": {
+        "name": "ER図エディター",
+        "description": "無料のオンラインER図エディター — エンティティ、属性、関係からMermaidエンティティ関係図の構文を即座に生成できます。ブラウザで処理され、データは保存されません。主キー/外部キー注釈とカーディナリティ記法をサポートしています。"
+      },
+      "gantt-chart-editor": {
+        "name": "ガントチャートエディター",
+        "description": "無料のオンラインガントチャートエディター — プロジェクトセクション、タスク、タイムラインからMermaidガントチャート構文を即座に生成できます。ブラウザで処理され、データは保存されません。タスク依存関係、マイルストーン、アクティブ/完了/重大ステータスをサポートしています。"
+      },
+      "mind-map-editor": {
+        "name": "マインドマップエディター",
+        "description": "無料オンラインマインドマップエディター — ブラウザ上で階層的なトピックツリーからMermaidマインドマップシンタックスを即座に生成します。データは保存されません。無制限のネストの深さと自動インデント出力に対応しています。"
+      },
+      "ascii-diagram": {
+        "name": "ASCIIダイアグラム",
+        "description": "無料オンラインASCIIダイアグラムジェネレーター — 構造化された入力からボックス、テーブル、ツリー、フローダイアグラムをASCIIアートとしてブラウザ上で即座に作成します。データは保存されません。タイトル付きセクション、ボックス接続、ファイルツリービューに対応しています。"
+      },
+      "qr-code-generator": {
+        "name": "QRコードジェネレーター",
+        "description": "無料オンラインQRコードジェネレーター — テキストまたはURLからカスタマイズ可能なサイズ、色、誤り訂正機能を備えたSVG形式のQRコードをブラウザ上で即座に作成します。データは保存されません。L/M/Q/H誤り訂正レベルに対応しています。"
+      },
+      "qr-with-logo": {
+        "name": "ロゴ付きQRコード",
+        "description": "無料オンラインロゴ付きQRコードジェネレーター — 中央にロゴプレースホルダーエリアを備えたSVG形式のQRコードをブラウザ上で即座に作成します。データは保存されません。高い誤り訂正を使用してロゴエリアがあってもスキャン可能性を維持します。"
+      },
+      "styled-qr-code": {
+        "name": "スタイル付きQRコード",
+        "description": "無料オンラインスタイル付きQRコードジェネレーター — カスタマイズ可能なモジュール形状、ファインダーパターン、色を備えたSVG形式のQRコードをブラウザ上で即座に作成します。データは保存されません。ドット、丸角、ダイヤモンドモジュールスタイルに対応しています。"
+      },
+      "wifi-qr-code": {
+        "name": "WiFi QRコード",
+        "description": "無料オンラインWiFi QRコードジェネレーター — SSID、パスワード、暗号化タイプからWiFiネットワークQRコードをSVG形式でブラウザ上で即座に作成します。データは保存されません。WPA、WEP、オープンネットワークタイプに対応しています。"
+      },
+      "vcard-qr-code": {
+        "name": "vCard QRコード",
+        "description": "無料オンラインvCard QRコードジェネレーター — 名前、メール、電話番号、住所から連絡先QRコードをSVG形式でブラウザ上で即座に作成します。データは保存されません。汎用互換性のためvCard 3.0形式で生成します。"
+      },
+      "url-qr-code": {
+        "name": "URL QRコード",
+        "description": "無料オンラインURL QRコードジェネレーター — URLからオプションテキストラベル付きQRコードをSVG形式でブラウザ上で即座に作成します。データは保存されません。カスタム サイズ、色、誤り訂正レベルに対応しています。"
+      },
+      "bulk-qr-generator": {
+        "name": "一括QRジェネレーター",
+        "description": "無料オンライン一括QRコードジェネレーター — テキスト項目のリストからHTMLグリッド形式で複数のQRコードを一度にブラウザ上で即座に作成します。データは保存されません。カスタムラベル、サイズ、誤り訂正レベルに対応しています。"
+      },
+      "code128-generator": {
+        "name": "Code 128ジェネレーター",
+        "description": "無料オンラインCode 128バーコードジェネレーター — 英数字テキストからCode 128バーコードをSVG形式でブラウザ上で即座に作成します。データは保存されません。カスタム幅、高さ、オプションのテキスト表示、設定可能なバー幅に対応しています。"
+      },
+      "code39-generator": {
+        "name": "Code 39ジェネレーター",
+        "description": "無料オンラインCode 39バーコードジェネレーター — 大文字英数字テキストからCode 39バーコードをSVG形式でブラウザ上で即座に作成します。データは保存されません。カスタム寸法、テキスト表示、ナロー/ワイドバー比率に対応しています。"
+      },
+      "ean13-generator": {
+        "name": "EAN-13ジェネレーター",
+        "description": "無料オンラインEAN-13バーコードジェネレーター — 12桁の商品コードから自動チェックデジット付きEAN-13バーコードをSVG形式でブラウザ上で即座に作成します。データは保存されません。カスタム寸法とテキスト表示に対応しています。"
+      },
+      "ean8-generator": {
+        "name": "EAN-8ジェネレーター",
+        "description": "無料オンラインEAN-8バーコードジェネレーター — 7桁コードから自動チェックデジット付きEAN-8バーコードをSVG形式でブラウザ上で即座に作成します。データは保存されません。カスタム寸法とテキスト表示に対応しています。"
+      },
+      "upc-a-generator": {
+        "name": "UPC-Aジェネレーター",
+        "description": "無料オンラインUPC-Aバーコードジェネレーター — 11桁の商品コードから自動チェックデジット付きUPC-Aバーコードをフォーマットでブラウザ上で即座に作成します。データは保存されません。カスタム寸法とテキスト表示に対応しています。"
+      },
+      "upc-e-generator": {
+        "name": "UPC-Eジェネレーター",
+        "description": "無料オンラインUPC-Eバーコードジェネレーター — 6桁の圧縮コードからUPC-Eバーコードをフォーマットでブラウザ上で即座に作成します。データは保存されません。カスタム寸法とテキスト表示に対応しています。"
+      },
+      "itf-generator": {
+        "name": "ITFジェネレーター",
+        "description": "無料オンラインITFバーコードジェネレーター — 数字データからInterleaved 2 of 5バーコードをSVG形式でブラウザ上で即座に作成します。データは保存されません。オプションのチェックデジットとカスタム寸法に対応しています。"
+      },
+      "pdf417-info": {
+        "name": "PDF417情報",
+        "description": "無料オンラインPDF417情報ツール — データ容量、エンコーディングモード、誤り訂正レベルを含むPDF417バーコードパラメーターをブラウザ上で即座に分析します。データは保存されません。シンボル寸法と文字数を表示します。"
+      },
+      "data-matrix-info": {
+        "name": "Data Matrix情報",
+        "description": "無料オンラインData Matrix情報ツール — 容量、エンコーディングモード、シンボルサイズを含むData Matrixバーコードパラメーターをブラウザ上で即座に分析します。データは保存されません。誤り訂正レベル、データ長、推奨マトリックスサイズを表示します。"
+      },
+      "line-chart-generator": {
+        "name": "折れ線グラフジェネレーター",
+        "description": "無料オンライン折れ線グラフジェネレーター — データシリーズからカスタマイズ可能な色、マーカー、ラベルを備えた折れ線グラフをSVG形式でブラウザ上で即座に作成します。データは保存されません。複数シリーズ、X軸ラベル、グリッドラインに対応しています。"
+      },
+      "bar-chart-generator": {
+        "name": "棒グラフジェネレーター",
+        "description": "無料オンライン棒グラフジェネレーター — ラベルと値から水平または垂直棒グラフをSVG形式でブラウザ上で即座に作成します。データは保存されません。カスタム色、設定可能なグラフ寸法、グリッドラインに対応しています。"
+      },
+      "pie-chart-generator": {
+        "name": "円グラフジェネレーター",
+        "description": "無料オンライン円グラフジェネレーター — ラベル付きデータセグメントから円グラフとドーナツグラフをSVG形式でブラウザ上で即座に作成します。データは保存されません。カスタム色、パーセンテージラベル、凡例行に対応しています。"
+      },
+      "scatter-plot-generator": {
+        "name": "散布図ジェネレーター",
+        "description": "無料オンライン散布図ジェネレーター — X/Yデータポイントからオプションラベル付き散布図をSVG形式でブラウザ上で即座に作成します。データは保存されません。カスタム色、ポイントサイズ、軸ラベルに対応しています。"
+      },
+      "area-chart-generator": {
+        "name": "面グラフジェネレーター",
+        "description": "無料オンライン面グラフジェネレーター — データシリーズからカスタマイズ可能な色、ラベル、積み上げを備えた滑らかな面グラフをSVG形式でブラウザ上で即座に作成します。データは保存されません。複数シリーズ、積み上げエリア、X軸ラベルに対応しています。"
+      },
+      "radar-chart-generator": {
+        "name": "レーダーチャートジェネレーター",
+        "description": "無料オンラインレーダーチャートジェネレーター — マルチ軸データシリーズからレーダー/スパイダーチャートをSVG形式でブラウザ上で即座に作成します。データは保存されません。複数シリーズ、カスタマイズ可能な軸ラベル、同心円グリッドリングに対応しています。"
+      },
+      "sparkline-generator": {
+        "name": "スパークラインジェネレーター",
+        "description": "無料オンラインスパークラインジェネレーター — 数字データからコンパクトなインラインスパークラインチャートをSVG形式でブラウザ上で即座に作成します。データは保存されません。塗りつぶし色、ドットマーカー、最小値/最大値のハイライトに対応しています。"
+      },
+      "json-to-chart": {
+        "name": "JSON to チャート",
+        "description": "無料オンラインJSON to チャート変換ツール — JSONデータ配列を棒グラフ、折れ線グラフ、円グラフ、散布図にSVG形式で即座に変換します。データは保存されません。データからラベルと値フィールドを自動検出します。"
+      }
+    },
+    "feeds": {
+      "rss-parser": {
+        "name": "RSSパーサー",
+        "description": "無料オンラインRSSフィードパーサー — RSSXMLを貼り付けてチャネルメタデータと項目を含む構造化JSONをブラウザ上で即座に取得します。データは保存されません。タイトル、リンク、説明、著者、カテゴリ、エンクロージャーを抽出します。"
+      },
+      "atom-parser": {
+        "name": "Atomパーサー",
+        "description": "無料オンラインAtomフィードパーサー — AtomXMLを貼り付けてフィードメタデータ、エントリ、著者を含む構造化JSONをブラウザ上で即座に取得します。データは保存されません。タイトル、リンク、概要、コンテンツ、カテゴリ、公開日を抽出します。"
+      },
+      "rss-generator": {
+        "name": "RSSジェネレーター",
+        "description": "無料オンラインRSSフィードジェネレーター — 項目、カテゴリ、エンクロージャーを備えた有効なRSS 2.0XMLフィードをブラウザ上で即座に作成します。データは保存されません。項目の説明、公開日、GUID、著者、Atomセルフリンクに対応しています。"
+      },
+      "atom-generator": {
+        "name": "Atomジェネレーター",
+        "description": "無料オンラインAtomフィードジェネレーター — エントリ、著者、メタデータを備えた有効なAtom 1.0XMLフィードをブラウザ上で即座に作成します。データは保存されません。エントリの概要、コンテンツ、公開日、エントリごとの著者に対応しています。"
+      },
+      "rss-validator": {
+        "name": "RSSバリデーター",
+        "description": "無料オンラインRSSフィードバリデーター — RSSXMLの構造、必須要素、ベストプラクティスをブラウザ上で即座にチェックします。データは保存されません。エラー(チャネル欠落、タイトル、リンク)と警告(言語欠落、日付)をレポートし、RSSバージョンを検出します。"
+      },
+      "feed-merger": {
+        "name": "フィードマージャー",
+        "description": "無料オンラインフィードマージャー — 2つのJSONフィードからエントリを結合し、ID/リンクで重複排除し、日付でソートをブラウザ上で即座に行います。データは保存されません。itemsまたはentriesの配列を持つフィードを受け入れ、統合リストにマージします。"
+      },
+      "json-feed-parser": {
+        "name": "JSONフィードパーサー",
+        "description": "無料オンラインJSONフィードパーサー — JSON Feed 1.1ドキュメントを貼り付けて検証済みでフォーマットされたフィードメタデータと項目のビューをブラウザ上で即座に取得します。データは保存されません。versionフィールドを検証し、著者、タグ、添付ファイルを抽出します。"
+      },
+      "opml-parser": {
+        "name": "OPMLパーサー",
+        "description": "無料オンラインOPMLパーサー — OPML購読XMLを貼り付けてフォルダ付きフィードの構造化JSONリストをブラウザ上で即座に取得します。データは保存されません。フィードURL、タイトル、タイプ、フォルダ階層を抽出します。"
+      },
+      "schema-org-generator": {
+        "name": "Schema.orgジェネレーター",
+        "description": "無料オンラインSchema.org JSON-LDジェネレーター — Article、Product、Event、Recipe、および10以上のタイプ用の構造化データをブラウザ上で即座に作成します。データは保存されません。タイプ固有フィールドを含む埋め込み可能なスクリプトタグを出力します。"
+      },
+      "schema-org-validator": {
+        "name": "Schema.orgバリデーター",
+        "description": "無料オンラインSchema.orgバリデーター — JSON-LDを貼り付けて必須フィールドの欠落、無効な日付、構造的問題をブラウザ上で即座にチェックします。データは保存されません。@context、@type、タイプ固有の必須プロパティを検証します。"
+      },
+      "json-ld-editor": {
+        "name": "JSON-LDエディター",
+        "description": "無料オンラインJSON-LDフォーマッター — 圧縮されたJSON-LDを貼り付けて構造化データをブラウザ上で即座に見やすく印刷します。データは保存されません。スクリプトタグからJSONを抽出し、JSONシンタックスを検証し、一貫したインデンテーションでフォーマットします。"
+      },
+      "microdata-extractor": {
+        "name": "マイクロデータエクストラクター",
+        "description": "無料オンラインマイクロデータエクストラクター — HTMLを貼り付けてitemscope、itemtype、itempropアトリビュートを構造化JSONに即座に抽出します。データは保存されません。スコープ付きアイテムとそのプロパティ、スタンドアロンitemprop値を検出します。"
+      },
+      "rich-snippet-preview": {
+        "name": "リッチスニペットプレビュー",
+        "description": "無料オンラインリッチスニペットプレビューアー — JSON-LDを貼り付けて構造化データがGoogleリッチ結果としてどのように表示されるかをブラウザ上で即座に確認します。データは保存されません。Article、Product、Recipe、Review、Event、JobPostingタイプに対応しています。"
+      },
+      "breadcrumb-generator": {
+        "name": "ブレッドクラムジェネレーター",
+        "description": "無料オンラインブレッドクラムJSON-LDジェネレーター — SEO用のBreadcrumbList構造化データをブラウザ上で即座に作成します。データは保存されません。Schema.org準拠のListItem要素を含む埋め込み可能なスクリプトタグを出力します。"
+      },
+      "faq-schema-generator": {
+        "name": "FAQ スキーマジェネレーター",
+        "description": "無料オンラインFAQスキーマジェネレーター — FAQPage JSON-LD構造化データを作成してGoogleリッチリザルトをブラウザで即座に生成します。データは保存されません。質問と回答エンティティを含む埋め込み可能なスクリプトタグを出力します。"
+      },
+      "product-schema-generator": {
+        "name": "Product Schema Generator",
+        "description": "無料オンラインProduct Schemaジェネレーター — オファー、ブランド、評価を含むProduct JSON-LD構造化データを作成してGoogleリッチリザルトをブラウザで即座に生成します。データは保存されません。価格設定、在庫状況、SKU、集計評価に対応しています。"
+      }
+    },
+    "html": {
+      "formatter": {
+        "name": "HTMLフォーマッター",
+        "description": "無料オンラインHTMLフォーマッター — HTMLを美しくインデント処理してブラウザで即座にフォーマットします。データは保存されません。ネストされたタグ、無効要素、DOCTYPE、コメントに対応し、script/style/preブロック内の生コンテンツは保持されます。"
+      },
+      "minify": {
+        "name": "HTMLミニファイ",
+        "description": "無料オンラインHTMLミニファイアー — 空白とコメントを削除してHTMLを圧縮しブラウザで即座に処理します。データは保存されません。pre/script/styleブロック内のコンテンツは保持され、サイズ削減を報告し、オプションのタグ削除に対応しています。"
+      },
+      "validator": {
+        "name": "HTMLバリデーター",
+        "description": "無料オンラインHTMLバリデーター — HTML構造をエラーと警告についてブラウザで即座にチェックします。データは保存されません。閉じられていないタグ、ネストの不一致、alt属性の欠落、重複ID、無効要素の誤用を検出します。"
+      },
+      "to-text": {
+        "name": "HTMLからテキスト",
+        "description": "無料オンラインHTMLからプレーンテキストへの変換ツール — HTMLからタグを削除し可読テキストを抽出しブラウザで即座に処理します。データは保存されません。スクリプト、スタイル、コメントを削除し、エンティティをデコードし、オプションでリンクURLを保持します。"
+      },
+      "entity-encoder": {
+        "name": "HTMLエンティティエンコーダー",
+        "description": "無料オンラインHTMLエンティティエンコーダー — 特殊文字をHTMLエンティティとしてエスケープしブラウザで即座に処理します。データは保存されません。名前付き(&amp;)、10進数(&#38;)、16進数(&#x26;)エンコーディングモードに対応し、オプションで全テキストエンコーディングに対応しています。"
+      },
+      "entity-decoder": {
+        "name": "HTMLエンティティデコーダー",
+        "description": "無料オンラインHTMLエンティティデコーダー — HTMLエンティティを読み取り可能な文字に変換しブラウザで即座に処理します。データは保存されません。名前付きエンティティ(&amp;, &lt;, &copy;)、10進数(&#38;)、16進数(&#x26;)参照に対応しています。"
+      },
+      "attribute-remover": {
+        "name": "HTML属性削除ツール",
+        "description": "無料オンラインHTML属性削除ツール — インラインスタイル、イベントハンドラー、データ属性をHTMLから削除しブラウザで即座に処理します。データは保存されません。属性リストはカスタマイズ可能で、すべてのdata-*またはon*属性の一括削除と属性数レポートに対応しています。"
+      },
+      "playground": {
+        "name": "HTMLプレイグラウンド",
+        "description": "無料オンラインHTMLプレイグラウンド — HTML、CSS、JavaScriptを書いてブラウザでライブプレビューを即座に表示します。データは保存されません。フラグメントを完全なドキュメントにラップし、style/scriptタグを抽出し、追加のCSSとJS注入に対応しています。"
+      },
+      "table-generator": {
+        "name": "HTMLテーブルジェネレーター",
+        "description": "無料オンラインHTMLテーブルジェネレーター — スタイル付きHTMLテーブルをブラウザで即座に作成します。データは保存されません。行、列、ヘッダー、セルデータ、ボーダースタイル、ストライプ行のカスタマイズ可能で、コピー可能な出力を提供します。"
+      },
+      "list-generator": {
+        "name": "HTMLリストジェネレーター",
+        "description": "無料オンラインHTMLリストジェネレーター — 順序付きまたは順序なしHTMLリストをブラウザで即座に作成します。データは保存されません。インデントによるネストリスト、カスタムリストスタイル(disc、circle、square、decimal)、CSSクラス名に対応しています。"
+      },
+      "favicon-generator": {
+        "name": "ファビコンジェネレーター",
+        "description": "無料オンラインファビコンジェネレーター — テキストベースのSVGファビコンをブラウザで即座に作成します。データは保存されません。テキスト、色、形状(正方形、円形、丸みを帯びた)、サイズをカスタマイズでき、使用可能なHTMLリンクタグを生成します。"
+      }
+    },
+    "image": {
+      "png-to-jpg": {
+        "name": "PNG to JPG",
+        "description": "無料オンラインPNG to JPG変換ツール — PNG画像をJPEG形式に品質調整可能でブラウザで即座に変換します。データは保存されません。透明度をカスタマイズ可能な背景色に置き換えます。"
+      },
+      "jpg-to-png": {
+        "name": "JPG to PNG",
+        "description": "無料オンラインJPG to PNG変換ツール — JPEG画像をロスレスPNG形式に透明度サポート付きでブラウザで即座に変換します。データは保存されません。元の画像品質を保持します。"
+      },
+      "image-to-webp": {
+        "name": "Image to WebP",
+        "description": "無料オンラインImage to WebP変換ツール — PNG画像とJPEG画像をWebP形式に品質調整可能でブラウザで即座に変換します。データは保存されません。通常ファイルサイズを25～35%削減します。"
+      },
+      "webp-to-png": {
+        "name": "WebP to PNG",
+        "description": "無料オンラインWebP to PNG変換ツール — WebP画像をロスレスPNG形式にブラウザで即座に変換します。データは保存されません。透明度と元の画像品質を保持します。"
+      },
+      "image-to-base64": {
+        "name": "Image to Base64",
+        "description": "無料オンラインImage to Base64エンコーダー — 画像をBase64エンコード文字列に変換してHTML、CSS、JSONに埋め込み用としてブラウザで即座に処理します。データは保存されません。すべての一般的な画像フォーマットに対応しています。"
+      },
+      "base64-to-image": {
+        "name": "Base64 to Image",
+        "description": "無料オンラインBase64 to Image変換ツール — Base64エンコード画像データをデコードして表示可能な画像に変換しブラウザで即座に処理します。データは保存されません。PNG、JPEG、GIF、WebP、SVG形式に対応しています。"
+      },
+      "image-to-data-url": {
+        "name": "Image to Data URL",
+        "description": "無料オンラインImage to Data URL変換ツール — 画像をデータURI文字列に変換してHTMLおよびCSSへのインライン埋め込み用としてブラウザで即座に処理します。データは保存されません。使用可能なdata:image/... URIを出力します。"
+      },
+      "image-resizer": {
+        "name": "Image Resizer",
+        "description": "無料オンラインImage Resizer — 画像を正確なピクセル寸法またはスケール率でブラウザで即座にリサイズします。データは保存されません。アスペクト比ロックとカスタム幅/高さに対応しています。"
+      },
+      "image-cropper": {
+        "name": "Image Cropper",
+        "description": "無料オンラインImage Cropper — カスタムX, Yオフセットで正確なピクセル寸法に画像をブラウザで即座にクロップします。データは保存されません。正確な座標制御による矩形クロップに対応しています。"
+      },
+      "image-rotator": {
+        "name": "Image Rotator",
+        "description": "無料オンラインImage Rotator — 画像を0～360度の任意の角度でブラウザで即座に回転させます。データは保存されません。回転したコンテンツを収めるようキャンバスサイズを自動調整します。"
+      },
+      "image-flipper": {
+        "name": "Image Flipper",
+        "description": "無料オンラインImage Flipper — 画像を水平方向または垂直方向にワンクリックでブラウザで即座に反転させます。データは保存されません。ミラーと垂直反転の両方の操作に対応しています。"
+      },
+      "image-compressor": {
+        "name": "Image Compressor",
+        "description": "無料オンラインImage Compressor — JPEG画像を1～100の品質調整可能でブラウザで即座にファイルサイズを削減します。データは保存されません。圧縮JPEGとサイズ比較を出力します。"
+      },
+      "aspect-ratio-calculator": {
+        "name": "Aspect Ratio Calculator",
+        "description": "無料オンラインAspect Ratio Calculator — ピクセル値から表示比率、GCD、リサイズ寸法を計算しブラウザで即座に処理します。データは保存されません。16:9、4:3、3:2などの最も近い標準比率に一致します。"
+      },
+      "image-border-adder": {
+        "name": "Image Border Adder",
+        "description": "無料オンラインImage Borderツール — カスタム幅の単色ボーダーを画像に追加しブラウザで即座に処理します。データは保存されません。任意のボーダー幅とHEX形式の色に対応しています。"
+      },
+      "image-watermark": {
+        "name": "Image Watermark",
+        "description": "無料オンラインImage Watermarkツール — カスタムフォントサイズ、色、不透明度、位置でテキストウォーターマークを画像に追加しブラウザで即座に処理します。データは保存されません。コーナーおよび中央配置に対応しています。"
+      },
+      "round-corners": {
+        "name": "Round Corners",
+        "description": "無料オンラインRound Cornersツール — 透明背景付きの丸いコーナーを画像に追加しブラウザで即座に処理します。データは保存されません。調整可能なコーナー半径とアンチエイリアス処理エッジを備えています。"
+      },
+      "circle-crop": {
+        "name": "Circle Crop",
+        "description": "無料オンラインCircle Cropツール — 画像を透明背景付きの完全な円形にクロップしブラウザで即座に処理します。データは保存されません。より短い寸法を直径として使用し、アンチエイリアス処理エッジを備えています。"
+      },
+      "thumbnail-generator": {
+        "name": "Thumbnail Generator",
+        "description": "無料オンラインThumbnail Generator — 最大幅および高さ制約を使用してサムネイルプレビュー版を作成しブラウザで即座に処理します。データは保存されません。アスペクト比を自動で維持します。"
+      },
+      "image-splitter": {
+        "name": "Image Splitter",
+        "description": "無料オンラインImage Splitter — 画像を行と列による等しいタイルのグリッドに分割しブラウザで即座に処理します。データは保存されません。個別のタイル画像をデータURLとして出力します。"
+      },
+      "grayscale": {
+        "name": "Grayscale",
+        "description": "無料オンラインGrayscale変換ツール — 明度加重平均を使用してカラー画像をグレースケールに変換しブラウザで即座に処理します。データは保存されません。正確な結果を得るために標準BT.709係数を使用しています。"
+      },
+      "sepia": {
+        "name": "Sepia",
+        "description": "無料オンラインSepiaフィルター — 温かいヴィンテージセピアトーンを画像に適用しブラウザで即座に処理します。データは保存されません。古典的なセピアカラーマトリックス変換を使用しています。"
+      },
+      "invert-colors": {
+        "name": "Invert Colors",
+        "description": "無料オンラインカラーインバーター — 画像内のすべての色を反転してネガティブ効果を作成しブラウザで即座に処理します。データは保存されません。アルファチャンネルの透明度を保持します。"
+      },
+      "brightness-adjuster": {
+        "name": "Brightness Adjuster",
+        "description": "無料オンラインBrightness Adjuster — -100～100の範囲で画像の明るさを増減させブラウザで即座に処理します。データは保存されません。アルファチャンネルの透明度を保持します。"
+      },
+      "contrast-adjuster": {
+        "name": "Contrast Adjuster",
+        "description": "無料オンラインContrast Adjuster — -100～100の範囲で画像のコントラストを増減させブラウザで即座に処理します。データは保存されません。アルファチャンネルの透明度を保持します。"
+      },
+      "blur-filter": {
+        "name": "Blur Filter",
+        "description": "無料オンラインimage blur tool — 調整可能なガウシアンブラーを画像に適用しブラウザで即座に処理します。データは保存されません。PNG、JPEG、WebP画像で1～50ピクセルの半径に対応しています。"
+      },
+      "sharpen-filter": {
+        "name": "Sharpen Filter",
+        "description": "無料オンラインimage sharpener — 調整可能なシャープニング量で画像の詳細さと鮮明さを向上させブラウザで即座に処理します。データは保存されません。自然な見た目の結果を得るためアンシャープマスクアルゴリズムを使用しています。"
+      },
+      "pixelate": {
+        "name": "Pixelate",
+        "description": "無料オンラインPixelateツール — 調整可能なブロックサイズでモザイクピクセレーション効果を画像に適用しブラウザで即座に処理します。データは保存されません。2～100ピクセルのブロックサイズに対応しています。"
+      },
+      "posterize": {
+        "name": "Posterize",
+        "description": "無料オンラインポスタライズツール — 画像の色レベル数を削減してポスター風の効果を即座にブラウザで実現します。データは保存されません。チャネルごとに2～32色レベルで調整可能。"
+      },
+      "duotone": {
+        "name": "デュオトーン",
+        "description": "無料オンラインデュオトーン画像フィルター — カスタムハイライトとシャドウ色を使用して、2トーンのカラー効果を画像に即座に適用します。データは保存されません。グレースケールに変換してから選択した色ペアにマップします。"
+      },
+      "image-info": {
+        "name": "Image Info",
+        "description": "無料オンライン画像情報ビューアー — 画像の寸法、ファイルサイズ、形式、色深度、アスペクト比を即座にブラウザで表示します。データは保存されません。PNG、JPEG、GIF、WebP、SVGファイルを解析。"
+      },
+      "exif-reader": {
+        "name": "EXIFリーダー",
+        "description": "無料オンラインEXIFリーダー — JPEG画像からカメラメタデータ（メーカー、モデル、露出、ISO、GPS座標、タイムスタンプ）を即座に抽出します。データは保存されません。すべてのEXIF、IPTC、XMPタグを表示。"
+      },
+      "exif-remover": {
+        "name": "EXIF削除ツール",
+        "description": "無料オンラインEXIF削除ツール — JPEGからすべてのメタデータを削除してプライバシーを保護します。データは保存されません。カメラ情報、GPS位置、タイムスタンプ、ソフトウェアタグを削除。"
+      },
+      "color-picker-from-image": {
+        "name": "画像からのカラーピッカー",
+        "description": "無料オンライン画像カラーピッカー — 画像内の任意のピクセル座標の色値を即座に抽出します。データは保存されません。HEX、RGB、HSLカラー値を返します。"
+      },
+      "dominant-colors": {
+        "name": "支配色",
+        "description": "無料オンライン支配色抽出ツール — 画像を解析し、k-means クラスタリングを使用して上位の色を即座に抽出します。データは保存されません。パーセンテージウェイト付きのHEX値を返します。"
+      },
+      "image-histogram": {
+        "name": "画像ヒストグラム",
+        "description": "無料オンライン画像ヒストグラム分析ツール — 画像の赤、緑、青、輝度チャネルの分布を即座に可視化します。データは保存されません。SVGヒストグラムチャートを生成。"
+      },
+      "image-diff": {
+        "name": "Image Diff",
+        "description": "無料オンライン画像差分ツール — 2つの画像をピクセル単位で比較し、差異を即座にハイライトします。データは保存されません。変更ピクセルを赤色で表示、閾値は設定可能。"
+      },
+      "placeholder-image": {
+        "name": "プレースホルダー画像",
+        "description": "無料オンラインプレースホルダー画像生成ツール — カスタム寸法、色、テキストを使用してプレースホルダー画像をSVGまたはサービスURLとして即座に生成します。データは保存されません。インラインSVGまたはvia.placeholder.com、placehold.co、dummyimage.com URLを生成。"
+      }
+    },
+    "jwt": {
+      "jwt-decoder": {
+        "name": "JWT デコーダー",
+        "description": "無料オンラインJWTデコーダー — JWTトークンをヘッダー、ペイロード、署名に即座にデコードします。データは保存されません。base64url エンコードされたヘッダーとペイロードクレームを解析し、生の署名を表示。"
+      },
+      "jwt-encoder": {
+        "name": "JWT エンコーダー",
+        "description": "無料オンラインJWTエンコーダー — HMAC署名付きJWTトークンを即座に作成します。データは保存されません。HS256、HS384、HS512アルゴリズムに対応、秘密鍵は設定可能。"
+      },
+      "jwt-debugger": {
+        "name": "JWT デバッガー",
+        "description": "無料オンラインJWTデバッガー — JWTトークンの有効期限、形式、クレームの問題を即座に分析します。データは保存されません。期限切れトークン、欠落クレーム、無効なアルゴリズム、不正なヘッダー、構造上の問題を検出。"
+      },
+      "jwt-expiry-checker": {
+        "name": "JWT 有効期限チェッカー",
+        "description": "無料オンラインJWT有効期限チェッカー — JWTトークンの有効期限ステータスを即座に確認します。データは保存されません。exp、iat、nbf クレームを読み込み、残り有効期間または有効期限切れからの経過時間を人間が読める形式で表示。"
+      },
+      "jwt-claims-builder": {
+        "name": "JWT クレームビルダー",
+        "description": "無料オンラインJWTクレームビルダー — RFC 7519標準クレームを使用してJWTペイロードオブジェクトを即座に組み立てます。データは保存されません。iss、sub、aud、exp、iat、jti クレームとカスタムキーバリューペアに対応。"
+      },
+      "jwt-rs256-generator": {
+        "name": "JWT RS256 ジェネレーター",
+        "description": "無料オンラインJWT RS256ジェネレーター — 自動生成されたRSA鍵ペアでRS256署名付きJWTトークンを即座に作成します。データは保存されません。2048ビットRSA鍵を生成し、検証用のPEM形式公開/秘密鍵をエクスポート。"
+      },
+      "paseto-decoder": {
+        "name": "PASETO デコーダー",
+        "description": "無料オンラインPASETOデコーダー — PASETOトークン構造を即座にデコードして検査します。データは保存されません。バージョン（v1～v4）、目的（local/public）、エンコードされたペイロード、キーIDを含むオプションのフッターを解析。"
+      },
+      "oauth-token-decoder": {
+        "name": "OAuth トークンデコーダー",
+        "description": "無料オンラインOAuthトークンデコーダー — OAuthアクセス/リフレッシュトークンを即座にデコードして検査します。データは保存されません。JWTまたは不透明なトークンを検出し、スコープ、クライアントID、オーディエンス、有効期限クレームを抽出。"
+      },
+      "saml-decoder": {
+        "name": "SAML デコーダー",
+        "description": "無料オンラインSAMLデコーダー — Base64エンコードされたSAMLアサーション/レスポンスを即座に読み取り可能なXMLにデコードします。データは保存されません。URLエンコード及びbase64url 入力に対応、適切なインデント付きで整形されたXMLを表示。"
+      },
+      "fernet-encoder": {
+        "name": "Fernet エンコーダー",
+        "description": "無料オンラインFernetエンコーダー — Fernetで暗号化されたトークンを即座に生成します。データは保存されません。AES-128-CBC暗号化とHMAC-SHA256認証を使用、32バイトの対称鍵を自動生成または受け入れ。"
+      }
+    },
+    "identifiers": {
+      "uuid-v1-generator": {
+        "name": "UUID v1 ジェネレーター",
+        "description": "無料オンラインUUID v1ジェネレーター — タイムベースのUUID バージョン1識別子を即座に作成します。データは保存されません。RFC 4122に準拠したUUID を生成し、100ナノ秒タイムスタンプ、クロックシーケンス、ランダムノードバイトを埋め込み。"
+      },
+      "uuid-v4-generator": {
+        "name": "UUID v4 ジェネレーター",
+        "description": "無料オンラインUUID v4ジェネレーター — 暗号的にランダムなUUID バージョン4識別子を即座に作成します。データは保存されません。Web Crypto APIで安全なランダネスを使用、大文字出力オプション、最大100個のバッチ生成に対応。"
+      },
+      "uuid-v5-generator": {
+        "name": "UUID v5 ジェネレーター",
+        "description": "無料オンラインUUID v5ジェネレーター — SHA-1ハッシュを使用した決定的な名前ベースのUUID バージョン5識別子を即座に作成します。データは保存されません。DNS、URL、OID、X.500ネームスペース及びカスタムネームスペースUUIDに対応。"
+      },
+      "uuid-v7-generator": {
+        "name": "UUID v7 ジェネレーター",
+        "description": "無料オンラインUUID v7ジェネレーター — タイムオーダードUUID バージョン7識別子を即座に作成します。データは保存されません。RFC 9562に準拠したUUIDを生成し、Unixミリ秒タイムスタンプを埋め込み、データベースで自然な時系列ソート可能。"
+      },
+      "ulid-generator": {
+        "name": "ULID ジェネレーター",
+        "description": "無料オンラインULIDジェネレーター — 汎用的に一意で辞書式にソート可能な識別子を即座に作成します。データは保存されません。26文字のCrockford base32エンコード済みIDを生成、ミリ秒タイムスタンプ埋め込みで自然なソート順序実現。"
+      },
+      "nanoid-generator": {
+        "name": "NanoID ジェネレーター",
+        "description": "無料オンラインNanoIDジェネレーター — コンパクトでURL対応の一意識別子を即座に作成します。データは保存されません。カスタムアルファベット対応、設定可能な長さ（1～256文字）、暗号的に安全なランダネスでのバッチ生成に対応。"
+      },
+      "cuid-generator": {
+        "name": "CUID ジェネレーター",
+        "description": "無料オンラインCUIDジェネレーター — 衝突耐性のある一意識別子を即座に作成します。データは保存されません。CUID v1形式のIDを生成、タイムスタンプ、カウンター、フィンガープリント、ランダムブロックを埋め込み水平スケーラビリティに対応。"
+      },
+      "cuid2-generator": {
+        "name": "CUID2 ジェネレーター",
+        "description": "無料オンラインCUID2ジェネレーター — セキュアで衝突耐性のある識別子を即座に作成します。データは保存されません。CUID2形式のIDをSHA-256ハッシュで生成、設定可能な長さ（2～32文字）、最大100個のバッチ生成に対応。"
+      },
+      "snowflake-id-generator": {
+        "name": "Snowflake ID ジェネレーター",
+        "description": "無料オンラインSnowflake IDジェネレーター — Twitterスタイルの分散一意識別子を即座に作成します。データは保存されません。64ビットIDを生成、ワーカーID、データセンターID、カスタムエポックは設定可能で分散システムに対応。"
+      },
+      "ksuid-generator": {
+        "name": "KSUID ジェネレーター",
+        "description": "無料オンラインKSUIDジェネレーター — K-ソート可能な一意識別子を即座に作成します。データは保存されません。27文字のbase62エンコード済みIDを生成、タイムスタンプ埋め込みで自然な時系列ソート可能。"
+      },
+      "objectid-generator": {
+        "name": "ObjectID ジェネレーター",
+        "description": "無料オンラインMongoDB ObjectIDジェネレーター — 24文字の16進識別子を即座に作成します。データは保存されません。BSON仕様に従い、タイムスタンプ、ランダムバイト、インクリメントカウンターを埋め込んだ有効なObjectIDを生成。"
+      },
+      "short-id-generator": {
+        "name": "Short ID ジェネレーター",
+        "description": "無料オンラインShort IDジェネレーター — コンパクトでURL対応の識別子を即座に作成します。データは保存されません。英数字、小文字、大文字、数字、16進、URL対応アルファベットに対応、設定可能な長さ（2～64文字）。"
+      },
+      "bulk-id-generator": {
+        "name": "Bulk ID ジェネレーター",
+        "description": "無料オンラインBulk IDジェネレーター — 複数のUUID、NanoID、Short ID、16進、数字識別子を即座に作成します。データは保存されません。UUID v4、UUID v7、NanoID、Short英数字、16進、数字形式に対応、設定可能な数、長さ、セパレーター。"
+      },
+      "session-token-generator": {
+        "name": "セッショントークンジェネレーター",
+        "description": "無料オンラインセッショントークンジェネレーター — 暗号的に安全なトークンを即座に作成します。データは保存されません。16進、base64、URL対応、英数字形式に対応、設定可能な長さ（16～512文字）とエントロピー報告機能。"
+      }
+    },
+    "git": {
+      "git-branch-namer": {
+        "name": "Git ブランチネーマー",
+        "description": "無料オンラインGitブランチ名ジェネレーター — タスク説明からクリーンで一貫性のあるブランチ名を即座に作成します。データは保存されません。Gitflow、GitHub、Jira、シンプルネーミング規則に対応、自動スラッグ化。"
+      },
+      "git-command-builder": {
+        "name": "Git コマンドビルダー",
+        "description": "無料オンラインGitコマンドビルダー — アクションを選択しパラメータを入力してGitコマンドを視覚的に即座に作成します。データは保存されません。clone、commit、push、pull、merge、rebase、stash、reset、log、diff、tag、cherry-pick、bisectに対応。"
+      },
+      "git-commit-message": {
+        "name": "Git コミットメッセージ",
+        "description": "無料オンラインGitコミットメッセージフォーマッター — 説明を入力して、適切にフォーマットされた従来型コミットメッセージを即座に取得します。データは保存されません。サブジェクトを自動小文字化、すべてのコミットタイプ、スコープ、破壊的変更、本文、フッターに対応。"
+      },
+      "git-diff-viewer": {
+        "name": "Git Diff ビューアー",
+        "description": "無料オンラインGit Diffビューアー — 2つのテキストバージョンをサイドバイサイドで比較、追加・削除・変更なしの行をハイライトして即座に表示します。データは保存されません。LCSベースのアルゴリズムで正確な視覚的差分化。"
+      },
+      "gitignore-builder": {
+        "name": ".gitignore ビルダー",
+        "description": "無料オンライン.gitignoreビルダー — チェックボックスをトグルしてプロジェクト用の.gitignoreファイルを即座に構築します。データは保存されません。node_modules、ビルド出力、環境ファイル、IDE設定、OS ファイル、Docker、Terraform、カスタムパターンをカバー。"
+      },
+      "git-ignore-checker": {
+        "name": "Git Ignore チェッカー",
+        "description": "無料オンライン.gitignoreチェッカー — .gitignoreルールを貼り付け、ファイルパスが無視されているか追跡されているか即座にテストします。データは保存されません。マッチングパターン表示、否定ルール、グロブ、ディレクトリパターン、コメントに対応。"
+      },
+      "conventional-commits": {
+        "name": "従来型コミットビルダー",
+        "description": "無料オンライン Conventional Commit ビルダー — type、scope、body、footer を含む適切にフォーマットされたコミットメッセージをブラウザで即座に作成できます。データは保存されません。すべてのコミットタイプ（feat、fix、docs、refactor など）、breaking changes、issue reference、co-authors に対応しています。"
+      },
+      "changelog-parser": {
+        "name": "Changelog Parser",
+        "description": "無料オンライン Changelog パーサー — CHANGELOG.md からバージョン、日付、変更内容を構造化 JSON として抽出できます。ブラウザで即座に処理でき、データは保存されません。Keep a Changelog フォーマット、semver バージョン、複数のセクションタイプ（Added、Fixed、Changed、Removed）に対応しています。"
+      }
+    },
+    "devops": {
+      "dockerfile-generator": {
+        "name": "Dockerfile Generator",
+        "description": "無料オンライン Dockerfile ジェネレーター — プロダクション対応 Dockerfile をブラウザで即座に作成できます。データは保存されません。Node.js、Python、Go、Rust、Java、Ruby、PHP、.NET に対応し、マルチステージビルド、Alpine イメージ、非 root ユーザーに対応しています。"
+      },
+      "dockerfile-linter": {
+        "name": "Dockerfile Linter",
+        "description": "無料オンライン Dockerfile リンター — Dockerfile をベストプラクティス違反について即座にチェックできます。ブラウザで処理でき、データは保存されません。:latest タグ、sudo 使用、ADD vs COPY、相対 WORKDIR、apt-get キャッシュ問題、連続 RUN レイヤーを検出します。"
+      },
+      "compose-generator": {
+        "name": "Docker Compose Generator",
+        "description": "無料オンライン Docker Compose ジェネレーター — docker-compose.yaml ファイルをブラウザで即座に作成できます。データは保存されません。PostgreSQL、MySQL、MariaDB、MongoDB、Redis、Nginx リバースプロキシ、ヘルスチェック、名前付きボリュームに対応しています。"
+      },
+      "compose-validator": {
+        "name": "Docker Compose Validator",
+        "description": "無料オンライン Docker Compose バリデーター — docker-compose.yaml の一般的な問題をブラウザで即座にチェックできます。データは保存されません。:latest タグ、privileged モード、廃止バージョン、ポートバインディングリスク、混在インデントを検出します。"
+      },
+      "k8s-yaml-generator": {
+        "name": "Kubernetes YAML Generator",
+        "description": "無料オンライン Kubernetes YAML ジェネレーター — Deployment、Service、ConfigMap、Secret、Ingress、CronJob、PVC の K8s マニフェストをブラウザで即座に作成できます。データは保存されません。リソースリミット、liveness/readiness probe、namespace サポートを含みます。"
+      },
+      "k8s-yaml-validator": {
+        "name": "Kubernetes YAML Validator",
+        "description": "無料オンライン Kubernetes YAML バリデーター — K8s マニフェストの欠落フィールドとベストプラクティス問題をブラウザで即座にチェックできます。データは保存されません。apiVersion、kind、metadata、labels、リソースリミット、ヘルスプローブ、セキュリティコンテキスト、イメージタグを確認します。"
+      },
+      "helm-values-generator": {
+        "name": "Helm Values Generator",
+        "description": "無料オンライン Helm values.yaml ジェネレーター — Kubernetes Helm チャート values をブラウザで即座に作成できます。データは保存されません。replicas、ingress、HPA オートスケーリング、persistent volumes、リソースリミット、node affinity に対応しています。"
+      },
+      "container-image-parser": {
+        "name": "Container Image Parser",
+        "description": "無料オンラインコンテナイメージリファレンスパーサー — Docker および OCI イメージ文字列を registry、namespace、name、tag、digest に分解できます。ブラウザで即座に処理でき、データは保存されません。Docker Hub、GHCR、ECR、GCR、カスタム registry に対応しています。"
+      }
+    },
+    "legal": {
+      "privacy-policy-generator": {
+        "name": "Privacy Policy Generator",
+        "description": "無料オンラインプライバシーポリシージェネレーター — ウェブサイト用プライバシーポリシーをブラウザで即座に作成できます。データは保存されません。データ収集、クッキー、アナリティクス、ユーザー権利、データセキュリティ、サードパーティリンクをカバーし、セクションはトグルで有効/無効できます。"
+      },
+      "cookie-policy-generator": {
+        "name": "Cookie Policy Generator",
+        "description": "無料オンラインクッキーポリシージェネレーター — ウェブサイト用クッキーポリシーをブラウザで即座に作成できます。データは保存されません。essential、analytics、marketing、preference クッキーをカバーし、ブラウザ制御手順とサードパーティクッキー開示を含みます。"
+      },
+      "terms-of-service-generator": {
+        "name": "Terms of Service Generator",
+        "description": "無料オンラインサービス利用規約ジェネレーター — ウェブサイト用 ToS をブラウザで即座に作成できます。データは保存されません。利用規約の受け入れ、知的財産権、ユーザーコンテンツ、保証、責任制限、補償、終了、準拠法をカバーしています。"
+      },
+      "copyright-notice-generator": {
+        "name": "Copyright Notice Generator",
+        "description": "無料オンライン著作権表示ジェネレーター — プロジェクト用著作権ヘッダーをブラウザで即座に作成できます。データは保存されません。standard、MIT、Apache 2.0、Creative Commons、all-rights-reserved、HTML、コードコメント形式に対応しています。"
+      },
+      "disclaimer-generator": {
+        "name": "Disclaimer Generator",
+        "description": "無料オンライン免責事項ジェネレーター — ウェブサイト免責事項をブラウザで即座に作成できます。データは保存されません。general、blog、affiliate、professional、medical、financial 免責事項テンプレートに対応しています。"
+      },
+      "gdpr-statement-generator": {
+        "name": "GDPR Statement Generator",
+        "description": "無料オンライン GDPR ステートメントジェネレーター — ウェブサイト用 GDPR コンプライアンスステートメントをブラウザで即座に作成できます。データは保存されません。データ管理者の詳細、法的根拠、7 つすべてのデータ主体権、違反通知、データ転送セーフガードをカバーしています。"
+      }
+    },
+    "reference": {
+      "country-code-reference": {
+        "name": "Country Code Reference",
+        "description": "無料オンライン国コードルックアップ — ISO 3166 alpha-2、alpha-3、国際ダイヤルコードをブラウザで即座に検索できます。データは保存されません。50 以上の国に対応し、名前、ISO コード、電話プレフィックスで検索できます。"
+      },
+      "currency-code-reference": {
+        "name": "Currency Code Reference",
+        "description": "無料オンライン通貨コードリファレンス — 40 以上の世界通貨の ISO 4217 コード、シンボル、名前をブラウザで即座に検索できます。データは保存されません。コード、名前、シンボルで検索可能 — fiat 通貨と暗号資産（BTC、ETH）に対応しています。"
+      },
+      "language-code-reference": {
+        "name": "Language Code Reference",
+        "description": "無料オンライン言語コードリファレンス — 55 以上の言語の ISO 639-1 および ISO 639-2 コードをブラウザで即座に検索できます。データは保存されません。言語名またはコードで検索可能 — 主要言語、ヨーロッパ、アジア、アフリカの言語をカバーしています。"
+      },
+      "keyboard-shortcuts-reference": {
+        "name": "Keyboard Shortcuts Reference",
+        "description": "無料オンラインキーボードショートカットリファレンス — VS Code、Chrome、terminal、git のホットキーをブラウザで即座に検索できます。データは保存されません。Windows/Linux と macOS のキーバインディングを並べて表示し、検索フィルターに対応しています。"
+      },
+      "emoji-reference": {
+        "name": "Emoji Reference",
+        "description": "無料オンライン絵文字リファレンス — 60 以上の一般的な絵文字を名前またはカテゴリーでブラウザで即座に検索できます。データは保存されません。smileys、people、animals、food、travel、objects、symbols でフィルタリング可能です。"
+      }
+    },
+    "math": {
+      "length-converter": {
+        "name": "Length Converter",
+        "description": "無料オンライン長さコンバーター — 長さ・距離ユニット間の変換をブラウザで即座に行えます。データは保存されません。kilometers、meters、centimeters、millimeters、miles、yards、feet、inches、nautical miles に対応しています。"
+      },
+      "weight-converter": {
+        "name": "Weight Converter",
+        "description": "無料オンライン重さコンバーター — 重さ・質量ユニット間の変換をブラウザで即座に行えます。データは保存されません。kilograms、grams、milligrams、pounds、ounces、tons、stones、micrograms に対応しています。"
+      },
+      "temperature-converter": {
+        "name": "Temperature Converter",
+        "description": "無料オンライン温度コンバーター — 温度スケール間の変換をブラウザで即座に行えます。データは保存されません。Celsius、Fahrenheit、Kelvin の変換に対応しています。"
+      },
+      "volume-converter": {
+        "name": "Volume Converter",
+        "description": "無料オンライン体積コンバーター — 体積ユニット間の変換をブラウザで即座に行えます。データは保存されません。liters、milliliters、gallons、quarts、pints、cups、fluid ounces、tablespoons、teaspoons、cubic meters に対応しています。"
+      },
+      "area-converter": {
+        "name": "Area Converter",
+        "description": "無料オンライン面積コンバーター — 面積ユニット間の変換をブラウザで即座に行えます。データは保存されません。square meters、square feet、acres、hectares、square kilometers、square yards、square inches、square centimeters に対応しています。"
+      },
+      "speed-converter": {
+        "name": "Speed Converter",
+        "description": "無料オンライン速度コンバーター — 速度ユニット間の変換をブラウザで即座に行えます。データは保存されません。km/h、mph、m/s、knots、ft/s、Mach number に対応しています。"
+      },
+      "time-unit-converter": {
+        "name": "Time Unit Converter",
+        "description": "無料オンライン時間ユニットコンバーター — 時間ユニット間の変換をブラウザで即座に行えます。データは保存されません。milliseconds、seconds、minutes、hours、days、weeks、months、years に対応しています。"
+      },
+      "data-size-converter": {
+        "name": "Data Size Converter",
+        "description": "無料オンラインデータサイズコンバーター — データサイズユニット間の変換をブラウザで即座に行えます。データは保存されません。bytes、KB、MB、GB、TB、PB およびバイナリユニット（KiB、MiB、GiB、TiB）に対応しています。"
+      },
+      "pressure-converter": {
+        "name": "Pressure Converter",
+        "description": "無料オンライン圧力コンバーター — 圧力ユニット間の変換をブラウザで即座に行えます。データは保存されません。pascal、kilopascal、megapascal、bar、atmosphere、PSI、torr、mmHg に対応しています。"
+      },
+      "energy-converter": {
+        "name": "Energy Converter",
+        "description": "無料オンラインエネルギーコンバーター — エネルギーユニット間の変換をブラウザで即座に行えます。データは保存されません。joules、kilojoules、calories、kilocalories、watt-hours、kilowatt-hours、BTU、electron volts に対応しています。"
+      },
+      "power-converter": {
+        "name": "Power Converter",
+        "description": "無料オンライン電力コンバーター — 電力ユニット間の変換をブラウザで即座に行えます。データは保存されません。watts、kilowatts、megawatts、horsepower、PS、BTU/h、ft-lbs/s に対応しています。"
+      },
+      "frequency-converter": {
+        "name": "Frequency Converter",
+        "description": "無料オンライン周波数コンバーター — 周波数ユニット間の変換をブラウザで即座に行えます。データは保存されません。Hz、kHz、MHz、GHz、THz、RPM に対応しています。"
+      },
+      "angle-converter": {
+        "name": "Angle Converter",
+        "description": "無料オンライン角度コンバーター — 角度ユニット間の変換をブラウザで即座に行えます。データは保存されません。degrees、radians、gradians、turns、arcminutes、arcseconds に対応しています。"
+      },
+      "force-converter": {
+        "name": "Force Converter",
+        "description": "無料オンライン力コンバーター — 力ユニット間の変換をブラウザで即座に行えます。データは保存されません。newtons、kilonewtons、pounds-force、dynes、kilogram-force、ounce-force に対応しています。"
+      },
+      "fuel-economy-converter": {
+        "name": "Fuel Economy Converter",
+        "description": "無料オンライン燃費コンバーター — 燃費ユニット間の変換をブラウザで即座に行えます。データは保存されません。miles per gallon（US/UK）、liters per 100 km、kilometers per liter に対応しています。"
+      },
+      "currency-converter": {
+        "name": "Currency Converter",
+        "description": "無料オンライン通貨コンバーター — 通貨間の変換をブラウザで即座に行えます。データは保存されません。警告：静的なおおよその相場レートを使用しており、ライブ市場データではありません。USD、EUR、GBP、JPY、CAD、AUD、CHF、CNY、INR、BRL に対応しています。"
+      },
+      "number-formatter": {
+        "name": "Number Formatter",
+        "description": "無料オンライン数字フォーマッター — ロケール固有のセパレーターで数字をフォーマットできます。ブラウザで即座に処理でき、データは保存されません。commas、decimal places、scientific notation、compact notation、複数のロケールに対応しています。"
+      },
+      "percentage-calculator": {
+        "name": "Percentage Calculator",
+        "description": "無料オンライン百分率計算機 — 百分率をブラウザで即座に計算できます。データは保存されません。X% of Y、X is what % of Y、increase by %、decrease by % の計算に対応しています。"
+      },
+      "ratio-calculator": {
+        "name": "Ratio Calculator",
+        "description": "無料オンライン比率計算機 — 比率を最も単純な形に簡略化できます。ブラウザで即座に処理でき、データは保存されません。GCD ベースの簡略化で任意の比率を削減でき、小数に対応しています。"
+      },
+      "fraction-calculator": {
+        "name": "Fraction Calculator",
+        "description": "無料オンライン分数計算機 — ブラウザで分数の計算を即座に実行します。データは保存されません。分数の足し算、引き算、掛け算、割り算を自動簡約と小数変換で行えます。"
+      },
+      "percentage-change": {
+        "name": "パーセンテージ変化",
+        "description": "無料オンラインパーセンテージ変化計算機 — ブラウザで2つの数値間のパーセンテージ増減を即座に計算します。データは保存されません。増加/減少の方向と正確なパーセンテージ変化を表示します。"
+      },
+      "tip-calculator": {
+        "name": "チップ計算機",
+        "description": "無料オンラインチップ計算機 — ブラウザでチップ計算と割り勘を即座に行えます。データは保存されません。請求額、チップのパーセンテージ、人数を入力して、1人あたりの合計額とチップ内訳を表示します。"
+      },
+      "discount-calculator": {
+        "name": "割引計算機",
+        "description": "無料オンライン割引計算機 — ブラウザで販売価格と節約額を即座に計算します。データは保存されません。元の価格と割引パーセンテージを入力して、最終価格、節約額、割引内訳を表示します。"
+      },
+      "markup-calculator": {
+        "name": "マークアップ計算機",
+        "description": "無料オンラインマークアップ計算機 — ブラウザでマークアップと売値を即座に計算します。データは保存されません。原価とマークアップパーセンテージを入力して、売値、利益額、利益率を表示します。"
+      },
+      "vat-calculator": {
+        "name": "VAT計算機",
+        "description": "無料オンラインVAT計算機 — ブラウザで任意の金額に対してVATを追加または削除します。データは保存されません。任意のVAT率に対応し、税抜き金額、税込み金額、VAT額の内訳を表示します。"
+      },
+      "compound-interest": {
+        "name": "複利計算機",
+        "description": "無料オンライン複利計算機 — ブラウザで複利を即座に計算します。データは保存されません。年1回、半年複利、四半期複利、月複利、日複利に対応しています。"
+      },
+      "loan-calculator": {
+        "name": "ローン計算機",
+        "description": "無料オンラインローン計算機 — ブラウザで月々のローン返済額を即座に計算します。データは保存されません。元本、金利、期間を入力して、月々の支払額、総支払額、総利息を表示します。"
+      },
+      "bmi-calculator": {
+        "name": "BMI計算機",
+        "description": "無料オンラインBMI計算機 — ブラウザで体格指数（BMI）を即座に計算します。データは保存されません。体重（kg）と身長（m）を入力してBMI値と健康カテゴリーを取得します。"
+      },
+      "expression-evaluator": {
+        "name": "式評価ツール",
+        "description": "無料オンライン式評価ツール — ブラウザで数学式を即座に評価します。データは保存されません。足し算、引き算、掛け算、割り算、べき乗、剰余、括弧に対応しています。"
+      },
+      "scientific-calculator": {
+        "name": "科学計算機",
+        "description": "無料オンライン科学計算機 — ブラウザで高度な数学演算を即座に実行します。データは保存されません。三角関数、対数関数、指数関数、その他の科学関数をラジアンまたは度で対応しています。"
+      },
+      "matrix-calculator": {
+        "name": "行列計算機",
+        "description": "無料オンライン行列計算機 — ブラウザで行列演算を即座に実行します。データは保存されません。足し算、引き算、掛け算、転置、行列式、スカラー倍に対応しています。"
+      },
+      "prime-checker": {
+        "name": "素数判定ツール",
+        "description": "無料オンライン素数判定ツール — ブラウザで数が素数かどうかを即座に判定します。データは保存されません。最大安全整数までの任意の整数に対して高速な素数判定を実行します。"
+      },
+      "prime-factorization": {
+        "name": "素因数分解",
+        "description": "無料オンライン素因数分解ツール — ブラウザで任意の数を素因数に即座に分解します。データは保存されません。指数表記付きの完全な素因数分解を表示します。"
+      },
+      "gcd-lcm-calculator": {
+        "name": "最大公約数・最小公倍数計算機",
+        "description": "無料オンライン最大公約数・最小公倍数計算機 — ブラウザで最大公約数と最小公倍数を即座に計算します。データは保存されません。2つ以上の数に対応し、段階的な結果を表示します。"
+      },
+      "factorial-calculator": {
+        "name": "階乗計算機",
+        "description": "無料オンライン階乗計算機 — ブラウザで任意の数の階乗を即座に計算します。データは保存されません。170!までの値に対応し、即座に結果を表示します。"
+      },
+      "fibonacci-generator": {
+        "name": "フィボナッチ数列生成機",
+        "description": "無料オンラインフィボナッチ数列生成機 — ブラウザでフィボナッチ数列を即座に生成します。データは保存されません。フィボナッチ数列の最大100個の数を生成できます。"
+      },
+      "random-number-generator": {
+        "name": "乱数生成機",
+        "description": "無料オンライン乱数生成機 — ブラウザで任意の範囲の乱数を即座に生成します。データは保存されません。整数と小数に対応し、単一または最大1000個のバッチ生成ができます。"
+      },
+      "statistics-calculator": {
+        "name": "統計計算機",
+        "description": "無料オンライン統計計算機 — ブラウザで平均、中央値、最頻値、最小値、最大値、合計を即座に計算します。データは保存されません。度数分析を含む完全な統計概要を表示します。"
+      },
+      "standard-deviation": {
+        "name": "標準偏差",
+        "description": "無料オンライン標準偏差計算機 — ブラウザで標準偏差と分散を即座に計算します。データは保存されません。母標準偏差と標本標準偏差の両方に対応し、平均、分散、拡散分析を表示します。"
+      },
+      "permutation-combination": {
+        "name": "順列・組合せ",
+        "description": "無料オンライン順列・組合せ計算機 — ブラウザでnPrとnCrを即座に計算します。データは保存されません。nとr値を入力して、確率と数え上げ問題の順列と組合せを計算します。"
+      },
+      "quadratic-solver": {
+        "name": "二次方程式ソルバー",
+        "description": "無料オンライン二次方程式ソルバー — ブラウザで二次方程式（ax² + bx + c = 0）を即座に解きます。データは保存されません。実数根と複素数根を求め、判別式を計算して完全な解を表示します。"
+      },
+      "bitwise-calculator": {
+        "name": "ビット演算計算機",
+        "description": "無料オンラインビット演算計算機 — ブラウザでビット演算を即座に実行します。データは保存されません。AND、OR、XOR、NOT、左シフト、右シフトに対応し、10進、2進、16進、8進で出力します。"
+      },
+      "roman-numeral-converter": {
+        "name": "ローマ数字変換機",
+        "description": "無料オンラインローマ数字変換機 — ブラウザで10進数とローマ数字を即座に変換します。データは保存されません。1～3999の数字に対応し、自動検出と往復検証ができます。"
+      },
+      "scientific-notation": {
+        "name": "科学記法",
+        "description": "無料オンライン科学記法変換機 — ブラウザで標準形と科学記法を即座に変換します。データは保存されません。入力形式を自動検出し、有効数字20桁までの精度を設定できます。"
+      }
+    },
+    "misc": {
+      "string-length": {
+        "name": "文字列長カウント",
+        "description": "無料オンライン文字列長カウント — ブラウザで文字数、コードポイント、UTF-8バイト数、単語数、行数を即座にカウントします。データは保存されません。Unicodeと絵文字とマルチバイト文字を正しく処理します。"
+      },
+      "string-obfuscator": {
+        "name": "文字列難読化ツール",
+        "description": "無料オンライン文字列難読化ツール — ブラウザでラテン文字を見た目が同じなUnicode文字に即座に置き換えます。データは保存されません。キリル文字とその他の類似文字を使用して、見た目は同じだがコードポイントが異なるテキストを作成します。"
+      },
+      "character-repeater": {
+        "name": "文字繰り返しツール",
+        "description": "無料オンライン文字繰り返しツール — ブラウザで任意のテキストまたは文字をN回即座に繰り返します。データは保存されません。繰り返し回数を設定可能（最大1000）で、繰り返し間のカスタム区切り文字が使えます。"
+      },
+      "pig-latin": {
+        "name": "ピッグラテン",
+        "description": "無料オンラインピッグラテン翻訳機 — ブラウザで英文を即座にピッグラテンに変換します。データは保存されません。子音クラスターに対応し、大文字小文字を保持し、母音で始まる単語に「yay」を追加します。"
+      },
+      "leet-speak": {
+        "name": "リートスピーク",
+        "description": "無料オンラインリートスピーク変換機 — ブラウザでプレーンテキストを1337スピークに即座に変換します。データは保存されません。一般的な置き換え（a→4、e→3、o→0、s→5、t→7など）を使用します。"
+      },
+      "emoji-converter": {
+        "name": "絵文字変換機",
+        "description": "無料オンライン絵文字変換機 — ブラウザで一般的な英単語を対応する絵文字に即座に置き換えます。データは保存されません。感情、動物、天気、食べ物、物体など70以上の単語を認識します。"
+      },
+      "zalgo-text": {
+        "name": "ザルゴテキスト",
+        "description": "無料オンラインザルゴテキスト生成機 — ブラウザで任意のテキストにグリッチ風の連字記号を即座に追加します。データは保存されません。強度を調整可能（低、中、高）で、各文字の上下に追加される連字記号の数を制御できます。"
+      },
+      "upside-down-text": {
+        "name": "上下反転テキスト",
+        "description": "無料オンライン上下反転テキスト生成機 — ブラウザでテキストをUnicode文字を使用して即座に上下反転させます。データは保存されません。文字順序を逆にし、各文字を回転した等価文字にマップします。"
+      },
+      "fancy-text": {
+        "name": "装飾テキスト",
+        "description": "無料オンライン装飾テキスト生成機 — ブラウザでプレーンテキストをUnicode装飾文字に即座に変換します。データは保存されません。太字、斜体、スクリプト、フラクトゥル、ダブルストローク、モノスペース、囲み、四角囲み、全幅スタイルに対応しています。"
+      },
+      "mime-type-reference": {
+        "name": "MIMEタイプリファレンス",
+        "description": "無料オンラインMIMEタイプリファレンス — ブラウザでファイル拡張子とそのコンテンツタイプを即座に検索できます。データは保存されません。テキスト、画像、オーディオ、ビデオ、アプリケーション、フォントなど50以上の一般的なタイプを網羅しています。"
+      },
+      "html-entity-reference": {
+        "name": "HTMLエンティティリファレンス",
+        "description": "無料オンラインHTMLエンティティリファレンス — ブラウザで名前付きエンティティ、文字、数値コードを即座に検索できます。データは保存されません。記号、矢印、通貨記号、句読点など45以上の一般的なエンティティを網羅しています。"
+      }
+    },
+    "network": {
+      "http-status-reference": {
+        "name": "HTTPステータスリファレンス",
+        "description": "無料オンラインHTTPステータスコードリファレンス — ブラウザで任意のステータスコードを検索するか説明で検索してその意味、カテゴリ、RFC仕様を即座に取得します。データは保存されません。1xx～5xxの62標準コードすべてを網羅し、「4xx」のようなカテゴリ検索をサポートしています。"
+      },
+      "subnet-calculator": {
+        "name": "サブネット計算機",
+        "description": "無料オンラインサブネット計算機 — CIDR記法またはサブネットマスク付きIPを入力するとネットワークアドレス、ブロードキャストアドレス、最初/最後のホスト、利用可能なホスト数、ワイルドカードマスク、IPクラス、2進表現をブラウザで即座に取得します。データは保存されません。"
+      },
+      "cidr-calculator": {
+        "name": "CIDR計算機",
+        "description": "無料オンラインCIDR計算機 — ブラウザでCIDR記法を入力してネットワークアドレス、ブロードキャストアドレス、サブネットマスク、ワイルドカードマスク、IPレンジを即座に取得します。データは保存されません。複数のCIDRを改行で区切って対応しています。"
+      },
+      "ip-range-calculator": {
+        "name": "IPレンジ計算機",
+        "description": "無料オンラインIPレンジ計算機 — ブラウザでCIDR、ダッシュレンジ、またはスタート/エンドIPを入力して総アドレス数、最小CIDRブロック、10進値を即座に取得します。データは保存されません。レンジが単一サブネットに整列しているかどうかを判定します。"
+      },
+      "mac-address-lookup": {
+        "name": "MACアドレス検索",
+        "description": "無料のオンラインMACアドレス検索 — MACアドレスを入力すると、ベンダー/メーカー、OUIプレフィックス、すべてのフォーマット形式（コロン、ダッシュ、ドット、ベア）、ユニキャスト/マルチキャストフラグがブラウザですぐに表示されます。データは保存されません。90以上のOUIプレフィックスに対応。"
+      },
+      "curl-builder": {
+        "name": "cURL Builder",
+        "description": "無料のオンラインcURLコマンドビルダー — URL、メソッド、ヘッダー、認証、ボディを設定して、貼り付け可能なcURLコマンドをブラウザですぐに生成します。データは保存されません。Basic/Bearer/APIキー認証、プロキシ、タイムアウト、一般的なフラグに対応。"
+      },
+      "cidr-to-range": {
+        "name": "CIDR to Range",
+        "description": "無料のオンラインCIDRからIP範囲へのコンバーター — CIDR記法を入力すると、最初のIP、最後のIP、総アドレス数、使用可能なホスト数、サブネットマスクがブラウザですぐに表示されます。データは保存されません。複数のCIDRに対応。"
+      },
+      "integer-to-ip": {
+        "name": "Integer to IP",
+        "description": "無料のオンライン整数からIPv4へのコンバーター — 10進数、16進数、または8進数の整数を入力すると、ドット区切り十進表記のIPアドレス、16進数、2進数表現がブラウザですぐに表示されます。データは保存されません。0xの16進数プレフィックスと0の8進数プレフィックスに対応。"
+      },
+      "ip-in-cidr-checker": {
+        "name": "IP in CIDR Checker",
+        "description": "無料のオンラインIP-in-CIDRチェッカー — IPアドレスとCIDR範囲を入力して、IPがサブネット内に含まれるかをブラウザですぐに確認できます。データは保存されません。ネットワークアドレス、ブロードキャストアドレス、複数のCIDRとのマッチ結果を表示。"
+      },
+      "ip-info-parser": {
+        "name": "IP Info Parser",
+        "description": "無料のオンラインIPアドレス分析ツール — IPv4またはIPv6アドレスを入力すると、バージョン、タイプ（プライベート/パブリック/ループバック/マルチキャスト）、クラス、10進数、16進数、2進数、逆引きPTRがブラウザですぐに表示されます。データは保存されません。"
+      },
+      "ip-to-integer": {
+        "name": "IP to Integer",
+        "description": "無料のオンラインIPv4から整数へのコンバーター — ドット区切り十進表記のIPアドレスを入力すると、10進数の整数、16進数、2進数、8進数、オクテット分解がブラウザですぐに表示されます。データは保存されません。"
+      },
+      "ipv6-compressor": {
+        "name": "IPv6 Compressor",
+        "description": "無料のオンラインIPv6圧縮ツール — 完全または部分的なIPv6アドレスを入力すると、::記法を使用した最短圧縮形式がブラウザですぐに表示されます。データは保存されません。複数のアドレスに対応（改行で区切られた形式）。"
+      },
+      "ipv6-expander": {
+        "name": "IPv6 Expander",
+        "description": "無料のオンラインIPv6展開ツール — 圧縮されたIPv6アドレスを入力すると、8グループ表記の完全形式、グループ、2進数、ビット数がブラウザですぐに表示されます。データは保存されません。複数のアドレスに対応（改行で区切られた形式）。"
+      },
+      "range-to-cidr": {
+        "name": "Range to CIDR",
+        "description": "無料のオンラインIP範囲からCIDRへのコンバーター — 開始-終了IP範囲を入力すると、それを正確にカバーする最小限のCIDRブロックセットがブラウザですぐに表示されます。データは保存されません。ダッシュで区切られた形式または改行で区切られた形式に対応。"
+      },
+      "har-analyzer": {
+        "name": "HAR Analyzer",
+        "description": "無料のオンラインHARファイル分析ツール — HTTPアーカイブJSONを貼り付けると、リクエスト統計、ステータスコード分布、最も遅いリクエスト、ドメイン別の内訳がブラウザですぐに表示されます。データは保存されません。ステータスコードとMIMEタイプでフィルタリングに対応。"
+      },
+      "http-headers-reference": {
+        "name": "HTTP Headers Reference",
+        "description": "無料のオンラインHTTPヘッダーリファレンス — 40以上の標準ヘッダーをカテゴリー別（リクエスト、レスポンス、セキュリティ、CORS、キャッシング）に説明と使用例付きで閲覧できます。データは保存されません。名前または説明で検索可能。"
+      },
+      "http-header-parser": {
+        "name": "HTTP Header Parser",
+        "description": "無料のオンラインHTTPヘッダーパーサー — 生のヘッダーを貼り付けると、ヘッダー数、キーバリューペア、詳細を含む構造化JSONがブラウザですぐに表示されます。データは保存されません。リクエストおよびレスポンスヘッダーに対応、HTTPステータス行をスキップ。"
+      },
+      "mime-type-lookup": {
+        "name": "MIME Type Lookup",
+        "description": "無料のオンラインMIMEタイプ検索 — ファイル拡張子またはMIMEタイプ文字列を入力すると、一致するタイプ、説明、カテゴリーがブラウザですぐに表示されます。データは保存されません。メディア、コード、フォント、アーカイブなど80以上の一般的な拡張子をカバー。"
+      }
+    },
+    "regex": {
+      "regex-tester": {
+        "name": "Regex Tester",
+        "description": "無料のオンライン正規表現テスター — ライブマッチハイライトと位置追跡で正規表現をテストできます。ブラウザですぐに実行できます。データは保存されません。マッチ位置とマッチテキストの視覚的なハイライトを表示。"
+      },
+      "regex-explainer": {
+        "name": "Regex Explainer",
+        "description": "無料のオンライン正規表現説明ツール — 任意の正規表現を平易な英語での説明に分解できます。ブラウザですぐに実行できます。データは保存されません。文字クラス、量指定子、グループ、アンカー、先読みを説明。"
+      },
+      "regex-replace": {
+        "name": "Regex Replace",
+        "description": "無料のオンライン正規表現検索・置換 — 正規表現でテキストを検索し、カスタムパターンで置換できます。ブラウザですぐに実行できます。データは保存されません。置換文字列でのキャプチャグループ参照（$1、$2）をサポート。"
+      },
+      "regex-split": {
+        "name": "Regex Split",
+        "description": "無料のオンライン正規表現テキスト分割ツール — 正規表現デリミタを使用してテキストを部分に分割できます。ブラウザですぐに実行できます。データは保存されません。カスタムフラグと設定可能な結果制限をサポート。"
+      },
+      "regex-extract": {
+        "name": "Regex Extract",
+        "description": "無料のオンライン正規表現マッチ抽出ツール — テキストからすべてのパターンマッチを検索・抽出できます。ブラウザですぐに実行できます。データは保存されません。グローバル、大文字小文字を区別しない、ユニークのみのマッチングをサポート。"
+      },
+      "regex-groups": {
+        "name": "Regex Groups",
+        "description": "無料のオンライン正規表現グループ抽出ツール — 正規表現マッチから名前付きおよび番号付きキャプチャグループを抽出できます。ブラウザですぐに実行できます。データは保存されません。各マッチのすべてのグループを明確なフォーマットで表示。"
+      },
+      "regex-flags-tester": {
+        "name": "Regex Flags Tester",
+        "description": "無料のオンライン正規表現フラグテスター — 異なる正規表現フラグ（g、i、m、s、u、y）がパターンマッチングにどのように影響するかを比較できます。ブラウザですぐに実行できます。データは保存されません。各フラグの組み合わせのマッチ数を並行表示。"
+      },
+      "regex-escape": {
+        "name": "Regex Escape",
+        "description": "無料のオンライン正規表現エスケープツール — 文字列内の特殊な正規表現文字をエスケープして、安全なリテラルマッチングができます。ブラウザですぐに実行できます。データは保存されません。ドット、括弧、かっこ、およびすべての正規表現メタ文字をエスケープ。"
+      },
+      "glob-to-regex": {
+        "name": "Glob to Regex",
+        "description": "無料のオンラインglobから正規表現へのコンバーター — globワイルドカードパターンを同等の正規表現に変換できます。ブラウザですぐに実行できます。データは保存されません。拡張glob、ブレース展開、文字クラスをサポート。"
+      },
+      "regex-to-glob": {
+        "name": "Regex to Glob",
+        "description": "無料のオンライン正規表現からglobへのコンバーター — シンプルな正規表現パターンをglobワイルドカード相当に変換できます。ブラウザですぐに実行できます。データは保存されません。パターンを正確に表現できない場合は変換上の注記を提供。"
+      },
+      "regex-optimizer": {
+        "name": "Regex Optimizer",
+        "description": "無料のオンライン正規表現オプティマイザー — より短く読みやすい正規表現の代替案を提案できます。ブラウザですぐに実行できます。データは保存されません。文字クラス、量指定子、一般的なパターンを簡素化。"
+      },
+      "common-patterns": {
+        "name": "Common Regex Patterns",
+        "description": "無料のオンライン正規表現パターンライブラリ — メール、URL、IP、電話、日付、UUIDなどの一般的な正規表現パターンを閲覧できます。ブラウザですぐに実行できます。データは保存されません。説明とテスト例付きの使用可能なパターン。"
+      },
+      "email-regex": {
+        "name": "Email Regex",
+        "description": "無料のオンラインメール正規表現ジェネレーター — 基本、標準、厳密のレベルでメール検証パターンを作成できます。ブラウザですぐに実行できます。データは保存されません。シンプルなフォーマットチェックからRFC準拠のパターンまで、設定可能な厳密性。"
+      },
+      "url-regex": {
+        "name": "URL Regex",
+        "description": "無料のオンラインURL正規表現ジェネレーター — HTTP、HTTPS、FTP、カスタムプロトコルのURLマッチングパターンを作成できます。ブラウザですぐに実行できます。データは保存されません。パス、クエリ文字列、フラグメントのマッチングをサポート。"
+      },
+      "phone-regex": {
+        "name": "Phone Regex",
+        "description": "無料のオンライン電話番号正規表現ジェネレーター — 米国、英国、国際、E.164形式の検証パターンを作成できます。ブラウザですぐに実行できます。データは保存されません。各形式のマッチング例を含む。"
+      },
+      "ip-regex": {
+        "name": "IP Address Regex",
+        "description": "無料のオンラインIPアドレス正規表現ジェネレーター — IPv4、IPv6、CIDR記法の検証パターンを作成できます。ブラウザですぐに実行できます。データは保存されません。厳密なオクテット検証とサブネットマスクパターンをサポート。"
+      },
+      "date-regex": {
+        "name": "Date Regex",
+        "description": "無料のオンライン日付正規表現ジェネレーター — ISO 8601、米国、EU、英国、日時形式の検証パターンを作成できます。ブラウザですぐに実行できます。データは保存されません。各形式のマッチング例を含む。"
+      },
+      "credit-card-regex": {
+        "name": "Credit Card Regex",
+        "description": "無料のオンラインクレジットカード正規表現ジェネレーター — Visa、Mastercard、Amex、Discover、Diners、JCBカードの検証パターンを作成できます。ブラウザですぐに実行できます。データは保存されません。設定可能なカード種別を使用したフォーマットのみの検証。"
+      },
+      "password-regex": {
+        "name": "Password Regex",
+        "description": "無料のオンラインパスワード正規表現ジェネレーター — 大文字、小文字、数字、特殊文字の要件を備えたカスタマイズ可能なパスワード検証パターンを作成できます。ブラウザですぐに実行できます。データは保存されません。最小および最大長を設定可能。"
+      }
+    },
+    "sql": {
+      "formatter": {
+        "name": "SQL Formatter",
+        "description": "無料のオンラインSQLフォーマッター — SQLクエリを適切なインデントとキーワードケースでフォーマットおよび見やすく印刷できます。ブラウザですぐに実行できます。データは保存されません。SELECT、INSERT、UPDATE、DELETE、CREATE TABLE、複雑なJOINクエリをサポート。"
+      },
+      "minify": {
+        "name": "SQL Minifier",
+        "description": "無料のオンラインSQLミニファイアー — 空白、コメント、不要なフォーマットを削除してSQLクエリを圧縮できます。ブラウザですぐに実行できます。データは保存されません。文字列リテラルとクエリのセマンティクスを保持。"
+      },
+      "validator": {
+        "name": "SQL Validator",
+        "description": "無料のオンラインSQLバリデーター — SQLクエリの構文エラー、欠落した句、WHEREなしのDELETEなどの一般的な問題をチェックできます。ブラウザですぐに実行できます。データは保存されません。ステートメント数、種別、警告を報告。"
+      },
+      "to-json": {
+        "name": "SQL to JSON",
+        "description": "無料のオンラインSQLからJSONへのコンバーター — SQLクエリを詳細なAST JSON表現に解析でき、列参照、テーブル参照、バイナリ式、句構造を含みます。ブラウザですぐに実行できます。データは保存されません。"
+      },
+      "sql-parser": {
+        "name": "SQL Parser",
+        "description": "無料のオンラインSQLパーサー — SQLクエリを列、テーブル、条件、句を含む構造化AST風JSONに解析できます。ブラウザですぐに実行できます。データは保存されません。"
+      },
+      "sql-explainer": {
+        "name": "SQL Explainer",
+        "description": "無料のオンラインSQL説明ツール — SQLクエリを平易な英語での説明に変換でき、句ごとの内訳を含みます。ブラウザですぐに実行できます。データは保存されません。SELECT、JOIN、WHERE、GROUP BY、サブクエリを説明。"
+      },
+      "sql-to-nosql": {
+        "name": "SQL to NoSQL",
+        "description": "無料のオンラインSQLからNoSQLへのコンバーター — SQLのSELECTクエリをMongoDB形式のfind、sort、limit、クエリ構文に変換できます。ブラウザですぐに実行できます。データは保存されません。"
+      },
+      "sql-dialect-converter": {
+        "name": "SQL Dialect Converter",
+        "description": "無料のオンラインSQL言語コンバーター — MySQL、PostgreSQL、SQLiteの間でSQL構文を即座にブラウザ内で変換できます。データは保存されません。AUTO_INCREMENT vs SERIAL、TINYINT vs BOOLEAN、エンジン句、クォート規則の違いに対応しています。"
+      },
+      "sql-query-builder": {
+        "name": "SQLクエリビルダー",
+        "description": "無料のオンラインSQLクエリビルダー — MySQL、PostgreSQL、SQLiteの言語サポート付きSELECT、INSERT、UPDATE、DELETEクエリをパラメータから即座にブラウザ内で構築できます。データは保存されません。"
+      },
+      "sql-index-suggester": {
+        "name": "SQLインデックスサジェスター",
+        "description": "無料のオンラインSQLインデックスサジェスター — クエリを分析してWHERE、JOIN、ORDER BY列に対するCREATE INDEXステートメントを推奨し、即座にブラウザ内で生成できます。データは保存されません。"
+      },
+      "json-to-sql-insert": {
+        "name": "JSONからSQL INSERT",
+        "description": "無料のオンラインJSONからSQL INSERTコンバーター — JSONの配列またはオブジェクトをSQL INSERTステートメントに即座にブラウザ内で変換できます。データは保存されません。JSONキーから列名を自動検出し、ネストされた値に対応しています。"
+      },
+      "csv-to-sql-insert": {
+        "name": "CSVからSQL INSERT",
+        "description": "無料のオンラインCSVからSQL INSERTコンバーター — CSVデータをSQL INSERTステートメントに即座にブラウザ内で変換できます。データは保存されません。引用値、カスタムテーブル名に対応し、適切にエスケープされたSQLを生成します。"
+      },
+      "connection-string-builder": {
+        "name": "接続文字列ビルダー",
+        "description": "無料のオンラインデータベース接続文字列ビルダー — PostgreSQL、MySQL、MongoDB、Redis、SQLite、MSSQLの接続URIをパラメータから即座にブラウザ内で生成できます。データは保存されません。URI、キー値、環境変数出力形式をサポートしています。"
+      },
+      "dsn-parser": {
+        "name": "DSNパーサー",
+        "description": "無料のオンラインDSNパーサー — PHP PDO、JDBC、ODBC、ADO.NETのデータソース名文字列を構造化コンポーネントに即座にブラウザ内で解析できます。データは保存されません。ドライバ、ホスト、ポート、データベース、接続パラメータを抽出します。"
+      },
+      "redis-command-builder": {
+        "name": "Redisコマンドビルダー",
+        "description": "無料のオンラインRedisコマンドビルダー — GET、SET、HSET、LPUSH、SADD、ZADDなどのRedisコマンドをCLI、Node.js、またはPython形式で即座にブラウザ内で生成できます。データは保存されません。"
+      },
+      "mongodb-query-builder": {
+        "name": "MongoDBクエリビルダー",
+        "description": "無料のオンラインMongoDBクエリビルダー — find、insert、update、delete、aggregate、count、distinctクエリをシェル、Node.js、またはPython形式で即座にブラウザ内で構築できます。データは保存されません。"
+      },
+      "elasticsearch-query-builder": {
+        "name": "Elasticsearchクエリビルダー",
+        "description": "無料のオンラインElasticsearchクエリビルダー — match、term、range、bool、wildcardクエリをJSON、cURL、またはPython形式で即座にブラウザ内で構築できます。データは保存されません。ページネーション、ソート、複雑なboolean クエリに対応しています。"
+      },
+      "database-url-converter": {
+        "name": "データベースURLコンバーター",
+        "description": "無料のオンラインデータベースURLコンバーター — データベース接続URLをenv、JSON、YAML、Prisma、Sequelize、TypeORM、Knex、Django、Laravel、Spring設定形式に即座にブラウザ内で変換できます。データは保存されません。"
+      },
+      "er-diagram-generator": {
+        "name": "ERダイアグラムジェネレーター",
+        "description": "無料のオンラインERダイアグラムジェネレーター — SQL CREATE TABLEステートメントからエンティティ関係図を即座にブラウザ内で作成できます。データは保存されません。テーブル、列、型、リレーションシップを含むMermaidダイアグラム構文を生成します。"
+      },
+      "create-table-generator": {
+        "name": "CREATE TABLEジェネレーター",
+        "description": "無料のオンラインCREATE TABLEジェネレーター — 列定義と制約からSQL CREATE TABLEステートメントを即座にブラウザ内で構築できます。データは保存されません。主キー、ユニーク制約、NOT NULL、デフォルト値、自動増分、外部キー、チェック制約に対応しています。"
+      },
+      "diff": {
+        "name": "SQLダイフ",
+        "description": "無料のオンラインSQLダイフツール — 2つのSQLクエリを並べて比較し、列、テーブル、結合、句の構造的な違いを即座にブラウザ内で検出できます。データは保存されません。"
+      },
+      "escape": {
+        "name": "SQLエスケープ",
+        "description": "無料のオンラインSQLエスケープツール — SQL文字列の特殊文字をエスケープして構文エラーを防ぎ、即座にブラウザ内で実行できます。データは保存されません。MySQL、PostgreSQL、SQLite、MSSQLのエスケープ規則に対応しています。"
+      },
+      "explain-visualizer": {
+        "name": "EXPLAIN可視化ツール",
+        "description": "無料のオンラインSQL EXPLAIN可視化ツール — PostgreSQLとMySQLのクエリ実行プランを解析して可視化し、即座にブラウザ内で表示できます。データは保存されません。スキャンタイプ、コスト、行推定値、パフォーマンス警告を表示します。"
+      },
+      "index-advisor": {
+        "name": "インデックスアドバイザー",
+        "description": "無料のオンラインSQLインデックスアドバイザー — SQLクエリを分析してWHERE、JOIN、ORDER BY、GROUP BY句に最適なインデックスを提案し、即座にブラウザ内で生成できます。データは保存されません。すぐに使えるCREATE INDEXステートメントを生成します。"
+      },
+      "insert-generator": {
+        "name": "INSERTジェネレーター",
+        "description": "無料のオンラインSQL INSERTジェネレーター — テーブル名、列定義、行データからINSERTステートメントを即座にブラウザ内で構築できます。データは保存されません。複数行、バッチインサート、様々なSQL言語に対応しています。"
+      },
+      "migration-generator": {
+        "name": "マイグレーションジェネレーター",
+        "description": "無料のオンラインSQLマイグレーションジェネレーター — 構造化されたアクションからup及びdown操作を伴うデータベースマイグレーションスクリプトを即座にブラウザ内で作成できます。データは保存されません。列の追加/削除、テーブルの作成/削除、インデックスの追加/削除、名前変更操作に対応しています。"
+      },
+      "schema-diff": {
+        "name": "スキーマダイフ",
+        "description": "無料のオンラインSQLスキーマダイフツール — 2つのデータベーススキーマを比較して、追加、削除、変更された列に対するALTER TABLEマイグレーションステートメントを即座にブラウザ内で生成できます。データは保存されません。"
+      },
+      "select-builder": {
+        "name": "SELECTビルダー",
+        "description": "無料のオンラインSQL SELECTビルダー — 結合、WHERE、GROUP BY、HAVING、ORDER BY、LIMIT句を含むSELECTクエリを構造化入力から即座にブラウザ内で構築できます。データは保存されません。"
+      }
+    },
+    "svg": {
+      "svg-optimizer": {
+        "name": "SVG最適化ツール",
+        "description": "無料のオンラインSVG最適化ツール — コメント、メタデータ、空白を削除して色を短縮し、SVGファイルサイズを即座にブラウザ内で削減できます。データは保存されません。各最適化パスの設定可能なオプションがあります。"
+      },
+      "svg-viewer": {
+        "name": "SVGビューアー",
+        "description": "無料のオンラインSVGビューアー — SVGグラフィックスをプレビュー及び検査して、寸法情報と要素数を即座にブラウザ内に表示できます。データは保存されません。幅、高さ、viewBox、SVG要素の内訳を表示します。"
+      },
+      "svg-to-png": {
+        "name": "SVGからPNG",
+        "description": "無料のオンラインSVGからPNGコンバーター — SVGベクターグラフィックスを透過サポート付きPNG形式にラスタライズし、即座にブラウザ内で変換できます。データは保存されません。高DPI出力用のカスタムスケール係数に対応しています。"
+      },
+      "svg-to-jpg": {
+        "name": "SVGからJPG",
+        "description": "無料のオンラインSVGからJPGコンバーター — SVGベクターグラフィックスを設定可能な品質でJPEG形式にラスタライズし、即座にブラウザ内で変換できます。データは保存されません。カスタム背景色とJPEG圧縮品質に対応しています。"
+      },
+      "svg-to-base64": {
+        "name": "SVGからBase64",
+        "description": "無料のオンラインSVGからBase64コンバーター — SVGソースコードをBase64データURLにエンコードし、即座にブラウザ内で実行できます。データは保存されません。すぐに使えるdata:image/svg+xml;base64 URIを生成します。"
+      },
+      "svg-to-data-uri": {
+        "name": "SVGからData URI",
+        "description": "無料のオンラインSVGからData URIコンバーター — Base64より効率的なURLエンコードされたSVGデータURIを即座にブラウザ内で作成できます。データは保存されません。最小限のエンコードを伴ったすぐに使えるdata:image/svg+xml URIを生成します。"
+      },
+      "svg-formatter": {
+        "name": "SVGフォーマッター",
+        "description": "無料のオンラインSVGフォーマッター — SVGソースコードを整形してインデント付きで即座にブラウザ内で表示できます。データは保存されません。設定可能なインデントサイズとタブまたはスペースに対応しています。"
+      },
+      "svg-path-editor": {
+        "name": "SVGパス分析ツール",
+        "description": "無料のオンラインSVGパス分析ツール — SVGパスコマンドを解析して詳細な内訳を伴って即座にブラウザ内で可視化できます。データは保存されません。コマンドタイプ、統計、曲線、円弧、閉鎖などのパスプロパティを表示します。"
+      },
+      "svg-to-css": {
+        "name": "SVGからCSS",
+        "description": "無料のオンラインSVGからCSSコンバーター — SVGをCSSのbackground-image、mask-image、content プロパティとして即座にブラウザ内に埋め込めます。データは保存されません。設定可能なセレクタとサイズを伴ったすぐに使えるCSSを生成します。"
+      },
+      "svg-sprite-generator": {
+        "name": "SVGスプライトジェネレーター",
+        "description": "無料のオンラインSVGスプライトジェネレーター — 複数のSVGアイコンをシンボル要素を伴った単一のスプライトシートに即座にブラウザ内で結合できます。データは保存されません。各アイコンのuse タグ参照を生成します。"
+      },
+      "svg-color-changer": {
+        "name": "SVG色変更ツール",
+        "description": "無料のオンラインSVG色変更ツール — SVGソースコード内の色を検索して置換し、即座にブラウザ内で実行できます。データは保存されません。16進数、RGB、名前付き色に対応し、大文字小文字を区別しないマッチングをサポートしています。"
+      },
+      "svg-wave-generator": {
+        "name": "SVG波線ジェネレーター",
+        "description": "無料のオンラインSVG波線ジェネレーター — セクション背景とページディバイダー用の層状の波線パターンを即座にブラウザ内で作成できます。データは保存されません。複数の波線層、カスタム色、振幅、周波数、垂直反転に対応しています。"
+      },
+      "svg-blob-generator": {
+        "name": "SVGブロブジェネレーター",
+        "description": "無料のオンラインSVGブロブジェネレーター — Catmull-Romスプライン曲線を伴った有機的でなめらかなブロブ形状を即座にブラウザ内で作成できます。データは保存されません。設定可能な複雑さ、色、ストローク、再現可能なシードに対応しています。"
+      },
+      "svg-pattern-generator": {
+        "name": "SVGパターンジェネレーター",
+        "description": "無料のオンラインSVGパターンジェネレーター — ドット、ライン、グリッド、ディアゴナル、クロスハッチ、シェブロン、ジグザグ、ヘキサゴンなどの繰り返しパターンを即座にブラウザ内で作成できます。データは保存されません。カスタムタイルサイズ、色、不透明度に対応しています。"
+      },
+      "svg-avatar-generator": {
+        "name": "SVGアバタージェネレーター",
+        "description": "無料のオンラインSVGアバタージェネレーター — イニシャル、幾何学的パターン、またはリングスタイルを伴ったプロフィール画像プレースホルダーを即座にブラウザ内で作成できます。データは保存されません。円形、正方形、角丸形状をカスタム色とサイズで対応しています。"
+      },
+      "svg-divider-generator": {
+        "name": "SVGディバイダージェネレーター",
+        "description": "無料のオンラインSVGディバイダージェネレーター — 波線、三角形、曲線、スラント、ジグザグ、矢印、角丸スタイルのセクションディバイダーを即座にブラウザ内で作成できます。データは保存されません。カスタム色、サイズ、垂直反転に対応しています。"
+      },
+      "svg-background-generator": {
+        "name": "SVG背景ジェネレーター",
+        "description": "無料のオンラインSVG背景ジェネレーター — 円、三角形、地形図、波線、ノイズパターンを伴った装飾的なグラデーション背景を即座にブラウザ内で作成できます。データは保存されません。カスタム色、サイズ、不透明度、再現可能なシードに対応しています。"
+      }
+    },
+    "validation": {
+      "email-validator": {
+        "name": "メールバリデーター",
+        "description": "無料のオンラインメールアドレスバリデーター — メールアドレスがRFC 5322形式に従っているかを即座にブラウザ内で確認できます。データは保存されません。ローカルパート、ドメイン、全体構造を検証します。"
+      },
+      "url-validator": {
+        "name": "URLバリデーター",
+        "description": "無料のオンラインURLバリデーター — URLが適切にフォーマットされているかを即座にブラウザ内で確認できます。データは保存されません。プロトコル、ホスト、パス、クエリパラメータ、フラグメントを解析して表示します。"
+      },
+      "phone-validator": {
+        "name": "電話番号バリデーター",
+        "description": "無料のオンライン電話番号検証ツール — 電話番号が国際E.164形式に準拠しているかどうかをブラウザで即座にチェックできます。データは保存されません。桁数と国コードプレフィックスを検証します。"
+      },
+      "uuid-validator": {
+        "name": "UUID検証ツール",
+        "description": "無料のオンラインUUID検証ツール — UUIDが正しくフォーマットされているかどうかをチェックし、バージョンを特定します。ブラウザで即座に実行でき、データは保存されません。RFC 4122に基づいたバージョン1～7の8-4-4-4-12形式を検証します。"
+      },
+      "mac-address-validator": {
+        "name": "MACアドレス検証ツール",
+        "description": "無料のオンラインMACアドレス検証ツール — MACアドレスが正しくフォーマットされているかどうかをブラウザで即座にチェックできます。データは保存されません。コロン区切り、ハイフン区切り、ドット区切り記法に対応しています。"
+      },
+      "ipv4-validator": {
+        "name": "IPv4検証ツール",
+        "description": "無料のオンラインIPv4アドレス検証ツール — IPアドレスが正しくフォーマットされているかどうかをブラウザで即座にチェックできます。データは保存されません。オクテット範囲を検証し、アドレスタイプ（パブリック、プライベート、ループバック、マルチキャスト）を特定します。"
+      },
+      "ipv6-validator": {
+        "name": "IPv6検証ツール",
+        "description": "無料のオンラインIPv6アドレス検証ツール — IPv6アドレスが正しくフォーマットされているかどうかをブラウザで即座にチェックできます。データは保存されません。フル形式と短縮形式を検証し、アドレスタイプ（ループバック、リンクローカル、マルチキャスト）を特定します。"
+      },
+      "domain-validator": {
+        "name": "ドメイン検証ツール",
+        "description": "無料のオンラインドメイン名検証ツール — ドメイン名が正しくフォーマットされているかどうかをブラウザで即座にチェックできます。データは保存されません。ラベル、長さ制限、TLDの有無、RFC準拠の文字使用法を検証します。"
+      },
+      "hostname-validator": {
+        "name": "ホスト名検証ツール",
+        "description": "無料のオンラインホスト名検証ツール — ホスト名がRFC 1123形式に準拠しているかどうかをブラウザで即座にチェックできます。データは保存されません。ラベルの長さ、文字セット、ホスト名構造全体を検証します。"
+      },
+      "slug-validator": {
+        "name": "スラッグ検証ツール",
+        "description": "無料のオンラインURLスラッグ検証ツール — 文字列が有効なURL対応スラッグであるかどうかをブラウザで即座にチェックできます。データは保存されません。SEOベストプラクティスに基づいて、小文字、数字、ハイフンを検証します。"
+      },
+      "semver-validator": {
+        "name": "SemVer検証ツール",
+        "description": "無料のオンラインセマンティックバージョン検証ツール — バージョン文字列がSemVer 2.0形式に準拠しているかどうかをブラウザで即座にチェックできます。データは保存されません。メジャー、マイナー、パッチ、プレリリース、ビルドメタデータコンポーネントを解析します。"
+      },
+      "hex-color-validator": {
+        "name": "16進カラー検証ツール",
+        "description": "無料のオンライン16進カラー検証ツール — 16進カラーコードが有効であるかどうかをブラウザで即座にチェックできます。データは保存されません。3桁、4桁（アルファ付き）、6桁、8桁（アルファ付き）の16進形式に対応しており、#プレフィックスが必須です。"
+      },
+      "credit-card-validator": {
+        "name": "クレジットカード検証ツール",
+        "description": "無料のオンラインクレジットカード検証ツール — カード番号がLuhnアルゴリズムに適合しているかどうかをブラウザで即座にチェックできます。データは保存されません。カードタイプ（Visa、Mastercard、Amex、Discover）を検出し、表示用に番号をマスクします。"
+      },
+      "isbn-validator": {
+        "name": "ISBN検証ツール",
+        "description": "無料のオンラインISBN検証ツール — ISBN-10またはISBN-13番号が有効であるかどうかをブラウザで即座にチェックできます。データは保存されません。チェックディジットを検証し、両方のフォーマットに対応したISBNを正規化します。"
+      },
+      "issn-validator": {
+        "name": "ISSN検証ツール",
+        "description": "無料のオンラインISSN検証ツール — 国際標準逐次刊行物番号が有効であるかどうかをブラウザで即座にチェックできます。データは保存されません。チェックディジットを検証し、8桁のISSN形式を検証します。"
+      },
+      "doi-validator": {
+        "name": "DOI検証ツール",
+        "description": "無料のオンラインDOI検証ツール — デジタルオブジェクト識別子形式をブラウザで即座に検証できます。データは保存されません。DOI仕様に従ってDOIプレフィックスとサフィックス構造を検証します。"
+      },
+      "json-validator": {
+        "name": "JSON検証ツール",
+        "description": "無料のオンラインJSON検証ツール — JSONデータの構文エラーをブラウザで即座にチェックできます。データは保存されません。トップレベルタイプ（オブジェクト、配列、文字列、数値、ブール値、null）を検出し、構造を検証します。"
+      },
+      "xml-validator": {
+        "name": "XML検証ツール",
+        "description": "無料のオンラインXML検証ツール — XMLドキュメントの整形式エラーをブラウザで即座にチェックできます。データは保存されません。タグマッチング、適切なネスト、XML宣言の構文を検証します。"
+      },
+      "yaml-validator": {
+        "name": "YAML検証ツール",
+        "description": "無料のオンラインYAML検証ツール — YAMLドキュメントの構文エラーをブラウザで即座にチェックできます。データは保存されません。インデント、キー値ペア、シーケンス、ネストされた構造を検証します。"
+      },
+      "toml-validator": {
+        "name": "TOML検証ツール",
+        "description": "無料のオンラインTOML検証ツール — TOML設定ファイルの構文エラーをブラウザで即座にチェックできます。データは保存されません。テーブル、キー値ペア、配列、インラインテーブルを検証します。"
+      },
+      "csv-validator": {
+        "name": "CSV検証ツール",
+        "description": "無料のオンラインCSV検証ツール — CSVデータのフォーマットエラーと列の一貫性をブラウザで即座にチェックできます。データは保存されません。行構造、列数を検証し、総行数と列数を報告します。"
+      },
+      "html-validator": {
+        "name": "HTML検証ツール",
+        "description": "無料のオンラインHTML検証ツール — HTMLのタグマッチングと構造エラーをブラウザで即座にチェックできます。データは保存されません。開始タグと終了タグのペア、ネスト、自己終了要素を検証します。"
+      },
+      "css-validator": {
+        "name": "CSS検証ツール",
+        "description": "無料のオンラインCSS構文検証ツール — スタイルシートの構文エラーをブラウザで即座にチェックできます。データは保存されません。セレクタ、プロパティ、値、メディアクエリ、ネストされたルールを検証します。"
+      },
+      "javascript-validator": {
+        "name": "JavaScript検証ツール",
+        "description": "無料のオンラインJavaScript構文検証ツール — JSコードの構文エラーをブラウザで即座にチェックできます。データは保存されません。アロー関数、テンプレートリテラル、分割代入を含むES2020+構文を解析します。"
+      },
+      "sql-validator": {
+        "name": "SQL検証ツール",
+        "description": "無料のオンラインSQL構文検証ツール — SQLクエリの基本的な構文エラーをブラウザで即座にチェックできます。データは保存されません。SELECT、INSERT、UPDATE、DELETE、CREATEステートメントを検証します。"
+      },
+      "cron-validator-tool": {
+        "name": "Cron検証ツール",
+        "description": "無料のオンラインCron式検証ツール — Cronスケジュール構文をブラウザで即座に検証できます。データは保存されません。分、時、日、月、曜日フィールドを解析し、範囲、ステップ、ワイルドカード対応します。"
+      }
+    },
+    "web": {
+      "meta-tag-generator": {
+        "name": "メタタグジェネレータ",
+        "description": "無料のオンラインHTMLメタタグジェネレータ — SEO、ビューポート、文字セット、ソーシャルディスカバリー用の必須メタタグをブラウザで即座に生成できます。データは保存されません。タイトル、説明、キーワード、著者、ロボット指示、テーマカラーを設定できます。"
+      },
+      "og-generator": {
+        "name": "Open Graphジェネレータ",
+        "description": "無料のオンラインOpen Graphメタタグジェネレータ — Facebook、LinkedIn、その他のソーシャルメディアリッチプレビュー用のog:メタタグをブラウザで即座に生成できます。データは保存されません。タイトル、説明、画像寸法、タイプ、サイト名、ロケールを設定できます。"
+      },
+      "twitter-card-generator": {
+        "name": "Twitterカードジェネレータ",
+        "description": "無料のオンラインTwitterカードメタタグジェネレータ — サマリー、大画像、アプリ、プレイヤーカードタグをブラウザで即座に生成し、ソーシャルプレビューをリッチにできます。データは保存されません。カードタイプ、画像、サイトハンドル、クリエイターハンドルを設定できます。"
+      },
+      "schema-org-generator": {
+        "name": "Schema.orgジェネレータ",
+        "description": "無料のオンラインSchema.org JSON-LDジェネレータ — 記事、商品、組織、イベントなどの構造化データマークアップをブラウザで即座に生成できます。データは保存されません。リッチサーチ結果用のスクリプトタグがそのまま貼り付け可能な形式で出力されます。"
+      },
+      "robots-txt-generator": {
+        "name": "robots.txtジェネレータ",
+        "description": "無料のオンラインrobots.txtジェネレータ — クローラー指示をブラウザで即座に生成でき、拒否パス、サイトマップURL、クロール遅延設定をサポートします。データは保存されません。カスタムボット固有のルールと複数のパスエントリに対応しています。"
+      },
+      "robots-txt-validator": {
+        "name": "robots.txt検証ツール",
+        "description": "無料のオンラインrobots.txt検証ツール — robots.txt構文、指示、クロールルールのエラーをブラウザで即座にチェックできます。データは保存されません。User-agent、Disallow、Allow、Sitemap、Crawl-delay指示を検証します。"
+      },
+      "sitemap-generator": {
+        "name": "サイトマップジェネレータ",
+        "description": "無料のオンラインXMLサイトマップジェネレータ — sitemap.xmlファイルをブラウザで即座に生成でき、変更頻度、優先度、最終更新日時の設定に対応しています。データは保存されません。複数のURLを各エントリのSEOメタデータ設定で対応しています。"
+      },
+      "sitemap-validator": {
+        "name": "サイトマップ検証ツール",
+        "description": "無料のオンラインXMLサイトマップ検証ツール — sitemap.xml構造、URLエントリ、名前空間宣言のエラーをブラウザで即座にチェックできます。データは保存されません。loc、changefreq、priority、URLカウント制限を検証します。"
+      },
+      "canonical-url-builder": {
+        "name": "正規化URLビルダー",
+        "description": "無料のオンライン正規化URLビルダー — 重複コンテンツ問題を防ぐための正規化リンクタグをブラウザで即座に生成できます。データは保存されません。HTMLリンクタグとHTTPヘッダー形式に対応しています。"
+      },
+      "hreflang-generator": {
+        "name": "Hreflangジェネレータ",
+        "description": "無料のオンラインHreflangタグジェネレータ — 多言語・多地域SEO用のhreflangリンクタグをブラウザで即座に生成できます。データは保存されません。x-defaultフォールバック付き代替リンクタグを生成します。"
+      },
+      "meta-preview": {
+        "name": "メタプレビュー",
+        "description": "無料のオンラインメタタグプレビュー — ページがGoogle検索結果にどのように表示されるかをタイトル長と説明分析とともにブラウザで即座に確認できます。データは保存されません。文字数インジケータ付きのSERPプレビューを表示します。"
+      },
+      "social-preview": {
+        "name": "ソーシャルプレビュー",
+        "description": "無料のオンラインソーシャルメディアプレビュー — Open GraphとTwitterカード分析を含め、ページがFacebookとTwitterで共有されたときの見え方をブラウザで即座に確認できます。データは保存されません。Facebookカード、Twitterカード、検出されたメタタグ値を表示します。"
+      },
+      "csp-builder": {
+        "name": "CSPビルダー",
+        "description": "無料のオンラインCSPビルダー — Content Security Policyヘッダーをディレクティブ設定とサーバー設定例とともにブラウザで即座に生成できます。データは保存されません。ヘッダー、HTMLメタタグ、Apache、Nginx形式を生成します。"
+      },
+      "csp-validator": {
+        "name": "CSP検証ツール",
+        "description": "無料のオンラインCSP検証ツール — Content Security Policyヘッダーの構文エラーとセキュリティ警告をブラウザで即座にチェックできます。データは保存されません。unsafe-inline、ワイルドカードソース、重複したディレクティブ、推奨ポリシーの欠落を検出します。"
+      },
+      "cors-builder": {
+        "name": "CORSビルダー",
+        "description": "無料のオンラインCORSヘッダービルダー — Express、Nginx、Apacheの例とともにCross-Origin Resource Sharingヘッダーをブラウザで即座に設定できます。データは保存されません。許可されたオリジン、メソッド、ヘッダー、認証情報、プリフライトキャッシュ期間に対応しています。"
+      },
+      "sri-hash-generator": {
+        "name": "SRIハッシュジェネレータ",
+        "description": "無料のオンラインSRIハッシュジェネレータ — SHA-256、SHA-384、SHA-512でスクリプトとスタイルシート用のSubresource Integrityハッシュをブラウザで即座に生成できます。データは保存されません。完成度の高いスクリプトタグとリンクタグ付きのintegrityアトリビュートが出力されます。"
+      },
+      "security-headers-check": {
+        "name": "セキュリティヘッダーチェック",
+        "description": "無料のセキュリティヘッダーアナライザー — HTTP応答ヘッダーを監査し、OWASP セキュリティベストプラクティスに対してブラウザでセキュリティスコアを即座に取得します。データは保存されません。CSP、HSTS、X-Frame-Options、Referrer-Policyおよび他7つのヘッダーをチェックします。"
+      },
+      "hsts-builder": {
+        "name": "HSTS Builder",
+        "description": "無料のオンラインHSTSヘッダービルダー — HTTP Strict Transport Securityヘッダーを生成し、Apache、Nginx、Expressの設定例をブラウザで即座に利用できます。データは保存されません。プリロード適格性とサブドメイン包含に対応しています。"
+      },
+      "permissions-policy-builder": {
+        "name": "Permissions Policy Builder",
+        "description": "無料のオンラインPermissions-Policyヘッダービルダー — カメラ、マイク、位置情報など、ブラウザ機能へのアクセスをブラウザで即座に制御できます。データは保存されません。Apache、Nginx、Expressの設定例を含むヘッダーを生成します。"
+      },
+      "xss-filter-tester": {
+        "name": "XSS Filter Tester",
+        "description": "無料のオンラインXSSフィルタテスター — 入力文字列のクロスサイトスクリプティングパターンを検出し、重大度評価とサニタイズされた出力をブラウザで即座に確認できます。データは保存されません。スクリプトタグ、イベントハンドラ、JavaScript URIおよび15以上の攻撃パターンをテストします。"
+      }
+    }
+  }
+}
