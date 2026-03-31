@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { KeyboardShortcut } from "@/components/shared/keyboard-shortcut";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
-import { LocaleSwitcher } from "@/components/layout/locale-switcher";
 import { useKeyboard } from "@/components/providers/keyboard-provider";
 import { cn } from "@/lib/utils";
 
@@ -96,7 +95,6 @@ export function Header({
               </svg>
             </a>
           </Button>
-          <LocaleSwitcher />
           <ThemeToggle size="sm" />
         </div>
       </div>

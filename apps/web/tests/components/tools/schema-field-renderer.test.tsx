@@ -300,7 +300,7 @@ describe("SchemaFieldRenderer", () => {
           onChange={noop}
         />
       );
-      expect(screen.getByText("myFlag")).toBeInTheDocument();
+      expect(screen.getByText("My Flag")).toBeInTheDocument();
     });
   });
 
