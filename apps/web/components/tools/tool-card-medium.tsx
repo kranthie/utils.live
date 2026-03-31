@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { LucideIcon } from "@/components/shared/lucide-icon";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";

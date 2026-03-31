@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
+import type { AbstractIntlMessages } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ToastProvider } from "@/components/providers/toast-provider";
@@ -115,8 +116,9 @@ export default async function LocaleLayout({
 
   // Load messages directly (avoids next-intl/config alias requirement with Turbopack)
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-  const messages = (await import(`@/messages/${locale}.json`))
-    .default as Record<string, unknown>;
+  const messages: AbstractIntlMessages = (
+    await import(`@/messages/${locale}.json`)
+  ).default as AbstractIntlMessages;
 
   // Generate search data server-side to avoid importing @utils-live/tools in the client bundle
   const searchTools = getSearchTools();

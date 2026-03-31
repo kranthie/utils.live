@@ -2,39 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Zap, Shield, Globe, Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { fadeInUp, staggerContainer, VIEWPORT_ONCE } from "@/lib/animation";
 import { cn } from "@/lib/utils";
-
-function getFeatures(
-  toolCountLabel: string
-): { icon: typeof Zap; title: string; description: string }[] {
-  return [
-    {
-      icon: Zap,
-      title: "Instant Results",
-      description:
-        "Client-side tools run in your browser with zero latency. No waiting, no server round-trips.",
-    },
-    {
-      icon: Shield,
-      title: "Privacy First",
-      description:
-        "Your data never leaves your device. We don\u2019t track, store, or analyze your tool inputs.",
-    },
-    {
-      icon: Globe,
-      title: "Free & Open Source",
-      description:
-        "Every tool is completely free to use. No accounts, no paywalls, no usage limits. Fully open source.",
-    },
-    {
-      icon: Sparkles,
-      title: `${toolCountLabel} Tools`,
-      description:
-        "A comprehensive collection of developer utilities — from JSON formatting to image processing.",
-    },
-  ];
-}
 
 interface FeatureCardsProps {
   toolCountLabel: string;
@@ -45,12 +15,36 @@ export function FeatureCards({
   toolCountLabel,
   className,
 }: FeatureCardsProps): React.ReactElement {
-  const FEATURES = getFeatures(toolCountLabel);
+  const t = useTranslations("home.features");
+
+  const FEATURES = [
+    {
+      icon: Zap,
+      title: t("instantResults.title"),
+      description: t("instantResults.description"),
+    },
+    {
+      icon: Shield,
+      title: t("privacyFirst.title"),
+      description: t("privacyFirst.description"),
+    },
+    {
+      icon: Globe,
+      title: t("freeOpenSource.title"),
+      description: t("freeOpenSource.description"),
+    },
+    {
+      icon: Sparkles,
+      title: t("toolsCount.title", { toolCountLabel }),
+      description: t("toolsCount.description"),
+    },
+  ];
+
   return (
     <section className={cn("bg-muted/30 border-t py-12 sm:py-16", className)}>
       <div className="container">
         <p className="text-brand mb-3 text-center text-xs font-semibold tracking-widest uppercase">
-          Why utils.live
+          {t("eyebrow")}
         </p>
         <motion.h2
           className="mb-8 text-center text-2xl font-bold sm:text-3xl"
@@ -59,7 +53,7 @@ export function FeatureCards({
           whileInView="visible"
           viewport={VIEWPORT_ONCE}
         >
-          Why developers choose utils.live
+          {t("heading")}
         </motion.h2>
         <motion.div
           className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4"

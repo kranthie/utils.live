@@ -8,6 +8,7 @@ import {
   RotateCcw,
   Keyboard,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import type {
   ToolMeta,
   ToolUIConfig,
@@ -68,6 +69,7 @@ export function ToolPageClient({
   relatedTools,
   examples,
 }: ToolPageClientProps): React.ReactElement {
+  const t = useTranslations("tools.shell");
   // Determine tool variant
   const variant = useMemo(
     () => getToolVariant(tool, inputSchema, DIFF_TOOL_PATTERNS),
@@ -146,7 +148,7 @@ export function ToolPageClient({
           // localStorage unavailable - ignore
         }
         setPendingGeneratorExample((prev) => ({ values, seq: prev.seq + 1 }));
-        toast.success("Example loaded");
+        toast.success(t("exampleLoaded"));
         return;
       }
 
@@ -171,7 +173,7 @@ export function ToolPageClient({
       setExampleInput((prev) => ({ value: inputStr, seq: prev.seq + 1 }));
       toast.success("Example loaded");
     },
-    [optionsStorageKey, inputStorageKey, variant, inputSchema]
+    [optionsStorageKey, inputStorageKey, variant, inputSchema, t]
   );
 
   // Child layout execution state
@@ -307,9 +309,9 @@ export function ToolPageClient({
     } catch {
       // localStorage unavailable - ignore
     }
-    toast("Options reset to defaults", {
+    toast(t("resetToDefaults"), {
       action: {
-        label: "Undo",
+        label: t("undoLabel"),
         onClick: () => {
           setOptions(previousOptions);
           try {
@@ -324,7 +326,7 @@ export function ToolPageClient({
       },
       duration: 5000,
     });
-  }, [options, optionsStorageKey]);
+  }, [options, optionsStorageKey, t]);
 
   // Analytics tracking
   const { trackExecute, trackCopy } = useAnalytics(tool.id, tool.category);
@@ -369,7 +371,7 @@ export function ToolPageClient({
   // Determine mobile tab labels
   const { inputLabel, outputLabel } = useMemo(() => {
     if (variant === "generator") {
-      return { inputLabel: "Configure", outputLabel: "Output" };
+      return { inputLabel: t("configureLabel"), outputLabel: t("outputLabel") };
     }
 
     const renderer = ui.outputRenderer;
@@ -381,7 +383,7 @@ export function ToolPageClient({
       renderer === "image" ||
       renderer === "diagram"
     ) {
-      return { inputLabel: "Edit", outputLabel: "Preview" };
+      return { inputLabel: t("editLabel"), outputLabel: t("previewLabel") };
     }
 
     if (
@@ -389,11 +391,11 @@ export function ToolPageClient({
       name.includes("to ") ||
       name.includes("transform")
     ) {
-      return { inputLabel: "Source", outputLabel: "Converted" };
+      return { inputLabel: t("sourceLabel"), outputLabel: t("convertedLabel") };
     }
 
-    return { inputLabel: "Input", outputLabel: "Output" };
-  }, [ui.outputRenderer, tool.name, variant]);
+    return { inputLabel: t("inputLabel"), outputLabel: t("outputLabel") };
+  }, [ui.outputRenderer, tool.name, variant, t]);
 
   // Detect platform for shortcut display
   const isMac = useMemo(() => {
@@ -444,9 +446,9 @@ export function ToolPageClient({
                 className="hover:bg-muted/50 flex w-full items-center justify-between px-4 py-3 transition-colors"
               >
                 <span className="text-muted-foreground flex items-center gap-2 text-sm font-medium">
-                  Options
+                  {t("options")}
                   <span className="text-muted-foreground/60 text-xs">
-                    ({optionsCount})
+                    {t("optionsCount", { count: optionsCount })}
                   </span>
                 </span>
                 {optionsOpen ? (
@@ -465,10 +467,10 @@ export function ToolPageClient({
                     onClick={handleResetOptions}
                     disabled={isExecuting || Object.keys(options).length === 0}
                     className="text-muted-foreground hover:text-foreground h-7 gap-1 px-2 text-xs"
-                    aria-label="Reset options to defaults"
+                    aria-label={t("resetAriaLabel")}
                   >
                     <RotateCcw className="h-3 w-3" />
-                    Reset to defaults
+                    {t("resetToDefaults")}
                   </Button>
                 </div>
                 <ToolOptions
@@ -506,26 +508,24 @@ export function ToolPageClient({
                     )}
                     aria-hidden="true"
                   />
-                  Auto
+                  {t("auto")}
                   <span className="sr-only">
                     {isDebouncing
-                      ? " - waiting for input"
+                      ? t("autoWaiting")
                       : isExecuting
-                        ? " - executing"
-                        : " - ready"}
+                        ? t("autoExecuting")
+                        : t("autoReady")}
                   </span>
                 </Badge>
               </TooltipTrigger>
-              <TooltipContent>
-                This tool executes automatically as you type.
-              </TooltipContent>
+              <TooltipContent>{t("autoTooltip")}</TooltipContent>
             </Tooltip>
           </TooltipProvider>
         )}
         {variant === "generator" && (
           <Button onClick={handleExecute} disabled={isExecuting || !hasInput}>
             <Play className="mr-2 h-4 w-4" />
-            {isExecuting ? "Generating..." : "Generate"}
+            {isExecuting ? t("generating") : t("generate")}
             <span className="text-muted-foreground ml-1 text-xs opacity-70">
               {modKey}+Enter
             </span>
@@ -538,22 +538,26 @@ export function ToolPageClient({
               variant="ghost"
               size="sm"
               className="text-muted-foreground h-7 w-7 p-0"
-              aria-label="Keyboard shortcuts"
+              aria-label={t("keyboardShortcutsAriaLabel")}
             >
               <Keyboard className="h-4 w-4" />
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-56" align="end">
-            <p className="mb-2 text-sm font-medium">Keyboard shortcuts</p>
+            <p className="mb-2 text-sm font-medium">{t("keyboardShortcuts")}</p>
             <ul className="space-y-1.5 text-sm">
               <li className="flex items-center justify-between">
-                <span className="text-muted-foreground">Execute</span>
+                <span className="text-muted-foreground">
+                  {t("shortcutExecute")}
+                </span>
                 <kbd className="bg-muted rounded px-1.5 py-0.5 font-mono text-xs">
                   {modKey}+Enter
                 </kbd>
               </li>
               <li className="flex items-center justify-between">
-                <span className="text-muted-foreground">Clear / Reset</span>
+                <span className="text-muted-foreground">
+                  {t("shortcutClear")}
+                </span>
                 <kbd className="bg-muted rounded px-1.5 py-0.5 font-mono text-xs">
                   Esc
                 </kbd>

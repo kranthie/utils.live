@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 import {
   getTool,
   getRelatedTools,
@@ -16,8 +17,10 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumb } from "@/components/layout/breadcrumb";
 import { LucideIcon } from "@/components/shared/lucide-icon";
 import { ToolPageClient } from "./tool-page-client";
+import { buildAlternates } from "@/lib/alternates";
 
 interface ToolPageParams {
+  locale: string;
   category: string;
   tool: string;
 }
@@ -30,7 +33,10 @@ interface ToolPageProps {
  * Generate static params for all tools.
  * This pre-renders all 1400+ tool pages at build time.
  */
-export function generateStaticParams(): ToolPageParams[] {
+export function generateStaticParams(): Array<{
+  category: string;
+  tool: string;
+}> {
   const tools = getAllToolCards();
 
   return tools.map((tool) => {
@@ -45,7 +51,7 @@ export function generateStaticParams(): ToolPageParams[] {
 export async function generateMetadata({
   params,
 }: ToolPageProps): Promise<Metadata> {
-  const { category, tool: toolSlug } = await params;
+  const { locale, category, tool: toolSlug } = await params;
   const toolData = getTool(category, toolSlug);
 
   if (!toolData) {
@@ -93,16 +99,15 @@ export async function generateMetadata({
         },
       ],
     },
-    alternates: {
-      canonical: `https://utils.live/tools/${category}/${toolSlug}`,
-    },
+    alternates: buildAlternates(locale, `/tools/${category}/${toolSlug}/`),
   };
 }
 
 export default async function ToolPage({
   params,
 }: ToolPageProps): Promise<React.ReactElement> {
-  const { category, tool: toolSlug } = await params;
+  const { locale, category, tool: toolSlug } = await params;
+  setRequestLocale(locale);
   const toolData = getTool(category, toolSlug);
 
   if (!toolData) {

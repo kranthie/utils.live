@@ -3,6 +3,7 @@
 import { useCallback, useState } from "react";
 import dynamic from "next/dynamic";
 import { Upload, FileText, Trash2, AlertCircle, BookOpen } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { EditorFallback } from "./editor-fallback";
 import { CopyButton } from "@/components/shared/copy-button";
@@ -85,6 +86,7 @@ export function InputPanel({
   sampleData,
   className,
 }: InputPanelProps): React.ReactElement {
+  const t = useTranslations("editor.input");
   const [uploadedFile, setUploadedFile] = useState<{
     name: string;
     size: number;
@@ -150,11 +152,11 @@ export function InputPanel({
         setUploadedFile({ name: file.name, size: file.size });
         onFileUpload?.(content, file.name);
       } catch (err) {
-        setUploadError("Failed to read file");
+        setUploadError(t("failedToRead"));
         console.error("Failed to read file:", err);
       }
     },
-    [validateFile, onChange, onFileUpload]
+    [validateFile, onChange, onFileUpload, t]
   );
 
   const handleFileChange = useCallback(
@@ -211,7 +213,7 @@ export function InputPanel({
         <div className="bg-primary/10 border-primary absolute inset-0 z-50 flex items-center justify-center rounded-lg border-2 border-dashed">
           <div className="text-primary flex flex-col items-center gap-2">
             <Upload className="h-10 w-10" />
-            <span className="font-medium">Drop file here</span>
+            <span className="font-medium">{t("dropFileHere")}</span>
           </div>
         </div>
       )}
@@ -219,7 +221,7 @@ export function InputPanel({
       {/* Header */}
       <div className="editor-header">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="editor-header-title">Input</span>
+          <span className="editor-header-title">{t("title")}</span>
           {uploadedFile && (
             <span className="text-muted-foreground flex items-center gap-1 text-xs">
               <FileText className="h-3 w-3" />
@@ -241,10 +243,10 @@ export function InputPanel({
               onClick={handleLoadSample}
               disabled={disabled}
               className="text-muted-foreground hover:text-foreground h-7 px-2"
-              aria-label="Load sample data"
+              aria-label={t("loadSampleAriaLabel")}
             >
               <BookOpen className="mr-1 h-3.5 w-3.5" />
-              Sample
+              {t("sampleButton")}
             </Button>
           )}
           {allowFileUpload && (
@@ -265,7 +267,7 @@ export function InputPanel({
               >
                 <span>
                   <Upload className="mr-1 h-3.5 w-3.5" />
-                  Upload
+                  {t("uploadButton")}
                 </span>
               </Button>
             </label>
@@ -278,7 +280,7 @@ export function InputPanel({
               onClick={handleClear}
               disabled={disabled}
               className="text-muted-foreground hover:text-destructive h-7 px-2"
-              aria-label="Clear input"
+              aria-label={t("clearAriaLabel")}
             >
               <Trash2 className="h-3.5 w-3.5" />
             </Button>
@@ -294,7 +296,7 @@ export function InputPanel({
           language={language}
           placeholder={
             allowFileUpload
-              ? `${placeholder}\n\nOr drag and drop a file here`
+              ? `${placeholder}\n\n${t("dragAndDrop")}`
               : placeholder
           }
           readOnly={disabled}

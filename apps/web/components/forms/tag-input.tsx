@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef, useId } from "react";
 import { X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -82,7 +83,7 @@ export function TagInput({
   disabled = false,
   value,
   onChange,
-  placeholder = "Add tag...",
+  placeholder,
   maxTags,
   maxTagLength,
   triggerKeys = ["Enter", ","],
@@ -90,6 +91,8 @@ export function TagInput({
   allowDuplicates = false,
   className,
 }: TagInputProps): React.ReactElement {
+  const t = useTranslations("forms.tagInput");
+  const displayPlaceholder = placeholder ?? t("defaultPlaceholder");
   const [inputValue, setInputValue] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -206,7 +209,9 @@ export function TagInput({
               onKeyDown={handleKeyDown}
               onFocus={() => setShowSuggestions(true)}
               onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
-              placeholder={value.length === 0 ? placeholder : "Add more..."}
+              placeholder={
+                value.length === 0 ? displayPlaceholder : t("addMore")
+              }
               disabled={disabled}
               className="h-7 border-0 p-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             />
@@ -235,7 +240,7 @@ export function TagInput({
       {error && <p className="text-destructive text-sm">{error}</p>}
       {maxTags && (
         <p className="text-muted-foreground text-xs">
-          {value.length} / {maxTags} tags
+          {t("tagsCount", { current: value.length, max: maxTags })}
         </p>
       )}
     </div>

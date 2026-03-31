@@ -3,6 +3,7 @@
 import { useTheme } from "next-themes";
 import { useSyncExternalStore } from "react";
 import { Sun, Moon, Monitor, Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -22,6 +23,7 @@ interface ThemeToggleProps {
 export function ThemeToggle({
   size = "default",
 }: ThemeToggleProps): React.ReactElement {
+  const t = useTranslations("common.theme");
   const { theme, resolvedTheme, setTheme } = useTheme();
 
   // Avoid hydration mismatch
@@ -43,7 +45,7 @@ export function ThemeToggle({
       <Button
         variant="ghost"
         size={size === "default" ? "icon" : size}
-        aria-label="Toggle theme"
+        aria-label={t("toggle")}
       >
         <Monitor className={iconSize[size]} />
       </Button>
@@ -67,10 +69,10 @@ export function ThemeToggle({
         <Button
           variant="ghost"
           size={size === "default" ? "icon" : size}
-          aria-label="Toggle theme"
+          aria-label={t("toggle")}
         >
           {renderIcon()}
-          <span className="sr-only">Toggle theme</span>
+          <span className="sr-only">{t("toggle")}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
@@ -82,7 +84,7 @@ export function ThemeToggle({
           aria-current={theme === "light" ? "true" : undefined}
         >
           <Sun className="mr-2 h-4 w-4" />
-          <span className="flex-1">Light</span>
+          <span className="flex-1">{t("light")}</span>
           {theme === "light" && (
             <Check className="ml-2 h-4 w-4" aria-hidden="true" />
           )}
@@ -92,7 +94,7 @@ export function ThemeToggle({
           aria-current={theme === "dark" ? "true" : undefined}
         >
           <Moon className="mr-2 h-4 w-4" />
-          <span className="flex-1">Dark</span>
+          <span className="flex-1">{t("dark")}</span>
           {theme === "dark" && (
             <Check className="ml-2 h-4 w-4" aria-hidden="true" />
           )}
@@ -102,7 +104,7 @@ export function ThemeToggle({
           aria-current={theme === "system" ? "true" : undefined}
         >
           <Monitor className="mr-2 h-4 w-4" />
-          <span className="flex-1">System</span>
+          <span className="flex-1">{t("system")}</span>
           {theme === "system" && (
             <Check className="ml-2 h-4 w-4" aria-hidden="true" />
           )}

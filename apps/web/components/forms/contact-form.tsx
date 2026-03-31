@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { TextInput } from "@/components/forms/text-input";
 import { Textarea } from "@/components/forms/textarea";
@@ -21,20 +22,22 @@ export interface ContactFormData {
   message: string;
 }
 
-const SUBJECT_OPTIONS = [
-  { value: "general", label: "General Inquiry" },
-  { value: "bug", label: "Bug Report" },
-  { value: "feature", label: "Feature Request" },
-  { value: "support", label: "Technical Support" },
-  { value: "partnership", label: "Partnership" },
-  { value: "other", label: "Other" },
-];
-
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 export function ContactForm({
   className,
 }: ContactFormProps): React.ReactElement {
+  const t = useTranslations("marketing.contact.form");
+
+  const SUBJECT_OPTIONS = [
+    { value: "general", label: t("subjects.general") },
+    { value: "bug", label: t("subjects.bug") },
+    { value: "feature", label: t("subjects.feature") },
+    { value: "support", label: t("subjects.support") },
+    { value: "partnership", label: t("subjects.partnership") },
+    { value: "other", label: t("subjects.other") },
+  ];
+
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -95,10 +98,9 @@ export function ContactForm({
         <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30">
           <CheckCircle className="h-8 w-8 text-green-600 dark:text-green-400" />
         </div>
-        <h3 className="mb-2 text-xl font-semibold">Message Sent!</h3>
+        <h3 className="mb-2 text-xl font-semibold">{t("successTitle")}</h3>
         <p className="text-muted-foreground max-w-md">
-          Thank you for reaching out. We&apos;ll get back to you as soon as
-          possible, usually within 24 hours.
+          {t("successDescription")}
         </p>
         <Button
           variant="outline"
@@ -108,7 +110,7 @@ export function ContactForm({
             setFormData({ name: "", email: "", subject: "", message: "" });
           }}
         >
-          Send Another Message
+          {t("sendAnother")}
         </Button>
       </div>
     );
@@ -122,15 +124,15 @@ export function ContactForm({
       {status === "error" && (
         <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-800 dark:bg-red-950/30 dark:text-red-400">
           <AlertCircle className="h-4 w-4 shrink-0" />
-          Something went wrong. Please try again.
+          {t("errorMessage")}
         </div>
       )}
 
       <div className="grid gap-6 sm:grid-cols-2">
         <TextInput
           name="name"
-          label="Name"
-          placeholder="Your name"
+          label={t("nameLabel")}
+          placeholder={t("namePlaceholder")}
           required
           value={formData.name}
           onChange={(value) => setFormData({ ...formData, name: value })}
@@ -138,9 +140,9 @@ export function ContactForm({
         />
         <TextInput
           name="email"
-          label="Email"
+          label={t("emailLabel")}
           type="email"
-          placeholder="you@example.com"
+          placeholder={t("emailPlaceholder")}
           required
           value={formData.email}
           onChange={(value) => setFormData({ ...formData, email: value })}
@@ -150,8 +152,8 @@ export function ContactForm({
 
       <SearchableSelect
         name="subject"
-        label="Subject"
-        placeholder="Select a topic"
+        label={t("subjectLabel")}
+        placeholder={t("subjectPlaceholder")}
         options={SUBJECT_OPTIONS}
         value={formData.subject}
         onChange={(value) => setFormData({ ...formData, subject: value ?? "" })}
@@ -160,8 +162,8 @@ export function ContactForm({
 
       <Textarea
         name="message"
-        label="Message"
-        placeholder="How can we help you?"
+        label={t("messageLabel")}
+        placeholder={t("messagePlaceholder")}
         required
         minRows={6}
         value={formData.message}
@@ -181,11 +183,11 @@ export function ContactForm({
         }
       >
         {status === "submitting" ? (
-          <>Sending...</>
+          <>{t("submittingButton")}</>
         ) : (
           <>
             <Send className="mr-2 h-4 w-4" />
-            Send Message
+            {t("submitButton")}
           </>
         )}
       </Button>

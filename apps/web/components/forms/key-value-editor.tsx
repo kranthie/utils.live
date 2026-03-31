@@ -2,6 +2,7 @@
 
 import { useCallback } from "react";
 import { Plus, Trash2, GripVertical } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { cn, uniqueId } from "@/lib/utils";
@@ -89,14 +90,20 @@ export function KeyValueEditor({
   disabled = false,
   value,
   onChange,
-  keyLabel = "Key",
-  valueLabel = "Value",
-  keyPlaceholder = "Enter key",
-  valuePlaceholder = "Enter value",
+  keyLabel,
+  valueLabel,
+  keyPlaceholder,
+  valuePlaceholder,
   maxPairs,
   uniqueKeys = true,
   className,
 }: KeyValueEditorProps): React.ReactElement {
+  const t = useTranslations("forms.keyValueEditor");
+  const displayKeyLabel = keyLabel ?? t("defaultKeyLabel");
+  const displayValueLabel = valueLabel ?? t("defaultValueLabel");
+  const displayKeyPlaceholder = keyPlaceholder ?? t("defaultKeyPlaceholder");
+  const displayValuePlaceholder =
+    valuePlaceholder ?? t("defaultValuePlaceholder");
   const canAddMore = !maxPairs || value.length < maxPairs;
 
   const handleAddPair = useCallback(() => {
@@ -139,9 +146,9 @@ export function KeyValueEditor({
       const isDuplicate = value.some(
         (pair, index) => index !== currentIndex && pair.key === key
       );
-      return isDuplicate ? "Duplicate key" : undefined;
+      return isDuplicate ? t("duplicateKey") : undefined;
     },
-    [value, uniqueKeys]
+    [value, uniqueKeys, t]
   );
 
   return (
@@ -157,8 +164,8 @@ export function KeyValueEditor({
       {value.length > 0 && (
         <div className="text-muted-foreground grid grid-cols-[auto_1fr_1fr_auto] gap-2 text-xs font-medium">
           <div className="w-6" /> {/* Grip placeholder */}
-          <div>{keyLabel}</div>
-          <div>{valueLabel}</div>
+          <div>{displayKeyLabel}</div>
+          <div>{displayValueLabel}</div>
           <div className="w-9" /> {/* Delete placeholder */}
         </div>
       )}
@@ -179,9 +186,12 @@ export function KeyValueEditor({
                 <Input
                   value={pair.key}
                   onChange={(e) => handleKeyChange(index, e.target.value)}
-                  placeholder={keyPlaceholder}
+                  placeholder={displayKeyPlaceholder}
                   disabled={disabled}
-                  aria-label={`${keyLabel} ${index + 1}`}
+                  aria-label={t("keyAriaLabel", {
+                    label: displayKeyLabel,
+                    index: index + 1,
+                  })}
                   className={cn(keyError && "border-destructive")}
                 />
                 {keyError && (
@@ -191,9 +201,12 @@ export function KeyValueEditor({
               <Input
                 value={pair.value}
                 onChange={(e) => handleValueChange(index, e.target.value)}
-                placeholder={valuePlaceholder}
+                placeholder={displayValuePlaceholder}
                 disabled={disabled}
-                aria-label={`${valueLabel} ${index + 1}`}
+                aria-label={t("valueAriaLabel", {
+                  label: displayValueLabel,
+                  index: index + 1,
+                })}
               />
               <Button
                 type="button"
@@ -202,7 +215,7 @@ export function KeyValueEditor({
                 onClick={() => handleRemovePair(index)}
                 disabled={disabled}
                 className="text-muted-foreground hover:text-destructive h-10 w-9"
-                aria-label={`Remove pair ${index + 1}`}
+                aria-label={t("removeAriaLabel", { index: index + 1 })}
               >
                 <Trash2 className="h-4 w-4" />
               </Button>
@@ -222,7 +235,10 @@ export function KeyValueEditor({
           className="w-full"
         >
           <Plus className="mr-2 h-4 w-4" />
-          Add {keyLabel}/{valueLabel}
+          {t("addPair", {
+            keyLabel: displayKeyLabel,
+            valueLabel: displayValueLabel,
+          })}
         </Button>
       )}
 
@@ -232,7 +248,7 @@ export function KeyValueEditor({
       {error && <p className="text-destructive text-sm">{error}</p>}
       {maxPairs && (
         <p className="text-muted-foreground text-xs">
-          {value.length} / {maxPairs} pairs
+          {t("pairsCount", { current: value.length, max: maxPairs })}
         </p>
       )}
     </div>

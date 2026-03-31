@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { Menu, Home, Wrench, ChevronRight, Search } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -28,15 +29,18 @@ interface MobileNavProps {
   className?: string;
 }
 
-const PUBLIC_NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/", icon: Home },
-  { label: "Tools", href: "/tools", icon: Wrench },
-];
-
 export function MobileNav({
   onSearch,
   className,
 }: MobileNavProps): React.ReactElement {
+  const t = useTranslations("mobileNav");
+  const tNav = useTranslations("common.nav");
+
+  const PUBLIC_NAV_ITEMS: NavItem[] = [
+    { label: tNav("home"), href: "/", icon: Home },
+    { label: tNav("tools"), href: "/tools", icon: Wrench },
+  ];
+
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const pathname = usePathname();
@@ -76,7 +80,7 @@ export function MobileNav({
             variant="ghost"
             size="icon"
             className="h-10 w-10 touch-manipulation"
-            aria-label="Open menu"
+            aria-label={t("openMenu")}
           >
             <Menu className="h-6 w-6" />
           </Button>
@@ -84,7 +88,7 @@ export function MobileNav({
         <SheetContent side="left" className="flex w-[300px] flex-col p-0">
           <SheetHeader className="border-b p-4">
             <SheetTitle className="text-left">
-              <span className="text-lg font-bold">utils.live</span>
+              <span className="text-lg font-bold">{t("title")}</span>
             </SheetTitle>
           </SheetHeader>
 
@@ -97,12 +101,12 @@ export function MobileNav({
                   aria-hidden="true"
                 />
                 <label htmlFor="mobile-search" className="sr-only">
-                  Search tools
+                  {t("searchLabel")}
                 </label>
                 <Input
                   id="mobile-search"
                   type="search"
-                  placeholder="Search tools..."
+                  placeholder={t("searchPlaceholder")}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="h-11 pl-10"

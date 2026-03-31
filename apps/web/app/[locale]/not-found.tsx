@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { Home, Search, ArrowLeft, Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -33,6 +34,7 @@ const POPULAR_TOOLS = [
 
 export default function NotFoundPage(): React.ReactElement {
   const router = useRouter();
+  const t = useTranslations("errors.notFound");
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -50,11 +52,10 @@ export default function NotFoundPage(): React.ReactElement {
 
           {/* Error Message */}
           <h1 className="mb-4 text-2xl font-bold sm:text-3xl">
-            Page Not Found
+            {t("heading")}
           </h1>
           <p className="text-muted-foreground mb-8 max-w-md text-lg">
-            Sorry, we couldn&apos;t find the page you&apos;re looking for. It
-            might have been moved or doesn&apos;t exist.
+            {t("description")}
           </p>
 
           {/* Action Buttons */}
@@ -62,13 +63,13 @@ export default function NotFoundPage(): React.ReactElement {
             <Button asChild>
               <Link href="/">
                 <Home className="mr-2 h-4 w-4" />
-                Go Home
+                {t("goHome")}
               </Link>
             </Button>
             <Button variant="outline" asChild>
               <Link href="/tools">
                 <Search className="mr-2 h-4 w-4" />
-                Browse Tools
+                {t("browseTools")}
               </Link>
             </Button>
             <Button
@@ -86,7 +87,7 @@ export default function NotFoundPage(): React.ReactElement {
               }}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Go Back
+              {t("goBack")}
             </Button>
           </div>
 
@@ -94,7 +95,7 @@ export default function NotFoundPage(): React.ReactElement {
           <div className="w-full max-w-2xl">
             <div className="mb-4 flex items-center justify-center gap-2">
               <Sparkles className="text-primary h-5 w-5" />
-              <h2 className="text-lg font-semibold">Popular Tools</h2>
+              <h2 className="text-lg font-semibold">{t("popularTools")}</h2>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {POPULAR_TOOLS.map((tool) => (

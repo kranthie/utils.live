@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { allPosts } from "@/lib/blog";
 import { Clock, Calendar, ArrowRight } from "lucide-react";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { BlogPostsGrid } from "@/components/blog/blog-posts-grid";
+
+interface BlogPageProps {
+  params: Promise<{ locale: string }>;
+}
 
 export const metadata: Metadata = {
   title: "Developer Tools Blog | utils.live",
@@ -26,7 +31,12 @@ function formatDate(dateStr: string): string {
   });
 }
 
-export default function BlogPage(): React.ReactElement {
+export default async function BlogPage({
+  params,
+}: BlogPageProps): Promise<React.ReactElement> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("blog.page");
   const [featured, ...rest] = allPosts;
 
   return (
@@ -36,12 +46,11 @@ export default function BlogPage(): React.ReactElement {
         <h1 className="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
           Developer Tools{" "}
           <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-transparent">
-            Blog
+            {t("gradientText")}
           </span>
         </h1>
         <p className="text-muted-foreground text-lg leading-relaxed">
-          Practical guides on encoding, hashing, tokens, and more. Understand
-          the tools you use every day.
+          {t("description")}
         </p>
       </div>
 
@@ -64,7 +73,7 @@ export default function BlogPage(): React.ReactElement {
                   </span>
                   <span className="text-muted-foreground flex items-center gap-1.5 text-sm">
                     <Clock className="h-3.5 w-3.5" />
-                    {featured.readingTimeMinutes} min read
+                    {t("minRead", { count: featured.readingTimeMinutes })}
                   </span>
                 </div>
                 {/* Title */}
@@ -75,7 +84,7 @@ export default function BlogPage(): React.ReactElement {
                   {featured.description}
                 </p>
                 <span className="text-primary inline-flex items-center gap-2 text-sm font-medium">
-                  Read article
+                  {t("readArticle")}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </div>

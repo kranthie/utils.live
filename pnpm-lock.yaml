@@ -263,6 +263,9 @@ importers:
       "@testing-library/react":
         specifier: 16.3.0
         version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.0(@types/react@19.2.0))(@types/react@19.2.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      "@types/negotiator":
+        specifier: 0.6.4
+        version: 0.6.4
       "@types/node":
         specifier: "catalog:"
         version: 22.19.9
@@ -3468,6 +3471,12 @@ packages:
     resolution:
       {
         integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==,
+      }
+
+  "@types/negotiator@0.6.4":
+    resolution:
+      {
+        integrity: sha512-elf6BsTq+AkyNsb2h5cGNst2Mc7dPliVoAPm1fXglC/BM3f2pFA40BaSSv3E5lyHteEawVKLP+8TwiY1DMNb3A==,
       }
 
   "@types/node@22.19.9":
@@ -10994,6 +11003,8 @@ snapshots:
       "@types/unist": 3.0.3
 
   "@types/ms@2.1.0": {}
+
+  "@types/negotiator@0.6.4": {}
 
   "@types/node@22.19.9":
     dependencies:

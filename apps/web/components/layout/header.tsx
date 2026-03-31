@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Search, Terminal } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { KeyboardShortcut } from "@/components/shared/keyboard-shortcut";
 import { MobileNav } from "@/components/layout/mobile-nav";
@@ -18,6 +19,8 @@ export function Header({
   onSearchClick,
   className,
 }: HeaderProps): React.ReactElement {
+  const t = useTranslations("header");
+  const tBrand = useTranslations("common.brand");
   const { setSearchOpen } = useKeyboard();
   const handleSearchClick = onSearchClick ?? (() => setSearchOpen(true));
 
@@ -36,7 +39,7 @@ export function Header({
           <Link
             href="/"
             className="flex items-center gap-2"
-            aria-label="utils.live home"
+            aria-label={tBrand("homeAriaLabel")}
           >
             <Terminal className="text-brand h-6 w-6" aria-hidden="true" />
             <span className="hidden text-lg font-bold sm:inline-block sm:text-xl">
@@ -52,10 +55,12 @@ export function Header({
             size="sm"
             className="text-muted-foreground hidden w-48 items-center justify-start gap-2 md:flex lg:w-64"
             onClick={handleSearchClick}
-            aria-label="Search tools"
+            aria-label={t("searchAriaLabel")}
           >
             <Search className="h-4 w-4" />
-            <span className="flex-1 truncate text-left">Search tools...</span>
+            <span className="flex-1 truncate text-left">
+              {t("searchToolsPlaceholder")}
+            </span>
             <KeyboardShortcut
               keys={["meta", "k"]}
               size="sm"
@@ -68,7 +73,7 @@ export function Header({
             size="icon"
             className="h-10 w-10 touch-manipulation md:hidden"
             onClick={handleSearchClick}
-            aria-label="Search"
+            aria-label={t("searchMobileAriaLabel")}
           >
             <Search className="h-5 w-5" />
           </Button>
@@ -78,7 +83,7 @@ export function Header({
               href="https://github.com/kranthie/utils.live"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View on GitHub"
+              aria-label={t("githubAriaLabel")}
             >
               <svg
                 viewBox="0 0 24 24"

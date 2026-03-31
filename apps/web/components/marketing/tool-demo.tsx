@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { fadeIn, VIEWPORT_ONCE } from "@/lib/animation";
 import { cn } from "@/lib/utils";
 import { QRCodeDemo, MermaidDemo } from "./demo-visuals";
@@ -319,6 +320,7 @@ export function ToolDemo({
   toolCount,
   className,
 }: ToolDemoProps): React.ReactElement {
+  const t = useTranslations("home.toolDemo");
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [demoIndex, setDemoIndex] = useState(0);
@@ -389,10 +391,10 @@ export function ToolDemo({
           viewport={VIEWPORT_ONCE}
         >
           <h2 className="mb-3 text-center text-2xl font-bold sm:text-3xl">
-            See it in action
+            {t("heading")}
           </h2>
           <p className="text-muted-foreground mb-8 text-center text-lg">
-            Watch tools transform your data in real time
+            {t("subheading")}
           </p>
 
           {/* Tool name tab */}
@@ -423,7 +425,7 @@ export function ToolDemo({
             />
             <div className="relative flex flex-col items-stretch gap-3 sm:flex-row sm:gap-4">
               <GlassPanel
-                label="Input"
+                label={t("inputLabel")}
                 content={typer.displayed}
                 highlight={isJson}
               />
@@ -432,7 +434,7 @@ export function ToolDemo({
                 <ArrowRight className="text-muted-foreground/30 h-5 w-5" />
               </div>
               <GlassPanel
-                label="Output"
+                label={t("outputLabel")}
                 content={output}
                 isOutput
                 highlight={isJson && output.length > 0}

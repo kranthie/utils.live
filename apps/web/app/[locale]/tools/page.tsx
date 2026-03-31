@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import {
   getAllToolCards,
   getCategorySummaries,
@@ -11,29 +12,46 @@ import {
 import { JsonLdMultiple } from "@/components/seo/json-ld";
 import { Breadcrumb } from "@/components/layout/breadcrumb";
 import { ToolsPageClient } from "@/components/tools/tools-page-client";
+import { buildAlternates } from "@/lib/alternates";
+
+interface ToolsPageProps {
+  params: Promise<{ locale: string }>;
+}
 
 const toolCountLabel = getToolCountLabel();
 
-export const metadata: Metadata = {
-  title: "Explore Tools",
-  description: `Browse ${toolCountLabel} free developer tools. JSON formatters, encoders, converters, hash generators, and more.`,
-  openGraph: {
-    title: "Explore Tools | utils.live",
-    description: `Browse ${toolCountLabel} free developer tools. JSON formatters, encoders, converters, and more.`,
-    type: "website",
-    url: "https://utils.live/tools",
-  },
-  alternates: {
-    canonical: "https://utils.live/tools",
-  },
-};
+export async function generateMetadata({
+  params,
+}: ToolsPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: "Explore Tools",
+    description: `Browse ${toolCountLabel} free developer tools. JSON formatters, encoders, converters, hash generators, and more.`,
+    openGraph: {
+      title: "Explore Tools | utils.live",
+      description: `Browse ${toolCountLabel} free developer tools. JSON formatters, encoders, converters, and more.`,
+      type: "website",
+      url: `https://utils.live/${locale}/tools/`,
+    },
+    alternates: buildAlternates(locale, "/tools/"),
+  };
+}
 
-export default function AllToolsPage(): React.ReactElement {
+export default async function AllToolsPage({
+  params,
+}: ToolsPageProps): Promise<React.ReactElement> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("tools");
+
   const tools = getAllToolCards();
   const categories = getCategorySummaries();
 
   // Breadcrumbs
-  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Tools" }];
+  const breadcrumbs = [
+    { label: t("breadcrumbs.home"), href: "/" },
+    { label: t("breadcrumbs.tools") },
+  ];
 
   // JSON-LD data
   const jsonLdItems = [
@@ -66,9 +84,11 @@ export default function AllToolsPage(): React.ReactElement {
 
         {/* Page header */}
         <div>
-          <h1 className="text-2xl font-bold sm:text-3xl">Explore Tools</h1>
+          <h1 className="text-2xl font-bold sm:text-3xl">
+            {t("search.heading")}
+          </h1>
           <p className="text-muted-foreground mt-1">
-            {tools.length} free developer tools at your fingertips
+            {t("search.subheading", { count: tools.length })}
           </p>
         </div>
 

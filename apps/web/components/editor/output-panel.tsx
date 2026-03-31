@@ -3,6 +3,7 @@
 import { useMemo } from "react";
 import dynamic from "next/dynamic";
 import { CheckCircle, XCircle, Clock, FileCode } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { EditorFallback } from "./editor-fallback";
 import { CopyButton } from "@/components/shared/copy-button";
 import { DownloadButton } from "@/components/shared/download-button";
@@ -217,6 +218,7 @@ export function OutputPanel({
   isAutoMode = false,
   className,
 }: OutputPanelProps): React.ReactElement {
+  const t = useTranslations("editor.output");
   // Get string representation for copy/download
   const outputValue = useMemo(() => {
     if (!result?.success || !result.data) return "";
@@ -235,25 +237,27 @@ export function OutputPanel({
   // UX-021: Accessible status announcements for screen readers
   const statusAnnouncement = useMemo(() => {
     if (isLoading) {
-      return "Processing...";
+      return t("statusProcessing");
     } else if (result?.success) {
       const timeStr =
         result.metadata?.executionTime !== undefined
-          ? ` Processed in ${formatDuration(result.metadata.executionTime)}.`
+          ? t("statusProcessedIn", {
+              time: formatDuration(result.metadata.executionTime),
+            })
           : "";
-      return `Execution complete.${timeStr}`;
+      return `${t("statusComplete")}${timeStr}`;
     } else if (result && !result.success && result.error) {
-      return `Execution failed: ${result.error.message}`;
+      return t("statusFailed", { message: result.error.message });
     }
     return "";
-  }, [result, isLoading]);
+  }, [result, isLoading, t]);
 
   const renderStatus = (): React.ReactElement | null => {
     if (isLoading) {
       return (
         <span className="output-status output-status-loading">
           <Clock className="h-3 w-3" />
-          Processing...
+          {t("processing")}
         </span>
       );
     }
@@ -264,7 +268,7 @@ export function OutputPanel({
       return (
         <span className="output-status output-status-success">
           <CheckCircle className="h-3 w-3" />
-          Success
+          {t("success")}
           {result.metadata?.executionTime !== undefined && (
             <span className="text-muted-foreground">
               ({formatDuration(result.metadata.executionTime)})
@@ -277,7 +281,7 @@ export function OutputPanel({
     return (
       <span className="output-status output-status-error">
         <XCircle className="h-3 w-3" />
-        Error
+        {t("error")}
       </span>
     );
   };
@@ -287,7 +291,7 @@ export function OutputPanel({
     if (isLoading) {
       return (
         <div className="flex h-full items-center justify-center">
-          <LoadingSpinner label="Processing..." />
+          <LoadingSpinner label={t("processing")} />
         </div>
       );
     }
@@ -297,11 +301,9 @@ export function OutputPanel({
       return (
         <EmptyState
           icon={<FileCode className="text-muted-foreground/30 h-12 w-12" />}
-          title="No output yet"
+          title={t("noOutputYet")}
           description={
-            isAutoMode
-              ? "Enter input to see results instantly"
-              : "Enter input and click Execute to see the result"
+            isAutoMode ? t("enterInputInstant") : t("enterInputExecute")
           }
           size="default"
         />
@@ -327,8 +329,8 @@ export function OutputPanel({
       return (
         <EmptyState
           icon={<FileCode className="text-muted-foreground/30 h-12 w-12" />}
-          title="Empty result"
-          description="The operation completed but produced no output"
+          title={t("emptyResult")}
+          description={t("emptyResultDescription")}
           size="default"
         />
       );
@@ -460,7 +462,7 @@ export function OutputPanel({
       {/* Header */}
       <div className="editor-header">
         <div className="flex items-center gap-2">
-          <span className="editor-header-title">Output</span>
+          <span className="editor-header-title">{t("title")}</span>
           {renderStatus()}
         </div>
         <div className="editor-header-actions">

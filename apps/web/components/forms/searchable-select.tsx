@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback, useId } from "react";
 import { Check, ChevronsUpDown, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Command,
@@ -99,12 +100,14 @@ export function SearchableSelect<T = string>({
   options,
   value,
   onChange,
-  placeholder = "Select an option...",
+  placeholder,
   searchable = true,
   clearable = false,
   filterFn,
   className,
 }: SearchableSelectProps<T>): React.ReactElement {
+  const t = useTranslations("forms.searchableSelect");
+  const displayPlaceholder = placeholder ?? t("defaultPlaceholder");
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const generatedId = useId();
@@ -181,7 +184,7 @@ export function SearchableSelect<T = string>({
             )}
           >
             <span className="truncate">
-              {selectedOption?.label ?? placeholder}
+              {selectedOption?.label ?? displayPlaceholder}
             </span>
             <div className="flex items-center gap-1">
               {clearable && selectedOption && (
@@ -201,13 +204,13 @@ export function SearchableSelect<T = string>({
           <Command shouldFilter={false}>
             {searchable && (
               <CommandInput
-                placeholder="Search..."
+                placeholder={t("searchPlaceholder")}
                 value={query}
                 onValueChange={setQuery}
               />
             )}
             <CommandList>
-              <CommandEmpty>No options found.</CommandEmpty>
+              <CommandEmpty>{t("noOptionsFound")}</CommandEmpty>
               <CommandGroup>
                 {filteredOptions.map((option) => (
                   <CommandItem

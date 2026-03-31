@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback, useId } from "react";
 import { Check, ChevronsUpDown, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -95,11 +96,13 @@ export function MultiSelect<T = string>({
   options,
   value,
   onChange,
-  placeholder = "Select options...",
+  placeholder,
   maxSelections,
   showBadges = true,
   className,
 }: MultiSelectProps<T>): React.ReactElement {
+  const t = useTranslations("forms.multiSelect");
+  const displayPlaceholder = placeholder ?? t("defaultPlaceholder");
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const generatedId = useId();
@@ -197,8 +200,8 @@ export function MultiSelect<T = string>({
                   )}
                 >
                   {selectedOptions.length > 0
-                    ? `${selectedOptions.length} selected`
-                    : placeholder}
+                    ? t("selectedCount", { count: selectedOptions.length })
+                    : displayPlaceholder}
                 </span>
               )}
             </div>
@@ -219,12 +222,12 @@ export function MultiSelect<T = string>({
         >
           <Command shouldFilter={false}>
             <CommandInput
-              placeholder="Search..."
+              placeholder={t("searchPlaceholder")}
               value={query}
               onValueChange={setQuery}
             />
             <CommandList>
-              <CommandEmpty>No options found.</CommandEmpty>
+              <CommandEmpty>{t("noOptionsFound")}</CommandEmpty>
               <CommandGroup>
                 {filteredOptions.map((option) => {
                   const isSelected = value.includes(option.value);
@@ -266,7 +269,7 @@ export function MultiSelect<T = string>({
       {error && <p className="text-destructive text-sm">{error}</p>}
       {maxSelections && (
         <p className="text-muted-foreground text-xs">
-          {value.length} / {maxSelections} selected
+          {t("selectionCount", { current: value.length, max: maxSelections })}
         </p>
       )}
     </div>

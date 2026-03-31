@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useCallback, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { Search, Clock, Star, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { LucideIcon } from "@/components/shared/lucide-icon";
 import {
   CommandDialog,
@@ -84,6 +85,7 @@ export function SearchCommand({
   onCategorySelect,
 }: SearchCommandProps): React.ReactElement {
   const router = useRouter();
+  const t = useTranslations("tools.search");
   const [query, setQuery] = useState("");
   const debouncedQuery = useDebounce(query, 150);
   const [recentTools, setRecentTools] = useLocalStorage<string[]>(
@@ -163,23 +165,23 @@ export function SearchCommand({
   return (
     <CommandDialog open={open} onOpenChange={handleOpenChange}>
       <CommandInput
-        placeholder="Search tools..."
+        placeholder={t("placeholder")}
         value={query}
         onValueChange={setQuery}
       />
       <span className="sr-only" aria-live="polite" aria-atomic="true">
         {debouncedQuery && searchResults.length === 0
-          ? "No tools found"
+          ? t("noResultsFound")
           : debouncedQuery && searchResults.length > 0
-            ? `${searchResults.length} result${searchResults.length === 1 ? "" : "s"} found`
+            ? t("resultsFound", { count: searchResults.length })
             : ""}
       </span>
       <CommandList>
-        <CommandEmpty>No tools found.</CommandEmpty>
+        <CommandEmpty>{t("noToolsFound")}</CommandEmpty>
 
         {/* Search Results */}
         {searchResults.length > 0 && (
-          <CommandGroup heading="Results">
+          <CommandGroup heading={t("searchResults")}>
             {searchResults.map((result) => (
               <CommandItem
                 key={result.tool.id}
@@ -201,7 +203,7 @@ export function SearchCommand({
 
         {/* Recent Tools (when no query) */}
         {!query && recentToolObjects.length > 0 && (
-          <CommandGroup heading="Recent">
+          <CommandGroup heading={t("recent")}>
             {recentToolObjects.map((tool) => (
               <CommandItem
                 key={tool.id}
@@ -220,7 +222,7 @@ export function SearchCommand({
         {!query && popularToolObjects.length > 0 && (
           <>
             {recentToolObjects.length > 0 && <CommandSeparator />}
-            <CommandGroup heading="Popular">
+            <CommandGroup heading={t("popular")}>
               {popularToolObjects.map((tool) => (
                 <CommandItem
                   key={`popular-${tool.id}`}
@@ -245,7 +247,7 @@ export function SearchCommand({
         {!query && categories.length > 0 && (
           <>
             <CommandSeparator />
-            <CommandGroup heading="Categories">
+            <CommandGroup heading={t("categories")}>
               {categories.map((category) => (
                 <CommandItem
                   key={category.id}

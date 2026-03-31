@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Clock, MapPin } from "lucide-react";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { ContactForm } from "@/components/forms/contact-form";
+
+interface ContactPageProps {
+  params: Promise<{ locale: string }>;
+}
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -17,31 +22,36 @@ export const metadata: Metadata = {
   },
 };
 
-const CONTACT_INFO = [
-  {
-    icon: Clock,
-    title: "Response Time",
-    value: "< 24 hours",
-    description: "For most inquiries",
-  },
-  {
-    icon: MapPin,
-    title: "Location",
-    value: "Remote Team",
-    description: "Distributed worldwide",
-  },
-];
+export default async function ContactPage({
+  params,
+}: ContactPageProps): Promise<React.ReactElement> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("marketing.contact");
 
-export default function ContactPage(): React.ReactElement {
+  const CONTACT_INFO = [
+    {
+      icon: Clock,
+      title: t("info.responseTime.title"),
+      value: t("info.responseTime.value"),
+      description: t("info.responseTime.description"),
+    },
+    {
+      icon: MapPin,
+      title: t("info.location.title"),
+      value: t("info.location.value"),
+      description: t("info.location.description"),
+    },
+  ];
+
   return (
     <div className="container py-16 sm:py-24">
       {/* Header */}
       <div className="mx-auto mb-12 max-w-2xl text-center">
-        <h1 className="mb-4 text-3xl font-bold sm:text-4xl">Get in Touch</h1>
-        <p className="text-muted-foreground text-lg">
-          Have a question, feature request, or just want to say hi? We&apos;d
-          love to hear from you.
-        </p>
+        <h1 className="mb-4 text-3xl font-bold sm:text-4xl">
+          {t("hero.heading")}
+        </h1>
+        <p className="text-muted-foreground text-lg">{t("hero.description")}</p>
       </div>
 
       <div className="mx-auto max-w-5xl">
@@ -68,11 +78,13 @@ export default function ContactPage(): React.ReactElement {
 
             {/* Tools Link */}
             <div className="bg-muted/30 rounded-lg p-4">
-              <h3 className="mb-2 font-medium">Looking for a tool?</h3>
+              <h3 className="mb-2 font-medium">
+                {t("lookingForTool.heading")}
+              </h3>
               <p className="text-muted-foreground text-sm">
                 Browse our{" "}
                 <Link href="/tools" className="text-primary hover:underline">
-                  full collection of tools
+                  {t("lookingForTool.linkText")}
                 </Link>
                 .
               </p>
@@ -82,7 +94,9 @@ export default function ContactPage(): React.ReactElement {
           {/* Contact Form */}
           <div className="lg:col-span-3">
             <div className="rounded-lg border p-6 sm:p-8">
-              <h2 className="mb-6 text-xl font-semibold">Send us a message</h2>
+              <h2 className="mb-6 text-xl font-semibold">
+                {t("form.heading")}
+              </h2>
               <ContactForm />
             </div>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { LayoutGrid } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { LucideIcon } from "@/components/shared/lucide-icon";
@@ -61,7 +61,7 @@ export function BrowseCategories({
   const hasGroups = groups.length > 0;
 
   return (
-    <section id="categories" className="scroll-mt-20 flex flex-col gap-4">
+    <section id="categories" className="flex scroll-mt-20 flex-col gap-4">
       <h2 className="flex items-center gap-2 text-lg font-semibold">
         <LayoutGrid className="text-muted-foreground h-5 w-5" />
         Browse by Category

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Clock, Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { BlogPost } from "@/lib/blog";
@@ -46,7 +46,7 @@ export function BlogPostsGrid({
                   {post.readingTimeMinutes} min read
                 </span>
               </div>
-              <h2 className="group-hover:text-primary mb-2 text-lg font-semibold leading-snug transition-colors">
+              <h2 className="group-hover:text-primary mb-2 text-lg leading-snug font-semibold transition-colors">
                 {post.title}
               </h2>
               <p className="text-muted-foreground mb-4 line-clamp-2 text-sm leading-relaxed">

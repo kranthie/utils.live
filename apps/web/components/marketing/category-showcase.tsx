@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { LucideIcon } from "@/components/shared/lucide-icon";
 import {
   Card,
@@ -46,23 +47,25 @@ interface CategoryShowcaseProps {
 
 export function CategoryShowcase({
   categories,
-  title = "Browse by Category",
+  title,
   maxCategories = 8,
   className,
 }: CategoryShowcaseProps): React.ReactElement {
+  const t = useTranslations("home.categoryShowcase");
   const displayCategories = categories.slice(0, maxCategories);
+  const displayTitle = title ?? t("heading");
 
   return (
     <section className={cn("py-12 sm:py-16", className)}>
       <div className="container">
         <p className="text-brand mb-3 text-center text-xs font-semibold tracking-widest uppercase">
-          Categories
+          {t("eyebrow")}
         </p>
         <h2 className="mb-3 text-center text-2xl font-bold sm:text-3xl">
-          {title}
+          {displayTitle}
         </h2>
         <p className="text-muted-foreground mb-8 text-center text-lg">
-          Find the right tool for any task
+          {t("subheading")}
         </p>
 
         <motion.div
@@ -86,7 +89,7 @@ export function CategoryShowcase({
                           {category.name}
                         </CardTitle>
                         <p className="text-muted-foreground text-xs">
-                          {category.toolCount} tools
+                          {t("toolsCount", { count: category.toolCount })}
                         </p>
                       </div>
                     </div>
@@ -107,14 +110,14 @@ export function CategoryShowcase({
             href="/tools"
             className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm font-medium transition-colors"
           >
-            View all tools
+            {t("viewAllTools")}
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
             href="/tools#categories"
             className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm font-medium transition-colors"
           >
-            View all categories
+            {t("viewAllCategories")}
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

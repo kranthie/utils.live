@@ -2,6 +2,7 @@
 
 import { forwardRef, useCallback, useId } from "react";
 import { Minus, Plus } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -89,6 +90,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
     },
     ref
   ) {
+    const t = useTranslations("forms.numberInput");
     const generatedId = useId();
     const inputId = name ?? generatedId;
 
@@ -145,7 +147,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
               className="h-10 w-10 shrink-0"
               onClick={handleDecrement}
               disabled={disabled || !canDecrement}
-              aria-label="Decrease value"
+              aria-label={t("decreaseAriaLabel")}
             >
               <Minus className="h-4 w-4" />
             </Button>
@@ -185,7 +187,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
               className="h-10 w-10 shrink-0"
               onClick={handleIncrement}
               disabled={disabled || !canIncrement}
-              aria-label="Increase value"
+              aria-label={t("increaseAriaLabel")}
             >
               <Plus className="h-4 w-4" />
             </Button>

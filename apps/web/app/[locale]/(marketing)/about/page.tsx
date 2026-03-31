@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Zap, Shield, Code, Globe, Users, Heart } from "lucide-react";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { getToolCountLabel } from "@/lib/tools/get-tool";
+
+interface AboutPageProps {
+  params: Promise<{ locale: string }>;
+}
 
 export const metadata: Metadata = {
   title: "About",
@@ -16,55 +21,55 @@ export const metadata: Metadata = {
   },
 };
 
-const VALUES = [
-  {
-    icon: Zap,
-    title: "Speed First",
-    description:
-      "Tools should be instant. Our client-side tools run in your browser for zero latency.",
-  },
-  {
-    icon: Shield,
-    title: "Privacy by Design",
-    description:
-      "Your data stays on your device. We don't track, store, or analyze your tool inputs.",
-  },
-  {
-    icon: Code,
-    title: "Developer Experience",
-    description:
-      "Built by developers, for developers. Every tool is designed to save you time.",
-  },
-  {
-    icon: Globe,
-    title: "Free & Accessible",
-    description:
-      "Core tools are free forever. We believe everyone should have access to quality utilities.",
-  },
-];
+export default async function AboutPage({
+  params,
+}: AboutPageProps): Promise<React.ReactElement> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("marketing.about");
 
-const STATS = [
-  { value: getToolCountLabel(), label: "Developer Tools" },
-  { value: "100%", label: "Free Core Tools" },
-  { value: "0", label: "Data Collected" },
-  { value: "<50ms", label: "Avg Response Time" },
-];
+  const VALUES = [
+    {
+      icon: Zap,
+      title: t("values.speedFirst.title"),
+      description: t("values.speedFirst.description"),
+    },
+    {
+      icon: Shield,
+      title: t("values.privacyByDesign.title"),
+      description: t("values.privacyByDesign.description"),
+    },
+    {
+      icon: Code,
+      title: t("values.developerExperience.title"),
+      description: t("values.developerExperience.description"),
+    },
+    {
+      icon: Globe,
+      title: t("values.freeAccessible.title"),
+      description: t("values.freeAccessible.description"),
+    },
+  ];
 
-export default function AboutPage(): React.ReactElement {
+  const STATS = [
+    { value: getToolCountLabel(), label: t("stats.developerTools") },
+    { value: "100%", label: t("stats.freeCoreTools") },
+    { value: "0", label: t("stats.dataCollected") },
+    { value: "<50ms", label: t("stats.avgResponseTime") },
+  ];
+
   return (
     <div className="container py-16 sm:py-24">
       {/* Hero Section */}
       <div className="mx-auto mb-16 max-w-3xl text-center">
         <h1 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl">
-          Developer tools that{" "}
+          {t("hero.headingPrefix")}{" "}
           <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-transparent">
-            respect your time
+            {t("hero.gradientText")}
           </span>
         </h1>
         <p className="text-muted-foreground text-lg leading-relaxed">
-          utils.live was born from frustration with slow, ad-filled, and
-          privacy-invasive online tools. We built what we wanted to use: fast,
-          free, and respectful utilities.
+          {t("hero.description")}
         </p>
       </div>
 
@@ -85,7 +90,7 @@ export default function AboutPage(): React.ReactElement {
       {/* Values */}
       <div className="mb-20">
         <h2 className="mb-10 text-center text-2xl font-bold sm:text-3xl">
-          Our Values
+          {t("values.heading")}
         </h2>
         <div className="grid gap-8 md:grid-cols-2">
           {VALUES.map((value) => {
@@ -110,33 +115,27 @@ export default function AboutPage(): React.ReactElement {
       {/* Mission */}
       <div className="bg-muted/30 mx-auto max-w-3xl rounded-2xl p-8 text-center sm:p-12">
         <Heart className="text-primary mx-auto mb-4 h-8 w-8" />
-        <h2 className="mb-4 text-2xl font-bold">Our Mission</h2>
+        <h2 className="mb-4 text-2xl font-bold">{t("mission.heading")}</h2>
         <p className="text-muted-foreground leading-relaxed">
-          We believe developer tools should be accessible to everyone,
-          regardless of budget or technical expertise. utils.live provides
-          professional-grade utilities without the bloat, tracking, or paywalls.
-          Our goal is to help you focus on what matters: building great
-          software.
+          {t("mission.description")}
         </p>
       </div>
 
       {/* Team */}
       <div className="mt-20 text-center">
         <h2 className="mb-4 text-2xl font-bold sm:text-3xl">
-          Built with{" "}
+          {t("team.headingPrefix")}{" "}
           <span className="from-primary to-primary/60 bg-gradient-to-r bg-clip-text text-transparent">
-            care
+            {t("team.gradientText")}
           </span>
         </h2>
         <p className="text-muted-foreground mx-auto max-w-2xl">
-          utils.live is maintained by a small team of passionate developers who
-          use these tools daily. We&apos;re always adding new tools and
-          improving existing ones based on community feedback.
+          {t("team.description")}
         </p>
         <div className="mt-6 flex items-center justify-center gap-2">
           <Users className="text-muted-foreground h-4 w-4" />
           <span className="text-muted-foreground text-sm">
-            Feedback and suggestions welcome
+            {t("team.feedbackWelcome")}
           </span>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import {
   getToolsInCategory,
   getCategoryInfo,
@@ -14,8 +15,10 @@ import { JsonLdMultiple } from "@/components/seo/json-ld";
 import { Breadcrumb } from "@/components/layout/breadcrumb";
 import { CategoryToolsClient } from "@/components/tools/category-tools-client";
 import { LucideIcon } from "@/components/shared/lucide-icon";
+import { buildAlternates } from "@/lib/alternates";
 
 interface CategoryPageParams {
+  locale: string;
   category: string;
 }
 
@@ -26,7 +29,7 @@ interface CategoryPageProps {
 /**
  * Generate static params for all categories.
  */
-export function generateStaticParams(): CategoryPageParams[] {
+export function generateStaticParams(): Array<{ category: string }> {
   const categories = getCategorySummaries();
   return categories.map((cat) => ({ category: cat.id }));
 }
@@ -37,7 +40,7 @@ export function generateStaticParams(): CategoryPageParams[] {
 export async function generateMetadata({
   params,
 }: CategoryPageProps): Promise<Metadata> {
-  const { category } = await params;
+  const { locale, category } = await params;
   const categoryInfo = getCategoryInfo(category);
 
   if (!categoryInfo) {
@@ -92,16 +95,16 @@ export async function generateMetadata({
         },
       ],
     },
-    alternates: {
-      canonical: `https://utils.live/tools/${category}`,
-    },
+    alternates: buildAlternates(locale, `/tools/${category}/`),
   };
 }
 
 export default async function CategoryPage({
   params,
 }: CategoryPageProps): Promise<React.ReactElement> {
-  const { category } = await params;
+  const { locale, category } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("tools");
 
   const categoryInfo = getCategoryInfo(category);
   const tools = getToolsInCategory(category);
@@ -144,7 +147,9 @@ export default async function CategoryPage({
               {categoryInfo.description}
             </p>
             <p className="text-muted-foreground mt-1 text-sm">
-              {categoryInfo.toolCount} tools available
+              {t("categories.toolsAvailable", {
+                count: categoryInfo.toolCount,
+              })}
             </p>
           </div>
         </div>

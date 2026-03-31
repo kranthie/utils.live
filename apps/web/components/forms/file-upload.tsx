@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 import { Upload, File, X, AlertCircle, CheckCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { cn, formatBytes } from "@/lib/utils";
@@ -65,9 +66,11 @@ export function FileUpload({
   onFilesSelected,
   onFileRead,
   readAs = "text",
-  placeholder = "Drop files here or click to upload",
+  placeholder,
   className,
 }: FileUploadProps): React.ReactElement {
+  const t = useTranslations("forms.fileUpload");
+  const displayPlaceholder = placeholder ?? t("defaultPlaceholder");
   const inputRef = useRef<HTMLInputElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [files, setFiles] = useState<FileWithStatus[]>([]);
@@ -136,7 +139,7 @@ export function FileUpload({
         setFiles((prev) =>
           prev.map((f) =>
             f.file === fileWithStatus.file
-              ? { ...f, status: "error", error: "Failed to read file" }
+              ? { ...f, status: "error", error: t("failedToRead") }
               : f
           )
         );
@@ -159,7 +162,7 @@ export function FileUpload({
           reader.readAsText(fileWithStatus.file);
       }
     },
-    [onFileRead, readAs]
+    [onFileRead, readAs, t]
   );
 
   const processFiles = useCallback(
@@ -259,7 +262,7 @@ export function FileUpload({
         )}
         role="button"
         tabIndex={disabled ? -1 : 0}
-        aria-label={placeholder}
+        aria-label={displayPlaceholder}
         aria-disabled={disabled}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
@@ -280,7 +283,7 @@ export function FileUpload({
           disabled={disabled}
           onChange={handleInputChange}
           className="hidden"
-          aria-label={`Upload file${multiple ? "s" : ""}${accept ? `, accepted types: ${accept}` : ""}`}
+          aria-label={`${displayPlaceholder}${accept ? `, ${t("accepted", { types: accept })}` : ""}`}
         />
         <div className="flex flex-col items-center gap-2">
           <Upload
@@ -289,13 +292,15 @@ export function FileUpload({
               isDragging ? "text-primary" : "text-muted-foreground"
             )}
           />
-          <p className="text-muted-foreground text-sm">{placeholder}</p>
+          <p className="text-muted-foreground text-sm">{displayPlaceholder}</p>
           {accept && (
-            <p className="text-muted-foreground text-xs">Accepted: {accept}</p>
+            <p className="text-muted-foreground text-xs">
+              {t("accepted", { types: accept })}
+            </p>
           )}
           {maxSize && (
             <p className="text-muted-foreground text-xs">
-              Max size: {formatBytes(maxSize)}
+              {t("maxSize", { size: formatBytes(maxSize) })}
             </p>
           )}
         </div>
@@ -306,10 +311,10 @@ export function FileUpload({
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium">
-              {files.length} file{files.length !== 1 ? "s" : ""}
+              {t("filesCount", { count: files.length })}
             </span>
             <Button variant="ghost" size="sm" onClick={clearAll}>
-              Clear all
+              {t("clearAll")}
             </Button>
           </div>
           <div className="space-y-2">
@@ -331,7 +336,7 @@ export function FileUpload({
                       className="text-destructive h-5 w-5 flex-shrink-0"
                       aria-hidden="true"
                     />
-                    <span className="sr-only">Error</span>
+                    <span className="sr-only">{t("fileError")}</span>
                   </>
                 ) : fileWithStatus.status === "success" ? (
                   <>
@@ -339,7 +344,7 @@ export function FileUpload({
                       className="h-5 w-5 flex-shrink-0 text-green-500"
                       aria-hidden="true"
                     />
-                    <span className="sr-only">Success</span>
+                    <span className="sr-only">{t("fileSuccess")}</span>
                   </>
                 ) : (
                   <File
@@ -376,7 +381,9 @@ export function FileUpload({
                   variant="ghost"
                   size="sm"
                   className="h-6 w-6 p-0"
-                  aria-label={`Remove ${fileWithStatus.file.name}`}
+                  aria-label={t("removeFile", {
+                    filename: fileWithStatus.file.name,
+                  })}
                   onClick={(e) => {
                     e.stopPropagation();
                     removeFile(fileWithStatus.file);

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
 import { Clock, Calendar, ArrowLeft, ExternalLink } from "lucide-react";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }
 
 export function generateStaticParams(): { slug: string }[] {
@@ -51,8 +52,10 @@ function formatDate(dateStr: string): string {
 export default async function BlogPostPage({
   params,
 }: PageProps): Promise<React.ReactElement> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
   const post = getPostBySlug(slug);
+  const t = await getTranslations("blog");
 
   if (!post) {
     notFound();
@@ -67,7 +70,7 @@ export default async function BlogPostPage({
           className="text-muted-foreground hover:text-foreground mb-10 inline-flex items-center gap-2 text-sm transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
-          All articles
+          {t("page.allArticles")}
         </Link>
 
         {/* Post header */}
@@ -82,7 +85,7 @@ export default async function BlogPostPage({
             </span>
             <span className="text-muted-foreground flex items-center gap-1.5 text-sm">
               <Clock className="h-3.5 w-3.5" />
-              {post.readingTimeMinutes} min read
+              {t("page.minRead", { count: post.readingTimeMinutes })}
             </span>
           </div>
           <h1 className="mb-4 text-3xl leading-tight font-bold sm:text-4xl">
@@ -109,10 +112,9 @@ export default async function BlogPostPage({
         {/* CTA section */}
         {post.ctaTools.length > 0 && (
           <div className="bg-primary/5 border-primary/20 mt-14 rounded-2xl border p-6 sm:p-8">
-            <h2 className="mb-2 text-xl font-semibold">Try it on utils.live</h2>
+            <h2 className="mb-2 text-xl font-semibold">{t("cta.heading")}</h2>
             <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-              Free, browser-based tools — no sign-up required, your data never
-              leaves your device.
+              {t("cta.description")}
             </p>
             <div className="flex flex-wrap gap-3">
               {post.ctaTools.map((tool) => (
@@ -136,7 +138,7 @@ export default async function BlogPostPage({
             className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to all articles
+            {t("page.backToArticles")}
           </Link>
         </div>
       </div>

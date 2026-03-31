@@ -2,6 +2,7 @@
 
 import { useEffect, useCallback, useRef } from "react";
 import type { ToolMeta, ToolUIConfig } from "@utils-live/tools/constants";
+import { useTranslations } from "next-intl";
 import { ToolLayout } from "@/components/tools/tool-layout";
 import { OutputPanel } from "@/components/editor/output-panel";
 import { GeneratorOptionsPanel } from "@/components/tools/generator-options-panel";
@@ -42,6 +43,7 @@ export function GeneratorToolLayout({
   onCopy,
   onExecuteReady,
 }: GeneratorToolLayoutProps): React.ReactElement {
+  const t = useTranslations("tools.shell");
   const isMobile = useIsMobile();
 
   const executeFormBasedTool = useCallback(
@@ -148,8 +150,8 @@ export function GeneratorToolLayout({
           icon: tool.icon ?? "🔧",
           tier: tool.tier,
         }}
-        inputLabel="Configure"
-        outputLabel="Output"
+        inputLabel={t("configureLabel")}
+        outputLabel={t("outputLabel")}
       >
         <GeneratorOptionsPanel
           inputSchema={inputSchemaFormatted}

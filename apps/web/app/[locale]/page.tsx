@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import {
   getCategorySummaries,
   getToolCountLabel,
@@ -16,18 +17,31 @@ import { ToolDemo } from "@/components/marketing/tool-demo";
 import { CategoryShowcase } from "@/components/marketing/category-showcase";
 import { FeatureCards } from "@/components/marketing/feature-cards";
 import { CTASection } from "@/components/marketing/cta-section";
+import { buildAlternates } from "@/lib/alternates";
 
 const toolCountLabel = getToolCountLabel();
 
-export const metadata: Metadata = {
-  title: "utils.live | Free Developer Tools & Utilities",
-  description: `${toolCountLabel} free developer tools in one place. JSON formatters, encoders, converters, hash generators, and more. Fast, free, and privacy-focused.`,
-  alternates: {
-    canonical: "https://utils.live",
-  },
-};
+interface HomePageProps {
+  params: Promise<{ locale: string }>;
+}
 
-export default function HomePage(): React.ReactElement {
+export async function generateMetadata({
+  params,
+}: HomePageProps): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: "utils.live | Free Developer Tools & Utilities",
+    description: `${toolCountLabel} free developer tools in one place. JSON formatters, encoders, converters, hash generators, and more. Fast, free, and privacy-focused.`,
+    alternates: buildAlternates(locale, "/"),
+  };
+}
+
+export default async function HomePage({
+  params,
+}: HomePageProps): Promise<React.ReactElement> {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const categories = getCategorySummaries();
 
   // Format categories for the showcase

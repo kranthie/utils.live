@@ -9,10 +9,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ? requested
       : routing.defaultLocale;
 
-  const messages: AbstractIntlMessages =
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    (await import(`../messages/${locale}.json`))
-      .default as AbstractIntlMessages;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  const messages: AbstractIntlMessages = (
+    await import(`../messages/${locale}.json`)
+  ).default as AbstractIntlMessages;
 
   return { locale, messages };
 });

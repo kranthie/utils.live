@@ -21,6 +21,7 @@ export default tseslint.config(
       "**/out/**",
       "build/**",
       "next-env.d.ts",
+      "apps/web/functions/**",
     ],
   },
 

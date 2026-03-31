@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef, useState, useCallback, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Search, ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useKeyboard } from "@/components/providers/keyboard-provider";
 import { fadeInUp, staggerContainer, VIEWPORT_ONCE } from "@/lib/animation";
 import { cn } from "@/lib/utils";
@@ -49,6 +50,7 @@ export function CTASection({
   categoryCount,
   className,
 }: CTASectionProps): React.ReactElement {
+  const t = useTranslations("home.cta");
   const { setSearchOpen } = useKeyboard();
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -86,7 +88,9 @@ export function CTASection({
               >
                 {toolCounter.count}+
               </div>
-              <div className="text-muted-foreground text-sm">Tools</div>
+              <div className="text-muted-foreground text-sm">
+                {t("toolsLabel")}
+              </div>
             </div>
             <div className="bg-border h-8 w-px" />
             <div className="text-center">
@@ -96,14 +100,18 @@ export function CTASection({
               >
                 {categoryCounter.count}
               </div>
-              <div className="text-muted-foreground text-sm">Categories</div>
+              <div className="text-muted-foreground text-sm">
+                {t("categoriesLabel")}
+              </div>
             </div>
             <div className="bg-border h-8 w-px" />
             <div className="text-center">
               <div className="text-brand text-3xl font-bold sm:text-4xl">
                 100%
               </div>
-              <div className="text-muted-foreground text-sm">Free &amp; Open Source</div>
+              <div className="text-muted-foreground text-sm">
+                {t("freeLabel")}
+              </div>
             </div>
           </motion.div>
 
@@ -111,13 +119,13 @@ export function CTASection({
             className="text-2xl font-bold sm:text-3xl"
             variants={fadeInUp}
           >
-            Start building with {toolCount}+ tools
+            {t("heading", { toolCount })}
           </motion.h2>
           <motion.p
             className="text-muted-foreground mt-3 text-lg"
             variants={fadeInUp}
           >
-            Find the right tool for any task. Search, click, done.
+            {t("subheading")}
           </motion.p>
 
           <motion.div
@@ -130,13 +138,13 @@ export function CTASection({
               className="bg-brand hover:bg-brand/90 inline-flex items-center gap-2 rounded-lg px-6 py-3 font-medium text-white transition-colors"
             >
               <Search className="h-5 w-5" />
-              Search Tools
+              {t("searchToolsButton")}
             </button>
             <Link
               href="/tools"
               className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 font-medium transition-colors"
             >
-              Browse All Tools
+              {t("browseAllTools")}
               <ArrowRight className="h-4 w-4" />
             </Link>
           </motion.div>

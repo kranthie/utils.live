@@ -1,5 +1,6 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Terminal } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { cn } from "@/lib/utils";
 
 interface FooterProps {
@@ -8,22 +9,26 @@ interface FooterProps {
 
 const GITHUB_URL = "https://github.com/kranthie/utils.live";
 
-const FOOTER_LINKS = {
-  product: [
-    { label: "All Tools", href: "/tools" },
-    { label: "Blog", href: "/blog" },
-  ],
-  company: [
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-  ],
-  community: [
-    { label: "GitHub", href: GITHUB_URL },
-    { label: "Report Issue", href: `${GITHUB_URL}/issues` },
-  ],
-};
+export async function Footer({
+  className,
+}: FooterProps): Promise<React.ReactElement> {
+  const t = await getTranslations("footer");
 
-export function Footer({ className }: FooterProps): React.ReactElement {
+  const FOOTER_LINKS = {
+    product: [
+      { label: t("links.allTools"), href: "/tools" },
+      { label: t("links.blog"), href: "/blog" },
+    ],
+    company: [
+      { label: t("links.about"), href: "/about" },
+      { label: t("links.contact"), href: "/contact" },
+    ],
+    community: [
+      { label: t("links.github"), href: GITHUB_URL },
+      { label: t("links.reportIssue"), href: `${GITHUB_URL}/issues` },
+    ],
+  };
+
   return (
     <footer className={cn("bg-muted/30 border-t", className)}>
       <div className="container mx-auto px-4 py-8 md:py-10">
@@ -36,14 +41,15 @@ export function Footer({ className }: FooterProps): React.ReactElement {
               <span className="text-xl font-bold">utils.live</span>
             </Link>
             <p className="text-muted-foreground mb-4 max-w-xs text-sm">
-              Free, open-source developer utilities for encoding, conversion,
-              formatting, and more.
+              {t("tagline")}
             </p>
           </div>
 
           {/* Product links */}
           <div>
-            <h2 className="mb-4 text-base font-semibold">Product</h2>
+            <h2 className="mb-4 text-base font-semibold">
+              {t("sections.product")}
+            </h2>
             <ul className="space-y-3">
               {FOOTER_LINKS.product.map((link) => (
                 <li key={link.href}>
@@ -60,7 +66,9 @@ export function Footer({ className }: FooterProps): React.ReactElement {
 
           {/* Company links */}
           <div>
-            <h2 className="mb-4 text-base font-semibold">Company</h2>
+            <h2 className="mb-4 text-base font-semibold">
+              {t("sections.company")}
+            </h2>
             <ul className="space-y-3">
               {FOOTER_LINKS.company.map((link) => (
                 <li key={link.href}>
@@ -77,7 +85,9 @@ export function Footer({ className }: FooterProps): React.ReactElement {
 
           {/* Community links */}
           <div>
-            <h2 className="mb-4 text-base font-semibold">Community</h2>
+            <h2 className="mb-4 text-base font-semibold">
+              {t("sections.community")}
+            </h2>
             <ul className="space-y-3">
               {FOOTER_LINKS.community.map((link) => (
                 <li key={link.href}>
