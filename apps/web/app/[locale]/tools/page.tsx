@@ -113,12 +113,20 @@ export default async function AllToolsPage({
         {/* Client-side tools browser with search */}
         <ToolsPageClient
           tools={toolData}
-          categories={categories.map((c) => ({
-            ...c,
-            name: categoryMetaMessages?.[c.id]?.name ?? c.name,
-            description:
-              categoryMetaMessages?.[c.id]?.description ?? c.description,
-          }))}
+          categories={categories.map((c) => {
+            const groupMessages = messages.categoryGroups as
+              | Record<string, string>
+              | undefined;
+            return {
+              ...c,
+              name: categoryMetaMessages?.[c.id]?.name ?? c.name,
+              description:
+                categoryMetaMessages?.[c.id]?.description ?? c.description,
+              group: c.group
+                ? (groupMessages?.[c.group] ?? c.group)
+                : undefined,
+            };
+          })}
           categoryNames={categoryNames}
         />
       </div>

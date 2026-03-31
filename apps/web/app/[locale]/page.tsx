@@ -70,7 +70,25 @@ export default async function HomePage({
       <Header />
 
       <main id="main-content" className="flex-1">
-        <HeroSection toolCountLabel={toolCountLabel} />
+        <HeroSection
+          toolCountLabel={toolCountLabel}
+          categories={[
+            "json",
+            "encoding",
+            "text",
+            "crypto",
+            "jwt",
+            "regex",
+            "color",
+            "datetime",
+          ].map((id) => ({
+            id,
+            name:
+              categoryMetaMessages?.[id]?.name ??
+              categories.find((c) => c.id === id)?.name ??
+              id,
+          }))}
+        />
         <ToolDemo toolCount={getRoundedToolCount()} />
         <CategoryShowcase
           categories={showcaseCategories}

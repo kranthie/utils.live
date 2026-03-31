@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { setRequestLocale, getMessages } from "next-intl/server";
+import {
+  setRequestLocale,
+  getMessages,
+  getTranslations,
+} from "next-intl/server";
 import type { AbstractIntlMessages } from "next-intl";
 import {
   getTool,
@@ -8,11 +12,7 @@ import {
   getCategoryInfo,
   getAllToolCards,
 } from "@/lib/tools/get-tool";
-import {
-  getToolBreadcrumbs,
-  generateToolJsonLd,
-  generateToolFAQJsonLd,
-} from "@/lib/seo/json-ld";
+import { generateToolJsonLd, generateToolFAQJsonLd } from "@/lib/seo/json-ld";
 import { getToolSeoDescription } from "@/lib/seo/description-helper";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Breadcrumb } from "@/components/layout/breadcrumb";
@@ -124,6 +124,7 @@ export default async function ToolPage({
 }: ToolPageProps): Promise<React.ReactElement> {
   const { locale, category, tool: toolSlug } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("tools");
   const toolData = getTool(category, toolSlug);
 
   if (!toolData) {
@@ -164,12 +165,13 @@ export default async function ToolPage({
   const localizedCategoryName =
     categoryMetaMessages?.[category]?.name ?? categoryInfo?.name ?? category;
 
-  // Generate breadcrumbs
-  const breadcrumbs = getToolBreadcrumbs(
-    category,
-    localizedCategoryName,
-    toolName
-  );
+  // Generate breadcrumbs with translated labels
+  const breadcrumbs = [
+    { label: t("breadcrumbs.home"), href: "/" },
+    { label: t("breadcrumbs.tools"), href: "/tools" },
+    { label: localizedCategoryName, href: `/tools/${category}` },
+    { label: toolName },
+  ];
 
   // Generate JSON-LD
   const jsonLd = generateToolJsonLd(meta);

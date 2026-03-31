@@ -11,7 +11,6 @@ import {
   getCategorySummaries,
 } from "@/lib/tools/get-tool";
 import {
-  getCategoryBreadcrumbs,
   generateBreadcrumbJsonLd,
   generateCategoryItemListJsonLd,
 } from "@/lib/seo/json-ld";
@@ -132,7 +131,10 @@ export default async function CategoryPage({
   const localizedCategoryDesc =
     categoryMetaMessages?.[category]?.description ?? categoryInfo.description;
 
-  // Translate tool names for client component
+  // Translate tool names and subgroups for client component
+  const subgroupMessages = messages.subgroupMeta as
+    | Record<string, string>
+    | undefined;
   const localizedTools = tools.map((tool) => {
     const slug = tool.id.split("/")[1] ?? "";
     const toolMsg = toolMetaMessages?.[category]?.[slug];
@@ -140,11 +142,18 @@ export default async function CategoryPage({
       ...tool,
       name: toolMsg?.name ?? tool.name,
       description: toolMsg?.description ?? tool.description,
+      subgroup: tool.subgroup
+        ? (subgroupMessages?.[tool.subgroup] ?? tool.subgroup)
+        : undefined,
     };
   });
 
-  // Generate breadcrumbs
-  const breadcrumbs = getCategoryBreadcrumbs(localizedCategoryName);
+  // Generate breadcrumbs with translated labels
+  const breadcrumbs = [
+    { label: t("breadcrumbs.home"), href: "/" },
+    { label: t("breadcrumbs.tools"), href: "/tools" },
+    { label: localizedCategoryName },
+  ];
   const breadcrumbJsonLd = generateBreadcrumbJsonLd(breadcrumbs);
   const itemListJsonLd = generateCategoryItemListJsonLd(
     category,
