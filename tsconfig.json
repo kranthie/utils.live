@@ -4,6 +4,6 @@
   "compilerOptions": {
     "baseUrl": "."
   },
-  "include": [],
+  "include": ["scripts/**/*.ts"],
   "references": [{ "path": "./apps/web" }, { "path": "./packages/tools" }]
 }

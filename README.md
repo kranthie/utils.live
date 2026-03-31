@@ -83,15 +83,15 @@ All tools are client-tier only -- no server, no database, no API calls.
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | [Next.js 16](https://nextjs.org/) (App Router, static export) |
-| Language | [TypeScript 5](https://www.typescriptlang.org/) |
-| Monorepo | [Turborepo](https://turbo.build/) + [pnpm](https://pnpm.io/) |
-| Styling | [Tailwind CSS 4](https://tailwindcss.com/) + [Radix UI](https://www.radix-ui.com/) |
-| Editor | [Monaco Editor](https://microsoft.github.io/monaco-editor/) |
-| Testing | [Vitest](https://vitest.dev/) + [Playwright](https://playwright.dev/) |
-| Hosting | [Cloudflare Pages](https://pages.cloudflare.com/) |
+| Layer     | Technology                                                                         |
+| --------- | ---------------------------------------------------------------------------------- |
+| Framework | [Next.js 16](https://nextjs.org/) (App Router, static export)                      |
+| Language  | [TypeScript 5](https://www.typescriptlang.org/)                                    |
+| Monorepo  | [Turborepo](https://turbo.build/) + [pnpm](https://pnpm.io/)                       |
+| Styling   | [Tailwind CSS 4](https://tailwindcss.com/) + [Radix UI](https://www.radix-ui.com/) |
+| Editor    | [Monaco Editor](https://microsoft.github.io/monaco-editor/)                        |
+| Testing   | [Vitest](https://vitest.dev/) + [Playwright](https://playwright.dev/)              |
+| Hosting   | [Cloudflare Pages](https://pages.cloudflare.com/)                                  |
 
 ## Contributing
 
@@ -116,6 +116,28 @@ pnpm turbo typecheck        # Type check all packages
 pnpm format                 # Format with Prettier
 pnpm generate:tool          # Scaffold a new tool
 ```
+
+## i18n — Translation Pipeline
+
+UI strings live in `apps/web/messages/en.json`. To generate a translated locale file, run the AI translation script:
+
+```bash
+export ANTHROPIC_API_KEY=sk-ant-...   # Required: your Anthropic API key
+
+pnpm translate -- --locale es         # Spanish
+pnpm translate -- --locale fr         # French
+pnpm translate -- --locale de         # German
+pnpm translate -- --locale pt-BR      # Brazilian Portuguese
+```
+
+This reads `messages/en.json`, calls the Claude API, and writes `messages/{locale}.json`.
+
+**Notes:**
+
+- ICU plural patterns (`{count, plural, one {# result} other {# results}}`) are preserved exactly — only surrounding text is translated.
+- Brand names and untranslatable terms are flagged with a `[REVIEW]` prefix in the output — search for `[REVIEW]` in the output file and verify those strings manually.
+- The script splits strings into batches of 80 to stay within model context limits.
+- Key names are never translated, only values.
 
 ## License
 

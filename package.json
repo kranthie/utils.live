@@ -19,6 +19,7 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "clean": "turbo run clean && rm -rf node_modules",
     "generate:tool": "pnpm --filter @utils-live/tools generate:tool",
+    "translate": "tsx scripts/translate.ts",
     "prepare": "husky"
   },
   "devDependencies": {
