@@ -9,10 +9,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ? requested
       : routing.defaultLocale;
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-  const messages: AbstractIntlMessages = (
-    await import(`../messages/${locale}.json`)
-  ).default as AbstractIntlMessages;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- dynamic locale import returns untyped module
+  const imported: { default: AbstractIntlMessages } = await import(
+    `../messages/${locale}.json`
+  );
+  const messages: AbstractIntlMessages = imported.default;
 
   return { locale, messages };
 });
