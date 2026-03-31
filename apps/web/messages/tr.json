@@ -44,8 +44,8 @@
       "system": "Sistem"
     },
     "brand": {
-      "name": "[REVIEW] utils.live",
-      "homeAriaLabel": "[REVIEW] utils.live ana sayfa"
+      "name": "utils.live",
+      "homeAriaLabel": "utils.live anasayfa"
     }
   },
   "home": {
@@ -57,8 +57,8 @@
       "searchAriaLabel": "Geliştirici araçlarında ara"
     },
     "features": {
-      "eyebrow": "[REVIEW] Neden utils.live",
-      "heading": "[REVIEW] Neden geliştiriciler utils.live'ı seçer",
+      "eyebrow": "Neden utils.live",
+      "heading": "Geliştiricilerin utils.live'ı seçme nedenleri",
       "instantResults": {
         "title": "Anında Sonuçlar",
         "description": "İstemci tarafı araçları tarayıcınızda sıfır gecikmeyle çalışır. Bekleme yok, sunucu gidiş-dönüşü yok."
@@ -100,7 +100,7 @@
       "outputLabel": "Çıktı"
     },
     "metadata": {
-      "title": "[REVIEW] utils.live | Ücretsiz Geliştirici Araçları & Yardımcı Programları",
+      "title": "utils.live | Ücretsiz Geliştirici Araçları ve Yardımcı Programlar",
       "description": "{toolCountLabel} ücretsiz geliştirici aracı tek bir yerde. JSON formatları, kodlayıcılar, dönüştürücüler, hash oluşturucular ve daha fazlası. Hızlı, ücretsiz ve gizlilik odaklı."
     }
   },
@@ -162,52 +162,52 @@
       "tools": {
         "title": "Araçları Keşfet",
         "description": "{toolCountLabel} ücretsiz geliştirici aracını inceleyin. JSON biçimlendiriciler, kodlayıcılar, dönüştürücüler, hash oluşturucular ve daha fazlası.",
-        "ogTitle": "[REVIEW] Araçları Keşfet | utils.live",
+        "ogTitle": "Araçları Keşfet | utils.live",
         "ogDescription": "{toolCountLabel} ücretsiz geliştirici aracını inceleyin. JSON biçimlendiriciler, kodlayıcılar, dönüştürücüler ve daha fazlası."
       }
     },
     "browse": {
-      "browseByCategory": "Browse by Category",
-      "searchCategories": "Search categories...",
-      "searchToolsInCategory": "Search tools in this category...",
-      "all": "All",
-      "tools": "{count} tools",
-      "toolsFound": "{count, plural, one {# tool} other {# tools}} found",
-      "categoriesFound": "{count, plural, one {# category} other {# categories}} found",
-      "noToolsFound": "No tools found. Try a different search term.",
-      "noToolsFoundSubgroup": "No tools found. Try a different search term or subgroup.",
-      "noCategoriesFound": "No categories found. Try a different search term.",
-      "noCategoriesFoundGroup": "No categories found. Try a different search term or group.",
-      "resultsFor": "{count, plural, one {# result} other {# results}} for \"{query}\"",
-      "resultsForInCategory": "{count, plural, one {# result} other {# results}} for \"{query}\" in {category}",
-      "noResultsForQuery": "No tools found matching \"{query}\". Try a different search term."
+      "browseByCategory": "Kategoriye Göre Gözat",
+      "searchCategories": "Kategorileri ara...",
+      "searchToolsInCategory": "Bu kategorideki araçları ara...",
+      "all": "Tümü",
+      "tools": "{count} araç",
+      "toolsFound": "{count, plural, one {# araç} other {# araç}} bulundu",
+      "categoriesFound": "{count, plural, one {# kategori} other {# kategori}} bulundu",
+      "noToolsFound": "Araç bulunamadı. Farklı bir arama terimi deneyin.",
+      "noToolsFoundSubgroup": "Araç bulunamadı. Farklı bir arama terimi veya alt grup deneyin.",
+      "noCategoriesFound": "Kategori bulunamadı. Farklı bir arama terimi deneyin.",
+      "noCategoriesFoundGroup": "Kategori bulunamadı. Farklı bir arama terimi veya grup deneyin.",
+      "resultsFor": "{count, plural, one {# sonuç} other {# sonuç}} \"{query}\" için",
+      "resultsForInCategory": "{count, plural, one {# sonuç} other {# sonuç}} \"{query}\" için {category} içinde",
+      "noResultsForQuery": "\"{query}\" ile eşleşen araç bulunamadı. Farklı bir arama terimi deneyin."
     },
     "popularTools": {
-      "topPicks": "Top Picks",
-      "featured": "Featured",
-      "popular": "Popular"
+      "topPicks": "Seçkin Araçlar",
+      "featured": "Öne Çıkanlar",
+      "popular": "Popüler"
     },
     "recentlyUsed": {
-      "title": "Recently Used",
-      "clear": "Clear"
+      "title": "Son Kullanılanlar",
+      "clear": "Temizle"
     },
     "relatedTools": {
-      "title": "Related Tools"
+      "title": "İlgili Araçlar"
     },
     "documentation": {
-      "title": "Documentation",
-      "overview": "Overview",
-      "category": "Category:",
-      "privacyNote": "Runs entirely in your browser. No data is sent to our servers.",
-      "examples": "Examples",
-      "input": "Input",
-      "output": "Output",
-      "options": "Options",
-      "loadExample": "Load Example"
+      "title": "Dokümantasyon",
+      "overview": "Genel Bakış",
+      "category": "Kategori:",
+      "privacyNote": "Tamamen tarayıcınızda çalışır. Sunucularımıza hiçbir veri gönderilmez.",
+      "examples": "Örnekler",
+      "input": "Giriş",
+      "output": "Çıkış",
+      "options": "Seçenekler",
+      "loadExample": "Örnek Yükle"
     },
     "toolCard": {
-      "addFavorite": "Add to favorites",
-      "removeFavorite": "Remove from favorites"
+      "addFavorite": "Favorilere ekle",
+      "removeFavorite": "Favorilerden kaldır"
     }
   },
   "editor": {
@@ -262,14 +262,14 @@
     "about": {
       "metadata": {
         "title": "Hakkında",
-        "description": "[REVIEW] utils.live hakkında bilgi edinin - geliştirici araçlarını erişilebilir, hızlı ve gizlilik odaklı hale getirme misyonumuz.",
-        "ogTitle": "[REVIEW] Hakkında | utils.live"
+        "description": "utils.live hakkında bilgi edinin - geliştirici araçlarını erişilebilir, hızlı ve gizlilik odaklı hale getirme misyonumuz.",
+        "ogTitle": "Hakkında | utils.live"
       },
       "hero": {
         "heading": "Zamanınıza saygı gösteren geliştirici araçları",
         "headingPrefix": "Zamanınıza",
         "gradientText": "saygı gösteren geliştirici araçları",
-        "description": "[REVIEW] utils.live, yavaş, reklam dolu ve gizlilik ihlal eden çevrimiçi araçlardan kaynaklanan hayal kırıklığından doğdu. Kullanmak istediğimiz araçları inşa ettik: hızlı, ücretsiz ve saygılı yardımcı programlar."
+        "description": "utils.live, yavaş, reklam dolu ve gizlilik ihlal eden çevrimiçi araçlardan duydukları hayal kırıklığından doğdu. Kullanmak istediklerimizi inşa ettik: hızlı, ücretsiz ve saygılı yardımcı programlar."
       },
       "stats": {
         "developerTools": "Geliştirici Araçları",
@@ -312,7 +312,7 @@
       "metadata": {
         "title": "İletişim",
         "description": "utils.live ekibiyle iletişime geçin. Özellikler, hatalar veya ortaklıklar hakkında fikirlerinizi duymaktan sevinç duyarız.",
-        "ogTitle": "[REVIEW] İletişim | utils.live",
+        "ogTitle": "İletişim | utils.live",
         "ogDescription": "utils.live ekibiyle iletişime geçin. Fikirlerinizi duymaktan sevinç duyarız."
       },
       "hero": {
@@ -365,7 +365,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "[REVIEW] Geliştirici Araçları Blog | utils.live",
+      "title": "Geliştirici Araçları Blogu | utils.live",
       "description": "Geliştirici araçları kavramlarını öğrenin — Base64, JWT'ler, regex, UUID'ler, hashing ve daha fazlası. Canlı örneklerle pratik rehberler.",
       "postNotFound": "Yazı Bulunamadı"
     },
@@ -379,7 +379,7 @@
       "backToArticles": "Tüm makalelere geri dön"
     },
     "cta": {
-      "heading": "[REVIEW] utils.live'da deneyin",
+      "heading": "utils.live'da deneyin",
       "description": "Ücretsiz, tarayıcı tabanlı araçlar — kaydolmaya gerek yok, verileriniz cihazınızdan ayrılmaz."
     }
   },
@@ -418,32 +418,32 @@
   },
   "metadata": {
     "home": {
-      "title": "[REVIEW] utils.live | Ücretsiz Geliştirici Araçları & Yardımcıları",
+      "title": "utils.live | Ücretsiz Geliştirici Araçları ve Yardımcı Programlar",
       "description": "{toolCountLabel} ücretsiz geliştirici aracı tek bir yerde. JSON biçimlendiriciler, kodlayıcılar, dönüştürücüler, hash oluşturucular ve daha fazlası. Hızlı, ücretsiz ve gizliliğe odaklı."
     },
     "layout": {
-      "title": "[REVIEW] utils.live | Geliştirici Yardımcıları Platformu",
+      "title": "utils.live | Geliştirici Yardımcı Programları Platformu",
       "titleTemplate": "%s | utils.live",
       "description": "{toolCountLabel} geliştirici aracı tek bir yerde. JSON biçimlendiriciler, kodlayıcılar, dönüştürücüler ve daha fazlası. Ücretsiz ve gizliliğe odaklı.",
-      "ogTitle": "[REVIEW] utils.live | Geliştirici Yardımcıları Platformu",
-      "ogAlt": "[REVIEW] utils.live - Ücretsiz Geliştirici Araçları",
+      "ogTitle": "utils.live | Geliştirici Yardımcı Programları Platformu",
+      "ogAlt": "utils.live - Ücretsiz Geliştirici Araçları",
       "skipToMain": "Ana içeriğe geç"
     },
     "tools": {
       "title": "Araçları Keşfet",
       "description": "{toolCountLabel} ücretsiz geliştirici aracına göz atın. JSON biçimlendiriciler, kodlayıcılar, dönüştürücüler, hash oluşturucular ve daha fazlası.",
-      "ogTitle": "[REVIEW] Araçları Keşfet | utils.live"
+      "ogTitle": "Araçları Keşfet | utils.live"
     },
     "about": {
       "title": "Hakkında",
-      "ogTitle": "[REVIEW] Hakkında | utils.live"
+      "ogTitle": "Hakkında | utils.live"
     },
     "contact": {
       "title": "İletişim",
-      "ogTitle": "[REVIEW] İletişim | utils.live"
+      "ogTitle": "İletişim | utils.live"
     },
     "blog": {
-      "title": "[REVIEW] Geliştirici Araçları Blogu | utils.live"
+      "title": "Geliştirici Araçları Blogu | utils.live"
     }
   },
   "footer": {
@@ -466,7 +466,7 @@
     "openMenu": "Menüyü aç",
     "searchLabel": "Araçları ara",
     "searchPlaceholder": "Araçları ara...",
-    "title": "[REVIEW] utils.live"
+    "title": "utils.live"
   },
   "forms": {
     "fileUpload": {
@@ -3489,140 +3489,140 @@
   },
   "categoryMeta": {
     "json": {
-      "name": "JSON Tools",
-      "description": "Free online JSON tools to format, validate, compare, and transform JSON data. Pretty print, minify, convert to YAML/CSV/XML, and more — all in your browser."
+      "name": "JSON Araçları",
+      "description": "JSON verilerini biçimlendirmek, doğrulamak, karşılaştırmak ve dönüştürmek için ücretsiz çevrimiçi JSON araçları. Pretty print, minify, YAML/CSV/XML'e dönüştürme ve daha fazlası — hepsi tarayıcında."
     },
     "encoding": {
-      "name": "Encoding & Decoding",
-      "description": "Free online encoding and decoding tools for Base64, URL encoding, Unicode, HTML entities, and more. Convert between formats instantly in your browser."
+      "name": "Kodlama ve Kod Çözme",
+      "description": "Base64, URL kodlaması, Unicode, HTML varlıkları ve daha fazlası için ücretsiz çevrimiçi kodlama ve kod çözme araçları. Biçimler arasında anında dönüştürme yapın."
     },
     "text": {
-      "name": "Text Tools",
-      "description": "Free online text tools to transform, analyze, and manipulate text strings. Count words, change case, find and replace, sort lines, and more."
+      "name": "Metin Araçları",
+      "description": "Metin dizelerini dönüştürmek, analiz etmek ve işlemek için ücretsiz çevrimiçi metin araçları. Kelime sayma, büyük/küçük harf değiştirme, bul ve değiştir, satırları sıralama ve daha fazlası."
     },
     "crypto": {
-      "name": "Cryptography",
-      "description": "Free online cryptography tools for hash generation, encryption, decryption, and security analysis. MD5, SHA-256, AES, HMAC, and more — all client-side."
+      "name": "Şifreleme",
+      "description": "Hash oluşturma, şifreleme, şifre çözme ve güvenlik analizi için ücretsiz çevrimiçi şifreleme araçları. MD5, SHA-256, AES, HMAC ve daha fazlası — tamamen istemci tarafında."
     },
     "jwt": {
-      "name": "JWT & Tokens",
-      "description": "Free online JWT tools to decode, verify, and debug JSON Web Tokens. Inspect headers, payloads, and signatures without sending data to any server."
+      "name": "JWT ve Tokenlar",
+      "description": "JSON Web Tokenlarını çözmek, doğrulamak ve hata ayıklamak için ücretsiz çevrimiçi JWT araçları. Başlıkları, yükleri ve imzaları herhangi bir sunucuya veri göndermeden inceleyin."
     },
     "regex": {
-      "name": "Regular Expressions",
-      "description": "Free online regular expression tools to build, test, and debug regex patterns. Live matching, syntax highlighting, and cheat sheets for all major flavors."
+      "name": "Düzenli İfadeler",
+      "description": "Regex desenleri oluşturmak, test etmek ve hata ayıklamak için ücretsiz çevrimiçi düzenli ifade araçları. Canlı eşleştirme, sözdizimi vurgulama ve tüm ana türler için kopya kağıtları."
     },
     "color": {
-      "name": "Color Tools",
-      "description": "Free online color tools to convert, pick, and generate color palettes. HEX, RGB, HSL, OKLCH conversions, contrast checkers, and palette generators."
+      "name": "Renk Araçları",
+      "description": "Renkleri dönüştürmek, seçmek ve renk paletleri oluşturmak için ücretsiz çevrimiçi renk araçları. HEX, RGB, HSL, OKLCH dönüştürmeleri, kontrast denetleyicileri ve palet oluşturucuları."
     },
     "datetime": {
-      "name": "Date & Time",
-      "description": "Free online date and time tools to convert, format, and calculate dates. Unix timestamps, time zones, duration calculators, and date formatters."
+      "name": "Tarih ve Saat",
+      "description": "Tarihleri dönüştürmek, biçimlendirmek ve hesaplamak için ücretsiz çevrimiçi tarih ve saat araçları. Unix zaman damgaları, saat dilimleri, süre hesaplayıcıları ve tarih biçimlendirmeleri."
     },
     "identifiers": {
-      "name": "Identifiers & IDs",
-      "description": "Free online ID generators for UUIDs, CUIDs, NanoIDs, ULIDs, and more. Generate unique identifiers instantly — no server needed, all in your browser."
+      "name": "Tanımlayıcılar ve Kimlikler",
+      "description": "UUID, CUID, NanoID, ULID ve daha fazlası için ücretsiz çevrimiçi kimlik oluşturucuları. Anında benzersiz tanımlayıcılar oluşturun — sunucu gerekmez, hepsi tarayıcında."
     },
     "diagram": {
-      "name": "Diagrams & Visual",
-      "description": "Free online diagram tools to generate and render flowcharts, sequence diagrams, and charts. Mermaid, PlantUML, and more — visualize directly in your browser."
+      "name": "Diyagramlar ve Görselleştirme",
+      "description": "Akış şemaları, sıra diyagramları ve çizelgeler oluşturmak ve işlemek için ücretsiz çevrimiçi diyagram araçları. Mermaid, PlantUML ve daha fazlası — doğrudan tarayıcınızda görselleştirin."
     },
     "html": {
-      "name": "HTML Tools",
-      "description": "Free online HTML tools to parse, format, minify, and convert HTML. Pretty print, strip tags, encode entities, and convert to Markdown or JSX."
+      "name": "HTML Araçları",
+      "description": "HTML'yi ayrıştırmak, biçimlendirmek, küçültmek ve dönüştürmek için ücretsiz çevrimiçi HTML araçları. Güzel yazdırma, etiket çıkarma, varlık kodlama ve Markdown veya JSX'e dönüştürme."
     },
     "css": {
-      "name": "CSS Tools",
-      "description": "Free online CSS tools to format, minify, and optimize stylesheets. Beautify CSS, convert units, generate gradients, and clean up your styles."
+      "name": "CSS Araçları",
+      "description": "Stil sayfalarını biçimlendirmek, küçültmek ve optimize etmek için ücretsiz çevrimiçi CSS araçları. CSS'i güzelleştirme, birimleri dönüştürme, gradyanlar oluşturma ve stillerinizi temizleme."
     },
     "code": {
-      "name": "Code Formatting",
-      "description": "Free online code formatting tools to beautify and format code in JavaScript, TypeScript, Python, SQL, and more. Consistent formatting in your browser."
+      "name": "Kod Biçimlendirme",
+      "description": "JavaScript, TypeScript, Python, SQL ve daha fazlasında kodu güzelleştirmek ve biçimlendirmek için ücretsiz çevrimiçi kod biçimlendirme araçları. Tarayıcınızda tutarlı biçimlendirme."
     },
     "yaml": {
-      "name": "YAML Tools",
-      "description": "Free online YAML tools to format, validate, and convert YAML files. Pretty print, convert to JSON/TOML, and check syntax — all client-side."
+      "name": "YAML Araçları",
+      "description": "YAML dosyalarını biçimlendirmek, doğrulamak ve dönüştürmek için ücretsiz çevrimiçi YAML araçları. Güzel yazdırma, JSON/TOML'ye dönüştürme ve söz dizimi kontrolü — tümü istemci tarafında."
     },
     "xml": {
-      "name": "XML Tools",
-      "description": "Free online XML tools to parse, format, and transform XML documents. Pretty print, minify, validate, and convert to JSON — all in your browser."
+      "name": "XML Araçları",
+      "description": "XML belgelerini ayrıştırmak, biçimlendirmek ve dönüştürmek için ücretsiz çevrimiçi XML araçları. Güzel yazdırma, küçültme, doğrulama ve JSON'a dönüştürme — tümü tarayıcınızda."
     },
     "csv": {
-      "name": "CSV & TSV Tools",
-      "description": "Free online CSV and TSV tools to parse, convert, and manipulate tabular data. Convert to JSON/XML, sort columns, and filter rows in your browser."
+      "name": "CSV ve TSV Araçları",
+      "description": "Tabuler verileri ayrıştırmak, dönüştürmek ve işlemek için ücretsiz çevrimiçi CSV ve TSV araçları. JSON/XML'ye dönüştürme, sütunları sıralama ve satırları filtreleme tarayıcınızda."
     },
     "markdown": {
-      "name": "Markdown Tools",
-      "description": "Free online Markdown tools to preview, convert, and enhance Markdown documents. Live preview, convert to HTML, generate tables, and format text."
+      "name": "Markdown Araçları",
+      "description": "Markdown belgelerini önizlemek, dönüştürmek ve geliştirmek için ücretsiz çevrimiçi Markdown araçları. Canlı önizleme, HTML'ye dönüştürme, tablo oluşturma ve metin biçimlendirme."
     },
     "math": {
-      "name": "Numbers & Math",
-      "description": "Free online math and number tools for calculations, conversions, and number formatting. Base conversion, percentage calculator, unit converter, and more."
+      "name": "Sayılar ve Matematik",
+      "description": "Hesaplamalar, dönüştürmeler ve sayı biçimlendirmesi için ücretsiz çevrimiçi matematik ve sayı araçları. Taban dönüştürme, yüzde hesaplayıcı, birim dönüştürücü ve daha fazlası."
     },
     "image": {
-      "name": "Image Tools",
-      "description": "Free online image tools to convert, resize, and optimize images. Change formats, compress files, crop, and adjust — all processed locally in your browser."
+      "name": "Görüntü Araçları",
+      "description": "Görüntüleri dönüştürmek, yeniden boyutlandırmak ve optimize etmek için ücretsiz çevrimiçi görüntü araçları. Formatları değiştirme, dosyaları sıkıştırma, kırpma ve ayarlama — tümü tarayıcınızda yerel olarak işlenir."
     },
     "svg": {
-      "name": "SVG Tools",
-      "description": "Free online SVG tools to optimize, convert, and manipulate SVG files. Minify, prettify, convert to PNG/JSX, and clean up SVG code in your browser."
+      "name": "SVG Araçları",
+      "description": "SVG dosyalarını optimize etmek, dönüştürmek ve işlemek için ücretsiz çevrimiçi SVG araçları. Küçültme, güzelleştirme, PNG/JSX'e dönüştürme ve SVG kodunu temizleme tarayıcınızda."
     },
     "web": {
-      "name": "Web & SEO",
-      "description": "Free online web and SEO tools for URL parsing, meta tag generation, Open Graph previews, and web utilities. Analyze and optimize your web presence."
+      "name": "Web ve SEO",
+      "description": "URL ayrıştırma, meta etiketi oluşturma, Open Graph önizlemeleri ve web yardımcı programları için ücretsiz çevrimiçi web ve SEO araçları. Web varlığınızı analiz edin ve optimize edin."
     },
     "api": {
-      "name": "API & OpenAPI",
-      "description": "Free online API and OpenAPI tools for schema validation, mock data generation, and API testing utilities. Work with REST APIs directly in your browser."
+      "name": "API ve OpenAPI",
+      "description": "Şema doğrulaması, sahte veri oluşturma ve API test yardımcı programları için ücretsiz çevrimiçi API ve OpenAPI araçları. REST API'leriyle doğrudan tarayıcınızda çalışın."
     },
     "sql": {
-      "name": "SQL & Database",
-      "description": "Free online SQL and database tools to format, validate, and convert SQL queries. Pretty print, minify, and convert between SQL dialects."
+      "name": "SQL & Veritabanı",
+      "description": "SQL sorgularını biçimlendirmek, doğrulamak ve dönüştürmek için ücretsiz çevrimiçi SQL ve veritabanı araçları. Güzel yazdırma, küçültme ve SQL lehçeleri arasında dönüştürme yapın."
     },
     "network": {
-      "name": "Network Tools",
-      "description": "Free online network tools for DNS lookup, IP address utilities, and connectivity diagnostics. Analyze network data and convert formats client-side."
+      "name": "Ağ Araçları",
+      "description": "DNS sorgulaması, IP adresi yardımcı programları ve bağlantı tanılaması için ücretsiz çevrimiçi ağ araçları. Ağ verilerini analiz edin ve biçimleri istemci tarafında dönüştürün."
     },
     "validation": {
-      "name": "Validation Tools",
-      "description": "Free online validation tools to check formats, data structures, and syntax. Validate JSON, YAML, XML, emails, URLs, and more — instantly in your browser."
+      "name": "Doğrulama Araçları",
+      "description": "Biçimleri, veri yapılarını ve söz dizimini kontrol etmek için ücretsiz çevrimiçi doğrulama araçları. JSON, YAML, XML, e-postaları, URL'leri ve daha fazlasını tarayıcınızda anında doğrulayın."
     },
     "data": {
-      "name": "Data Formats",
-      "description": "Free online data format tools to convert and view INI, NDJSON, HJSON, Avro, Protobuf, MessagePack, and other data serialization formats."
+      "name": "Veri Biçimleri",
+      "description": "INI, NDJSON, HJSON, Avro, Protobuf, MessagePack ve diğer veri serileştirme biçimlerini dönüştürmek ve görüntülemek için ücretsiz çevrimiçi veri biçimi araçları."
     },
     "toml": {
-      "name": "TOML Tools",
-      "description": "Free online TOML tools to format, validate, and convert TOML configuration files. Pretty print, convert to JSON/YAML, and check syntax instantly."
+      "name": "TOML Araçları",
+      "description": "TOML yapılandırma dosyalarını biçimlendirmek, doğrulamak ve dönüştürmek için ücretsiz çevrimiçi TOML araçları. Güzel yazdırma, JSON/YAML'ye dönüştürme ve söz dizimini anında kontrol edin."
     },
     "git": {
-      "name": "Git & Version Control",
-      "description": "Free online Git and version control tools for branch naming, commit message formatting, .gitignore generation, and Git command reference."
+      "name": "Git & Sürüm Kontrolü",
+      "description": "Dal adlandırması, işleme mesajı biçimlendirmesi, .gitignore oluşturması ve Git komut referansı için ücretsiz çevrimiçi Git ve sürüm kontrolü araçları."
     },
     "devops": {
-      "name": "DevOps & Infrastructure",
-      "description": "Free online DevOps tools for Docker, Kubernetes, Helm, and container configuration. Generate Dockerfiles, validate K8s manifests, and more."
+      "name": "DevOps & Altyapı",
+      "description": "Docker, Kubernetes, Helm ve konteyner yapılandırması için ücretsiz çevrimiçi DevOps araçları. Dockerfile'lar oluşturun, K8s bildirimlerini doğrulayın ve daha fazlasını yapın."
     },
     "feeds": {
-      "name": "Feeds & Structured Data",
-      "description": "Free online feed and structured data tools for RSS, Atom, JSON Feed, and Schema.org. Generate, validate, and convert web feeds in your browser."
+      "name": "Beslemeler & Yapılandırılmış Veriler",
+      "description": "RSS, Atom, JSON Feed ve Schema.org için ücretsiz çevrimiçi beslemeler ve yapılandırılmış veri araçları. Web beslemelerini tarayıcınızda oluşturun, doğrulayın ve dönüştürün."
     },
     "communication": {
-      "name": "Communication",
-      "description": "Free online communication tools for email formatting, messaging templates, and communication format conversion. Generate and validate email content."
+      "name": "İletişim",
+      "description": "E-posta biçimlendirmesi, mesajlaşma şablonları ve iletişim biçimi dönüştürme için ücretsiz çevrimiçi iletişim araçları. E-posta içeriği oluşturun ve doğrulayın."
     },
     "misc": {
-      "name": "Miscellaneous",
-      "description": "Free online miscellaneous developer tools for QR codes, UUIDs, Lorem Ipsum text, and other handy utilities. Quick tools that run in your browser."
+      "name": "Çeşitli",
+      "description": "QR kodları, UUID'ler, Lorem Ipsum metni ve diğer kullanışlı yardımcı programlar için ücretsiz çevrimiçi çeşitli geliştirici araçları. Tarayıcınızda çalışan hızlı araçlar."
     },
     "legal": {
-      "name": "Legal & Compliance",
-      "description": "Free online legal document generators for privacy policies, terms of service, GDPR statements, and compliance documents. Generate legal text instantly."
+      "name": "Yasal & Uyum",
+      "description": "Gizlilik politikaları, hizmet şartları, GDPR bildirimleri ve uyum belgeleri için ücretsiz çevrimiçi yasal belge oluşturucuları. Yasal metni anında oluşturun."
     },
     "reference": {
-      "name": "Reference & Lookup",
-      "description": "Free online reference and lookup tools for country codes, currency codes, language codes, MIME types, and other developer reference tables."
+      "name": "Referans & Arama",
+      "description": "Ülke kodları, para birimi kodları, dil kodları, MIME türleri ve diğer geliştirici referans tabloları için ücretsiz çevrimiçi referans ve arama araçları."
     }
   }
 }

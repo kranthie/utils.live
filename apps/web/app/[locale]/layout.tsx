@@ -122,8 +122,27 @@ export default async function LocaleLayout({
   ).default;
 
   // Generate search data server-side to avoid importing @utils-live/tools in the client bundle
-  const searchTools = getSearchTools();
-  const searchCategories = getSearchCategories();
+  // Localize tool/category names from message translations
+  const toolMetaMessages = messages.toolMeta as
+    | Record<string, Record<string, Record<string, string>>>
+    | undefined;
+  const categoryMetaMessages = messages.categoryMeta as
+    | Record<string, Record<string, string>>
+    | undefined;
+
+  const searchTools = getSearchTools().map((tool) => {
+    const [cat, slug] = tool.id.split("/");
+    const toolMsg = toolMetaMessages?.[cat ?? ""]?.[slug ?? ""];
+    return {
+      ...tool,
+      name: toolMsg?.name ?? tool.name,
+      description: toolMsg?.description ?? tool.description,
+    };
+  });
+  const searchCategories = getSearchCategories().map((cat) => ({
+    ...cat,
+    name: categoryMetaMessages?.[cat.id]?.name ?? cat.name,
+  }));
 
   return (
     <html lang={locale} suppressHydrationWarning>

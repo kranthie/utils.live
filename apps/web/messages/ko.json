@@ -44,8 +44,8 @@
       "system": "시스템"
     },
     "brand": {
-      "name": "[REVIEW] utils.live",
-      "homeAriaLabel": "[REVIEW] utils.live 홈"
+      "name": "utils.live",
+      "homeAriaLabel": "utils.live 홈"
     }
   },
   "home": {
@@ -57,8 +57,8 @@
       "searchAriaLabel": "개발자 도구 검색"
     },
     "features": {
-      "eyebrow": "[REVIEW] utils.live를 선택하는 이유",
-      "heading": "[REVIEW] 개발자들이 utils.live를 선택하는 이유",
+      "eyebrow": "utils.live를 선택하는 이유",
+      "heading": "개발자들이 utils.live를 선택하는 이유",
       "instantResults": {
         "title": "즉각적인 결과",
         "description": "클라이언트 사이드 도구가 지연 없이 브라우저에서 실행됩니다. 대기 없음, 서버 왕복 없음."
@@ -100,7 +100,7 @@
       "outputLabel": "출력"
     },
     "metadata": {
-      "title": "[REVIEW] utils.live | 무료 개발자 도구 & 유틸리티",
+      "title": "utils.live | 무료 개발자 도구 & 유틸리티",
       "description": "한곳에 모인 {toolCountLabel}개의 무료 개발자 도구. JSON 포매터, 인코더, 컨버터, 해시 생성기 등. 빠르고, 무료이며, 개인정보 보호 중심."
     }
   },
@@ -162,52 +162,52 @@
       "tools": {
         "title": "도구 탐색",
         "description": "{toolCountLabel}개의 무료 개발자 도구를 둘러보세요. JSON 포매터, 인코더, 변환기, 해시 생성기 등.",
-        "ogTitle": "[REVIEW] 도구 탐색 | utils.live",
+        "ogTitle": "도구 탐색 | utils.live",
         "ogDescription": "{toolCountLabel}개의 무료 개발자 도구를 둘러보세요. JSON 포매터, 인코더, 변환기 등."
       }
     },
     "browse": {
-      "browseByCategory": "Browse by Category",
-      "searchCategories": "Search categories...",
-      "searchToolsInCategory": "Search tools in this category...",
-      "all": "All",
-      "tools": "{count} tools",
-      "toolsFound": "{count, plural, one {# tool} other {# tools}} found",
-      "categoriesFound": "{count, plural, one {# category} other {# categories}} found",
-      "noToolsFound": "No tools found. Try a different search term.",
-      "noToolsFoundSubgroup": "No tools found. Try a different search term or subgroup.",
-      "noCategoriesFound": "No categories found. Try a different search term.",
-      "noCategoriesFoundGroup": "No categories found. Try a different search term or group.",
-      "resultsFor": "{count, plural, one {# result} other {# results}} for \"{query}\"",
-      "resultsForInCategory": "{count, plural, one {# result} other {# results}} for \"{query}\" in {category}",
-      "noResultsForQuery": "No tools found matching \"{query}\". Try a different search term."
+      "browseByCategory": "카테고리별 둘러보기",
+      "searchCategories": "카테고리 검색...",
+      "searchToolsInCategory": "이 카테고리에서 도구 검색...",
+      "all": "모두",
+      "tools": "{count}개 도구",
+      "toolsFound": "{count, plural, one {# 개 도구} other {# 개 도구}} 찾음",
+      "categoriesFound": "{count, plural, one {# 개 카테고리} other {# 개 카테고리}} 찾음",
+      "noToolsFound": "도구를 찾을 수 없습니다. 다른 검색어를 시도해주세요.",
+      "noToolsFoundSubgroup": "도구를 찾을 수 없습니다. 다른 검색어 또는 하위 그룹을 시도해주세요.",
+      "noCategoriesFound": "카테고리를 찾을 수 없습니다. 다른 검색어를 시도해주세요.",
+      "noCategoriesFoundGroup": "카테고리를 찾을 수 없습니다. 다른 검색어 또는 그룹을 시도해주세요.",
+      "resultsFor": "\"{query}\"에 대한 {count, plural, one {# 개 결과} other {# 개 결과}}",
+      "resultsForInCategory": "{category}에서 \"{query}\"에 대한 {count, plural, one {# 개 결과} other {# 개 결과}}",
+      "noResultsForQuery": "\"{query}\"와 일치하는 도구를 찾을 수 없습니다. 다른 검색어를 시도해주세요."
     },
     "popularTools": {
-      "topPicks": "Top Picks",
-      "featured": "Featured",
-      "popular": "Popular"
+      "topPicks": "인기 추천",
+      "featured": "추천",
+      "popular": "인기"
     },
     "recentlyUsed": {
-      "title": "Recently Used",
-      "clear": "Clear"
+      "title": "최근 사용됨",
+      "clear": "지우기"
     },
     "relatedTools": {
-      "title": "Related Tools"
+      "title": "관련 도구"
     },
     "documentation": {
-      "title": "Documentation",
-      "overview": "Overview",
-      "category": "Category:",
-      "privacyNote": "Runs entirely in your browser. No data is sent to our servers.",
-      "examples": "Examples",
-      "input": "Input",
-      "output": "Output",
-      "options": "Options",
-      "loadExample": "Load Example"
+      "title": "문서",
+      "overview": "개요",
+      "category": "카테고리:",
+      "privacyNote": "브라우저에서 완전히 실행됩니다. 서버로 데이터가 전송되지 않습니다.",
+      "examples": "예제",
+      "input": "입력",
+      "output": "출력",
+      "options": "옵션",
+      "loadExample": "예제 로드"
     },
     "toolCard": {
-      "addFavorite": "Add to favorites",
-      "removeFavorite": "Remove from favorites"
+      "addFavorite": "즐겨찾기에 추가",
+      "removeFavorite": "즐겨찾기에서 제거"
     }
   },
   "editor": {
@@ -262,14 +262,14 @@
     "about": {
       "metadata": {
         "title": "정보",
-        "description": "[REVIEW] utils.live에 대해 알아보세요. 개발자 도구를 접근 가능하고 빠르며 개인정보 보호 중심으로 만드는 우리의 사명입니다.",
-        "ogTitle": "[REVIEW] 정보 | utils.live"
+        "description": "utils.live에 대해 알아보세요 - 개발자 도구를 접근 가능하고 빠르며 개인정보 보호 중심으로 만들려는 우리의 미션입니다.",
+        "ogTitle": "소개 | utils.live"
       },
       "hero": {
         "heading": "당신의 시간을 존중하는 개발자 도구",
         "headingPrefix": "당신의 시간을 존중하는",
         "gradientText": "개발자 도구",
-        "description": "[REVIEW] utils.live는 느리고 광고가 많으며 개인정보를 침해하는 온라인 도구에 대한 불만으로부터 시작되었습니다. 우리는 사용하고 싶은 것을 만들었습니다: 빠르고, 무료이며, 존중하는 유틸리티."
+        "description": "utils.live는 느리고 광고가 많으며 개인정보를 침해하는 온라인 도구들에 대한 불만으로부터 탄생했습니다. 우리는 직접 사용하고 싶은 것을 만들었습니다: 빠르고, 무료이며, 존중하는 유틸리티."
       },
       "stats": {
         "developerTools": "개발자 도구",
@@ -298,22 +298,22 @@
       },
       "mission": {
         "heading": "우리의 사명",
-        "description": "[REVIEW] 개발자 도구는 예산이나 기술 수준에 관계없이 모두가 접근할 수 있어야 한다고 믿습니다. utils.live는 블로트, 추적 또는 유료화 없이 전문가 수준의 유틸리티를 제공합니다. 우리의 목표는 중요한 것에 집중할 수 있도록 돕는 것입니다: 훌륭한 소프트웨어 구축."
+        "description": "우리는 개발자 도구가 예산이나 기술 수준에 관계없이 모든 사람에게 접근 가능해야 한다고 믿습니다. utils.live는 군더더기, 추적, 또는 유료 결제 없이 전문 수준의 유틸리티를 제공합니다. 우리의 목표는 당신이 중요한 것에 집중할 수 있도록 돕는 것입니다: 훌륭한 소프트웨어 개발."
       },
       "team": {
         "heading": "정성으로 만들어졌습니다",
         "headingPrefix": "정성으로",
         "gradientText": "만들어졌습니다",
-        "description": "[REVIEW] utils.live는 이 도구를 매일 사용하는 열정적인 개발자의 작은 팀이 유지 관리합니다. 우리는 커뮤니티 피드백을 바탕으로 새로운 도구를 추가하고 기존 도구를 개선하고 있습니다.",
+        "description": "utils.live는 이 도구들을 매일 사용하는 열정적인 개발자들의 작은 팀이 유지 관리합니다. 우리는 커뮤니티 피드백을 바탕으로 항상 새로운 도구를 추가하고 기존 도구를 개선하고 있습니다.",
         "feedbackWelcome": "피드백 및 제안을 환영합니다"
       }
     },
     "contact": {
       "metadata": {
         "title": "문의",
-        "description": "[REVIEW] utils.live 팀에 연락하세요. 기능, 버그 또는 파트너십에 대해 의견을 듣고 싶습니다.",
-        "ogTitle": "[REVIEW] 문의 | utils.live",
-        "ogDescription": "[REVIEW] utils.live 팀에 연락하세요. 의견을 들어주세요."
+        "description": "utils.live 팀에 연락해주세요. 기능, 버그, 또는 파트너십에 대한 피드백을 기다리고 있습니다.",
+        "ogTitle": "연락처 | utils.live",
+        "ogDescription": "utils.live 팀에 연락해주세요. 여러분의 의견을 듣고 싶습니다."
       },
       "hero": {
         "heading": "연락하기",
@@ -365,7 +365,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "[REVIEW] 개발자 도구 블로그 | utils.live",
+      "title": "개발자 도구 블로그 | utils.live",
       "description": "개발자 도구 개념 알아보기 — Base64, JWT, 정규식, UUID, 해싱 등. 실제 예제가 포함된 실용 가이드.",
       "postNotFound": "게시물을 찾을 수 없습니다"
     },
@@ -379,7 +379,7 @@
       "backToArticles": "모든 기사로 돌아가기"
     },
     "cta": {
-      "heading": "[REVIEW] utils.live에서 시도하세요",
+      "heading": "utils.live에서 시도해보세요",
       "description": "무료 브라우저 기반 도구 — 가입 불필요, 데이터는 기기에 남습니다."
     }
   },
@@ -418,32 +418,32 @@
   },
   "metadata": {
     "home": {
-      "title": "[REVIEW] utils.live | 무료 개발자 도구 & 유틸리티",
+      "title": "utils.live | 무료 개발자 도구 & 유틸리티",
       "description": "{toolCountLabel}개의 무료 개발자 도구를 한곳에서. JSON 포매터, 인코더, 컨버터, 해시 생성기 등. 빠르고 무료이며 개인정보 보호 중심입니다."
     },
     "layout": {
-      "title": "[REVIEW] utils.live | 개발자 유틸리티 플랫폼",
+      "title": "utils.live | 개발자 유틸리티 플랫폼",
       "titleTemplate": "%s | utils.live",
       "description": "{toolCountLabel}개의 개발자 도구를 한곳에서. JSON 포매터, 인코더, 컨버터 등. 무료이며 개인정보 보호 중심입니다.",
-      "ogTitle": "[REVIEW] utils.live | 개발자 유틸리티 플랫폼",
-      "ogAlt": "[REVIEW] utils.live - 무료 개발자 도구",
+      "ogTitle": "utils.live | 개발자 유틸리티 플랫폼",
+      "ogAlt": "utils.live - 무료 개발자 도구",
       "skipToMain": "주요 콘텐츠로 이동"
     },
     "tools": {
       "title": "도구 둘러보기",
       "description": "{toolCountLabel}개의 무료 개발자 도구를 둘러보세요. JSON 포매터, 인코더, 컨버터, 해시 생성기 등.",
-      "ogTitle": "[REVIEW] 도구 둘러보기 | utils.live"
+      "ogTitle": "도구 탐색 | utils.live"
     },
     "about": {
       "title": "소개",
-      "ogTitle": "[REVIEW] 소개 | utils.live"
+      "ogTitle": "소개 | utils.live"
     },
     "contact": {
       "title": "문의",
-      "ogTitle": "[REVIEW] 문의 | utils.live"
+      "ogTitle": "연락처 | utils.live"
     },
     "blog": {
-      "title": "[REVIEW] 개발자 도구 블로그 | utils.live"
+      "title": "개발자 도구 블로그 | utils.live"
     }
   },
   "footer": {
@@ -3489,140 +3489,140 @@
   },
   "categoryMeta": {
     "json": {
-      "name": "JSON Tools",
-      "description": "Free online JSON tools to format, validate, compare, and transform JSON data. Pretty print, minify, convert to YAML/CSV/XML, and more — all in your browser."
+      "name": "JSON 도구",
+      "description": "JSON 데이터를 포맷, 검증, 비교, 변환할 수 있는 무료 온라인 JSON 도구. 예쁜 출력, 축소, YAML/CSV/XML로 변환 등을 브라우저에서 모두 사용할 수 있습니다."
     },
     "encoding": {
-      "name": "Encoding & Decoding",
-      "description": "Free online encoding and decoding tools for Base64, URL encoding, Unicode, HTML entities, and more. Convert between formats instantly in your browser."
+      "name": "인코딩 & 디코딩",
+      "description": "Base64, URL 인코딩, Unicode, HTML 엔티티 등을 위한 무료 온라인 인코딩 및 디코딩 도구. 브라우저에서 형식 간 변환을 즉시 수행할 수 있습니다."
     },
     "text": {
-      "name": "Text Tools",
-      "description": "Free online text tools to transform, analyze, and manipulate text strings. Count words, change case, find and replace, sort lines, and more."
+      "name": "텍스트 도구",
+      "description": "텍스트 문자열을 변환, 분석, 조작할 수 있는 무료 온라인 텍스트 도구. 단어 수 세기, 대소문자 변경, 찾기 및 바꾸기, 줄 정렬 등을 수행할 수 있습니다."
     },
     "crypto": {
-      "name": "Cryptography",
-      "description": "Free online cryptography tools for hash generation, encryption, decryption, and security analysis. MD5, SHA-256, AES, HMAC, and more — all client-side."
+      "name": "암호화",
+      "description": "해시 생성, 암호화, 복호화, 보안 분석을 위한 무료 온라인 암호화 도구. MD5, SHA-256, AES, HMAC 등 모두 클라이언트 측에서 실행됩니다."
     },
     "jwt": {
-      "name": "JWT & Tokens",
-      "description": "Free online JWT tools to decode, verify, and debug JSON Web Tokens. Inspect headers, payloads, and signatures without sending data to any server."
+      "name": "JWT & 토큰",
+      "description": "JSON Web Token을 디코딩, 검증, 디버깅할 수 있는 무료 온라인 JWT 도구. 서버에 데이터를 보내지 않고 헤더, 페이로드, 서명을 검사할 수 있습니다."
     },
     "regex": {
-      "name": "Regular Expressions",
-      "description": "Free online regular expression tools to build, test, and debug regex patterns. Live matching, syntax highlighting, and cheat sheets for all major flavors."
+      "name": "정규 표현식",
+      "description": "정규식 패턴을 구축, 테스트, 디버깅할 수 있는 무료 온라인 정규 표현식 도구. 라이브 매칭, 구문 강조 표시, 모든 주요 형식의 치트 시트를 지원합니다."
     },
     "color": {
-      "name": "Color Tools",
-      "description": "Free online color tools to convert, pick, and generate color palettes. HEX, RGB, HSL, OKLCH conversions, contrast checkers, and palette generators."
+      "name": "색상 도구",
+      "description": "색상을 변환, 선택, 생성할 수 있는 무료 온라인 색상 도구. HEX, RGB, HSL, OKLCH 변환, 명도 대비 검사기, 팔레트 생성기를 지원합니다."
     },
     "datetime": {
-      "name": "Date & Time",
-      "description": "Free online date and time tools to convert, format, and calculate dates. Unix timestamps, time zones, duration calculators, and date formatters."
+      "name": "날짜 & 시간",
+      "description": "날짜를 변환, 포맷, 계산할 수 있는 무료 온라인 날짜 및 시간 도구. Unix 타임스탬프, 시간대, 기간 계산기, 날짜 포매터를 지원합니다."
     },
     "identifiers": {
-      "name": "Identifiers & IDs",
-      "description": "Free online ID generators for UUIDs, CUIDs, NanoIDs, ULIDs, and more. Generate unique identifiers instantly — no server needed, all in your browser."
+      "name": "식별자 & ID",
+      "description": "UUID, CUID, NanoID, ULID 등의 ID를 생성할 수 있는 무료 온라인 ID 생성기. 브라우저에서 즉시 고유 식별자를 생성할 수 있으며 서버가 필요하지 않습니다."
     },
     "diagram": {
-      "name": "Diagrams & Visual",
-      "description": "Free online diagram tools to generate and render flowcharts, sequence diagrams, and charts. Mermaid, PlantUML, and more — visualize directly in your browser."
+      "name": "다이어그램 & 시각화",
+      "description": "플로우차트, 시퀀스 다이어그램, 차트를 생성하고 렌더링할 수 있는 무료 온라인 다이어그램 도구입니다. Mermaid, PlantUML 등을 사용하여 브라우저에서 바로 시각화할 수 있습니다."
     },
     "html": {
-      "name": "HTML Tools",
-      "description": "Free online HTML tools to parse, format, minify, and convert HTML. Pretty print, strip tags, encode entities, and convert to Markdown or JSX."
+      "name": "HTML 도구",
+      "description": "HTML을 파싱, 포맷, 축소, 변환할 수 있는 무료 온라인 HTML 도구입니다. 예쁘게 인쇄, 태그 제거, 엔티티 인코딩, Markdown 또는 JSX로 변환할 수 있습니다."
     },
     "css": {
-      "name": "CSS Tools",
-      "description": "Free online CSS tools to format, minify, and optimize stylesheets. Beautify CSS, convert units, generate gradients, and clean up your styles."
+      "name": "CSS 도구",
+      "description": "스타일시트를 포맷, 축소, 최적화할 수 있는 무료 온라인 CSS 도구입니다. CSS를 예쁘게 정렬하고, 단위를 변환하고, 그래디언트를 생성하고, 스타일을 정리할 수 있습니다."
     },
     "code": {
-      "name": "Code Formatting",
-      "description": "Free online code formatting tools to beautify and format code in JavaScript, TypeScript, Python, SQL, and more. Consistent formatting in your browser."
+      "name": "코드 포맷팅",
+      "description": "JavaScript, TypeScript, Python, SQL 등의 코드를 예쁘게 정렬하고 포맷할 수 있는 무료 온라인 코드 포맷팅 도구입니다. 브라우저에서 일관된 포맷팅을 적용할 수 있습니다."
     },
     "yaml": {
-      "name": "YAML Tools",
-      "description": "Free online YAML tools to format, validate, and convert YAML files. Pretty print, convert to JSON/TOML, and check syntax — all client-side."
+      "name": "YAML 도구",
+      "description": "YAML 파일을 포맷, 검증, 변환할 수 있는 무료 온라인 YAML 도구입니다. 예쁘게 인쇄하고, JSON/TOML로 변환하고, 문법을 확인할 수 있습니다 — 모두 클라이언트 측에서 처리됩니다."
     },
     "xml": {
-      "name": "XML Tools",
-      "description": "Free online XML tools to parse, format, and transform XML documents. Pretty print, minify, validate, and convert to JSON — all in your browser."
+      "name": "XML 도구",
+      "description": "XML 문서를 파싱, 포맷, 변환할 수 있는 무료 온라인 XML 도구입니다. 예쁘게 인쇄하고, 축소하고, 검증하고, JSON으로 변환할 수 있습니다 — 모두 브라우저에서 처리됩니다."
     },
     "csv": {
-      "name": "CSV & TSV Tools",
-      "description": "Free online CSV and TSV tools to parse, convert, and manipulate tabular data. Convert to JSON/XML, sort columns, and filter rows in your browser."
+      "name": "CSV & TSV 도구",
+      "description": "표형식 데이터를 파싱, 변환, 조작할 수 있는 무료 온라인 CSV 및 TSV 도구입니다. JSON/XML로 변환하고, 열을 정렬하고, 행을 필터링할 수 있습니다."
     },
     "markdown": {
-      "name": "Markdown Tools",
-      "description": "Free online Markdown tools to preview, convert, and enhance Markdown documents. Live preview, convert to HTML, generate tables, and format text."
+      "name": "Markdown 도구",
+      "description": "Markdown 문서를 미리보기, 변환, 개선할 수 있는 무료 온라인 Markdown 도구입니다. 라이브 미리보기, HTML로 변환, 표 생성, 텍스트 포맷팅을 할 수 있습니다."
     },
     "math": {
-      "name": "Numbers & Math",
-      "description": "Free online math and number tools for calculations, conversions, and number formatting. Base conversion, percentage calculator, unit converter, and more."
+      "name": "숫자 & 수학",
+      "description": "계산, 변환, 숫자 포맷팅을 위한 무료 온라인 수학 및 숫자 도구입니다. 진법 변환, 백분율 계산기, 단위 변환기 등을 사용할 수 있습니다."
     },
     "image": {
-      "name": "Image Tools",
-      "description": "Free online image tools to convert, resize, and optimize images. Change formats, compress files, crop, and adjust — all processed locally in your browser."
+      "name": "이미지 도구",
+      "description": "이미지를 변환, 크기 조정, 최적화할 수 있는 무료 온라인 이미지 도구입니다. 포맷 변경, 파일 압축, 자르기, 조정을 할 수 있습니다 — 모두 브라우저에서 로컬로 처리됩니다."
     },
     "svg": {
-      "name": "SVG Tools",
-      "description": "Free online SVG tools to optimize, convert, and manipulate SVG files. Minify, prettify, convert to PNG/JSX, and clean up SVG code in your browser."
+      "name": "SVG 도구",
+      "description": "SVG 파일을 최적화, 변환, 조작할 수 있는 무료 온라인 SVG 도구입니다. 축소, 예쁘게 정렬, PNG/JSX로 변환, SVG 코드 정리를 할 수 있습니다."
     },
     "web": {
-      "name": "Web & SEO",
-      "description": "Free online web and SEO tools for URL parsing, meta tag generation, Open Graph previews, and web utilities. Analyze and optimize your web presence."
+      "name": "웹 & SEO",
+      "description": "URL 파싱, 메타 태그 생성, Open Graph 미리보기, 웹 유틸리티를 위한 무료 온라인 웹 및 SEO 도구입니다. 웹 프레젠스를 분석하고 최적화할 수 있습니다."
     },
     "api": {
       "name": "API & OpenAPI",
-      "description": "Free online API and OpenAPI tools for schema validation, mock data generation, and API testing utilities. Work with REST APIs directly in your browser."
+      "description": "스키마 검증, 모의 데이터 생성, API 테스팅 유틸리티를 위한 무료 온라인 API 및 OpenAPI 도구입니다. 브라우저에서 직접 REST API를 작업할 수 있습니다."
     },
     "sql": {
-      "name": "SQL & Database",
-      "description": "Free online SQL and database tools to format, validate, and convert SQL queries. Pretty print, minify, and convert between SQL dialects."
+      "name": "SQL 및 데이터베이스",
+      "description": "SQL 쿼리를 포맷, 검증 및 변환하는 무료 온라인 SQL 및 데이터베이스 도구. Pretty print, minify 및 SQL 방언 간 변환."
     },
     "network": {
-      "name": "Network Tools",
-      "description": "Free online network tools for DNS lookup, IP address utilities, and connectivity diagnostics. Analyze network data and convert formats client-side."
+      "name": "네트워크 도구",
+      "description": "DNS 조회, IP 주소 유틸리티 및 연결성 진단을 위한 무료 온라인 네트워크 도구. 네트워크 데이터를 분석하고 클라이언트 측에서 형식을 변환합니다."
     },
     "validation": {
-      "name": "Validation Tools",
-      "description": "Free online validation tools to check formats, data structures, and syntax. Validate JSON, YAML, XML, emails, URLs, and more — instantly in your browser."
+      "name": "검증 도구",
+      "description": "형식, 데이터 구조 및 구문을 확인하는 무료 온라인 검증 도구. JSON, YAML, XML, 이메일, URL 등을 검증하세요 — 브라우저에서 즉시 확인."
     },
     "data": {
-      "name": "Data Formats",
-      "description": "Free online data format tools to convert and view INI, NDJSON, HJSON, Avro, Protobuf, MessagePack, and other data serialization formats."
+      "name": "데이터 형식",
+      "description": "INI, NDJSON, HJSON, Avro, Protobuf, MessagePack 및 기타 데이터 직렬화 형식을 변환하고 보는 무료 온라인 데이터 형식 도구."
     },
     "toml": {
-      "name": "TOML Tools",
-      "description": "Free online TOML tools to format, validate, and convert TOML configuration files. Pretty print, convert to JSON/YAML, and check syntax instantly."
+      "name": "TOML 도구",
+      "description": "TOML 설정 파일을 포맷, 검증 및 변환하는 무료 온라인 TOML 도구. Pretty print, JSON/YAML로 변환 및 구문 즉시 확인."
     },
     "git": {
-      "name": "Git & Version Control",
-      "description": "Free online Git and version control tools for branch naming, commit message formatting, .gitignore generation, and Git command reference."
+      "name": "Git 및 버전 관리",
+      "description": "브랜치 명명, 커밋 메시지 포맷, .gitignore 생성 및 Git 명령 참고를 위한 무료 온라인 Git 및 버전 관리 도구."
     },
     "devops": {
-      "name": "DevOps & Infrastructure",
-      "description": "Free online DevOps tools for Docker, Kubernetes, Helm, and container configuration. Generate Dockerfiles, validate K8s manifests, and more."
+      "name": "DevOps 및 인프라",
+      "description": "Docker, Kubernetes, Helm 및 컨테이너 구성을 위한 무료 온라인 DevOps 도구. Dockerfile 생성, K8s 매니페스트 검증 등."
     },
     "feeds": {
-      "name": "Feeds & Structured Data",
-      "description": "Free online feed and structured data tools for RSS, Atom, JSON Feed, and Schema.org. Generate, validate, and convert web feeds in your browser."
+      "name": "피드 및 구조화된 데이터",
+      "description": "RSS, Atom, JSON Feed 및 Schema.org를 위한 무료 온라인 피드 및 구조화된 데이터 도구. 브라우저에서 웹 피드를 생성, 검증 및 변환합니다."
     },
     "communication": {
-      "name": "Communication",
-      "description": "Free online communication tools for email formatting, messaging templates, and communication format conversion. Generate and validate email content."
+      "name": "커뮤니케이션",
+      "description": "이메일 포맷, 메시징 템플릿 및 커뮤니케이션 형식 변환을 위한 무료 온라인 커뮤니케이션 도구. 이메일 콘텐츠를 생성하고 검증합니다."
     },
     "misc": {
-      "name": "Miscellaneous",
-      "description": "Free online miscellaneous developer tools for QR codes, UUIDs, Lorem Ipsum text, and other handy utilities. Quick tools that run in your browser."
+      "name": "기타",
+      "description": "QR 코드, UUID, Lorem Ipsum 텍스트 및 기타 유용한 유틸리티를 위한 무료 온라인 기타 개발자 도구. 브라우저에서 실행되는 빠른 도구."
     },
     "legal": {
-      "name": "Legal & Compliance",
-      "description": "Free online legal document generators for privacy policies, terms of service, GDPR statements, and compliance documents. Generate legal text instantly."
+      "name": "법률 및 규정 준수",
+      "description": "개인정보보호정책, 서비스 약관, GDPR 명세서 및 규정 준수 문서를 위한 무료 온라인 법률 문서 생성기. 법률 텍스트를 즉시 생성합니다."
     },
     "reference": {
-      "name": "Reference & Lookup",
-      "description": "Free online reference and lookup tools for country codes, currency codes, language codes, MIME types, and other developer reference tables."
+      "name": "참고 및 조회",
+      "description": "국가 코드, 통화 코드, 언어 코드, MIME 유형 및 기타 개발자 참고 테이블을 위한 무료 온라인 참고 및 조회 도구."
     }
   }
 }

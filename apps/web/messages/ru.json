@@ -44,8 +44,8 @@
       "system": "Система"
     },
     "brand": {
-      "name": "[REVIEW] utils.live",
-      "homeAriaLabel": "[REVIEW] utils.live домашняя страница"
+      "name": "utils.live",
+      "homeAriaLabel": "utils.live главная"
     }
   },
   "home": {
@@ -57,8 +57,8 @@
       "searchAriaLabel": "Поиск инструментов разработчика"
     },
     "features": {
-      "eyebrow": "[REVIEW] Почему utils.live",
-      "heading": "[REVIEW] Почему разработчики выбирают utils.live",
+      "eyebrow": "Почему utils.live",
+      "heading": "Почему разработчики выбирают utils.live",
       "instantResults": {
         "title": "Мгновенные результаты",
         "description": "Инструменты на стороне клиента работают в вашем браузере с нулевой задержкой. Без ожидания, без обращений к серверу."
@@ -100,7 +100,7 @@
       "outputLabel": "Выходные данные"
     },
     "metadata": {
-      "title": "[REVIEW] utils.live | Бесплатные инструменты разработчика и утилиты",
+      "title": "utils.live | Бесплатные инструменты и утилиты для разработчиков",
       "description": "{toolCountLabel} бесплатных инструментов разработчика в одном месте. Форматеры JSON, кодировщики, конвертеры, генераторы хешей и многое другое. Быстро, бесплатно и с уважением к приватности."
     }
   },
@@ -162,52 +162,52 @@
       "tools": {
         "title": "Изучите инструменты",
         "description": "Просмотрите {toolCountLabel} бесплатных инструментов для разработчиков. Форматеры JSON, кодировщики, конвертеры, генераторы хешей и многое другое.",
-        "ogTitle": "[REVIEW] Изучите инструменты | utils.live",
+        "ogTitle": "Исследуйте инструменты | utils.live",
         "ogDescription": "Просмотрите {toolCountLabel} бесплатных инструментов для разработчиков. Форматеры JSON, кодировщики, конвертеры и многое другое."
       }
     },
     "browse": {
-      "browseByCategory": "Browse by Category",
-      "searchCategories": "Search categories...",
-      "searchToolsInCategory": "Search tools in this category...",
-      "all": "All",
-      "tools": "{count} tools",
-      "toolsFound": "{count, plural, one {# tool} other {# tools}} found",
-      "categoriesFound": "{count, plural, one {# category} other {# categories}} found",
-      "noToolsFound": "No tools found. Try a different search term.",
-      "noToolsFoundSubgroup": "No tools found. Try a different search term or subgroup.",
-      "noCategoriesFound": "No categories found. Try a different search term.",
-      "noCategoriesFoundGroup": "No categories found. Try a different search term or group.",
-      "resultsFor": "{count, plural, one {# result} other {# results}} for \"{query}\"",
-      "resultsForInCategory": "{count, plural, one {# result} other {# results}} for \"{query}\" in {category}",
-      "noResultsForQuery": "No tools found matching \"{query}\". Try a different search term."
+      "browseByCategory": "Обзор по категориям",
+      "searchCategories": "Поиск категорий...",
+      "searchToolsInCategory": "Поиск инструментов в этой категории...",
+      "all": "Все",
+      "tools": "{count} инструментов",
+      "toolsFound": "{count, plural, one {# инструмент} other {# инструментов}} найдено",
+      "categoriesFound": "{count, plural, one {# категория} other {# категорий}} найдено",
+      "noToolsFound": "Инструменты не найдены. Попробуйте другой поисковый запрос.",
+      "noToolsFoundSubgroup": "Инструменты не найдены. Попробуйте другой поисковый запрос или подгруппу.",
+      "noCategoriesFound": "Категории не найдены. Попробуйте другой поисковый запрос.",
+      "noCategoriesFoundGroup": "Категории не найдены. Попробуйте другой поисковый запрос или группу.",
+      "resultsFor": "{count, plural, one {# результат} other {# результатов}} по запросу \"{query}\"",
+      "resultsForInCategory": "{count, plural, one {# результат} other {# результатов}} по запросу \"{query}\" в {category}",
+      "noResultsForQuery": "Инструменты, соответствующие \"{query}\", не найдены. Попробуйте другой поисковый запрос."
     },
     "popularTools": {
-      "topPicks": "Top Picks",
-      "featured": "Featured",
-      "popular": "Popular"
+      "topPicks": "Лучший выбор",
+      "featured": "Рекомендуется",
+      "popular": "Популярное"
     },
     "recentlyUsed": {
-      "title": "Recently Used",
-      "clear": "Clear"
+      "title": "Недавно использованные",
+      "clear": "Очистить"
     },
     "relatedTools": {
-      "title": "Related Tools"
+      "title": "Связанные инструменты"
     },
     "documentation": {
-      "title": "Documentation",
-      "overview": "Overview",
-      "category": "Category:",
-      "privacyNote": "Runs entirely in your browser. No data is sent to our servers.",
-      "examples": "Examples",
-      "input": "Input",
-      "output": "Output",
-      "options": "Options",
-      "loadExample": "Load Example"
+      "title": "Документация",
+      "overview": "Обзор",
+      "category": "Категория:",
+      "privacyNote": "Работает полностью в вашем браузере. Данные не отправляются на наши серверы.",
+      "examples": "Примеры",
+      "input": "Ввод",
+      "output": "Вывод",
+      "options": "Параметры",
+      "loadExample": "Загрузить пример"
     },
     "toolCard": {
-      "addFavorite": "Add to favorites",
-      "removeFavorite": "Remove from favorites"
+      "addFavorite": "Добавить в избранное",
+      "removeFavorite": "Удалить из избранного"
     }
   },
   "editor": {
@@ -262,14 +262,14 @@
     "about": {
       "metadata": {
         "title": "О проекте",
-        "description": "Узнайте о [REVIEW] utils.live - нашей миссии сделать инструменты разработчика доступными, быстрыми и ориентированными на приватность.",
-        "ogTitle": "О проекте | [REVIEW] utils.live"
+        "description": "Узнайте о utils.live — нашей миссии сделать инструменты для разработчиков доступными, быстрыми и ориентированными на приватность.",
+        "ogTitle": "О нас | utils.live"
       },
       "hero": {
         "heading": "Инструменты разработчика, которые уважают ваше время",
         "headingPrefix": "Инструменты разработчика, которые",
         "gradientText": "уважают ваше время",
-        "description": "[REVIEW] utils.live появился из-за разочарования медленными, заполненными рекламой и нарушающими приватность онлайн-инструментами. Мы создали то, что хотели бы использовать: быстрые, бесплатные и уважительные утилиты."
+        "description": "utils.live родился из разочарования медленными, переполненными рекламой и нарушающими приватность онлайн-инструментами. Мы создали то, что хотели бы использовать сами: быстрые, бесплатные и уважающие приватность утилиты."
       },
       "stats": {
         "developerTools": "Инструменты разработчика",
@@ -298,22 +298,22 @@
       },
       "mission": {
         "heading": "Наша миссия",
-        "description": "[REVIEW] Мы считаем, что инструменты для разработчиков должны быть доступны всем, независимо от бюджета или технического уровня. utils.live предоставляет профессиональные утилиты без лишнего функционала, отслеживания и платных ограничений. Наша цель — помочь вам сосредоточиться на главном: создании качественного ПО."
+        "description": "Мы верим, что инструменты для разработчиков должны быть доступны каждому, независимо от бюджета или уровня технических знаний. utils.live предоставляет профессиональные утилиты без лишнего функционала, отслеживания и платных подписок. Наша цель — помочь вам сосредоточиться на главном: создании отличного программного обеспечения."
       },
       "team": {
         "heading": "Создано с заботой",
         "headingPrefix": "Создано с",
         "gradientText": "заботой",
-        "description": "[REVIEW] utils.live поддерживается небольшой командой увлеченных разработчиков, которые ежедневно используют эти инструменты. Мы постоянно добавляем новые инструменты и улучшаем существующие на основе отзывов сообщества.",
+        "description": "utils.live поддерживается небольшой командой увлеченных разработчиков, которые ежедневно используют эти инструменты. Мы постоянно добавляем новые инструменты и улучшаем существующие на основе отзывов сообщества.",
         "feedbackWelcome": "Приветствуем отзывы и предложения"
       }
     },
     "contact": {
       "metadata": {
         "title": "Контакты",
-        "description": "[REVIEW] Свяжитесь с командой utils.live. Нам интересны ваши предложения по функциям, сообщения об ошибках или идеи партнерства.",
-        "ogTitle": "[REVIEW] Контакты | utils.live",
-        "ogDescription": "[REVIEW] Свяжитесь с командой utils.live. Нам интересно услышать вас."
+        "description": "Свяжитесь с командой utils.live. Нам интересно услышать ваше мнение о функциях, ошибках или партнерстве.",
+        "ogTitle": "Контакты | utils.live",
+        "ogDescription": "Свяжитесь с командой utils.live. Нам интересно услышать от вас."
       },
       "hero": {
         "heading": "Свяжитесь с нами",
@@ -365,7 +365,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "[REVIEW] Developer Tools Blog | utils.live",
+      "title": "Блог разработчиков | utils.live",
       "description": "Изучайте концепции инструментов разработчика — Base64, JWT, регулярные выражения, UUID, хеширование и многое другое. Практические руководства с живыми примерами.",
       "postNotFound": "Статья не найдена"
     },
@@ -379,7 +379,7 @@
       "backToArticles": "Вернуться ко всем статьям"
     },
     "cta": {
-      "heading": "[REVIEW] Попробуйте на utils.live",
+      "heading": "Попробуйте на utils.live",
       "description": "Бесплатные веб-инструменты — не требуют регистрации, ваши данные не покидают устройство."
     }
   },
@@ -418,32 +418,32 @@
   },
   "metadata": {
     "home": {
-      "title": "[REVIEW] utils.live | Бесплатные инструменты и утилиты для разработчиков",
+      "title": "utils.live | Бесплатные инструменты и утилиты для разработчиков",
       "description": "{toolCountLabel} бесплатных инструментов для разработчиков в одном месте. Форматеры JSON, кодировщики, конвертеры, генераторы хешей и многое другое. Быстро, бесплатно и защищая приватность."
     },
     "layout": {
-      "title": "[REVIEW] utils.live | Платформа утилит для разработчиков",
+      "title": "utils.live | Платформа утилит для разработчиков",
       "titleTemplate": "%s | utils.live",
       "description": "{toolCountLabel} инструментов для разработчиков в одном месте. Форматеры JSON, кодировщики, конвертеры и другое. Бесплатно и с защитой приватности.",
-      "ogTitle": "[REVIEW] utils.live | Платформа утилит для разработчиков",
-      "ogAlt": "[REVIEW] utils.live - Бесплатные инструменты для разработчиков",
+      "ogTitle": "utils.live | Платформа утилит для разработчиков",
+      "ogAlt": "utils.live - Бесплатные инструменты для разработчиков",
       "skipToMain": "Перейти к основному содержимому"
     },
     "tools": {
       "title": "Обзор инструментов",
       "description": "Просмотрите {toolCountLabel} бесплатных инструментов для разработчиков. Форматеры JSON, кодировщики, конвертеры, генераторы хешей и многое другое.",
-      "ogTitle": "[REVIEW] Обзор инструментов | utils.live"
+      "ogTitle": "Исследуйте инструменты | utils.live"
     },
     "about": {
       "title": "О нас",
-      "ogTitle": "[REVIEW] О нас | utils.live"
+      "ogTitle": "О нас | utils.live"
     },
     "contact": {
       "title": "Контакты",
-      "ogTitle": "[REVIEW] Контакты | utils.live"
+      "ogTitle": "Контакты | utils.live"
     },
     "blog": {
-      "title": "[REVIEW] Блог о инструментах разработки | utils.live"
+      "title": "Блог разработчиков | utils.live"
     }
   },
   "footer": {
@@ -466,7 +466,7 @@
     "openMenu": "Открыть меню",
     "searchLabel": "Поиск инструментов",
     "searchPlaceholder": "Поиск инструментов...",
-    "title": "[REVIEW] utils.live"
+    "title": "utils.live"
   },
   "forms": {
     "fileUpload": {
@@ -3489,140 +3489,140 @@
   },
   "categoryMeta": {
     "json": {
-      "name": "JSON Tools",
-      "description": "Free online JSON tools to format, validate, compare, and transform JSON data. Pretty print, minify, convert to YAML/CSV/XML, and more — all in your browser."
+      "name": "JSON инструменты",
+      "description": "Бесплатные онлайн-инструменты для форматирования, валидации, сравнения и преобразования JSON-данных. Красивый вывод, минификация, конвертация в YAML/CSV/XML и многое другое — все прямо в браузере."
     },
     "encoding": {
-      "name": "Encoding & Decoding",
-      "description": "Free online encoding and decoding tools for Base64, URL encoding, Unicode, HTML entities, and more. Convert between formats instantly in your browser."
+      "name": "Кодирование & Декодирование",
+      "description": "Бесплатные онлайн-инструменты для кодирования и декодирования Base64, URL-кодирования, Unicode, HTML-сущностей и многого другого. Конвертируйте между форматами мгновенно в браузере."
     },
     "text": {
-      "name": "Text Tools",
-      "description": "Free online text tools to transform, analyze, and manipulate text strings. Count words, change case, find and replace, sort lines, and more."
+      "name": "Текстовые инструменты",
+      "description": "Бесплатные онлайн-инструменты для преобразования, анализа и обработки текстовых строк. Подсчет слов, изменение регистра, поиск и замена, сортировка строк и многое другое."
     },
     "crypto": {
-      "name": "Cryptography",
-      "description": "Free online cryptography tools for hash generation, encryption, decryption, and security analysis. MD5, SHA-256, AES, HMAC, and more — all client-side."
+      "name": "Криптография",
+      "description": "Бесплатные онлайн-инструменты для генерации хешей, шифрования, дешифрования и анализа безопасности. MD5, SHA-256, AES, HMAC и многое другое — все работает на клиентской стороне."
     },
     "jwt": {
-      "name": "JWT & Tokens",
-      "description": "Free online JWT tools to decode, verify, and debug JSON Web Tokens. Inspect headers, payloads, and signatures without sending data to any server."
+      "name": "JWT & Токены",
+      "description": "Бесплатные онлайн-инструменты для декодирования, проверки и отладки JSON Web Tokens. Инспектируйте заголовки, полезную нагрузку и подписи без отправки данных на сервер."
     },
     "regex": {
-      "name": "Regular Expressions",
-      "description": "Free online regular expression tools to build, test, and debug regex patterns. Live matching, syntax highlighting, and cheat sheets for all major flavors."
+      "name": "Регулярные выражения",
+      "description": "Бесплатные онлайн-инструменты для создания, тестирования и отладки регулярных выражений. Живое сопоставление, подсветка синтаксиса и шпаргалки для всех основных диалектов."
     },
     "color": {
-      "name": "Color Tools",
-      "description": "Free online color tools to convert, pick, and generate color palettes. HEX, RGB, HSL, OKLCH conversions, contrast checkers, and palette generators."
+      "name": "Цветовые инструменты",
+      "description": "Бесплатные онлайн-инструменты для конвертации, выбора и генерации цветовых палитр. Конвертация HEX, RGB, HSL, OKLCH, проверка контраста и генератор палитр."
     },
     "datetime": {
-      "name": "Date & Time",
-      "description": "Free online date and time tools to convert, format, and calculate dates. Unix timestamps, time zones, duration calculators, and date formatters."
+      "name": "Дата & Время",
+      "description": "Бесплатные онлайн-инструменты для конвертации, форматирования и расчета дат. Unix-временные метки, временные зоны, калькуляторы длительности и форматировщики дат."
     },
     "identifiers": {
-      "name": "Identifiers & IDs",
-      "description": "Free online ID generators for UUIDs, CUIDs, NanoIDs, ULIDs, and more. Generate unique identifiers instantly — no server needed, all in your browser."
+      "name": "Идентификаторы & ID",
+      "description": "Бесплатные онлайн-генераторы ID для UUID, CUID, NanoID, ULID и многого другого. Генерируйте уникальные идентификаторы мгновенно — сервер не требуется, все работает в браузере."
     },
     "diagram": {
-      "name": "Diagrams & Visual",
-      "description": "Free online diagram tools to generate and render flowcharts, sequence diagrams, and charts. Mermaid, PlantUML, and more — visualize directly in your browser."
+      "name": "Диаграммы & Визуализация",
+      "description": "Бесплатные онлайн-инструменты для диаграмм для создания и отрисовки блок-схем, диаграмм последовательности и графиков. Mermaid, PlantUML и другие — визуализируйте прямо в браузере."
     },
     "html": {
-      "name": "HTML Tools",
-      "description": "Free online HTML tools to parse, format, minify, and convert HTML. Pretty print, strip tags, encode entities, and convert to Markdown or JSX."
+      "name": "Инструменты HTML",
+      "description": "Бесплатные онлайн-инструменты HTML для разбора, форматирования, минификации и преобразования HTML. Красивый вывод, удаление тегов, кодирование сущностей и преобразование в Markdown или JSX."
     },
     "css": {
-      "name": "CSS Tools",
-      "description": "Free online CSS tools to format, minify, and optimize stylesheets. Beautify CSS, convert units, generate gradients, and clean up your styles."
+      "name": "Инструменты CSS",
+      "description": "Бесплатные онлайн-инструменты CSS для форматирования, минификации и оптимизации стилей. Красивое оформление CSS, преобразование единиц, генерация градиентов и очистка стилей."
     },
     "code": {
-      "name": "Code Formatting",
-      "description": "Free online code formatting tools to beautify and format code in JavaScript, TypeScript, Python, SQL, and more. Consistent formatting in your browser."
+      "name": "Форматирование кода",
+      "description": "Бесплатные онлайн-инструменты для форматирования кода в JavaScript, TypeScript, Python, SQL и других языках. Единообразное форматирование прямо в браузере."
     },
     "yaml": {
-      "name": "YAML Tools",
-      "description": "Free online YAML tools to format, validate, and convert YAML files. Pretty print, convert to JSON/TOML, and check syntax — all client-side."
+      "name": "Инструменты YAML",
+      "description": "Бесплатные онлайн-инструменты YAML для форматирования, валидации и преобразования файлов YAML. Красивый вывод, преобразование в JSON/TOML и проверка синтаксиса — всё на клиенте."
     },
     "xml": {
-      "name": "XML Tools",
-      "description": "Free online XML tools to parse, format, and transform XML documents. Pretty print, minify, validate, and convert to JSON — all in your browser."
+      "name": "Инструменты XML",
+      "description": "Бесплатные онлайн-инструменты XML для разбора, форматирования и преобразования документов XML. Красивый вывод, минификация, валидация и преобразование в JSON — всё в браузере."
     },
     "csv": {
-      "name": "CSV & TSV Tools",
-      "description": "Free online CSV and TSV tools to parse, convert, and manipulate tabular data. Convert to JSON/XML, sort columns, and filter rows in your browser."
+      "name": "Инструменты CSV и TSV",
+      "description": "Бесплатные онлайн-инструменты для CSV и TSV для разбора, преобразования и обработки табличных данных. Преобразование в JSON/XML, сортировка столбцов и фильтрация строк в браузере."
     },
     "markdown": {
-      "name": "Markdown Tools",
-      "description": "Free online Markdown tools to preview, convert, and enhance Markdown documents. Live preview, convert to HTML, generate tables, and format text."
+      "name": "Инструменты Markdown",
+      "description": "Бесплатные онлайн-инструменты Markdown для предпросмотра, преобразования и улучшения документов Markdown. Живой предпросмотр, преобразование в HTML, генерация таблиц и форматирование текста."
     },
     "math": {
-      "name": "Numbers & Math",
-      "description": "Free online math and number tools for calculations, conversions, and number formatting. Base conversion, percentage calculator, unit converter, and more."
+      "name": "Числа и математика",
+      "description": "Бесплатные онлайн-инструменты для математики и чисел для расчётов, преобразований и форматирования чисел. Преобразование оснований, калькулятор процентов, конвертер единиц и многое другое."
     },
     "image": {
-      "name": "Image Tools",
-      "description": "Free online image tools to convert, resize, and optimize images. Change formats, compress files, crop, and adjust — all processed locally in your browser."
+      "name": "Инструменты изображений",
+      "description": "Бесплатные онлайн-инструменты изображений для преобразования, изменения размера и оптимизации изображений. Изменение формата, сжатие файлов, обрезка и настройка — всё обрабатывается локально в браузере."
     },
     "svg": {
-      "name": "SVG Tools",
-      "description": "Free online SVG tools to optimize, convert, and manipulate SVG files. Minify, prettify, convert to PNG/JSX, and clean up SVG code in your browser."
+      "name": "Инструменты SVG",
+      "description": "Бесплатные онлайн-инструменты SVG для оптимизации, преобразования и обработки файлов SVG. Минификация, красивый вывод, преобразование в PNG/JSX и очистка кода SVG в браузере."
     },
     "web": {
-      "name": "Web & SEO",
-      "description": "Free online web and SEO tools for URL parsing, meta tag generation, Open Graph previews, and web utilities. Analyze and optimize your web presence."
+      "name": "Веб и SEO",
+      "description": "Бесплатные онлайн-инструменты для веб и SEO для разбора URL, генерации мета-тегов, предпросмотра Open Graph и веб-утилит. Анализируйте и оптимизируйте вашу веб-присутствие."
     },
     "api": {
-      "name": "API & OpenAPI",
-      "description": "Free online API and OpenAPI tools for schema validation, mock data generation, and API testing utilities. Work with REST APIs directly in your browser."
+      "name": "API и OpenAPI",
+      "description": "Бесплатные онлайн-инструменты API и OpenAPI для валидации схем, генерации тестовых данных и утилит тестирования API. Работайте с REST API прямо в браузере."
     },
     "sql": {
-      "name": "SQL & Database",
-      "description": "Free online SQL and database tools to format, validate, and convert SQL queries. Pretty print, minify, and convert between SQL dialects."
+      "name": "SQL и базы данных",
+      "description": "Бесплатные онлайн-инструменты для SQL и баз данных: форматирование, валидация и конвертация SQL-запросов. Красивый вывод, минификация и конвертация между диалектами SQL."
     },
     "network": {
-      "name": "Network Tools",
-      "description": "Free online network tools for DNS lookup, IP address utilities, and connectivity diagnostics. Analyze network data and convert formats client-side."
+      "name": "Сетевые инструменты",
+      "description": "Бесплатные онлайн-инструменты для работы с сетью: DNS-поиск, утилиты для IP-адресов и диагностика подключения. Анализируйте сетевые данные и конвертируйте форматы прямо в браузере."
     },
     "validation": {
-      "name": "Validation Tools",
-      "description": "Free online validation tools to check formats, data structures, and syntax. Validate JSON, YAML, XML, emails, URLs, and more — instantly in your browser."
+      "name": "Инструменты валидации",
+      "description": "Бесплатные онлайн-инструменты для валидации форматов, структур данных и синтаксиса. Проверяйте JSON, YAML, XML, email, URL и многое другое — прямо в браузере."
     },
     "data": {
-      "name": "Data Formats",
-      "description": "Free online data format tools to convert and view INI, NDJSON, HJSON, Avro, Protobuf, MessagePack, and other data serialization formats."
+      "name": "Форматы данных",
+      "description": "Бесплатные онлайн-инструменты для конвертации и просмотра INI, NDJSON, HJSON, Avro, Protobuf, MessagePack и других форматов сериализации данных."
     },
     "toml": {
-      "name": "TOML Tools",
-      "description": "Free online TOML tools to format, validate, and convert TOML configuration files. Pretty print, convert to JSON/YAML, and check syntax instantly."
+      "name": "Инструменты TOML",
+      "description": "Бесплатные онлайн-инструменты для форматирования, валидации и конвертации TOML-файлов конфигурации. Красивый вывод, конвертация в JSON/YAML и проверка синтаксиса."
     },
     "git": {
-      "name": "Git & Version Control",
-      "description": "Free online Git and version control tools for branch naming, commit message formatting, .gitignore generation, and Git command reference."
+      "name": "Git и контроль версий",
+      "description": "Бесплатные онлайн-инструменты для Git и контроля версий: именование веток, форматирование сообщений коммитов, генерация .gitignore и справочник команд Git."
     },
     "devops": {
-      "name": "DevOps & Infrastructure",
-      "description": "Free online DevOps tools for Docker, Kubernetes, Helm, and container configuration. Generate Dockerfiles, validate K8s manifests, and more."
+      "name": "DevOps и инфраструктура",
+      "description": "Бесплатные онлайн-инструменты для DevOps: Docker, Kubernetes, Helm и конфигурация контейнеров. Генерируйте Dockerfile, валидируйте K8s-манифесты и многое другое."
     },
     "feeds": {
-      "name": "Feeds & Structured Data",
-      "description": "Free online feed and structured data tools for RSS, Atom, JSON Feed, and Schema.org. Generate, validate, and convert web feeds in your browser."
+      "name": "Ленты и структурированные данные",
+      "description": "Бесплатные онлайн-инструменты для работы с лентами и структурированными данными: RSS, Atom, JSON Feed и Schema.org. Генерируйте, валидируйте и конвертируйте веб-ленты в браузере."
     },
     "communication": {
-      "name": "Communication",
-      "description": "Free online communication tools for email formatting, messaging templates, and communication format conversion. Generate and validate email content."
+      "name": "Коммуникация",
+      "description": "Бесплатные онлайн-инструменты для коммуникации: форматирование писем, шаблоны сообщений и конвертация форматов. Генерируйте и валидируйте содержимое писем."
     },
     "misc": {
-      "name": "Miscellaneous",
-      "description": "Free online miscellaneous developer tools for QR codes, UUIDs, Lorem Ipsum text, and other handy utilities. Quick tools that run in your browser."
+      "name": "Разное",
+      "description": "Бесплатные онлайн-инструменты разработчика: QR-коды, UUID, Lorem Ipsum текст и другие полезные утилиты. Быстрые инструменты, работающие прямо в браузере."
     },
     "legal": {
-      "name": "Legal & Compliance",
-      "description": "Free online legal document generators for privacy policies, terms of service, GDPR statements, and compliance documents. Generate legal text instantly."
+      "name": "Правовые документы и соответствие",
+      "description": "Бесплатные онлайн-генераторы юридических документов: политики конфиденциальности, условия использования, заявления о GDPR и документы соответствия. Генерируйте юридический текст мгновенно."
     },
     "reference": {
-      "name": "Reference & Lookup",
-      "description": "Free online reference and lookup tools for country codes, currency codes, language codes, MIME types, and other developer reference tables."
+      "name": "Справочники и поиск",
+      "description": "Бесплатные онлайн-инструменты справочников: коды стран, коды валют, коды языков, MIME-типы и другие справочные таблицы для разработчиков."
     }
   }
 }

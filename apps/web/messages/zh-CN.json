@@ -57,8 +57,8 @@
       "searchAriaLabel": "搜索开发者工具"
     },
     "features": {
-      "eyebrow": "[REVIEW] 为什么选择 utils.live",
-      "heading": "[REVIEW] 开发者为什么选择 utils.live",
+      "eyebrow": "为什么选择 utils.live",
+      "heading": "为什么开发者选择 utils.live",
       "instantResults": {
         "title": "即时结果",
         "description": "客户端工具在浏览器中运行，零延迟。无需等待，无需服务器往返。"
@@ -100,7 +100,7 @@
       "outputLabel": "输出"
     },
     "metadata": {
-      "title": "[REVIEW] utils.live | 免费开发者工具和实用程序",
+      "title": "utils.live | 免费开发者工具与实用程序",
       "description": "{toolCountLabel} 个免费开发者工具集于一处。JSON 格式化器、编码器、转换器、哈希生成器等。快速、免费且隐私保护。"
     }
   },
@@ -162,52 +162,52 @@
       "tools": {
         "title": "浏览工具",
         "description": "浏览 {toolCountLabel} 个免费开发者工具。JSON 格式化器、编码器、转换器、哈希生成器等。",
-        "ogTitle": "[REVIEW] 浏览工具 | utils.live",
+        "ogTitle": "工具探索 | utils.live",
         "ogDescription": "浏览 {toolCountLabel} 个免费开发者工具。JSON 格式化器、编码器、转换器等。"
       }
     },
     "browse": {
-      "browseByCategory": "Browse by Category",
-      "searchCategories": "Search categories...",
-      "searchToolsInCategory": "Search tools in this category...",
-      "all": "All",
-      "tools": "{count} tools",
-      "toolsFound": "{count, plural, one {# tool} other {# tools}} found",
-      "categoriesFound": "{count, plural, one {# category} other {# categories}} found",
-      "noToolsFound": "No tools found. Try a different search term.",
-      "noToolsFoundSubgroup": "No tools found. Try a different search term or subgroup.",
-      "noCategoriesFound": "No categories found. Try a different search term.",
-      "noCategoriesFoundGroup": "No categories found. Try a different search term or group.",
-      "resultsFor": "{count, plural, one {# result} other {# results}} for \"{query}\"",
-      "resultsForInCategory": "{count, plural, one {# result} other {# results}} for \"{query}\" in {category}",
-      "noResultsForQuery": "No tools found matching \"{query}\". Try a different search term."
+      "browseByCategory": "按分类浏览",
+      "searchCategories": "搜索分类...",
+      "searchToolsInCategory": "搜索此分类中的工具...",
+      "all": "全部",
+      "tools": "{count} 个工具",
+      "toolsFound": "{count, plural, one {# 个工具} other {# 个工具}}已找到",
+      "categoriesFound": "{count, plural, one {# 个分类} other {# 个分类}}已找到",
+      "noToolsFound": "未找到工具。请尝试其他搜索词。",
+      "noToolsFoundSubgroup": "未找到工具。请尝试其他搜索词或子组。",
+      "noCategoriesFound": "未找到分类。请尝试其他搜索词。",
+      "noCategoriesFoundGroup": "未找到分类。请尝试其他搜索词或组。",
+      "resultsFor": "{count, plural, one {# 个结果} other {# 个结果}}匹配\"{query}\"",
+      "resultsForInCategory": "{count, plural, one {# 个结果} other {# 个结果}}匹配\"{query}\"（在 {category} 中）",
+      "noResultsForQuery": "未找到与\"{query}\"匹配的工具。请尝试其他搜索词。"
     },
     "popularTools": {
-      "topPicks": "Top Picks",
-      "featured": "Featured",
-      "popular": "Popular"
+      "topPicks": "精选推荐",
+      "featured": "特色",
+      "popular": "热门"
     },
     "recentlyUsed": {
-      "title": "Recently Used",
-      "clear": "Clear"
+      "title": "最近使用",
+      "clear": "清除"
     },
     "relatedTools": {
-      "title": "Related Tools"
+      "title": "相关工具"
     },
     "documentation": {
-      "title": "Documentation",
-      "overview": "Overview",
-      "category": "Category:",
-      "privacyNote": "Runs entirely in your browser. No data is sent to our servers.",
-      "examples": "Examples",
-      "input": "Input",
-      "output": "Output",
-      "options": "Options",
-      "loadExample": "Load Example"
+      "title": "文档",
+      "overview": "概览",
+      "category": "分类：",
+      "privacyNote": "完全在您的浏览器中运行。不向我们的服务器发送任何数据。",
+      "examples": "示例",
+      "input": "输入",
+      "output": "输出",
+      "options": "选项",
+      "loadExample": "加载示例"
     },
     "toolCard": {
-      "addFavorite": "Add to favorites",
-      "removeFavorite": "Remove from favorites"
+      "addFavorite": "添加到收藏",
+      "removeFavorite": "从收藏中移除"
     }
   },
   "editor": {
@@ -262,14 +262,14 @@
     "about": {
       "metadata": {
         "title": "关于",
-        "description": "[REVIEW] 了解 utils.live - 我们的使命是让开发者工具变得易用、快速且尊重隐私。",
-        "ogTitle": "[REVIEW] 关于 | utils.live"
+        "description": "了解 utils.live - 我们致力于让开发者工具易于获取、快速且注重隐私的使命。",
+        "ogTitle": "关于 | utils.live"
       },
       "hero": {
         "heading": "尊重您时间的开发者工具",
         "headingPrefix": "尊重您时间的",
         "gradientText": "开发者工具",
-        "description": "[REVIEW] utils.live 源于对缓慢、充斥广告和侵犯隐私的在线工具的不满。我们打造了自己想要使用的工具：快速、免费且尊重隐私的实用程序。"
+        "description": "utils.live 诞生于对缓慢、充斥广告和侵犯隐私的在线工具的不满。我们打造了自己想用的工具：快速、免费且尊重用户的实用程序。"
       },
       "stats": {
         "developerTools": "开发者工具",
@@ -298,22 +298,22 @@
       },
       "mission": {
         "heading": "我们的使命",
-        "description": "我们相信开发者工具应该对所有人都可用，无论预算或技术水平如何。[REVIEW] utils.live 提供专业级别的实用工具，无冗余、无追踪、无付费墙。我们的目标是帮助你专注于重要的事情：构建优秀的软件。"
+        "description": "我们相信开发者工具应该对所有人都易于获取，无论预算或技术水平如何。utils.live 提供专业级的实用程序，无冗余功能、无追踪、无付费墙。我们的目标是帮助你专注于重要的事：构建优秀的软件。"
       },
       "team": {
         "heading": "用心打造",
         "headingPrefix": "用",
         "gradientText": "心打造",
-        "description": "[REVIEW] utils.live 由一个小团队的热情开发者维护，他们每天都使用这些工具。我们不断添加新工具并根据社区反馈改进现有工具。",
+        "description": "utils.live 由一支热情的开发者小团队维护，他们每天都在使用这些工具。我们根据社区反馈不断添加新工具并改进现有工具。",
         "feedbackWelcome": "欢迎反馈和建议"
       }
     },
     "contact": {
       "metadata": {
         "title": "联系我们",
-        "description": "与 [REVIEW] utils.live 团队取得联系。我们很想听到你关于功能、bug 或合作机会的想法。",
-        "ogTitle": "联系我们 | [REVIEW] utils.live",
-        "ogDescription": "与 [REVIEW] utils.live 团队取得联系。我们很想听到你的想法。"
+        "description": "与 utils.live 团队联系。我们很期待听到你关于功能、bug 或合作的反馈。",
+        "ogTitle": "联系 | utils.live",
+        "ogDescription": "与 utils.live 团队联系。我们很期待听到你的消息。"
       },
       "hero": {
         "heading": "取得联系",
@@ -365,7 +365,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "[REVIEW] 开发者工具博客 | utils.live",
+      "title": "开发者工具博客 | utils.live",
       "description": "学习开发者工具概念 — Base64、JWT、正则表达式、UUID、哈希等。包含实时示例的实用指南。",
       "postNotFound": "文章未找到"
     },
@@ -379,7 +379,7 @@
       "backToArticles": "返回所有文章"
     },
     "cta": {
-      "heading": "[REVIEW] 在 utils.live 上试试",
+      "heading": "在 utils.live 上试试",
       "description": "免费的浏览器工具 — 无需注册，您的数据不会离开您的设备。"
     }
   },
@@ -418,32 +418,32 @@
   },
   "metadata": {
     "home": {
-      "title": "[REVIEW] utils.live | 免费开发者工具和实用程序",
+      "title": "utils.live | 免费开发者工具与实用程序",
       "description": "{toolCountLabel} 个免费开发者工具集中在一个平台。JSON 格式化、编码、转换、哈希生成等工具。快速、免费且隐私保护。"
     },
     "layout": {
-      "title": "[REVIEW] utils.live | 开发者实用工具平台",
-      "titleTemplate": "%s | [REVIEW] utils.live",
+      "title": "utils.live | 开发者实用工具平台",
+      "titleTemplate": "%s | utils.live",
       "description": "{toolCountLabel} 个开发者工具集中在一个平台。JSON 格式化、编码、转换等工具。免费且隐私保护。",
-      "ogTitle": "[REVIEW] utils.live | 开发者实用工具平台",
-      "ogAlt": "[REVIEW] utils.live - 免费开发者工具",
+      "ogTitle": "utils.live | 开发者实用工具平台",
+      "ogAlt": "utils.live - 免费开发者工具",
       "skipToMain": "跳转到主要内容"
     },
     "tools": {
       "title": "浏览工具",
       "description": "浏览 {toolCountLabel} 个免费开发者工具。JSON 格式化、编码、转换、哈希生成等工具。",
-      "ogTitle": "[REVIEW] 浏览工具 | utils.live"
+      "ogTitle": "工具探索 | utils.live"
     },
     "about": {
       "title": "关于我们",
-      "ogTitle": "[REVIEW] 关于我们 | utils.live"
+      "ogTitle": "关于 | utils.live"
     },
     "contact": {
       "title": "联系我们",
-      "ogTitle": "[REVIEW] 联系我们 | utils.live"
+      "ogTitle": "联系 | utils.live"
     },
     "blog": {
-      "title": "[REVIEW] 开发者工具博客 | utils.live"
+      "title": "开发者工具博客 | utils.live"
     }
   },
   "footer": {
@@ -466,7 +466,7 @@
     "openMenu": "打开菜单",
     "searchLabel": "搜索工具",
     "searchPlaceholder": "搜索工具...",
-    "title": "[REVIEW] utils.live"
+    "title": "utils.live"
   },
   "forms": {
     "fileUpload": {
@@ -2295,11 +2295,11 @@
       },
       "schema-org-generator": {
         "name": "Schema.org 生成器",
-        "description": "[REVIEW] 免费在线 Schema.org JSON-LD 生成器——在浏览器中即时为 Article、Product、Event、Recipe 等 10 多种类型创建结构化数据。无数据存储。输出可嵌入的脚本标签，包含类型特定字段。"
+        "description": "免费在线 Schema.org JSON-LD 生成器 — 在浏览器中为 Article、Product、Event、Recipe 和 10 多种类型即时创建结构化数据。无数据存储。输出即用型脚本标签，包含特定类型的字段。"
       },
       "schema-org-validator": {
         "name": "Schema.org 验证器",
-        "description": "[REVIEW] 免费在线 Schema.org 验证器——粘贴 JSON-LD，在浏览器中即时检查缺少的必需字段、无效日期和结构问题。无数据存储。验证 @context、@type 和类型特定的必需属性。"
+        "description": "免费在线 Schema.org 验证器 — 粘贴 JSON-LD 并在浏览器中即时检查缺失必填字段、无效日期和结构问题。无数据存储。验证 @context、@type 和特定类型的必填属性。"
       },
       "json-ld-editor": {
         "name": "JSON-LD 编辑器",
@@ -2315,7 +2315,7 @@
       },
       "breadcrumb-generator": {
         "name": "面包屑生成器",
-        "description": "[REVIEW] 免费在线面包屑 JSON-LD 生成器——在浏览器中即时为 SEO 创建 BreadcrumbList 结构化数据。无数据存储。输出可嵌入的脚本标签，包含符合 Schema.org 的 ListItem 元素。"
+        "description": "免费在线面包屑 JSON-LD 生成器 — 在浏览器中快速创建 BreadcrumbList 结构化数据用于 SEO。不存储任何数据。输出可直接嵌入的脚本标签，包含符合 Schema.org 标准的 ListItem 元素。"
       },
       "faq-schema-generator": {
         "name": "FAQ Schema 生成器",
@@ -3489,140 +3489,140 @@
   },
   "categoryMeta": {
     "json": {
-      "name": "JSON Tools",
-      "description": "Free online JSON tools to format, validate, compare, and transform JSON data. Pretty print, minify, convert to YAML/CSV/XML, and more — all in your browser."
+      "name": "JSON 工具",
+      "description": "免费在线 JSON 工具，用于格式化、验证、比较和转换 JSON 数据。美化打印、压缩、转换为 YAML/CSV/XML 等 — 所有操作均在浏览器中完成。"
     },
     "encoding": {
-      "name": "Encoding & Decoding",
-      "description": "Free online encoding and decoding tools for Base64, URL encoding, Unicode, HTML entities, and more. Convert between formats instantly in your browser."
+      "name": "编码与解码",
+      "description": "免费在线编码和解码工具，支持 Base64、URL 编码、Unicode、HTML 实体等。在浏览器中即时转换格式。"
     },
     "text": {
-      "name": "Text Tools",
-      "description": "Free online text tools to transform, analyze, and manipulate text strings. Count words, change case, find and replace, sort lines, and more."
+      "name": "文本工具",
+      "description": "免费在线文本工具，用于转换、分析和操作文本字符串。统计单词数、更改大小写、查找和替换、排序行等。"
     },
     "crypto": {
-      "name": "Cryptography",
-      "description": "Free online cryptography tools for hash generation, encryption, decryption, and security analysis. MD5, SHA-256, AES, HMAC, and more — all client-side."
+      "name": "密码学",
+      "description": "免费在线密码学工具，用于哈希生成、加密、解密和安全分析。MD5、SHA-256、AES、HMAC 等 — 所有操作均在客户端进行。"
     },
     "jwt": {
-      "name": "JWT & Tokens",
-      "description": "Free online JWT tools to decode, verify, and debug JSON Web Tokens. Inspect headers, payloads, and signatures without sending data to any server."
+      "name": "JWT 和令牌",
+      "description": "免费在线 JWT 工具，用于解码、验证和调试 JSON Web Token。检查头部、负载和签名，无需将数据发送到任何服务器。"
     },
     "regex": {
-      "name": "Regular Expressions",
-      "description": "Free online regular expression tools to build, test, and debug regex patterns. Live matching, syntax highlighting, and cheat sheets for all major flavors."
+      "name": "正则表达式",
+      "description": "免费在线正则表达式工具，用于构建、测试和调试正则模式。实时匹配、语法高亮和各主流风格的速查表。"
     },
     "color": {
-      "name": "Color Tools",
-      "description": "Free online color tools to convert, pick, and generate color palettes. HEX, RGB, HSL, OKLCH conversions, contrast checkers, and palette generators."
+      "name": "颜色工具",
+      "description": "免费在线颜色工具，用于转换、选择和生成调色板。HEX、RGB、HSL、OKLCH 转换、对比度检查器和调色板生成器。"
     },
     "datetime": {
-      "name": "Date & Time",
-      "description": "Free online date and time tools to convert, format, and calculate dates. Unix timestamps, time zones, duration calculators, and date formatters."
+      "name": "日期与时间",
+      "description": "免费在线日期和时间工具，用于转换、格式化和计算日期。Unix 时间戳、时区、时间差计算器和日期格式化器。"
     },
     "identifiers": {
-      "name": "Identifiers & IDs",
-      "description": "Free online ID generators for UUIDs, CUIDs, NanoIDs, ULIDs, and more. Generate unique identifiers instantly — no server needed, all in your browser."
+      "name": "标识符与 ID",
+      "description": "免费在线 ID 生成器，用于生成 UUID、CUID、NanoID、ULID 等。即时生成唯一标识符 — 无需服务器，所有操作均在浏览器中完成。"
     },
     "diagram": {
-      "name": "Diagrams & Visual",
-      "description": "Free online diagram tools to generate and render flowcharts, sequence diagrams, and charts. Mermaid, PlantUML, and more — visualize directly in your browser."
+      "name": "图表与可视化",
+      "description": "免费在线图表工具，用于生成和渲染流程图、序列图和图表。Mermaid、PlantUML 等 — 在浏览器中直接可视化。"
     },
     "html": {
-      "name": "HTML Tools",
-      "description": "Free online HTML tools to parse, format, minify, and convert HTML. Pretty print, strip tags, encode entities, and convert to Markdown or JSX."
+      "name": "HTML 工具",
+      "description": "免费在线 HTML 工具，用于解析、格式化、压缩和转换 HTML。美化打印、去除标签、编码实体，以及转换为 Markdown 或 JSX。"
     },
     "css": {
-      "name": "CSS Tools",
-      "description": "Free online CSS tools to format, minify, and optimize stylesheets. Beautify CSS, convert units, generate gradients, and clean up your styles."
+      "name": "CSS 工具",
+      "description": "免费在线 CSS 工具，用于格式化、压缩和优化样式表。美化 CSS、转换单位、生成渐变，以及清理样式。"
     },
     "code": {
-      "name": "Code Formatting",
-      "description": "Free online code formatting tools to beautify and format code in JavaScript, TypeScript, Python, SQL, and more. Consistent formatting in your browser."
+      "name": "代码格式化",
+      "description": "免费在线代码格式化工具，用于美化和格式化 JavaScript、TypeScript、Python、SQL 等代码。在浏览器中实现一致的格式化。"
     },
     "yaml": {
-      "name": "YAML Tools",
-      "description": "Free online YAML tools to format, validate, and convert YAML files. Pretty print, convert to JSON/TOML, and check syntax — all client-side."
+      "name": "YAML 工具",
+      "description": "免费在线 YAML 工具，用于格式化、验证和转换 YAML 文件。美化打印、转换为 JSON/TOML，以及检查语法 — 全部客户端处理。"
     },
     "xml": {
-      "name": "XML Tools",
-      "description": "Free online XML tools to parse, format, and transform XML documents. Pretty print, minify, validate, and convert to JSON — all in your browser."
+      "name": "XML 工具",
+      "description": "免费在线 XML 工具，用于解析、格式化和转换 XML 文档。美化打印、压缩、验证，以及转换为 JSON — 全部在浏览器中进行。"
     },
     "csv": {
-      "name": "CSV & TSV Tools",
-      "description": "Free online CSV and TSV tools to parse, convert, and manipulate tabular data. Convert to JSON/XML, sort columns, and filter rows in your browser."
+      "name": "CSV & TSV 工具",
+      "description": "免费在线 CSV 和 TSV 工具，用于解析、转换和操作表格数据。转换为 JSON/XML、排序列，以及在浏览器中过滤行。"
     },
     "markdown": {
-      "name": "Markdown Tools",
-      "description": "Free online Markdown tools to preview, convert, and enhance Markdown documents. Live preview, convert to HTML, generate tables, and format text."
+      "name": "Markdown 工具",
+      "description": "免费在线 Markdown 工具，用于预览、转换和增强 Markdown 文档。实时预览、转换为 HTML、生成表格，以及格式化文本。"
     },
     "math": {
-      "name": "Numbers & Math",
-      "description": "Free online math and number tools for calculations, conversions, and number formatting. Base conversion, percentage calculator, unit converter, and more."
+      "name": "数字与数学",
+      "description": "免费在线数学和数字工具，用于计算、转换和数字格式化。进制转换、百分比计算器、单位转换等。"
     },
     "image": {
-      "name": "Image Tools",
-      "description": "Free online image tools to convert, resize, and optimize images. Change formats, compress files, crop, and adjust — all processed locally in your browser."
+      "name": "图像工具",
+      "description": "免费在线图像工具，用于转换、调整大小和优化图像。更改格式、压缩文件、裁剪，以及调整 — 全部在浏览器中本地处理。"
     },
     "svg": {
-      "name": "SVG Tools",
-      "description": "Free online SVG tools to optimize, convert, and manipulate SVG files. Minify, prettify, convert to PNG/JSX, and clean up SVG code in your browser."
+      "name": "SVG 工具",
+      "description": "免费在线 SVG 工具，用于优化、转换和操作 SVG 文件。压缩、美化、转换为 PNG/JSX，以及在浏览器中清理 SVG 代码。"
     },
     "web": {
-      "name": "Web & SEO",
-      "description": "Free online web and SEO tools for URL parsing, meta tag generation, Open Graph previews, and web utilities. Analyze and optimize your web presence."
+      "name": "网络与 SEO",
+      "description": "免费在线网络和 SEO 工具，用于 URL 解析、元标签生成、Open Graph 预览和网络实用程序。分析和优化您的网络形象。"
     },
     "api": {
       "name": "API & OpenAPI",
-      "description": "Free online API and OpenAPI tools for schema validation, mock data generation, and API testing utilities. Work with REST APIs directly in your browser."
+      "description": "免费在线 API 和 OpenAPI 工具，用于模式验证、模拟数据生成和 API 测试实用程序。在浏览器中直接处理 REST API。"
     },
     "sql": {
-      "name": "SQL & Database",
-      "description": "Free online SQL and database tools to format, validate, and convert SQL queries. Pretty print, minify, and convert between SQL dialects."
+      "name": "SQL & 数据库",
+      "description": "免费在线 SQL 和数据库工具，用于格式化、验证和转换 SQL 查询。美化打印、压缩和在 SQL 方言之间转换。"
     },
     "network": {
-      "name": "Network Tools",
-      "description": "Free online network tools for DNS lookup, IP address utilities, and connectivity diagnostics. Analyze network data and convert formats client-side."
+      "name": "网络工具",
+      "description": "免费在线网络工具，用于 DNS 查询、IP 地址实用程序和连接诊断。在客户端分析网络数据和转换格式。"
     },
     "validation": {
-      "name": "Validation Tools",
-      "description": "Free online validation tools to check formats, data structures, and syntax. Validate JSON, YAML, XML, emails, URLs, and more — instantly in your browser."
+      "name": "验证工具",
+      "description": "免费在线验证工具，用于检查格式、数据结构和语法。验证 JSON、YAML、XML、电子邮件、URL 等 — 在浏览器中即时验证。"
     },
     "data": {
-      "name": "Data Formats",
-      "description": "Free online data format tools to convert and view INI, NDJSON, HJSON, Avro, Protobuf, MessagePack, and other data serialization formats."
+      "name": "数据格式",
+      "description": "免费在线数据格式工具，用于转换和查看 INI、NDJSON、HJSON、Avro、Protobuf、MessagePack 和其他数据序列化格式。"
     },
     "toml": {
-      "name": "TOML Tools",
-      "description": "Free online TOML tools to format, validate, and convert TOML configuration files. Pretty print, convert to JSON/YAML, and check syntax instantly."
+      "name": "TOML 工具",
+      "description": "免费在线 TOML 工具，用于格式化、验证和转换 TOML 配置文件。美化打印、转换为 JSON/YAML 和即时检查语法。"
     },
     "git": {
-      "name": "Git & Version Control",
-      "description": "Free online Git and version control tools for branch naming, commit message formatting, .gitignore generation, and Git command reference."
+      "name": "Git & 版本控制",
+      "description": "免费在线 Git 和版本控制工具，用于分支命名、提交消息格式化、.gitignore 生成和 Git 命令参考。"
     },
     "devops": {
-      "name": "DevOps & Infrastructure",
-      "description": "Free online DevOps tools for Docker, Kubernetes, Helm, and container configuration. Generate Dockerfiles, validate K8s manifests, and more."
+      "name": "DevOps & 基础设施",
+      "description": "免费在线 DevOps 工具，用于 Docker、Kubernetes、Helm 和容器配置。生成 Dockerfile、验证 K8s 清单等。"
     },
     "feeds": {
-      "name": "Feeds & Structured Data",
-      "description": "Free online feed and structured data tools for RSS, Atom, JSON Feed, and Schema.org. Generate, validate, and convert web feeds in your browser."
+      "name": "订阅源 & 结构化数据",
+      "description": "免费在线订阅源和结构化数据工具，用于 RSS、Atom、JSON Feed 和 Schema.org。在浏览器中生成、验证和转换网络订阅源。"
     },
     "communication": {
-      "name": "Communication",
-      "description": "Free online communication tools for email formatting, messaging templates, and communication format conversion. Generate and validate email content."
+      "name": "沟通",
+      "description": "免费在线沟通工具，用于电子邮件格式化、消息模板和沟通格式转换。生成和验证电子邮件内容。"
     },
     "misc": {
-      "name": "Miscellaneous",
-      "description": "Free online miscellaneous developer tools for QR codes, UUIDs, Lorem Ipsum text, and other handy utilities. Quick tools that run in your browser."
+      "name": "杂项",
+      "description": "免费在线杂项开发工具，用于二维码、UUID、Lorem Ipsum 文本和其他方便的实用程序。在浏览器中运行的快速工具。"
     },
     "legal": {
-      "name": "Legal & Compliance",
-      "description": "Free online legal document generators for privacy policies, terms of service, GDPR statements, and compliance documents. Generate legal text instantly."
+      "name": "法律 & 合规",
+      "description": "免费在线法律文件生成器，用于隐私政策、服务条款、GDPR 声明和合规文件。即时生成法律文本。"
     },
     "reference": {
-      "name": "Reference & Lookup",
-      "description": "Free online reference and lookup tools for country codes, currency codes, language codes, MIME types, and other developer reference tables."
+      "name": "参考 & 查询",
+      "description": "免费在线参考和查询工具，用于国家代码、货币代码、语言代码、MIME 类型和其他开发者参考表。"
     }
   }
 }

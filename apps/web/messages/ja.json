@@ -44,8 +44,8 @@
       "system": "システム"
     },
     "brand": {
-      "name": "[REVIEW] utils.live",
-      "homeAriaLabel": "[REVIEW] utils.live ホーム"
+      "name": "utils.live",
+      "homeAriaLabel": "utils.live ホーム"
     }
   },
   "home": {
@@ -57,8 +57,8 @@
       "searchAriaLabel": "開発者ツールを検索"
     },
     "features": {
-      "eyebrow": "[REVIEW] utils.live を選ぶ理由",
-      "heading": "[REVIEW] 開発者が utils.live を選ぶ理由",
+      "eyebrow": "utils.live を選ぶ理由",
+      "heading": "開発者が utils.live を選ぶ理由",
       "instantResults": {
         "title": "瞬間的な結果",
         "description": "クライアント側のツールはブラウザで実行され、レイテンシはゼロです。待機なし、サーバーラウンドトリップなし。"
@@ -100,7 +100,7 @@
       "outputLabel": "出力"
     },
     "metadata": {
-      "title": "[REVIEW] utils.live | 無料開発者ツール & ユーティリティ",
+      "title": "utils.live | 無料開発者ツール & ユーティリティ",
       "description": "{toolCountLabel} 個の無料開発者ツールをまとめて。JSON フォーマッタ、エンコーダ、コンバータ、ハッシュジェネレータなど。高速、無料、プライバシー重視。"
     }
   },
@@ -162,52 +162,52 @@
       "tools": {
         "title": "ツールを探索",
         "description": "{toolCountLabel} 個の無料開発者ツールを閲覧。JSON フォーマッター、エンコーダー、コンバーター、ハッシュジェネレーターなど。",
-        "ogTitle": "[REVIEW] ツールを探索 | utils.live",
+        "ogTitle": "ツール一覧 | utils.live",
         "ogDescription": "{toolCountLabel} 個の無料開発者ツールを閲覧。JSON フォーマッター、エンコーダー、コンバーターなど。"
       }
     },
     "browse": {
-      "browseByCategory": "Browse by Category",
-      "searchCategories": "Search categories...",
-      "searchToolsInCategory": "Search tools in this category...",
-      "all": "All",
-      "tools": "{count} tools",
-      "toolsFound": "{count, plural, one {# tool} other {# tools}} found",
-      "categoriesFound": "{count, plural, one {# category} other {# categories}} found",
-      "noToolsFound": "No tools found. Try a different search term.",
-      "noToolsFoundSubgroup": "No tools found. Try a different search term or subgroup.",
-      "noCategoriesFound": "No categories found. Try a different search term.",
-      "noCategoriesFoundGroup": "No categories found. Try a different search term or group.",
-      "resultsFor": "{count, plural, one {# result} other {# results}} for \"{query}\"",
-      "resultsForInCategory": "{count, plural, one {# result} other {# results}} for \"{query}\" in {category}",
-      "noResultsForQuery": "No tools found matching \"{query}\". Try a different search term."
+      "browseByCategory": "カテゴリで探す",
+      "searchCategories": "カテゴリを検索...",
+      "searchToolsInCategory": "このカテゴリ内のツールを検索...",
+      "all": "すべて",
+      "tools": "{count} 個のツール",
+      "toolsFound": "{count, plural, one {# 個のツール} other {# 個のツール}}見つかりました",
+      "categoriesFound": "{count, plural, one {# 個のカテゴリ} other {# 個のカテゴリ}}見つかりました",
+      "noToolsFound": "ツールが見つかりません。別の検索キーワードをお試しください。",
+      "noToolsFoundSubgroup": "ツールが見つかりません。別の検索キーワードまたはサブグループをお試しください。",
+      "noCategoriesFound": "カテゴリが見つかりません。別の検索キーワードをお試しください。",
+      "noCategoriesFoundGroup": "カテゴリが見つかりません。別の検索キーワードまたはグループをお試しください。",
+      "resultsFor": "{count, plural, one {# 件の結果} other {# 件の結果}}「{query}」に対する",
+      "resultsForInCategory": "{count, plural, one {# 件の結果} other {# 件の結果}}「{query}」に対する（{category}内）",
+      "noResultsForQuery": "「{query}」に一致するツールが見つかりません。別の検索キーワードをお試しください。"
     },
     "popularTools": {
-      "topPicks": "Top Picks",
-      "featured": "Featured",
-      "popular": "Popular"
+      "topPicks": "おすすめ",
+      "featured": "ピックアップ",
+      "popular": "人気"
     },
     "recentlyUsed": {
-      "title": "Recently Used",
-      "clear": "Clear"
+      "title": "最近使用したツール",
+      "clear": "クリア"
     },
     "relatedTools": {
-      "title": "Related Tools"
+      "title": "関連ツール"
     },
     "documentation": {
-      "title": "Documentation",
-      "overview": "Overview",
-      "category": "Category:",
-      "privacyNote": "Runs entirely in your browser. No data is sent to our servers.",
-      "examples": "Examples",
-      "input": "Input",
-      "output": "Output",
-      "options": "Options",
-      "loadExample": "Load Example"
+      "title": "ドキュメント",
+      "overview": "概要",
+      "category": "カテゴリ:",
+      "privacyNote": "ブラウザ内で完全に実行されます。データはサーバーに送信されません。",
+      "examples": "例",
+      "input": "入力",
+      "output": "出力",
+      "options": "オプション",
+      "loadExample": "例を読み込む"
     },
     "toolCard": {
-      "addFavorite": "Add to favorites",
-      "removeFavorite": "Remove from favorites"
+      "addFavorite": "お気に入りに追加",
+      "removeFavorite": "お気に入りから削除"
     }
   },
   "editor": {
@@ -262,14 +262,14 @@
     "about": {
       "metadata": {
         "title": "について",
-        "description": "[REVIEW] utils.live について - 開発者ツールをアクセス可能、高速、プライバシー重視にするというミッション。",
-        "ogTitle": "[REVIEW] について | utils.live"
+        "description": "utils.live について学ぶ - 開発者ツールをアクセス可能で、高速で、プライバシー重視にするというミッション。",
+        "ogTitle": "について | utils.live"
       },
       "hero": {
         "heading": "あなたの時間を大切にする開発者ツール",
         "headingPrefix": "開発者ツール",
         "gradientText": "あなたの時間を大切にする",
-        "description": "[REVIEW] utils.liveは、遅い、広告まみれ、プライバシーを侵害するオンラインツールへの不満から生まれました。私たちは自分たちが使いたいものを作りました：高速で、無料で、尊重されたユーティリティです。"
+        "description": "utils.live は遅く、広告に満ちた、プライバシー侵害的なオンラインツールへのフラストレーションから生まれました。私たちは自分たちが使いたいものを作りました：高速で、無料で、ユーザーを尊重するユーティリティです。"
       },
       "stats": {
         "developerTools": "開発者ツール",
@@ -298,22 +298,22 @@
       },
       "mission": {
         "heading": "私たちのミッション",
-        "description": "[REVIEW] 開発者ツールは予算や技術的専門知識に関係なく、すべての人がアクセスできるべきだと考えています。utils.liveは、ブロートウェア、追跡、給与制度なしで、プロフェッショナルグレードのユーティリティを提供します。私たちの目標は、あなたが重要なことに集中するのを支援することです：素晴らしいソフトウェアの構築。"
+        "description": "開発者ツールは予算や技術的専門知識に関わらず、誰もがアクセスできるべきだと考えています。utils.live は無駄がなく、追跡されず、課金の壁のないプロフェッショナルグレードのユーティリティを提供します。私たちのゴールは、あなたが重要なことに集中するのを助けることです：素晴らしいソフトウェアを作ること。"
       },
       "team": {
         "heading": "思いを込めて構築",
         "headingPrefix": "思いを込めて",
         "gradientText": "構築",
-        "description": "[REVIEW] utils.liveは、これらのツールを毎日使用する情熱的な開発者の小さなチームによって維持されています。コミュニティフィードバックに基づいて、常に新しいツールを追加し、既存のツールを改善しています。",
+        "description": "utils.live は毎日これらのツールを使う情熱的な開発者の小さなチームによって維持されています。コミュニティフィードバックに基づいて、新しいツールを追加し、既存のツールを改善し続けています。",
         "feedbackWelcome": "フィードバックと提案を歓迎します"
       }
     },
     "contact": {
       "metadata": {
         "title": "お問い合わせ",
-        "description": "[REVIEW] utils.liveチームに連絡してください。機能、バグ、パートナーシップについてお聞かせください。",
-        "ogTitle": "[REVIEW] お問い合わせ | utils.live",
-        "ogDescription": "[REVIEW] utils.liveチームに連絡してください。ご意見をお聞かせください。"
+        "description": "utils.live チームに連絡してください。機能、バグ、パートナーシップについてのご意見をお待ちしています。",
+        "ogTitle": "お問い合わせ | utils.live",
+        "ogDescription": "utils.live チームに連絡してください。ご意見をお待ちしています。"
       },
       "hero": {
         "heading": "ご連絡ください",
@@ -365,7 +365,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "[REVIEW] 開発者ツールブログ | utils.live",
+      "title": "開発者ツールブログ | utils.live",
       "description": "Base64、JWT、正規表現、UUID、ハッシュなど、開発者ツールの概念について学びましょう。ライブ例を使った実践的なガイド。",
       "postNotFound": "投稿が見つかりません"
     },
@@ -379,7 +379,7 @@
       "backToArticles": "すべての記事に戻る"
     },
     "cta": {
-      "heading": "[REVIEW] utils.liveで試す",
+      "heading": "utils.live で試す",
       "description": "無料のブラウザベースツール — サインアップ不要、データはあなたのデバイスに留まります。"
     }
   },
@@ -418,32 +418,32 @@
   },
   "metadata": {
     "home": {
-      "title": "[REVIEW] utils.live | 無料開発者ツール・ユーティリティ",
+      "title": "utils.live | 無料開発者ツール & ユーティリティ",
       "description": "{toolCountLabel}の無料開発者ツールが一箇所に。JSONフォーマッタ、エンコーダ、コンバータ、ハッシュジェネレータなど。高速、無料、プライバシー重視。"
     },
     "layout": {
-      "title": "[REVIEW] utils.live | 開発者ユーティリティプラットフォーム",
+      "title": "utils.live | 開発者ユーティリティプラットフォーム",
       "titleTemplate": "%s | utils.live",
       "description": "{toolCountLabel}の開発者ツールが一箇所に。JSONフォーマッタ、エンコーダ、コンバータなど。無料でプライバシー重視。",
-      "ogTitle": "[REVIEW] utils.live | 開発者ユーティリティプラットフォーム",
-      "ogAlt": "[REVIEW] utils.live - 無料開発者ツール",
+      "ogTitle": "utils.live | 開発者ユーティリティプラットフォーム",
+      "ogAlt": "utils.live - 無料開発者ツール",
       "skipToMain": "メインコンテンツへスキップ"
     },
     "tools": {
       "title": "ツールを探索",
       "description": "{toolCountLabel}の無料開発者ツールを参照。JSONフォーマッタ、エンコーダ、コンバータ、ハッシュジェネレータなど。",
-      "ogTitle": "[REVIEW] ツールを探索 | utils.live"
+      "ogTitle": "ツール一覧 | utils.live"
     },
     "about": {
       "title": "について",
-      "ogTitle": "[REVIEW] について | utils.live"
+      "ogTitle": "について | utils.live"
     },
     "contact": {
       "title": "お問い合わせ",
-      "ogTitle": "[REVIEW] お問い合わせ | utils.live"
+      "ogTitle": "お問い合わせ | utils.live"
     },
     "blog": {
-      "title": "[REVIEW] 開発者ツールブログ | utils.live"
+      "title": "開発者ツールブログ | utils.live"
     }
   },
   "footer": {
@@ -3489,140 +3489,140 @@
   },
   "categoryMeta": {
     "json": {
-      "name": "JSON Tools",
-      "description": "Free online JSON tools to format, validate, compare, and transform JSON data. Pretty print, minify, convert to YAML/CSV/XML, and more — all in your browser."
+      "name": "JSONツール",
+      "description": "JSONデータをフォーマット、検証、比較、変換するための無料オンラインJSONツール。Pretty print、ミニファイ、YAML/CSV/XMLへの変換など、すべてブラウザで実行できます。"
     },
     "encoding": {
-      "name": "Encoding & Decoding",
-      "description": "Free online encoding and decoding tools for Base64, URL encoding, Unicode, HTML entities, and more. Convert between formats instantly in your browser."
+      "name": "エンコーディング・デコーディング",
+      "description": "Base64、URLエンコーディング、Unicode、HTMLエンティティなどのための無料オンラインエンコーディング・デコーディングツール。ブラウザでフォーマット間の変換を瞬時に実行できます。"
     },
     "text": {
-      "name": "Text Tools",
-      "description": "Free online text tools to transform, analyze, and manipulate text strings. Count words, change case, find and replace, sort lines, and more."
+      "name": "テキストツール",
+      "description": "テキスト文字列を変換、分析、操作するための無料オンラインテキストツール。単語数カウント、大文字小文字変更、検索と置換、行の並び替えなど。"
     },
     "crypto": {
-      "name": "Cryptography",
-      "description": "Free online cryptography tools for hash generation, encryption, decryption, and security analysis. MD5, SHA-256, AES, HMAC, and more — all client-side."
+      "name": "暗号化",
+      "description": "ハッシュ生成、暗号化、復号化、セキュリティ分析のための無料オンライン暗号化ツール。MD5、SHA-256、AES、HMACなど、すべてクライアント側で実行されます。"
     },
     "jwt": {
-      "name": "JWT & Tokens",
-      "description": "Free online JWT tools to decode, verify, and debug JSON Web Tokens. Inspect headers, payloads, and signatures without sending data to any server."
+      "name": "JWT・トークン",
+      "description": "JSON Web Tokenのデコード、検証、デバッグのための無料オンラインJWTツール。ヘッダー、ペイロード、署名をインスペクトでき、データをサーバーに送信しません。"
     },
     "regex": {
-      "name": "Regular Expressions",
-      "description": "Free online regular expression tools to build, test, and debug regex patterns. Live matching, syntax highlighting, and cheat sheets for all major flavors."
+      "name": "正規表現",
+      "description": "正規表現パターンを構築、テスト、デバッグするための無料オンライン正規表現ツール。ライブマッチング、シンタックスハイライト、すべての主要フレーバーのチートシート。"
     },
     "color": {
-      "name": "Color Tools",
-      "description": "Free online color tools to convert, pick, and generate color palettes. HEX, RGB, HSL, OKLCH conversions, contrast checkers, and palette generators."
+      "name": "カラーツール",
+      "description": "色を変換、選択、生成するための無料オンラインカラーツール。HEX、RGB、HSL、OKLCH変換、コントラストチェッカー、パレットジェネレーター。"
     },
     "datetime": {
-      "name": "Date & Time",
-      "description": "Free online date and time tools to convert, format, and calculate dates. Unix timestamps, time zones, duration calculators, and date formatters."
+      "name": "日付・時間",
+      "description": "日付を変換、フォーマット、計算するための無料オンライン日付・時間ツール。Unixタイムスタンプ、タイムゾーン、期間計算、日付フォーマッター。"
     },
     "identifiers": {
-      "name": "Identifiers & IDs",
-      "description": "Free online ID generators for UUIDs, CUIDs, NanoIDs, ULIDs, and more. Generate unique identifiers instantly — no server needed, all in your browser."
+      "name": "識別子・ID",
+      "description": "UUID、CUID、NanoID、ULIDなどのための無料オンラインIDジェネレーター。ユニークな識別子を瞬時に生成 — サーバー不要、すべてブラウザで実行できます。"
     },
     "diagram": {
-      "name": "Diagrams & Visual",
-      "description": "Free online diagram tools to generate and render flowcharts, sequence diagrams, and charts. Mermaid, PlantUML, and more — visualize directly in your browser."
+      "name": "ダイアグラム・ビジュアル",
+      "description": "フローチャート、シーケンス図、チャートを生成・描画できる無料オンラインダイアグラムツール。Mermaid、PlantUML など、ブラウザで直接可視化できます。"
     },
     "html": {
-      "name": "HTML Tools",
-      "description": "Free online HTML tools to parse, format, minify, and convert HTML. Pretty print, strip tags, encode entities, and convert to Markdown or JSX."
+      "name": "HTML ツール",
+      "description": "HTML を解析、フォーマット、ミニファイ、変換できる無料オンライン HTML ツール。Pretty print、タグ削除、エンティティエンコード、Markdown や JSX への変換に対応。"
     },
     "css": {
-      "name": "CSS Tools",
-      "description": "Free online CSS tools to format, minify, and optimize stylesheets. Beautify CSS, convert units, generate gradients, and clean up your styles."
+      "name": "CSS ツール",
+      "description": "スタイルシートをフォーマット、ミニファイ、最適化できる無料オンライン CSS ツール。CSS を整形、単位変換、グラデーション生成、スタイル クリーンアップ。"
     },
     "code": {
-      "name": "Code Formatting",
-      "description": "Free online code formatting tools to beautify and format code in JavaScript, TypeScript, Python, SQL, and more. Consistent formatting in your browser."
+      "name": "コード フォーマット",
+      "description": "JavaScript、TypeScript、Python、SQL など、コードを整形・フォーマットできる無料オンライン ツール。ブラウザ内で一貫性のあるフォーマットを実現。"
     },
     "yaml": {
-      "name": "YAML Tools",
-      "description": "Free online YAML tools to format, validate, and convert YAML files. Pretty print, convert to JSON/TOML, and check syntax — all client-side."
+      "name": "YAML ツール",
+      "description": "YAML ファイルをフォーマット、検証、変換できる無料オンライン YAML ツール。Pretty print、JSON/TOML への変換、構文チェック — すべてクライアント側で処理。"
     },
     "xml": {
-      "name": "XML Tools",
-      "description": "Free online XML tools to parse, format, and transform XML documents. Pretty print, minify, validate, and convert to JSON — all in your browser."
+      "name": "XML ツール",
+      "description": "XML ドキュメントを解析、フォーマット、変換できる無料オンライン XML ツール。Pretty print、ミニファイ、検証、JSON への変換 — ブラウザで完結。"
     },
     "csv": {
-      "name": "CSV & TSV Tools",
-      "description": "Free online CSV and TSV tools to parse, convert, and manipulate tabular data. Convert to JSON/XML, sort columns, and filter rows in your browser."
+      "name": "CSV & TSV ツール",
+      "description": "CSV と TSV ファイルを解析、変換、操作できる無料オンライン ツール。JSON/XML への変換、列のソート、行のフィルター — ブラウザで実行。"
     },
     "markdown": {
-      "name": "Markdown Tools",
-      "description": "Free online Markdown tools to preview, convert, and enhance Markdown documents. Live preview, convert to HTML, generate tables, and format text."
+      "name": "Markdown ツール",
+      "description": "Markdown ドキュメントをプレビュー、変換、拡張できる無料オンライン ツール。ライブプレビュー、HTML への変換、テーブル生成、テキスト フォーマット。"
     },
     "math": {
-      "name": "Numbers & Math",
-      "description": "Free online math and number tools for calculations, conversions, and number formatting. Base conversion, percentage calculator, unit converter, and more."
+      "name": "数値と計算",
+      "description": "計算、変換、数値フォーマットに対応した無料オンライン数値・計算ツール。進数変換、パーセンテージ計算、単位換算など。"
     },
     "image": {
-      "name": "Image Tools",
-      "description": "Free online image tools to convert, resize, and optimize images. Change formats, compress files, crop, and adjust — all processed locally in your browser."
+      "name": "画像 ツール",
+      "description": "画像を変換、リサイズ、最適化できる無料オンライン ツール。形式変更、ファイル圧縮、トリミング、調整 — すべてローカルで処理。"
     },
     "svg": {
-      "name": "SVG Tools",
-      "description": "Free online SVG tools to optimize, convert, and manipulate SVG files. Minify, prettify, convert to PNG/JSX, and clean up SVG code in your browser."
+      "name": "SVG ツール",
+      "description": "SVG ファイルを最適化、変換、操作できる無料オンライン ツール。ミニファイ、整形、PNG/JSX への変換、SVG コード クリーンアップ。"
     },
     "web": {
       "name": "Web & SEO",
-      "description": "Free online web and SEO tools for URL parsing, meta tag generation, Open Graph previews, and web utilities. Analyze and optimize your web presence."
+      "description": "URL 解析、メタタグ生成、Open Graph プレビュー、Web ユーティリティ対応の無料オンライン Web・SEO ツール。Web プレゼンスの分析と最適化。"
     },
     "api": {
       "name": "API & OpenAPI",
-      "description": "Free online API and OpenAPI tools for schema validation, mock data generation, and API testing utilities. Work with REST APIs directly in your browser."
+      "description": "スキーマ検証、モック データ生成、API テスト ユーティリティに対応した無料オンライン API・OpenAPI ツール。REST API をブラウザで直接操作。"
     },
     "sql": {
-      "name": "SQL & Database",
-      "description": "Free online SQL and database tools to format, validate, and convert SQL queries. Pretty print, minify, and convert between SQL dialects."
+      "name": "SQL & データベース",
+      "description": "SQLクエリのフォーマット、検証、変換を行う無料オンラインSQLおよびデータベースツール。プリティプリント、縮小化、複数のSQLダイアレクト間の変換に対応。"
     },
     "network": {
-      "name": "Network Tools",
-      "description": "Free online network tools for DNS lookup, IP address utilities, and connectivity diagnostics. Analyze network data and convert formats client-side."
+      "name": "ネットワークツール",
+      "description": "DNS ルックアップ、IP アドレスユーティリティ、接続診断を行う無料オンラインネットワークツール。ネットワークデータを分析し、クライアント側でフォーマットを変換。"
     },
     "validation": {
-      "name": "Validation Tools",
-      "description": "Free online validation tools to check formats, data structures, and syntax. Validate JSON, YAML, XML, emails, URLs, and more — instantly in your browser."
+      "name": "検証ツール",
+      "description": "フォーマット、データ構造、構文をチェックする無料オンライン検証ツール。JSON、YAML、XML、メール、URL など、ブラウザで即座に検証。"
     },
     "data": {
-      "name": "Data Formats",
-      "description": "Free online data format tools to convert and view INI, NDJSON, HJSON, Avro, Protobuf, MessagePack, and other data serialization formats."
+      "name": "データフォーマット",
+      "description": "INI、NDJSON、HJSON、Avro、Protobuf、MessagePack などのデータシリアライゼーションフォーマットを変換・表示する無料オンラインツール。"
     },
     "toml": {
-      "name": "TOML Tools",
-      "description": "Free online TOML tools to format, validate, and convert TOML configuration files. Pretty print, convert to JSON/YAML, and check syntax instantly."
+      "name": "TOML ツール",
+      "description": "TOML設定ファイルのフォーマット、検証、変換を行う無料オンライン TOML ツール。プリティプリント、JSON/YAML への変換、構文チェックを即座に実行。"
     },
     "git": {
-      "name": "Git & Version Control",
-      "description": "Free online Git and version control tools for branch naming, commit message formatting, .gitignore generation, and Git command reference."
+      "name": "Git & バージョン管理",
+      "description": "ブランチ命名規則、コミットメッセージフォーマット、.gitignore 生成、Git コマンドリファレンスを提供する無料オンライン Git およびバージョン管理ツール。"
     },
     "devops": {
-      "name": "DevOps & Infrastructure",
-      "description": "Free online DevOps tools for Docker, Kubernetes, Helm, and container configuration. Generate Dockerfiles, validate K8s manifests, and more."
+      "name": "DevOps & インフラストラクチャ",
+      "description": "Docker、Kubernetes、Helm、コンテナ設定用の無料オンライン DevOps ツール。Dockerfile 生成、K8s マニフェスト検証など。"
     },
     "feeds": {
-      "name": "Feeds & Structured Data",
-      "description": "Free online feed and structured data tools for RSS, Atom, JSON Feed, and Schema.org. Generate, validate, and convert web feeds in your browser."
+      "name": "フィード & 構造化データ",
+      "description": "RSS、Atom、JSON Feed、Schema.org 用の無料オンラインフィード・構造化データツール。ブラウザでウェブフィードを生成、検証、変換。"
     },
     "communication": {
-      "name": "Communication",
-      "description": "Free online communication tools for email formatting, messaging templates, and communication format conversion. Generate and validate email content."
+      "name": "コミュニケーション",
+      "description": "メールフォーマット、メッセージテンプレート、コミュニケーションフォーマット変換用の無料オンラインコミュニケーションツール。メールコンテンツを生成・検証。"
     },
     "misc": {
-      "name": "Miscellaneous",
-      "description": "Free online miscellaneous developer tools for QR codes, UUIDs, Lorem Ipsum text, and other handy utilities. Quick tools that run in your browser."
+      "name": "その他",
+      "description": "QR コード、UUID、Lorem Ipsum テキストなど、ブラウザで動作する便利なツール。無料オンライン開発者向けツール各種。"
     },
     "legal": {
-      "name": "Legal & Compliance",
-      "description": "Free online legal document generators for privacy policies, terms of service, GDPR statements, and compliance documents. Generate legal text instantly."
+      "name": "法務 & コンプライアンス",
+      "description": "プライバシーポリシー、利用規約、GDPR ステートメント、コンプライアンスドキュメント生成用の無料オンライン法務ドキュメントジェネレータ。法務テキストを即座に生成。"
     },
     "reference": {
-      "name": "Reference & Lookup",
-      "description": "Free online reference and lookup tools for country codes, currency codes, language codes, MIME types, and other developer reference tables."
+      "name": "リファレンス & ルックアップ",
+      "description": "国コード、通貨コード、言語コード、MIME タイプなど、開発者向けリファレンステーブルを提供する無料オンラインリファレンス・ルックアップツール。"
     }
   }
 }

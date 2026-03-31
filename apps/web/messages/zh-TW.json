@@ -44,8 +44,8 @@
       "system": "系統"
     },
     "brand": {
-      "name": "[REVIEW] utils.live",
-      "homeAriaLabel": "[REVIEW] utils.live 首頁"
+      "name": "utils.live",
+      "homeAriaLabel": "utils.live 首頁"
     }
   },
   "home": {
@@ -57,8 +57,8 @@
       "searchAriaLabel": "搜尋開發者工具"
     },
     "features": {
-      "eyebrow": "[REVIEW] 為什麼選擇 utils.live",
-      "heading": "[REVIEW] 開發者選擇 utils.live 的原因",
+      "eyebrow": "為什麼選擇 utils.live",
+      "heading": "開發者為什麼選擇 utils.live",
       "instantResults": {
         "title": "即時結果",
         "description": "客戶端工具在瀏覽器中執行，零延遲。無需等待，無伺服器往返。"
@@ -100,7 +100,7 @@
       "outputLabel": "輸出"
     },
     "metadata": {
-      "title": "[REVIEW] utils.live | 免費開發者工具與公用程式",
+      "title": "utils.live | 免費開發者工具及實用程式",
       "description": "{toolCountLabel} 個免費開發者工具於一處。JSON 格式化工具、編碼器、轉換器、雜湊生成器等。快速、免費且注重隱私。"
     }
   },
@@ -162,52 +162,52 @@
       "tools": {
         "title": "探索工具",
         "description": "瀏覽 {toolCountLabel} 個免費開發者工具。JSON 格式化器、編碼器、轉換器、雜湊產生器等。",
-        "ogTitle": "[REVIEW] Explore Tools | utils.live",
+        "ogTitle": "探索工具 | utils.live",
         "ogDescription": "瀏覽 {toolCountLabel} 個免費開發者工具。JSON 格式化器、編碼器、轉換器等。"
       }
     },
     "browse": {
-      "browseByCategory": "Browse by Category",
-      "searchCategories": "Search categories...",
-      "searchToolsInCategory": "Search tools in this category...",
-      "all": "All",
-      "tools": "{count} tools",
-      "toolsFound": "{count, plural, one {# tool} other {# tools}} found",
-      "categoriesFound": "{count, plural, one {# category} other {# categories}} found",
-      "noToolsFound": "No tools found. Try a different search term.",
-      "noToolsFoundSubgroup": "No tools found. Try a different search term or subgroup.",
-      "noCategoriesFound": "No categories found. Try a different search term.",
-      "noCategoriesFoundGroup": "No categories found. Try a different search term or group.",
-      "resultsFor": "{count, plural, one {# result} other {# results}} for \"{query}\"",
-      "resultsForInCategory": "{count, plural, one {# result} other {# results}} for \"{query}\" in {category}",
-      "noResultsForQuery": "No tools found matching \"{query}\". Try a different search term."
+      "browseByCategory": "按分類瀏覽",
+      "searchCategories": "搜尋分類...",
+      "searchToolsInCategory": "搜尋此分類中的工具...",
+      "all": "全部",
+      "tools": "{count} 個工具",
+      "toolsFound": "{count, plural, one {# 個工具} other {# 個工具}}已找到",
+      "categoriesFound": "{count, plural, one {# 個分類} other {# 個分類}}已找到",
+      "noToolsFound": "未找到工具。請嘗試不同的搜尋詞。",
+      "noToolsFoundSubgroup": "未找到工具。請嘗試不同的搜尋詞或子組。",
+      "noCategoriesFound": "未找到分類。請嘗試不同的搜尋詞。",
+      "noCategoriesFoundGroup": "未找到分類。請嘗試不同的搜尋詞或群組。",
+      "resultsFor": "{count, plural, one {# 個結果} other {# 個結果}}，查詢：\"{query}\"",
+      "resultsForInCategory": "{count, plural, one {# 個結果} other {# 個結果}}，查詢：\"{query}\" 在 {category}",
+      "noResultsForQuery": "未找到符合 \"{query}\" 的工具。請嘗試不同的搜尋詞。"
     },
     "popularTools": {
-      "topPicks": "Top Picks",
-      "featured": "Featured",
-      "popular": "Popular"
+      "topPicks": "精選推薦",
+      "featured": "精選",
+      "popular": "熱門"
     },
     "recentlyUsed": {
-      "title": "Recently Used",
-      "clear": "Clear"
+      "title": "最近使用",
+      "clear": "清除"
     },
     "relatedTools": {
-      "title": "Related Tools"
+      "title": "相關工具"
     },
     "documentation": {
-      "title": "Documentation",
-      "overview": "Overview",
-      "category": "Category:",
-      "privacyNote": "Runs entirely in your browser. No data is sent to our servers.",
-      "examples": "Examples",
-      "input": "Input",
-      "output": "Output",
-      "options": "Options",
-      "loadExample": "Load Example"
+      "title": "文件",
+      "overview": "概述",
+      "category": "分類：",
+      "privacyNote": "完全在您的瀏覽器中運行。不會將任何資料發送到我們的伺服器。",
+      "examples": "範例",
+      "input": "輸入",
+      "output": "輸出",
+      "options": "選項",
+      "loadExample": "載入範例"
     },
     "toolCard": {
-      "addFavorite": "Add to favorites",
-      "removeFavorite": "Remove from favorites"
+      "addFavorite": "加入收藏",
+      "removeFavorite": "移除收藏"
     }
   },
   "editor": {
@@ -262,14 +262,14 @@
     "about": {
       "metadata": {
         "title": "關於",
-        "description": "[REVIEW] 了解 utils.live - 我們致力於讓開發者工具易用、快速且尊重隱私。",
-        "ogTitle": "[REVIEW] 關於 | utils.live"
+        "description": "了解 utils.live - 我們致力於提供易於使用、快速、隱私友善的開發者工具。",
+        "ogTitle": "關於 | utils.live"
       },
       "hero": {
         "heading": "尊重你的時間的開發者工具",
         "headingPrefix": "尊重你的時間的",
         "gradientText": "開發者工具",
-        "description": "[REVIEW] utils.live 源自對緩慢、充滿廣告且侵犯隱私的線上工具的不滿。我們打造了自己想使用的工具：快速、免費且尊重隱私的實用程式。"
+        "description": "utils.live 源於對緩慢、充滿廣告和侵犯隱私的線上工具的不滿。我們打造了自己想使用的工具：快速、免費且尊重隱私的實用程式。"
       },
       "stats": {
         "developerTools": "開發者工具",
@@ -298,22 +298,22 @@
       },
       "mission": {
         "heading": "我們的使命",
-        "description": "我們相信開發者工具應該對每個人開放，無論預算或技術專業程度如何。[REVIEW] utils.live 提供專業級的公用程式，沒有臃腫、追蹤或付費牆。我們的目標是幫助你專注於重要的事：構建優質軟體。"
+        "description": "我們相信開發者工具應該對所有人開放，無論預算或技術水平如何。utils.live 提供專業級的實用程式，不含膨脹功能、追蹤或付費牆。我們的目標是幫助你專注於重要的事：構建優秀的軟體。"
       },
       "team": {
         "heading": "用心打造",
         "headingPrefix": "用心",
         "gradientText": "打造",
-        "description": "[REVIEW] utils.live 由一群充滿熱情的開發者維護，他們每天都使用這些工具。我們不斷新增工具並根據社群意見改進現有工具。",
+        "description": "utils.live 由一支熱情的開發者小團隊維護，他們每天都使用這些工具。我們持續根據社群回饋新增工具並改進現有功能。",
         "feedbackWelcome": "歡迎回饋與建議"
       }
     },
     "contact": {
       "metadata": {
         "title": "聯絡",
-        "description": "與 [REVIEW] utils.live 團隊聯絡。我們很樂意聽到你關於功能、錯誤或合作的想法。",
-        "ogTitle": "聯絡 | [REVIEW] utils.live",
-        "ogDescription": "與 [REVIEW] utils.live 團隊聯絡。我們很樂意聽到你的想法。"
+        "description": "聯絡 utils.live 團隊。我們期待聽到你對功能、錯誤或合作的建議。",
+        "ogTitle": "聯絡 | utils.live",
+        "ogDescription": "聯絡 utils.live 團隊。我們期待聽到你的意見。"
       },
       "hero": {
         "heading": "聯絡我們",
@@ -365,7 +365,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "[REVIEW] 開發工具部落格 | utils.live",
+      "title": "開發者工具部落格 | utils.live",
       "description": "了解開發工具概念 — Base64、JWT、正規表達式、UUID、雜湊等。包含實用指南和即時範例。",
       "postNotFound": "找不到文章"
     },
@@ -379,7 +379,7 @@
       "backToArticles": "返回所有文章"
     },
     "cta": {
-      "heading": "[REVIEW] 在 utils.live 上試試",
+      "heading": "在 utils.live 上試試",
       "description": "免費的瀏覽器工具 — 無需註冊，您的資料不會離開您的裝置。"
     }
   },
@@ -418,32 +418,32 @@
   },
   "metadata": {
     "home": {
-      "title": "[REVIEW] utils.live | 免費開發者工具和公用程式",
+      "title": "utils.live | 免費開發者工具及實用程式",
       "description": "{toolCountLabel} 個免費開發者工具合集。JSON 格式化工具、編碼器、轉換器、雜湊生成器等。快速、免費且隱私優先。"
     },
     "layout": {
-      "title": "[REVIEW] utils.live | 開發者公用程式平台",
+      "title": "utils.live | 開發者實用程式平台",
       "titleTemplate": "%s | utils.live",
       "description": "{toolCountLabel} 個開發者工具合集。JSON 格式化工具、編碼器、轉換器等。免費且隱私優先。",
-      "ogTitle": "[REVIEW] utils.live | 開發者公用程式平台",
-      "ogAlt": "[REVIEW] utils.live - 免費開發者工具",
+      "ogTitle": "utils.live | 開發者實用程式平台",
+      "ogAlt": "utils.live - 免費開發者工具",
       "skipToMain": "跳至主要內容"
     },
     "tools": {
       "title": "探索工具",
       "description": "瀏覽 {toolCountLabel} 個免費開發者工具。JSON 格式化工具、編碼器、轉換器、雜湊生成器等。",
-      "ogTitle": "[REVIEW] 探索工具 | utils.live"
+      "ogTitle": "探索工具 | utils.live"
     },
     "about": {
       "title": "關於",
-      "ogTitle": "[REVIEW] 關於 | utils.live"
+      "ogTitle": "關於 | utils.live"
     },
     "contact": {
       "title": "聯絡",
-      "ogTitle": "[REVIEW] 聯絡 | utils.live"
+      "ogTitle": "聯絡 | utils.live"
     },
     "blog": {
-      "title": "[REVIEW] 開發者工具部落格 | utils.live"
+      "title": "開發者工具部落格 | utils.live"
     }
   },
   "footer": {
@@ -466,7 +466,7 @@
     "openMenu": "開啟選單",
     "searchLabel": "搜尋工具",
     "searchPlaceholder": "搜尋工具...",
-    "title": "[REVIEW] utils.live"
+    "title": "utils.live"
   },
   "forms": {
     "fileUpload": {
@@ -3489,140 +3489,140 @@
   },
   "categoryMeta": {
     "json": {
-      "name": "JSON Tools",
-      "description": "Free online JSON tools to format, validate, compare, and transform JSON data. Pretty print, minify, convert to YAML/CSV/XML, and more — all in your browser."
+      "name": "JSON 工具",
+      "description": "免費線上 JSON 工具，用於格式化、驗證、比較和轉換 JSON 資料。完美列印、縮小化、轉換為 YAML/CSV/XML 等功能 — 全部在瀏覽器中完成。"
     },
     "encoding": {
-      "name": "Encoding & Decoding",
-      "description": "Free online encoding and decoding tools for Base64, URL encoding, Unicode, HTML entities, and more. Convert between formats instantly in your browser."
+      "name": "編碼與解碼",
+      "description": "免費線上編碼和解碼工具，支援 Base64、URL 編碼、Unicode、HTML 實體等。在瀏覽器中即時轉換格式。"
     },
     "text": {
-      "name": "Text Tools",
-      "description": "Free online text tools to transform, analyze, and manipulate text strings. Count words, change case, find and replace, sort lines, and more."
+      "name": "文字工具",
+      "description": "免費線上文字工具，用於轉換、分析和操作文字字串。計算字數、變更大小寫、尋找和取代、排序行等功能。"
     },
     "crypto": {
-      "name": "Cryptography",
-      "description": "Free online cryptography tools for hash generation, encryption, decryption, and security analysis. MD5, SHA-256, AES, HMAC, and more — all client-side."
+      "name": "密碼學",
+      "description": "免費線上密碼學工具，用於雜湊生成、加密、解密和安全分析。MD5、SHA-256、AES、HMAC 等 — 全部在用戶端完成。"
     },
     "jwt": {
-      "name": "JWT & Tokens",
-      "description": "Free online JWT tools to decode, verify, and debug JSON Web Tokens. Inspect headers, payloads, and signatures without sending data to any server."
+      "name": "JWT 與令牌",
+      "description": "免費線上 JWT 工具，用於解碼、驗證和調試 JSON Web Token。檢視標題、承載和簽名，無需將資料傳送至任何伺服器。"
     },
     "regex": {
-      "name": "Regular Expressions",
-      "description": "Free online regular expression tools to build, test, and debug regex patterns. Live matching, syntax highlighting, and cheat sheets for all major flavors."
+      "name": "正規表示式",
+      "description": "免費線上正規表示式工具，用於建立、測試和調試 regex 樣式。即時配對、語法醒目顯示和所有主要風格的備忘單。"
     },
     "color": {
-      "name": "Color Tools",
-      "description": "Free online color tools to convert, pick, and generate color palettes. HEX, RGB, HSL, OKLCH conversions, contrast checkers, and palette generators."
+      "name": "色彩工具",
+      "description": "免費線上色彩工具，用於轉換、選擇和生成色彩調色板。HEX、RGB、HSL、OKLCH 轉換、對比度檢查器和調色板生成器。"
     },
     "datetime": {
-      "name": "Date & Time",
-      "description": "Free online date and time tools to convert, format, and calculate dates. Unix timestamps, time zones, duration calculators, and date formatters."
+      "name": "日期與時間",
+      "description": "免費線上日期和時間工具，用於轉換、格式化和計算日期。Unix 時間戳、時區、持續時間計算器和日期格式化工具。"
     },
     "identifiers": {
-      "name": "Identifiers & IDs",
-      "description": "Free online ID generators for UUIDs, CUIDs, NanoIDs, ULIDs, and more. Generate unique identifiers instantly — no server needed, all in your browser."
+      "name": "識別碼與 ID",
+      "description": "免費線上 ID 生成器，支援 UUID、CUID、NanoID、ULID 等。即時生成唯一識別碼 — 不需要伺服器，全部在瀏覽器中完成。"
     },
     "diagram": {
-      "name": "Diagrams & Visual",
-      "description": "Free online diagram tools to generate and render flowcharts, sequence diagrams, and charts. Mermaid, PlantUML, and more — visualize directly in your browser."
+      "name": "圖表與視覺",
+      "description": "免費線上圖表工具，用於生成和渲染流程圖、序列圖和圖表。Mermaid、PlantUML 等 — 直接在瀏覽器中視覺化。"
     },
     "html": {
-      "name": "HTML Tools",
-      "description": "Free online HTML tools to parse, format, minify, and convert HTML. Pretty print, strip tags, encode entities, and convert to Markdown or JSX."
+      "name": "HTML 工具",
+      "description": "免費線上 HTML 工具，用於解析、格式化、縮小和轉換 HTML。美化輸出、移除標籤、編碼實體，以及轉換為 Markdown 或 JSX。"
     },
     "css": {
-      "name": "CSS Tools",
-      "description": "Free online CSS tools to format, minify, and optimize stylesheets. Beautify CSS, convert units, generate gradients, and clean up your styles."
+      "name": "CSS 工具",
+      "description": "免費線上 CSS 工具，用於格式化、縮小和優化樣式表。美化 CSS、轉換單位、生成漸層，以及清理樣式。"
     },
     "code": {
-      "name": "Code Formatting",
-      "description": "Free online code formatting tools to beautify and format code in JavaScript, TypeScript, Python, SQL, and more. Consistent formatting in your browser."
+      "name": "程式碼格式化",
+      "description": "免費線上程式碼格式化工具，用於美化和格式化 JavaScript、TypeScript、Python、SQL 等程式碼。在瀏覽器中進行一致的格式化。"
     },
     "yaml": {
-      "name": "YAML Tools",
-      "description": "Free online YAML tools to format, validate, and convert YAML files. Pretty print, convert to JSON/TOML, and check syntax — all client-side."
+      "name": "YAML 工具",
+      "description": "免費線上 YAML 工具，用於格式化、驗證和轉換 YAML 文件。美化輸出、轉換為 JSON/TOML，以及檢查語法 — 全部在用戶端處理。"
     },
     "xml": {
-      "name": "XML Tools",
-      "description": "Free online XML tools to parse, format, and transform XML documents. Pretty print, minify, validate, and convert to JSON — all in your browser."
+      "name": "XML 工具",
+      "description": "免費線上 XML 工具，用於解析、格式化和轉換 XML 文件。美化輸出、縮小、驗證，以及轉換為 JSON — 全部在瀏覽器中進行。"
     },
     "csv": {
-      "name": "CSV & TSV Tools",
-      "description": "Free online CSV and TSV tools to parse, convert, and manipulate tabular data. Convert to JSON/XML, sort columns, and filter rows in your browser."
+      "name": "CSV & TSV 工具",
+      "description": "免費線上 CSV 和 TSV 工具，用於解析、轉換和操作表格資料。轉換為 JSON/XML、排序列、以及在瀏覽器中篩選列。"
     },
     "markdown": {
-      "name": "Markdown Tools",
-      "description": "Free online Markdown tools to preview, convert, and enhance Markdown documents. Live preview, convert to HTML, generate tables, and format text."
+      "name": "Markdown 工具",
+      "description": "免費線上 Markdown 工具，用於預覽、轉換和增強 Markdown 文件。即時預覽、轉換為 HTML、生成表格，以及格式化文字。"
     },
     "math": {
-      "name": "Numbers & Math",
-      "description": "Free online math and number tools for calculations, conversions, and number formatting. Base conversion, percentage calculator, unit converter, and more."
+      "name": "數字與數學",
+      "description": "免費線上數學和數字工具，用於計算、轉換和數字格式化。進制轉換、百分比計算機、單位轉換器等。"
     },
     "image": {
-      "name": "Image Tools",
-      "description": "Free online image tools to convert, resize, and optimize images. Change formats, compress files, crop, and adjust — all processed locally in your browser."
+      "name": "圖片工具",
+      "description": "免費線上圖片工具，用於轉換、調整大小和最佳化圖片。變更格式、壓縮文件、裁剪和調整 — 全部在瀏覽器本地處理。"
     },
     "svg": {
-      "name": "SVG Tools",
-      "description": "Free online SVG tools to optimize, convert, and manipulate SVG files. Minify, prettify, convert to PNG/JSX, and clean up SVG code in your browser."
+      "name": "SVG 工具",
+      "description": "免費線上 SVG 工具，用於最佳化、轉換和操作 SVG 文件。縮小、美化、轉換為 PNG/JSX，以及在瀏覽器中清理 SVG 程式碼。"
     },
     "web": {
-      "name": "Web & SEO",
-      "description": "Free online web and SEO tools for URL parsing, meta tag generation, Open Graph previews, and web utilities. Analyze and optimize your web presence."
+      "name": "網頁與 SEO",
+      "description": "免費線上網頁和 SEO 工具，用於 URL 解析、中繼標籤生成、Open Graph 預覽和網頁工具。分析並最佳化您的網路形象。"
     },
     "api": {
-      "name": "API & OpenAPI",
-      "description": "Free online API and OpenAPI tools for schema validation, mock data generation, and API testing utilities. Work with REST APIs directly in your browser."
+      "name": "API 與 OpenAPI",
+      "description": "免費線上 API 和 OpenAPI 工具，用於結構描述驗證、模擬資料生成和 API 測試工具。直接在瀏覽器中使用 REST API。"
     },
     "sql": {
-      "name": "SQL & Database",
-      "description": "Free online SQL and database tools to format, validate, and convert SQL queries. Pretty print, minify, and convert between SQL dialects."
+      "name": "SQL 與資料庫",
+      "description": "免費線上 SQL 和資料庫工具，用於格式化、驗證和轉換 SQL 查詢。美化列印、縮小化和 SQL 方言轉換。"
     },
     "network": {
-      "name": "Network Tools",
-      "description": "Free online network tools for DNS lookup, IP address utilities, and connectivity diagnostics. Analyze network data and convert formats client-side."
+      "name": "網路工具",
+      "description": "免費線上網路工具，用於 DNS 查詢、IP 位址工具和連接診斷。分析網路資料並在用戶端轉換格式。"
     },
     "validation": {
-      "name": "Validation Tools",
-      "description": "Free online validation tools to check formats, data structures, and syntax. Validate JSON, YAML, XML, emails, URLs, and more — instantly in your browser."
+      "name": "驗證工具",
+      "description": "免費線上驗證工具，用於檢查格式、資料結構和語法。驗證 JSON、YAML、XML、電子郵件、URL 等 — 在瀏覽器中即時驗證。"
     },
     "data": {
-      "name": "Data Formats",
-      "description": "Free online data format tools to convert and view INI, NDJSON, HJSON, Avro, Protobuf, MessagePack, and other data serialization formats."
+      "name": "資料格式",
+      "description": "免費線上資料格式工具，用於轉換和檢視 INI、NDJSON、HJSON、Avro、Protobuf、MessagePack 和其他資料序列化格式。"
     },
     "toml": {
-      "name": "TOML Tools",
-      "description": "Free online TOML tools to format, validate, and convert TOML configuration files. Pretty print, convert to JSON/YAML, and check syntax instantly."
+      "name": "TOML 工具",
+      "description": "免費線上 TOML 工具，用於格式化、驗證和轉換 TOML 設定檔。美化列印、轉換為 JSON/YAML，並即時檢查語法。"
     },
     "git": {
-      "name": "Git & Version Control",
-      "description": "Free online Git and version control tools for branch naming, commit message formatting, .gitignore generation, and Git command reference."
+      "name": "Git 與版本控制",
+      "description": "免費線上 Git 和版本控制工具，用於分支命名、提交訊息格式化、.gitignore 產生和 Git 指令參考。"
     },
     "devops": {
-      "name": "DevOps & Infrastructure",
-      "description": "Free online DevOps tools for Docker, Kubernetes, Helm, and container configuration. Generate Dockerfiles, validate K8s manifests, and more."
+      "name": "DevOps 與基礎設施",
+      "description": "免費線上 DevOps 工具，用於 Docker、Kubernetes、Helm 和容器設定。產生 Dockerfile、驗證 K8s 資訊清單等。"
     },
     "feeds": {
-      "name": "Feeds & Structured Data",
-      "description": "Free online feed and structured data tools for RSS, Atom, JSON Feed, and Schema.org. Generate, validate, and convert web feeds in your browser."
+      "name": "動態消息與結構化資料",
+      "description": "免費線上動態消息和結構化資料工具，用於 RSS、Atom、JSON Feed 和 Schema.org。在瀏覽器中產生、驗證和轉換網路動態消息。"
     },
     "communication": {
-      "name": "Communication",
-      "description": "Free online communication tools for email formatting, messaging templates, and communication format conversion. Generate and validate email content."
+      "name": "通訊",
+      "description": "免費線上通訊工具，用於電子郵件格式化、訊息範本和通訊格式轉換。產生和驗證電子郵件內容。"
     },
     "misc": {
-      "name": "Miscellaneous",
-      "description": "Free online miscellaneous developer tools for QR codes, UUIDs, Lorem Ipsum text, and other handy utilities. Quick tools that run in your browser."
+      "name": "其他工具",
+      "description": "免費線上雜項開發人員工具，用於 QR 碼、UUID、Lorem Ipsum 文本和其他實用工具。在瀏覽器中快速執行的工具。"
     },
     "legal": {
-      "name": "Legal & Compliance",
-      "description": "Free online legal document generators for privacy policies, terms of service, GDPR statements, and compliance documents. Generate legal text instantly."
+      "name": "法律與合規",
+      "description": "免費線上法律文件產生器，用於隱私權政策、服務條款、GDPR 聲明和合規文件。即時產生法律文本。"
     },
     "reference": {
-      "name": "Reference & Lookup",
-      "description": "Free online reference and lookup tools for country codes, currency codes, language codes, MIME types, and other developer reference tables."
+      "name": "參考與查詢",
+      "description": "免費線上參考和查詢工具，用於國家代碼、貨幣代碼、語言代碼、MIME 類型和其他開發人員參考表。"
     }
   }
 }

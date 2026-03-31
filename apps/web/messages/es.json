@@ -44,8 +44,8 @@
       "system": "Sistema"
     },
     "brand": {
-      "name": "[REVIEW] utils.live",
-      "homeAriaLabel": "[REVIEW] Inicio de utils.live"
+      "name": "utils.live",
+      "homeAriaLabel": "inicio de utils.live"
     }
   },
   "home": {
@@ -57,8 +57,8 @@
       "searchAriaLabel": "Buscar herramientas para desarrolladores"
     },
     "features": {
-      "eyebrow": "[REVIEW] Por qué utils.live",
-      "heading": "[REVIEW] Por qué los desarrolladores eligen utils.live",
+      "eyebrow": "Por qué utils.live",
+      "heading": "Por qué los desarrolladores eligen utils.live",
       "instantResults": {
         "title": "Resultados Instantáneos",
         "description": "Las herramientas del lado del cliente se ejecutan en tu navegador sin latencia. Sin esperas, sin viajes de ida y vuelta al servidor."
@@ -100,7 +100,7 @@
       "outputLabel": "Salida"
     },
     "metadata": {
-      "title": "[REVIEW] utils.live | Herramientas y Utilidades Gratis para Desarrolladores",
+      "title": "utils.live | Herramientas y Utilidades Gratuitas para Desarrolladores",
       "description": "{toolCountLabel} herramientas gratuitas para desarrolladores en un solo lugar. Formateadores JSON, codificadores, convertidores, generadores de hash y más. Rápido, gratis y enfocado en privacidad."
     }
   },
@@ -162,52 +162,52 @@
       "tools": {
         "title": "Explorar Herramientas",
         "description": "Explora {toolCountLabel} herramientas de desarrollo gratuitas. Formateadores JSON, codificadores, convertidores, generadores de hash y más.",
-        "ogTitle": "[REVIEW] Explorar Herramientas | utils.live",
+        "ogTitle": "Explorar Herramientas | utils.live",
         "ogDescription": "Explora {toolCountLabel} herramientas de desarrollo gratuitas. Formateadores JSON, codificadores, convertidores y más."
       }
     },
     "browse": {
-      "browseByCategory": "Browse by Category",
-      "searchCategories": "Search categories...",
-      "searchToolsInCategory": "Search tools in this category...",
-      "all": "All",
-      "tools": "{count} tools",
-      "toolsFound": "{count, plural, one {# tool} other {# tools}} found",
-      "categoriesFound": "{count, plural, one {# category} other {# categories}} found",
-      "noToolsFound": "No tools found. Try a different search term.",
-      "noToolsFoundSubgroup": "No tools found. Try a different search term or subgroup.",
-      "noCategoriesFound": "No categories found. Try a different search term.",
-      "noCategoriesFoundGroup": "No categories found. Try a different search term or group.",
-      "resultsFor": "{count, plural, one {# result} other {# results}} for \"{query}\"",
-      "resultsForInCategory": "{count, plural, one {# result} other {# results}} for \"{query}\" in {category}",
-      "noResultsForQuery": "No tools found matching \"{query}\". Try a different search term."
+      "browseByCategory": "Explorar por categoría",
+      "searchCategories": "Buscar categorías...",
+      "searchToolsInCategory": "Buscar herramientas en esta categoría...",
+      "all": "Todas",
+      "tools": "{count} herramientas",
+      "toolsFound": "{count, plural, one {# herramienta} other {# herramientas}} encontradas",
+      "categoriesFound": "{count, plural, one {# categoría} other {# categorías}} encontradas",
+      "noToolsFound": "No se encontraron herramientas. Intenta con un término de búsqueda diferente.",
+      "noToolsFoundSubgroup": "No se encontraron herramientas. Intenta con un término de búsqueda o subgrupo diferente.",
+      "noCategoriesFound": "No se encontraron categorías. Intenta con un término de búsqueda diferente.",
+      "noCategoriesFoundGroup": "No se encontraron categorías. Intenta con un término de búsqueda o grupo diferente.",
+      "resultsFor": "{count, plural, one {# resultado} other {# resultados}} para \"{query}\"",
+      "resultsForInCategory": "{count, plural, one {# resultado} other {# resultados}} para \"{query}\" en {category}",
+      "noResultsForQuery": "No se encontraron herramientas que coincidan con \"{query}\". Intenta con un término de búsqueda diferente."
     },
     "popularTools": {
-      "topPicks": "Top Picks",
-      "featured": "Featured",
+      "topPicks": "Principales selecciones",
+      "featured": "Destacadas",
       "popular": "Popular"
     },
     "recentlyUsed": {
-      "title": "Recently Used",
-      "clear": "Clear"
+      "title": "Usado recientemente",
+      "clear": "Limpiar"
     },
     "relatedTools": {
-      "title": "Related Tools"
+      "title": "Herramientas relacionadas"
     },
     "documentation": {
-      "title": "Documentation",
-      "overview": "Overview",
-      "category": "Category:",
-      "privacyNote": "Runs entirely in your browser. No data is sent to our servers.",
-      "examples": "Examples",
-      "input": "Input",
-      "output": "Output",
-      "options": "Options",
-      "loadExample": "Load Example"
+      "title": "Documentación",
+      "overview": "Descripción general",
+      "category": "Categoría:",
+      "privacyNote": "Se ejecuta completamente en tu navegador. No se envía ningún dato a nuestros servidores.",
+      "examples": "Ejemplos",
+      "input": "Entrada",
+      "output": "Salida",
+      "options": "Opciones",
+      "loadExample": "Cargar ejemplo"
     },
     "toolCard": {
-      "addFavorite": "Add to favorites",
-      "removeFavorite": "Remove from favorites"
+      "addFavorite": "Agregar a favoritos",
+      "removeFavorite": "Quitar de favoritos"
     }
   },
   "editor": {
@@ -262,14 +262,14 @@
     "about": {
       "metadata": {
         "title": "Acerca de",
-        "description": "[REVIEW] Conoce utils.live - nuestra misión es hacer que las herramientas para desarrolladores sean accesibles, rápidas y enfocadas en privacidad.",
-        "ogTitle": "[REVIEW] Acerca de | utils.live"
+        "description": "Conoce utils.live - nuestra misión de hacer que las herramientas de desarrolladores sean accesibles, rápidas y enfocadas en privacidad.",
+        "ogTitle": "Acerca de | utils.live"
       },
       "hero": {
         "heading": "Herramientas para desarrolladores que respetan tu tiempo",
         "headingPrefix": "Herramientas para desarrolladores que",
         "gradientText": "respetan tu tiempo",
-        "description": "[REVIEW] utils.live nació de la frustración con herramientas en línea lentas, llenas de anuncios e invasivas para la privacidad. Construimos lo que queremos usar: utilidades rápidas, gratuitas y respetuosas."
+        "description": "utils.live nació de la frustración con herramientas en línea lentas, llenas de anuncios e invasivas de privacidad. Construimos lo que queríamos usar: utilidades rápidas, gratuitas y respetuosas."
       },
       "stats": {
         "developerTools": "Herramientas para Desarrolladores",
@@ -298,22 +298,22 @@
       },
       "mission": {
         "heading": "Nuestra Misión",
-        "description": "[REVIEW] Creemos que las herramientas para desarrolladores deben ser accesibles para todos, independientemente del presupuesto o experiencia técnica. utils.live proporciona utilidades de nivel profesional sin excesos, seguimiento ni muros de pago. Nuestro objetivo es ayudarte a enfocarte en lo que importa: construir software excelente."
+        "description": "Creemos que las herramientas de desarrolladores deben ser accesibles para todos, independientemente del presupuesto o experiencia técnica. utils.live proporciona utilidades de nivel profesional sin bloatware, rastreo o muros de pago. Nuestro objetivo es ayudarte a enfocarte en lo que importa: construir excelente software."
       },
       "team": {
         "heading": "Construido con cuidado",
         "headingPrefix": "Construido con",
         "gradientText": "cuidado",
-        "description": "[REVIEW] utils.live es mantenido por un pequeño equipo de desarrolladores apasionados que usan estas herramientas diariamente. Siempre estamos añadiendo nuevas herramientas y mejorando las existentes basándonos en los comentarios de la comunidad.",
+        "description": "utils.live es mantenida por un pequeño equipo de desarrolladores apasionados que usan estas herramientas a diario. Siempre estamos añadiendo nuevas herramientas y mejorando las existentes según los comentarios de la comunidad.",
         "feedbackWelcome": "Comentarios y sugerencias bienvenidos"
       }
     },
     "contact": {
       "metadata": {
         "title": "Contacto",
-        "description": "[REVIEW] Ponte en contacto con el equipo de utils.live. Nos encantaría saber de ti sobre funcionalidades, errores o asociaciones.",
-        "ogTitle": "[REVIEW] Contacto | utils.live",
-        "ogDescription": "[REVIEW] Ponte en contacto con el equipo de utils.live. Nos encantaría saber de ti."
+        "description": "Ponte en contacto con el equipo de utils.live. Nos encantaría saber de ti sobre características, errores o asociaciones.",
+        "ogTitle": "Contacto | utils.live",
+        "ogDescription": "Ponte en contacto con el equipo de utils.live. Nos encantaría saber de ti."
       },
       "hero": {
         "heading": "Ponte en Contacto",
@@ -365,7 +365,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "[REVIEW] Blog de herramientas para desarrolladores | utils.live",
+      "title": "Blog de Herramientas para Desarrolladores | utils.live",
       "description": "Aprende sobre conceptos de herramientas para desarrolladores — Base64, JWTs, regex, UUIDs, hashing y más. Guías prácticas con ejemplos en vivo.",
       "postNotFound": "Artículo no encontrado"
     },
@@ -379,7 +379,7 @@
       "backToArticles": "Volver a todos los artículos"
     },
     "cta": {
-      "heading": "[REVIEW] Pruébalo en utils.live",
+      "heading": "Pruébalo en utils.live",
       "description": "Herramientas gratuitas basadas en navegador — sin registro requerido, tus datos nunca salen de tu dispositivo."
     }
   },
@@ -418,32 +418,32 @@
   },
   "metadata": {
     "home": {
-      "title": "[REVIEW] utils.live | Herramientas y Utilidades Gratuitas para Desarrolladores",
+      "title": "utils.live | Herramientas y Utilidades Gratuitas para Desarrolladores",
       "description": "{toolCountLabel} herramientas gratuitas para desarrolladores en un solo lugar. Formateadores JSON, codificadores, convertidores, generadores de hash y más. Rápido, gratuito y enfocado en privacidad."
     },
     "layout": {
-      "title": "[REVIEW] utils.live | Plataforma de Utilidades para Desarrolladores",
+      "title": "utils.live | Plataforma de Utilidades para Desarrolladores",
       "titleTemplate": "%s | utils.live",
       "description": "{toolCountLabel} herramientas para desarrolladores en un solo lugar. Formateadores JSON, codificadores, convertidores y más. Gratuito y enfocado en privacidad.",
-      "ogTitle": "[REVIEW] utils.live | Plataforma de Utilidades para Desarrolladores",
-      "ogAlt": "[REVIEW] utils.live - Herramientas Gratuitas para Desarrolladores",
+      "ogTitle": "utils.live | Plataforma de Utilidades para Desarrolladores",
+      "ogAlt": "utils.live - Herramientas Gratuitas para Desarrolladores",
       "skipToMain": "Ir al contenido principal"
     },
     "tools": {
       "title": "Explorar Herramientas",
       "description": "Explora {toolCountLabel} herramientas gratuitas para desarrolladores. Formateadores JSON, codificadores, convertidores, generadores de hash y más.",
-      "ogTitle": "[REVIEW] Explorar Herramientas | utils.live"
+      "ogTitle": "Explorar Herramientas | utils.live"
     },
     "about": {
       "title": "Acerca de",
-      "ogTitle": "[REVIEW] Acerca de | utils.live"
+      "ogTitle": "Acerca de | utils.live"
     },
     "contact": {
       "title": "Contacto",
-      "ogTitle": "[REVIEW] Contacto | utils.live"
+      "ogTitle": "Contacto | utils.live"
     },
     "blog": {
-      "title": "[REVIEW] Blog de Herramientas para Desarrolladores | utils.live"
+      "title": "Blog de Herramientas para Desarrolladores | utils.live"
     }
   },
   "footer": {
@@ -466,7 +466,7 @@
     "openMenu": "Abrir menú",
     "searchLabel": "Buscar herramientas",
     "searchPlaceholder": "Buscar herramientas...",
-    "title": "[REVIEW] utils.live"
+    "title": "utils.live"
   },
   "forms": {
     "fileUpload": {
@@ -525,15 +525,15 @@
     "json": {
       "formatter": {
         "name": "Formateador JSON",
-        "description": "[REVIEW] Formateador JSON en línea gratuito — embellecer y formatear JSON con indentación configurable instantáneamente en tu navegador. No se almacena ningún dato. Soporta indent de 0-8 espacios y ordenamiento de claves opcional."
+        "description": "Formateador JSON gratuito en línea — embellece y formatea JSON con sangría configurable instantáneamente en tu navegador. No se almacenan datos. Admite sangría de 0-8 espacios y ordenamiento opcional de claves."
       },
       "validator": {
         "name": "Validador JSON",
-        "description": "[REVIEW] Validador JSON en línea gratuito — verificar sintaxis JSON e obtener información detallada de errores instantáneamente en tu navegador. No se almacena ningún dato. Reporta posición de línea/columna del error y tipo JSON detectado."
+        "description": "Validador JSON gratuito en línea — verifica la sintaxis JSON y obtén información detallada de errores al instante en tu navegador. No se almacenan datos. Reporta la posición de línea/columna del error y el tipo JSON detectado."
       },
       "minify": {
         "name": "Minificador JSON",
-        "description": "[REVIEW] Minificador JSON en línea gratuito — comprimir JSON eliminando todos los espacios en blanco y formateo instantáneamente en tu navegador. No se almacena ningún dato. Muestra tamaño original vs minificado y porcentaje de reducción."
+        "description": "Minificador JSON gratuito en línea — comprime JSON eliminando todos los espacios en blanco y el formato al instante en tu navegador. No se almacenan datos. Muestra el tamaño original vs minificado y el porcentaje de reducción."
       },
       "path-query": {
         "name": "Consulta de Ruta JSON",
@@ -3489,140 +3489,140 @@
   },
   "categoryMeta": {
     "json": {
-      "name": "JSON Tools",
-      "description": "Free online JSON tools to format, validate, compare, and transform JSON data. Pretty print, minify, convert to YAML/CSV/XML, and more — all in your browser."
+      "name": "Herramientas JSON",
+      "description": "Herramientas JSON en línea gratuitas para formatear, validar, comparar y transformar datos JSON. Pretty print, minify, convertir a YAML/CSV/XML y más — todo en tu navegador."
     },
     "encoding": {
-      "name": "Encoding & Decoding",
-      "description": "Free online encoding and decoding tools for Base64, URL encoding, Unicode, HTML entities, and more. Convert between formats instantly in your browser."
+      "name": "Codificación y decodificación",
+      "description": "Herramientas gratuitas de codificación y decodificación en línea para Base64, codificación de URL, Unicode, entidades HTML y más. Convierte entre formatos al instante en tu navegador."
     },
     "text": {
-      "name": "Text Tools",
-      "description": "Free online text tools to transform, analyze, and manipulate text strings. Count words, change case, find and replace, sort lines, and more."
+      "name": "Herramientas de texto",
+      "description": "Herramientas de texto en línea gratuitas para transformar, analizar y manipular cadenas de texto. Contar palabras, cambiar mayúsculas/minúsculas, buscar y reemplazar, ordenar líneas y más."
     },
     "crypto": {
-      "name": "Cryptography",
-      "description": "Free online cryptography tools for hash generation, encryption, decryption, and security analysis. MD5, SHA-256, AES, HMAC, and more — all client-side."
+      "name": "Criptografía",
+      "description": "Herramientas criptográficas en línea gratuitas para generación de hashes, encriptación, desencriptación y análisis de seguridad. MD5, SHA-256, AES, HMAC y más — todo del lado del cliente."
     },
     "jwt": {
-      "name": "JWT & Tokens",
-      "description": "Free online JWT tools to decode, verify, and debug JSON Web Tokens. Inspect headers, payloads, and signatures without sending data to any server."
+      "name": "JWT y tokens",
+      "description": "Herramientas JWT en línea gratuitas para decodificar, verificar y depurar JSON Web Tokens. Inspecciona headers, payloads y firmas sin enviar datos a ningún servidor."
     },
     "regex": {
-      "name": "Regular Expressions",
-      "description": "Free online regular expression tools to build, test, and debug regex patterns. Live matching, syntax highlighting, and cheat sheets for all major flavors."
+      "name": "Expresiones regulares",
+      "description": "Herramientas de expresiones regulares en línea gratuitas para construir, probar y depurar patrones regex. Coincidencia en vivo, resaltado de sintaxis y hojas de trucos para todos los sabores principales."
     },
     "color": {
-      "name": "Color Tools",
-      "description": "Free online color tools to convert, pick, and generate color palettes. HEX, RGB, HSL, OKLCH conversions, contrast checkers, and palette generators."
+      "name": "Herramientas de color",
+      "description": "Herramientas de color en línea gratuitas para convertir, seleccionar y generar paletas de colores. Conversiones HEX, RGB, HSL, OKLCH, verificadores de contraste y generadores de paletas."
     },
     "datetime": {
-      "name": "Date & Time",
-      "description": "Free online date and time tools to convert, format, and calculate dates. Unix timestamps, time zones, duration calculators, and date formatters."
+      "name": "Fecha y hora",
+      "description": "Herramientas de fecha y hora en línea gratuitas para convertir, formatear y calcular fechas. Timestamps Unix, zonas horarias, calculadores de duración y formateadores de fechas."
     },
     "identifiers": {
-      "name": "Identifiers & IDs",
-      "description": "Free online ID generators for UUIDs, CUIDs, NanoIDs, ULIDs, and more. Generate unique identifiers instantly — no server needed, all in your browser."
+      "name": "Identificadores e IDs",
+      "description": "Generadores de ID en línea gratuitos para UUIDs, CUIDs, NanoIDs, ULIDs y más. Genera identificadores únicos al instante — sin servidor necesario, todo en tu navegador."
     },
     "diagram": {
-      "name": "Diagrams & Visual",
-      "description": "Free online diagram tools to generate and render flowcharts, sequence diagrams, and charts. Mermaid, PlantUML, and more — visualize directly in your browser."
+      "name": "Diagramas y visual",
+      "description": "Herramientas de diagrama en línea gratuitas para generar y renderizar diagramas de flujo, diagramas de secuencia y gráficos. Mermaid, PlantUML y más — visualiza directamente en tu navegador."
     },
     "html": {
-      "name": "HTML Tools",
-      "description": "Free online HTML tools to parse, format, minify, and convert HTML. Pretty print, strip tags, encode entities, and convert to Markdown or JSX."
+      "name": "Herramientas HTML",
+      "description": "Herramientas HTML en línea gratuitas para analizar, formatear, minificar y convertir HTML. Imprime con estilo, elimina etiquetas, codifica entidades y convierte a Markdown o JSX."
     },
     "css": {
-      "name": "CSS Tools",
-      "description": "Free online CSS tools to format, minify, and optimize stylesheets. Beautify CSS, convert units, generate gradients, and clean up your styles."
+      "name": "Herramientas CSS",
+      "description": "Herramientas CSS en línea gratuitas para formatear, minificar y optimizar hojas de estilo. Embelesa CSS, convierte unidades, genera degradados y limpia tus estilos."
     },
     "code": {
-      "name": "Code Formatting",
-      "description": "Free online code formatting tools to beautify and format code in JavaScript, TypeScript, Python, SQL, and more. Consistent formatting in your browser."
+      "name": "Formateo de Código",
+      "description": "Herramientas de formateo de código en línea gratuitas para embelesar y formatear código en JavaScript, TypeScript, Python, SQL y más. Formateo consistente en tu navegador."
     },
     "yaml": {
-      "name": "YAML Tools",
-      "description": "Free online YAML tools to format, validate, and convert YAML files. Pretty print, convert to JSON/TOML, and check syntax — all client-side."
+      "name": "Herramientas YAML",
+      "description": "Herramientas YAML en línea gratuitas para formatear, validar y convertir archivos YAML. Imprime con estilo, convierte a JSON/TOML y verifica la sintaxis — todo del lado del cliente."
     },
     "xml": {
-      "name": "XML Tools",
-      "description": "Free online XML tools to parse, format, and transform XML documents. Pretty print, minify, validate, and convert to JSON — all in your browser."
+      "name": "Herramientas XML",
+      "description": "Herramientas XML en línea gratuitas para analizar, formatear y transformar documentos XML. Imprime con estilo, minifica, valida y convierte a JSON — todo en tu navegador."
     },
     "csv": {
-      "name": "CSV & TSV Tools",
-      "description": "Free online CSV and TSV tools to parse, convert, and manipulate tabular data. Convert to JSON/XML, sort columns, and filter rows in your browser."
+      "name": "Herramientas CSV y TSV",
+      "description": "Herramientas CSV y TSV en línea gratuitas para analizar, convertir y manipular datos tabulares. Convierte a JSON/XML, ordena columnas y filtra filas en tu navegador."
     },
     "markdown": {
-      "name": "Markdown Tools",
-      "description": "Free online Markdown tools to preview, convert, and enhance Markdown documents. Live preview, convert to HTML, generate tables, and format text."
+      "name": "Herramientas Markdown",
+      "description": "Herramientas Markdown en línea gratuitas para previsualizar, convertir y mejorar documentos Markdown. Vista previa en vivo, convierte a HTML, genera tablas y formatea texto."
     },
     "math": {
-      "name": "Numbers & Math",
-      "description": "Free online math and number tools for calculations, conversions, and number formatting. Base conversion, percentage calculator, unit converter, and more."
+      "name": "Números y Matemáticas",
+      "description": "Herramientas de matemáticas y números en línea gratuitas para cálculos, conversiones y formateo de números. Conversión de base, calculadora de porcentajes, convertidor de unidades y más."
     },
     "image": {
-      "name": "Image Tools",
-      "description": "Free online image tools to convert, resize, and optimize images. Change formats, compress files, crop, and adjust — all processed locally in your browser."
+      "name": "Herramientas de Imagen",
+      "description": "Herramientas de imagen en línea gratuitas para convertir, redimensionar y optimizar imágenes. Cambia formatos, comprime archivos, recorta y ajusta — todo procesado localmente en tu navegador."
     },
     "svg": {
-      "name": "SVG Tools",
-      "description": "Free online SVG tools to optimize, convert, and manipulate SVG files. Minify, prettify, convert to PNG/JSX, and clean up SVG code in your browser."
+      "name": "Herramientas SVG",
+      "description": "Herramientas SVG en línea gratuitas para optimizar, convertir y manipular archivos SVG. Minifica, embelesa, convierte a PNG/JSX y limpia código SVG en tu navegador."
     },
     "web": {
-      "name": "Web & SEO",
-      "description": "Free online web and SEO tools for URL parsing, meta tag generation, Open Graph previews, and web utilities. Analyze and optimize your web presence."
+      "name": "Web y SEO",
+      "description": "Herramientas web y SEO en línea gratuitas para análisis de URLs, generación de etiquetas meta, vistas previas de Open Graph y utilidades web. Analiza y optimiza tu presencia web."
     },
     "api": {
-      "name": "API & OpenAPI",
-      "description": "Free online API and OpenAPI tools for schema validation, mock data generation, and API testing utilities. Work with REST APIs directly in your browser."
+      "name": "API y OpenAPI",
+      "description": "Herramientas API y OpenAPI en línea gratuitas para validación de esquemas, generación de datos simulados y utilidades de prueba de APIs. Trabaja con APIs REST directamente en tu navegador."
     },
     "sql": {
-      "name": "SQL & Database",
-      "description": "Free online SQL and database tools to format, validate, and convert SQL queries. Pretty print, minify, and convert between SQL dialects."
+      "name": "SQL y Base de Datos",
+      "description": "Herramientas gratuitas en línea de SQL y bases de datos para formatear, validar y convertir consultas SQL. Pretty print, minificar y convertir entre dialectos SQL."
     },
     "network": {
-      "name": "Network Tools",
-      "description": "Free online network tools for DNS lookup, IP address utilities, and connectivity diagnostics. Analyze network data and convert formats client-side."
+      "name": "Herramientas de Red",
+      "description": "Herramientas gratuitas en línea de red para búsqueda DNS, utilidades de dirección IP y diagnósticos de conectividad. Analiza datos de red y convierte formatos en el lado del cliente."
     },
     "validation": {
-      "name": "Validation Tools",
-      "description": "Free online validation tools to check formats, data structures, and syntax. Validate JSON, YAML, XML, emails, URLs, and more — instantly in your browser."
+      "name": "Herramientas de Validación",
+      "description": "Herramientas gratuitas en línea de validación para verificar formatos, estructuras de datos y sintaxis. Valida JSON, YAML, XML, correos electrónicos, URLs y más — al instante en tu navegador."
     },
     "data": {
-      "name": "Data Formats",
-      "description": "Free online data format tools to convert and view INI, NDJSON, HJSON, Avro, Protobuf, MessagePack, and other data serialization formats."
+      "name": "Formatos de Datos",
+      "description": "Herramientas gratuitas en línea de formato de datos para convertir y ver INI, NDJSON, HJSON, Avro, Protobuf, MessagePack y otros formatos de serialización de datos."
     },
     "toml": {
-      "name": "TOML Tools",
-      "description": "Free online TOML tools to format, validate, and convert TOML configuration files. Pretty print, convert to JSON/YAML, and check syntax instantly."
+      "name": "Herramientas TOML",
+      "description": "Herramientas gratuitas en línea de TOML para formatear, validar y convertir archivos de configuración TOML. Pretty print, convertir a JSON/YAML y verificar sintaxis al instante."
     },
     "git": {
-      "name": "Git & Version Control",
-      "description": "Free online Git and version control tools for branch naming, commit message formatting, .gitignore generation, and Git command reference."
+      "name": "Git y Control de Versiones",
+      "description": "Herramientas gratuitas en línea de Git y control de versiones para nombres de ramas, formato de mensajes de commit, generación de .gitignore y referencia de comandos Git."
     },
     "devops": {
-      "name": "DevOps & Infrastructure",
-      "description": "Free online DevOps tools for Docker, Kubernetes, Helm, and container configuration. Generate Dockerfiles, validate K8s manifests, and more."
+      "name": "DevOps e Infraestructura",
+      "description": "Herramientas gratuitas en línea de DevOps para Docker, Kubernetes, Helm y configuración de contenedores. Genera Dockerfiles, valida manifiestos de K8s y más."
     },
     "feeds": {
-      "name": "Feeds & Structured Data",
-      "description": "Free online feed and structured data tools for RSS, Atom, JSON Feed, and Schema.org. Generate, validate, and convert web feeds in your browser."
+      "name": "Feeds y Datos Estructurados",
+      "description": "Herramientas gratuitas en línea de feeds y datos estructurados para RSS, Atom, JSON Feed y Schema.org. Genera, valida y convierte feeds web en tu navegador."
     },
     "communication": {
-      "name": "Communication",
-      "description": "Free online communication tools for email formatting, messaging templates, and communication format conversion. Generate and validate email content."
+      "name": "Comunicación",
+      "description": "Herramientas gratuitas en línea de comunicación para formateo de correo electrónico, plantillas de mensajes y conversión de formatos de comunicación. Genera y valida contenido de correo electrónico."
     },
     "misc": {
-      "name": "Miscellaneous",
-      "description": "Free online miscellaneous developer tools for QR codes, UUIDs, Lorem Ipsum text, and other handy utilities. Quick tools that run in your browser."
+      "name": "Miscelánea",
+      "description": "Herramientas gratuitas en línea de desarrollador miscelánea para códigos QR, UUID, texto Lorem Ipsum y otras utilidades prácticas. Herramientas rápidas que se ejecutan en tu navegador."
     },
     "legal": {
-      "name": "Legal & Compliance",
-      "description": "Free online legal document generators for privacy policies, terms of service, GDPR statements, and compliance documents. Generate legal text instantly."
+      "name": "Legal y Cumplimiento",
+      "description": "Generadores gratuitos en línea de documentos legales para políticas de privacidad, términos de servicio, declaraciones GDPR y documentos de cumplimiento. Genera texto legal al instante."
     },
     "reference": {
-      "name": "Reference & Lookup",
-      "description": "Free online reference and lookup tools for country codes, currency codes, language codes, MIME types, and other developer reference tables."
+      "name": "Referencia y Búsqueda",
+      "description": "Herramientas gratuitas en línea de referencia y búsqueda para códigos de país, códigos de moneda, códigos de idioma, tipos MIME y otras tablas de referencia para desarrolladores."
     }
   }
 }
