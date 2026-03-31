@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getMessages } from "next-intl/server";
+import type { AbstractIntlMessages } from "next-intl";
 import {
   getTool,
   getRelatedTools,
@@ -64,17 +65,31 @@ export async function generateMetadata({
 
   const { meta } = toolData;
   const categoryInfo = getCategoryInfo(category);
+
+  // Use localized tool name/description from messages (fallback to meta)
+  const messages = await getMessages();
+  const categoryMessages = (
+    messages.toolMeta as AbstractIntlMessages | undefined
+  )?.[category] as Record<string, Record<string, string>> | undefined;
+  const toolMessages = categoryMessages?.[toolSlug];
+  const localizedMeta = {
+    ...meta,
+    name: toolMessages?.name ?? meta.name,
+    description: toolMessages?.description ?? meta.description,
+  };
   const seoDescription = getToolSeoDescription(
-    meta,
+    localizedMeta,
     categoryInfo?.name ?? category
   );
 
+  const localizedName = localizedMeta.name;
+
   return {
-    title: `${meta.name} Online - Free ${categoryInfo?.name ?? category}`,
+    title: `${localizedName} Online - Free ${categoryInfo?.name ?? category}`,
     description: seoDescription,
     keywords: meta.keywords,
     openGraph: {
-      title: `${meta.name} Online - Free ${categoryInfo?.name ?? category} | utils.live`,
+      title: `${localizedName} Online - Free ${categoryInfo?.name ?? category} | utils.live`,
       description: seoDescription,
       type: "website",
       url: `https://utils.live/tools/${category}/${toolSlug}`,
@@ -83,20 +98,20 @@ export async function generateMetadata({
           url: "https://utils.live/og/default.png",
           width: 1200,
           height: 630,
-          alt: `${meta.name} - Free Online Tool`,
+          alt: `${localizedName} - Free Online Tool`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${meta.name} Online - Free ${categoryInfo?.name ?? category} | utils.live`,
+      title: `${localizedName} Online - Free ${categoryInfo?.name ?? category} | utils.live`,
       description: seoDescription,
       images: [
         {
           url: "https://utils.live/og/default.png",
           width: 1200,
           height: 630,
-          alt: `${meta.name} - Free Online Tool`,
+          alt: `${localizedName} - Free Online Tool`,
         },
       ],
     },
@@ -118,6 +133,15 @@ export default async function ToolPage({
   const { meta, ui, inputSchema, optionsSchema, outputSchema, examples } =
     toolData;
 
+  // Resolve localized tool name/description from messages (fallback to meta)
+  const messages = await getMessages();
+  const categoryMessages = (
+    messages.toolMeta as AbstractIntlMessages | undefined
+  )?.[category] as Record<string, Record<string, string>> | undefined;
+  const toolMessages = categoryMessages?.[toolSlug];
+  const toolName = toolMessages?.name ?? meta.name;
+  const toolDescription = toolMessages?.description ?? meta.description;
+
   // Get related tools and category info
   const relatedTools = getRelatedTools(meta.id);
   const categoryInfo = getCategoryInfo(category);
@@ -126,14 +150,14 @@ export default async function ToolPage({
   const breadcrumbs = getToolBreadcrumbs(
     category,
     categoryInfo?.name ?? category,
-    meta.name
+    toolName
   );
 
   // Generate JSON-LD
   const jsonLd = generateToolJsonLd(meta);
   const faqJsonLd = generateToolFAQJsonLd(
-    meta.name,
-    meta.description,
+    toolName,
+    toolDescription,
     categoryInfo?.name ?? category
   );
 
@@ -156,8 +180,8 @@ export default async function ToolPage({
               />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">{meta.name}</h1>
-              <p className="text-muted-foreground">{meta.description}</p>
+              <h1 className="text-2xl font-bold">{toolName}</h1>
+              <p className="text-muted-foreground">{toolDescription}</p>
             </div>
           </div>
         </div>
