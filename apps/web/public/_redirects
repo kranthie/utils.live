@@ -1,3 +1,9 @@
+/tools/*    /en/tools/:splat    301
+/tools      /en/tools           301
+/about      /en/about           301
+/blog/*     /en/blog/:splat     301
+/blog       /en/blog            301
+/contact    /en/contact         301
 /pricing      /       301
 /login        /       301
 /signup       /       301
