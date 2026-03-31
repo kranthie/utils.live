@@ -14,7 +14,7 @@
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 
-const SUPPORTED_LOCALES = ["en"];
+const SUPPORTED_LOCALES = ["en", "es"];
 const DEFAULT_LOCALE = "en";
 
 export const onRequest: PagesFunction = async (ctx) => {

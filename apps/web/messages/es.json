@@ -1,0 +1,481 @@
+{
+  "common": {
+    "nav": {
+      "home": "Home",
+      "tools": "Tools",
+      "blog": "Blog",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "actions": {
+      "copy": "Copy to clipboard",
+      "copied": "Copied!",
+      "download": "Download",
+      "share": "Share",
+      "tryAgain": "Try Again",
+      "goHome": "Go Home",
+      "goBack": "Go Back",
+      "retry": "Retry",
+      "dismiss": "Dismiss",
+      "reset": "Reset to defaults",
+      "clear": "Clear",
+      "sample": "Sample",
+      "upload": "Upload",
+      "search": "Search",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "browseTools": "Browse All Tools",
+      "searchTools": "Search Tools",
+      "viewAllTools": "View all tools",
+      "viewAllCategories": "View all categories",
+      "contactSupport": "Contact Support"
+    },
+    "search": {
+      "placeholder": "Search tools...",
+      "noResults": "No tools found.",
+      "resultsCount": "{count, plural, one {# result} other {# results}} found",
+      "searchToolsPlaceholder": "Search tools...",
+      "ariaLabel": "Search developer tools"
+    },
+    "theme": {
+      "toggle": "Toggle theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "brand": {
+      "name": "utils.live",
+      "homeAriaLabel": "utils.live home"
+    }
+  },
+  "home": {
+    "hero": {
+      "openSourceBadge": "Free & Open Source",
+      "headline": "Developer utilities, instantly",
+      "subheadline": "JSON formatters, encoders, converters, hash generators, and more. Free tools that run entirely in your browser.",
+      "searchPlaceholder": "Search {toolCountLabel} developer tools...",
+      "searchAriaLabel": "Search developer tools"
+    },
+    "features": {
+      "eyebrow": "Why utils.live",
+      "heading": "Why developers choose utils.live",
+      "instantResults": {
+        "title": "Instant Results",
+        "description": "Client-side tools run in your browser with zero latency. No waiting, no server round-trips."
+      },
+      "privacyFirst": {
+        "title": "Privacy First",
+        "description": "Your data never leaves your device. We don't track, store, or analyze your tool inputs."
+      },
+      "freeOpenSource": {
+        "title": "Free & Open Source",
+        "description": "Every tool is completely free to use. No accounts, no paywalls, no usage limits. Fully open source."
+      },
+      "toolsCount": {
+        "title": "{toolCountLabel} Tools",
+        "description": "A comprehensive collection of developer utilities — from JSON formatting to image processing."
+      }
+    },
+    "cta": {
+      "toolsLabel": "Tools",
+      "categoriesLabel": "Categories",
+      "freeLabel": "Free & Open Source",
+      "heading": "Start building with {toolCount}+ tools",
+      "subheading": "Find the right tool for any task. Search, click, done.",
+      "searchToolsButton": "Search Tools",
+      "browseAllTools": "Browse All Tools"
+    },
+    "categoryShowcase": {
+      "eyebrow": "Categories",
+      "heading": "Browse by Category",
+      "subheading": "Find the right tool for any task",
+      "toolsCount": "{count} tools",
+      "viewAllTools": "View all tools",
+      "viewAllCategories": "View all categories"
+    },
+    "toolDemo": {
+      "heading": "See it in action",
+      "subheading": "Watch tools transform your data in real time",
+      "inputLabel": "Input",
+      "outputLabel": "Output"
+    },
+    "metadata": {
+      "title": "utils.live | Free Developer Tools & Utilities",
+      "description": "{toolCountLabel} free developer tools in one place. JSON formatters, encoders, converters, hash generators, and more. Fast, free, and privacy-focused."
+    }
+  },
+  "tools": {
+    "shell": {
+      "options": "Options",
+      "optionsCount": "({count})",
+      "resetToDefaults": "Reset to defaults",
+      "resetAriaLabel": "Reset options to defaults",
+      "auto": "Auto",
+      "autoWaiting": " - waiting for input",
+      "autoExecuting": " - executing",
+      "autoReady": " - ready",
+      "autoTooltip": "This tool executes automatically as you type.",
+      "generating": "Generating...",
+      "generate": "Generate",
+      "keyboardShortcuts": "Keyboard shortcuts",
+      "keyboardShortcutsAriaLabel": "Keyboard shortcuts",
+      "shortcutExecute": "Execute",
+      "shortcutClear": "Clear / Reset",
+      "undoLabel": "Undo",
+      "exampleLoaded": "Example loaded",
+      "inputLabel": "Input",
+      "outputLabel": "Output",
+      "configureLabel": "Configure",
+      "previewLabel": "Preview",
+      "sourceLabel": "Source",
+      "convertedLabel": "Converted",
+      "editLabel": "Edit",
+      "toolsAvailable": "{count} tools available",
+      "toolNotFound": {
+        "title": "Tool Not Found",
+        "description": "The requested tool could not be found."
+      }
+    },
+    "search": {
+      "heading": "Explore Tools",
+      "subheading": "{count, number} free developer tools at your fingertips",
+      "searchResults": "Results",
+      "recent": "Recent",
+      "popular": "Popular",
+      "categories": "Categories",
+      "noToolsFound": "No tools found.",
+      "resultsFound": "{count, plural, one {# result} other {# results}} found",
+      "noResultsFound": "No tools found"
+    },
+    "categories": {
+      "categoryNotFound": {
+        "title": "Category Not Found",
+        "description": "The requested category could not be found."
+      },
+      "toolsAvailable": "{count} tools available"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "tools": "Tools"
+    },
+    "metadata": {
+      "tools": {
+        "title": "Explore Tools",
+        "description": "Browse {toolCountLabel} free developer tools. JSON formatters, encoders, converters, hash generators, and more.",
+        "ogTitle": "Explore Tools | utils.live",
+        "ogDescription": "Browse {toolCountLabel} free developer tools. JSON formatters, encoders, converters, and more."
+      }
+    }
+  },
+  "editor": {
+    "input": {
+      "title": "Input",
+      "loadSampleAriaLabel": "Load sample data",
+      "sampleButton": "Sample",
+      "uploadButton": "Upload",
+      "clearAriaLabel": "Clear input",
+      "dropFileHere": "Drop file here",
+      "dragAndDrop": "Or drag and drop a file here",
+      "failedToRead": "Failed to read file"
+    },
+    "output": {
+      "title": "Output",
+      "processing": "Processing...",
+      "success": "Success",
+      "error": "Error",
+      "noOutputYet": "No output yet",
+      "enterInputInstant": "Enter input to see results instantly",
+      "enterInputExecute": "Enter input and click Execute to see the result",
+      "emptyResult": "Empty result",
+      "emptyResultDescription": "The operation completed but produced no output",
+      "loadingEditor": "Loading editor...",
+      "loadingDiffViewer": "Loading diff viewer...",
+      "loadingJsonViewer": "Loading JSON viewer...",
+      "loadingMarkdown": "Loading markdown preview...",
+      "loadingTable": "Loading table...",
+      "loadingHtml": "Loading HTML preview...",
+      "loadingDiagram": "Loading diagram...",
+      "loadingImage": "Loading image preview...",
+      "loadingColor": "Loading color...",
+      "loadingColors": "Loading colors...",
+      "statusProcessing": "Processing...",
+      "statusComplete": "Execution complete.",
+      "statusProcessedIn": " Processed in {time}.",
+      "statusFailed": "Execution failed: {message}"
+    }
+  },
+  "errorDisplay": {
+    "defaultTitles": {
+      "error": "Error",
+      "warning": "Warning",
+      "info": "Information"
+    },
+    "pathLabel": "Path: {path}",
+    "lineLabel": "Line {line}",
+    "retryButton": "Retry",
+    "dismissButton": "Dismiss"
+  },
+  "marketing": {
+    "about": {
+      "metadata": {
+        "title": "About",
+        "description": "Learn about utils.live - our mission to make developer tools accessible, fast, and privacy-focused.",
+        "ogTitle": "About | utils.live"
+      },
+      "hero": {
+        "heading": "Developer tools that respect your time",
+        "headingPrefix": "Developer tools that",
+        "gradientText": "respect your time",
+        "description": "utils.live was born from frustration with slow, ad-filled, and privacy-invasive online tools. We built what we wanted to use: fast, free, and respectful utilities."
+      },
+      "stats": {
+        "developerTools": "Developer Tools",
+        "freeCoreTools": "Free Core Tools",
+        "dataCollected": "Data Collected",
+        "avgResponseTime": "Avg Response Time"
+      },
+      "values": {
+        "heading": "Our Values",
+        "speedFirst": {
+          "title": "Speed First",
+          "description": "Tools should be instant. Our client-side tools run in your browser for zero latency."
+        },
+        "privacyByDesign": {
+          "title": "Privacy by Design",
+          "description": "Your data stays on your device. We don't track, store, or analyze your tool inputs."
+        },
+        "developerExperience": {
+          "title": "Developer Experience",
+          "description": "Built by developers, for developers. Every tool is designed to save you time."
+        },
+        "freeAccessible": {
+          "title": "Free & Accessible",
+          "description": "Core tools are free forever. We believe everyone should have access to quality utilities."
+        }
+      },
+      "mission": {
+        "heading": "Our Mission",
+        "description": "We believe developer tools should be accessible to everyone, regardless of budget or technical expertise. utils.live provides professional-grade utilities without the bloat, tracking, or paywalls. Our goal is to help you focus on what matters: building great software."
+      },
+      "team": {
+        "heading": "Built with care",
+        "headingPrefix": "Built with",
+        "gradientText": "care",
+        "description": "utils.live is maintained by a small team of passionate developers who use these tools daily. We're always adding new tools and improving existing ones based on community feedback.",
+        "feedbackWelcome": "Feedback and suggestions welcome"
+      }
+    },
+    "contact": {
+      "metadata": {
+        "title": "Contact",
+        "description": "Get in touch with the utils.live team. We'd love to hear from you about features, bugs, or partnerships.",
+        "ogTitle": "Contact | utils.live",
+        "ogDescription": "Get in touch with the utils.live team. We'd love to hear from you."
+      },
+      "hero": {
+        "heading": "Get in Touch",
+        "description": "Have a question, feature request, or just want to say hi? We'd love to hear from you."
+      },
+      "info": {
+        "responseTime": {
+          "title": "Response Time",
+          "value": "< 24 hours",
+          "description": "For most inquiries"
+        },
+        "location": {
+          "title": "Location",
+          "value": "Remote Team",
+          "description": "Distributed worldwide"
+        }
+      },
+      "lookingForTool": {
+        "heading": "Looking for a tool?",
+        "description": "Browse our full collection of tools.",
+        "linkText": "full collection of tools"
+      },
+      "form": {
+        "heading": "Send us a message",
+        "successTitle": "Message Sent!",
+        "successDescription": "Thank you for reaching out. We'll get back to you as soon as possible, usually within 24 hours.",
+        "sendAnother": "Send Another Message",
+        "errorMessage": "Something went wrong. Please try again.",
+        "namePlaceholder": "Your name",
+        "nameLabel": "Name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "you@example.com",
+        "subjectLabel": "Subject",
+        "subjectPlaceholder": "Select a topic",
+        "messageLabel": "Message",
+        "messagePlaceholder": "How can we help you?",
+        "submitButton": "Send Message",
+        "submittingButton": "Sending...",
+        "subjects": {
+          "general": "General Inquiry",
+          "bug": "Bug Report",
+          "feature": "Feature Request",
+          "support": "Technical Support",
+          "partnership": "Partnership",
+          "other": "Other"
+        }
+      }
+    }
+  },
+  "blog": {
+    "metadata": {
+      "title": "Developer Tools Blog | utils.live",
+      "description": "Learn about developer tools concepts — Base64, JWTs, regex, UUIDs, hashing, and more. Practical guides with live examples.",
+      "postNotFound": "Post Not Found"
+    },
+    "page": {
+      "heading": "Developer Tools Blog",
+      "gradientText": "Blog",
+      "description": "Practical guides on encoding, hashing, tokens, and more. Understand the tools you use every day.",
+      "readArticle": "Read article",
+      "minRead": "{count} min read",
+      "allArticles": "All articles",
+      "backToArticles": "Back to all articles"
+    },
+    "cta": {
+      "heading": "Try it on utils.live",
+      "description": "Free, browser-based tools — no sign-up required, your data never leaves your device."
+    }
+  },
+  "errors": {
+    "generic": {
+      "heading": "Something went wrong",
+      "description": "An unexpected error occurred. We've been notified and are looking into it.",
+      "errorId": "Error ID: {id}",
+      "tryAgain": "Try Again",
+      "goHome": "Go Home",
+      "contactSupport": "Contact Support",
+      "whatCanYouDo": "What can you do?",
+      "suggestions": {
+        "refresh": "Try refreshing the page",
+        "clearCache": "Clear your browser cache",
+        "checkConnection": "Check your internet connection",
+        "contactUs": "if the problem persists"
+      },
+      "contactLink": "Contact us"
+    },
+    "notFound": {
+      "heading": "Page Not Found",
+      "description": "Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.",
+      "goHome": "Go Home",
+      "browseTools": "Browse Tools",
+      "goBack": "Go Back",
+      "popularTools": "Popular Tools"
+    },
+    "critical": {
+      "heading": "Critical Error",
+      "description": "A critical error has occurred. This page couldn't load properly.",
+      "tryAgain": "Try Again",
+      "goHome": "Go Home",
+      "errorId": "Error ID: {id}"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "utils.live | Free Developer Tools & Utilities",
+      "description": "{toolCountLabel} free developer tools in one place. JSON formatters, encoders, converters, hash generators, and more. Fast, free, and privacy-focused."
+    },
+    "layout": {
+      "title": "utils.live | Developer Utilities Platform",
+      "titleTemplate": "%s | utils.live",
+      "description": "{toolCountLabel} developer tools in one place. JSON formatters, encoders, converters, and more. Free and privacy-focused.",
+      "ogTitle": "utils.live | Developer Utilities Platform",
+      "ogAlt": "utils.live - Free Developer Tools",
+      "skipToMain": "Skip to main content"
+    },
+    "tools": {
+      "title": "Explore Tools",
+      "description": "Browse {toolCountLabel} free developer tools. JSON formatters, encoders, converters, hash generators, and more.",
+      "ogTitle": "Explore Tools | utils.live"
+    },
+    "about": {
+      "title": "About",
+      "ogTitle": "About | utils.live"
+    },
+    "contact": {
+      "title": "Contact",
+      "ogTitle": "Contact | utils.live"
+    },
+    "blog": {
+      "title": "Developer Tools Blog | utils.live"
+    }
+  },
+  "footer": {
+    "tagline": "Free, open-source developer utilities for encoding, conversion, formatting, and more.",
+    "sections": {
+      "product": "Product",
+      "company": "Company",
+      "community": "Community"
+    },
+    "links": {
+      "allTools": "All Tools",
+      "blog": "Blog",
+      "about": "About",
+      "contact": "Contact",
+      "github": "GitHub",
+      "reportIssue": "Report Issue"
+    }
+  },
+  "mobileNav": {
+    "openMenu": "Open menu",
+    "searchLabel": "Search tools",
+    "searchPlaceholder": "Search tools...",
+    "title": "utils.live"
+  },
+  "forms": {
+    "fileUpload": {
+      "defaultPlaceholder": "Drop files here or click to upload",
+      "accepted": "Accepted: {types}",
+      "maxSize": "Max size: {size}",
+      "filesCount": "{count, plural, one {# file} other {# files}}",
+      "clearAll": "Clear all",
+      "fileError": "Error",
+      "fileSuccess": "Success",
+      "removeFile": "Remove {filename}",
+      "uploadAriaLabel": "Upload {suffix}accepted types: {accept}",
+      "failedToRead": "Failed to read file"
+    },
+    "keyValueEditor": {
+      "defaultKeyLabel": "Key",
+      "defaultValueLabel": "Value",
+      "defaultKeyPlaceholder": "Enter key",
+      "defaultValuePlaceholder": "Enter value",
+      "duplicateKey": "Duplicate key",
+      "addPair": "Add {keyLabel}/{valueLabel}",
+      "removeAriaLabel": "Remove pair {index}",
+      "keyAriaLabel": "{label} {index}",
+      "valueAriaLabel": "{label} {index}",
+      "pairsCount": "{current} / {max} pairs"
+    },
+    "multiSelect": {
+      "defaultPlaceholder": "Select options...",
+      "searchPlaceholder": "Search...",
+      "noOptionsFound": "No options found.",
+      "selectedCount": "{count} selected",
+      "selectionCount": "{current} / {max} selected"
+    },
+    "tagInput": {
+      "defaultPlaceholder": "Add tag...",
+      "addMore": "Add more...",
+      "tagsCount": "{current} / {max} tags"
+    },
+    "searchableSelect": {
+      "defaultPlaceholder": "Select an option...",
+      "searchPlaceholder": "Search...",
+      "noOptionsFound": "No options found."
+    },
+    "numberInput": {
+      "decreaseAriaLabel": "Decrease value",
+      "increaseAriaLabel": "Increase value"
+    }
+  },
+  "header": {
+    "searchToolsPlaceholder": "Search tools...",
+    "searchAriaLabel": "Search tools",
+    "searchMobileAriaLabel": "Search",
+    "githubAriaLabel": "View on GitHub"
+  }
+}
