@@ -24,6 +24,7 @@ export async function generateMetadata({
   params,
 }: ToolsPageProps): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   return {
     title: "Explore Tools",
     description: `Browse ${toolCountLabel} free developer tools. JSON formatters, encoders, converters, hash generators, and more.`,

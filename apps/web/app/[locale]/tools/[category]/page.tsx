@@ -41,6 +41,7 @@ export async function generateMetadata({
   params,
 }: CategoryPageProps): Promise<Metadata> {
   const { locale, category } = await params;
+  setRequestLocale(locale);
   const categoryInfo = getCategoryInfo(category);
 
   if (!categoryInfo) {

@@ -115,10 +115,11 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   // Load messages directly (avoids next-intl/config alias requirement with Turbopack)
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   const messages: AbstractIntlMessages = (
-    await import(`@/messages/${locale}.json`)
-  ).default as AbstractIntlMessages;
+    (await import(`@/messages/${locale}.json`)) as {
+      default: AbstractIntlMessages;
+    }
+  ).default;
 
   // Generate search data server-side to avoid importing @utils-live/tools in the client bundle
   const searchTools = getSearchTools();
@@ -130,7 +131,7 @@ export default async function LocaleLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <KeyboardProvider>
               {children}

@@ -52,6 +52,7 @@ export async function generateMetadata({
   params,
 }: ToolPageProps): Promise<Metadata> {
   const { locale, category, tool: toolSlug } = await params;
+  setRequestLocale(locale);
   const toolData = getTool(category, toolSlug);
 
   if (!toolData) {
