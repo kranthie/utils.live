@@ -145,7 +145,10 @@
       "categories": "分类",
       "noToolsFound": "未找到工具。",
       "resultsFound": "{count, plural, one {# 个结果} other {# 个结果}}已找到",
-      "noResultsFound": "未找到工具"
+      "noResultsFound": "未找到工具",
+      "placeholder": "搜索工具...",
+      "dialogTitle": "搜索工具",
+      "dialogDescription": "搜索并导航到开发工具"
     },
     "categories": {
       "categoryNotFound": {
@@ -208,6 +211,10 @@
     "toolCard": {
       "addFavorite": "添加到收藏",
       "removeFavorite": "从收藏中移除"
+    },
+    "options": {
+      "title": "选项",
+      "noConfigurable": "此工具没有可配置的选项。"
     }
   },
   "editor": {

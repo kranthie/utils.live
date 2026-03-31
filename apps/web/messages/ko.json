@@ -145,7 +145,10 @@
       "categories": "카테고리",
       "noToolsFound": "도구를 찾을 수 없습니다.",
       "resultsFound": "{count, plural, one {# 결과} other {# 결과}} 찾음",
-      "noResultsFound": "도구를 찾을 수 없음"
+      "noResultsFound": "도구를 찾을 수 없음",
+      "placeholder": "도구 검색...",
+      "dialogTitle": "도구 검색",
+      "dialogDescription": "개발 도구를 검색하고 이동"
     },
     "categories": {
       "categoryNotFound": {
@@ -208,6 +211,10 @@
     "toolCard": {
       "addFavorite": "즐겨찾기에 추가",
       "removeFavorite": "즐겨찾기에서 제거"
+    },
+    "options": {
+      "title": "옵션",
+      "noConfigurable": "이 도구에는 구성 가능한 옵션이 없습니다."
     }
   },
   "editor": {

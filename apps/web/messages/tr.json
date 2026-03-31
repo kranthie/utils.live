@@ -145,7 +145,10 @@
       "categories": "Kategoriler",
       "noToolsFound": "Araç bulunamadı.",
       "resultsFound": "{count, plural, one {# sonuç} other {# sonuç}} bulundu",
-      "noResultsFound": "Araç bulunamadı"
+      "noResultsFound": "Araç bulunamadı",
+      "placeholder": "Araçları ara...",
+      "dialogTitle": "Araçları ara",
+      "dialogDescription": "Geliştirici araçlarını arayın ve gezinin"
     },
     "categories": {
       "categoryNotFound": {
@@ -208,6 +211,10 @@
     "toolCard": {
       "addFavorite": "Favorilere ekle",
       "removeFavorite": "Favorilerden kaldır"
+    },
+    "options": {
+      "title": "Seçenekler",
+      "noConfigurable": "Bu araç için yapılandırılabilir seçenek yok."
     }
   },
   "editor": {

@@ -72,7 +72,11 @@ export function SchemaFieldRenderer({
   idPrefix = "",
   onChange,
 }: SchemaFieldRendererProps): React.ReactElement {
-  const label = field.title ?? fieldKey;
+  const label =
+    field.title ??
+    fieldKey
+      .replace(/([a-z])([A-Z])/g, "$1 $2")
+      .replace(/^./, (c) => c.toUpperCase());
   const description = field.description;
   const id = `${idPrefix}${fieldKey}`;
 

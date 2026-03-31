@@ -145,7 +145,10 @@
       "categories": "Categories",
       "noToolsFound": "No tools found.",
       "resultsFound": "{count, plural, one {# result} other {# results}} found",
-      "noResultsFound": "No tools found"
+      "noResultsFound": "No tools found",
+      "placeholder": "Search tools...",
+      "dialogTitle": "Search tools",
+      "dialogDescription": "Search and navigate to developer tools"
     },
     "categories": {
       "categoryNotFound": {
@@ -208,6 +211,10 @@
     "toolCard": {
       "addFavorite": "Add to favorites",
       "removeFavorite": "Remove from favorites"
+    },
+    "options": {
+      "title": "Options",
+      "noConfigurable": "No configurable options for this tool."
     }
   },
   "editor": {

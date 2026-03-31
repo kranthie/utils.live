@@ -2,6 +2,7 @@
 
 import { useCallback, useMemo } from "react";
 import { Settings2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import type { SchemaField } from "./schema-field-renderer";
 import { SchemaFieldRenderer } from "./schema-field-renderer";
 import { cn } from "@/lib/utils";
@@ -53,6 +54,7 @@ export function ToolOptions<
   showHeader = true,
   className,
 }: ToolOptionsProps<T>): React.ReactElement {
+  const t = useTranslations("tools.options");
   const updateValue = useCallback(
     (key: string, value: unknown) => {
       onChange({ ...values, [key]: value } as T);
@@ -71,9 +73,7 @@ export function ToolOptions<
 
   if (fields.length === 0) {
     return (
-      <p className="text-muted-foreground text-sm">
-        No configurable options for this tool.
-      </p>
+      <p className="text-muted-foreground text-sm">{t("noConfigurable")}</p>
     );
   }
 
@@ -82,7 +82,7 @@ export function ToolOptions<
       {showHeader && (
         <div className="text-muted-foreground flex items-center gap-2 text-sm font-medium">
           <Settings2 className="h-4 w-4" />
-          <span>Options</span>
+          <span>{t("title")}</span>
         </div>
       )}
       <div className="space-y-4">

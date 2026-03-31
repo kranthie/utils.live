@@ -163,7 +163,12 @@ export function SearchCommand({
   );
 
   return (
-    <CommandDialog open={open} onOpenChange={handleOpenChange}>
+    <CommandDialog
+      open={open}
+      onOpenChange={handleOpenChange}
+      dialogTitle={t("dialogTitle")}
+      dialogDescription={t("dialogDescription")}
+    >
       <CommandInput
         placeholder={t("placeholder")}
         value={query}

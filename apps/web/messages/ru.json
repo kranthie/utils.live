@@ -145,7 +145,10 @@
       "categories": "Категории",
       "noToolsFound": "Инструменты не найдены.",
       "resultsFound": "{count, plural, one {# результат} other {# результатов}} найдено",
-      "noResultsFound": "Инструменты не найдены"
+      "noResultsFound": "Инструменты не найдены",
+      "placeholder": "Поиск инструментов...",
+      "dialogTitle": "Поиск инструментов",
+      "dialogDescription": "Поиск и навигация по инструментам разработки"
     },
     "categories": {
       "categoryNotFound": {
@@ -208,6 +211,10 @@
     "toolCard": {
       "addFavorite": "Добавить в избранное",
       "removeFavorite": "Удалить из избранного"
+    },
+    "options": {
+      "title": "Параметры",
+      "noConfigurable": "Нет настраиваемых параметров для этого инструмента."
     }
   },
   "editor": {

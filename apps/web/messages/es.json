@@ -145,7 +145,10 @@
       "categories": "Categorías",
       "noToolsFound": "No se encontraron herramientas.",
       "resultsFound": "{count, plural, one {# resultado} other {# resultados}} encontrado(s)",
-      "noResultsFound": "No se encontraron herramientas"
+      "noResultsFound": "No se encontraron herramientas",
+      "placeholder": "Buscar herramientas...",
+      "dialogTitle": "Buscar herramientas",
+      "dialogDescription": "Buscar y navegar a herramientas de desarrollo"
     },
     "categories": {
       "categoryNotFound": {
@@ -208,6 +211,10 @@
     "toolCard": {
       "addFavorite": "Agregar a favoritos",
       "removeFavorite": "Quitar de favoritos"
+    },
+    "options": {
+      "title": "Opciones",
+      "noConfigurable": "No hay opciones configurables para esta herramienta."
     }
   },
   "editor": {
