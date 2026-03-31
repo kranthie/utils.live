@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { ToolCard } from "@/components/tools/tool-card";
 import { cn } from "@/lib/utils";
 import type { ToolTierValue } from "@utils-live/tools/constants";
@@ -26,6 +27,7 @@ export function SearchResultsClient({
   query,
   categoryNames,
 }: SearchResultsClientProps): React.ReactElement {
+  const t = useTranslations("tools.browse");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const categoryChips = useMemo(() => {
@@ -50,9 +52,13 @@ export function SearchResultsClient({
     <section>
       {/* Header */}
       <h2 className="mb-4 text-lg font-semibold">
-        {filtered.length} result{filtered.length !== 1 ? "s" : ""} for &ldquo;
-        {query}&rdquo;
-        {activeCategoryName ? ` in ${activeCategoryName}` : ""}
+        {activeCategoryName
+          ? t("resultsForInCategory", {
+              count: filtered.length,
+              query,
+              category: activeCategoryName,
+            })
+          : t("resultsFor", { count: filtered.length, query })}
       </h2>
 
       {/* Category filter chips */}
@@ -67,7 +73,7 @@ export function SearchResultsClient({
                 : "bg-muted text-muted-foreground hover:bg-muted/80"
             )}
           >
-            All
+            {t("all")}
             <span
               className={cn(
                 "inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1 text-xs",
@@ -111,8 +117,7 @@ export function SearchResultsClient({
       {/* Results grid or empty state */}
       {filtered.length === 0 ? (
         <p className="text-muted-foreground py-8 text-center">
-          No tools found matching &quot;{query}&quot;. Try a different search
-          term.
+          {t("noResultsForQuery", { query })}
         </p>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

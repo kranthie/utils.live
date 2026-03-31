@@ -3,6 +3,7 @@
 import { memo } from "react";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { LucideIcon } from "@/components/shared/lucide-icon";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
@@ -40,6 +41,7 @@ export const RelatedTools = memo(function RelatedTools({
   maxTools = 4,
   className,
 }: RelatedToolsProps): React.ReactElement | null {
+  const t = useTranslations("tools.relatedTools");
   const filteredTools = tools
     .filter((tool) => tool.id !== currentToolId)
     .slice(0, maxTools);
@@ -50,7 +52,7 @@ export const RelatedTools = memo(function RelatedTools({
 
   return (
     <div className={cn("space-y-4", className)}>
-      <h3 className="text-lg font-semibold">Related Tools</h3>
+      <h3 className="text-lg font-semibold">{t("title")}</h3>
       <div className="grid gap-3 sm:grid-cols-2">
         {filteredTools.map((tool) => (
           <Link key={tool.id} href={`/tools/${tool.id}`}>

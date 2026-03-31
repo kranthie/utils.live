@@ -2,6 +2,7 @@
 
 import { useMemo, useSyncExternalStore } from "react";
 import { Clock } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { ToolCardMedium } from "./tool-card-medium";
@@ -24,6 +25,7 @@ export function RecentlyUsedTools({
   maxItems = 6,
   className,
 }: RecentlyUsedToolsProps): React.ReactElement | null {
+  const t = useTranslations("tools.recentlyUsed");
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
@@ -55,7 +57,7 @@ export function RecentlyUsedTools({
       <div className="flex items-center justify-between">
         <h2 className="flex items-center gap-2 text-lg font-semibold">
           <Clock className="text-muted-foreground h-5 w-5" />
-          Recently Used
+          {t("title")}
         </h2>
         <Button
           variant="ghost"
@@ -63,7 +65,7 @@ export function RecentlyUsedTools({
           onClick={removeValue}
           className="text-muted-foreground h-7 text-xs"
         >
-          Clear
+          {t("clear")}
         </Button>
       </div>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">

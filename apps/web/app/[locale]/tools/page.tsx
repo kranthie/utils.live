@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { setRequestLocale, getTranslations } from "next-intl/server";
+import {
+  setRequestLocale,
+  getTranslations,
+  getMessages,
+} from "next-intl/server";
 import {
   getAllToolCards,
   getCategorySummaries,
@@ -48,6 +52,15 @@ export default async function AllToolsPage({
   const tools = getAllToolCards();
   const categories = getCategorySummaries();
 
+  // Resolve localized tool/category names from messages
+  const messages = await getMessages();
+  const toolMetaMessages = messages.toolMeta as
+    | Record<string, Record<string, Record<string, string>>>
+    | undefined;
+  const categoryMetaMessages = messages.categoryMeta as
+    | Record<string, Record<string, string>>
+    | undefined;
+
   // Breadcrumbs
   const breadcrumbs = [
     { label: t("breadcrumbs.home"), href: "/" },
@@ -60,19 +73,23 @@ export default async function AllToolsPage({
     generateWebsiteJsonLd(),
   ];
 
-  // Tool data for client components
-  const toolData = tools.map((tool) => ({
-    id: tool.id,
-    name: tool.name,
-    description: tool.description,
-    category: tool.category,
-    icon: tool.icon,
-    tier: tool.tier as "client",
-  }));
+  // Tool data for client components — with localized names
+  const toolData = tools.map((tool) => {
+    const [cat, slug] = tool.id.split("/");
+    const toolMsg = toolMetaMessages?.[cat ?? ""]?.[slug ?? ""];
+    return {
+      id: tool.id,
+      name: toolMsg?.name ?? tool.name,
+      description: toolMsg?.description ?? tool.description,
+      category: tool.category,
+      icon: tool.icon,
+      tier: tool.tier as "client",
+    };
+  });
 
-  // Category name map for search result chips
+  // Category name map for search result chips — with localized names
   const categoryNames = Object.fromEntries(
-    categories.map((c) => [c.id, c.name])
+    categories.map((c) => [c.id, categoryMetaMessages?.[c.id]?.name ?? c.name])
   );
 
   return (
@@ -96,7 +113,12 @@ export default async function AllToolsPage({
         {/* Client-side tools browser with search */}
         <ToolsPageClient
           tools={toolData}
-          categories={categories}
+          categories={categories.map((c) => ({
+            ...c,
+            name: categoryMetaMessages?.[c.id]?.name ?? c.name,
+            description:
+              categoryMetaMessages?.[c.id]?.description ?? c.description,
+          }))}
           categoryNames={categoryNames}
         />
       </div>

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { setRequestLocale, getTranslations } from "next-intl/server";
+import {
+  setRequestLocale,
+  getTranslations,
+  getMessages,
+} from "next-intl/server";
 import {
   getToolsInCategory,
   getCategoryInfo,
@@ -114,8 +118,33 @@ export default async function CategoryPage({
     notFound();
   }
 
+  // Resolve localized names from messages
+  const messages = await getMessages();
+  const categoryMetaMessages = messages.categoryMeta as
+    | Record<string, Record<string, string>>
+    | undefined;
+  const toolMetaMessages = messages.toolMeta as
+    | Record<string, Record<string, Record<string, string>>>
+    | undefined;
+
+  const localizedCategoryName =
+    categoryMetaMessages?.[category]?.name ?? categoryInfo.name;
+  const localizedCategoryDesc =
+    categoryMetaMessages?.[category]?.description ?? categoryInfo.description;
+
+  // Translate tool names for client component
+  const localizedTools = tools.map((tool) => {
+    const slug = tool.id.split("/")[1] ?? "";
+    const toolMsg = toolMetaMessages?.[category]?.[slug];
+    return {
+      ...tool,
+      name: toolMsg?.name ?? tool.name,
+      description: toolMsg?.description ?? tool.description,
+    };
+  });
+
   // Generate breadcrumbs
-  const breadcrumbs = getCategoryBreadcrumbs(categoryInfo.name);
+  const breadcrumbs = getCategoryBreadcrumbs(localizedCategoryName);
   const breadcrumbJsonLd = generateBreadcrumbJsonLd(breadcrumbs);
   const itemListJsonLd = generateCategoryItemListJsonLd(
     category,
@@ -142,10 +171,10 @@ export default async function CategoryPage({
           </div>
           <div className="min-w-0">
             <h1 className="text-2xl font-bold sm:text-3xl">
-              {categoryInfo.name}
+              {localizedCategoryName}
             </h1>
             <p className="text-muted-foreground mt-1 line-clamp-2">
-              {categoryInfo.description}
+              {localizedCategoryDesc}
             </p>
             <p className="text-muted-foreground mt-1 text-sm">
               {t("categories.toolsAvailable", {
@@ -156,7 +185,7 @@ export default async function CategoryPage({
         </div>
 
         {/* Tools grid with search + subgroup filtering */}
-        <CategoryToolsClient tools={tools} />
+        <CategoryToolsClient tools={localizedTools} />
       </div>
     </>
   );

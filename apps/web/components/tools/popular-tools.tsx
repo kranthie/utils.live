@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { Star } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { ToolCardMedium } from "./tool-card-medium";
 import { cn } from "@/lib/utils";
 
@@ -48,6 +49,7 @@ export function PopularTools({
   tools,
   className,
 }: PopularToolsProps): React.ReactElement | null {
+  const t = useTranslations("tools.popularTools");
   const [activeTab, setActiveTab] = useState<Tab>("featured");
 
   const toolMap = useMemo(() => {
@@ -86,7 +88,7 @@ export function PopularTools({
       <div className="flex items-center justify-between">
         <h2 className="flex items-center gap-2 text-lg font-semibold">
           <Star className="text-muted-foreground h-5 w-5" />
-          Top Picks
+          {t("topPicks")}
         </h2>
         <div className="bg-muted/50 flex items-center gap-1 rounded-lg p-1">
           <button
@@ -98,7 +100,7 @@ export function PopularTools({
                 : "text-muted-foreground hover:text-foreground"
             )}
           >
-            Featured
+            {t("featured")}
           </button>
           <button
             onClick={() => setActiveTab("popular")}
@@ -109,7 +111,7 @@ export function PopularTools({
                 : "text-muted-foreground hover:text-foreground"
             )}
           >
-            Popular
+            {t("popular")}
           </button>
         </div>
       </div>

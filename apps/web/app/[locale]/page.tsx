@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getMessages } from "next-intl/server";
 import {
   getCategorySummaries,
   getToolCountLabel,
@@ -45,11 +45,17 @@ export default async function HomePage({
 
   const categories = getCategorySummaries();
 
-  // Format categories for the showcase
+  // Resolve localized category names from messages
+  const messages = await getMessages();
+  const categoryMetaMessages = messages.categoryMeta as
+    | Record<string, Record<string, string>>
+    | undefined;
+
+  // Format categories for the showcase with localized names
   const showcaseCategories = categories.map((c) => ({
     id: c.id,
-    name: c.name,
-    description: c.description,
+    name: categoryMetaMessages?.[c.id]?.name ?? c.name,
+    description: categoryMetaMessages?.[c.id]?.description ?? c.description,
     icon: c.icon,
     toolCount: c.toolCount,
     href: c.href,

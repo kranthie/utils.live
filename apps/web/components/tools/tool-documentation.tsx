@@ -9,6 +9,7 @@ import {
   Lightbulb,
   Info,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Collapsible,
@@ -109,6 +110,7 @@ export const ToolDocumentation = memo(function ToolDocumentation({
   outputLanguage,
   className,
 }: ToolDocumentationProps): React.ReactElement {
+  const t = useTranslations("tools.documentation");
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
 
   return (
@@ -118,7 +120,7 @@ export const ToolDocumentation = memo(function ToolDocumentation({
           <button className="hover:bg-muted/50 flex w-full items-center justify-between p-4 transition-colors">
             <div className="flex items-center gap-2">
               <Book className="text-muted-foreground h-4 w-4" />
-              <span className="font-medium">Documentation</span>
+              <span className="font-medium">{t("title")}</span>
             </div>
             {isExpanded ? (
               <ChevronUp className="text-muted-foreground h-4 w-4" />
@@ -133,7 +135,7 @@ export const ToolDocumentation = memo(function ToolDocumentation({
             <div className="space-y-2">
               <h3 className="flex items-center gap-2 text-sm font-medium">
                 <Info className="h-4 w-4" />
-                Overview
+                {t("overview")}
               </h3>
               <p className="text-muted-foreground text-sm">{description}</p>
               {longDescription && (
@@ -146,7 +148,7 @@ export const ToolDocumentation = memo(function ToolDocumentation({
             {/* Tool Info */}
             <div className="flex flex-wrap gap-4 text-sm">
               <div>
-                <span className="text-muted-foreground">Category: </span>
+                <span className="text-muted-foreground">{t("category")} </span>
                 <Badge variant="outline">{category}</Badge>
               </div>
             </div>
@@ -155,9 +157,7 @@ export const ToolDocumentation = memo(function ToolDocumentation({
             <div className="bg-muted/50 rounded-md p-3 text-sm">
               <div className="flex items-start gap-2">
                 <Lightbulb className="text-muted-foreground mt-0.5 h-4 w-4" />
-                <p className="text-muted-foreground">
-                  Runs entirely in your browser. No data is sent to our servers.
-                </p>
+                <p className="text-muted-foreground">{t("privacyNote")}</p>
               </div>
             </div>
 
@@ -166,7 +166,7 @@ export const ToolDocumentation = memo(function ToolDocumentation({
               <div className="space-y-3">
                 <h3 className="flex items-center gap-2 text-sm font-medium">
                   <Code className="h-4 w-4" />
-                  Examples
+                  {t("examples")}
                 </h3>
                 <Tabs defaultValue="0">
                   <TabsList>
@@ -192,7 +192,7 @@ export const ToolDocumentation = memo(function ToolDocumentation({
                         <div className="space-y-2">
                           <div className="flex items-center justify-between">
                             <label className="text-muted-foreground text-xs font-medium">
-                              Input
+                              {t("input")}
                             </label>
                             <CopyButton
                               value={
@@ -227,7 +227,7 @@ export const ToolDocumentation = memo(function ToolDocumentation({
                         <div className="space-y-2">
                           <div className="flex items-center justify-between">
                             <label className="text-muted-foreground text-xs font-medium">
-                              Output
+                              {t("output")}
                             </label>
                             <CopyButton value={example.output} size="sm" />
                           </div>
@@ -252,7 +252,7 @@ export const ToolDocumentation = memo(function ToolDocumentation({
                         Object.keys(example.options).length > 0 && (
                           <div className="space-y-2">
                             <label className="text-muted-foreground text-xs font-medium">
-                              Options
+                              {t("options")}
                             </label>
                             <div className="h-24 overflow-hidden rounded-md border">
                               <CodeEditor
@@ -270,7 +270,7 @@ export const ToolDocumentation = memo(function ToolDocumentation({
                         size="sm"
                         onClick={() => onLoadExample?.(example)}
                       >
-                        Load Example
+                        {t("loadExample")}
                       </Button>
                     </TabsContent>
                   ))}

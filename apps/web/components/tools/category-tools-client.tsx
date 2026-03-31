@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/input";
 import { ToolCardMedium } from "./tool-card-medium";
 import { cn } from "@/lib/utils";
@@ -24,6 +25,7 @@ interface CategoryToolsClientProps {
 export function CategoryToolsClient({
   tools,
 }: CategoryToolsClientProps): React.ReactElement {
+  const t = useTranslations("tools.browse");
   const [search, setSearch] = useState("");
   const [activeSubgroup, setActiveSubgroup] = useState<string | null>(null);
 
@@ -78,7 +80,7 @@ export function CategoryToolsClient({
           />
         </svg>
         <Input
-          placeholder="Search tools in this category..."
+          placeholder={t("searchToolsInCategory")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="pl-9"
@@ -97,7 +99,7 @@ export function CategoryToolsClient({
                 : "bg-muted text-muted-foreground hover:bg-muted/80"
             )}
           >
-            All
+            {t("all")}
             <span
               className={cn(
                 "inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1 text-xs",
@@ -141,7 +143,7 @@ export function CategoryToolsClient({
       {/* Results count when filtering */}
       {isFiltering && (
         <p className="text-muted-foreground text-sm">
-          {filtered.length} tool{filtered.length !== 1 ? "s" : ""} found
+          {t("toolsFound", { count: filtered.length })}
         </p>
       )}
 
@@ -163,8 +165,7 @@ export function CategoryToolsClient({
       ) : (
         <div className="py-12 text-center">
           <p className="text-muted-foreground">
-            No tools found. Try a different search term
-            {activeSubgroup ? " or subgroup" : ""}.
+            {activeSubgroup ? t("noToolsFoundSubgroup") : t("noToolsFound")}
           </p>
         </div>
       )}

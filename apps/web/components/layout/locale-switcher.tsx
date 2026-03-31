@@ -16,6 +16,15 @@ import {
 const LOCALE_LABELS: Record<string, string> = {
   en: "English",
   es: "Español",
+  de: "Deutsch",
+  fr: "Français",
+  ja: "日本語",
+  ko: "한국어",
+  "pt-BR": "Português (BR)",
+  ru: "Русский",
+  tr: "Türkçe",
+  "zh-CN": "简体中文",
+  "zh-TW": "繁體中文",
 };
 
 export function LocaleSwitcher(): React.ReactElement {

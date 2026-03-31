@@ -11,3 +11,4 @@
 /dashboard/*  /       301
 /api/*        /       301
 /favicon.ico  /icon.svg  301
+/             /en/      302

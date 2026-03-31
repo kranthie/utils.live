@@ -2,6 +2,7 @@
 
 import { Link } from "@/i18n/navigation";
 import { Heart } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { LucideIcon } from "@/components/shared/lucide-icon";
 import { Button } from "@/components/ui/button";
 import {
@@ -45,6 +46,7 @@ export function ToolCard({
   onFavoriteChange,
   variant = "default",
 }: ToolCardProps): React.ReactElement {
+  const t = useTranslations("tools.toolCard");
   const handleFavoriteClick = (e: React.MouseEvent): void => {
     e.preventDefault();
     e.stopPropagation();
@@ -90,7 +92,7 @@ export function ToolCard({
                   )}
                   onClick={handleFavoriteClick}
                   aria-label={
-                    isFavorite ? "Remove from favorites" : "Add to favorites"
+                    isFavorite ? t("removeFavorite") : t("addFavorite")
                   }
                 >
                   <Heart

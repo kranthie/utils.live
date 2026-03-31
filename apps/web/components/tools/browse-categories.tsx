@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { Link } from "@/i18n/navigation";
 import { LayoutGrid } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/input";
 import { LucideIcon } from "@/components/shared/lucide-icon";
 import { cn } from "@/lib/utils";
@@ -24,6 +25,7 @@ interface BrowseCategoriesProps {
 export function BrowseCategories({
   categories,
 }: BrowseCategoriesProps): React.ReactElement {
+  const t = useTranslations("tools.browse");
   const [search, setSearch] = useState("");
   const [activeGroup, setActiveGroup] = useState<string | null>(null);
 
@@ -64,7 +66,7 @@ export function BrowseCategories({
     <section id="categories" className="flex scroll-mt-20 flex-col gap-4">
       <h2 className="flex items-center gap-2 text-lg font-semibold">
         <LayoutGrid className="text-muted-foreground h-5 w-5" />
-        Browse by Category
+        {t("browseByCategory")}
       </h2>
 
       {/* Search */}
@@ -84,7 +86,7 @@ export function BrowseCategories({
           />
         </svg>
         <Input
-          placeholder="Search categories..."
+          placeholder={t("searchCategories")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="pl-9"
@@ -103,7 +105,7 @@ export function BrowseCategories({
                 : "bg-muted text-muted-foreground hover:bg-muted/80"
             )}
           >
-            All
+            {t("all")}
             <span
               className={cn(
                 "inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1 text-xs",
@@ -147,7 +149,7 @@ export function BrowseCategories({
       {/* Results count when filtering */}
       {isFiltering && (
         <p className="text-muted-foreground text-sm">
-          {filtered.length} categor{filtered.length !== 1 ? "ies" : "y"} found
+          {t("categoriesFound", { count: filtered.length })}
         </p>
       )}
 
@@ -169,7 +171,7 @@ export function BrowseCategories({
                     {category.name}
                   </h3>
                   <p className="text-muted-foreground text-sm">
-                    {category.toolCount} tools
+                    {t("tools", { count: category.toolCount })}
                   </p>
                 </div>
               </div>
@@ -182,8 +184,7 @@ export function BrowseCategories({
       ) : (
         <div className="py-12 text-center">
           <p className="text-muted-foreground">
-            No categories found. Try a different search term
-            {activeGroup ? " or group" : ""}.
+            {activeGroup ? t("noCategoriesFoundGroup") : t("noCategoriesFound")}
           </p>
         </div>
       )}

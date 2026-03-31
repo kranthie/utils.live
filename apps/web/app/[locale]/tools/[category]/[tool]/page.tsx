@@ -142,14 +142,32 @@ export default async function ToolPage({
   const toolName = toolMessages?.name ?? meta.name;
   const toolDescription = toolMessages?.description ?? meta.description;
 
-  // Get related tools and category info
-  const relatedTools = getRelatedTools(meta.id);
+  // Get related tools with localized names
+  const relatedToolsRaw = getRelatedTools(meta.id);
+  const relatedTools = relatedToolsRaw.map((rt) => {
+    const [rtCat, rtSlug] = rt.id.split("/");
+    const rtMessages = (
+      messages.toolMeta as
+        | Record<string, Record<string, Record<string, string>>>
+        | undefined
+    )?.[rtCat ?? ""]?.[rtSlug ?? ""];
+    return {
+      ...rt,
+      name: rtMessages?.name ?? rt.name,
+      description: rtMessages?.description ?? rt.description,
+    };
+  });
   const categoryInfo = getCategoryInfo(category);
+  const categoryMetaMessages = messages.categoryMeta as
+    | Record<string, Record<string, string>>
+    | undefined;
+  const localizedCategoryName =
+    categoryMetaMessages?.[category]?.name ?? categoryInfo?.name ?? category;
 
   // Generate breadcrumbs
   const breadcrumbs = getToolBreadcrumbs(
     category,
-    categoryInfo?.name ?? category,
+    localizedCategoryName,
     toolName
   );
 
@@ -158,7 +176,7 @@ export default async function ToolPage({
   const faqJsonLd = generateToolFAQJsonLd(
     toolName,
     toolDescription,
-    categoryInfo?.name ?? category
+    localizedCategoryName
   );
 
   return (
