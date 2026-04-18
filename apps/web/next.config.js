@@ -1,3 +1,4 @@
+const path = require("path");
 const createNextIntlPlugin = require("next-intl/plugin");
 const withNextIntl = createNextIntlPlugin();
 
@@ -19,7 +20,11 @@ const nextConfig = {
   // Next.js 16 uses `turbopack` (top-level) rather than `experimental.turbo`.
   // The next-intl plugin detects Turbopack via TURBOPACK env var which is not
   // set by Next.js 16 by default, so we wire the alias manually.
+  // `root` pins the workspace root so Turbopack doesn't walk up into a parent
+  // worktree's pnpm-workspace.yaml (happens when this repo is checked out
+  // under `.claude/worktrees/*`).
   turbopack: {
+    root: path.resolve(__dirname, "../.."),
     resolveAlias: {
       "next-intl/config": "./i18n/request.ts",
     },

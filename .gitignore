@@ -59,6 +59,7 @@ prisma/migrations/.migration_lock.toml
 .agents/
 .claude/commands/
 .claude/skills/
+.claude/settings.local.json
 .playwright/
 .playwright-mcp/
 .playwright-cli/
