@@ -38,7 +38,7 @@ catalogs:
       version: 4.3.6
 
 overrides:
-  lodash-es: ">=4.17.21"
+  lodash-es: ">=4.18.0"
 
 importers:
   .:
@@ -197,11 +197,11 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       next:
-        specifier: 16.2.1
-        version: 16.2.1(@babel/core@7.29.0)(@playwright/test@1.58.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: 16.2.3
+        version: 16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       next-intl:
         specifier: 3.26.5
-        version: 3.26.5(next@16.2.1(@babel/core@7.29.0)(@playwright/test@1.58.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)
+        version: 3.26.5(next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)
       next-themes:
         specifier: 0.4.0
         version: 0.4.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -1777,10 +1777,10 @@ packages:
         integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==,
       }
 
-  "@next/env@16.2.1":
+  "@next/env@16.2.3":
     resolution:
       {
-        integrity: sha512-n8P/HCkIWW+gVal2Z8XqXJ6aB3J0tuM29OcHpCsobWlChH/SITBs1DFBk/HajgrwDkqqBXPbuUuzgDvUekREPg==,
+        integrity: sha512-ZWXyj4uNu4GCWQw9cjRxWlbD+33mcDszIo9iQxFnBX3Wmgq9ulaSJcl6VhuWx5pCWqqD+9W6Wfz7N0lM5lYPMA==,
       }
 
   "@next/eslint-plugin-next@16.1.0":
@@ -1789,77 +1789,77 @@ packages:
         integrity: sha512-sooC/k0LCF4/jLXYHpgfzJot04lZQqsttn8XJpTguP8N3GhqXN3wSkh68no2OcZzS/qeGwKDFTqhZ8WofdXmmQ==,
       }
 
-  "@next/swc-darwin-arm64@16.2.1":
+  "@next/swc-darwin-arm64@16.2.3":
     resolution:
       {
-        integrity: sha512-BwZ8w8YTaSEr2HIuXLMLxIdElNMPvY9fLqb20LX9A9OMGtJilhHLbCL3ggyd0TwjmMcTxi0XXt+ur1vWUoxj2Q==,
+        integrity: sha512-u37KDKTKQ+OQLvY+z7SNXixwo4Q2/IAJFDzU1fYe66IbCE51aDSAzkNDkWmLN0yjTUh4BKBd+hb69jYn6qqqSg==,
       }
     engines: { node: ">= 10" }
     cpu: [arm64]
     os: [darwin]
 
-  "@next/swc-darwin-x64@16.2.1":
+  "@next/swc-darwin-x64@16.2.3":
     resolution:
       {
-        integrity: sha512-/vrcE6iQSJq3uL3VGVHiXeaKbn8Es10DGTGRJnRZlkNQQk3kaNtAJg8Y6xuAlrx/6INKVjkfi5rY0iEXorZ6uA==,
+        integrity: sha512-gHjL/qy6Q6CG3176FWbAKyKh9IfntKZTB3RY/YOJdDFpHGsUDXVH38U4mMNpHVGXmeYW4wj22dMp1lTfmu/bTQ==,
       }
     engines: { node: ">= 10" }
     cpu: [x64]
     os: [darwin]
 
-  "@next/swc-linux-arm64-gnu@16.2.1":
+  "@next/swc-linux-arm64-gnu@16.2.3":
     resolution:
       {
-        integrity: sha512-uLn+0BK+C31LTVbQ/QU+UaVrV0rRSJQ8RfniQAHPghDdgE+SlroYqcmFnO5iNjNfVWCyKZHYrs3Nl0mUzWxbBw==,
+        integrity: sha512-U6vtblPtU/P14Y/b/n9ZY0GOxbbIhTFuaFR7F4/uMBidCi2nSdaOFhA0Go81L61Zd6527+yvuX44T4ksnf8T+Q==,
       }
     engines: { node: ">= 10" }
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  "@next/swc-linux-arm64-musl@16.2.1":
+  "@next/swc-linux-arm64-musl@16.2.3":
     resolution:
       {
-        integrity: sha512-ssKq6iMRnHdnycGp9hCuGnXJZ0YPr4/wNwrfE5DbmvEcgl9+yv97/Kq3TPVDfYome1SW5geciLB9aiEqKXQjlQ==,
+        integrity: sha512-/YV0LgjHUmfhQpn9bVoGc4x4nan64pkhWR5wyEV8yCOfwwrH630KpvRg86olQHTwHIn1z59uh6JwKvHq1h4QEw==,
       }
     engines: { node: ">= 10" }
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  "@next/swc-linux-x64-gnu@16.2.1":
+  "@next/swc-linux-x64-gnu@16.2.3":
     resolution:
       {
-        integrity: sha512-HQm7SrHRELJ30T1TSmT706IWovFFSRGxfgUkyWJZF/RKBMdbdRWJuFrcpDdE5vy9UXjFOx6L3mRdqH04Mmx0hg==,
+        integrity: sha512-/HiWEcp+WMZ7VajuiMEFGZ6cg0+aYZPqCJD3YJEfpVWQsKYSjXQG06vJP6F1rdA03COD9Fef4aODs3YxKx+RDQ==,
       }
     engines: { node: ">= 10" }
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  "@next/swc-linux-x64-musl@16.2.1":
+  "@next/swc-linux-x64-musl@16.2.3":
     resolution:
       {
-        integrity: sha512-aV2iUaC/5HGEpbBkE+4B8aHIudoOy5DYekAKOMSHoIYQ66y/wIVeaRx8MS2ZMdxe/HIXlMho4ubdZs/J8441Tg==,
+        integrity: sha512-Kt44hGJfZSefebhk/7nIdivoDr3Ugp5+oNz9VvF3GUtfxutucUIHfIO0ZYO8QlOPDQloUVQn4NVC/9JvHRk9hw==,
       }
     engines: { node: ">= 10" }
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  "@next/swc-win32-arm64-msvc@16.2.1":
+  "@next/swc-win32-arm64-msvc@16.2.3":
     resolution:
       {
-        integrity: sha512-IXdNgiDHaSk0ZUJ+xp0OQTdTgnpx1RCfRTalhn3cjOP+IddTMINwA7DXZrwTmGDO8SUr5q2hdP/du4DcrB1GxA==,
+        integrity: sha512-O2NZ9ie3Tq6xj5Z5CSwBT3+aWAMW2PIZ4egUi9MaWLkwaehgtB7YZjPm+UpcNpKOme0IQuqDcor7BsW6QBiQBw==,
       }
     engines: { node: ">= 10" }
     cpu: [arm64]
     os: [win32]
 
-  "@next/swc-win32-x64-msvc@16.2.1":
+  "@next/swc-win32-x64-msvc@16.2.3":
     resolution:
       {
-        integrity: sha512-qvU+3a39Hay+ieIztkGSbF7+mccbbg1Tk25hc4JDylf8IHjYmY/Zm64Qq1602yPyQqvie+vf5T/uPwNxDNIoeg==,
+        integrity: sha512-Ibm29/GgB/ab5n7XKqlStkm54qqZE8v2FnijUPBgrd67FWrac45o/RsNlaOWjme/B5UqeWt/8KM4aWBwA1D2Kw==,
       }
     engines: { node: ">= 10" }
     cpu: [x64]
@@ -6716,10 +6716,10 @@ packages:
       }
     engines: { node: ">=10" }
 
-  lodash-es@4.17.22:
+  lodash-es@4.18.1:
     resolution:
       {
-        integrity: sha512-XEawp1t0gxSi9x01glktRZ5HDy0HXqrM0x5pXQM98EaI0NxO6jVM7omDOxsuEo5UIASAnm2bRp1Jt/e0a2XU8Q==,
+        integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==,
       }
 
   lodash.merge@4.6.2:
@@ -7269,10 +7269,10 @@ packages:
       react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
       react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
 
-  next@16.2.1:
+  next@16.2.3:
     resolution:
       {
-        integrity: sha512-VaChzNL7o9rbfdt60HUj8tev4m6d7iC1igAy157526+cJlXOQu5LzsBXNT+xaJnTP/k+utSX5vMv7m0G+zKH+Q==,
+        integrity: sha512-9V3zV4oZFza3PVev5/poB9g0dEafVcgNyQ8eTRop8GvxZjV2G15FC5ARuG1eFD42QgeYkzJBJzHghNP8Ad9xtA==,
       }
     engines: { node: ">=20.9.0" }
     hasBin: true
@@ -9493,12 +9493,12 @@ snapshots:
     dependencies:
       "@chevrotain/gast": 11.0.3
       "@chevrotain/types": 11.0.3
-      lodash-es: 4.17.22
+      lodash-es: 4.18.1
 
   "@chevrotain/gast@11.0.3":
     dependencies:
       "@chevrotain/types": 11.0.3
-      lodash-es: 4.17.22
+      lodash-es: 4.18.1
 
   "@chevrotain/regexp-to-ast@11.0.3": {}
 
@@ -10000,34 +10000,34 @@ snapshots:
       "@tybys/wasm-util": 0.10.1
     optional: true
 
-  "@next/env@16.2.1": {}
+  "@next/env@16.2.3": {}
 
   "@next/eslint-plugin-next@16.1.0":
     dependencies:
       fast-glob: 3.3.1
 
-  "@next/swc-darwin-arm64@16.2.1":
+  "@next/swc-darwin-arm64@16.2.3":
     optional: true
 
-  "@next/swc-darwin-x64@16.2.1":
+  "@next/swc-darwin-x64@16.2.3":
     optional: true
 
-  "@next/swc-linux-arm64-gnu@16.2.1":
+  "@next/swc-linux-arm64-gnu@16.2.3":
     optional: true
 
-  "@next/swc-linux-arm64-musl@16.2.1":
+  "@next/swc-linux-arm64-musl@16.2.3":
     optional: true
 
-  "@next/swc-linux-x64-gnu@16.2.1":
+  "@next/swc-linux-x64-gnu@16.2.3":
     optional: true
 
-  "@next/swc-linux-x64-musl@16.2.1":
+  "@next/swc-linux-x64-musl@16.2.3":
     optional: true
 
-  "@next/swc-win32-arm64-msvc@16.2.1":
+  "@next/swc-win32-arm64-msvc@16.2.3":
     optional: true
 
-  "@next/swc-win32-x64-msvc@16.2.1":
+  "@next/swc-win32-x64-msvc@16.2.3":
     optional: true
 
   "@noble/ciphers@2.1.1": {}
@@ -11535,7 +11535,7 @@ snapshots:
   chevrotain-allstar@0.3.1(chevrotain@11.0.3):
     dependencies:
       chevrotain: 11.0.3
-      lodash-es: 4.17.22
+      lodash-es: 4.18.1
 
   chevrotain@11.0.3:
     dependencies:
@@ -11544,7 +11544,7 @@ snapshots:
       "@chevrotain/regexp-to-ast": 11.0.3
       "@chevrotain/types": 11.0.3
       "@chevrotain/utils": 11.0.3
-      lodash-es: 4.17.22
+      lodash-es: 4.18.1
 
   chokidar@4.0.3:
     dependencies:
@@ -11861,7 +11861,7 @@ snapshots:
   dagre-d3-es@7.0.11:
     dependencies:
       d3: 7.9.0
-      lodash-es: 4.17.22
+      lodash-es: 4.18.1
 
   damerau-levenshtein@1.0.8: {}
 
@@ -13155,7 +13155,7 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
-  lodash-es@4.17.22: {}
+  lodash-es@4.18.1: {}
 
   lodash.merge@4.6.2: {}
 
@@ -13397,7 +13397,7 @@ snapshots:
       dompurify: 3.3.3
       katex: 0.16.27
       khroma: 2.1.0
-      lodash-es: 4.17.22
+      lodash-es: 4.18.1
       marked: 16.4.2
       roughjs: 4.6.6
       stylis: 4.3.6
@@ -13650,11 +13650,11 @@ snapshots:
 
   negotiator@1.0.0: {}
 
-  next-intl@3.26.5(next@16.2.1(@babel/core@7.29.0)(@playwright/test@1.58.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0):
+  next-intl@3.26.5(next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0):
     dependencies:
       "@formatjs/intl-localematcher": 0.5.4
       negotiator: 1.0.0
-      next: 16.2.1(@babel/core@7.29.0)(@playwright/test@1.58.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      next: 16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react: 19.2.0
       use-intl: 3.26.5(react@19.2.0)
 
@@ -13663,9 +13663,9 @@ snapshots:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
-  next@16.2.1(@babel/core@7.29.0)(@playwright/test@1.58.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  next@16.2.3(@babel/core@7.29.0)(@playwright/test@1.58.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
-      "@next/env": 16.2.1
+      "@next/env": 16.2.3
       "@swc/helpers": 0.5.15
       baseline-browser-mapping: 2.10.12
       caniuse-lite: 1.0.30001763
@@ -13674,14 +13674,14 @@ snapshots:
       react-dom: 19.2.0(react@19.2.0)
       styled-jsx: 5.1.6(@babel/core@7.29.0)(react@19.2.0)
     optionalDependencies:
-      "@next/swc-darwin-arm64": 16.2.1
-      "@next/swc-darwin-x64": 16.2.1
-      "@next/swc-linux-arm64-gnu": 16.2.1
-      "@next/swc-linux-arm64-musl": 16.2.1
-      "@next/swc-linux-x64-gnu": 16.2.1
-      "@next/swc-linux-x64-musl": 16.2.1
-      "@next/swc-win32-arm64-msvc": 16.2.1
-      "@next/swc-win32-x64-msvc": 16.2.1
+      "@next/swc-darwin-arm64": 16.2.3
+      "@next/swc-darwin-x64": 16.2.3
+      "@next/swc-linux-arm64-gnu": 16.2.3
+      "@next/swc-linux-arm64-musl": 16.2.3
+      "@next/swc-linux-x64-gnu": 16.2.3
+      "@next/swc-linux-x64-musl": 16.2.3
+      "@next/swc-win32-arm64-msvc": 16.2.3
+      "@next/swc-win32-x64-msvc": 16.2.3
       "@playwright/test": 1.58.0
       sharp: 0.34.5
     transitivePeerDependencies:
