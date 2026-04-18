@@ -171,7 +171,7 @@ export function ToolPageClient({
         inputStr = JSON.stringify(example.input, null, 2);
       }
       setExampleInput((prev) => ({ value: inputStr, seq: prev.seq + 1 }));
-      toast.success("Example loaded");
+      toast.success(t("exampleLoaded"));
     },
     [optionsStorageKey, inputStorageKey, variant, inputSchema, t]
   );

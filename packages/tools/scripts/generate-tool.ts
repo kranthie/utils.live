@@ -210,8 +210,8 @@ function generateTestFile(options: ToolOptions): string {
   const optionsTest = noOptions
     ? ""
     : `
-    it("should handle options", () => {
-      const result = executeTool(
+    it("should handle options", async () => {
+      const result = await executeTool(
         ${toolName},
         { input: "test" },
         { /* options */ }
@@ -227,15 +227,15 @@ import { executeTool } from "../../../src/core/executor";
 
 describe("${toolName}", () => {
   describe("execute", () => {
-    it("should process valid input", () => {
-      const result = executeTool(${toolName}, { input: "test" });
+    it("should process valid input", async () => {
+      const result = await executeTool(${toolName}, { input: "test" });
 
       expect(result.success).toBe(true);
       expect(result.data?.output).toBeDefined();
     });
 ${optionsTest}
-    it("should return error for empty input", () => {
-      const result = executeTool(${toolName}, { input: "" });
+    it("should return error for empty input", async () => {
+      const result = await executeTool(${toolName}, { input: "" });
 
       // Adjust based on tool behavior
       expect(result.success).toBe(true);

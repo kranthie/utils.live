@@ -16,6 +16,14 @@ interface HtmlPreviewProps {
    */
   sandboxed?: boolean;
   /**
+   * Whether the sandbox permits script execution and form submission.
+   * Turn off for tools that generate static content (SVG, meta tags, etc.)
+   * so that any sanitizer bypass can't escalate to script execution or
+   * external form posts.
+   * @default false
+   */
+  allowScripts?: boolean;
+  /**
    * Whether to show the toolbar
    * @default true
    */
@@ -29,6 +37,7 @@ interface HtmlPreviewProps {
 export function HtmlPreview({
   content,
   sandboxed = true,
+  allowScripts = false,
   showToolbar = true,
   className,
 }: HtmlPreviewProps): React.ReactElement {
@@ -67,9 +76,13 @@ export function HtmlPreview({
     setIsFullscreen(!isFullscreen);
   };
 
-  // Build sandbox attribute - same-origin permission is intentionally excluded
+  // Build sandbox attribute - same-origin permission is intentionally excluded.
+  // Script/form execution is opt-in; static-content tools default to the
+  // minimal permissions (popups only) so a sanitizer bypass can't pivot.
   const sandboxValue = sandboxed
-    ? "allow-scripts allow-popups allow-forms"
+    ? allowScripts
+      ? "allow-scripts allow-popups allow-forms"
+      : "allow-popups"
     : undefined;
 
   return (

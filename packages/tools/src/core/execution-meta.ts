@@ -72,11 +72,15 @@ export function getByteSize(value: unknown): number {
     return new TextEncoder().encode(value).length;
   }
 
-  // For objects, stringify and measure
+  // For objects, stringify and measure. If the value cannot be serialized
+  // (circular reference, BigInt, etc.) or is so large that stringification
+  // itself would blow memory, fail safe by reporting Infinity so the caller's
+  // 5 MB input-size guard rejects the input rather than silently admitting it.
   try {
     const str = JSON.stringify(value);
+    if (str === undefined) return Number.POSITIVE_INFINITY;
     return new TextEncoder().encode(str).length;
   } catch {
-    return 0;
+    return Number.POSITIVE_INFINITY;
   }
 }

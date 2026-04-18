@@ -123,6 +123,7 @@
       "shortcutClear": "Clear / Reset",
       "undoLabel": "Undo",
       "exampleLoaded": "Example loaded",
+      "inputPlaceholder": "Enter {toolName} input...",
       "inputLabel": "Input",
       "outputLabel": "Output",
       "configureLabel": "Configure",
@@ -349,6 +350,13 @@
         "successDescription": "Thank you for reaching out. We'll get back to you as soon as possible, usually within 24 hours.",
         "sendAnother": "Send Another Message",
         "errorMessage": "Something went wrong. Please try again.",
+        "errors": {
+          "fixBeforeSubmit": "Please fix the fields below before submitting.",
+          "nameRequired": "Please enter your name.",
+          "emailRequired": "Please enter your email address.",
+          "emailInvalid": "Please enter a valid email address.",
+          "messageRequired": "Please enter a message."
+        },
         "namePlaceholder": "Your name",
         "nameLabel": "Name",
         "emailLabel": "Email",

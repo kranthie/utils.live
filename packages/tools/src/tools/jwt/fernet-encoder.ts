@@ -7,7 +7,7 @@ function base64UrlEncode(data: Uint8Array): string {
   for (let i = 0; i < data.length; i++) {
     binary += String.fromCharCode(data[i]!);
   }
-  return btoa(binary);
+  return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_");
 }
 
 const inputSchema = z.object({

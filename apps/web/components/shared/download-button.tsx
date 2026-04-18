@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Download, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -49,6 +49,13 @@ export function DownloadButton({
   className,
 }: DownloadButtonProps): React.ReactElement {
   const [downloaded, setDownloaded] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current !== null) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const handleDownload = (): void => {
     const blob =
@@ -68,8 +75,10 @@ export function DownloadButton({
     setDownloaded(true);
     onDownload?.();
 
-    setTimeout(() => {
+    if (timerRef.current !== null) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
       setDownloaded(false);
+      timerRef.current = null;
     }, 2000);
   };
 

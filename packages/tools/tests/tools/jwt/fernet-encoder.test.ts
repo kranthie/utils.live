@@ -34,8 +34,9 @@ describe("Fernet Encoder", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       const token = String((result.data as Record<string, unknown>).token);
-      // Decode base64 token
-      const binary = atob(token);
+      // Decode url-safe base64 token (Fernet spec: + → -, / → _)
+      const stdB64 = token.replace(/-/g, "+").replace(/_/g, "/");
+      const binary = atob(stdB64);
       const bytes = new Uint8Array(binary.length);
       for (let i = 0; i < binary.length; i++) {
         bytes[i] = binary.charCodeAt(i);
@@ -48,7 +49,7 @@ describe("Fernet Encoder", () => {
     }
   });
 
-  it("should use a provided key", async () => {
+  it("should use a provided key (accepts either url-safe or standard base64)", async () => {
     // Generate a 32-byte key in base64
     const keyBytes = new Uint8Array(32);
     crypto.getRandomValues(keyBytes);
@@ -64,8 +65,11 @@ describe("Fernet Encoder", () => {
     });
     expect(result.success).toBe(true);
     if (result.success) {
-      // The returned key should match the provided key
-      expect((result.data as Record<string, unknown>).key).toBe(keyBase64);
+      // The output key is emitted as url-safe base64 per Fernet spec.
+      // Compare after normalizing to standard base64.
+      const emittedKey = String((result.data as Record<string, unknown>).key);
+      const emittedStd = emittedKey.replace(/-/g, "+").replace(/_/g, "/");
+      expect(emittedStd).toBe(keyBase64);
     }
   });
 });

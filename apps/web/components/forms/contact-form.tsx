@@ -45,13 +45,34 @@ export function ContactForm({
     message: "",
   });
   const [status, setStatus] = useState<FormStatus>("idle");
+  const [fieldErrors, setFieldErrors] = useState<Partial<ContactFormData>>({});
+  const [validationMessage, setValidationMessage] = useState<string>("");
+
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function validate(): Partial<ContactFormData> {
+    const errors: Partial<ContactFormData> = {};
+    if (!formData.name.trim()) errors.name = t("errors.nameRequired");
+    if (!formData.email.trim()) {
+      errors.email = t("errors.emailRequired");
+    } else if (!EMAIL_RE.test(formData.email.trim())) {
+      errors.email = t("errors.emailInvalid");
+    }
+    if (!formData.message.trim()) errors.message = t("errors.messageRequired");
+    return errors;
+  }
 
   const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.message) {
+    const errors = validate();
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      setValidationMessage(t("errors.fixBeforeSubmit"));
       return;
     }
+    setFieldErrors({});
+    setValidationMessage("");
 
     setStatus("submitting");
 
@@ -121,10 +142,14 @@ export function ContactForm({
       onSubmit={(e) => void handleSubmit(e)}
       className={cn("space-y-6", className)}
     >
-      {status === "error" && (
-        <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-800 dark:bg-red-950/30 dark:text-red-400">
+      {(status === "error" || validationMessage) && (
+        <div
+          role="alert"
+          aria-live="assertive"
+          className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-800 dark:bg-red-950/30 dark:text-red-400"
+        >
           <AlertCircle className="h-4 w-4 shrink-0" />
-          {t("errorMessage")}
+          {validationMessage || t("errorMessage")}
         </div>
       )}
 
@@ -135,7 +160,12 @@ export function ContactForm({
           placeholder={t("namePlaceholder")}
           required
           value={formData.name}
-          onChange={(value) => setFormData({ ...formData, name: value })}
+          onChange={(value) => {
+            setFormData({ ...formData, name: value });
+            if (fieldErrors.name)
+              setFieldErrors({ ...fieldErrors, name: undefined });
+          }}
+          error={fieldErrors.name}
           disabled={status === "submitting"}
         />
         <TextInput
@@ -145,7 +175,12 @@ export function ContactForm({
           placeholder={t("emailPlaceholder")}
           required
           value={formData.email}
-          onChange={(value) => setFormData({ ...formData, email: value })}
+          onChange={(value) => {
+            setFormData({ ...formData, email: value });
+            if (fieldErrors.email)
+              setFieldErrors({ ...fieldErrors, email: undefined });
+          }}
+          error={fieldErrors.email}
           disabled={status === "submitting"}
         />
       </div>
@@ -167,7 +202,12 @@ export function ContactForm({
         required
         minRows={6}
         value={formData.message}
-        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+        onChange={(e) => {
+          setFormData({ ...formData, message: e.target.value });
+          if (fieldErrors.message)
+            setFieldErrors({ ...fieldErrors, message: undefined });
+        }}
+        error={fieldErrors.message}
         disabled={status === "submitting"}
       />
 

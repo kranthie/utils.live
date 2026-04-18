@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LucideIcon } from "@/components/shared/lucide-icon";
@@ -68,7 +68,7 @@ export function CategoryShowcase({
           {t("subheading")}
         </p>
 
-        <motion.div
+        <m.div
           className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
           variants={staggerContainer}
           initial="hidden"
@@ -76,7 +76,7 @@ export function CategoryShowcase({
           viewport={VIEWPORT_ONCE}
         >
           {displayCategories.map((category) => (
-            <motion.div key={category.id} variants={fadeInUp}>
+            <m.div key={category.id} variants={fadeInUp}>
               <Link href={category.href}>
                 <Card className="group bg-card/80 hover:bg-card hover:ring-brand/20 h-full border-transparent shadow-sm transition-all hover:shadow-md hover:ring-1">
                   <CardHeader className="pb-2">
@@ -101,9 +101,9 @@ export function CategoryShowcase({
                   </CardContent>
                 </Card>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
 
         <div className="mt-8 flex items-center justify-center gap-6">
           <Link

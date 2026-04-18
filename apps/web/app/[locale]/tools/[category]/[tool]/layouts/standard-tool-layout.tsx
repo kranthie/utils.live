@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import type { ToolMeta, ToolUIConfig } from "@utils-live/tools/constants";
+import { useTranslations } from "next-intl";
 import { ToolLayout } from "@/components/tools/tool-layout";
 import { InputPanel } from "@/components/editor/input-panel";
 import { OutputPanel } from "@/components/editor/output-panel";
@@ -42,6 +43,7 @@ export function StandardToolLayout({
   onCopy,
   onExecuteReady,
 }: StandardToolLayoutProps): React.ReactElement {
+  const t = useTranslations("tools.shell");
   const isMobile = useIsMobile();
   const [input, setInput] = useState("");
 
@@ -149,6 +151,17 @@ export function StandardToolLayout({
     [reset]
   );
 
+  // Compute the download filename once per result so the timestamp reflects
+  // when the output was produced, not when the component last rendered.
+  // Intentional dep on `result`: the identity changes each execution, which
+  // is when we want a fresh timestamp. `result` isn't otherwise read here.
+  const downloadFilename = useMemo(() => {
+    void result;
+    const slug = tool.name.toLowerCase().replace(/\s+/g, "-");
+    const ext = getFileExtension(ui.outputLanguage ?? ui.inputLanguage);
+    return `${slug}-output-${Date.now()}${ext}`;
+  }, [tool.name, ui.outputLanguage, ui.inputLanguage, result]);
+
   return (
     <div
       className={cn(
@@ -171,7 +184,9 @@ export function StandardToolLayout({
           value={input}
           onChange={handleInputChange}
           language={ui.inputLanguage}
-          placeholder={`Enter ${tool.name.toLowerCase()} input...`}
+          placeholder={t("inputPlaceholder", {
+            toolName: tool.name.toLowerCase(),
+          })}
           allowFileUpload={ui.allowFileUpload}
           acceptedFileTypes={ui.acceptedFileTypes}
           maxFileSize={ui.maxFileSize}
@@ -185,7 +200,8 @@ export function StandardToolLayout({
           language={ui.outputLanguage ?? ui.inputLanguage}
           isLoading={isExecuting}
           isAutoMode
-          downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output-${Date.now()}${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
+          htmlPreviewAllowScripts={ui.htmlPreviewAllowScripts}
+          downloadFilename={downloadFilename}
           onCopy={onCopy}
         />
       </ToolLayout>

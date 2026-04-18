@@ -85,6 +85,27 @@ export async function executeTool<T = unknown>(
   const startTime = performance.now();
   const inputSizeBytes = getByteSize(input);
 
+  // Pre-execution input size check before any validation to prevent
+  // Zod from allocating/parsing pathologically-large inputs.
+  const MAX_INPUT_SIZE_BYTES = 5 * 1024 * 1024;
+  if (inputSizeBytes > MAX_INPUT_SIZE_BYTES) {
+    return {
+      success: false,
+      error: createToolError({
+        code: EXEC_FAILED,
+        message: `Input too large (${(inputSizeBytes / 1024 / 1024).toFixed(1)}MB). Maximum allowed: 5MB.`,
+      }),
+      meta: createExecutionMeta({
+        startTime,
+        endTime: performance.now(),
+        inputSizeBytes,
+        outputSizeBytes: 0,
+        tier: tool.meta.tier,
+        baseCredits: tool.meta.credits?.base,
+      }),
+    };
+  }
+
   // Validate input
   const inputResult = validateInput(tool.inputSchema, input);
   if (!inputResult.success) {
@@ -108,27 +129,6 @@ export async function executeTool<T = unknown>(
     return {
       success: false,
       error: optionsResult.error,
-      meta: createExecutionMeta({
-        startTime,
-        endTime: performance.now(),
-        inputSizeBytes,
-        outputSizeBytes: 0,
-        tier: tool.meta.tier,
-        baseCredits: tool.meta.credits?.base,
-      }),
-    };
-  }
-
-  // Pre-execution input size check to prevent memory exhaustion
-  // Reject inputs larger than 5MB before tool execution
-  const MAX_INPUT_SIZE_BYTES = 5 * 1024 * 1024;
-  if (inputSizeBytes > MAX_INPUT_SIZE_BYTES) {
-    return {
-      success: false,
-      error: createToolError({
-        code: EXEC_FAILED,
-        message: `Input too large (${(inputSizeBytes / 1024 / 1024).toFixed(1)}MB). Maximum allowed: 5MB.`,
-      }),
       meta: createExecutionMeta({
         startTime,
         endTime: performance.now(),

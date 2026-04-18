@@ -71,7 +71,7 @@ export const jwtDecoder = defineTool({
     id: "jwt/jwt-decoder",
     name: "JWT Decoder",
     description:
-      "Free online JWT decoder — decode JWT tokens into header, payload, and signature instantly in your browser. No data is stored. Parses base64url-encoded header and payload claims, displays the raw signature.",
+      "Free online JWT decoder — decode JWT tokens into header, payload, and signature instantly in your browser. No data is stored. Parses base64url-encoded header and payload claims, displays the raw signature. Note: signatures are NOT verified — use the JWT Debugger to check expiry and algorithm.",
     category: "jwt",
     tier: ToolTier.CLIENT,
     keywords: [

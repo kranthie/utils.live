@@ -315,4 +315,74 @@ describe("executeTool", () => {
       expect(result.error.code).toBe("INPUT_INVALID_TYPE");
     }
   });
+
+  describe("input size guard", () => {
+    it("should reject inputs larger than 5MB with EXEC_FAILED", async () => {
+      const oversized = "x".repeat(5 * 1024 * 1024 + 10);
+      const result = await executeTool(echoTool, { message: oversized });
+
+      expect(result.success).toBe(false);
+      if (!result.success) {
+        expect(result.error.code).toBe("EXEC_FAILED");
+        expect(result.error.message).toContain("Input too large");
+      }
+    });
+
+    it("should reject unserializable inputs (circular refs) as too large", async () => {
+      // JSON.stringify throws on circular refs; getByteSize returns Infinity
+      // so the size guard rejects the input before Zod ever sees it.
+      type Circ = { self?: Circ };
+      const circular: Circ = {};
+      circular.self = circular;
+      const result = await executeTool(echoTool, circular);
+
+      expect(result.success).toBe(false);
+      if (!result.success) {
+        expect(result.error.code).toBe("EXEC_FAILED");
+      }
+    });
+  });
+
+  describe("timeout enforcement", () => {
+    it("should return EXEC_TIMEOUT when an async tool exceeds the tier budget", async () => {
+      const stuckTool = defineTool({
+        meta: {
+          id: "test/stuck",
+          name: "Stuck",
+          description: "Never resolves",
+          category: "test",
+          tier: ToolTier.CLIENT,
+          keywords: ["stuck"],
+        },
+        inputSchema: z.object({ input: z.string() }),
+        outputSchema: z.object({ output: z.string() }),
+        // Returns a never-resolving promise; Promise.race should lose to
+        // the 5 s timeout. We don't need vi.useFakeTimers because the
+        // timeout promise is built from setTimeout, which vitest advances
+        // only if fake timers are active. So set a lower timeout via a
+        // custom tier? Instead, assert behavior with a tiny stub tool.
+        execute: () => new Promise(() => {}),
+      });
+
+      // Install a short fake timeout by racing ourselves. Safer approach:
+      // just wait using vi's fake timers. See vi docs.
+      const { vi } = await import("vitest");
+      vi.useFakeTimers();
+      try {
+        const promise = executeTool(stuckTool, { input: "x" });
+        await vi.advanceTimersByTimeAsync(5001);
+        const result = await promise;
+        expect(result.success).toBe(false);
+        if (!result.success) {
+          expect(result.error.code).toBe("EXEC_TIMEOUT");
+          expect(
+            (result.error.details as { timeoutMs?: number } | undefined)
+              ?.timeoutMs
+          ).toBe(5000);
+        }
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+  });
 });

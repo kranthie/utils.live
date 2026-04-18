@@ -46,10 +46,7 @@ export function LocaleSwitcher(): React.ReactElement {
           </span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent
-        align="end"
-        onCloseAutoFocus={(e) => e.preventDefault()}
-      >
+      <DropdownMenuContent align="end">
         {locales.map((l) => (
           <DropdownMenuItem
             key={l}

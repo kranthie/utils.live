@@ -88,6 +88,7 @@ export function HeroSection({
           type="button"
           onClick={handleSearchClick}
           aria-label={t("searchAriaLabel")}
+          aria-haspopup="dialog"
           className={cn(
             "group mt-2 flex w-full max-w-xl items-center gap-3",
             "h-13 rounded-xl border px-4 sm:h-14 sm:px-5",

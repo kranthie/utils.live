@@ -3,7 +3,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import { Link } from "@/i18n/navigation";
 import { Search, ArrowRight } from "lucide-react";
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useKeyboard } from "@/components/providers/keyboard-provider";
 import { fadeInUp, staggerContainer, VIEWPORT_ONCE } from "@/lib/animation";
@@ -69,7 +69,7 @@ export function CTASection({
   return (
     <section ref={ref} className={cn("py-12 sm:py-16", className)}>
       <div className="container">
-        <motion.div
+        <m.div
           className="mx-auto max-w-3xl text-center"
           variants={staggerContainer}
           initial="hidden"
@@ -77,7 +77,7 @@ export function CTASection({
           viewport={VIEWPORT_ONCE}
         >
           {/* Inline stats */}
-          <motion.div
+          <m.div
             className="mb-6 flex items-center justify-center gap-8 sm:gap-12"
             variants={fadeInUp}
           >
@@ -113,22 +113,19 @@ export function CTASection({
                 {t("freeLabel")}
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
-          <motion.h2
-            className="text-2xl font-bold sm:text-3xl"
-            variants={fadeInUp}
-          >
+          <m.h2 className="text-2xl font-bold sm:text-3xl" variants={fadeInUp}>
             {t("heading", { toolCount })}
-          </motion.h2>
-          <motion.p
+          </m.h2>
+          <m.p
             className="text-muted-foreground mt-3 text-lg"
             variants={fadeInUp}
           >
             {t("subheading")}
-          </motion.p>
+          </m.p>
 
-          <motion.div
+          <m.div
             className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
             variants={fadeInUp}
           >
@@ -147,8 +144,8 @@ export function CTASection({
               {t("browseAllTools")}
               <ArrowRight className="h-4 w-4" />
             </Link>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   );

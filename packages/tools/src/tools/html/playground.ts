@@ -134,6 +134,7 @@ export const htmlPlayground = defineTool({
     ui: {
       inputLanguage: "html",
       outputRenderer: "html",
+      htmlPreviewAllowScripts: true,
     },
   },
   inputSchema,

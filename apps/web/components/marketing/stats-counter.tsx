@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useCallback, useEffect } from "react";
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { fadeInUp, staggerContainer, VIEWPORT_ONCE } from "@/lib/animation";
 import { cn } from "@/lib/utils";
 
@@ -57,7 +57,7 @@ function StatCard({
   }, [isInView]);
 
   return (
-    <motion.div ref={ref} variants={fadeInUp}>
+    <m.div ref={ref} variants={fadeInUp}>
       <div className="bg-card rounded-2xl p-8 text-center">
         <div
           className="text-brand text-5xl font-bold tracking-tight sm:text-6xl"
@@ -67,7 +67,7 @@ function StatCard({
         </div>
         <div className="text-muted-foreground mt-2 text-lg">{label}</div>
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -88,7 +88,7 @@ export function StatsCounter({
   return (
     <section className={cn("py-16 sm:py-20", className)}>
       <div className="container">
-        <motion.div
+        <m.div
           className="grid gap-6 sm:grid-cols-3"
           variants={staggerContainer}
           initial="hidden"
@@ -106,7 +106,7 @@ export function StatsCounter({
             onVisible={categoryCounter.start}
           />
           <StatCard value="100%" label="Free Forever" />
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

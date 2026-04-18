@@ -134,7 +134,8 @@
       "toolNotFound": {
         "title": "도구를 찾을 수 없음",
         "description": "요청한 도구를 찾을 수 없습니다."
-      }
+      },
+      "inputPlaceholder": "Enter {toolName} input..."
     },
     "search": {
       "heading": "도구 탐색",
@@ -366,6 +367,13 @@
           "support": "기술 지원",
           "partnership": "파트너십",
           "other": "기타"
+        },
+        "errors": {
+          "fixBeforeSubmit": "Please fix the fields below before submitting.",
+          "nameRequired": "Please enter your name.",
+          "emailRequired": "Please enter your email address.",
+          "emailInvalid": "Please enter a valid email address.",
+          "messageRequired": "Please enter a message."
         }
       }
     }

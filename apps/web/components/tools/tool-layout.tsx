@@ -70,9 +70,15 @@ export function ToolLayout({
 
   const splitStorageKey = `utils.live:panel-split:${tool.id}:${orientation}`;
 
+  // Read localStorage lazily in the initializer, but guard against SSR where
+  // `window` is undefined. On the server the default is used; on the client
+  // the persisted value is read synchronously before first paint, avoiding
+  // both a hydration mismatch (because the tool page is client-rendered for
+  // hydration anyway) and a cascading-setState-in-effect warning.
   const [splitRatio, setSplitRatio] = useState(() => {
+    if (typeof window === "undefined") return defaultSplitRatio;
     try {
-      const saved = localStorage.getItem(splitStorageKey);
+      const saved = window.localStorage.getItem(splitStorageKey);
       if (saved) {
         const parsed = parseFloat(saved);
         if (!isNaN(parsed) && parsed >= 0.2 && parsed <= 0.8) return parsed;

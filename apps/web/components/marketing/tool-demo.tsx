@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { m, useInView, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { fadeIn, VIEWPORT_ONCE } from "@/lib/animation";
+import { usePrefersReducedMotion } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { QRCodeDemo, MermaidDemo } from "./demo-visuals";
 
@@ -235,6 +236,7 @@ function useTypewriter(
   const [isRunning, setIsRunning] = useState(false);
   const textRef = useRef(text);
   const speedRef = useRef(speed);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   textRef.current = text;
   speedRef.current = speed;
@@ -254,6 +256,15 @@ function useTypewriter(
   useEffect(() => {
     if (!isRunning) return;
 
+    // Respect prefers-reduced-motion: show the full string immediately
+    // instead of running a 25-60ms-per-char setInterval animation.
+    if (prefersReducedMotion) {
+      setDisplayed(textRef.current);
+      setIsDone(true);
+      setIsRunning(false);
+      return;
+    }
+
     let i = 0;
     const interval = setInterval(() => {
       i++;
@@ -266,7 +277,7 @@ function useTypewriter(
     }, speedRef.current);
 
     return () => clearInterval(interval);
-  }, [isRunning]);
+  }, [isRunning, prefersReducedMotion]);
 
   return { displayed, isDone, start, reset };
 }
@@ -303,7 +314,11 @@ function GlassPanel({
         ) : (
           <pre className="break-all whitespace-pre-wrap">
             {highlight ? highlightJson(content) : content}
-            {!isOutput && <span className="text-brand animate-pulse">|</span>}
+            {!isOutput && (
+              <span className="text-brand animate-pulse" aria-hidden="true">
+                |
+              </span>
+            )}
           </pre>
         )}
       </div>
@@ -384,7 +399,7 @@ export function ToolDemo({
   return (
     <section ref={ref} className={cn("py-12 sm:py-16", className)}>
       <div className="container max-w-4xl">
-        <motion.div
+        <m.div
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
@@ -400,7 +415,7 @@ export function ToolDemo({
           {/* Tool name tab */}
           <div className="mb-4 flex items-center gap-2">
             <AnimatePresence mode="wait">
-              <motion.div
+              <m.div
                 key={demo.toolName}
                 initial={{ opacity: 0, y: 4 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -409,7 +424,7 @@ export function ToolDemo({
                 className="bg-brand/10 text-brand inline-flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium"
               >
                 {demo.toolName}
-              </motion.div>
+              </m.div>
             </AnimatePresence>
           </div>
 
@@ -444,7 +459,7 @@ export function ToolDemo({
               </GlassPanel>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

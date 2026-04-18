@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Zap, Shield, Globe, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { fadeInUp, staggerContainer, VIEWPORT_ONCE } from "@/lib/animation";
@@ -46,7 +46,7 @@ export function FeatureCards({
         <p className="text-brand mb-3 text-center text-xs font-semibold tracking-widest uppercase">
           {t("eyebrow")}
         </p>
-        <motion.h2
+        <m.h2
           className="mb-8 text-center text-2xl font-bold sm:text-3xl"
           variants={fadeInUp}
           initial="hidden"
@@ -54,8 +54,8 @@ export function FeatureCards({
           viewport={VIEWPORT_ONCE}
         >
           {t("heading")}
-        </motion.h2>
-        <motion.div
+        </m.h2>
+        <m.div
           className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
           variants={staggerContainer}
           initial="hidden"
@@ -63,7 +63,7 @@ export function FeatureCards({
           viewport={VIEWPORT_ONCE}
         >
           {FEATURES.map((feature) => (
-            <motion.div
+            <m.div
               key={feature.title}
               variants={fadeInUp}
               className="text-center"
@@ -73,9 +73,9 @@ export function FeatureCards({
               </div>
               <h3 className="mb-2 text-lg font-semibold">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

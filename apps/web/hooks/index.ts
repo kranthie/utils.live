@@ -11,7 +11,5 @@ export {
 } from "./use-media-query";
 export { useKeyboardShortcut } from "./use-keyboard-shortcut";
 export { useToolExecution } from "./use-tool-execution";
-export { useWorker, supportsWorkers, createWorkerFactory } from "./use-worker";
-export { useWorkerToolExecution } from "./use-worker-tool-execution";
 export { useToolShortcuts } from "./use-tool-shortcuts";
 export { useAnalytics } from "./use-analytics";

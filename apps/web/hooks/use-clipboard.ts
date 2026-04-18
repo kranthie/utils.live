@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 interface UseClipboardResult {
   copy: (text: string) => Promise<boolean>;
@@ -18,6 +18,13 @@ interface UseClipboardResult {
 export function useClipboard(resetDelay: number = 2000): UseClipboardResult {
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState<Error | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current !== null) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const copy = useCallback(
     async (text: string): Promise<boolean> => {
@@ -26,8 +33,10 @@ export function useClipboard(resetDelay: number = 2000): UseClipboardResult {
         setCopied(true);
         setError(null);
 
-        setTimeout(() => {
+        if (timerRef.current !== null) clearTimeout(timerRef.current);
+        timerRef.current = setTimeout(() => {
           setCopied(false);
+          timerRef.current = null;
         }, resetDelay);
 
         return true;
