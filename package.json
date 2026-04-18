@@ -46,7 +46,7 @@
       "unrs-resolver"
     ],
     "overrides": {
-      "lodash-es": ">=4.17.21"
+      "lodash-es": ">=4.18.0"
     }
   },
   "lint-staged": {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
-import { useIsMobile, usePrefersReducedMotion } from "@/hooks";
+import { useIsMobile, usePrefersReducedMotion } from "@/hooks/use-media-query";
 
 interface Particle {
   x: number;
