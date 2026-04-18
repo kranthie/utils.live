@@ -35,10 +35,12 @@ describe("KSUID Generator", () => {
       const ids = String((result.data as Record<string, unknown>).output).split(
         "\n"
       );
-      // KSUIDs generated close together share the same timestamp prefix
-      // The first ~6 base62 chars encode the 4-byte second-resolution timestamp
-      // They should be equal or differ by at most 1 second
-      expect(ids[0]!.substring(0, 5)).toBe(ids[1]!.substring(0, 5));
+      // KSUIDs generated close together share the same second-resolution
+      // timestamp prefix. If the two calls happen to straddle a 1-second
+      // boundary the second KSUID will sort AFTER the first, so assert
+      // the monotonic property instead of strict equality — flaky in CI
+      // when runners are slow.
+      expect(ids[0]!.localeCompare(ids[1]!)).toBeLessThanOrEqual(0);
     }
   });
 });
