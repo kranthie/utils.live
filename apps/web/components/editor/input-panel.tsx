@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { Upload, FileText, Trash2, AlertCircle, BookOpen } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -87,6 +87,7 @@ export function InputPanel({
   className,
 }: InputPanelProps): React.ReactElement {
   const t = useTranslations("editor.input");
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [uploadedFile, setUploadedFile] = useState<{
     name: string;
     size: number;
@@ -250,27 +251,29 @@ export function InputPanel({
             </Button>
           )}
           {allowFileUpload && (
-            <label>
+            <>
               <input
+                ref={fileInputRef}
                 type="file"
                 className="sr-only"
                 accept={acceptedFileTypes?.join(",")}
                 onChange={handleFileChange}
                 disabled={disabled}
+                tabIndex={-1}
+                aria-hidden="true"
               />
               <Button
                 variant="ghost"
                 size="sm"
                 className="h-7 px-2"
                 disabled={disabled}
-                asChild
+                onClick={() => fileInputRef.current?.click()}
+                aria-label={t("uploadButton")}
               >
-                <span>
-                  <Upload className="mr-1 h-3.5 w-3.5" />
-                  {t("uploadButton")}
-                </span>
+                <Upload className="mr-1 h-3.5 w-3.5" />
+                {t("uploadButton")}
               </Button>
-            </label>
+            </>
           )}
           <CopyButton value={value} size="sm" />
           {value && (

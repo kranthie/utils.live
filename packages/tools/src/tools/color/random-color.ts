@@ -51,10 +51,12 @@ export const randomColor = defineTool({
     const count = input.count ?? 5;
     const format = input.format ?? "hex";
     const colors: string[] = [];
+    const buf = new Uint8Array(3);
     for (let i = 0; i < count; i++) {
-      const r = Math.floor(Math.random() * 256);
-      const g = Math.floor(Math.random() * 256);
-      const b = Math.floor(Math.random() * 256);
+      crypto.getRandomValues(buf);
+      const r = buf[0]!;
+      const g = buf[1]!;
+      const b = buf[2]!;
       switch (format) {
         case "hex":
           colors.push(rgbToHex({ r, g, b }));

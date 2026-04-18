@@ -134,7 +134,8 @@
       "toolNotFound": {
         "title": "工具未找到",
         "description": "请求的工具无法找到。"
-      }
+      },
+      "inputPlaceholder": "Enter {toolName} input..."
     },
     "search": {
       "heading": "探索工具",
@@ -366,6 +367,13 @@
           "support": "技术支持",
           "partnership": "合作",
           "other": "其他"
+        },
+        "errors": {
+          "fixBeforeSubmit": "Please fix the fields below before submitting.",
+          "nameRequired": "Please enter your name.",
+          "emailRequired": "Please enter your email address.",
+          "emailInvalid": "Please enter a valid email address.",
+          "messageRequired": "Please enter a message."
         }
       }
     }

@@ -105,10 +105,13 @@ describe("getByteSize", () => {
     expect(getByteSize(num)).toBe(expectedSize);
   });
 
-  it("should return 0 for circular reference objects", () => {
+  it("should return Infinity for circular reference objects", () => {
+    // Circular refs can't be JSON.stringify'd. Returning Infinity makes the
+    // executor's 5 MB input-size guard reject the input rather than silently
+    // admit it (which would then blow up inside Zod/the tool).
     const circular: Record<string, unknown> = {};
     circular.self = circular;
-    expect(getByteSize(circular)).toBe(0);
+    expect(getByteSize(circular)).toBe(Number.POSITIVE_INFINITY);
   });
 
   it("should return correct size for empty string", () => {

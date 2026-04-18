@@ -1,6 +1,7 @@
 "use client";
 
 import { memo, useState } from "react";
+import dynamic from "next/dynamic";
 import {
   ChevronDown,
   ChevronUp,
@@ -18,7 +19,16 @@ import {
 } from "@/components/ui/collapsible";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { MarkdownPreview } from "@/components/renderers/markdown-preview";
+// Documentation sits below the fold. Lazy-load MarkdownPreview (which pulls
+// in rehype-highlight + highlight.js, ~90 KB gzipped) so it only loads when
+// the user expands the documentation section on a tool page.
+const MarkdownPreview = dynamic(
+  () =>
+    import("@/components/renderers/markdown-preview").then(
+      (mod) => mod.MarkdownPreview
+    ),
+  { ssr: false }
+);
 import { CodeEditor } from "@/components/editor/code-editor";
 import { CopyButton } from "@/components/shared/copy-button";
 import { cn } from "@/lib/utils";

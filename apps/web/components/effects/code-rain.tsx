@@ -150,5 +150,5 @@ export function CodeRain({ className }: CodeRainProps): React.ReactElement {
     };
   }, [prefersReducedMotion, initParticles]);
 
-  return <canvas ref={canvasRef} className={className} />;
+  return <canvas ref={canvasRef} className={className} aria-hidden="true" />;
 }

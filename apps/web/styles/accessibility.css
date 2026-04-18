@@ -20,11 +20,6 @@
   .border {
     border-width: 2px;
   }
-
-  /* Ensure text has sufficient contrast */
-  .text-muted-foreground {
-    opacity: 0.8;
-  }
 }
 
 /* Reduced motion support */

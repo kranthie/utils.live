@@ -45,10 +45,35 @@ export const randomNumberGenerator = defineTool({
     const count = input.count ?? 1;
     const integers = input.integers ?? true;
     if (min > max) throw new Error("Min must be <= max");
+
+    // Use crypto.getRandomValues for unbiased sampling. Math.random() with
+    // Math.round() has well-known boundary bias (values exactly at min/max
+    // appear at half the expected rate) which users of a "Random Number
+    // Generator" tool reasonably do not expect.
     const nums: number[] = [];
-    for (let i = 0; i < count; i++) {
-      const r = Math.random() * (max - min) + min;
-      nums.push(integers ? Math.round(r) : parseFloat(r.toFixed(6)));
+    if (integers) {
+      const lo = Math.ceil(min);
+      const hi = Math.floor(max);
+      const range = hi - lo + 1;
+      if (range <= 0) throw new Error("No integers in the given range");
+      // Rejection sampling over a uint32 window to avoid modulo bias.
+      const maxUnbiased = Math.floor(0x1_0000_0000 / range) * range;
+      const buf = new Uint32Array(1);
+      for (let i = 0; i < count; i++) {
+        let r: number;
+        do {
+          crypto.getRandomValues(buf);
+          r = buf[0]!;
+        } while (r >= maxUnbiased);
+        nums.push(lo + (r % range));
+      }
+    } else {
+      const buf = new Uint32Array(1);
+      for (let i = 0; i < count; i++) {
+        crypto.getRandomValues(buf);
+        const frac = buf[0]! / 0x1_0000_0000;
+        nums.push(parseFloat((frac * (max - min) + min).toFixed(6)));
+      }
     }
     return { output: nums.join(", ") };
   },

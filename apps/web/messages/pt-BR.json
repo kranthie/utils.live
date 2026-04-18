@@ -134,7 +134,8 @@
       "toolNotFound": {
         "title": "Ferramenta Não Encontrada",
         "description": "A ferramenta solicitada não pôde ser encontrada."
-      }
+      },
+      "inputPlaceholder": "Enter {toolName} input..."
     },
     "search": {
       "heading": "Explorar Ferramentas",
@@ -366,6 +367,13 @@
           "support": "Suporte Técnico",
           "partnership": "Parceria",
           "other": "Outro"
+        },
+        "errors": {
+          "fixBeforeSubmit": "Please fix the fields below before submitting.",
+          "nameRequired": "Please enter your name.",
+          "emailRequired": "Please enter your email address.",
+          "emailInvalid": "Please enter a valid email address.",
+          "messageRequired": "Please enter a message."
         }
       }
     }

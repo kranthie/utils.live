@@ -76,6 +76,16 @@ export interface ToolUIConfig {
    * @default 5242880 (5MB)
    */
   maxFileSize: number;
+
+  /**
+   * When `outputRenderer` is "html", controls whether the preview iframe
+   * permits script execution and form submission. Defaults to `false` so
+   * that static content generators (SVG, QR codes, meta tags, etc.)
+   * cannot be escalated to XSS via a sanitizer bypass. Opt-in only for
+   * tools whose output is intended to be interactive (e.g. HTML playground).
+   * @default false
+   */
+  htmlPreviewAllowScripts?: boolean;
 }
 
 /**
@@ -87,6 +97,7 @@ export const DEFAULT_UI_CONFIG: ToolUIConfig = {
   allowFileUpload: true,
   acceptedFileTypes: ["text/*", "application/json"],
   maxFileSize: 5 * 1024 * 1024, // 5MB
+  htmlPreviewAllowScripts: false,
 };
 
 /**

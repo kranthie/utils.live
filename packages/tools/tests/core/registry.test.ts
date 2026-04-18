@@ -73,6 +73,52 @@ describe("ToolRegistry", () => {
       registry.registerTool(testTool3);
       expect(registry.getAll()).toHaveLength(3);
     });
+
+    it("should throw for a tool ID that does not match 'category/slug'", () => {
+      // `defineTool` also validates the id, so we construct the Tool shape
+      // directly to exercise the registry guard in isolation.
+      const badIdTool = {
+        meta: {
+          id: "Bad-ID",
+          name: "Bad",
+          description: "Bad",
+          category: "text",
+          tier: ToolTier.CLIENT,
+          keywords: ["bad"],
+        },
+        inputSchema: z.object({ input: z.string() }),
+        outputSchema: z.object({ output: z.string() }),
+        execute: (input: { input: string }) => ({ output: input.input }),
+      } as unknown as Parameters<ToolRegistry["registerTool"]>[0];
+      expect(() => registry.registerTool(badIdTool)).toThrow(/Invalid tool ID/);
+    });
+
+    it("should throw when the category portion isn't in CATEGORIES", () => {
+      const orphanTool = {
+        meta: {
+          id: "notacategory/thing",
+          name: "Orphan",
+          description: "Orphan",
+          category: "notacategory",
+          tier: ToolTier.CLIENT,
+          keywords: ["orphan"],
+        },
+        inputSchema: z.object({ input: z.string() }),
+        outputSchema: z.object({ output: z.string() }),
+        execute: (input: { input: string }) => ({ output: input.input }),
+      } as unknown as Parameters<ToolRegistry["registerTool"]>[0];
+      expect(() => registry.registerTool(orphanTool)).toThrow(
+        /Invalid category 'notacategory'/
+      );
+    });
+  });
+
+  describe("getByCategory validation", () => {
+    it("should throw for a category id with invalid characters", () => {
+      expect(() => registry.getByCategory("BAD!")).toThrow(
+        /Invalid category ID/
+      );
+    });
   });
 
   describe("get", () => {

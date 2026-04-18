@@ -1,3 +1,4 @@
+import DOMPurify from "isomorphic-dompurify";
 import { z } from "zod";
 import { defineTool } from "../../core/define-tool";
 import { ToolTier } from "../../types";
@@ -13,60 +14,16 @@ const outputSchema = z.object({
 type Input = z.infer<typeof inputSchema>;
 type Output = z.infer<typeof outputSchema>;
 
-// Dangerous SVG elements that can execute code
-const DANGEROUS_ELEMENTS = [
-  "script",
-  "foreignobject",
-  "iframe",
-  "object",
-  "embed",
-  "applet",
-  "form",
-  "input",
-  "textarea",
-  "select",
-  "button",
-];
-
-// Event handler attributes (on*)
-const EVENT_HANDLER_RE = /\s+on\w+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]*)/gi;
-
-// Dangerous attribute values (javascript:, data:, vbscript:)
-const DANGEROUS_ATTR_RE =
-  /\s+(href|xlink:href|src|action|formaction)\s*=\s*(?:"(?:javascript|data|vbscript):[^"]*"|'(?:javascript|data|vbscript):[^']*')/gi;
-
-// <use> with external references
-const DANGEROUS_USE_RE =
-  /\s+(href|xlink:href)\s*=\s*(?:"(?:https?:|\/\/)[^"]*"|'(?:https?:|\/\/)[^']*')/gi;
-
-// set/animate with dangerous attributes
-const DANGEROUS_ANIMATE_ATTR_RE = /attributeName\s*=\s*(?:"on\w+"|'on\w+')/gi;
-
 function sanitizeSvg(svg: string): string {
-  let sanitized = svg;
-
-  // Remove dangerous elements and their contents
-  for (const tag of DANGEROUS_ELEMENTS) {
-    const tagRegex = new RegExp(
-      `<${tag}[\\s>][\\s\\S]*?<\\/${tag}\\s*>|<${tag}[^>]*\\/?>`,
-      "gi"
-    );
-    sanitized = sanitized.replace(tagRegex, "");
-  }
-
-  // Remove all event handler attributes (onclick, onload, onerror, etc.)
-  sanitized = sanitized.replace(EVENT_HANDLER_RE, "");
-
-  // Remove dangerous URI schemes in href/src/action attributes
-  sanitized = sanitized.replace(DANGEROUS_ATTR_RE, "");
-
-  // Remove external references in <use> elements
-  sanitized = sanitized.replace(DANGEROUS_USE_RE, "");
-
-  // Remove animate/set elements targeting event handler attributes
-  sanitized = sanitized.replace(DANGEROUS_ANIMATE_ATTR_RE, "");
-
-  return sanitized;
+  // Use DOMPurify's SVG profile — a well-maintained sanitizer handles the
+  // long tail of bypasses (HTML-entity-encoded javascript:, CDATA-wrapped
+  // scripts, CSS url(javascript:...), nested comments, foreignObject, etc.)
+  // that a regex-based allowlist cannot.
+  return DOMPurify.sanitize(svg, {
+    USE_PROFILES: { svg: true, svgFilters: true },
+    FORBID_TAGS: ["foreignObject", "script"],
+    FORBID_ATTR: ["onload", "onerror", "onclick"],
+  });
 }
 
 function execute(input: Input): Output {

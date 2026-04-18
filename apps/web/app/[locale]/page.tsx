@@ -17,6 +17,7 @@ import { ToolDemo } from "@/components/marketing/tool-demo";
 import { CategoryShowcase } from "@/components/marketing/category-showcase";
 import { FeatureCards } from "@/components/marketing/feature-cards";
 import { CTASection } from "@/components/marketing/cta-section";
+import { MotionProvider } from "@/components/providers/motion-provider";
 import { buildAlternates } from "@/lib/alternates";
 
 const toolCountLabel = getToolCountLabel();
@@ -70,35 +71,37 @@ export default async function HomePage({
       <Header />
 
       <main id="main-content" className="flex-1">
-        <HeroSection
-          toolCountLabel={toolCountLabel}
-          categories={[
-            "json",
-            "encoding",
-            "text",
-            "crypto",
-            "jwt",
-            "regex",
-            "color",
-            "datetime",
-          ].map((id) => ({
-            id,
-            name:
-              categoryMetaMessages?.[id]?.name ??
-              categories.find((c) => c.id === id)?.name ??
+        <MotionProvider>
+          <HeroSection
+            toolCountLabel={toolCountLabel}
+            categories={[
+              "json",
+              "encoding",
+              "text",
+              "crypto",
+              "jwt",
+              "regex",
+              "color",
+              "datetime",
+            ].map((id) => ({
               id,
-          }))}
-        />
-        <ToolDemo toolCount={getRoundedToolCount()} />
-        <CategoryShowcase
-          categories={showcaseCategories}
-          className="bg-muted/30 border-y"
-        />
-        <FeatureCards toolCountLabel={toolCountLabel} />
-        <CTASection
-          toolCount={getRoundedToolCount()}
-          categoryCount={categories.length}
-        />
+              name:
+                categoryMetaMessages?.[id]?.name ??
+                categories.find((c) => c.id === id)?.name ??
+                id,
+            }))}
+          />
+          <ToolDemo toolCount={getRoundedToolCount()} />
+          <CategoryShowcase
+            categories={showcaseCategories}
+            className="bg-muted/30 border-y"
+          />
+          <FeatureCards toolCountLabel={toolCountLabel} />
+          <CTASection
+            toolCount={getRoundedToolCount()}
+            categoryCount={categories.length}
+          />
+        </MotionProvider>
       </main>
 
       <Footer />

@@ -1,6 +1,26 @@
 "use client";
 
-import { QRCodeSVG } from "qrcode.react";
+import dynamic from "next/dynamic";
+
+// Lazy-load qrcode.react so the package (~15 KB gzipped) isn't pulled into
+// the homepage entry chunk — it's only needed when the QR demo cycles in.
+const QRCodeSVG = dynamic(
+  () => import("qrcode.react").then((mod) => mod.QRCodeSVG),
+  {
+    ssr: false,
+    loading: () => (
+      <div
+        style={{
+          width: 140,
+          height: 140,
+          background: "rgba(99, 102, 241, 0.08)",
+          borderRadius: 8,
+        }}
+        aria-hidden="true"
+      />
+    ),
+  }
+);
 
 interface DemoProps {
   className?: string;

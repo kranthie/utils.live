@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useCallback, useRef } from "react";
+import { useEffect, useCallback, useMemo, useRef } from "react";
 import type { ToolMeta, ToolUIConfig } from "@utils-live/tools/constants";
 import { useTranslations } from "next-intl";
 import { ToolLayout } from "@/components/tools/tool-layout";
@@ -135,6 +135,13 @@ export function GeneratorToolLayout({
   const inputSchemaFormatted = inputSchema as unknown as FormattedSchema;
   const optionsSchemaFormatted = optionsSchema as unknown as FormattedSchema;
 
+  const downloadFilename = useMemo(() => {
+    void result; // Recompute timestamp when a new result arrives.
+    const slug = tool.name.toLowerCase().replace(/\s+/g, "-");
+    const ext = getFileExtension(ui.outputLanguage ?? ui.inputLanguage);
+    return `${slug}-output-${Date.now()}${ext}`;
+  }, [tool.name, ui.outputLanguage, ui.inputLanguage, result]);
+
   return (
     <div
       className={cn(
@@ -170,7 +177,8 @@ export function GeneratorToolLayout({
           language={ui.outputLanguage ?? ui.inputLanguage}
           isLoading={isExecuting}
           isAutoMode={false}
-          downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output-${Date.now()}${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
+          htmlPreviewAllowScripts={ui.htmlPreviewAllowScripts}
+          downloadFilename={downloadFilename}
           onCopy={onCopy}
         />
       </ToolLayout>

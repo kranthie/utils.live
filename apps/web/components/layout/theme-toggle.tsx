@@ -75,10 +75,7 @@ export function ThemeToggle({
           <span className="sr-only">{t("toggle")}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent
-        align="end"
-        onCloseAutoFocus={(e) => e.preventDefault()}
-      >
+      <DropdownMenuContent align="end">
         <DropdownMenuItem
           onClick={() => setTheme("light")}
           aria-current={theme === "light" ? "true" : undefined}

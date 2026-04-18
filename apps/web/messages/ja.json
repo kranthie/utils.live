@@ -134,7 +134,8 @@
       "toolNotFound": {
         "title": "ツールが見つかりません",
         "description": "リクエストされたツールが見つかりませんでした。"
-      }
+      },
+      "inputPlaceholder": "Enter {toolName} input..."
     },
     "search": {
       "heading": "ツールを探索",
@@ -366,6 +367,13 @@
           "support": "技術サポート",
           "partnership": "パートナーシップ",
           "other": "その他"
+        },
+        "errors": {
+          "fixBeforeSubmit": "Please fix the fields below before submitting.",
+          "nameRequired": "Please enter your name.",
+          "emailRequired": "Please enter your email address.",
+          "emailInvalid": "Please enter a valid email address.",
+          "messageRequired": "Please enter a message."
         }
       }
     }

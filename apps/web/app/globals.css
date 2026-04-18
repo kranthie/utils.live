@@ -231,7 +231,7 @@
     --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 93%; /* #EDEDED - headers, subtle backgrounds */
-    --muted-foreground: 0 0% 45%;
+    --muted-foreground: 0 0% 38%; /* #616161 — WCAG AA on --muted (5.7:1) */
     --muted-foreground-dim: 0 0% 35%;
     --accent: 0 0% 96%;
     --accent-foreground: 0 0% 9%;

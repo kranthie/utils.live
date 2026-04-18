@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import type { ToolMeta, ToolUIConfig } from "@utils-live/tools/constants";
 import { ToolTier } from "@utils-live/tools/constants";
 import { DualInputLayout } from "@/components/tools/dual-input-layout";
@@ -207,6 +207,13 @@ export function DiffToolLayout({
     [input1, reset]
   );
 
+  const downloadFilename = useMemo(() => {
+    void result; // Recompute timestamp when a new result arrives.
+    const slug = tool.name.toLowerCase().replace(/\s+/g, "-");
+    const ext = getFileExtension(ui.outputLanguage ?? ui.inputLanguage);
+    return `${slug}-output-${Date.now()}${ext}`;
+  }, [tool.name, ui.outputLanguage, ui.inputLanguage, result]);
+
   return (
     <div className="flex flex-col gap-4">
       <div
@@ -244,7 +251,8 @@ export function DiffToolLayout({
           language={ui.outputLanguage ?? ui.inputLanguage}
           isLoading={isExecuting}
           isAutoMode={tool.tier === ToolTier.CLIENT}
-          downloadFilename={`${tool.name.toLowerCase().replace(/\s+/g, "-")}-output-${Date.now()}${getFileExtension(ui.outputLanguage ?? ui.inputLanguage)}`}
+          htmlPreviewAllowScripts={ui.htmlPreviewAllowScripts}
+          downloadFilename={downloadFilename}
           onCopy={onCopy}
         />
       </div>

@@ -56,6 +56,7 @@ export function Header({
             className="text-muted-foreground hidden w-48 items-center justify-start gap-2 md:flex lg:w-64"
             onClick={handleSearchClick}
             aria-label={t("searchAriaLabel")}
+            aria-haspopup="dialog"
           >
             <Search className="h-4 w-4" />
             <span className="flex-1 truncate text-left">
@@ -74,6 +75,7 @@ export function Header({
             className="h-10 w-10 touch-manipulation md:hidden"
             onClick={handleSearchClick}
             aria-label={t("searchMobileAriaLabel")}
+            aria-haspopup="dialog"
           >
             <Search className="h-5 w-5" />
           </Button>

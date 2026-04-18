@@ -202,6 +202,11 @@ interface OutputPanelProps {
    */
   isAutoMode?: boolean;
   /**
+   * For HTML renderer: whether the sandboxed iframe may run scripts and
+   * submit forms. Defaults to false; opt in only for interactive tools.
+   */
+  htmlPreviewAllowScripts?: boolean;
+  /**
    * Additional CSS classes
    */
   className?: string;
@@ -216,6 +221,7 @@ export function OutputPanel({
   onCopy,
   onDownload,
   isAutoMode = false,
+  htmlPreviewAllowScripts = false,
   className,
 }: OutputPanelProps): React.ReactElement {
   const t = useTranslations("editor.output");
@@ -399,6 +405,7 @@ export function OutputPanel({
           <HtmlPreview
             content={typeof result.data === "string" ? result.data : ""}
             sandboxed
+            allowScripts={htmlPreviewAllowScripts}
             showToolbar
             className="h-full"
           />
